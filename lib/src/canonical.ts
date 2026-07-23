@@ -37,7 +37,7 @@ export function canonical(pair: CanonicalPair): Uint8Array {
 
 /**
  * Minimal RFC 8785-conformant JCS encoder. Constraints from the AEP
- * profile: keys sorted by codepoint, no insignificant whitespace,
+ * profile: keys sorted per RFC 8785 §3.2.3 (UTF-16 code units; for the ASCII keys this profile emits this coincides with code-point order), no insignificant whitespace,
  * no trailing zeros in numbers, UTF-8 output, no BOM.
  *
  * v0.1 implementation handles the cases the EATF backend actually
