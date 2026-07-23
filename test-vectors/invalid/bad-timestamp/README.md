@@ -3,7 +3,7 @@
 **Expected:** `verify=false`, diagnostic
 `timestamp.tsr missing or empty.`
 
-Produced by `scripts/generate-invalid-vectors.mjs` from
+Derived by a scripted single-field mutation from
 `valid/minimal-roundtrip/package.aep` by flipping three bytes
 inside `timestamp.tsr` (offsets center, center+17, center+53),
 mangling the ASN.1 structure enough that `pkijs.inspectTsa` can

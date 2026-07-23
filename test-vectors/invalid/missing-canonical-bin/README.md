@@ -3,7 +3,7 @@
 **Expected:** `verify=false`, diagnostic
 `Missing required entry: canonical.bin.`
 
-Produced by `scripts/generate-invalid-vectors.mjs` from
+Derived by a scripted single-field mutation from
 `valid/minimal-roundtrip/package.aep` by deleting the
 `canonical.bin` ZIP entry.
 

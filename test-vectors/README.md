@@ -35,7 +35,7 @@ Two sibling subdirectories:
 | `invalid/tampered-overt-receipt/`                  | `verify=false`       | Hash-chain mismatch on `overt_receipt.json` (post-sign tamper).              |
 
 The six new invalid vectors land in v0.1.4. They are produced
-deterministically by `scripts/generate-invalid-vectors.mjs` from
+deterministically from
 the `minimal-roundtrip` baseline; regenerating produces byte-
 identical files. The script lives in the repo so any downstream
 implementer can audit the tamper logic.

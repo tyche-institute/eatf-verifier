@@ -3,7 +3,7 @@
 **Expected:** `verify=false`, diagnostic
 `RSA signature does not verify against public_key.pem.`
 
-Produced by `scripts/generate-invalid-vectors.mjs` from
+Derived by a scripted single-field mutation from
 `valid/minimal-roundtrip/package.aep` by replacing `public_key.pem`
 with a freshly-generated, unrelated RSA-4096 public key. The
 embedded `signature.sig` was produced with the original (dev) key

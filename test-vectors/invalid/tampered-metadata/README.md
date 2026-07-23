@@ -3,7 +3,7 @@
 **Expected:** `verify=false`, diagnostic containing
 `overt_receipt.json invalid: policy.decision does not match metadata.policy_decision.`
 
-Produced by `scripts/generate-invalid-vectors.mjs` from
+Derived by a scripted single-field mutation from
 `valid/minimal-roundtrip/package.aep` by flipping
 `metadata.policy_decision` (`allow` ↔ `deny`). The change makes the
 metadata file inconsistent with the OVERT receipt's

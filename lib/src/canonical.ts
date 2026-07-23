@@ -1,6 +1,6 @@
 /**
  * v0.1: `eatf-canonical-1` canonicalisation algorithm,
- * matching `docs/specs/aep-profile-v1.md` §6.
+ * matching the canonical forms described in `docs/aep-format.md`.
  *
  * Steps:
  *   1. UTF-8 bytes of response.txt, verbatim line endings.

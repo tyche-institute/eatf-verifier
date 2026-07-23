@@ -2,7 +2,7 @@
 
 **Expected:** `verify=false`, diagnostic `Hash mismatch.`
 
-Produced by `scripts/generate-invalid-vectors.mjs` from
+Derived by a scripted single-field mutation from
 `valid/minimal-roundtrip/package.aep` by flipping a single byte at
 offset 0 of `canonical.bin`. The SHA-256 in `hash.sha256` therefore
 no longer matches `SHA-256(canonical.bin)`.

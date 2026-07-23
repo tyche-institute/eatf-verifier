@@ -23,9 +23,8 @@ implementations, and a conformance suite with negative controls.
 | `lib/` | TypeScript verifier library (`@eatf/verifier`) — browser + Node 20+ |
 | `lib-python/` | Python verifier (`eatf_verifier`) — independent implementation |
 | `cli/eatf-verify`, `cli/eatf-sign`, `cli/eatf-inspect` | Offline CLIs (no network calls, no API keys) |
-| `sdks/eatf-verifier-ts/` | Standalone TS verifier SDK package |
-| `schemas/` | JSON Schemas for the AEP package, claims, and manifests |
-| `test-vectors/` | Conformance vectors — `valid/`, `invalid/` (negative controls), `keys/` |
+| `schemas/` | JSON Schemas: `aep-v1.schema.json` (package metadata) and `overt-receipt-v1.schema.json` (OVERT receipt) |
+| `test-vectors/` | Conformance vectors — `valid/` (4), `invalid/` (7 negative controls), `keys/` |
 | `examples/` | Worked examples (minimal sign+verify, RFC 3161 timestamp, batch verification, private-CA setup) |
 | `docs/aep-format.md` | The `.aep` package format summary |
 
@@ -62,7 +61,7 @@ Verify a conformance vector with the offline CLI:
 
 ```bash
 cd cli/eatf-verify && npm ci
-node bin/eatf-verify.js ../../test-vectors/valid/<vector>.aep
+node bin/eatf-verify.js ../../test-vectors/valid/<vector>/package.aep
 ```
 
 ## Scope and limitations
