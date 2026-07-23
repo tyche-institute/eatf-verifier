@@ -1,2 +1,2 @@
 verify=false
-diagnostic=overt_receipt.json invalid
+diagnostic=overt_receipt.json invalid: content_hash does not match hash.sha256.

@@ -1,8 +1,8 @@
 {
   "name": "@eatf/verifier",
-  "version": "0.1.3",
+  "version": "0.1.1",
   "description": "Offline TypeScript verifier for EATF .aep evidence packages. Runs in the browser via Web Crypto and in Node 20+.",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -60,6 +60,6 @@
     "url": "https://github.com/tyche-institute/eatf.git",
     "directory": "lib"
   },
-  "homepage": "https://eatf.eu/verify",
+  "homepage": "https://github.com/tyche-institute/eatf-verifier",
   "bugs": "https://github.com/tyche-institute/eatf/issues"
 }

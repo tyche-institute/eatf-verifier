@@ -41,7 +41,7 @@ Required options:
 
 Optional:
   --out <file>            Output path. Default: ./package.aep.
-  --iap <name>            Issuing AEP party name. Default: "EATF.eu".
+  --iap <name>            Issuing AEP party name. Default: "eatf-verifier".
   --version, -V
   --help, -h
 

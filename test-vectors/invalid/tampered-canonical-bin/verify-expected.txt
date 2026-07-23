@@ -1,2 +1,2 @@
 verify=false
-diagnostic=Hash mismatch.
+diagnostic=canonical.bin does not match a supported canonical form.

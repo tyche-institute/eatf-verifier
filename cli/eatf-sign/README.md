@@ -69,7 +69,7 @@ node cli/eatf-verify/bin/eatf-verify.js /tmp/hello.aep
                           - /path/to/some.aep:timestamp.tsr (extract from inside)
 --out <file>            Output path. Default: ./package.aep.
 --iap <name>            Issuing-AEP-party name in receipt.witness.iap.
-                        Default: "EATF.eu".
+                        Default: "eatf-verifier".
 --gen-rsa <stem>        Generate <stem>.key + <stem>.pem (DEV key).
 --version, -V
 --help, -h

@@ -56,7 +56,7 @@ export type SignerInput = {
   overtPolicy?: Record<string, unknown>;
   /** Raw bytes of an RFC 3161 TimeStampResp covering this signature's canonical bytes (or any older valid token; verifier accepts both). */
   timestampTsr: Uint8Array;
-  /** Optional issuer identifier ("EATF.eu" by default). */
+  /** Optional issuer identifier ("eatf-verifier" by default). */
   iap?: string;
 };
 
@@ -143,7 +143,7 @@ export async function sign(input: SignerInput): Promise<SignerOutput> {
     content_hash: `sha256:${hashHex}`,
     prev: null,
     witness: {
-      iap: input.iap ?? "EATF.eu",
+      iap: input.iap ?? "eatf-verifier",
       signature_refs: ["signature.sig"],
       timestamp_refs: ["timestamp.tsr"],
     },

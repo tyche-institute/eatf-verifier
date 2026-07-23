@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eatf-verifier"
-version = "0.2.1"
+version = "0.1.1"
 description = "Offline Python verifier for EATF .aep evidence packages. Fresh port of the TypeScript reference; same conformance contract; no managed-service surface."
 readme = "README.md"
 license = { text = "Apache-2.0" }
@@ -34,8 +34,8 @@ dev = ["pytest>=7", "ruff>=0.4"]
 eatf-verify-py = "eatf_verifier.cli:main"
 
 [project.urls]
-homepage = "https://github.com/tyche-institute/eatf/tree/main/lib-python"
-repository = "https://github.com/tyche-institute/eatf"
+homepage = "https://github.com/tyche-institute/eatf-verifier/tree/main/lib-python"
+repository = "https://github.com/tyche-institute/eatf-verifier"
 issues = "https://github.com/tyche-institute/eatf/issues"
 
 [tool.setuptools.packages.find]
