@@ -2,10 +2,12 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "EATF — Agent Evidence Package (AEP) reference verifiers"
 type: software
+version: 0.1.2
 authors:
-  - name: "Tyche Institute"
-    city: "Tallinn"
-    country: "EE"
+  - family-names: "Sokolov"
+    given-names: "Anton"
+    orcid: "https://orcid.org/0000-0003-2452-7096"
+    affiliation: "Tyche Institute, Tallinn, Estonia"
 license: Apache-2.0
 repository-code: "https://github.com/tyche-institute/eatf-verifier"
 keywords:

@@ -1,14 +1,43 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "EATF — Agent Evidence Package (AEP) reference verifiers",
+  "name": "EATF \u2014 Agent Evidence Package (AEP) reference verifiers",
   "description": "Open reference implementation for creating and offline-verifying Agent Evidence Packages (.aep): TypeScript and Python verifiers, offline CLIs, JSON schemas, and a conformance test-vector suite with negative controls. Hybrid RSA-4096 + ML-DSA-65 signatures and RFC 3161 timestamps.",
   "license": "https://spdx.org/licenses/Apache-2.0",
-  "programmingLanguage": ["TypeScript", "Python", "JavaScript"],
+  "programmingLanguage": [
+    "TypeScript",
+    "Python",
+    "JavaScript"
+  ],
   "operatingSystem": "OS Independent",
-  "keywords": ["AI agent attestation", "Agent Evidence Package", "AEP", "offline verification", "RFC 3161", "ML-DSA-65", "post-quantum cryptography"],
-  "copyrightHolder": { "@type": "Organization", "name": "Tyche Institute" },
+  "keywords": [
+    "AI agent attestation",
+    "Agent Evidence Package",
+    "AEP",
+    "offline verification",
+    "RFC 3161",
+    "ML-DSA-65",
+    "post-quantum cryptography"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Tyche Institute"
+  },
   "copyrightYear": 2026,
   "isAccessibleForFree": true,
-  "developmentStatus": "active"
+  "developmentStatus": "active",
+  "version": "0.1.2",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Anton",
+      "familyName": "Sokolov",
+      "@id": "https://orcid.org/0000-0003-2452-7096",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Tyche Institute"
+      }
+    }
+  ],
+  "codeRepository": "https://github.com/tyche-institute/eatf-verifier"
 }
