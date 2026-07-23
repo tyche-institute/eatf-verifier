@@ -81,4 +81,4 @@ Apache License 2.0 — see [LICENSE](LICENSE).
 ## How to cite
 
 See [CITATION.cff](CITATION.cff). If you use this software in research, please
-cite the repository (a versioned archive DOI will be added on release).
+cite the archived release: DOI [10.5281/zenodo.21511609](https://doi.org/10.5281/zenodo.21511609) (v0.1.2, Zenodo, 2026).
