@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "EATF — Agent Evidence Package (AEP) reference verifiers"
+type: software
+authors:
+  - name: "Tyche Institute"
+    city: "Tallinn"
+    country: "EE"
+license: Apache-2.0
+repository-code: "https://github.com/tyche-institute/eatf-verifier"
+keywords:
+  - AI agent attestation
+  - Agent Evidence Package
+  - offline verification
+  - RFC 3161
+  - ML-DSA
+  - post-quantum cryptography

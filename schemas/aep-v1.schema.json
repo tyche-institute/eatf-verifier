@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.tyche.institute/eatf/aep-v1.schema.json",
+  "title": "EATF AEP v1 metadata.json",
+  "description": "Validates the metadata.json entry inside an AEP v1 evidence package. Wire format documented in docs/aep-profile.md. The signature, timestamp, and OVERT receipt are validated by the verifier separately; this schema only constrains metadata.json.",
+  "type": "object",
+  "required": [
+    "created_at"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema": {
+      "description": "Schema identifier URN. Optional in v0.1 for backwards compatibility with sparse early metadata payloads; when present MUST equal 'urn:eatf:spec:aep:metadata:1.0'.",
+      "type": "string",
+      "const": "urn:eatf:spec:aep:metadata:1.0"
+    },
+    "response_id": {
+      "description": "Optional producer-side identifier (legacy / sparse format).",
+      "type": ["string", "integer", "number"]
+    },
+    "attestation_id": {
+      "description": "Globally unique identifier for this attestation. Producers are encouraged to use a ULID, UUIDv7, or another monotonically-sortable scheme.",
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 256
+    },
+    "tenant_id_hash": {
+      "description": "SHA-256 hex of the deployment-local tenant identifier; or all-zeros for fixtures. Optional.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "agent_id": {
+      "description": "URN identifier of the agent producing the attestation. Conventional form: urn:eatf:tenant:<tenant>:agent:<slug>.",
+      "type": "string",
+      "minLength": 1
+    },
+    "action_type": {
+      "description": "Free-form classifier of the action being attested, e.g. 'mcp.tools/call:github.create_issue' or 'foundational:llm-response'.",
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "description": "Identifier of the model that produced the underlying response (when applicable).",
+      "type": "string"
+    },
+    "policy_id": {
+      "description": "Identifier of the policy under which the action was evaluated.",
+      "type": "string"
+    },
+    "policy_version": {
+      "description": "Version string of the policy.",
+      "type": "string"
+    },
+    "policy_coverage": {
+      "description": "Fraction of policy rules that successfully evaluated (1.0 means full coverage).",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "policy_decision": {
+      "description": "Policy outcome for the recorded action.",
+      "type": "string",
+      "enum": ["allow", "deny", "warn", "abstain"]
+    },
+    "created_at": {
+      "description": "ISO 8601 timestamp asserting when the producer sealed the package. The trusted timestamp in timestamp.tsr is authoritative; this field is informational.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "privacy_mode": {
+      "description": "Whether the underlying response is included verbatim (false) or only its hash (true).",
+      "type": "boolean"
+    },
+    "format_version": {
+      "description": "Optional embedded format version identifier (e.g. 'ATAP-1.0').",
+      "type": "string"
+    },
+    "mcp": {
+      "description": "Optional MCP-specific block for tools/call attestations.",
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "tool_name": { "type": "string" },
+        "method": { "type": "string" },
+        "gateway_mode": { "type": "string", "enum": ["server", "client", "proxy"] },
+        "request_id": { "type": "string" }
+      }
+    }
+  }
+}

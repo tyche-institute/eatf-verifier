@@ -1,0 +1,2 @@
+verify=false
+diagnostic=timestamp.tsr missing or empty.

@@ -1,0 +1,34 @@
+{
+  "name": "@eatf/verify-cli",
+  "version": "0.1.1",
+  "description": "Offline command-line verifier for EATF .aep evidence packages. Thin wrapper over @eatf/verifier; no network calls; no API keys.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "bin/eatf-verify.js",
+  "bin": {
+    "eatf-verify": "./bin/eatf-verify.js"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@eatf/verifier": "file:../../lib"
+  },
+  "scripts": {
+    "verify": "node bin/eatf-verify.js"
+  },
+  "keywords": ["eatf", "verifier", "cli", "aep", "offline", "ai-act", "evidence"],
+  "publishConfig": { "access": "public" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tyche-institute/eatf.git",
+    "directory": "cli/eatf-verify"
+  },
+  "homepage": "https://github.com/tyche-institute/eatf/tree/main/cli/eatf-verify",
+  "bugs": "https://github.com/tyche-institute/eatf/issues"
+}

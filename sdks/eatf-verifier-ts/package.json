@@ -1,0 +1,65 @@
+{
+  "name": "@eatf/verifier",
+  "version": "0.1.0-alpha",
+  "description": "Offline TypeScript verifier for EATF .aep evidence packages. Runs in the browser via Web Crypto and in Node 20+.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./browser": {
+      "import": "./dist/browser.js",
+      "types": "./dist/browser.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepare": "tsc -p tsconfig.json || true"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@noble/post-quantum": "^0.4.0",
+    "asn1js": "^3.0.5",
+    "fflate": "^0.8.2",
+    "pkijs": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": [
+    "eatf",
+    "verifier",
+    "aep",
+    "ml-dsa",
+    "rsa",
+    "rfc3161",
+    "ai-act",
+    "evidence",
+    "wasm",
+    "browser"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tyche-institute/eatf.git",
+    "directory": "sdks/eatf-verifier-ts"
+  },
+  "homepage": "https://eatf.eu/verify",
+  "bugs": "https://github.com/tyche-institute/eatf/issues"
+}

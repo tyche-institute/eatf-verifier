@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""
+eatf-tamper — demonstrate the AEP integrity layer by flipping bytes inside
+a signed .aep evidence package. Single-byte flip at a specified offset of
+canonical.bin; output goes alongside the original with a `-tampered.aep`
+suffix.
+
+This is a research / demo tool. Do not use it for anything you have not
+explicitly been told to break.
+
+Usage:
+    eatf-tamper <file.aep>                   # default offset 50
+    eatf-tamper <file.aep> --offset 128
+    eatf-tamper <file.aep> --offset 50 --output out.aep
+
+Exit codes:
+    0  Tampered package written.
+    1  Input not found or unreadable.
+    2  Bad arguments.
+"""
+from __future__ import annotations
+
+import argparse
+import os
+import sys
+from pathlib import Path
+
+# Reuse the canonical-bin flip mode from matx-hack/scripts/tamper.py.
+# We import it as a module instead of shelling out, so this CLI also works
+# when the user only has the eatf binary on PATH.
+
+_HERE = Path(__file__).resolve().parent
+_TAMPER_PY = Path(
+    os.environ.get("TAMPER_PY_PATH")
+    or _HERE.parent / "scripts" / "tamper.py"   # eatf/bin/ → eatf/scripts/
+)
+if not _TAMPER_PY.exists():
+    _alt = Path.home() / "projects" / "matx-hack" / "scripts" / "tamper.py"
+    if _alt.exists():
+        _TAMPER_PY = _alt
+
+
+def _supports_color() -> bool:
+    return sys.stdout.isatty() and not os.environ.get("NO_COLOR")
+
+
+_COLOR = _supports_color()
+def _c(code: str, t: str) -> str:
+    return f"\033[{code}m{t}\033[0m" if _COLOR else t
+def green(t: str)  -> str: return _c("32;1", t)
+def red(t: str)    -> str: return _c("31;1", t)
+def yellow(t: str) -> str: return _c("33;1", t)
+def cyan(t: str)   -> str: return _c("36",   t)
+def dim(t: str)    -> str: return _c("2",    t)
+
+
+def main() -> int:
+    p = argparse.ArgumentParser(
+        prog="eatf-tamper",
+        description="Flip a byte inside a signed .aep evidence package "
+                    "to demonstrate detection. Demo / research only.",
+    )
+    p.add_argument("path", help="Path to a .aep evidence-package zip.")
+    p.add_argument("--offset", type=int, default=50,
+                   help="Offset inside canonical.bin to flip (default: 50).")
+    p.add_argument("--output", default=None,
+                   help="Output path (default: <input>-tampered.aep).")
+    args = p.parse_args()
+
+    src = Path(args.path)
+    if not src.exists():
+        sys.stderr.write(red(f"[!] not found: {args.path}\n"))
+        return 2
+    if not src.is_file():
+        sys.stderr.write(red(f"[!] not a file: {args.path}\n"))
+        return 2
+
+    if not _TAMPER_PY.exists():
+        sys.stderr.write(
+            red(f"[!] tamper.py not found at {_TAMPER_PY}\n") +
+            "    set TAMPER_PY_PATH to override.\n"
+        )
+        return 1
+
+    # Load tamper.py functions.
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("_matx_tamper", str(_TAMPER_PY))
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    output = Path(args.output) if args.output else src.with_name(
+        src.stem + "-tampered" + src.suffix)
+
+    print(yellow("[~] tampering with .aep (demo / research only)"))
+    print(f"    {cyan('input:')}  {src}")
+    print(f"    {cyan('offset:')} {args.offset} byte inside canonical.bin")
+    print(f"    {cyan('output:')} {output}")
+
+    rc = m.tamper_canonical_bin(str(src), str(output), args.offset)
+    if rc != 0:
+        sys.stderr.write(red(f"[!] tamper failed (rc={rc})\n"))
+        return rc
+
+    print()
+    print(green(f"[+] DONE  one byte flipped — re-verify to see the detection"))
+    print(dim(f"    next: eatf-verify {output}  (or)  eatf-verify-ts {output}"))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

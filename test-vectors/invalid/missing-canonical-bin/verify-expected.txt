@@ -1,0 +1,2 @@
+verify=false
+diagnostic=Missing required entry: canonical.bin.

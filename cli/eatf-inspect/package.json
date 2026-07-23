@@ -1,0 +1,25 @@
+{
+  "name": "@eatf/inspect-cli",
+  "version": "0.1.2",
+  "description": "Pretty-print the structure of an EATF .aep evidence package. Does NOT verify authenticity — use @eatf/verify-cli for that.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "bin/eatf-inspect.js",
+  "bin": {
+    "eatf-inspect": "./bin/eatf-inspect.js"
+  },
+  "files": ["bin", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "fflate": "^0.8.2"
+  },
+  "keywords": ["eatf", "inspect", "aep", "evidence", "debugging"],
+  "publishConfig": { "access": "public" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tyche-institute/eatf.git",
+    "directory": "cli/eatf-inspect"
+  },
+  "homepage": "https://github.com/tyche-institute/eatf/tree/main/cli/eatf-inspect",
+  "bugs": "https://github.com/tyche-institute/eatf/issues"
+}

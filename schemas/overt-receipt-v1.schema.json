@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.tyche.institute/eatf/overt-receipt-v1.schema.json",
+  "title": "EATF OVERT 1.0 receipt (as embedded in an AEP v1 package)",
+  "description": "Validates the overt_receipt.json entry inside an AEP v1 evidence package. Wire format documented in docs/aep-profile.md. The receipt cross-references several manifest fields and witness file paths; this schema constrains shape, not cross-document consistency (which the verifier checks).",
+  "type": "object",
+  "required": [
+    "overt",
+    "profile",
+    "scope",
+    "content_hash",
+    "subject",
+    "event",
+    "policy",
+    "witness"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "overt": {
+      "description": "OVERT receipt version. v0.1 packages MUST set this to '1.0.0'.",
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "profile": {
+      "description": "Profile URN identifying the EATF AEP wire format. MUST equal 'urn:eatf:spec:aep:1.0' for v0.1 packages.",
+      "type": "string",
+      "const": "urn:eatf:spec:aep:1.0"
+    },
+    "profile_revision": {
+      "description": "Optional human-readable revision identifier for the profile (e.g. '1.0-draft').",
+      "type": "string"
+    },
+    "scope": {
+      "description": "OVERT scope URN. Identifies the class of action being attested. v0.1 examples: 'foundational:aep-response', 'agentic-extended:mcp-tools-call'.",
+      "type": "string",
+      "minLength": 1
+    },
+    "content_hash": {
+      "description": "SHA-256 of canonical.bin, formatted 'sha256:<64 lowercase hex>'. MUST equal the value the verifier computes from canonical.bin.",
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "subject": {
+      "description": "Identifier and metadata for the entity the attestation is about (typically the agent + its tenant).",
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "agent_id": {
+          "description": "URN identifying the agent. Conventional shape: urn:eatf:tenant:<tenant>:agent:<slug>. MAY be null for sign-only response packages without an agent identity.",
+          "type": ["string", "null"]
+        },
+        "tenant_hash": {
+          "description": "SHA-256 hash of the deployment-local tenant identifier (or all-zeros for fixtures). Hex without prefix, OR formatted 'sha256:<hex>'. MAY be null for foundational-scope receipts that do not bind to a tenant.",
+          "type": ["string", "null"]
+        },
+        "system": {
+          "description": "Free-form identifier of the system that produced the receipt (e.g. 'eatf-aep', 'eatf-mcp-gateway').",
+          "type": "string"
+        },
+        "revision": {
+          "description": "Optional revision identifier for the producing system.",
+          "type": "string"
+        }
+      }
+    },
+    "event": {
+      "description": "The action being attested.",
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["timestamp"],
+      "properties": {
+        "type": {
+          "description": "Free-form event type (e.g. 'eatf.response', 'mcp.tools/call').",
+          "type": "string"
+        },
+        "timestamp": {
+          "description": "ISO 8601 / RFC 3339 timestamp at which the event occurred. SHOULD match metadata.created_at when both are present.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "action_type": {
+          "description": "Specific action classifier. SHOULD match metadata.action_type when both are present.",
+          "type": "string"
+        }
+      }
+    },
+    "policy": {
+      "description": "Policy evaluation outcome. All fields are optional and nullable for v0.1 — foundational-scope receipts often carry no policy at all, in which case every value is null. When fields are present (typically on agentic-extended scopes), they SHOULD match the corresponding metadata.json fields; verifier enforces the cross-check.",
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "description": "Policy identifier (e.g. 'atap-basic').",
+          "type": ["string", "null"]
+        },
+        "version": {
+          "description": "Policy version.",
+          "type": ["string", "null"]
+        },
+        "coverage": {
+          "description": "Fraction of policy rules that successfully evaluated.",
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "decision": {
+          "description": "Policy outcome.",
+          "type": ["string", "null"],
+          "enum": ["allow", "deny", "warn", "abstain", null]
+        }
+      }
+    },
+    "prev": {
+      "description": "Reference to a preceding receipt in a chain. NULL when the receipt is standalone or starts a chain.",
+      "type": ["string", "null"]
+    },
+    "witness": {
+      "description": "Pointers to the cryptographic-witness files inside the same AEP package.",
+      "type": "object",
+      "required": ["iap", "signature_refs"],
+      "additionalProperties": true,
+      "properties": {
+        "iap": {
+          "description": "Independent attestation provider identifier. Free-form string identifying who produced or preserved the package.",
+          "type": "string",
+          "minLength": 1
+        },
+        "signature_refs": {
+          "description": "Names of signature files inside the same AEP package. MUST be non-empty. Each entry MUST resolve to an existing file in the envelope; the verifier checks this.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9._-]+(/[A-Za-z0-9._-]+)*$"
+          }
+        },
+        "timestamp_refs": {
+          "description": "Names of RFC 3161 timestamp files inside the same AEP package. MAY be empty for transitional packages without a timestamp.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9._-]+(/[A-Za-z0-9._-]+)*$"
+          }
+        }
+      }
+    }
+  }
+}
