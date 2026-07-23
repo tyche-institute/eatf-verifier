@@ -1,6 +1,6 @@
 {
   "name": "@eatf/verifier",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Offline TypeScript verifier for EATF .aep evidence packages. Runs in the browser via Web Crypto and in Node 20+.",
   "license": "Apache-2.0",
   "type": "module",

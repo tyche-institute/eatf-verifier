@@ -1,6 +1,6 @@
 {
   "name": "@eatf/inspect-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Pretty-print the structure of an EATF .aep evidence package. Does NOT verify authenticity — use @eatf/verify-cli for that.",
   "license": "Apache-2.0",
   "type": "module",

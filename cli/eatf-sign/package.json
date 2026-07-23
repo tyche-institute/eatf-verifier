@@ -1,6 +1,6 @@
 {
   "name": "@eatf/sign-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Offline command-line signer for EATF .aep evidence packages. Thin wrapper over the sign() function in @eatf/verifier. No network calls; the RFC 3161 timestamp must be supplied as a file.",
   "license": "Apache-2.0",
   "type": "module",

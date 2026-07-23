@@ -2,7 +2,7 @@
   "title": "EATF — Agent Evidence Package (AEP) reference verifiers",
   "upload_type": "software",
   "license": "Apache-2.0",
-  "version": "v0.1.0",
+  "version": "v0.1.2",
   "creators": [{ "name": "Tyche Institute" }],
   "description": "Open reference implementation for creating and offline-verifying Agent Evidence Packages (.aep): independent TypeScript and Python verifiers, offline sign/verify/inspect CLIs, JSON schemas, and a conformance test-vector suite with negative controls. Hybrid RSA-4096 + ML-DSA-65 (FIPS 204) signatures and RFC 3161 timestamps. Not an eIDAS trust service; offline, self-contained.",
   "keywords": ["AI agent attestation", "Agent Evidence Package", "AEP", "offline verification", "RFC 3161", "ML-DSA-65", "post-quantum cryptography", "Apache-2.0"],

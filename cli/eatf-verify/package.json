@@ -1,6 +1,6 @@
 {
   "name": "@eatf/verify-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Offline command-line verifier for EATF .aep evidence packages. Thin wrapper over @eatf/verifier; no network calls; no API keys.",
   "license": "Apache-2.0",
   "type": "module",
