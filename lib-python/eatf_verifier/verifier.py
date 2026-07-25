@@ -20,7 +20,6 @@ from .hash import sha256, to_hex
 from .overt import parse_and_validate_overt_receipt
 from .rsa import load_public_key_pem, verify_rsa, verify_rsa_digest_info
 from .tsa import inspect_tsa, verify_tsa_trust
-from .tsa_trust_list import DEFAULT_TSA_TRUST_LIST
 
 
 @dataclass
@@ -28,14 +27,14 @@ class VerifyOptions:
     """Caller-supplied verification configuration."""
 
     offline_only: bool = True
+    trusted_signer_pems: list[bytes] = field(default_factory=list)
+    """Optional exact SPKI PEM trust set for the package signer."""
     tsa_trust_list: list[bytes] = field(default_factory=list)
-    """List of PEM-encoded TSA root certificates. When empty the
-    verifier falls through to :data:`DEFAULT_TSA_TRUST_LIST`
-    (the three DigiCert public roots, mirroring the TypeScript
-    reference). Pass ``[b""]`` or an explicit empty list semantics
-    via a wrapper if you want to opt out of the chain check
-    entirely (the v0.2.1 contract treats empty as fall-through;
-    a future minor may add an explicit ``skip`` sentinel)."""
+    """Optional PEM certificates for the advisory TSA issuer-name pin.
+
+    An empty list skips the pin. This is not full RFC 5280 path
+    validation; see ``verify_tsa_trust``.
+    """
 
 
 @dataclass
@@ -58,6 +57,10 @@ REQUIRED_ENTRIES = (
     "metadata.json",
     "timestamp.tsr",
 )
+MAX_ARCHIVE_BYTES = 64 * 1024 * 1024
+MAX_ENTRY_BYTES = 16 * 1024 * 1024
+MAX_EXPANDED_BYTES = 32 * 1024 * 1024
+MAX_ENTRIES = 32
 
 
 def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
@@ -66,12 +69,33 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     report: list[str] = []
     metadata: dict[str, Any] | None = None
 
-    # 1. Unzip.
+    # 1. Unzip with explicit resource and name limits.
+    if len(data) > MAX_ARCHIVE_BYTES:
+        return _fail(report, "Package exceeds the 64 MiB archive safety limit.", metadata)
     try:
         with zipfile.ZipFile(io.BytesIO(data), "r") as zf:
-            entries = {name: zf.read(name) for name in zf.namelist()}
-    except Exception:
-        return _fail(report, "Package is not a valid ZIP.", metadata)
+            infos = zf.infolist()
+            names = [info.filename for info in infos]
+            if len(infos) > MAX_ENTRIES:
+                raise ValueError("too many ZIP entries")
+            if len(set(names)) != len(names):
+                raise ValueError("duplicate ZIP entry")
+            if any(
+                "/" in name or "\\" in name or "\0" in name
+                for name in names
+            ):
+                raise ValueError("AEP entries must use flat, safe names")
+            if any(info.file_size > MAX_ENTRY_BYTES for info in infos):
+                raise ValueError("ZIP entry too large")
+            if sum(info.file_size for info in infos) > MAX_EXPANDED_BYTES:
+                raise ValueError("expanded ZIP too large")
+            entries = {info.filename: zf.read(info) for info in infos}
+    except Exception as exc:
+        return _fail(
+            report,
+            f"Package failed ZIP parsing or safety limits: {exc}.",
+            metadata,
+        )
     report.append(f"Package unzipped ({len(entries)} entries).")
 
     # 2. Required entries.
@@ -88,14 +112,24 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         return _fail(report, "metadata.json is not valid JSON.", None)
     report.append("metadata.json parsed.")
 
-    # 4. Canonical-form check (accept either profile or response-only form).
+    # 4. Canonical-form check. Response-only is read-only compatibility for
+    # early packages and does not authenticate metadata.
     response = entries["response.txt"]
     canonical = entries["canonical.bin"]
-    profile_canonical = response + b"\n" + jcs(metadata)
+    try:
+        profile_canonical = response + b"\n" + jcs(metadata)
+    except Exception as exc:
+        return _fail(
+            report,
+            f"metadata.json cannot be represented as RFC 8785 JCS: {exc}.",
+            metadata,
+        )
     if _ct_eq(profile_canonical, canonical):
         report.append("Canonical bytes match AEP profile canonical form.")
     elif _ct_eq(response, canonical):
-        report.append("Canonical bytes match Java response-only canonical form.")
+        report.append(
+            "Canonical bytes match legacy response-only form; metadata is not signature-bound."
+        )
     else:
         return _fail(
             report,
@@ -113,6 +147,20 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
 
     # 6. RSA signature.
     pem = entries["public_key.pem"]
+    if opts.trusted_signer_pems:
+        packaged_key = _normalized_pem_body(pem)
+        if not any(
+            _normalized_pem_body(trusted) == packaged_key
+            for trusted in opts.trusted_signer_pems
+        ):
+            return _fail(
+                report,
+                "Signer public key is not in the caller-supplied trust set.",
+                metadata,
+            )
+        report.append("Signer public key matched the caller-supplied trust set.")
+    else:
+        report.append("Signer identity trust not evaluated (no trusted signer keys supplied).")
     sig_b64 = entries["signature.sig"].decode("ascii").strip()
     try:
         sig = base64.b64decode(sig_b64, validate=False)
@@ -142,6 +190,61 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         report.append(f"OVERT receipt verified ({receipt.get('scope')!s}).")
     else:
         report.append("OVERT receipt absent (optional profile entry).")
+
+    receipt_signature_name = metadata.get("overt_receipt_signature")
+    if receipt_signature_name is not None:
+        if receipt_signature_name != "overt_receipt.sig":
+            return _fail(
+                report,
+                "metadata.overt_receipt_signature must equal overt_receipt.sig.",
+                metadata,
+                None,
+                receipt,
+            )
+        receipt_bytes = entries.get("overt_receipt.json")
+        receipt_signature_bytes = entries.get("overt_receipt.sig")
+        if receipt is None or not receipt_bytes or not receipt_signature_bytes:
+            return _fail(
+                report,
+                "Signed metadata requires overt_receipt.json and overt_receipt.sig.",
+                metadata,
+                None,
+                receipt,
+            )
+        try:
+            receipt_signature = base64.b64decode(
+                receipt_signature_bytes.decode("ascii").strip(),
+                validate=False,
+            )
+            if not verify_rsa(key, receipt_signature, receipt_bytes):
+                return _fail(
+                    report,
+                    "OVERT receipt signature does not verify against public_key.pem.",
+                    metadata,
+                    None,
+                    receipt,
+                )
+        except Exception as exc:
+            return _fail(
+                report,
+                f"OVERT receipt signature verify error: {exc}.",
+                metadata,
+                None,
+                receipt,
+            )
+        report.append("OVERT receipt signature verified (required by signed metadata).")
+    elif "overt_receipt.sig" in entries:
+        return _fail(
+            report,
+            "Unmarked overt_receipt.sig is not accepted.",
+            metadata,
+            None,
+            receipt,
+        )
+    elif receipt is not None:
+        report.append(
+            "Legacy OVERT receipt is cross-checked but not separately signature-bound."
+        )
 
     # 8. Optional ML-DSA-65 verification.
     pqc_valid: bool | None = None
@@ -185,27 +288,34 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         f"SignerInfo signature: {tsa.signature_verified}. "
         f"Signer: {tsa.signer_subject} (issued by {tsa.signer_issuer})."
     )
-    if tsa.signature_verified is False:
+    if tsa.message_imprint_matches is not True:
+        reason = (
+            "RFC 3161 message imprint does not match hash.sha256."
+            if tsa.message_imprint_matches is False
+            else "RFC 3161 message imprint could not be validated as SHA-256."
+        )
+        return _fail(report, reason, metadata, pqc_valid, receipt)
+    if tsa.signature_verified is not True:
+        reason = (
+            "RFC 3161 SignerInfo signature did not verify against the embedded certificate."
+            if tsa.signature_verified is False
+            else "RFC 3161 token does not contain a verifiable embedded signing certificate."
+        )
         return _fail(
             report,
-            "RFC 3161 SignerInfo signature did not verify against the embedded cert.",
+            reason,
             metadata,
             pqc_valid,
             receipt,
         )
 
-    # 10. TSA chain-to-root (single-step pin check).
-    # Mirrors lib/src/verifier.ts: if the caller didn't pass a custom
-    # trust list, fall through to DEFAULT_TSA_TRUST_LIST (DigiCert
-    # public roots). An empty list opts out of the check entirely.
-    trust_list = (
-        opts.tsa_trust_list if opts.tsa_trust_list else DEFAULT_TSA_TRUST_LIST
-    )
+    # 10. Optional issuer-name pin (not full RFC 5280 path validation).
+    trust_list = opts.tsa_trust_list
     tsa_trusted: bool | None = None
     if trust_list:
         trust = verify_tsa_trust(tsa, trust_list)
         tsa_trusted = trust.trusted
-        report.append(f"TSA chain-to-root: trusted={trust.trusted}. {trust.reason}")
+        report.append(f"TSA issuer-name pin: matched={trust.trusted}. {trust.reason}")
 
     return VerifyResult(
         valid=True,
@@ -244,3 +354,11 @@ def _ct_eq(a: bytes, b: bytes) -> bool:
     for x, y in zip(a, b, strict=True):
         result |= x ^ y
     return result == 0
+
+
+def _normalized_pem_body(pem: bytes) -> bytes:
+    return b"".join(
+        line.strip()
+        for line in pem.splitlines()
+        if not line.startswith(b"-----")
+    )

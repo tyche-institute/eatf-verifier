@@ -1,5 +1,5 @@
 /**
- * v0.1: `eatf-canonical-1` canonicalisation algorithm,
+ * `eatf-canonical-1` canonicalisation algorithm,
  * matching the canonical forms described in `docs/aep-format.md`.
  *
  * Steps:
@@ -10,6 +10,8 @@
  * The result is the byte sequence that the SHA-256 hash + RSA + ML-DSA
  * signatures are computed over.
  */
+
+import canonicalizeJson from "canonicalize";
 
 const TEXT_ENC = new TextEncoder();
 
@@ -36,40 +38,63 @@ export function canonical(pair: CanonicalPair): Uint8Array {
 }
 
 /**
- * Minimal RFC 8785-conformant JCS encoder. Constraints from the AEP
- * profile: keys sorted per RFC 8785 §3.2.3 (UTF-16 code units; for the ASCII keys this profile emits this coincides with code-point order), no insignificant whitespace,
- * no trailing zeros in numbers, UTF-8 output, no BOM.
- *
- * v0.1 implementation handles the cases the EATF backend actually
- * emits (objects with string / number / boolean / null / nested
- * objects / arrays). Edge cases around the IEEE 754 number canonical
- * form are delegated to `Number.prototype.toString` which is correct
- * for everything we round-trip; if you need full RFC 8785 number
- * semantics for adversarial inputs, layer in a real JCS library.
+ * RFC 8785 JSON Canonicalization Scheme (JCS), encoded as UTF-8.
+ * The maintained `canonicalize` implementation handles UTF-16 member
+ * ordering, I-JSON number serialization, escaping, and nested values.
  */
 export function jcs(value: unknown): Uint8Array {
-  return TEXT_ENC.encode(jcsString(value));
+  assertIJson(value, new Set<object>());
+  const serialized = canonicalizeJson(value);
+  if (serialized === undefined) {
+    throw new Error("Value is not representable by RFC 8785 JCS.");
+  }
+  return TEXT_ENC.encode(serialized);
 }
 
-function jcsString(value: unknown): string {
-  if (value === null || typeof value === "boolean" || typeof value === "number") {
-    if (typeof value === "number" && !Number.isFinite(value)) {
-      throw new Error("JCS does not support non-finite numbers.");
+function assertIJson(value: unknown, seen: Set<object>): void {
+  if (value === null || typeof value === "boolean") return;
+  if (typeof value === "number") {
+    if (!Number.isFinite(value)) {
+      throw new Error("RFC 8785 JCS does not support non-finite numbers.");
     }
-    return JSON.stringify(value);
+    if (Number.isInteger(value) && !Number.isSafeInteger(value)) {
+      throw new Error("RFC 8785 JCS requires integers in the I-JSON safe range.");
+    }
+    return;
   }
   if (typeof value === "string") {
-    return JSON.stringify(value);
+    assertUnicodeScalarString(value);
+    return;
   }
+  if (typeof value !== "object") {
+    throw new Error(`RFC 8785 JCS does not support ${typeof value} values.`);
+  }
+  if (seen.has(value)) {
+    throw new Error("RFC 8785 JCS does not support circular references.");
+  }
+  seen.add(value);
   if (Array.isArray(value)) {
-    return "[" + value.map(jcsString).join(",") + "]";
+    for (const item of value) assertIJson(item, seen);
+  } else {
+    for (const [key, item] of Object.entries(value as Record<string, unknown>)) {
+      assertUnicodeScalarString(key);
+      assertIJson(item, seen);
+    }
   }
-  if (typeof value === "object") {
-    const keys = Object.keys(value as Record<string, unknown>)
-      .filter((k) => (value as Record<string, unknown>)[k] !== undefined)
-      .sort();
-    const parts = keys.map((k) => JSON.stringify(k) + ":" + jcsString((value as Record<string, unknown>)[k]));
-    return "{" + parts.join(",") + "}";
+  seen.delete(value);
+}
+
+function assertUnicodeScalarString(value: string): void {
+  for (let index = 0; index < value.length; index += 1) {
+    const unit = value.charCodeAt(index);
+    if (unit >= 0xd800 && unit <= 0xdbff) {
+      const next = value.charCodeAt(index + 1);
+      if (!(next >= 0xdc00 && next <= 0xdfff)) {
+        throw new Error("RFC 8785 JCS input contains an unpaired UTF-16 surrogate.");
+      }
+      index += 1;
+    } else if (unit >= 0xdc00 && unit <= 0xdfff) {
+      throw new Error("RFC 8785 JCS input contains an unpaired UTF-16 surrogate.");
+    }
   }
-  throw new Error("Unsupported value type in JCS encoder: " + typeof value);
 }

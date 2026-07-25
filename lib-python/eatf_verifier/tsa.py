@@ -4,9 +4,9 @@ Mirrors lib/src/tsa.ts. The TS reference uses pkijs; the Python
 port uses asn1crypto for the TimeStampToken / CMS structure and
 pyca/cryptography for the SignerInfo signature verification.
 
-This is "structural-check + SignerInfo signature only" parity
-with the TS reference. Chain-to-root validation against pinned
-TSA roots is documented as planned in lib-python/README.md.
+This implements strict message-imprint and SignerInfo checks in
+parity with the TypeScript verifier. Full RFC 5280 path validation
+is outside the version 0.2.0 contract.
 """
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ from dataclasses import dataclass
 
 from asn1crypto import cms, tsp
 from cryptography.exceptions import InvalidSignature
-from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
 from cryptography.x509 import load_der_x509_certificate
 
@@ -82,8 +82,13 @@ def inspect_tsa(tsr_b64: str, expected_hash_hex: str) -> TsaCheck:
         return _empty()
 
     try:
-        tst_info_bytes = sd["encap_content_info"]["content"].native
-        tst_info = tsp.TSTInfo.load(tst_info_bytes)
+        encapsulated = sd["encap_content_info"]["content"]
+        if hasattr(encapsulated, "parsed"):
+            tst_info = encapsulated.parsed
+            tst_info_bytes = tst_info.dump()
+        else:
+            tst_info_bytes = encapsulated.native
+            tst_info = tsp.TSTInfo.load(tst_info_bytes)
         imprint = tst_info["message_imprint"]["hashed_message"].native
         imprint_hex = imprint.hex()
         message_imprint_matches = imprint_hex == expected_hash_hex.lower()
@@ -173,7 +178,7 @@ def verify_tsa_trust(
     if not trust_list:
         return TsaTrustResult(
             trusted=None,
-            reason="Empty trust list — chain-to-root check skipped. Pass roots to enforce.",
+            reason="Empty trust list — issuer-name comparison skipped.",
             signer_subject=check.signer_subject,
             signer_issuer=check.signer_issuer,
         )

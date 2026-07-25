@@ -10,19 +10,17 @@ Public API:
     result = verify(bytes_)
     print(result.valid, result.failure_reason)
 
-This package is a fresh port of the canonical TypeScript reference
-in `../lib/`. It is validated against the shared conformance
-vectors in `../test-vectors/`; see `../docs/architecture.md` for
-the layered structure both implementations follow.
+This cross-language implementation is validated against the same
+shared conformance vectors as the TypeScript library.
 """
 
 from .tsa_trust_list import DEFAULT_TSA_TRUST_LIST
 from .verifier import VerifyOptions, VerifyResult, verify
 
 __all__ = [
-    "verify",
+    "DEFAULT_TSA_TRUST_LIST",
     "VerifyOptions",
     "VerifyResult",
-    "DEFAULT_TSA_TRUST_LIST",
+    "verify",
 ]
-__version__ = "0.2.1"
+__version__ = "0.2.0"

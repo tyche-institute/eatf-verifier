@@ -1,6 +1,6 @@
 {
   "name": "@eatf/sign-cli",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Offline command-line signer for EATF .aep evidence packages. Thin wrapper over the sign() function in @eatf/verifier. No network calls; the RFC 3161 timestamp must be supplied as a file.",
   "license": "Apache-2.0",
   "type": "module",
@@ -8,19 +8,19 @@
   "bin": {
     "eatf-sign": "./bin/eatf-sign.js"
   },
-  "files": ["bin", "README.md", "LICENSE"],
+  "files": ["bin", "README.md"],
   "engines": { "node": ">=20" },
   "dependencies": {
-    "@eatf/verifier": "file:../../lib",
+    "@eatf/verifier": "0.2.0",
     "fflate": "^0.8.2"
   },
   "keywords": ["eatf", "signer", "cli", "aep", "offline", "ai-act", "evidence"],
   "publishConfig": { "access": "public" },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tyche-institute/eatf.git",
+    "url": "git+https://github.com/tyche-institute/eatf-verifier.git",
     "directory": "cli/eatf-sign"
   },
-  "homepage": "https://github.com/tyche-institute/eatf/tree/main/cli/eatf-sign",
-  "bugs": "https://github.com/tyche-institute/eatf/issues"
+  "homepage": "https://github.com/tyche-institute/eatf-verifier/tree/main/cli/eatf-sign",
+  "bugs": "https://github.com/tyche-institute/eatf-verifier/issues"
 }

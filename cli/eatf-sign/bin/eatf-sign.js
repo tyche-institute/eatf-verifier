@@ -5,8 +5,8 @@
  * SPDX-License-Identifier: Apache-2.0
  *
  * Thin wrapper around the @eatf/verifier `sign` export. No network I/O:
- * the RFC 3161 timestamp token must be supplied as a file (the AEP v0.1
- * format requires one). Producers who want a fresh timestamp can fetch
+ * the RFC 3161 timestamp token must be supplied as a file. Producers
+ * who want a fresh timestamp can fetch
  * one out-of-band with curl + openssl ts -reply.
  */
 
@@ -16,13 +16,15 @@ import { existsSync } from "node:fs";
 import { generateKeyPairSync } from "node:crypto";
 import process from "node:process";
 
-const VERSION = "0.1.3";
+const VERSION = "0.2.0";
 
 function usage() {
   process.stdout.write(`\
 eatf-sign ${VERSION} — sign a payload into an EATF .aep evidence package
 
 Usage:
+  eatf-sign --payload <file> --metadata <json> --print-digest
+
   eatf-sign --payload <file> --key <pem> --public-key <pem> \\
             --metadata <json> --scope <urn> --timestamp <tsr> \\
             [--out <file>]
@@ -40,6 +42,9 @@ Required options:
                           the response here.
 
 Optional:
+  --print-digest         Print the profile canonical SHA-256 digest needed
+                         for an RFC 3161 request, then exit. metadata.json
+                         must contain created_at so the digest is stable.
   --out <file>            Output path. Default: ./package.aep.
   --iap <name>            Issuing AEP party name. Default: "eatf-verifier".
   --version, -V
@@ -56,25 +61,8 @@ Exit codes:
   1    Sign error (bad key, bad payload, bad timestamp).
   2    Bad CLI usage / missing file.
 
-Example (round-trip with the bundled dev key + an existing fixture's TSR):
-
-  # 1. Generate a dev keypair (one-off).
-  eatf-sign --gen-rsa /tmp/dev-key
-
-  # 2. Sign.
-  echo "Hello, world." > /tmp/payload.txt
-  echo '{"schema":"urn:eatf:spec:aep:metadata:1.0","created_at":"2026-05-15T00:00:00Z","attestation_id":"att_demo_01"}' > /tmp/meta.json
-  eatf-sign \\
-    --payload /tmp/payload.txt \\
-    --key /tmp/dev-key.key \\
-    --public-key /tmp/dev-key.pem \\
-    --metadata /tmp/meta.json \\
-    --scope foundational:aep-response \\
-    --timestamp test-vectors/valid/valid-overt-profile/package.aep:timestamp.tsr \\
-    --out /tmp/hello.aep
-
-  # 3. Verify.
-  node cli/eatf-verify/bin/eatf-verify.js /tmp/hello.aep
+Runnable repository example:
+  examples/01-minimal-sign-and-verify/run.sh /tmp/eatf-example
 `);
 }
 
@@ -82,7 +70,7 @@ function parseArgs(argv) {
   const args = {
     payload: null, key: null, publicKey: null, metadata: null,
     scope: null, timestamp: null, out: "package.aep", iap: null,
-    genRsa: null,
+    genRsa: null, printDigest: false,
   };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
@@ -94,6 +82,7 @@ function parseArgs(argv) {
     if (a === "--metadata") { args.metadata = argv[++i]; continue; }
     if (a === "--scope") { args.scope = argv[++i]; continue; }
     if (a === "--timestamp") { args.timestamp = argv[++i]; continue; }
+    if (a === "--print-digest") { args.printDigest = true; continue; }
     if (a === "--out") { args.out = argv[++i]; continue; }
     if (a === "--iap") { args.iap = argv[++i]; continue; }
     if (a === "--gen-rsa") { args.genRsa = argv[++i]; continue; }
@@ -108,13 +97,18 @@ function parseArgs(argv) {
 }
 
 async function loadSigner() {
+  try {
+    return await import("@eatf/verifier");
+  } catch {
+    // Source checkout fallback before the package has been published.
+  }
   const libRoot = new URL("../../../lib/", import.meta.url);
   try {
     return await import(new URL("dist/index.js", libRoot).href);
   } catch (e) {
     process.stderr.write(`\
-eatf-sign: cannot load @eatf/verifier (which exports sign()) from ../lib/dist/.
-Run \`npm install && npm run build\` in ../../lib/ first, then retry.
+eatf-sign: cannot load the @eatf/verifier dependency or repository build.
+From a source checkout, run \`npm ci && npm run build\` at the repository root.
 Underlying error: ${e?.message ?? e}
 `);
     process.exit(1);
@@ -133,18 +127,31 @@ function generateRsaKeypair(stemPath) {
 /**
  * Resolve --timestamp argument. Accepts:
  *   /path/to/file.tsr               raw TSR bytes file
- *   /path/to/some.aep:timestamp.tsr extract timestamp.tsr from inside an .aep
+ *   /path/to/some.aep:timestamp.tsr extract and decode timestamp.tsr from an .aep
  */
 async function loadTimestamp(spec) {
   if (spec.includes(":") && spec.endsWith(":timestamp.tsr")) {
     const aepPath = spec.slice(0, -":timestamp.tsr".length);
     const fflate = await import("fflate");
     const aepBytes = new Uint8Array(await readFile(resolve(aepPath)));
-    const entries = fflate.unzipSync(aepBytes);
+    if (aepBytes.byteLength > 64 * 1024 * 1024) {
+      throw new Error(`${aepPath} exceeds the 64 MiB archive safety limit`);
+    }
+    const entries = fflate.unzipSync(aepBytes, {
+      filter: (file) => {
+        if (file.name !== "timestamp.tsr") return false;
+        if (file.originalSize > 4 * 1024 * 1024) {
+          throw new Error("timestamp.tsr exceeds the 4 MiB safety limit");
+        }
+        return true;
+      },
+    });
     if (!entries["timestamp.tsr"]) {
       throw new Error(`${aepPath} does not contain a timestamp.tsr entry`);
     }
-    return entries["timestamp.tsr"];
+    return new Uint8Array(
+      Buffer.from(new TextDecoder().decode(entries["timestamp.tsr"]).trim(), "base64")
+    );
   }
   return new Uint8Array(await readFile(resolve(spec)));
 }
@@ -167,6 +174,42 @@ async function main() {
     process.stdout.write(`Wrote ${stem}.key (private) and ${stem}.pem (public)\n`);
     process.stdout.write(`NOTE: these are DEV keys. Do NOT use for production attestations.\n`);
     return 0;
+  }
+
+  if (args.printDigest) {
+    for (const k of ["payload", "metadata"]) {
+      if (!args[k]) {
+        process.stderr.write(`eatf-sign: --print-digest requires --${k}\n`);
+        return 2;
+      }
+      if (!existsSync(args[k])) {
+        process.stderr.write(`eatf-sign: file not found: ${args[k]}\n`);
+        return 2;
+      }
+    }
+    let metadata;
+    try {
+      metadata = JSON.parse(await readFile(resolve(args.metadata), "utf8"));
+    } catch (e) {
+      process.stderr.write(`eatf-sign: metadata is not valid JSON: ${e?.message ?? e}\n`);
+      return 2;
+    }
+    if (!metadata.created_at) {
+      process.stderr.write(
+        "eatf-sign: --print-digest requires metadata.created_at so a later signing pass is stable\n",
+      );
+      return 2;
+    }
+    const payloadBytes = new Uint8Array(await readFile(resolve(args.payload)));
+    const { prepareCanonical } = await loadSigner();
+    try {
+      const prepared = await prepareCanonical(payloadBytes, metadata);
+      process.stdout.write(`${prepared.canonicalHashHex}\n`);
+      return 0;
+    } catch (e) {
+      process.stderr.write(`eatf-sign: cannot canonicalize metadata: ${e?.message ?? e}\n`);
+      return 1;
+    }
   }
 
   // Validate required args.

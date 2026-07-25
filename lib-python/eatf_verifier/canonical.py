@@ -1,76 +1,44 @@
-"""RFC 8785 JSON Canonicalization Scheme (JCS) for the Python port.
-
-Mirrors lib/src/canonical.ts in the TypeScript reference. The
-output bytes MUST be identical between implementations for any
-given input.
-"""
+"""RFC 8785 JSON Canonicalization Scheme (JCS) for the Python port."""
 
 from __future__ import annotations
 
-import json
-import math
-import re
 from typing import Any
 
+import rfc8785
 
-_NUMBER_RE_TRAILING_ZEROS = re.compile(r"(\.\d*?)0+$")
+_MAX_SAFE_INTEGER = 2**53 - 1
 
 
 def jcs(value: Any) -> bytes:
-    """Return the RFC 8785 canonical bytes for the JSON value.
-
-    Object members are sorted lexicographically by Unicode codepoint
-    of the key. Numbers use ECMA-404 serialisation with no trailing
-    zeros and no superfluous signs. Strings use JSON escape rules
-    (UTF-8 output, no BOM).
-    """
-    return _serialize(value).encode("utf-8")
+    """Return RFC 8785 canonical UTF-8 bytes for the shared I-JSON profile."""
+    _assert_shared_ijson_domain(value, set())
+    return rfc8785.dumps(value)
 
 
-def _serialize(value: Any) -> str:
-    if value is None:
-        return "null"
-    if value is True:
-        return "true"
-    if value is False:
-        return "false"
-    if isinstance(value, (int, float)):
-        return _serialize_number(value)
-    if isinstance(value, str):
-        return _serialize_string(value)
-    if isinstance(value, list):
-        return "[" + ",".join(_serialize(v) for v in value) + "]"
+def _assert_shared_ijson_domain(value: Any, seen: set[int]) -> None:
+    if value is None or isinstance(value, (bool, str)):
+        return
+    if isinstance(value, int):
+        if abs(value) > _MAX_SAFE_INTEGER:
+            raise rfc8785.IntegerDomainError(value)
+        return
+    if isinstance(value, float):
+        if value.is_integer() and abs(value) > _MAX_SAFE_INTEGER:
+            raise rfc8785.FloatDomainError(value)
+        return
+    if not isinstance(value, (list, tuple, dict)):
+        raise rfc8785.CanonicalizationError(f"unsupported type: {type(value)}")
+
+    identity = id(value)
+    if identity in seen:
+        raise rfc8785.CanonicalizationError("circular references are not supported")
+    seen.add(identity)
     if isinstance(value, dict):
-        keys = sorted(value.keys(), key=lambda k: [ord(c) for c in k])
-        parts = []
-        for k in keys:
-            parts.append(_serialize_string(k) + ":" + _serialize(value[k]))
-        return "{" + ",".join(parts) + "}"
-    raise TypeError(f"JCS does not support {type(value).__name__}")
-
-
-def _serialize_number(n: int | float) -> str:
-    if isinstance(n, bool):  # bool is a subclass of int in Python
-        return "true" if n else "false"
-    if isinstance(n, int):
-        return str(n)
-    if math.isnan(n) or math.isinf(n):
-        raise ValueError("JCS does not permit NaN or Infinity")
-    if n == 0:
-        return "0"
-    # Use repr-like formatting then strip trailing zeros / dot.
-    s = format(n, "g")
-    if "e" in s or "E" in s:
-        # ECMA-404 doesn't forbid scientific notation but JCS prefers
-        # plain decimal where the number fits without loss.
-        s = format(n, "f")
-    if "." in s:
-        s = _NUMBER_RE_TRAILING_ZEROS.sub(r"\1", s)
-        s = s.rstrip(".")
-    return s
-
-
-def _serialize_string(s: str) -> str:
-    # json.dumps gives RFC 8259 escapes by default with ensure_ascii=False;
-    # JCS requires the same escaping rules.
-    return json.dumps(s, ensure_ascii=False, separators=(",", ":"))
+        for key, item in value.items():
+            if not isinstance(key, str):
+                raise rfc8785.CanonicalizationError("object keys must be strings")
+            _assert_shared_ijson_domain(item, seen)
+    else:
+        for item in value:
+            _assert_shared_ijson_domain(item, seen)
+    seen.remove(identity)

@@ -10,13 +10,16 @@ metadata file inconsistent with the OVERT receipt's
 `policy.decision` field, which the verifier cross-checks in
 `parseAndValidateOvertReceipt`.
 
-Why this specific tamper: the v0.1 reference packages use the
-"Java response-only" canonical form (`canonical.bin == response.txt`)
-rather than the "AEP profile" form
+Why this specific tamper: this retained early-package fixture uses the legacy
+response-only canonical form (`canonical.bin == response.txt`) rather than the
+current AEP profile form
 (`canonical.bin == response.txt || LF || JCS(metadata)`). With the
 response-only form, modifying `metadata.json` does NOT change the
 hash chain. The cross-check in the OVERT receipt is what catches
-the tamper in this fixture set.
+this single-field mutation. The verifier explicitly warns that legacy
+metadata is not signature-bound.
 
-A v0.1-conformant verifier MUST reject this package via the OVERT
-receipt step.
+Current `eatf-sign` output uses the profile form, so even a coordinated change
+to metadata and receipt is rejected at canonical reconstruction. A compatible
+verifier MUST still reject this legacy negative package via the OVERT receipt
+step.

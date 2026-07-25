@@ -1,6 +1,6 @@
 {
   "name": "@eatf/verifier",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Offline TypeScript verifier for EATF .aep evidence packages. Runs in the browser via Web Crypto and in Node 20+.",
   "license": "Apache-2.0",
   "type": "module",
@@ -19,12 +19,11 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
-    "prepare": "tsc -p tsconfig.json || true"
+    "prepare": "tsc -p tsconfig.json"
   },
   "files": [
     "dist",
-    "README.md",
-    "LICENSE"
+    "README.md"
   ],
   "engines": {
     "node": ">=20"
@@ -32,13 +31,14 @@
   "dependencies": {
     "@noble/post-quantum": "^0.4.0",
     "asn1js": "^3.0.5",
+    "canonicalize": "^3.0.0",
     "fflate": "^0.8.2",
     "pkijs": "^3.2.4"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
     "typescript": "^5.6.0",
-    "vitest": "^2.1.0"
+    "vitest": "^4.1.10"
   },
   "keywords": [
     "eatf",
@@ -57,9 +57,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tyche-institute/eatf.git",
+    "url": "git+https://github.com/tyche-institute/eatf-verifier.git",
     "directory": "lib"
   },
   "homepage": "https://github.com/tyche-institute/eatf-verifier",
-  "bugs": "https://github.com/tyche-institute/eatf/issues"
+  "bugs": "https://github.com/tyche-institute/eatf-verifier/issues"
 }

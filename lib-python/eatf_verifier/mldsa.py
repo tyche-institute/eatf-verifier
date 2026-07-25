@@ -21,7 +21,7 @@ def verify_mldsa65(public_key_pem: bytes, signature: bytes, signed_data: bytes) 
     FIPS 204 public key serialisation.
     """
     try:
-        import oqs  # noqa: F401
+        import oqs
     except ImportError as e:
         raise ImportError(
             "ML-DSA-65 verification requires the `oqs` extra: "

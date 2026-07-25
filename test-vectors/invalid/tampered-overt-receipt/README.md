@@ -4,6 +4,7 @@
 `overt_receipt.json invalid`.
 
 A well-formed AEP envelope whose embedded OVERT receipt has been
-tampered with after signing. The hash declared in the manifest no
-longer matches the actual `overt_receipt.json` bytes. Exercises the
-hash-chain check.
+tampered with after signing. Its declared `content_hash` no longer equals the
+package's `hash.sha256`, so the receipt no longer points at the signed
+canonical record. Exercises the cross-document content-hash check on a legacy
+receipt without a separate receipt signature.

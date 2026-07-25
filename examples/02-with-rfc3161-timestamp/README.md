@@ -1,18 +1,9 @@
-# Example 02 — sign-and-verify with RFC 3161 timestamp
-
-Extends Example 01 with a timestamping step. The signer sends the
-manifest-signature hash to a test TSA and embeds the resulting
-`TimeStampResp` in the AEP.
+# Example 02: RFC 3161 timestamp verification
 
 ```bash
-eatf-sign --in records/ --key ../../test-vectors/valid/keys/dev.pem \
-          --tsa http://localhost:8765/tsa \
-          --out action.aep
-
-eatf-verify action.aep \
-            --issuer-anchor ../../test-vectors/valid/anchors/issuer-root.pem \
-            --tsa-anchor ../../test-vectors/valid/anchors/tsa-root.pem
-# → verify=true; signedAt=2026-05-14T08:42:11Z
+examples/02-with-rfc3161-timestamp/run.sh
 ```
 
-Stub. Runnable example lands in a 0.1.x point release.
+The script extracts the committed `TimeStampResp`, prints its TSTInfo with
+OpenSSL, verifies it against the recorded canonical SHA-256 digest and the
+test-only TSA certificate, then runs both EATF verifiers. No TSA is contacted.

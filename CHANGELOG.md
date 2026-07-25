@@ -1,5 +1,34 @@
 # Changelog
 
+## v0.2.0 — toolkit hardening (unreleased)
+
+- Present the repository as one focused AEP toolkit: sign, inspect, dual
+  verification, schemas, conformance vectors, examples, and tamper demo.
+- Enforce RFC 3161 SHA-256 message-imprint equality and embedded CMS
+  SignerInfo verification; remove mismatched-imprint compatibility acceptance.
+- Add caller-supplied signer-key pinning to both libraries and CLIs.
+- Bound archive, entry, and expanded sizes; reject duplicate or nested ZIP
+  names before verifier extraction.
+- Make current signer output bind both payload and metadata using the profile
+  canonical form; retain response-only support solely for labeled legacy reads.
+- Sign exact OVERT receipt bytes separately and place the required-signature
+  marker inside signed metadata, preventing receipt-field tampering or
+  signature-removal downgrade in current packages.
+- Replace divergent handwritten JCS routines with maintained TypeScript and
+  Python RFC 8785 implementations plus shared numeric/Unicode boundary tests.
+- Add `eatf-sign --print-digest` so producers can request a timestamp for the
+  exact payload-plus-metadata canonical digest.
+- Compile both Draft 2020-12 schemas in tests and validate every positive
+  conformance package against them.
+- Replace every positive vector's timestamp with a matching TEST-ONLY RFC 3161
+  response and add an auditable regeneration script.
+- Add one-command workspace setup and a full sign/inspect/dual-verify/tamper
+  smoke test.
+- Prepare publishable npm workspace manifests and correct the Python PQC extra
+  to use the official `liboqs-python` distribution.
+- Remove obsolete wrappers, stub examples, hosted-platform assumptions, and
+  the unrelated BKT demonstrator.
+
 ## v0.1.2 — documentation reconciliation (2026-07-23)
 
 - Rewrite `docs/aep-format.md` to match the shipped verifier exactly (real

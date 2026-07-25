@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.tyche.institute/eatf/overt-receipt-v1.schema.json",
   "title": "EATF OVERT 1.0 receipt (as embedded in an AEP v1 package)",
-  "description": "Validates the overt_receipt.json entry inside an AEP v1 evidence package. Wire format documented in docs/aep-profile.md. The receipt cross-references several manifest fields and witness file paths; this schema constrains shape, not cross-document consistency (which the verifier checks).",
+  "description": "Validates the overt_receipt.json entry inside an AEP v1 evidence package. Wire format documented in docs/aep-format.md. The receipt cross-references package fields and witness file paths; this schema constrains shape, not cross-document consistency (which the verifier checks).",
   "type": "object",
   "required": [
     "overt",

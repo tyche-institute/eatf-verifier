@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+REPO_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+PYTHON_CLI="$REPO_ROOT/.venv/bin/eatf-verify-py"
+if [[ ! -x "$PYTHON_CLI" ]]; then
+  echo "eatf-verify-py: run 'bash bin/setup.sh' first" >&2
+  exit 2
+fi
+exec "$PYTHON_CLI" "$@"

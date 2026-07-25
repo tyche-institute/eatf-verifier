@@ -1,18 +1,13 @@
-# examples/ — runnable demonstrations
+# Runnable examples
 
-Each subdirectory is self-contained and includes a `README.md`, the
-input records, expected output, and a one-line invocation. Examples
-use only the keys and trust anchors shipped under
-`../test-vectors/`.
+Run `bash bin/setup.sh` from the repository root first.
 
-| Example                                                      | Demonstrates                                                                          |
-|--------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| `01-minimal-sign-and-verify/`                                | Smallest possible sign-then-verify roundtrip.                                         |
-| `02-with-rfc3161-timestamp/`                                 | Same roundtrip with an RFC 3161 timestamp applied by a test TSA.                      |
-| `03-batch-verification/`                                     | Verifying a directory of packages in one invocation.                                  |
-| `04-private-ca-setup/`                                       | Setting up a private CA, issuing an issuer cert, configuring the verifier anchor set. |
+| Example | Reviewer question answered |
+|---|---|
+| `01-minimal-sign-and-verify` | Can the toolkit create, inspect, and verify one AEP with both implementations? |
+| `02-with-rfc3161-timestamp` | Does the timestamp bind the canonical SHA-256 digest and carry a valid CMS signature? |
+| `03-batch-verification` | Do both implementations satisfy all 11 conformance verdicts? |
+| `04-tamper-and-reject` | Does a one-byte change cause both implementations to reject the package? |
 
-## v0.1.0 status
-
-Stub. Examples land in successive 0.1.x point releases alongside the
-runnable CLI.
+Each directory contains an executable `run.sh`. The umbrella command
+`npm run test:toolkit` runs all four in sequence.

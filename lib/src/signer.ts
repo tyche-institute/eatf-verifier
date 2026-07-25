@@ -3,15 +3,13 @@
  *
  * Mirrors the verifier in src/verifier.ts in reverse: given a payload,
  * an RSA keypair, OVERT receipt parameters, and an RFC 3161 timestamp
- * token, produces a v0.1-conformant .aep that the verifier in this
- * package will accept.
+ * token, produces an .aep that the verifier in this package will accept.
  *
- * Wire format documented in docs/aep-profile.md.
+ * Wire format documented in ../docs/aep-format.md.
  *
  * Network policy: this module performs NO network I/O. The RFC 3161
- * timestamp token must be supplied by the caller — either fetched
- * out-of-band (via the eatf-sign CLI's --tsa-url flag) or copied from
- * an existing valid .aep package.
+ * timestamp response must be supplied by the caller and must cover
+ * the SHA-256 digest of this package's canonical bytes.
  *
  * Not yet implemented in this signer: ML-DSA-65 post-quantum signing.
  * Verifier already supports verifying packages that carry it
@@ -22,9 +20,13 @@
 import { zipSync } from "fflate";
 import { createSign } from "node:crypto";
 
+import { canonical as buildCanonical, jcs } from "./canonical.js";
 import { sha256, toHex } from "./hash.js";
+import { inspectTsa } from "./tsa.js";
+import { verify } from "./verifier.js";
 
 const TEXT_ENC = new TextEncoder();
+const OVERT_RECEIPT_SIGNATURE = "overt_receipt.sig";
 
 export type SignerInput = {
   /** The payload bytes being attested (e.g. an LLM response). */
@@ -54,7 +56,7 @@ export type SignerInput = {
    * explicitly supplied here.
    */
   overtPolicy?: Record<string, unknown>;
-  /** Raw bytes of an RFC 3161 TimeStampResp covering this signature's canonical bytes (or any older valid token; verifier accepts both). */
+  /** Raw bytes of an RFC 3161 TimeStampResp covering this package's canonical SHA-256 digest. */
   timestampTsr: Uint8Array;
   /** Optional issuer identifier ("eatf-verifier" by default). */
   iap?: string;
@@ -69,25 +71,64 @@ export type SignerOutput = {
   entries: string[];
 };
 
+export type PreparedCanonical = {
+  /** Exact bytes written as response.txt. */
+  responseBytes: Uint8Array;
+  /** Final metadata object, including an auto-generated created_at if needed. */
+  metadata: Record<string, unknown>;
+  /** Exact profile bytes written as canonical.bin. */
+  canonicalBytes: Uint8Array;
+  /** SHA-256 hex of canonicalBytes. */
+  canonicalHashHex: string;
+};
+
 /**
- * Sign a payload into a v0.1-conformant .aep package.
+ * Prepare the deterministic portion of an AEP before requesting an RFC 3161
+ * timestamp. CLI callers should supply created_at explicitly so a later sign()
+ * call reconstructs the same digest.
+ */
+export async function prepareCanonical(
+  payload: Uint8Array | string,
+  inputMetadata: Record<string, unknown>,
+): Promise<PreparedCanonical> {
+  const responseBytes = typeof payload === "string"
+    ? TEXT_ENC.encode(payload)
+    : new Uint8Array(payload);
+  const metadata = { ...inputMetadata };
+  if (!metadata.created_at) {
+    metadata.created_at = new Date().toISOString();
+  }
+  metadata.overt_receipt_signature = OVERT_RECEIPT_SIGNATURE;
+  const canonicalBytes = buildCanonical({
+    responseBytes,
+    metadataBytes: jcs(metadata),
+  });
+  const canonicalHashHex = toHex(await sha256(canonicalBytes));
+  return { responseBytes, metadata, canonicalBytes, canonicalHashHex };
+}
+
+/**
+ * Sign a payload into an .aep package.
  *
- * Uses the "Java response-only" canonical form: canonical.bin equals
- * the payload bytes verbatim. This form is what the existing test
- * vectors (valid-overt-profile, mcp-tools-call-valid, ...) use.
+ * New packages use the AEP profile canonical form:
+ * response.txt || LF || RFC 8785 JCS(metadata.json). This binds both
+ * the payload and metadata to the hash, RSA signature, and RFC 3161
+ * timestamp. Verifiers retain read-only support for legacy packages
+ * whose canonical.bin contains response.txt alone.
  */
 export async function sign(input: SignerInput): Promise<SignerOutput> {
-  const payloadBytes = typeof input.payload === "string"
-    ? TEXT_ENC.encode(input.payload)
-    : input.payload;
-
-  // canonical.bin == response.txt (Java form).
-  const canonical = new Uint8Array(payloadBytes);
+  // Finalise metadata before canonicalisation so it is cryptographically
+  // bound to the package. metadata.json remains human-readable; verification
+  // parses it and reconstructs the RFC 8785 representation.
+  const prepared = await prepareCanonical(input.payload, input.metadata);
+  const payloadBytes = prepared.responseBytes;
+  const metadata = prepared.metadata;
+  const metadataBytes = TEXT_ENC.encode(JSON.stringify(metadata) + "\n");
+  const canonical = prepared.canonicalBytes;
   const responseTxt = new Uint8Array(payloadBytes);
 
   // Hash.
-  const hashBytes = await sha256(canonical);
-  const hashHex = toHex(hashBytes);
+  const hashHex = prepared.canonicalHashHex;
   const hashEntry = TEXT_ENC.encode(hashHex + "\n");
 
   // RSA signature over canonical bytes. The verifier uses
@@ -99,13 +140,6 @@ export async function sign(input: SignerInput): Promise<SignerOutput> {
   const rsaSig = signer.sign(input.privateKeyPem);
   const rsaSigB64 = Buffer.from(rsaSig).toString("base64");
   const signatureEntry = TEXT_ENC.encode(rsaSigB64 + "\n");
-
-  // Metadata: fill in created_at if absent.
-  const metadata = { ...input.metadata };
-  if (!metadata.created_at) {
-    metadata.created_at = new Date().toISOString();
-  }
-  const metadataBytes = TEXT_ENC.encode(JSON.stringify(metadata) + "\n");
 
   // OVERT receipt: derive from metadata + caller-supplied blocks.
   const policyFromMeta = {
@@ -144,17 +178,36 @@ export async function sign(input: SignerInput): Promise<SignerOutput> {
     prev: null,
     witness: {
       iap: input.iap ?? "eatf-verifier",
-      signature_refs: ["signature.sig"],
+      signature_refs: ["signature.sig", OVERT_RECEIPT_SIGNATURE],
       timestamp_refs: ["timestamp.tsr"],
     },
   };
   const receiptBytes = TEXT_ENC.encode(JSON.stringify(receipt) + "\n");
+  const receiptSigner = createSign("sha256");
+  receiptSigner.update(receiptBytes);
+  receiptSigner.end();
+  const receiptSig = receiptSigner.sign(input.privateKeyPem);
+  const receiptSignatureEntry = TEXT_ENC.encode(
+    Buffer.from(receiptSig).toString("base64") + "\n",
+  );
 
-  // Public key + timestamp.
+  // Public key + timestamp. The package stores the raw RFC 3161 response
+  // as base64 text so both verifier implementations consume one wire form.
   const publicKeyEntry = TEXT_ENC.encode(
     input.publicKeyPem.endsWith("\n") ? input.publicKeyPem : input.publicKeyPem + "\n",
   );
-  const timestampEntry = input.timestampTsr;
+  const timestampBase64 = Buffer.from(input.timestampTsr).toString("base64");
+  const timestampCheck = await inspectTsa(timestampBase64, hashHex, canonical);
+  if (
+    !timestampCheck.tsaPresent ||
+    timestampCheck.messageImprintMatches !== true ||
+    timestampCheck.signatureVerified !== true
+  ) {
+    throw new Error(
+      "RFC 3161 timestamp must parse, match canonical.bin SHA-256, and carry a verifiable embedded signing certificate.",
+    );
+  }
+  const timestampEntry = TEXT_ENC.encode(timestampBase64 + "\n");
 
   // Assemble.
   const entries: Record<string, Uint8Array> = {
@@ -162,12 +215,19 @@ export async function sign(input: SignerInput): Promise<SignerOutput> {
     "hash.sha256": hashEntry,
     "metadata.json": metadataBytes,
     "overt_receipt.json": receiptBytes,
+    [OVERT_RECEIPT_SIGNATURE]: receiptSignatureEntry,
     "public_key.pem": publicKeyEntry,
     "response.txt": responseTxt,
     "signature.sig": signatureEntry,
     "timestamp.tsr": timestampEntry,
   };
   const aep = zipSync(entries, { level: 0 });
+  const selfCheck = await verify(aep, { tsaTrustList: [] });
+  if (!selfCheck.valid) {
+    throw new Error(
+      `Refusing to emit an AEP that fails self-verification: ${selfCheck.failureReason ?? "unknown failure"}`,
+    );
+  }
   return {
     aep,
     canonicalHashHex: hashHex,

@@ -1,17 +1,17 @@
-# Example 01 — minimal sign-and-verify
+# Example 01: minimal sign, inspect, and dual verification
 
-Demonstrates the smallest possible roundtrip: sign an action record
-into an AEP, then verify it offline.
+From the repository root:
 
 ```bash
-# Sign
-eatf-sign --in records/ --key ../../test-vectors/valid/keys/dev.pem \
-          --out action.aep
-
-# Verify
-eatf-verify action.aep \
-            --issuer-anchor ../../test-vectors/valid/anchors/issuer-root.pem
-# → verify=true
+examples/01-minimal-sign-and-verify/run.sh /tmp/eatf-example
 ```
 
-Stub. Runnable example lands in a 0.1.x point release.
+The script signs `payload.txt` with the public development fixture key, reuses
+the matching committed test-TSA response, inspects the result, and verifies it
+with both implementations while pinning the expected signer key.
+
+Expected final line:
+
+```text
+Round-trip passed with both verifiers: /tmp/eatf-example/minimal-roundtrip.aep
+```
