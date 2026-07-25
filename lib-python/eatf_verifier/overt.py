@@ -73,6 +73,23 @@ def parse_and_validate_overt_receipt(
         if err:
             return receipt, err
 
+    metadata_coverage = metadata.get("policy_coverage")
+    receipt_policy = receipt.get("policy")
+    receipt_coverage = (
+        receipt_policy.get("coverage")
+        if isinstance(receipt_policy, dict)
+        else None
+    )
+    if metadata_coverage is not None:
+        if (
+            not isinstance(metadata_coverage, (int, float))
+            or isinstance(metadata_coverage, bool)
+            or not isinstance(receipt_coverage, (int, float))
+            or isinstance(receipt_coverage, bool)
+            or abs(float(metadata_coverage) - float(receipt_coverage)) > 1e-9
+        ):
+            return receipt, "policy.coverage does not match metadata.policy_coverage"
+
     # signature_refs is required and must reference present entries.
     witness = receipt.get("witness") or {}
     refs = witness.get("signature_refs") or []

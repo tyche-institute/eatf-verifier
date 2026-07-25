@@ -45,6 +45,7 @@ def test_invalid_vector_rejected(path: pathlib.Path) -> None:
         f"{path.parent.name} should be rejected but verified clean"
     )
     assert result.failure_reason, "rejected vector must include a failure_reason"
+    assert result.failure_code, "rejected vector must include a stable failure_code"
 
 
 def test_explicit_signer_key_pin_accepts_matching_key() -> None:
@@ -136,3 +137,30 @@ def test_rejects_nested_zip_entry_names() -> None:
     result = verify(_zip_with_names(["nested/entry.txt"]))
     assert result.valid is False
     assert "flat, safe names" in (result.failure_reason or "")
+    assert result.failure_code == "ZIP_INVALID_OR_UNSAFE"
+
+
+def test_rejects_metadata_json_that_is_not_an_object() -> None:
+    package = VECTORS_ROOT / "valid" / "minimal-roundtrip" / "package.aep"
+    changed = _rewrite_package(
+        package.read_bytes(),
+        replacements={"metadata.json": b"[]\n"},
+    )
+    result = verify(changed)
+    assert result.valid is False
+    assert result.failure_code == "METADATA_NOT_OBJECT"
+
+
+def test_rejects_half_present_mldsa_pair() -> None:
+    package = VECTORS_ROOT / "valid" / "minimal-roundtrip" / "package.aep"
+    output = io.BytesIO()
+    with (
+        zipfile.ZipFile(io.BytesIO(package.read_bytes()), "r") as original,
+        zipfile.ZipFile(output, "w") as rewritten,
+    ):
+        for info in original.infolist():
+            rewritten.writestr(info, original.read(info.filename))
+        rewritten.writestr("signature_pqc.sig", b"bmVnYXRpdmUtY29udHJvbA==\n")
+    result = verify(output.getvalue())
+    assert result.valid is False
+    assert result.failure_code == "PQC_PAIR_INCOMPLETE"

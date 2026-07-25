@@ -22,7 +22,7 @@ import { decodeBase64, importRsaPublicKey, verifyRsa, verifyRsaDigestInfo } from
 import { verifyMlDsa65 } from "./mldsa.js";
 import { inspectTsa, verifyTsaTrust } from "./tsa.js";
 import { parseAndValidateOvertReceipt, type OvertReceipt } from "./overt.js";
-import type { VerifyOptions, VerifyResult } from "./index.js";
+import type { FailureCode, VerifyOptions, VerifyResult } from "./index.js";
 
 const TEXT_DEC = new TextDecoder();
 const MAX_ARCHIVE_BYTES = 64 * 1024 * 1024;
@@ -40,7 +40,12 @@ export async function verify(
   let overtReceipt: OvertReceipt | null = null;
 
   if (bytes.byteLength > MAX_ARCHIVE_BYTES) {
-    return fail(report, "Package exceeds the 64 MiB archive safety limit.", metadata);
+    return fail(
+      report,
+      "ZIP_ARCHIVE_LIMIT",
+      "Package exceeds the 64 MiB archive safety limit.",
+      metadata,
+    );
   }
 
   let entries: Record<string, Uint8Array>;
@@ -70,6 +75,7 @@ export async function verify(
   } catch (e) {
     return fail(
       report,
+      "ZIP_INVALID_OR_UNSAFE",
       `Package failed ZIP parsing or safety limits: ${(e as Error).message}.`,
       metadata,
     );
@@ -80,15 +86,34 @@ export async function verify(
   const required = ["response.txt", "canonical.bin", "hash.sha256", "signature.sig", "public_key.pem", "metadata.json", "timestamp.tsr"];
   for (const name of required) {
     if (!entries[name]) {
-      return fail(report, `Missing required entry: ${name}.`, metadata);
+      return fail(
+        report,
+        "REQUIRED_ENTRY_MISSING",
+        `Missing required entry: ${name}.`,
+        metadata,
+      );
     }
   }
 
   // Parse metadata.json for reporting + re-canonicalisation.
   try {
-    metadata = JSON.parse(TEXT_DEC.decode(entries["metadata.json"]!)) as Record<string, unknown>;
+    const parsed = JSON.parse(TEXT_DEC.decode(entries["metadata.json"]!)) as unknown;
+    if (parsed === null || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return fail(
+        report,
+        "METADATA_NOT_OBJECT",
+        "metadata.json is not a JSON object.",
+        metadata,
+      );
+    }
+    metadata = parsed as Record<string, unknown>;
   } catch {
-    return fail(report, "metadata.json is not valid JSON.", metadata);
+    return fail(
+      report,
+      "METADATA_INVALID_JSON",
+      "metadata.json is not valid JSON.",
+      metadata,
+    );
   }
   report.push("metadata.json parsed.");
 
@@ -104,6 +129,7 @@ export async function verify(
   } catch (e) {
     return fail(
       report,
+      "METADATA_NOT_CANONICALIZABLE",
       `metadata.json cannot be represented as RFC 8785 JCS: ${(e as Error).message}.`,
       metadata,
     );
@@ -116,7 +142,12 @@ export async function verify(
       "Canonical bytes match legacy response-only form; metadata is not signature-bound.",
     );
   } else {
-    return fail(report, "canonical.bin does not match a supported canonical form.", metadata);
+    return fail(
+      report,
+      "CANONICAL_FORM_MISMATCH",
+      "canonical.bin does not match a supported canonical form.",
+      metadata,
+    );
   }
   const canonicalBytes = packagedCanonical;
 
@@ -125,7 +156,7 @@ export async function verify(
   const actualHashBytes = await sha256(canonicalBytes);
   const actualHashHex = toHex(actualHashBytes);
   if (actualHashHex !== expectedHashHex) {
-    return fail(report, "Hash mismatch.", metadata);
+    return fail(report, "HASH_MISMATCH", "Hash mismatch.", metadata);
   }
   report.push("SHA-256 hash matches.");
 
@@ -139,6 +170,7 @@ export async function verify(
     if (!trusted) {
       return fail(
         report,
+        "SIGNER_NOT_TRUSTED",
         "Signer public key is not in the caller-supplied trust set.",
         metadata,
       );
@@ -148,7 +180,17 @@ export async function verify(
     report.push("Signer identity trust not evaluated (no trustedSignerPems supplied).");
   }
   const rsaSigB64 = TEXT_DEC.decode(entries["signature.sig"]!).trim();
-  const rsaSig = decodeBase64(rsaSigB64);
+  let rsaSig: Uint8Array;
+  try {
+    rsaSig = decodeBase64(rsaSigB64);
+  } catch (e) {
+    return fail(
+      report,
+      "RSA_SIGNATURE_ENCODING",
+      `signature.sig is not valid base64: ${(e as Error).message}.`,
+      metadata,
+    );
+  }
   let rsaOk: boolean;
   let rsaKey: CryptoKey;
   try {
@@ -158,17 +200,34 @@ export async function verify(
       rsaOk = verifyRsaDigestInfo(rsaPem, rsaSig, actualHashBytes);
     }
   } catch (e) {
-    return fail(report, `RSA verify error: ${(e as Error).message}.`, metadata);
+    return fail(
+      report,
+      "RSA_VERIFY_ERROR",
+      `RSA verify error: ${(e as Error).message}.`,
+      metadata,
+    );
   }
   if (!rsaOk) {
-    return fail(report, "RSA signature does not verify against public_key.pem.", metadata);
+    return fail(
+      report,
+      "RSA_SIGNATURE_INVALID",
+      "RSA signature does not verify against public_key.pem.",
+      metadata,
+    );
   }
   report.push("RSA-4096 signature verified.");
 
   const overt = parseAndValidateOvertReceipt(entries, metadata, expectedHashHex);
   overtReceipt = overt.receipt;
   if (overt.error) {
-    return fail(report, `overt_receipt.json invalid: ${overt.error}.`, metadata, null, overtReceipt);
+    return fail(
+      report,
+      "OVERT_INVALID",
+      `overt_receipt.json invalid: ${overt.error}.`,
+      metadata,
+      null,
+      overtReceipt,
+    );
   }
   report.push(
     overtReceipt
@@ -180,6 +239,7 @@ export async function verify(
     if (receiptSignatureName !== "overt_receipt.sig") {
       return fail(
         report,
+        "OVERT_SIGNATURE_MARKER_INVALID",
         "metadata.overt_receipt_signature must equal overt_receipt.sig.",
         metadata,
         null,
@@ -191,6 +251,7 @@ export async function verify(
     if (!receiptBytes || !receiptSignatureBytes || !overtReceipt) {
       return fail(
         report,
+        "OVERT_SIGNATURE_REQUIRED",
         "Signed metadata requires overt_receipt.json and overt_receipt.sig.",
         metadata,
         null,
@@ -202,6 +263,7 @@ export async function verify(
       if (!(await verifyRsa(rsaKey, receiptSig, receiptBytes))) {
         return fail(
           report,
+          "OVERT_SIGNATURE_INVALID",
           "OVERT receipt signature does not verify against public_key.pem.",
           metadata,
           null,
@@ -211,6 +273,7 @@ export async function verify(
     } catch (e) {
       return fail(
         report,
+        "OVERT_SIGNATURE_ERROR",
         `OVERT receipt signature verify error: ${(e as Error).message}.`,
         metadata,
         null,
@@ -221,6 +284,7 @@ export async function verify(
   } else if (entries["overt_receipt.sig"]) {
     return fail(
       report,
+      "OVERT_SIGNATURE_UNMARKED",
       "Unmarked overt_receipt.sig is not accepted.",
       metadata,
       null,
@@ -234,7 +298,19 @@ export async function verify(
 
   // Optional ML-DSA-65 verification.
   let pqcValid: boolean | null = null;
-  if (entries["signature_pqc.sig"] && entries["pqc_public_key.pem"]) {
+  const hasPqcSignature = Boolean(entries["signature_pqc.sig"]);
+  const hasPqcKey = Boolean(entries["pqc_public_key.pem"]);
+  if (hasPqcSignature !== hasPqcKey) {
+    return fail(
+      report,
+      "PQC_PAIR_INCOMPLETE",
+      "ML-DSA-65 signature and public-key entries must be supplied together.",
+      metadata,
+      pqcValid,
+      overtReceipt,
+    );
+  }
+  if (hasPqcSignature && hasPqcKey) {
     const pqcSigB64 = TEXT_DEC.decode(entries["signature_pqc.sig"]!).trim();
     const pqcSig = decodeBase64(pqcSigB64);
     const pqcPem = TEXT_DEC.decode(entries["pqc_public_key.pem"]!);
@@ -242,11 +318,25 @@ export async function verify(
       pqcValid = await verifyMlDsa65(pqcPem, pqcSig, canonicalBytes);
       report.push(`ML-DSA-65 signature ${pqcValid ? "verified" : "FAILED"}.`);
       if (!pqcValid) {
-        return fail(report, "ML-DSA-65 signature does not verify.", metadata, pqcValid, overtReceipt);
+        return fail(
+          report,
+          "PQC_SIGNATURE_INVALID",
+          "ML-DSA-65 signature does not verify.",
+          metadata,
+          pqcValid,
+          overtReceipt,
+        );
       }
     } catch (e) {
-      report.push(`ML-DSA-65 verify error: ${(e as Error).message}.`);
       pqcValid = false;
+      return fail(
+        report,
+        "PQC_VERIFY_ERROR",
+        `ML-DSA-65 verify error: ${(e as Error).message}.`,
+        metadata,
+        pqcValid,
+        overtReceipt,
+      );
     }
   } else {
     report.push("ML-DSA-65 entries absent (transitional v1 package).");
@@ -258,7 +348,14 @@ export async function verify(
   const tsaB64 = TEXT_DEC.decode(entries["timestamp.tsr"]!).trim();
   const tsa = await inspectTsa(tsaB64, expectedHashHex, canonicalBytes);
   if (!tsa.tsaPresent) {
-    return fail(report, "timestamp.tsr missing or empty.", metadata, pqcValid, overtReceipt);
+    return fail(
+      report,
+      "TSA_MISSING_OR_INVALID",
+      "timestamp.tsr missing or empty.",
+      metadata,
+      pqcValid,
+      overtReceipt,
+    );
   }
   report.push(
     `RFC 3161 timestamp present (${tsa.rawSizeBytes} bytes, genTime=${
@@ -274,6 +371,9 @@ export async function verify(
     return fail(
       report,
       tsa.messageImprintMatches === false
+        ? "TSA_IMPRINT_MISMATCH"
+        : "TSA_IMPRINT_UNVERIFIABLE",
+      tsa.messageImprintMatches === false
         ? "RFC 3161 message imprint does not match hash.sha256."
         : "RFC 3161 message imprint could not be validated as SHA-256.",
       metadata,
@@ -284,6 +384,9 @@ export async function verify(
   if (tsa.signatureVerified !== true) {
     return fail(
       report,
+      tsa.signatureVerified === false
+        ? "TSA_SIGNATURE_INVALID"
+        : "TSA_CERT_MISSING",
       tsa.signatureVerified === false
         ? "RFC 3161 SignerInfo signature did not verify against the embedded certificate."
         : "RFC 3161 token does not contain a verifiable embedded signing certificate.",
@@ -310,6 +413,7 @@ export async function verify(
     valid: true,
     report,
     failureReason: null,
+    failureCode: null,
     pqcValid,
     metadata,
     overtReceipt,
@@ -319,13 +423,22 @@ export async function verify(
 
 function fail(
   report: string[],
+  failureCode: FailureCode,
   failureReason: string,
   metadata: Record<string, unknown> | null,
   pqcValid: boolean | null = null,
   overtReceipt: OvertReceipt | null = null,
 ): VerifyResult {
   report.push("FAIL: " + failureReason);
-  return { valid: false, report, failureReason, pqcValid, metadata, overtReceipt };
+  return {
+    valid: false,
+    report,
+    failureReason,
+    failureCode,
+    pqcValid,
+    metadata,
+    overtReceipt,
+  };
 }
 
 async function toBytes(input: Uint8Array | ArrayBuffer | Blob): Promise<Uint8Array> {

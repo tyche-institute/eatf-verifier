@@ -137,6 +137,7 @@ def _run_conformance(root: str, opts: VerifyOptions, *, json_out: bool) -> int:
                 "path": p, "expected": expected, "actual": actual,
                 "contract_met": ok,
                 "failure_reason": result.failure_reason,
+                "failure_code": result.failure_code,
             }))
         else:
             tag = "PASS" if ok else "MISMATCH"
@@ -159,6 +160,7 @@ def _emit(path: str, result, *, json_out: bool) -> None:
             "path": path,
             "valid": result.valid,
             "failure_reason": result.failure_reason,
+            "failure_code": result.failure_code,
             "pqc_valid": result.pqc_valid,
             "tsa_trusted": result.tsa_trusted,
         }))

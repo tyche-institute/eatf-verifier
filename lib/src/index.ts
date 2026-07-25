@@ -15,10 +15,41 @@
  * symbols with a Web-Crypto-only path (no Node polyfills).
  */
 
+export type FailureCode =
+  | "ZIP_ARCHIVE_LIMIT"
+  | "ZIP_INVALID_OR_UNSAFE"
+  | "REQUIRED_ENTRY_MISSING"
+  | "METADATA_INVALID_JSON"
+  | "METADATA_NOT_OBJECT"
+  | "METADATA_NOT_CANONICALIZABLE"
+  | "CANONICAL_FORM_MISMATCH"
+  | "HASH_MISMATCH"
+  | "SIGNER_NOT_TRUSTED"
+  | "RSA_SIGNATURE_ENCODING"
+  | "RSA_VERIFY_ERROR"
+  | "RSA_SIGNATURE_INVALID"
+  | "OVERT_INVALID"
+  | "OVERT_SIGNATURE_MARKER_INVALID"
+  | "OVERT_SIGNATURE_REQUIRED"
+  | "OVERT_SIGNATURE_ERROR"
+  | "OVERT_SIGNATURE_INVALID"
+  | "OVERT_SIGNATURE_UNMARKED"
+  | "PQC_PAIR_INCOMPLETE"
+  | "PQC_SUPPORT_UNAVAILABLE"
+  | "PQC_VERIFY_ERROR"
+  | "PQC_SIGNATURE_INVALID"
+  | "TSA_MISSING_OR_INVALID"
+  | "TSA_IMPRINT_MISMATCH"
+  | "TSA_IMPRINT_UNVERIFIABLE"
+  | "TSA_SIGNATURE_INVALID"
+  | "TSA_CERT_MISSING";
+
 export type VerifyResult = {
   valid: boolean;
   report: string[];
   failureReason: string | null;
+  /** Stable machine-readable first-failure code for differential testing. */
+  failureCode: FailureCode | null;
   /** Indicates the ML-DSA-65 PQC signature verification result when present. */
   pqcValid: boolean | null;
   /** Parsed metadata.json from the package, when readable. */

@@ -1,4 +1,5 @@
-import { zipSync } from "fflate";
+import { readFile } from "node:fs/promises";
+import { unzipSync, zipSync } from "fflate";
 import { describe, expect, test } from "vitest";
 
 import { verify } from "../src/verifier.js";
@@ -12,6 +13,7 @@ describe("ZIP safety limits", () => {
     const result = await verify(zipSync(entries));
     expect(result.valid).toBe(false);
     expect(result.failureReason).toContain("too many ZIP entries");
+    expect(result.failureCode).toBe("ZIP_INVALID_OR_UNSAFE");
   });
 
   test("rejects nested entry names in the flat AEP profile", async () => {
@@ -20,5 +22,31 @@ describe("ZIP safety limits", () => {
     );
     expect(result.valid).toBe(false);
     expect(result.failureReason).toContain("flat, safe names");
+    expect(result.failureCode).toBe("ZIP_INVALID_OR_UNSAFE");
+  });
+});
+
+describe("decision-procedure boundary states", () => {
+  async function baselineEntries(): Promise<Record<string, Uint8Array>> {
+    const source = await readFile(
+      new URL("../../test-vectors/valid/minimal-roundtrip/package.aep", import.meta.url),
+    );
+    return unzipSync(source);
+  }
+
+  test("rejects metadata JSON values that are not objects", async () => {
+    const entries = await baselineEntries();
+    entries["metadata.json"] = new TextEncoder().encode("[]\n");
+    const result = await verify(zipSync(entries, { level: 0 }));
+    expect(result.valid).toBe(false);
+    expect(result.failureCode).toBe("METADATA_NOT_OBJECT");
+  });
+
+  test("rejects a half-present ML-DSA pair", async () => {
+    const entries = await baselineEntries();
+    entries["signature_pqc.sig"] = new TextEncoder().encode("bmVnYXRpdmUtY29udHJvbA==\n");
+    const result = await verify(zipSync(entries, { level: 0 }));
+    expect(result.valid).toBe(false);
+    expect(result.failureCode).toBe("PQC_PAIR_INCOMPLETE");
   });
 });

@@ -42,6 +42,7 @@ class VerifyResult:
     valid: bool
     report: list[str] = field(default_factory=list)
     failure_reason: str | None = None
+    failure_code: str | None = None
     pqc_valid: bool | None = None
     tsa_trusted: bool | None = None
     metadata: dict[str, Any] | None = None
@@ -71,7 +72,12 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
 
     # 1. Unzip with explicit resource and name limits.
     if len(data) > MAX_ARCHIVE_BYTES:
-        return _fail(report, "Package exceeds the 64 MiB archive safety limit.", metadata)
+        return _fail(
+            report,
+            "ZIP_ARCHIVE_LIMIT",
+            "Package exceeds the 64 MiB archive safety limit.",
+            metadata,
+        )
     try:
         with zipfile.ZipFile(io.BytesIO(data), "r") as zf:
             infos = zf.infolist()
@@ -93,6 +99,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     except Exception as exc:
         return _fail(
             report,
+            "ZIP_INVALID_OR_UNSAFE",
             f"Package failed ZIP parsing or safety limits: {exc}.",
             metadata,
         )
@@ -101,15 +108,30 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     # 2. Required entries.
     for name in REQUIRED_ENTRIES:
         if name not in entries:
-            return _fail(report, f"Missing required entry: {name}.", metadata)
+            return _fail(
+                report,
+                "REQUIRED_ENTRY_MISSING",
+                f"Missing required entry: {name}.",
+                metadata,
+            )
 
     # 3. Parse metadata.
     try:
         metadata = json.loads(entries["metadata.json"].decode("utf-8"))
         if not isinstance(metadata, dict):
-            return _fail(report, "metadata.json is not a JSON object.", None)
+            return _fail(
+                report,
+                "METADATA_NOT_OBJECT",
+                "metadata.json is not a JSON object.",
+                None,
+            )
     except Exception:
-        return _fail(report, "metadata.json is not valid JSON.", None)
+        return _fail(
+            report,
+            "METADATA_INVALID_JSON",
+            "metadata.json is not valid JSON.",
+            None,
+        )
     report.append("metadata.json parsed.")
 
     # 4. Canonical-form check. Response-only is read-only compatibility for
@@ -121,6 +143,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     except Exception as exc:
         return _fail(
             report,
+            "METADATA_NOT_CANONICALIZABLE",
             f"metadata.json cannot be represented as RFC 8785 JCS: {exc}.",
             metadata,
         )
@@ -133,6 +156,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     else:
         return _fail(
             report,
+            "CANONICAL_FORM_MISMATCH",
             "canonical.bin does not match a supported canonical form.",
             metadata,
         )
@@ -142,7 +166,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     actual_hash = sha256(canonical)
     actual_hash_hex = to_hex(actual_hash)
     if actual_hash_hex != expected_hash_hex:
-        return _fail(report, "Hash mismatch.", metadata)
+        return _fail(report, "HASH_MISMATCH", "Hash mismatch.", metadata)
     report.append("SHA-256 hash matches.")
 
     # 6. RSA signature.
@@ -155,6 +179,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         ):
             return _fail(
                 report,
+                "SIGNER_NOT_TRUSTED",
                 "Signer public key is not in the caller-supplied trust set.",
                 metadata,
             )
@@ -165,7 +190,12 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     try:
         sig = base64.b64decode(sig_b64, validate=False)
     except Exception:
-        return _fail(report, "signature.sig is not valid base64.", metadata)
+        return _fail(
+            report,
+            "RSA_SIGNATURE_ENCODING",
+            "signature.sig is not valid base64.",
+            metadata,
+        )
     try:
         key = load_public_key_pem(pem)
         rsa_ok = verify_rsa(key, sig, canonical)
@@ -175,17 +205,32 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             # AlgorithmIdentifier. Strip padding and compare digests.
             rsa_ok = verify_rsa_digest_info(key, sig, actual_hash)
     except Exception as e:
-        return _fail(report, f"RSA verify error: {e}.", metadata)
+        return _fail(
+            report,
+            "RSA_VERIFY_ERROR",
+            f"RSA verify error: {e}.",
+            metadata,
+        )
     if not rsa_ok:
         return _fail(
-            report, "RSA signature does not verify against public_key.pem.", metadata
+            report,
+            "RSA_SIGNATURE_INVALID",
+            "RSA signature does not verify against public_key.pem.",
+            metadata,
         )
     report.append("RSA-4096 signature verified.")
 
     # 7. OVERT receipt.
     receipt, err = parse_and_validate_overt_receipt(entries, metadata, expected_hash_hex)
     if err:
-        return _fail(report, f"overt_receipt.json invalid: {err}.", metadata, None, receipt)
+        return _fail(
+            report,
+            "OVERT_INVALID",
+            f"overt_receipt.json invalid: {err}.",
+            metadata,
+            None,
+            receipt,
+        )
     if receipt is not None:
         report.append(f"OVERT receipt verified ({receipt.get('scope')!s}).")
     else:
@@ -196,6 +241,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         if receipt_signature_name != "overt_receipt.sig":
             return _fail(
                 report,
+                "OVERT_SIGNATURE_MARKER_INVALID",
                 "metadata.overt_receipt_signature must equal overt_receipt.sig.",
                 metadata,
                 None,
@@ -206,6 +252,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         if receipt is None or not receipt_bytes or not receipt_signature_bytes:
             return _fail(
                 report,
+                "OVERT_SIGNATURE_REQUIRED",
                 "Signed metadata requires overt_receipt.json and overt_receipt.sig.",
                 metadata,
                 None,
@@ -219,6 +266,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             if not verify_rsa(key, receipt_signature, receipt_bytes):
                 return _fail(
                     report,
+                    "OVERT_SIGNATURE_INVALID",
                     "OVERT receipt signature does not verify against public_key.pem.",
                     metadata,
                     None,
@@ -227,6 +275,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         except Exception as exc:
             return _fail(
                 report,
+                "OVERT_SIGNATURE_ERROR",
                 f"OVERT receipt signature verify error: {exc}.",
                 metadata,
                 None,
@@ -236,6 +285,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     elif "overt_receipt.sig" in entries:
         return _fail(
             report,
+            "OVERT_SIGNATURE_UNMARKED",
             "Unmarked overt_receipt.sig is not accepted.",
             metadata,
             None,
@@ -248,7 +298,18 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
 
     # 8. Optional ML-DSA-65 verification.
     pqc_valid: bool | None = None
-    if entries.get("signature_pqc.sig") and entries.get("pqc_public_key.pem"):
+    has_pqc_signature = bool(entries.get("signature_pqc.sig"))
+    has_pqc_key = bool(entries.get("pqc_public_key.pem"))
+    if has_pqc_signature != has_pqc_key:
+        return _fail(
+            report,
+            "PQC_PAIR_INCOMPLETE",
+            "ML-DSA-65 signature and public-key entries must be supplied together.",
+            metadata,
+            pqc_valid,
+            receipt,
+        )
+    if has_pqc_signature and has_pqc_key:
         try:
             from .mldsa import verify_mldsa65
 
@@ -261,6 +322,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             if not pqc_valid:
                 return _fail(
                     report,
+                    "PQC_SIGNATURE_INVALID",
                     "ML-DSA-65 signature does not verify.",
                     metadata,
                     pqc_valid,
@@ -269,6 +331,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         except ImportError as e:
             return _fail(
                 report,
+                "PQC_SUPPORT_UNAVAILABLE",
                 f"ML-DSA-65 support not compiled in: {e}",
                 metadata,
                 None,
@@ -281,7 +344,14 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     tsr_b64 = entries["timestamp.tsr"].decode("ascii", errors="replace").strip()
     tsa = inspect_tsa(tsr_b64, expected_hash_hex)
     if not tsa.tsa_present:
-        return _fail(report, "timestamp.tsr missing or empty.", metadata, pqc_valid, receipt)
+        return _fail(
+            report,
+            "TSA_MISSING_OR_INVALID",
+            "timestamp.tsr missing or empty.",
+            metadata,
+            pqc_valid,
+            receipt,
+        )
     report.append(
         f"RFC 3161 timestamp present ({tsa.raw_size_bytes} bytes, genTime={tsa.gen_time}). "
         f"Message imprint match: {tsa.message_imprint_matches}. "
@@ -294,7 +364,18 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             if tsa.message_imprint_matches is False
             else "RFC 3161 message imprint could not be validated as SHA-256."
         )
-        return _fail(report, reason, metadata, pqc_valid, receipt)
+        return _fail(
+            report,
+            (
+                "TSA_IMPRINT_MISMATCH"
+                if tsa.message_imprint_matches is False
+                else "TSA_IMPRINT_UNVERIFIABLE"
+            ),
+            reason,
+            metadata,
+            pqc_valid,
+            receipt,
+        )
     if tsa.signature_verified is not True:
         reason = (
             "RFC 3161 SignerInfo signature did not verify against the embedded certificate."
@@ -303,6 +384,11 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         )
         return _fail(
             report,
+            (
+                "TSA_SIGNATURE_INVALID"
+                if tsa.signature_verified is False
+                else "TSA_CERT_MISSING"
+            ),
             reason,
             metadata,
             pqc_valid,
@@ -321,6 +407,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         valid=True,
         report=report,
         failure_reason=None,
+        failure_code=None,
         pqc_valid=pqc_valid,
         tsa_trusted=tsa_trusted,
         metadata=metadata,
@@ -330,6 +417,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
 
 def _fail(
     report: list[str],
+    code: str,
     reason: str,
     metadata: dict[str, Any] | None,
     pqc_valid: bool | None = None,
@@ -340,6 +428,7 @@ def _fail(
         valid=False,
         report=report,
         failure_reason=reason,
+        failure_code=code,
         pqc_valid=pqc_valid,
         tsa_trusted=None,
         metadata=metadata,

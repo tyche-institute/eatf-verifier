@@ -210,6 +210,7 @@ async function main() {
         process.stdout.write(JSON.stringify({
           path: p, expected, actual, contractMet: ok,
           failureReason: result.failureReason,
+          failureCode: result.failureCode,
         }) + "\n");
       } else {
         const tag = ok ? "PASS" : "MISMATCH";

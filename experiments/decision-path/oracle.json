@@ -1,0 +1,136 @@
+{
+  "schema": "urn:eatf:experiment:decision-path-oracle:1",
+  "software_under_test": "EATF verifier 0.3.0 candidate",
+  "baseline": "test-vectors/valid/minimal-roundtrip/package.aep",
+  "principle": "Each case declares the first decisive state implied by its mutation operator before either verifier is executed.",
+  "cases": [
+    {
+      "id": "accept-profile",
+      "operator": "identity",
+      "expected_valid": true,
+      "expected_code": null
+    },
+    {
+      "id": "accept-profile-with-signer-pin",
+      "operator": "identity",
+      "signer_pin": "matching",
+      "expected_valid": true,
+      "expected_code": null
+    },
+    {
+      "id": "zip-not-an-archive",
+      "operator": "replace_archive_with_non_zip_bytes",
+      "expected_valid": false,
+      "expected_code": "ZIP_INVALID_OR_UNSAFE"
+    },
+    {
+      "id": "zip-too-many-entries",
+      "operator": "replace_archive_with_33_flat_entries",
+      "expected_valid": false,
+      "expected_code": "ZIP_INVALID_OR_UNSAFE"
+    },
+    {
+      "id": "zip-unsafe-name",
+      "operator": "add_nested_entry",
+      "expected_valid": false,
+      "expected_code": "ZIP_INVALID_OR_UNSAFE"
+    },
+    {
+      "id": "zip-duplicate-entry",
+      "operator": "append_duplicate_entry",
+      "expected_valid": false,
+      "expected_code": "ZIP_INVALID_OR_UNSAFE"
+    },
+    {
+      "id": "missing-canonical",
+      "operator": "remove_canonical.bin",
+      "expected_valid": false,
+      "expected_code": "REQUIRED_ENTRY_MISSING"
+    },
+    {
+      "id": "metadata-invalid-json",
+      "operator": "replace_metadata_with_invalid_json",
+      "expected_valid": false,
+      "expected_code": "METADATA_INVALID_JSON"
+    },
+    {
+      "id": "metadata-not-object",
+      "operator": "replace_metadata_with_json_array",
+      "expected_valid": false,
+      "expected_code": "METADATA_NOT_OBJECT"
+    },
+    {
+      "id": "canonical-mismatch",
+      "operator": "flip_first_canonical_byte",
+      "expected_valid": false,
+      "expected_code": "CANONICAL_FORM_MISMATCH"
+    },
+    {
+      "id": "hash-mismatch",
+      "operator": "replace_hash_with_zero_digest",
+      "expected_valid": false,
+      "expected_code": "HASH_MISMATCH"
+    },
+    {
+      "id": "signer-pin-mismatch",
+      "operator": "identity",
+      "signer_pin": "mismatching",
+      "expected_valid": false,
+      "expected_code": "SIGNER_NOT_TRUSTED"
+    },
+    {
+      "id": "rsa-signature-invalid",
+      "operator": "replace_rsa_signature_with_zero_bytes",
+      "expected_valid": false,
+      "expected_code": "RSA_SIGNATURE_INVALID"
+    },
+    {
+      "id": "overt-content-hash-mismatch",
+      "operator": "replace_receipt_content_hash",
+      "expected_valid": false,
+      "expected_code": "OVERT_INVALID"
+    },
+    {
+      "id": "overt-signature-missing",
+      "operator": "remove_overt_signature_witness_then_remove_file",
+      "expected_valid": false,
+      "expected_code": "OVERT_SIGNATURE_REQUIRED"
+    },
+    {
+      "id": "overt-signature-invalid",
+      "operator": "replace_overt_signature_with_zero_bytes",
+      "expected_valid": false,
+      "expected_code": "OVERT_SIGNATURE_INVALID"
+    },
+    {
+      "id": "pqc-half-pair",
+      "operator": "add_signature_pqc.sig_without_public_key",
+      "expected_valid": false,
+      "expected_code": "PQC_PAIR_INCOMPLETE"
+    },
+    {
+      "id": "timestamp-empty",
+      "operator": "remove_timestamp_witness_then_empty_timestamp",
+      "expected_valid": false,
+      "expected_code": "TSA_MISSING_OR_INVALID"
+    },
+    {
+      "id": "timestamp-imprint-mismatch",
+      "operator": "flip_timestamp_message_imprint",
+      "expected_valid": false,
+      "expected_code": "TSA_IMPRINT_MISMATCH"
+    },
+    {
+      "id": "timestamp-cert-missing",
+      "operator": "remove_timestamp_embedded_certificates",
+      "expected_valid": false,
+      "expected_code": "TSA_CERT_MISSING"
+    },
+    {
+      "id": "timestamp-signature-invalid",
+      "operator": "flip_timestamp_signerinfo_signature",
+      "expected_valid": false,
+      "expected_code": "TSA_SIGNATURE_INVALID"
+    }
+  ]
+}
