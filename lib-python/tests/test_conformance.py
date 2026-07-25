@@ -164,3 +164,14 @@ def test_rejects_half_present_mldsa_pair() -> None:
     result = verify(output.getvalue())
     assert result.valid is False
     assert result.failure_code == "PQC_PAIR_INCOMPLETE"
+
+
+def test_rejects_empty_overt_witness_reference_target() -> None:
+    package = VECTORS_ROOT / "valid" / "minimal-roundtrip" / "package.aep"
+    changed = _rewrite_package(
+        package.read_bytes(),
+        replacements={"timestamp.tsr": b""},
+    )
+    result = verify(changed)
+    assert result.valid is False
+    assert result.failure_code == "OVERT_INVALID"

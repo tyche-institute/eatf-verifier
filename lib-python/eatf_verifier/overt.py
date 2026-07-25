@@ -90,22 +90,50 @@ def parse_and_validate_overt_receipt(
         ):
             return receipt, "policy.coverage does not match metadata.policy_coverage"
 
-    # signature_refs is required and must reference present entries.
-    witness = receipt.get("witness") or {}
-    refs = witness.get("signature_refs") or []
-    if not refs:
-        return receipt, "witness.signature_refs must be non-empty"
-    for ref in refs:
-        if not isinstance(ref, str) or ref not in entries:
-            return receipt, f"witness.signature_refs[{ref!r}] not present in package"
-
-    # timestamp_refs (optional)
-    ts_refs = witness.get("timestamp_refs") or []
-    for ref in ts_refs:
-        if not isinstance(ref, str) or ref not in entries:
-            return receipt, f"witness.timestamp_refs[{ref!r}] not present in package"
+    witness = receipt.get("witness")
+    if not isinstance(witness, dict):
+        return receipt, "witness must be a JSON object"
+    signature_refs_error = _validate_refs(
+        entries,
+        witness.get("signature_refs"),
+        "signature_refs",
+        require_non_empty=True,
+    )
+    if signature_refs_error:
+        return receipt, signature_refs_error
+    timestamp_refs_error = _validate_refs(
+        entries,
+        witness.get("timestamp_refs"),
+        "timestamp_refs",
+        require_non_empty=False,
+    )
+    if timestamp_refs_error:
+        return receipt, timestamp_refs_error
 
     return receipt, None
+
+
+def _validate_refs(
+    entries: dict[str, bytes],
+    value: Any,
+    key: str,
+    *,
+    require_non_empty: bool,
+) -> str | None:
+    if not isinstance(value, list):
+        return f"witness.{key} must be an array"
+    if require_non_empty and not value:
+        return f"witness.{key} must name at least one file"
+    for ref in value:
+        if not isinstance(ref, str) or not ref.strip():
+            return f"witness.{key} contains a non-text ref"
+        if "/" in ref or "\\" in ref:
+            return f"witness.{key} must use flat package filenames"
+        if ref not in entries:
+            return f"witness.{key} references missing file {ref}"
+        if not entries[ref]:
+            return f"witness.{key} references empty file {ref}"
+    return None
 
 
 def _compare_text(
