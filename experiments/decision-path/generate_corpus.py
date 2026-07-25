@@ -21,6 +21,7 @@ HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parents[1]
 ORACLE = HERE / "oracle.json"
 DEFAULT_OUTPUT = HERE / "generated" / "corpus"
+ZIP_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
 
 
 def read_entries(source: bytes) -> list[tuple[zipfile.ZipInfo, bytes]]:
@@ -43,10 +44,21 @@ def rewrite(
         for info, data in read_entries(source):
             if info.filename in removals:
                 continue
-            archive.writestr(info.filename, replacements.get(info.filename, data))
+            write_member(
+                archive,
+                info.filename,
+                replacements.get(info.filename, data),
+            )
         for name, data in additions:
-            archive.writestr(name, data)
+            write_member(archive, name, data)
     return output.getvalue()
+
+
+def write_member(archive: zipfile.ZipFile, name: str, data: bytes) -> None:
+    info = zipfile.ZipInfo(name, date_time=ZIP_TIMESTAMP)
+    info.compress_type = zipfile.ZIP_DEFLATED
+    info.external_attr = 0o644 << 16
+    archive.writestr(info, data)
 
 
 def timestamp_raw(source: bytes):
@@ -137,7 +149,7 @@ def apply_operator(operator: str, baseline: bytes) -> bytes:
         output = io.BytesIO()
         with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED) as archive:
             for index in range(33):
-                archive.writestr(f"entry-{index:02d}.txt", b"x")
+                write_member(archive, f"entry-{index:02d}.txt", b"x")
         return output.getvalue()
     if operator == "add_nested_entry":
         return rewrite(baseline, additions=[("nested/entry.txt", b"x")])
@@ -147,8 +159,8 @@ def apply_operator(operator: str, baseline: bytes) -> bytes:
             warnings.simplefilter("ignore", UserWarning)
             with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED) as archive:
                 for info, data in read_entries(baseline):
-                    archive.writestr(info.filename, data)
-                archive.writestr("response.txt", b"duplicate")
+                    write_member(archive, info.filename, data)
+                write_member(archive, "response.txt", b"duplicate")
         return output.getvalue()
     if operator == "remove_canonical.bin":
         return rewrite(baseline, removals={"canonical.bin"})

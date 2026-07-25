@@ -22,4 +22,6 @@ python experiments/decision-path/run_experiment.py
 
 Generated packages and results are written below `generated/`. The experiment
 does not contact a network. The test-only keys and timestamp certificate are
-the repository fixtures documented under `test-vectors/keys/`.
+the repository fixtures documented under `test-vectors/keys/`. Generated ZIP
+members use a fixed 1980 timestamp and permissions so repeated runs produce
+byte-identical corpus packages.
