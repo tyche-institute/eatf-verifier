@@ -2,7 +2,7 @@
   "title": "EATF Agent Evidence Package toolkit",
   "upload_type": "software",
   "license": "Apache-2.0",
-  "version": "v0.2.0",
+  "version": "v0.3.0",
   "creators": [
     {
       "name": "Sokolov, Anton",
@@ -10,12 +10,14 @@
       "affiliation": "Tyche Institute"
     }
   ],
-  "description": "Open toolkit for creating, inspecting, and offline-verifying Agent Evidence Packages (.aep): TypeScript and Python verifiers, sign/verify/inspect CLIs, JSON schemas, runnable examples, and positive/negative conformance vectors. Version 0.2.0 enforces RFC 3161 SHA-256 imprint equality and embedded CMS signature verification, and supports explicit signer-key pinning.",
+  "description": "Open toolkit for creating, inspecting, and offline-verifying Agent Evidence Packages (.aep): TypeScript and Python verifiers, sign/verify/inspect CLIs, JSON schemas, runnable examples, and positive/negative conformance vectors. Version 0.3.0 adds stable machine-readable first-failure codes, a fixed model-based oracle, and a deterministic 21-case decision-path corpus. The preserved confirmatory run records 21/21 oracle matches and 21/21 TypeScript/Python verdict-and-code matches across two accepting paths and 16 distinct rejection states.",
   "keywords": [
     "AI agent attestation",
     "Agent Evidence Package",
     "AEP",
     "offline verification",
+    "model-based testing",
+    "differential testing",
     "RFC 3161",
     "ML-DSA-65",
     "post-quantum cryptography",
@@ -23,10 +25,10 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.2.0",
+      "identifier": "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.3.0",
       "relation": "isSupplementTo",
       "scheme": "url"
     }
   ],
-  "notes": "Version 0.2.0 was archived as doi:10.5281/zenodo.21571908. The prior v0.1.2 archive is doi:10.5281/zenodo.21511609."
+  "notes": "Create version 0.3.0 as a new version under concept doi:10.5281/zenodo.21511608. The prior v0.2.0 archive is doi:10.5281/zenodo.21571908. Release tag v0.3.0 resolves to commit 21ee0a2a7b4967959b5327139ab17e5b81d516bb; the exact confirmatory-code commit is 1a6329495e6e1235c388f72d209f23eefa38fe38; the preserved corpus/results commit is c0d52b9e73cc50dd9b1cbbba496a69bdf14a1bf2."
 }
