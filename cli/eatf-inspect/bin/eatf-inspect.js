@@ -17,7 +17,7 @@ import { existsSync } from "node:fs";
 import process from "node:process";
 import { unzipSync, strFromU8 } from "fflate";
 
-const VERSION = "0.2.0";
+const VERSION = "0.3.0";
 const MAX_ARCHIVE_BYTES = 64 * 1024 * 1024;
 const MAX_ENTRY_BYTES = 16 * 1024 * 1024;
 const MAX_EXPANDED_BYTES = 32 * 1024 * 1024;

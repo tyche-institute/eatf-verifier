@@ -1,6 +1,20 @@
 # Changelog
 
-## v0.2.0 — toolkit hardening (unreleased)
+## v0.3.0 — decision-path research release (2026-07-25)
+
+- Add stable machine-readable `failureCode` / `failure_code` values to both
+  verifier APIs and JSON command output.
+- Align TypeScript and Python rejection of non-object metadata, incomplete or
+  erroneous ML-DSA pairs, numeric OVERT coverage, and witness references.
+- Add a fixed 21-case model-based decision-path oracle spanning two accepting
+  controls and 16 distinct rejection states.
+- Preserve deterministic generated packages, a calibration-pilot record,
+  confirmatory JSON/CSV results, and SHA-256 manifests.
+- Record 21/21 oracle matches and 21/21 TypeScript/Python verdict-and-code
+  matches, with zero boolean or first-code mismatches.
+- Extend regression coverage to 31 TypeScript and 45 Python tests.
+
+## v0.2.0 — toolkit hardening (2026-07-25)
 
 - Present the repository as one focused AEP toolkit: sign, inspect, dual
   verification, schemas, conformance vectors, examples, and tamper demo.

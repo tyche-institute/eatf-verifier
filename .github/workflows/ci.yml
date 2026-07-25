@@ -30,6 +30,7 @@ jobs:
       - run: python -m pytest lib-python/tests
       - run: node cli/eatf-verify/bin/eatf-verify.js --conformance test-vectors
       - run: python -m eatf_verifier.cli --conformance test-vectors
+      - run: python experiments/decision-path/run_experiment.py
 
   reviewer-workflow:
     runs-on: ubuntu-latest
@@ -45,6 +46,7 @@ jobs:
           cache: pip
       - run: bash bin/setup.sh
       - run: npm run test:toolkit
+      - run: .venv/bin/python experiments/decision-path/run_experiment.py
       - name: Check npm tarballs
         run: |
           npm pack --dry-run --workspace=@eatf/verifier

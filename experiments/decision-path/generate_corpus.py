@@ -7,15 +7,14 @@ import argparse
 import base64
 import io
 import json
-from pathlib import Path
 import shutil
 import warnings
 import zipfile
+from pathlib import Path
 
 from asn1crypto import tsp
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding
-
 
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parents[1]
@@ -62,7 +61,7 @@ def write_member(archive: zipfile.ZipFile, name: str, data: bytes) -> None:
 
 
 def timestamp_raw(source: bytes):
-    entries = dict((info.filename, data) for info, data in read_entries(source))
+    entries = {info.filename: data for info, data in read_entries(source)}
     return tsp.TimeStampResp.load(base64.b64decode(entries["timestamp.tsr"].strip()))
 
 
@@ -77,7 +76,7 @@ def rewrite_receipt(
     removals: set[str] | None = None,
     replacements: dict[str, bytes] | None = None,
 ) -> bytes:
-    entries = dict((info.filename, data) for info, data in read_entries(source))
+    entries = {info.filename: data for info, data in read_entries(source)}
     receipt = json.loads(entries["overt_receipt.json"])
     mutate(receipt)
     receipt_bytes = (
@@ -169,7 +168,7 @@ def apply_operator(operator: str, baseline: bytes) -> bytes:
     if operator == "replace_metadata_with_json_array":
         return rewrite(baseline, replacements={"metadata.json": b"[]\n"})
     if operator == "flip_first_canonical_byte":
-        entries = dict((info.filename, data) for info, data in read_entries(baseline))
+        entries = {info.filename: data for info, data in read_entries(baseline)}
         changed = bytearray(entries["canonical.bin"])
         changed[0] ^= 0x01
         return rewrite(baseline, replacements={"canonical.bin": bytes(changed)})
@@ -181,7 +180,7 @@ def apply_operator(operator: str, baseline: bytes) -> bytes:
             replacements={"signature.sig": base64.b64encode(b"\0" * 512) + b"\n"},
         )
     if operator == "replace_receipt_content_hash":
-        entries = dict((info.filename, data) for info, data in read_entries(baseline))
+        entries = {info.filename: data for info, data in read_entries(baseline)}
         receipt = json.loads(entries["overt_receipt.json"])
         receipt["content_hash"] = f"sha256:{'0' * 64}"
         return rewrite(

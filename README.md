@@ -35,6 +35,7 @@ offline package and verification workflow for one recorded agent action.
 | `schemas/` | JSON Schemas for AEP metadata and OVERT receipts |
 | `test-vectors/` | 4 accepted and 7 rejected conformance packages |
 | `examples/` | Four executable reviewer journeys |
+| `experiments/decision-path/` | Model-based differential oracle, generated corpus, and results |
 | `docs/aep-format.md` | Implemented wire-format and verification contract |
 
 This is the public AEP toolkit, not the larger EATF service or governance
@@ -119,6 +120,18 @@ vector against both Draft 2020-12 schemas. CI runs the same build, unit,
 conformance, packaging, and end-to-end workflow on Linux, macOS, and Windows
 where the operating-system step is portable.
 
+Run the v0.3.0 decision-path experiment:
+
+```bash
+python experiments/decision-path/run_experiment.py
+```
+
+Its fixed oracle generates 21 deterministic cases spanning two accepting
+controls and 16 rejection states, then compares both implementations with the
+oracle and with one another at the level of verdict plus first-failure code.
+The preserved confirmatory result is 21/21 oracle matches, 21/21
+cross-language matches, and zero boolean or first-code mismatches.
+
 ## Scope and limitations
 
 - The signer currently emits RSA-signed packages; both verifiers can also
@@ -130,7 +143,7 @@ where the operating-system step is portable.
   implementations and a shared I-JSON domain that rejects unsafe
   integer-valued numbers and unpaired Unicode surrogates.
 - Full RFC 5280 TSA chain construction, revocation checking, HSM integration,
-  and automatic trust-registry discovery are outside version 0.2.0.
+  and automatic trust-registry discovery are outside version 0.3.0.
 - EATF is not a trust service, certificate authority, legal-compliance
   determination, or substitute for an auditor's policy.
 
@@ -143,7 +156,7 @@ release remains available at
 [doi:10.5281/zenodo.21511609](https://doi.org/10.5281/zenodo.21511609).
 The reviewed v0.2.0 source snapshot is archived at
 [doi:10.5281/zenodo.21571908](https://doi.org/10.5281/zenodo.21571908);
-the all-versions concept DOI is
+v0.3.0 adds the decision-path research bundle. The all-versions concept DOI is
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).
 
 ## Contributing and support

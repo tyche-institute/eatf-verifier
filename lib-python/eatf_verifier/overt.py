@@ -80,15 +80,14 @@ def parse_and_validate_overt_receipt(
         if isinstance(receipt_policy, dict)
         else None
     )
-    if metadata_coverage is not None:
-        if (
-            not isinstance(metadata_coverage, (int, float))
-            or isinstance(metadata_coverage, bool)
-            or not isinstance(receipt_coverage, (int, float))
-            or isinstance(receipt_coverage, bool)
-            or abs(float(metadata_coverage) - float(receipt_coverage)) > 1e-9
-        ):
-            return receipt, "policy.coverage does not match metadata.policy_coverage"
+    if metadata_coverage is not None and (
+        not isinstance(metadata_coverage, (int, float))
+        or isinstance(metadata_coverage, bool)
+        or not isinstance(receipt_coverage, (int, float))
+        or isinstance(receipt_coverage, bool)
+        or abs(float(metadata_coverage) - float(receipt_coverage)) > 1e-9
+    ):
+        return receipt, "policy.coverage does not match metadata.policy_coverage"
 
     witness = receipt.get("witness")
     if not isinstance(witness, dict):

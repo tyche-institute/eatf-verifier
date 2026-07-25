@@ -6,12 +6,10 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
-import os
-from pathlib import Path
 import platform
 import subprocess
 import sys
-
+from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parents[1]
@@ -20,7 +18,7 @@ CORPUS = GENERATED / "corpus"
 RESULTS = GENERATED / "results"
 
 sys.path.insert(0, str(REPO_ROOT / "lib-python"))
-from eatf_verifier import VerifyOptions, verify  # noqa: E402
+from eatf_verifier import VerifyOptions, verify
 
 
 def python_results(oracle: dict) -> list[dict]:
