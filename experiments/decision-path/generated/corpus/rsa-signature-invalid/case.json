@@ -1,0 +1,6 @@
+{
+  "expected_code": "RSA_SIGNATURE_INVALID",
+  "expected_valid": false,
+  "id": "rsa-signature-invalid",
+  "operator": "replace_rsa_signature_with_zero_bytes"
+}

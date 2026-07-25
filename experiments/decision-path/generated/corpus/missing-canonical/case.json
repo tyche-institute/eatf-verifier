@@ -1,0 +1,6 @@
+{
+  "expected_code": "REQUIRED_ENTRY_MISSING",
+  "expected_valid": false,
+  "id": "missing-canonical",
+  "operator": "remove_canonical.bin"
+}

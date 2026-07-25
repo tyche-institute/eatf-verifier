@@ -1,0 +1,7 @@
+{
+  "expected_code": null,
+  "expected_valid": true,
+  "id": "accept-profile-with-signer-pin",
+  "operator": "identity",
+  "signer_pin": "matching"
+}

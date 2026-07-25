@@ -1,0 +1,6 @@
+{
+  "expected_code": "ZIP_INVALID_OR_UNSAFE",
+  "expected_valid": false,
+  "id": "zip-unsafe-name",
+  "operator": "add_nested_entry"
+}

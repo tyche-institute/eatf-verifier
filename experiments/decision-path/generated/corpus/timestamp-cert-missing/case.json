@@ -1,0 +1,6 @@
+{
+  "expected_code": "TSA_CERT_MISSING",
+  "expected_valid": false,
+  "id": "timestamp-cert-missing",
+  "operator": "remove_timestamp_embedded_certificates"
+}

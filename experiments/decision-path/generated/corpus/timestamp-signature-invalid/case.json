@@ -1,0 +1,6 @@
+{
+  "expected_code": "TSA_SIGNATURE_INVALID",
+  "expected_valid": false,
+  "id": "timestamp-signature-invalid",
+  "operator": "flip_timestamp_signerinfo_signature"
+}

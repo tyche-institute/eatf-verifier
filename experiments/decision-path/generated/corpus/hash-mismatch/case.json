@@ -1,0 +1,6 @@
+{
+  "expected_code": "HASH_MISMATCH",
+  "expected_valid": false,
+  "id": "hash-mismatch",
+  "operator": "replace_hash_with_zero_digest"
+}

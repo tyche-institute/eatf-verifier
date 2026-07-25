@@ -1,0 +1,6 @@
+{
+  "expected_code": "ZIP_INVALID_OR_UNSAFE",
+  "expected_valid": false,
+  "id": "zip-too-many-entries",
+  "operator": "replace_archive_with_33_flat_entries"
+}

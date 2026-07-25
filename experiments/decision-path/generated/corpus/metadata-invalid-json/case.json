@@ -1,0 +1,6 @@
+{
+  "expected_code": "METADATA_INVALID_JSON",
+  "expected_valid": false,
+  "id": "metadata-invalid-json",
+  "operator": "replace_metadata_with_invalid_json"
+}

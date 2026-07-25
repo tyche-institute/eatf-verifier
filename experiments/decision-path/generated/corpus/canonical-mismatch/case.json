@@ -1,0 +1,6 @@
+{
+  "expected_code": "CANONICAL_FORM_MISMATCH",
+  "expected_valid": false,
+  "id": "canonical-mismatch",
+  "operator": "flip_first_canonical_byte"
+}

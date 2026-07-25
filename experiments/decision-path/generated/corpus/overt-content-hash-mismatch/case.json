@@ -1,0 +1,6 @@
+{
+  "expected_code": "OVERT_INVALID",
+  "expected_valid": false,
+  "id": "overt-content-hash-mismatch",
+  "operator": "replace_receipt_content_hash"
+}

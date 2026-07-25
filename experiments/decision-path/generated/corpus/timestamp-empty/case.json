@@ -1,0 +1,6 @@
+{
+  "expected_code": "TSA_MISSING_OR_INVALID",
+  "expected_valid": false,
+  "id": "timestamp-empty",
+  "operator": "remove_timestamp_witness_then_empty_timestamp"
+}

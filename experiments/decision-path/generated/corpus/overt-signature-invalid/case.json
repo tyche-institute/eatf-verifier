@@ -1,0 +1,6 @@
+{
+  "expected_code": "OVERT_SIGNATURE_INVALID",
+  "expected_valid": false,
+  "id": "overt-signature-invalid",
+  "operator": "replace_overt_signature_with_zero_bytes"
+}

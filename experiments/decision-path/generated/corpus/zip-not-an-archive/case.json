@@ -1,0 +1,6 @@
+{
+  "expected_code": "ZIP_INVALID_OR_UNSAFE",
+  "expected_valid": false,
+  "id": "zip-not-an-archive",
+  "operator": "replace_archive_with_non_zip_bytes"
+}

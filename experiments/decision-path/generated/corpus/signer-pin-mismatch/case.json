@@ -1,0 +1,7 @@
+{
+  "expected_code": "SIGNER_NOT_TRUSTED",
+  "expected_valid": false,
+  "id": "signer-pin-mismatch",
+  "operator": "identity",
+  "signer_pin": "mismatching"
+}

@@ -1,0 +1,6 @@
+{
+  "expected_code": "PQC_PAIR_INCOMPLETE",
+  "expected_valid": false,
+  "id": "pqc-half-pair",
+  "operator": "add_signature_pqc.sig_without_public_key"
+}

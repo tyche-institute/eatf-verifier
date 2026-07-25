@@ -1,0 +1,6 @@
+{
+  "expected_code": "OVERT_SIGNATURE_REQUIRED",
+  "expected_valid": false,
+  "id": "overt-signature-missing",
+  "operator": "remove_overt_signature_witness_then_remove_file"
+}

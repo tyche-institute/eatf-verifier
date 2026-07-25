@@ -1,0 +1,6 @@
+{
+  "expected_code": "METADATA_NOT_OBJECT",
+  "expected_valid": false,
+  "id": "metadata-not-object",
+  "operator": "replace_metadata_with_json_array"
+}
