@@ -6,8 +6,8 @@
  *
  * Thin wrapper around the @eatf/verifier library (../lib). Reads one or
  * more .aep files, runs the full offline verification pipeline (envelope,
- * canonicalisation, hash chain, classical + post-quantum signatures,
- * issuer chain, RFC 3161 timestamp, optional attestation), and prints a
+ * canonicalisation, hashes, classical + post-quantum signatures,
+ * optional signer-key pin, RFC 3161 timestamp, and OVERT receipt), and prints a
  * structured report.
  *
  * No network calls. No API keys. Trust anchors are passed in via CLI
@@ -19,7 +19,7 @@ import { resolve, basename } from "node:path";
 import { existsSync, statSync, readdirSync } from "node:fs";
 import process from "node:process";
 
-const VERSION = "0.1.1";
+const VERSION = "0.2.0";
 
 function usage() {
   process.stdout.write(`\
@@ -38,7 +38,10 @@ Usage:
 Options:
   --json                                     Emit one JSON object per .aep
                                              on stdout (machine-readable).
-  --tsa-trust-list <pem-file>                Pin RFC 3161 TSA roots. Repeatable.
+  --signer-key <pem-file>                    Require the embedded signer key to
+                                             match this SPKI PEM. Repeatable.
+  --tsa-trust-list <pem-file>                Advisory TSA issuer-name pin.
+                                             Repeatable; not RFC 5280 validation.
   --offline-only                             Default. Refuse to consult any
                                              external resource.
   --version, -V                              Print version and exit.
@@ -60,7 +63,7 @@ Examples:
 function parseArgs(argv) {
   const args = {
     paths: [], batch: null, conformance: null,
-    json: false, tsaTrustList: [], offlineOnly: true,
+    json: false, signerKeys: [], tsaTrustList: [], offlineOnly: true,
   };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
@@ -70,6 +73,7 @@ function parseArgs(argv) {
     if (a === "--offline-only") { args.offlineOnly = true; continue; }
     if (a === "--batch") { args.batch = argv[++i]; continue; }
     if (a === "--conformance") { args.conformance = argv[++i]; continue; }
+    if (a === "--signer-key") { args.signerKeys.push(argv[++i]); continue; }
     if (a === "--tsa-trust-list") { args.tsaTrustList.push(argv[++i]); continue; }
     if (a.startsWith("--")) {
       process.stderr.write(`eatf-verify: unknown option ${a}\n`);
@@ -81,14 +85,18 @@ function parseArgs(argv) {
 }
 
 async function loadVerifier() {
-  // bin/eatf-verify.js → cli/eatf-verify/bin/ → ../../../lib/
+  try {
+    return await import("@eatf/verifier");
+  } catch {
+    // Source checkout fallback before the package has been published.
+  }
   const libRoot = new URL("../../../lib/", import.meta.url);
   try {
     return await import(new URL("dist/index.js", libRoot).href);
   } catch (e) {
     process.stderr.write(`\
-eatf-verify: cannot load @eatf/verifier from ../lib/dist/.
-Run \`npm install && npm run build\` in ../lib/ first, then retry.
+eatf-verify: cannot load the @eatf/verifier dependency or repository build.
+From a source checkout, run \`npm ci && npm run build\` at the repository root.
 Underlying error: ${e?.message ?? e}
 `);
     process.exit(2);
@@ -100,6 +108,11 @@ async function loadTsaTrustList(paths) {
   const out = [];
   for (const p of paths) out.push(await readFile(resolve(p), "utf8"));
   return out;
+}
+
+async function loadSignerKeys(paths) {
+  if (paths.length === 0) return [];
+  return Promise.all(paths.map((p) => readFile(resolve(p), "utf8")));
 }
 
 function findAep(root) {
@@ -143,6 +156,7 @@ async function main() {
 
   const { verify } = await loadVerifier();
   const tsaTrustList = await loadTsaTrustList(args.tsaTrustList);
+  const trustedSignerPems = await loadSignerKeys(args.signerKeys);
 
   if (args.paths.length > 0 && !args.batch && !args.conformance) {
     let anyFail = false;
@@ -152,7 +166,7 @@ async function main() {
         return 2;
       }
       const bytes = await readFile(resolve(p));
-      const result = await verify(bytes, { offlineOnly: args.offlineOnly, tsaTrustList });
+      const result = await verify(bytes, { offlineOnly: args.offlineOnly, tsaTrustList, trustedSignerPems });
       if (args.json) process.stdout.write(JSON.stringify({ path: p, ...result }) + "\n");
       else process.stdout.write(formatHuman(p, result) + "\n");
       if (!result.valid) anyFail = true;
@@ -169,7 +183,7 @@ async function main() {
     let pass = 0, fail = 0;
     for (const p of aeps) {
       const bytes = await readFile(resolve(p));
-      const result = await verify(bytes, { offlineOnly: args.offlineOnly, tsaTrustList });
+      const result = await verify(bytes, { offlineOnly: args.offlineOnly, tsaTrustList, trustedSignerPems });
       if (args.json) process.stdout.write(JSON.stringify({ path: p, ...result }) + "\n");
       else process.stdout.write(formatHuman(p, result) + "\n");
       if (result.valid) pass++; else fail++;
@@ -189,7 +203,7 @@ async function main() {
       const expected = expectedFromTreePath(p, args.conformance);
       if (expected === null) continue;
       const bytes = await readFile(resolve(p));
-      const result = await verify(bytes, { offlineOnly: args.offlineOnly, tsaTrustList });
+      const result = await verify(bytes, { offlineOnly: args.offlineOnly, tsaTrustList, trustedSignerPems });
       const actual = result.valid ? "true" : "false";
       const ok = actual === expected;
       if (args.json) {

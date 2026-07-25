@@ -1,15 +1,19 @@
-# cli/ — EATF command-line tools
+# EATF command-line tools
 
-Three command-line entry points are planned for v0.1.
+| Tool | Purpose |
+|---|---|
+| `eatf-sign` | Create an AEP from payload, metadata, keys, scope, and an out-of-band RFC 3161 response. |
+| `eatf-inspect` | Print package structure and selected metadata without making authenticity claims. |
+| `eatf-verify` | Run the TypeScript verification pipeline on files, directories, or the conformance tree. |
+| `eatf-verify-py` | Run the same verdict contract through the Python implementation. |
 
-| Tool           | Purpose                                                                     |
-|----------------|-----------------------------------------------------------------------------|
-| `eatf-sign`    | Build an AEP from a directory of records, sign it, timestamp it.            |
-| `eatf-verify`  | Verify an AEP offline; print a `VerificationReport`; exit 0 on pass.        |
-| `eatf-inspect` | Pretty-print the manifest, signatures, attestation, and timestamp of an AEP without verifying.            |
+Install all commands from the repository root:
 
-## v0.1.0 status
+```bash
+bash bin/setup.sh
+export PATH="$PWD/bin:$PATH"
+```
 
-Stub. The runnable CLIs land in successive 0.1.x point releases.
-
-See each subdirectory's README for the planned invocation surface.
+All four operate without runtime network calls. `eatf-sign` requires a
+timestamp response obtained out of band; the verifier never downloads keys or
+trust material.

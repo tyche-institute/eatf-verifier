@@ -1,8 +1,8 @@
 {
-  "title": "EATF \u2014 Agent Evidence Package (AEP) reference verifiers",
+  "title": "EATF Agent Evidence Package toolkit",
   "upload_type": "software",
   "license": "Apache-2.0",
-  "version": "v0.1.2",
+  "version": "v0.2.0",
   "creators": [
     {
       "name": "Sokolov, Anton",
@@ -10,7 +10,7 @@
       "affiliation": "Tyche Institute"
     }
   ],
-  "description": "Open reference implementation for creating and offline-verifying Agent Evidence Packages (.aep): independent TypeScript and Python verifiers, offline sign/verify/inspect CLIs, JSON schemas, and a conformance test-vector suite with negative controls. Hybrid RSA-4096 + ML-DSA-65 (FIPS 204) signatures and RFC 3161 timestamps. Not an eIDAS trust service; offline, self-contained.",
+  "description": "Open toolkit for creating, inspecting, and offline-verifying Agent Evidence Packages (.aep): TypeScript and Python verifiers, sign/verify/inspect CLIs, JSON schemas, runnable examples, and positive/negative conformance vectors. Version 0.2.0 enforces RFC 3161 SHA-256 imprint equality and embedded CMS signature verification, and supports explicit signer-key pinning.",
   "keywords": [
     "AI agent attestation",
     "Agent Evidence Package",
@@ -21,5 +21,5 @@
     "post-quantum cryptography",
     "Apache-2.0"
   ],
-  "notes": "Metadata prepared for a future Zenodo archive. No deposit has been created or reserved."
+  "notes": "Metadata prepared for the v0.2.0 archive. The prior v0.1.2 archive is doi:10.5281/zenodo.21511609."
 }

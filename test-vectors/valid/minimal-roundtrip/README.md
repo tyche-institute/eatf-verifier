@@ -1,63 +1,23 @@
-# `minimal-roundtrip/`
+# `minimal-roundtrip`
 
-**Expected:** `verify=true`.
+Expected verdict: `verify=true`.
 
-A round-trip-generated AEP: produced by `eatf-sign` (from the same
-repository) using the dev RSA key at
-[`test-vectors/keys/dev-rsa-4096.{key,pem}`](../../keys/) and verified
-by `eatf-verify`. The presence of this vector demonstrates that the
-signer and the verifier in this repository agree end-to-end.
+This package is produced by the current `eatf-sign` CLI from the payload and
+metadata in `examples/01-minimal-sign-and-verify/`, the public development RSA
+keypair, and a matching response from the repository's TEST-ONLY TSA.
 
-The RFC 3161 timestamp token is reused from
-`valid-overt-profile/package.aep` rather than freshly minted (so the
-test is fully offline). The verifier accepts mismatched-imprint
-timestamps with a warning under the "Java reference compatibility"
-path; the SignerInfo signature embedded in the token still verifies
-against its own certificate, which is what matters for the structural
-check.
-
-## Reproducing this vector
+Reproduce the complete workflow:
 
 ```bash
-# 1. Build the verifier and signer.
-(cd lib && npm install && npm run build)
-(cd cli/eatf-sign && npm install)
-
-# 2. Re-sign.
-echo "EATF v0.1.3 round-trip demo: signed by dev-rsa-4096, verified offline." \
-  > /tmp/payload.txt
-cat > /tmp/meta.json <<'JSON'
-{
-  "schema": "urn:eatf:spec:aep:metadata:1.0",
-  "attestation_id": "att_minimal_roundtrip_01",
-  "created_at": "2026-05-15T20:00:00Z",
-  "agent_id": "urn:eatf:tenant:demo:agent:roundtrip-demo",
-  "action_type": "foundational:aep-response",
-  "policy_id": "atap-basic",
-  "policy_version": "1.0",
-  "policy_coverage": 1.0,
-  "policy_decision": "allow",
-  "format_version": "ATAP-1.0"
-}
-JSON
-node cli/eatf-sign/bin/eatf-sign.js \
-  --payload /tmp/payload.txt \
-  --key test-vectors/keys/dev-rsa-4096.key \
-  --public-key test-vectors/keys/dev-rsa-4096.pem \
-  --metadata /tmp/meta.json \
-  --scope foundational:aep-response \
-  --timestamp test-vectors/valid/valid-overt-profile/package.aep:timestamp.tsr \
-  --out /tmp/regenerated.aep
-
-# 3. Verify.
-node cli/eatf-verify/bin/eatf-verify.js /tmp/regenerated.aep
-# → verify=true
+bash bin/setup.sh
+examples/01-minimal-sign-and-verify/run.sh /tmp/eatf-roundtrip
 ```
 
-The regenerated `.aep` will differ from the committed one by exactly
-one timestamp/nonce-influenced byte sequence (the RSA signature is
-deterministic for the same inputs under RSASSA-PKCS1-v1_5, and JCS
-output is deterministic; the only randomness in the package comes from
-the embedded timestamp, which is reused verbatim). Hash comparisons
-against the committed file are therefore meaningful as a regression
-check.
+The timestamp imprint equals SHA-256(`canonical.bin`) and its CMS signature
+verifies against the embedded test-TSA certificate. Both verifiers also accept
+the caller-supplied development signer key as an explicit trust pin.
+`canonical.bin` uses the current
+`response.txt || LF || RFC8785-JCS(metadata)` profile, so metadata is covered
+by the hash, RSA signature, and timestamp. The signed metadata requires
+`overt_receipt.sig`, which covers the exact OVERT receipt bytes and prevents
+unmarked downgrade.

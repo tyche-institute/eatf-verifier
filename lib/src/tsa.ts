@@ -9,12 +9,10 @@
  *       {@code ContentInfo} with the CMS SignedData OID
  *       ({@code 1.2.840.113549.1.7.2}).</li>
  *   <li><b>messageImprintMatches</b> — the {@code TSTInfo.messageImprint
- *       .hashedMessage} octet string equals {@code SHA-256(expectedHashHex
- *       as ASCII)}. The EATF AEP profile (see {@code docs/specs/aep
- *       -profile-v1.md} §7) hashes the lower-case hex string of the
- *       canonical SHA-256, not the canonical bytes themselves; this is
- *       the deliberate compatibility point with Java's
- *       {@code RealTsaServiceImpl}.</li>
+ *       .hashedMessage} octet string equals the SHA-256 digest recorded
+ *       in {@code hash.sha256}. This is the normal RFC 3161
+ *       {@code -digest} workflow: the TSA attests the digest of
+ *       {@code canonical.bin}.</li>
  *   <li><b>signatureVerified</b> — the embedded
  *       {@code SignerInfo.signature} validates against the embedded
  *       signing certificate's public key over the
@@ -45,7 +43,7 @@ import {
   CryptoEngine,
 } from "pkijs";
 
-import { sha256 } from "./hash.js";
+import { fromHex } from "./hash.js";
 import { decodeBase64 } from "./rsa.js";
 import type { TsaTrustResult } from "./tsa-trust-list.js";
 
@@ -72,7 +70,7 @@ function configureEngine(): void {
 export type TsaCheck = {
   /** Token is non-empty and parses as RFC 3161 ContentInfo + SignedData. */
   tsaPresent: boolean;
-  /** Imprint inside the token equals SHA-256 of the expected hash hex. */
+  /** Imprint inside the token equals the expected SHA-256 digest. */
   messageImprintMatches: boolean | null;
   /** SignerInfo signature verifies against the embedded cert's public key. */
   signatureVerified: boolean | null;
@@ -113,6 +111,7 @@ function emptyCheck(note: string, rawSizeBytes = 0): TsaCheck {
 export async function inspectTsa(
   timestampBase64: string,
   expectedHashHex: string,
+  timestampedData?: Uint8Array,
 ): Promise<TsaCheck> {
   if (!timestampBase64 || !timestampBase64.trim()) {
     return emptyCheck("No timestamp.tsr in package.");
@@ -131,7 +130,7 @@ export async function inspectTsa(
 
   configureEngine();
 
-  // ----- Parse outer ContentInfo -----
+  // ----- Parse outer TimeStampResp or bare ContentInfo -----
   let contentInfo: ContentInfo;
   try {
     const fresh = der.slice();
@@ -139,9 +138,32 @@ export async function inspectTsa(
     if (asn.offset === -1) {
       return emptyCheck("Outer DER did not parse as ASN.1.", der.length);
     }
-    contentInfo = new ContentInfo({ schema: asn.result });
+    const outer = asn.result as asn1js.Sequence;
+    const outerItems = outer.valueBlock.value;
+    let contentInfoSchema: asn1js.BaseBlock = outer;
+
+    // RFC 3161 TimeStampResp ::= SEQUENCE {
+    //   status PKIStatusInfo, timeStampToken TimeStampToken OPTIONAL
+    // }
+    // A bare TimeStampToken is a CMS ContentInfo whose first child is an OID.
+    if (outerItems[0] instanceof asn1js.Sequence) {
+      const statusItems = (outerItems[0] as asn1js.Sequence).valueBlock.value;
+      const status = statusItems[0] as asn1js.Integer;
+      const statusValue = status.valueBlock.valueDec;
+      if (statusValue !== 0 && statusValue !== 1) {
+        return emptyCheck(
+          `TimeStampResp status ${statusValue} is not granted.`,
+          der.length,
+        );
+      }
+      if (!outerItems[1]) {
+        return emptyCheck("Granted TimeStampResp has no timeStampToken.", der.length);
+      }
+      contentInfoSchema = outerItems[1]!;
+    }
+    contentInfo = new ContentInfo({ schema: contentInfoSchema });
   } catch (e) {
-    return emptyCheck(`ContentInfo parse failed: ${describeError(e)}`, der.length);
+    return emptyCheck(`TimeStampResp/ContentInfo parse failed: ${describeError(e)}`, der.length);
   }
 
   if (contentInfo.contentType !== CMS_SIGNED_DATA_OID) {
@@ -224,8 +246,7 @@ export async function inspectTsa(
   // ----- Compare imprint to expected -----
   let messageImprintMatches: boolean | null = null;
   if (imprintHashBytes && imprintAlgorithmOid === SHA256_OID) {
-    const tsaInput = new TextEncoder().encode(expectedHashHex);
-    const expectedDigest = new Uint8Array(await sha256(tsaInput));
+    const expectedDigest = fromHex(expectedHashHex);
     messageImprintMatches = constantTimeEqual(imprintHashBytes, expectedDigest);
   }
 
@@ -242,7 +263,7 @@ export async function inspectTsa(
 
   let signatureVerified: boolean | null = null;
   try {
-    if (certs.length === 0) {
+    if (certs.length === 0 || !timestampedData) {
       signatureVerified = null;
     } else {
       // pkijs.SignedData.verify resolves to a boolean (true = OK,
@@ -251,7 +272,9 @@ export async function inspectTsa(
       // surface separately below.
       const ok = await signedData.verify({
         signer: 0,
-        data: tstInfoBytes.slice().buffer,
+        // PKIjs treats RFC 3161 specially: `data` is the original
+        // timestamped content, not the encapsulated TSTInfo bytes.
+        data: timestampedData.slice().buffer,
         trustedCerts: certs,
       });
       signatureVerified = ok === true;
@@ -287,7 +310,7 @@ export async function inspectTsa(
         ? "TSA signature verified against embedded cert. Trust-anchor chain validation is a separate step (verifyTsaTrust)."
         : signatureVerified === false
         ? "TSA signature did not verify against embedded cert. Treat as tampered."
-        : "TSA signature not checked (no embedded cert).",
+        : "TSA signature not checked (no embedded cert or timestamped data).",
   };
 }
 
@@ -320,7 +343,7 @@ export async function verifyTsaTrust(
   if (trustList.length === 0) {
     return {
       trusted: null,
-      reason: "Empty trust list — chain-to-root check skipped. Pass roots to enforce.",
+      reason: "Empty trust list — issuer-name comparison skipped.",
       signerSubject: check.signerSubject ?? undefined,
       signerIssuer: check.signerIssuer ?? undefined,
     };

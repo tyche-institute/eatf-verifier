@@ -17,7 +17,11 @@ import { existsSync } from "node:fs";
 import process from "node:process";
 import { unzipSync, strFromU8 } from "fflate";
 
-const VERSION = "0.1.2";
+const VERSION = "0.2.0";
+const MAX_ARCHIVE_BYTES = 64 * 1024 * 1024;
+const MAX_ENTRY_BYTES = 16 * 1024 * 1024;
+const MAX_EXPANDED_BYTES = 32 * 1024 * 1024;
+const MAX_ENTRIES = 32;
 
 function usage() {
   process.stdout.write(`\
@@ -66,11 +70,31 @@ function tryParseJson(bytes) {
 }
 
 function summarise(bytes) {
-  const entries = unzipSync(bytes);
+  if (bytes.byteLength > MAX_ARCHIVE_BYTES) {
+    throw new Error("archive exceeds 64 MiB safety limit");
+  }
+  let entryCount = 0;
+  let expandedBytes = 0;
+  const seen = new Set();
+  const entries = unzipSync(bytes, {
+    filter: (file) => {
+      entryCount += 1;
+      expandedBytes += file.originalSize;
+      if (entryCount > MAX_ENTRIES) throw new Error("too many ZIP entries");
+      if (file.originalSize > MAX_ENTRY_BYTES) throw new Error("ZIP entry too large");
+      if (expandedBytes > MAX_EXPANDED_BYTES) throw new Error("expanded ZIP too large");
+      if (file.name.includes("/") || file.name.includes("\\") || file.name.includes("\0")) {
+        throw new Error("AEP entries must use flat, safe names");
+      }
+      if (seen.has(file.name)) throw new Error("duplicate ZIP entry");
+      seen.add(file.name);
+      return true;
+    },
+  });
   const names = Object.keys(entries).sort();
   const sizes = Object.fromEntries(names.map((n) => [n, entries[n].byteLength]));
 
-  // AEP v1 wire format is flat — see docs/aep-profile.md.
+  // AEP v1 wire format is flat — see docs/aep-format.md.
   const metadata = entries["metadata.json"] ? tryParseJson(entries["metadata.json"]) : null;
   const overtReceipt = entries["overt_receipt.json"] ? tryParseJson(entries["overt_receipt.json"]) : null;
 
@@ -79,10 +103,12 @@ function summarise(bytes) {
     "hash.sha256",
     "metadata.json",
     "overt_receipt.json",
+    "overt_receipt.sig",
     "public_key.pem",
     "response.txt",
     "signature.sig",
-    "signature.mldsa",   // post-quantum signature (when present)
+    "signature_pqc.sig",  // post-quantum signature (when present)
+    "pqc_public_key.pem",
     "timestamp.tsr",
   ];
   const presence = Object.fromEntries(

@@ -30,17 +30,27 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--conformance",
         metavar="VECTORS_ROOT",
-        help="Walk a test-vectors tree (valid/ + invalid/) and assert each vector matches its verify-expected.txt.",
+        help=(
+            "Walk a test-vectors tree (valid/ + invalid/) and assert "
+            "each expected verdict."
+        ),
     )
     parser.add_argument(
         "--json", action="store_true", help="Emit one JSON object per .aep on stdout."
+    )
+    parser.add_argument(
+        "--signer-key",
+        action="append",
+        default=[],
+        metavar="PEM",
+        help="Require the embedded signer key to match this SPKI PEM. Repeatable.",
     )
     parser.add_argument(
         "--tsa-trust-list",
         action="append",
         default=[],
         metavar="PEM",
-        help="Pin RFC 3161 TSA root certificate(s). Repeatable. Chain-to-root validation lands in a 0.2.x point release; the option is accepted today for CLI parity with the TypeScript reference.",
+        help="Advisory TSA issuer-name pin. Repeatable; not RFC 5280 validation.",
     )
     parser.add_argument(
         "--offline-only",
@@ -59,6 +69,7 @@ def main(argv: list[str] | None = None) -> int:
 
     opts = VerifyOptions(
         offline_only=args.offline_only,
+        trusted_signer_pems=[pathlib.Path(p).read_bytes() for p in args.signer_key],
         tsa_trust_list=[pathlib.Path(p).read_bytes() for p in args.tsa_trust_list],
     )
 
@@ -107,7 +118,13 @@ def _run_conformance(root: str, opts: VerifyOptions, *, json_out: bool) -> int:
     base = root.rstrip("/")
     for p in aeps:
         rel = p[len(base):].lstrip("/")
-        expected = "true" if rel.startswith("valid/") else "false" if rel.startswith("invalid/") else None
+        expected = (
+            "true"
+            if rel.startswith("valid/")
+            else "false"
+            if rel.startswith("invalid/")
+            else None
+        )
         if expected is None:
             continue
         with open(p, "rb") as f:

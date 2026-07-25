@@ -1,0 +1,1 @@
+EATF v0.2.0 toolkit round-trip: signed once and verified independently offline.

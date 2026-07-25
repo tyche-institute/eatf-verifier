@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.tyche.institute/eatf/aep-v1.schema.json",
   "title": "EATF AEP v1 metadata.json",
-  "description": "Validates the metadata.json entry inside an AEP v1 evidence package. Wire format documented in docs/aep-profile.md. The signature, timestamp, and OVERT receipt are validated by the verifier separately; this schema only constrains metadata.json.",
+  "description": "Validates the metadata.json entry inside an AEP v1 evidence package. Wire format documented in docs/aep-format.md. The signature, timestamp, and OVERT receipt are validated by the verifier separately; this schema only constrains metadata.json.",
   "type": "object",
   "required": [
     "created_at"
@@ -74,6 +74,11 @@
     "format_version": {
       "description": "Optional embedded format version identifier (e.g. 'ATAP-1.0').",
       "type": "string"
+    },
+    "overt_receipt_signature": {
+      "description": "Signed anti-downgrade marker used by current writers. When present, the package MUST contain overt_receipt.json and an RSA signature over its exact bytes at overt_receipt.sig.",
+      "type": "string",
+      "const": "overt_receipt.sig"
     },
     "mcp": {
       "description": "Optional MCP-specific block for tools/call attestations.",

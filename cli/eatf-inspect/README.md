@@ -1,58 +1,31 @@
-# `eatf-inspect` — structure dump for `.aep` packages
+# `eatf-inspect`
 
-Pretty-prints the layout of an EATF `.aep` evidence package: ZIP
-entries, parsed manifest, OVERT receipt summary, attestation summary,
-signature and timestamp filenames. Does **NOT** verify authenticity —
-anything in the printed output could have been forged after signing.
-
-For authenticity assertion, use [`eatf-verify`](../eatf-verify) on the
-same file.
-
-## Install
+`eatf-inspect` prints the flat AEP v1 ZIP layout, entry sizes, parsed metadata,
+and an OVERT receipt summary. It does not validate hashes or signatures.
 
 ```bash
-cd cli/eatf-inspect
-npm install
-node bin/eatf-inspect.js path/to/package.aep
+eatf-inspect test-vectors/valid/mcp-tools-call-valid/package.aep
+eatf-inspect --json test-vectors/valid/mcp-tools-call-valid/package.aep
 ```
 
-## Usage
+The output identifies these wire entries when present:
 
-```
-eatf-inspect <path.aep>       Print manifest + entries + signatures summary.
-eatf-inspect --json <path>    Emit one JSON object describing the package.
-eatf-inspect --version, -V
-eatf-inspect --help, -h
-```
-
-Exit codes: `0` inspection completed; `1` package is not a well-formed
-ZIP / cannot be read; `2` bad CLI usage.
-
-## Example
-
-```bash
-$ node cli/eatf-inspect/bin/eatf-inspect.js test-vectors/valid/mcp-tools-call-valid/package.aep
-
-PACKAGE test-vectors/valid/mcp-tools-call-valid/package.aep
-  total ZIP entries: 7
-  manifest:
-    profile: urn:eatf:spec:aep:1.0
-    issuer.commonName: ...
-    issuer.fingerprint: ...…
-    createdAt: 2026-...
-    records: 1
-  overt_receipt.json:
-    scope: agentic-extended:mcp-tools-call
-    policy.decision: allow
-  records: 1 (0001-action.json)
-  signatures: 2 (manifest.sig.cms, manifest.sig.mldsa)
-  timestamps: 1 (manifest.tsr)
-  certs: 2 (issuer.pem, tsa.pem)
-
-Note: this is a structure dump only. Authenticity is NOT checked.
-Run eatf-verify to assert signature, hash chain, and timestamp.
+```text
+canonical.bin
+hash.sha256
+metadata.json
+overt_receipt.json
+overt_receipt.sig
+public_key.pem
+response.txt
+signature.sig
+signature_pqc.sig
+pqc_public_key.pem
+timestamp.tsr
 ```
 
-## License
+Use `eatf-verify` or `eatf-verify-py` for a verification assertion. Exit
+codes are 0 for completed inspection, 1 for an unreadable/malformed ZIP, and 2
+for bad CLI usage.
 
-Apache License 2.0 — see [`../../LICENSE`](../../LICENSE).
+Apache-2.0; see [`../../LICENSE`](../../LICENSE).

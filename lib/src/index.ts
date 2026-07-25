@@ -26,12 +26,11 @@ export type VerifyResult = {
   /** Parsed and profile-checked overt_receipt.json, when the optional entry is present. */
   overtReceipt: Record<string, unknown> | null;
   /**
-   * v0.1: trust-anchor cross-check result for the embedded
+   * Advisory issuer-name comparison for the embedded
    * RFC 3161 TSA signing cert. `null` when the caller passed no
    * `tsaTrustList`, the TSA itself was absent, or the embedded cert
-   * could not be parsed. Operators that need chain-to-root validation
-   * inspect this field; in v0.2 it is informational and does not
-   * fail `valid`.
+   * could not be parsed. This field is informational and does not
+   * represent RFC 5280 path validation.
    */
   tsaTrusted?: boolean | null;
 };
@@ -54,22 +53,27 @@ export type VerifyOptions = {
 
   /**
    * v0.1: PEM-encoded root certificates pinned for RFC 3161
-   * TSA chain-to-root validation. When empty (default), the verifier
+   * TSA issuer-name comparison. When empty (default), the verifier
    * skips chain validation and {@link VerifyResult.tsaTrusted} is set
    * to `null`. When non-empty, the verifier checks that the TSA
    * signing cert's issuer DN matches one of the supplied roots.
    *
-   * For now, full RFC 5280 path validation (NotBefore / NotAfter /
-   * KeyUsage / EKU / Basic Constraints / CRL / OCSP) is not performed
-   * — that is v0.3 territory. The match is on issuer-DN against
-   * pinned root subject-DN.
+   * Full RFC 5280 path validation (NotBefore / NotAfter / KeyUsage /
+   * EKU / Basic Constraints / CRL / OCSP) is not performed. The
+   * advisory match is issuer DN against pinned certificate subject DN.
    */
   tsaTrustList?: string[];
 };
 
 export { verify } from "./verifier.js";
-export { sign, type SignerInput, type SignerOutput } from "./signer.js";
-export type { CanonicalPair } from "./canonical.js";
+export {
+  prepareCanonical,
+  sign,
+  type PreparedCanonical,
+  type SignerInput,
+  type SignerOutput,
+} from "./signer.js";
+export { canonical, jcs, type CanonicalPair } from "./canonical.js";
 export {
   DEFAULT_TSA_TRUST_LIST,
   type TsaTrustResult,

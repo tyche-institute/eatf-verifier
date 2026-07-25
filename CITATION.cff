@@ -1,9 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "EATF — Agent Evidence Package (AEP) reference verifiers"
+title: "EATF Agent Evidence Package toolkit"
 type: software
-version: 0.1.2
-doi: 10.5281/zenodo.21511609
+version: 0.2.0
 authors:
   - family-names: "Sokolov"
     given-names: "Anton"
@@ -18,3 +17,4 @@ keywords:
   - RFC 3161
   - ML-DSA
   - post-quantum cryptography
+  - research software

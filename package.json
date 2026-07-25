@@ -1,0 +1,21 @@
+{
+  "name": "eatf-aep-toolkit",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Workspace for the EATF Agent Evidence Package offline toolkit.",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "lib",
+    "cli/eatf-sign",
+    "cli/eatf-inspect",
+    "cli/eatf-verify"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@eatf/verifier",
+    "test": "npm run test --workspace=@eatf/verifier",
+    "test:toolkit": "bash tests/toolkit-smoke.sh"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
