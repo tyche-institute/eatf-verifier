@@ -139,9 +139,12 @@ where the operating-system step is portable.
 Apache License 2.0; see [LICENSE](LICENSE).
 
 Citation metadata is in [CITATION.cff](CITATION.cff). The archived v0.1.2
-release is available at
+release remains available at
 [doi:10.5281/zenodo.21511609](https://doi.org/10.5281/zenodo.21511609).
-Version 0.2.0 metadata is prepared for the next immutable archive.
+The reviewed v0.2.0 source snapshot is archived at
+[doi:10.5281/zenodo.21571908](https://doi.org/10.5281/zenodo.21571908);
+the all-versions concept DOI is
+[doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).
 
 ## Contributing and support
 

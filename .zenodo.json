@@ -21,5 +21,12 @@
     "post-quantum cryptography",
     "Apache-2.0"
   ],
-  "notes": "Metadata prepared for the v0.2.0 archive. The prior v0.1.2 archive is doi:10.5281/zenodo.21511609."
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.2.0",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Version 0.2.0 was archived as doi:10.5281/zenodo.21571908. The prior v0.1.2 archive is doi:10.5281/zenodo.21511609."
 }

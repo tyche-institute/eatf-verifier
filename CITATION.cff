@@ -3,6 +3,7 @@ message: "If you use this software, please cite it as below."
 title: "EATF Agent Evidence Package toolkit"
 type: software
 version: 0.2.0
+date-released: 2026-07-25
 authors:
   - family-names: "Sokolov"
     given-names: "Anton"
@@ -10,6 +11,11 @@ authors:
     affiliation: "Tyche Institute, Tallinn, Estonia"
 license: Apache-2.0
 repository-code: "https://github.com/tyche-institute/eatf-verifier"
+url: "https://doi.org/10.5281/zenodo.21571908"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21571908"
+    description: "Version-specific archive for EATF Agent Evidence Package toolkit v0.2.0"
 keywords:
   - AI agent attestation
   - Agent Evidence Package
