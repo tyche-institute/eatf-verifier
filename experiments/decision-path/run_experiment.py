@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import os
 import platform
 import subprocess
 import sys
@@ -66,7 +67,8 @@ def main() -> int:
         cwd=REPO_ROOT,
         check=True,
     )
-    subprocess.run(["npm", "run", "build"], cwd=REPO_ROOT, check=True)
+    npm = "npm.cmd" if os.name == "nt" else "npm"
+    subprocess.run([npm, "run", "build"], cwd=REPO_ROOT, check=True)
 
     oracle = json.loads((HERE / "oracle.json").read_text(encoding="utf-8"))
     expected = {item["id"]: item for item in oracle["cases"]}
