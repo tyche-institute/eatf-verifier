@@ -1,0 +1,41 @@
+{
+  "schema": "urn:eatf:experiment:path-shadowing-oracle:1",
+  "baseline": "test-vectors/valid/minimal-roundtrip/package.aep",
+  "purpose": "Demonstrate, reproducibly and on shipped code, that a well-formed negative control can be correctly rejected and still fail to exercise the state it was written to test.",
+  "principle": "Each case names the decision state the mutation was WRITTEN to test. The prediction below was recorded before the run. A case is 'shadowed' when both implementations reject it, as intended, but at an earlier state than the one it targets — which a boolean pass/fail suite reports as a success.",
+  "note": "The naive and refined operators differ only in whether the receipt's witness reference to the mutated entry is cleared, and the receipt re-signed, before the entry is altered.",
+  "cases": [
+    {
+      "id": "naive-remove-receipt-signature",
+      "operator": "remove_overt_signature_file_only",
+      "targets_state": "OVERT_SIGNATURE_REQUIRED",
+      "prediction": "shadowed",
+      "predicted_observed_code": "OVERT_INVALID",
+      "rationale": "The receipt still names overt_receipt.sig in witness.signature_refs, so the witness-reference check rejects the package before the signed-receipt gate is reached."
+    },
+    {
+      "id": "refined-remove-receipt-signature",
+      "operator": "remove_overt_signature_witness_then_remove_file",
+      "targets_state": "OVERT_SIGNATURE_REQUIRED",
+      "prediction": "reaches_target",
+      "predicted_observed_code": "OVERT_SIGNATURE_REQUIRED",
+      "rationale": "Clearing the witness reference and re-signing the receipt first removes the earlier guard, so the intended state decides."
+    },
+    {
+      "id": "naive-empty-timestamp",
+      "operator": "empty_timestamp_file_only",
+      "targets_state": "TSA_MISSING_OR_INVALID",
+      "prediction": "shadowed",
+      "predicted_observed_code": "OVERT_INVALID",
+      "rationale": "The receipt still names timestamp.tsr in witness.timestamp_refs, so the witness-reference check rejects the package before the RFC 3161 state is reached."
+    },
+    {
+      "id": "refined-empty-timestamp",
+      "operator": "remove_timestamp_witness_then_empty_timestamp",
+      "targets_state": "TSA_MISSING_OR_INVALID",
+      "prediction": "reaches_target",
+      "predicted_observed_code": "TSA_MISSING_OR_INVALID",
+      "rationale": "Clearing the timestamp witness reference and re-signing first removes the earlier guard."
+    }
+  ]
+}

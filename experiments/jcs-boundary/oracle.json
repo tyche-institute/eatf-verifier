@@ -1,0 +1,86 @@
+{
+  "schema": "urn:eatf:experiment:jcs-boundary-oracle:1",
+  "purpose": "Transfer the decision-path method to third-party software. The two RFC 8785 implementations exercised here are dependencies of this project; neither was written by its author.",
+  "software_under_test": [
+    {
+      "id": "js",
+      "package": "canonicalize",
+      "version": "3.0.0",
+      "registry": "npm",
+      "author": "Samuel Erdtman",
+      "note": "Erdtman is a co-author of RFC 8785."
+    },
+    {
+      "id": "py",
+      "package": "rfc8785",
+      "version": "0.1.4",
+      "registry": "PyPI",
+      "author": "Trail of Bits"
+    }
+  ],
+  "principle": "Each case declares, before execution, whether RFC 8785 obliges a conforming implementation to terminate with an error, and why. 'permitted' means the input satisfies RFC 8785 section 3.1 and no clause obliges rejection. 'must_terminate' means a clause imposes an implementation-level MUST to terminate. 'undefined' means the input violates the section 3.1 input duty but no clause tells an implementation what to do — the specification's own author has stated such inputs produce non-uniform results across implementations.",
+  "prior_art": "The non-uniform handling of numbers outside the IEEE 754 double domain is documented by the specification's principal author in cyberphone/json-canonicalization issues 3 (2018) and 20 (2021). It is cited, not claimed, by this experiment.",
+  "cases": [
+    {
+      "id": "b01-exact-2p54",
+      "input": "{\"a\":18014398509481984}",
+      "expected_class": "permitted",
+      "rfc_basis": "3.1: number data MUST be expressible as IEEE 754 double precision. 2^54 is exactly representable, so the input satisfies that duty and no clause obliges rejection.",
+      "note": "Discriminates exact-representability from the I-JSON interoperability bound of 2^53-1."
+    },
+    {
+      "id": "b02-unsafe-2p53-plus-1",
+      "input": "{\"a\":9007199254740993}",
+      "expected_class": "undefined",
+      "rfc_basis": "3.1 forbids the input; no clause states implementation behaviour. Appendix B note 1 places the interoperable integer range at +/-9007199254740991."
+    },
+    {
+      "id": "b03-huge-integer",
+      "input": "{\"a\":123456789012345678901234567890}",
+      "expected_class": "undefined",
+      "rfc_basis": "3.1 forbids the input; Appendix B note 2 states the algorithm does not consider extended precision."
+    },
+    {
+      "id": "b04-lone-high-surrogate",
+      "input": "{\"a\":\"\\ud800\"}",
+      "expected_class": "must_terminate",
+      "rfc_basis": "3.2.2.2 note: occurrences of invalid Unicode data like lone surrogates MUST cause a compliant JCS implementation to terminate with an appropriate error."
+    },
+    {
+      "id": "b05-lone-low-surrogate",
+      "input": "{\"a\":\"\\udead\"}",
+      "expected_class": "must_terminate",
+      "rfc_basis": "3.2.2.2 note, which names U+DEAD explicitly."
+    },
+    {
+      "id": "b06-paired-surrogate",
+      "input": "{\"a\":\"\\ud800\\udead\"}",
+      "expected_class": "permitted",
+      "rfc_basis": "RFC 7493 section 2.1: a correctly paired surrogate is legal."
+    },
+    {
+      "id": "b07-infinity",
+      "input": "{\"a\":1e400}",
+      "expected_class": "must_terminate",
+      "rfc_basis": "3.2.2.3 note: NaN or Infinity MUST cause a compliant implementation to terminate with an error."
+    },
+    {
+      "id": "b08-negative-zero",
+      "input": "{\"a\":-0}",
+      "expected_class": "permitted",
+      "rfc_basis": "-0 is a valid JSON number and serializes as 0. Errata 7920 recommends that parsers reject it, but the recommendation is addressed to the application, not to the canonicalizer."
+    },
+    {
+      "id": "b09-safe-integer-max",
+      "input": "{\"a\":9007199254740991}",
+      "expected_class": "permitted",
+      "rfc_basis": "Appendix B note 1: the upper end of the interoperable integer range."
+    },
+    {
+      "id": "b10-smallest-subnormal",
+      "input": "{\"a\":5e-324}",
+      "expected_class": "permitted",
+      "rfc_basis": "Exactly representable as an IEEE 754 double subnormal."
+    }
+  ]
+}

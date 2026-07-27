@@ -1,0 +1,162 @@
+{
+  "schema": "urn:eatf:experiment:jcs-boundary-results:1",
+  "environment": {
+    "python": "3.12.3",
+    "node": "v22.22.3",
+    "canonicalize": "3.0.0",
+    "rfc8785": "0.1.4"
+  },
+  "summary": {
+    "cases": 10,
+    "cases_with_a_declared_obligation": 8,
+    "cases_the_rfc_leaves_undefined": 2,
+    "outcome_agreements": 5,
+    "outcome_divergences": 5,
+    "js_conformance": "6/8",
+    "py_conformance": "7/8",
+    "js_nonconforming": [
+      "b04-lone-high-surrogate",
+      "b05-lone-low-surrogate"
+    ],
+    "py_nonconforming": [
+      "b01-exact-2p54"
+    ],
+    "cases_where_the_js_parser_changed_the_number_before_canonicalization": [
+      "b02-unsafe-2p53-plus-1",
+      "b03-huge-integer",
+      "b07-infinity"
+    ]
+  },
+  "rows": [
+    {
+      "id": "b01-exact-2p54",
+      "expected_class": "permitted",
+      "js_outcome": "output",
+      "py_outcome": "terminate",
+      "js_detail": "{\"a\":18014398509481984}",
+      "py_detail": "IntegerDomainError",
+      "js_host_changed_number": false,
+      "js_host_number": "18014398509481984",
+      "agree": false,
+      "js_conforms": true,
+      "py_conforms": false
+    },
+    {
+      "id": "b02-unsafe-2p53-plus-1",
+      "expected_class": "undefined",
+      "js_outcome": "output",
+      "py_outcome": "terminate",
+      "js_detail": "{\"a\":9007199254740992}",
+      "py_detail": "IntegerDomainError",
+      "js_host_changed_number": true,
+      "js_host_number": "9007199254740992",
+      "agree": false,
+      "js_conforms": null,
+      "py_conforms": null
+    },
+    {
+      "id": "b03-huge-integer",
+      "expected_class": "undefined",
+      "js_outcome": "output",
+      "py_outcome": "terminate",
+      "js_detail": "{\"a\":1.2345678901234568e+29}",
+      "py_detail": "IntegerDomainError",
+      "js_host_changed_number": true,
+      "js_host_number": "1.2345678901234568e+29",
+      "agree": false,
+      "js_conforms": null,
+      "py_conforms": null
+    },
+    {
+      "id": "b04-lone-high-surrogate",
+      "expected_class": "must_terminate",
+      "js_outcome": "output",
+      "py_outcome": "terminate",
+      "js_detail": "{\"a\":\"\\ud800\"}",
+      "py_detail": "CanonicalizationError",
+      "js_host_changed_number": false,
+      "js_host_number": null,
+      "agree": false,
+      "js_conforms": false,
+      "py_conforms": true
+    },
+    {
+      "id": "b05-lone-low-surrogate",
+      "expected_class": "must_terminate",
+      "js_outcome": "output",
+      "py_outcome": "terminate",
+      "js_detail": "{\"a\":\"\\udead\"}",
+      "py_detail": "CanonicalizationError",
+      "js_host_changed_number": false,
+      "js_host_number": null,
+      "agree": false,
+      "js_conforms": false,
+      "py_conforms": true
+    },
+    {
+      "id": "b06-paired-surrogate",
+      "expected_class": "permitted",
+      "js_outcome": "output",
+      "py_outcome": "output",
+      "js_detail": "{\"a\":\"\ud800\udead\"}",
+      "py_detail": "{\"a\":\"\ud800\udead\"}",
+      "js_host_changed_number": false,
+      "js_host_number": null,
+      "agree": true,
+      "js_conforms": true,
+      "py_conforms": true
+    },
+    {
+      "id": "b07-infinity",
+      "expected_class": "must_terminate",
+      "js_outcome": "terminate",
+      "py_outcome": "terminate",
+      "js_detail": "Error",
+      "py_detail": "FloatDomainError",
+      "js_host_changed_number": true,
+      "js_host_number": "Infinity",
+      "agree": true,
+      "js_conforms": true,
+      "py_conforms": true
+    },
+    {
+      "id": "b08-negative-zero",
+      "expected_class": "permitted",
+      "js_outcome": "output",
+      "py_outcome": "output",
+      "js_detail": "{\"a\":0}",
+      "py_detail": "{\"a\":0}",
+      "js_host_changed_number": false,
+      "js_host_number": "0",
+      "agree": true,
+      "js_conforms": true,
+      "py_conforms": true
+    },
+    {
+      "id": "b09-safe-integer-max",
+      "expected_class": "permitted",
+      "js_outcome": "output",
+      "py_outcome": "output",
+      "js_detail": "{\"a\":9007199254740991}",
+      "py_detail": "{\"a\":9007199254740991}",
+      "js_host_changed_number": false,
+      "js_host_number": "9007199254740991",
+      "agree": true,
+      "js_conforms": true,
+      "py_conforms": true
+    },
+    {
+      "id": "b10-smallest-subnormal",
+      "expected_class": "permitted",
+      "js_outcome": "output",
+      "py_outcome": "output",
+      "js_detail": "{\"a\":5e-324}",
+      "py_detail": "{\"a\":5e-324}",
+      "js_host_changed_number": false,
+      "js_host_number": "5e-324",
+      "agree": true,
+      "js_conforms": true,
+      "py_conforms": true
+    }
+  ]
+}

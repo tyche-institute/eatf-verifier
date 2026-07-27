@@ -1,0 +1,11 @@
+case,expected_class,js_outcome,py_outcome,agree,js_conforms,py_conforms
+b01-exact-2p54,permitted,output,terminate,false,true,false
+b02-unsafe-2p53-plus-1,undefined,output,terminate,false,n/a,n/a
+b03-huge-integer,undefined,output,terminate,false,n/a,n/a
+b04-lone-high-surrogate,must_terminate,output,terminate,false,false,true
+b05-lone-low-surrogate,must_terminate,output,terminate,false,false,true
+b06-paired-surrogate,permitted,output,output,true,true,true
+b07-infinity,must_terminate,terminate,terminate,true,true,true
+b08-negative-zero,permitted,output,output,true,true,true
+b09-safe-integer-max,permitted,output,output,true,true,true
+b10-smallest-subnormal,permitted,output,output,true,true,true

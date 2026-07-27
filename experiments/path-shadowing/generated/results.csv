@@ -1,0 +1,5 @@
+case,targets_state,ts_code,py_code,outcome,prediction_held
+naive-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED,OVERT_INVALID,OVERT_INVALID,shadowed,true
+refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED,OVERT_SIGNATURE_REQUIRED,OVERT_SIGNATURE_REQUIRED,reaches_target,true
+naive-empty-timestamp,TSA_MISSING_OR_INVALID,OVERT_INVALID,OVERT_INVALID,shadowed,true
+refined-empty-timestamp,TSA_MISSING_OR_INVALID,TSA_MISSING_OR_INVALID,TSA_MISSING_OR_INVALID,reaches_target,true

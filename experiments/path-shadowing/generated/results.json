@@ -1,0 +1,77 @@
+{
+  "schema": "urn:eatf:experiment:path-shadowing-results:1",
+  "environment": {
+    "python": "3.12.3",
+    "node": "v22.22.3"
+  },
+  "summary": {
+    "cases": 4,
+    "rejected_by_both_implementations": 4,
+    "reached_their_target_state": 2,
+    "shadowed": 2,
+    "shadowed_ids": [
+      "naive-remove-receipt-signature",
+      "naive-empty-timestamp"
+    ],
+    "predictions_held": "4/4",
+    "cross_language_agreement": "4/4"
+  },
+  "rows": [
+    {
+      "id": "naive-remove-receipt-signature",
+      "targets_state": "OVERT_SIGNATURE_REQUIRED",
+      "prediction": "shadowed",
+      "predicted_observed_code": "OVERT_INVALID",
+      "ts_valid": false,
+      "ts_code": "OVERT_INVALID",
+      "py_valid": false,
+      "py_code": "OVERT_INVALID",
+      "cross_language_agree": true,
+      "outcome": "shadowed",
+      "prediction_held": true,
+      "package_sha256": "082ed6357ed42b04eb0fd90566acd2b9986bb6363f9cd1c853dfe37597b72649"
+    },
+    {
+      "id": "refined-remove-receipt-signature",
+      "targets_state": "OVERT_SIGNATURE_REQUIRED",
+      "prediction": "reaches_target",
+      "predicted_observed_code": "OVERT_SIGNATURE_REQUIRED",
+      "ts_valid": false,
+      "ts_code": "OVERT_SIGNATURE_REQUIRED",
+      "py_valid": false,
+      "py_code": "OVERT_SIGNATURE_REQUIRED",
+      "cross_language_agree": true,
+      "outcome": "reaches_target",
+      "prediction_held": true,
+      "package_sha256": "8b8381d1ec1bd23482027d02765f76aab267e3427bde3a1357a1ddfbabe10b72"
+    },
+    {
+      "id": "naive-empty-timestamp",
+      "targets_state": "TSA_MISSING_OR_INVALID",
+      "prediction": "shadowed",
+      "predicted_observed_code": "OVERT_INVALID",
+      "ts_valid": false,
+      "ts_code": "OVERT_INVALID",
+      "py_valid": false,
+      "py_code": "OVERT_INVALID",
+      "cross_language_agree": true,
+      "outcome": "shadowed",
+      "prediction_held": true,
+      "package_sha256": "8644b6ac95f9aa804ac4132d1900b15286a2cee28d003753e9c50abc761d2984"
+    },
+    {
+      "id": "refined-empty-timestamp",
+      "targets_state": "TSA_MISSING_OR_INVALID",
+      "prediction": "reaches_target",
+      "predicted_observed_code": "TSA_MISSING_OR_INVALID",
+      "ts_valid": false,
+      "ts_code": "TSA_MISSING_OR_INVALID",
+      "py_valid": false,
+      "py_code": "TSA_MISSING_OR_INVALID",
+      "cross_language_agree": true,
+      "outcome": "reaches_target",
+      "prediction_held": true,
+      "package_sha256": "47bc664d68c0006dd656ae55a3aa0b1596b8443cffd2cf8f1c0b8a181414f8ac"
+    }
+  ]
+}
