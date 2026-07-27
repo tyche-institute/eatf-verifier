@@ -158,9 +158,11 @@ The v0.2.0 source snapshot is archived at
 [doi:10.5281/zenodo.21571908](https://doi.org/10.5281/zenodo.21571908). The
 v0.3.0 release, which added the decision-path research bundle, is archived at
 [doi:10.5281/zenodo.21618887](https://doi.org/10.5281/zenodo.21618887). The
-current release, v0.4.1, which adds the path-shadowing and JCS-boundary
-experiments, is archived at
+v0.4.1 release, which added the path-shadowing and JCS-boundary experiments, is
+archived at
 [doi:10.5281/zenodo.21625781](https://doi.org/10.5281/zenodo.21625781). The
+current release, v0.5.0, which adds the guard-ordering measurement, is archived
+at [doi:10.5281/zenodo.21633255](https://doi.org/10.5281/zenodo.21633255). The
 all-versions concept DOI is
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).
 

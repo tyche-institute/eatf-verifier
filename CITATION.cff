@@ -11,11 +11,11 @@ authors:
     affiliation: "Tyche Institute, Tallinn, Estonia"
 license: Apache-2.0
 repository-code: "https://github.com/tyche-institute/eatf-verifier"
-url: "https://doi.org/10.5281/zenodo.21625781"
+url: "https://doi.org/10.5281/zenodo.21633255"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.21625781"
-    description: "Version DOI for the v0.4.1 archive"
+    value: "10.5281/zenodo.21633255"
+    description: "Version DOI for the v0.5.0 archive"
   - type: doi
     value: "10.5281/zenodo.21511608"
     description: "All-versions concept DOI for the EATF Agent Evidence Package toolkit"
