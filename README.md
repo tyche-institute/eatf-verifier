@@ -154,9 +154,12 @@ Apache License 2.0; see [LICENSE](LICENSE).
 Citation metadata is in [CITATION.cff](CITATION.cff). The archived v0.1.2
 release remains available at
 [doi:10.5281/zenodo.21511609](https://doi.org/10.5281/zenodo.21511609).
-The reviewed v0.2.0 source snapshot is archived at
-[doi:10.5281/zenodo.21571908](https://doi.org/10.5281/zenodo.21571908);
-v0.3.0 adds the decision-path research bundle. The all-versions concept DOI is
+The v0.2.0 source snapshot is archived at
+[doi:10.5281/zenodo.21571908](https://doi.org/10.5281/zenodo.21571908). The
+current release, v0.3.0, which adds the decision-path research bundle, is
+archived at
+[doi:10.5281/zenodo.21618887](https://doi.org/10.5281/zenodo.21618887). The
+all-versions concept DOI is
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).
 
 ## Contributing and support

@@ -30,5 +30,5 @@
       "scheme": "url"
     }
   ],
-  "notes": "Create version 0.3.0 as a new version under concept doi:10.5281/zenodo.21511608. The prior v0.2.0 archive is doi:10.5281/zenodo.21571908. Release tag v0.3.0 resolves to commit 21ee0a2a7b4967959b5327139ab17e5b81d516bb; the exact confirmatory-code commit is 1a6329495e6e1235c388f72d209f23eefa38fe38; the preserved corpus/results commit is c0d52b9e73cc50dd9b1cbbba496a69bdf14a1bf2."
+  "notes": "Version 0.3.0 is archived at doi:10.5281/zenodo.21618887 under concept doi:10.5281/zenodo.21511608; the prior v0.2.0 archive is doi:10.5281/zenodo.21571908. Release tag v0.3.0 resolves to commit 21ee0a2a7b4967959b5327139ab17e5b81d516bb; the exact confirmatory-code commit is 1a6329495e6e1235c388f72d209f23eefa38fe38; the preserved corpus/results commit is c0d52b9e73cc50dd9b1cbbba496a69bdf14a1bf2. Aggregate corpus digest 27d3ee6ce430c4c6de03f6f41be60ed7be7118eb391fcfcedc61ab06c30c364d, computed as SHA-256 over the package.aep lines of experiments/decision-path/generated/results/SHA256SUMS."
 }
