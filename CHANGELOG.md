@@ -1,6 +1,11 @@
 # Changelog
 
-## v0.4.0 — reproducible evidence for path shadowing (2026-07-27)
+## v0.4.1 — reproducible evidence for path shadowing (2026-07-27)
+
+Supersedes v0.4.0, whose CLI dependency pins still named `@eatf/verifier`
+0.3.0, so a clean `npm ci` from that tag could not resolve the workspace and
+failed on every CI job. Use this tag. Contents are otherwise identical.
+
 
 - Add `experiments/path-shadowing`: four cases in two matched pairs from one
   valid seed, demonstrating on the shipped verifiers that a negative control
