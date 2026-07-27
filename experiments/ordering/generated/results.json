@@ -1,0 +1,418 @@
+{
+  "schema": "urn:eatf:experiment:ordering-faultsets:1",
+  "environment": {
+    "python": "3.12.3"
+  },
+  "seed": "test-vectors/valid/minimal-roundtrip/package.aep",
+  "unrepairable_codes": {
+    "ZIP_INVALID_OR_UNSAFE": "the archive itself does not parse, so no entry can be restored",
+    "SIGNER_NOT_TRUSTED": "decided by a caller-supplied trust set, not by package bytes"
+  },
+  "summary": {
+    "cases": 25,
+    "peeled_to_acceptance": 20,
+    "terminated_on_an_unrepairable_code": 4,
+    "other_terminations": 1,
+    "single_repair_cases": 17,
+    "multi_repair_cases": 0,
+    "multi_repair_ids": [],
+    "inconclusive_cases": 1,
+    "inconclusive_ids": [
+      "naive-empty-timestamp"
+    ],
+    "code_invariance": "NOT MEASURED \u2014 see limitation",
+    "limitation": "This harness measures how many REPAIRS a package needs, not how many GUARDS reject it, and for this artifact the two come apart. A single byte-level fault is often visible at several guards: an absent overt_receipt.sig is seen both by the receipt's witness-reference check and by the signed-receipt-required check, and one restoration clears both. Peeling therefore reports one repair where two guards would fire, which is precisely the structure this experiment exists to detect. No code-invariance figure may be derived from these numbers. The preference for repair peeling recorded in DESIGN.md is hereby withdrawn on the evidence of this run; guard-level fault sets require the non-short-circuiting collect mode that design rejected."
+  },
+  "rows": [
+    {
+      "id": "accept-profile",
+      "fault_sequence": [],
+      "fault_set_size": 0,
+      "order_invariant": false,
+      "steps": [],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "accept-profile-with-signer-pin",
+      "fault_sequence": [],
+      "fault_set_size": 0,
+      "order_invariant": false,
+      "steps": [],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "canonical-mismatch",
+      "fault_sequence": [
+        "CANONICAL_FORM_MISMATCH"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "CANONICAL_FORM_MISMATCH",
+          "entries_restored": [
+            "canonical.bin"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "hash-mismatch",
+      "fault_sequence": [
+        "HASH_MISMATCH"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "HASH_MISMATCH",
+          "entries_restored": [
+            "hash.sha256"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "metadata-invalid-json",
+      "fault_sequence": [
+        "METADATA_INVALID_JSON"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "METADATA_INVALID_JSON",
+          "entries_restored": [
+            "metadata.json"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "metadata-not-object",
+      "fault_sequence": [
+        "METADATA_NOT_OBJECT"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "METADATA_NOT_OBJECT",
+          "entries_restored": [
+            "metadata.json"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "missing-canonical",
+      "fault_sequence": [
+        "REQUIRED_ENTRY_MISSING"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "REQUIRED_ENTRY_MISSING",
+          "entries_restored": [
+            "canonical.bin"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "overt-content-hash-mismatch",
+      "fault_sequence": [
+        "OVERT_INVALID"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "OVERT_INVALID",
+          "entries_restored": [
+            "overt_receipt.json"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "overt-signature-invalid",
+      "fault_sequence": [
+        "OVERT_SIGNATURE_INVALID"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "OVERT_SIGNATURE_INVALID",
+          "entries_restored": [
+            "overt_receipt.sig"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "overt-signature-missing",
+      "fault_sequence": [
+        "OVERT_SIGNATURE_REQUIRED"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "OVERT_SIGNATURE_REQUIRED",
+          "entries_restored": [
+            "overt_receipt.json",
+            "overt_receipt.sig"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "pqc-half-pair",
+      "fault_sequence": [
+        "PQC_PAIR_INCOMPLETE"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "PQC_PAIR_INCOMPLETE",
+          "entries_restored": [
+            "signature_pqc.sig"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "rsa-signature-invalid",
+      "fault_sequence": [
+        "RSA_SIGNATURE_INVALID"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "RSA_SIGNATURE_INVALID",
+          "entries_restored": [
+            "signature.sig"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "signer-pin-mismatch",
+      "fault_sequence": [],
+      "fault_set_size": 0,
+      "order_invariant": false,
+      "steps": [],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "timestamp-cert-missing",
+      "fault_sequence": [
+        "TSA_CERT_MISSING"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "TSA_CERT_MISSING",
+          "entries_restored": [
+            "timestamp.tsr"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "timestamp-empty",
+      "fault_sequence": [
+        "TSA_MISSING_OR_INVALID"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "TSA_MISSING_OR_INVALID",
+          "entries_restored": [
+            "timestamp.tsr"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "timestamp-imprint-mismatch",
+      "fault_sequence": [
+        "TSA_IMPRINT_MISMATCH"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "TSA_IMPRINT_MISMATCH",
+          "entries_restored": [
+            "timestamp.tsr"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "timestamp-signature-invalid",
+      "fault_sequence": [
+        "TSA_SIGNATURE_INVALID"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "TSA_SIGNATURE_INVALID",
+          "entries_restored": [
+            "timestamp.tsr"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "decision-path"
+    },
+    {
+      "id": "zip-duplicate-entry",
+      "fault_sequence": [
+        "ZIP_INVALID_OR_UNSAFE"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [],
+      "stopped": "unrepairable:ZIP_INVALID_OR_UNSAFE",
+      "source": "decision-path"
+    },
+    {
+      "id": "zip-not-an-archive",
+      "fault_sequence": [
+        "ZIP_INVALID_OR_UNSAFE"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [],
+      "stopped": "unrepairable:ZIP_INVALID_OR_UNSAFE",
+      "source": "decision-path"
+    },
+    {
+      "id": "zip-too-many-entries",
+      "fault_sequence": [
+        "ZIP_INVALID_OR_UNSAFE"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [],
+      "stopped": "unrepairable:ZIP_INVALID_OR_UNSAFE",
+      "source": "decision-path"
+    },
+    {
+      "id": "zip-unsafe-name",
+      "fault_sequence": [
+        "ZIP_INVALID_OR_UNSAFE"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [],
+      "stopped": "unrepairable:ZIP_INVALID_OR_UNSAFE",
+      "source": "decision-path"
+    },
+    {
+      "id": "naive-empty-timestamp",
+      "fault_sequence": [
+        "OVERT_INVALID"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [],
+      "stopped": "repair-had-no-effect:OVERT_INVALID",
+      "source": "path-shadowing"
+    },
+    {
+      "id": "naive-remove-receipt-signature",
+      "fault_sequence": [
+        "OVERT_INVALID"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "OVERT_INVALID",
+          "entries_restored": [
+            "overt_receipt.sig"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "path-shadowing"
+    },
+    {
+      "id": "refined-empty-timestamp",
+      "fault_sequence": [
+        "TSA_MISSING_OR_INVALID"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "TSA_MISSING_OR_INVALID",
+          "entries_restored": [
+            "timestamp.tsr"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "path-shadowing"
+    },
+    {
+      "id": "refined-remove-receipt-signature",
+      "fault_sequence": [
+        "OVERT_SIGNATURE_REQUIRED"
+      ],
+      "fault_set_size": 1,
+      "order_invariant": true,
+      "steps": [
+        {
+          "code": "OVERT_SIGNATURE_REQUIRED",
+          "entries_restored": [
+            "overt_receipt.json",
+            "overt_receipt.sig"
+          ]
+        }
+      ],
+      "stopped": "accepted",
+      "source": "path-shadowing"
+    }
+  ]
+}

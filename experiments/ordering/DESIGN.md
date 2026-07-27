@@ -93,3 +93,52 @@ repair changes exactly the bytes it claims to change.
 If the harness is not producing consistent results in both languages by
 8 August 2026, stop and submit without this section. A finished article left
 unsubmitted is this lane's actual failure mode.
+
+---
+
+## Outcome of the first attempt, 27 July 2026 — the preferred harness was wrong
+
+Repair peeling was built and run over all 25 cases of the decision-path and
+path-shadowing corpora. It does not answer the question, and the reason is
+worth recording because it is the same structure the experiment was built to
+find.
+
+**What happened.** The harness measures how many *repairs* a package needs, not
+how many *guards* reject it, and for this artifact the two come apart. A single
+byte-level fault is frequently visible at several guards: an absent
+`overt_receipt.sig` is seen both by the receipt's witness-reference check and
+by the signed-receipt-required check, and one restoration clears both. Peeling
+therefore reports one repair where two guards would fire.
+
+**How it was caught.** The first version gave `OVERT_INVALID` a repair that also
+restored the entries the receipt names as witnesses. That made every case peel
+in one step and produced a clean-looking "code invariance 21/21" — a figure
+that would have been false, and false in the direction the harness wanted. The
+assertion required by this document, that a repair changes exactly the entries
+it declares, did not catch it, because the over-broad repair declared the extra
+entries honestly. What caught it was checking the result against prediction 3:
+the two naive path-shadowing cases were predicted to be multi-fault and came
+back single-fault. A prediction fixed in advance is what turned a plausible
+number into a detected defect.
+
+**Consequence.** The preference for repair peeling over collect mode, recorded
+above on the ground that it cannot regress shipped behaviour, is **withdrawn**.
+It cannot regress shipped behaviour and it also cannot measure the quantity of
+interest. Guard-level fault sets require the non-short-circuiting collect mode:
+each guard must be evaluated on the same input independently of whether an
+earlier one already rejected it.
+
+**Prediction 3 is neither confirmed nor refuted** by this run, and must not be
+reported as either. The harness could not reach it.
+
+**What the run is good for.** It stands as an instrument check and is deposited
+as one: `generated/results.csv` records, per case, how many repairs each
+package needed and where the peel stopped. The four ZIP cases terminate on an
+unrepairable code by construction, and `naive-empty-timestamp` stalls because
+its guard reacts to bytes this repair vocabulary does not reach — which is
+itself the coupling described above, showing through.
+
+**Revised next step.** Implement collect mode behind a flag in both verifiers,
+with the shipped default untouched and every existing test green as the
+acceptance criterion. The 8 August abort date stands and now covers that work
+instead.
