@@ -16,7 +16,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@eatf/verifier": "0.3.0"
+    "@eatf/verifier": "0.4.0"
   },
   "scripts": {
     "verify": "node bin/eatf-verify.js"
