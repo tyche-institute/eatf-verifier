@@ -2,7 +2,7 @@
   "title": "EATF Agent Evidence Package toolkit",
   "upload_type": "software",
   "license": "Apache-2.0",
-  "version": "v0.4.1",
+  "version": "v0.5.0",
   "creators": [
     {
       "name": "Sokolov, Anton",
@@ -30,6 +30,6 @@
       "scheme": "url"
     }
   ],
-  "notes": "Version 0.4.1 is archived at doi:10.5281/zenodo.21625781. Version 0.4.1 adds two experiments: experiments/path-shadowing (a four-case demonstration, on shipped code, that a negative control can be correctly rejected by both implementations with identical codes and still never reach the state it was written to test; expected outcomes frozen before the run, 4/4 held) and experiments/jcs-boundary (the same discipline applied to two third-party RFC 8785 implementations, canonicalize 3.0.0 and rfc8785 0.1.4, where 5 of 10 boundary inputs return different outcomes). Prior version v0.3.0 is doi:10.5281/zenodo.21618887 under concept doi:10.5281/zenodo.21511608. Both new runners are offline and byte-deterministic across consecutive runs. Tag v0.4.0 is superseded: its CLI dependency pins still named @eatf/verifier 0.3.0, so a clean npm ci could not resolve the workspace.",
+  "notes": "Version 0.5.0 adds experiments/ordering, which measures how far a first-failure code depends on the order in which guards run. Guards are evaluated independently by calling the shipped public components, with no verifier source modified. Over 25 packages and 10 guards each: 3 with no rejecting guard, 15 with exactly one, and 7 with more than one, so for 7 of the 22 rejected packages the code depends on which violated guard is reached first; largest fault set 3. A prediction fixed before the harness existed was REFUTED and is recorded as such: order-dependence is not confined to packages touching a receipt witness. The directory also carries a repair-peeling harness that was built, run and withdrawn on its own evidence. Prior version v0.4.1 is doi:10.5281/zenodo.21625781 under concept doi:10.5281/zenodo.21511608.",
   "publication_date": "2026-07-27"
 }

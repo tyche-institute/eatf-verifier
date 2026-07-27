@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.5.0 — how far the first-failure code depends on guard order (2026-07-27)
+
+- Add `experiments/ordering`. `guard_probe.py` evaluates each guard
+  independently on the same package by calling the shipped public components
+  once each; no verifier source is modified. Over the 25 packages of the
+  decision-path and path-shadowing corpora, with ten guards each: 3 packages
+  have no rejecting guard and the verifier accepts all three, 15 have exactly
+  one, and **7 have more than one**, so for 7 of the 22 rejected packages the
+  first-failure code depends on which violated guard is reached first. Largest
+  fault set: 3.
+- Two sentinels gate every run and both caught real defects during
+  development: the accepting controls must have empty fault sets, and the set
+  of packages this probe rejects must coincide with the set the shipped
+  verifier rejects.
+- **A prediction fixed before the harness existed is refuted and recorded as
+  refuted.** Order-dependence is not confined to packages touching an entry the
+  signed receipt names as a witness; the general mechanism is that one
+  byte-level fault propagates to every downstream guard whose inputs depend on
+  those bytes.
+- The directory also carries `run_experiment.py`, a repair-peeling harness that
+  was built, run and then withdrawn on its own evidence: it counts repairs
+  rather than guards, and for this artifact the two come apart.
+- No verifier behaviour changed. Suites unaffected: 31 TypeScript, 45 Python.
+
 ## v0.4.1 — reproducible evidence for path shadowing (2026-07-27)
 
 Supersedes v0.4.0, whose CLI dependency pins still named `@eatf/verifier`
