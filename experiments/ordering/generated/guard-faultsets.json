@@ -1,0 +1,1362 @@
+{
+  "schema": "urn:eatf:experiment:guard-faultsets:1",
+  "environment": {
+    "python": "3.12.3"
+  },
+  "method": "guards evaluated independently via the shipped public components; no verifier source modified",
+  "summary": {
+    "cases": 25,
+    "guards_evaluated_per_case": 10,
+    "sentinel_accepting_controls": "2 checked, all with an empty fault set",
+    "sentinel_completeness": "every package the shipped verifier rejects has at least one rejecting guard here, and every one it accepts has none",
+    "cases_with_no_rejecting_guard": 3,
+    "cases_with_exactly_one_rejecting_guard": 15,
+    "cases_with_more_than_one_rejecting_guard": 7,
+    "order_sensitive_ids": [
+      "canonical-mismatch",
+      "hash-mismatch",
+      "overt-content-hash-mismatch",
+      "zip-duplicate-entry",
+      "zip-too-many-entries",
+      "naive-empty-timestamp",
+      "naive-remove-receipt-signature"
+    ],
+    "max_fault_set_size": 3,
+    "note": "A case with one rejecting guard receives the same first-failure code under every ordering of the guards; that is analytic. A case with more than one rejecting guard receives a code that depends on which of them the implementation reaches first, so for those cases the standard's permission to reorder does not preserve the code. Guards whose own inputs are not well defined for a package are reported as unevaluable and are counted in neither direction."
+  },
+  "rows": [
+    {
+      "id": "accept-profile",
+      "source": "decision-path",
+      "rejecting_guards": [],
+      "fault_set_size": 0,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "accept-profile-with-signer-pin",
+      "source": "decision-path",
+      "rejecting_guards": [],
+      "fault_set_size": 0,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "canonical-mismatch",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "4-canonical-form",
+        "5-digest",
+        "7-rsa"
+      ],
+      "fault_set_size": 3,
+      "unevaluable_guards": [],
+      "order_sensitive": true,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "rejects",
+          "detail": "canonical.bin matches neither accepted form"
+        },
+        "5-digest": {
+          "state": "rejects",
+          "detail": "digest does not match canonical.bin"
+        },
+        "7-rsa": {
+          "state": "rejects",
+          "detail": "RSA signature does not verify"
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "hash-mismatch",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "5-digest",
+        "8a-overt-crosscheck",
+        "10-12-timestamp"
+      ],
+      "fault_set_size": 3,
+      "unevaluable_guards": [],
+      "order_sensitive": true,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "rejects",
+          "detail": "digest does not match canonical.bin"
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "rejects",
+          "detail": "content_hash does not match hash.sha256"
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "rejects",
+          "detail": "message imprint does not match hash.sha256"
+        }
+      }
+    },
+    {
+      "id": "metadata-invalid-json",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "3-metadata-object"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [
+        "4-canonical-form",
+        "8a-overt-crosscheck",
+        "8b-receipt-signature"
+      ],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "rejects",
+          "detail": "metadata.json is not valid JSON"
+        },
+        "4-canonical-form": {
+          "state": "unevaluable",
+          "detail": "profile form could not be built: JSONDecodeError"
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "unevaluable",
+          "detail": "metadata or digest not readable"
+        },
+        "8b-receipt-signature": {
+          "state": "unevaluable",
+          "detail": "metadata does not parse"
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "metadata-not-object",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "3-metadata-object"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [
+        "4-canonical-form",
+        "8a-overt-crosscheck",
+        "8b-receipt-signature"
+      ],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "rejects",
+          "detail": "metadata.json is not an object"
+        },
+        "4-canonical-form": {
+          "state": "unevaluable",
+          "detail": "metadata is not an object, so no profile form exists"
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "unevaluable",
+          "detail": "metadata is not an object"
+        },
+        "8b-receipt-signature": {
+          "state": "unevaluable",
+          "detail": "metadata is not an object"
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "missing-canonical",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "2-required-entries"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [
+        "4-canonical-form",
+        "5-digest",
+        "7-rsa"
+      ],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "rejects",
+          "detail": "missing ['canonical.bin']"
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "unevaluable",
+          "detail": "canonical form needs response, metadata and canonical bytes"
+        },
+        "5-digest": {
+          "state": "unevaluable",
+          "detail": "no canonical bytes or no recorded digest"
+        },
+        "7-rsa": {
+          "state": "unevaluable",
+          "detail": "no signature, key or canonical bytes"
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "overt-content-hash-mismatch",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "8a-overt-crosscheck",
+        "8b-receipt-signature"
+      ],
+      "fault_set_size": 2,
+      "unevaluable_guards": [],
+      "order_sensitive": true,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "rejects",
+          "detail": "content_hash does not match hash.sha256"
+        },
+        "8b-receipt-signature": {
+          "state": "rejects",
+          "detail": "receipt signature does not verify"
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "overt-signature-invalid",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "8b-receipt-signature"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "rejects",
+          "detail": "receipt signature does not verify"
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "overt-signature-missing",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "8b-receipt-signature"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "rejects",
+          "detail": "signed metadata requires both the receipt and its signature"
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "pqc-half-pair",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "9-pqc-pair"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "rejects",
+          "detail": "half pair: ['signature_pqc.sig']"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "rsa-signature-invalid",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "7-rsa"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "rejects",
+          "detail": "RSA signature does not verify"
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "signer-pin-mismatch",
+      "source": "decision-path",
+      "rejecting_guards": [],
+      "fault_set_size": 0,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "timestamp-cert-missing",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "10-12-timestamp"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "rejects",
+          "detail": "no embedded signing certificate"
+        }
+      }
+    },
+    {
+      "id": "timestamp-empty",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "10-12-timestamp"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "rejects",
+          "detail": "timestamp.tsr is empty"
+        }
+      }
+    },
+    {
+      "id": "timestamp-imprint-mismatch",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "10-12-timestamp"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "rejects",
+          "detail": "message imprint does not match hash.sha256"
+        }
+      }
+    },
+    {
+      "id": "timestamp-signature-invalid",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "10-12-timestamp"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "rejects",
+          "detail": "CMS SignerInfo signature does not verify"
+        }
+      }
+    },
+    {
+      "id": "zip-duplicate-entry",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "1-zip",
+        "4-canonical-form"
+      ],
+      "fault_set_size": 2,
+      "unevaluable_guards": [],
+      "order_sensitive": true,
+      "guards": {
+        "1-zip": {
+          "state": "rejects",
+          "detail": "duplicate entry name"
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "rejects",
+          "detail": "canonical.bin matches neither accepted form"
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "zip-not-an-archive",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "1-zip"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [
+        "2-required-entries",
+        "3-metadata-object",
+        "4-canonical-form",
+        "5-digest",
+        "7-rsa",
+        "8a-overt-crosscheck",
+        "8b-receipt-signature",
+        "9-pqc-pair",
+        "10-12-timestamp"
+      ],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "rejects",
+          "detail": "BadZipFile"
+        },
+        "2-required-entries": {
+          "state": "unevaluable",
+          "detail": "archive does not parse"
+        },
+        "3-metadata-object": {
+          "state": "unevaluable",
+          "detail": "no metadata.json to parse"
+        },
+        "4-canonical-form": {
+          "state": "unevaluable",
+          "detail": "canonical form needs response, metadata and canonical bytes"
+        },
+        "5-digest": {
+          "state": "unevaluable",
+          "detail": "no canonical bytes or no recorded digest"
+        },
+        "7-rsa": {
+          "state": "unevaluable",
+          "detail": "no signature, key or canonical bytes"
+        },
+        "8a-overt-crosscheck": {
+          "state": "unevaluable",
+          "detail": "no receipt present"
+        },
+        "8b-receipt-signature": {
+          "state": "unevaluable",
+          "detail": "no metadata to read the marker from"
+        },
+        "9-pqc-pair": {
+          "state": "unevaluable",
+          "detail": "archive does not parse"
+        },
+        "10-12-timestamp": {
+          "state": "unevaluable",
+          "detail": "no timestamp or no digest to compare against"
+        }
+      }
+    },
+    {
+      "id": "zip-too-many-entries",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "1-zip",
+        "2-required-entries"
+      ],
+      "fault_set_size": 2,
+      "unevaluable_guards": [
+        "3-metadata-object",
+        "4-canonical-form",
+        "5-digest",
+        "7-rsa",
+        "8a-overt-crosscheck",
+        "8b-receipt-signature",
+        "10-12-timestamp"
+      ],
+      "order_sensitive": true,
+      "guards": {
+        "1-zip": {
+          "state": "rejects",
+          "detail": "33 entries exceeds 32"
+        },
+        "2-required-entries": {
+          "state": "rejects",
+          "detail": "missing ['response.txt', 'metadata.json', 'canonical.bin', 'hash.sha256', 'signature.sig', 'public_key.pem', 'timestamp.tsr']"
+        },
+        "3-metadata-object": {
+          "state": "unevaluable",
+          "detail": "no metadata.json to parse"
+        },
+        "4-canonical-form": {
+          "state": "unevaluable",
+          "detail": "canonical form needs response, metadata and canonical bytes"
+        },
+        "5-digest": {
+          "state": "unevaluable",
+          "detail": "no canonical bytes or no recorded digest"
+        },
+        "7-rsa": {
+          "state": "unevaluable",
+          "detail": "no signature, key or canonical bytes"
+        },
+        "8a-overt-crosscheck": {
+          "state": "unevaluable",
+          "detail": "no receipt present"
+        },
+        "8b-receipt-signature": {
+          "state": "unevaluable",
+          "detail": "no metadata to read the marker from"
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "unevaluable",
+          "detail": "no timestamp or no digest to compare against"
+        }
+      }
+    },
+    {
+      "id": "zip-unsafe-name",
+      "source": "decision-path",
+      "rejecting_guards": [
+        "1-zip"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "rejects",
+          "detail": "non-flat name 'nested/entry.txt'"
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "naive-empty-timestamp",
+      "source": "path-shadowing",
+      "rejecting_guards": [
+        "8a-overt-crosscheck",
+        "10-12-timestamp"
+      ],
+      "fault_set_size": 2,
+      "unevaluable_guards": [],
+      "order_sensitive": true,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "rejects",
+          "detail": "witness.timestamp_refs references empty file timestamp.tsr"
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "rejects",
+          "detail": "timestamp.tsr is empty"
+        }
+      }
+    },
+    {
+      "id": "naive-remove-receipt-signature",
+      "source": "path-shadowing",
+      "rejecting_guards": [
+        "8a-overt-crosscheck",
+        "8b-receipt-signature"
+      ],
+      "fault_set_size": 2,
+      "unevaluable_guards": [],
+      "order_sensitive": true,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "rejects",
+          "detail": "witness.signature_refs references missing file overt_receipt.sig"
+        },
+        "8b-receipt-signature": {
+          "state": "rejects",
+          "detail": "signed metadata requires both the receipt and its signature"
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    },
+    {
+      "id": "refined-empty-timestamp",
+      "source": "path-shadowing",
+      "rejecting_guards": [
+        "10-12-timestamp"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "rejects",
+          "detail": "timestamp.tsr is empty"
+        }
+      }
+    },
+    {
+      "id": "refined-remove-receipt-signature",
+      "source": "path-shadowing",
+      "rejecting_guards": [
+        "8b-receipt-signature"
+      ],
+      "fault_set_size": 1,
+      "unevaluable_guards": [],
+      "order_sensitive": false,
+      "guards": {
+        "1-zip": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "2-required-entries": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "3-metadata-object": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "4-canonical-form": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "5-digest": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "7-rsa": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8a-overt-crosscheck": {
+          "state": "accepts",
+          "detail": ""
+        },
+        "8b-receipt-signature": {
+          "state": "rejects",
+          "detail": "signed metadata requires both the receipt and its signature"
+        },
+        "9-pqc-pair": {
+          "state": "accepts",
+          "detail": "optional pair absent"
+        },
+        "10-12-timestamp": {
+          "state": "accepts",
+          "detail": ""
+        }
+      }
+    }
+  ]
+}

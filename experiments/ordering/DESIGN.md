@@ -142,3 +142,63 @@ itself the coupling described above, showing through.
 with the shipped default untouched and every existing test green as the
 acceptance criterion. The 8 August abort date stands and now covers that work
 instead.
+
+---
+
+## Second attempt, 27 July 2026 — measured, with prediction 3 refuted
+
+`guard_probe.py` evaluates each guard independently on the same package by
+calling the shipped public components (`canonical.jcs`, `hash.sha256`,
+`rsa.verify_rsa`, `overt.parse_and_validate_overt_receipt`, `tsa.inspect_tsa`)
+once each. No verifier source is modified, so collect mode was not needed after
+all; the third option was to observe rather than to instrument.
+
+Ten guards per case over the 25 packages of the decision-path and
+path-shadowing corpora. Two sentinels gate the run and both pass:
+
+- the two accepting controls have empty fault sets;
+- every package the shipped verifier rejects has at least one rejecting guard
+  here, and every one it accepts has none.
+
+The second sentinel earned its place. Two earlier versions of this probe failed
+it: one passed the PEM key as a decoded string to a loader that takes bytes, so
+every case came back with a rejecting RSA guard including the valid controls;
+the next used attribute names that `TsaCheck` does not have, so the timestamp
+guard silently checked nothing and eight rejected cases came back with no
+rejecting guard at all. Neither would have been visible in the summary
+statistics.
+
+### Result
+
+| | cases |
+|---|---:|
+| No rejecting guard (all genuinely accepted) | 3 |
+| Exactly one rejecting guard — code is order-invariant | 15 |
+| **More than one rejecting guard — code depends on the ordering** | **7** |
+| Largest fault set | 3 guards |
+
+So for 7 of the 22 packages this corpus rejects, the first-failure code is not a
+property of the package alone: it depends on which of several violated guards
+the implementation reaches first. The verdict is unaffected, as predicted and
+as is analytic. This is the measurement Section 2.4 of the manuscript promises.
+
+### Prediction 3 is refuted
+
+The prediction fixed before the harness existed was that order-dependent cases
+would be **exactly** those touching an entry the signed receipt also names as a
+witness. They are not. Three of the seven have nothing to do with the receipt:
+
+- `canonical-mismatch` — canonical-form, digest and RSA all reject it;
+- `zip-duplicate-entry` — ZIP safety and canonical-form;
+- `zip-too-many-entries` — ZIP safety and required-entries.
+
+The witness-reference story explains the path-shadowing pair and the two OVERT
+cases, and no more. The general pattern is broader and simpler: **one
+byte-level fault propagates to every downstream guard whose inputs depend on
+those bytes.** Changing `canonical.bin` invalidates the canonical form, the
+digest computed over it, and the signature computed over it, so three guards
+reject one edit.
+
+That is a better explanation than the one predicted, and it is reported here as
+a refutation rather than quietly substituted. The prediction was wrong; the
+mechanism it named is a special case of the one measured.
