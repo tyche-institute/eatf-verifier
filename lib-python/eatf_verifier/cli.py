@@ -59,6 +59,11 @@ def main(argv: list[str] | None = None) -> int:
         help="Default. Refuse external lookups.",
     )
     parser.add_argument(
+        "--require-pqc",
+        action="store_true",
+        help="Reject packages without a complete, valid ML-DSA-65 signature pair.",
+    )
+    parser.add_argument(
         "-V", "--version", action="version", version=f"eatf-verify-py {__version__}"
     )
     args = parser.parse_args(argv)
@@ -71,6 +76,7 @@ def main(argv: list[str] | None = None) -> int:
         offline_only=args.offline_only,
         trusted_signer_pems=[pathlib.Path(p).read_bytes() for p in args.signer_key],
         tsa_trust_list=[pathlib.Path(p).read_bytes() for p in args.tsa_trust_list],
+        pqc_policy="required" if args.require_pqc else "if-present",
     )
 
     if args.conformance:

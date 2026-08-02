@@ -35,6 +35,8 @@ class VerifyOptions:
     An empty list skips the pin. This is not full RFC 5280 path
     validation; see ``verify_tsa_trust``.
     """
+    pqc_policy: str = "if-present"
+    """Use ``required`` to reject classical-only transition packages."""
 
 
 @dataclass
@@ -305,6 +307,15 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             report,
             "PQC_PAIR_INCOMPLETE",
             "ML-DSA-65 signature and public-key entries must be supplied together.",
+            metadata,
+            pqc_valid,
+            receipt,
+        )
+    if not has_pqc_signature and opts.pqc_policy == "required":
+        return _fail(
+            report,
+            "PQC_SIGNATURE_REQUIRED",
+            "Verification policy requires a complete ML-DSA-65 signature pair.",
             metadata,
             pqc_valid,
             receipt,

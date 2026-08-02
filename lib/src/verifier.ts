@@ -310,6 +310,16 @@ export async function verify(
       overtReceipt,
     );
   }
+  if (!hasPqcSignature && opts.pqcPolicy === "required") {
+    return fail(
+      report,
+      "PQC_SIGNATURE_REQUIRED",
+      "Verification policy requires a complete ML-DSA-65 signature pair.",
+      metadata,
+      pqcValid,
+      overtReceipt,
+    );
+  }
   if (hasPqcSignature && hasPqcKey) {
     const pqcSigB64 = TEXT_DEC.decode(entries["signature_pqc.sig"]!).trim();
     const pqcSig = decodeBase64(pqcSigB64);

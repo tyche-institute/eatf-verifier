@@ -166,6 +166,20 @@ def test_rejects_half_present_mldsa_pair() -> None:
     assert result.failure_code == "PQC_PAIR_INCOMPLETE"
 
 
+def test_required_pqc_policy_rejects_classical_only_package() -> None:
+    package = VECTORS_ROOT / "valid" / "minimal-roundtrip" / "package.aep"
+    result = verify(package.read_bytes(), VerifyOptions(pqc_policy="required"))
+    assert result.valid is False
+    assert result.failure_code == "PQC_SIGNATURE_REQUIRED"
+
+
+def test_rfc9881_mldsa_vector_is_accepted_by_required_policy() -> None:
+    package = VECTORS_ROOT / "valid" / "hybrid-mldsa65" / "package.aep"
+    result = verify(package.read_bytes(), VerifyOptions(pqc_policy="required"))
+    assert result.valid is True
+    assert result.pqc_valid is True
+
+
 def test_rejects_empty_overt_witness_reference_target() -> None:
     package = VECTORS_ROOT / "valid" / "minimal-roundtrip" / "package.aep"
     changed = _rewrite_package(

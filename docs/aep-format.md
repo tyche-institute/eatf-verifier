@@ -1,7 +1,7 @@
 # Implemented `.aep` package format
 
 An Agent Evidence Package is a ZIP archive for one recorded agent action. This
-page documents version 0.2.0 behavior. The schemas, source, and shared vectors
+page documents the implemented behavior. The schemas, source, and shared vectors
 are the executable contract; the project does not claim that this summary is an
 external standard.
 
@@ -19,7 +19,7 @@ external standard.
 | `overt_receipt.json` | optional | OVERT receipt bound to hash and metadata |
 | `overt_receipt.sig` | conditional | RSA/SHA-256 signature over exact receipt bytes; required when named by signed metadata |
 | `signature_pqc.sig` | paired optional | Base64 ML-DSA-65 signature |
-| `pqc_public_key.pem` | paired optional | ML-DSA-65 verification key |
+| `pqc_public_key.pem` | paired optional | RFC 9881 ML-DSA-65 SubjectPublicKeyInfo; legacy raw-key PEM is read-only compatible |
 
 ## Ordered verification
 
@@ -43,6 +43,10 @@ external standard.
    downgrade. Older receipts without either field remain readable and are
    explicitly reported as not separately signature-bound.
 8. If the ML-DSA pair is present, verify it over the same canonical bytes.
+   The current writer stores `id-ml-dsa-65` (`2.16.840.1.101.3.4.3.18`) with
+   absent `AlgorithmIdentifier` parameters as required by RFC 9881. When the
+   caller selects the `required` PQC policy, reject a package with no pair as
+   `PQC_SIGNATURE_REQUIRED`.
 9. Decode the RFC 3161 object, require SHA-256 as the imprint algorithm,
    require the imprint to equal `hash.sha256`, and verify the CMS SignerInfo
    against the embedded TSA signing certificate.
@@ -50,7 +54,7 @@ external standard.
     issuer-name comparison.
 
 A failure in steps 1–9 returns `valid=false`. Step 10 is informational because
-version 0.2.0 does not implement RFC 5280 chain construction, certificate
+the toolkit does not implement RFC 5280 chain construction, certificate
 policy, revocation, or qualified-trust-service evaluation.
 
 ## Trust interpretation

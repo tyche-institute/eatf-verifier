@@ -35,6 +35,7 @@ export type FailureCode =
   | "OVERT_SIGNATURE_INVALID"
   | "OVERT_SIGNATURE_UNMARKED"
   | "PQC_PAIR_INCOMPLETE"
+  | "PQC_SIGNATURE_REQUIRED"
   | "PQC_SUPPORT_UNAVAILABLE"
   | "PQC_VERIFY_ERROR"
   | "PQC_SIGNATURE_INVALID"
@@ -94,6 +95,13 @@ export type VerifyOptions = {
    * advisory match is issuer DN against pinned certificate subject DN.
    */
   tsaTrustList?: string[];
+
+  /**
+   * `if-present` verifies ML-DSA when carried but accepts classical-only
+   * transition packages. `required` rejects packages without a complete,
+   * valid ML-DSA-65 pair. Default: `if-present`.
+   */
+  pqcPolicy?: "if-present" | "required";
 };
 
 export { verify } from "./verifier.js";
@@ -110,3 +118,13 @@ export {
   type TsaTrustResult,
 } from "./tsa-trust-list.js";
 export { inspectTsa, verifyTsaTrust, type TsaCheck } from "./tsa.js";
+export {
+  generateMlDsa65Keypair,
+  mlDsa65PublicKeyFromPem,
+  mlDsa65PublicKeyToPem,
+  mlDsa65SeedFromPem,
+  mlDsa65SeedToPem,
+  signMlDsa65,
+  verifyMlDsa65,
+  type MlDsa65Keypair,
+} from "./mldsa.js";

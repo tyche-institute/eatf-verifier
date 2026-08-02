@@ -30,6 +30,8 @@ jobs:
       - run: python -m pytest lib-python/tests
       - run: node cli/eatf-verify/bin/eatf-verify.js --conformance test-vectors
       - run: python -m eatf_verifier.cli --conformance test-vectors
+      - run: node cli/eatf-verify/bin/eatf-verify.js --require-pqc test-vectors/valid/hybrid-mldsa65/package.aep
+      - run: python -m eatf_verifier.cli --require-pqc test-vectors/valid/hybrid-mldsa65/package.aep
       - run: python experiments/decision-path/run_experiment.py
 
   reviewer-workflow:
@@ -46,6 +48,10 @@ jobs:
           cache: pip
       - run: bash bin/setup.sh
       - run: npm run test:toolkit
+      - name: Check deterministic PQC workshop artifacts
+        run: |
+          node scripts/generate-pqc-workshop.mjs
+          git diff --exit-code -- workshops/pqc-hybrid-lab test-vectors/valid/hybrid-mldsa65 test-vectors/invalid/bad-signature-pqc
       - run: .venv/bin/python experiments/decision-path/run_experiment.py
       - name: Check npm tarballs
         run: |

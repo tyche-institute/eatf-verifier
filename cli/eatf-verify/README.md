@@ -7,6 +7,7 @@ eatf-verify [--signer-key expected.pem] action.aep
 eatf-verify --batch received-packages/
 eatf-verify --conformance test-vectors/
 eatf-verify --json action.aep
+eatf-verify --require-pqc hybrid.aep
 ```
 
 Important options:
@@ -15,6 +16,8 @@ Important options:
   the caller-supplied keys. Repeat it for key rotation.
 - `--tsa-trust-list PEM` performs only the documented advisory issuer-name
   pin. It is not RFC 5280 path validation.
+- `--require-pqc` rejects packages without a complete, valid ML-DSA-65 pair.
+  Without it, classical-only transition packages remain acceptable.
 - `--conformance` expects packages under `valid/` to pass and packages under
   `invalid/` to fail.
 

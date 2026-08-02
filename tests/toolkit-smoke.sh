@@ -9,5 +9,7 @@ trap 'rm -rf -- "$WORK_DIR"' EXIT
 "$REPO_ROOT/examples/02-with-rfc3161-timestamp/run.sh" >/dev/null
 "$REPO_ROOT/examples/03-batch-verification/run.sh" >/dev/null
 "$REPO_ROOT/examples/04-tamper-and-reject/run.sh" >/dev/null
+"$REPO_ROOT/examples/05-hybrid-mldsa65/run.sh" >/dev/null
+"$REPO_ROOT/workshops/pqc-hybrid-lab/run.sh" >/dev/null
 
-echo "Toolkit smoke test passed: sign, inspect, dual verify, RFC 3161, conformance, tamper rejection."
+echo "Toolkit smoke test passed: classical and hybrid sign, dual verify, RFC 3161, conformance, tamper and downgrade rejection."

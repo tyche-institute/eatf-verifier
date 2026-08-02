@@ -7,5 +7,5 @@ examples/03-batch-verification/run.sh
 Both CLIs walk `test-vectors/`. Expected result from each:
 
 ```text
-Conformance: 4 verified, 7 rejected, 0 contract mismatches.
+Conformance: 5 verified, 8 rejected, 0 contract mismatches.
 ```

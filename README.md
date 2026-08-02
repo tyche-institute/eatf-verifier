@@ -33,8 +33,9 @@ offline package and verification workflow for one recorded agent action.
 | `cli/eatf-inspect/` | Non-validating package inspector |
 | `cli/eatf-verify/` | TypeScript verification CLI |
 | `schemas/` | JSON Schemas for AEP metadata and OVERT receipts |
-| `test-vectors/` | 4 accepted and 7 rejected conformance packages |
-| `examples/` | Four executable reviewer journeys |
+| `test-vectors/` | 5 accepted and 8 rejected conformance packages |
+| `examples/` | Five executable reviewer journeys, including hybrid signing |
+| `workshops/pqc-hybrid-lab/` | Six prepared packages for ML-DSA tamper and downgrade exercises |
 | `experiments/decision-path/` | Model-based differential oracle, generated corpus, and results |
 | `docs/aep-format.md` | Implemented wire-format and verification contract |
 
@@ -44,7 +45,7 @@ administration, or identity registries.
 
 ## Install from source
 
-Prerequisites are Node.js 20+ and Python 3.11+.
+Prerequisites are Node.js 20.19+ and Python 3.11+.
 
 ```bash
 git clone https://github.com/tyche-institute/eatf-verifier.git
@@ -63,9 +64,9 @@ Run the complete reviewer workflow:
 npm run test:toolkit
 ```
 
-It signs a package, inspects it, verifies it with TypeScript and Python,
-validates its RFC 3161 token, runs both conformance suites, tampers with a copy,
-and confirms that both verifiers reject the tampered package.
+It signs classical and hybrid packages, inspects them, verifies them with
+TypeScript and Python, validates RFC 3161 tokens, runs both conformance suites,
+and replays the prepared ML-DSA tamper and downgrade lab.
 
 ## Minimal workflow
 
@@ -95,7 +96,8 @@ Both verifiers apply the same decisive checks:
 5. RSA-4096 PKCS#1 v1.5/SHA-256 signature;
 6. OVERT receipt cross-checks and, for current signer output, its
    downgrade-protected separate RSA signature;
-7. ML-DSA-65 signature, when its key/signature pair is present;
+7. ML-DSA-65 signature, when its key/signature pair is present, plus an
+   optional relying-party policy that requires the pair;
 8. RFC 3161 parsing, SHA-256 message-imprint equality, and CMS signature
    verification against the embedded TSA signing certificate.
 
@@ -113,10 +115,11 @@ eatf-verify --conformance test-vectors
 eatf-verify-py --conformance test-vectors
 ```
 
-The shared set contains four positive vectors and seven single-fault negative
+The shared set contains five positive vectors and eight single-fault negative
 controls. Tests also cover matching and non-matching signer-key pins, receipt
-signature downgrade, RFC 8785 boundaries, and validation of every positive
-vector against both Draft 2020-12 schemas. CI runs the same build, unit,
+signature downgrade, a positive RFC 9881/FIPS 204 package, required-PQC policy,
+RFC 8785 boundaries, and validation of every positive vector against both
+Draft 2020-12 schemas. CI runs the same build, unit,
 conformance, packaging, and end-to-end workflow on Linux, macOS, and Windows
 where the operating-system step is portable.
 
@@ -134,8 +137,13 @@ cross-language matches, and zero boolean or first-code mismatches.
 
 ## Scope and limitations
 
-- The signer currently emits RSA-signed packages; both verifiers can also
-  verify ML-DSA-65 entries.
+- The signer emits classical packages by default and hybrid RSA-4096 plus
+  ML-DSA-65 packages when an ML-DSA keypair is supplied. Hybrid public keys
+  use RFC 9881 SubjectPublicKeyInfo. The verifiers retain read-only support
+  for the earlier raw-key PEM convention.
+- Transition verification accepts classical-only packages. Relying parties
+  that require post-quantum coverage must select `--require-pqc`; the prepared
+  workshop makes this policy boundary observable.
 - The current signer binds `response.txt` and `metadata.json` using the
   profile canonical form. Verifiers retain read-only support for legacy
   response-only packages and warn that their metadata is not signature-bound.

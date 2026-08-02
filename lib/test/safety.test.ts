@@ -49,4 +49,13 @@ describe("decision-procedure boundary states", () => {
     expect(result.valid).toBe(false);
     expect(result.failureCode).toBe("PQC_PAIR_INCOMPLETE");
   });
+
+  test("rejects a classical-only package when policy requires ML-DSA", async () => {
+    const source = await readFile(
+      new URL("../../test-vectors/valid/minimal-roundtrip/package.aep", import.meta.url),
+    );
+    const result = await verify(source, { pqcPolicy: "required" });
+    expect(result.valid).toBe(false);
+    expect(result.failureCode).toBe("PQC_SIGNATURE_REQUIRED");
+  });
 });

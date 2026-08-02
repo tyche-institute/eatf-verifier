@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased — public hybrid ML-DSA-65 and downgrade lab
+
+- Add hybrid RSA-4096 + ML-DSA-65 signing to the TypeScript library and
+  `eatf-sign`, with RFC 9881 SubjectPublicKeyInfo output.
+- Upgrade `@noble/post-quantum` to 0.6.1 and use `cryptography>=49` as the
+  independent Python FIPS 204 verifier. The positive vector is accepted by
+  both implementations.
+- Add explicit `if-present` and `required` PQC verification policies and the
+  `--require-pqc` CLI flag in both languages.
+- Expand the conformance corpus to 5 accepted and 8 rejected packages with a
+  positive hybrid vector and a one-bit ML-DSA negative control.
+- Add a deterministic six-package offline lab covering valid hybrid,
+  ML-DSA tamper, pair stripping, legitimate classical transition, incomplete
+  pair, and payload tamper paths under both policies.
+
 ## v0.5.0 — how far the first-failure code depends on guard order (2026-07-27)
 
 - Add `experiments/ordering`. `guard_probe.py` evaluates each guard

@@ -38,6 +38,7 @@ __pycache__/
 # Reference deployment artefacts (must never be checked in)
 *.aep
 !test-vectors/**/*.aep
+!workshops/pqc-hybrid-lab/packages/*.aep
 *.key
 *.pem
 !test-vectors/**/*.pem
