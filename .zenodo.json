@@ -28,8 +28,13 @@
       "identifier": "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.6.0",
       "relation": "isSupplementTo",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.21633255",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
     }
   ],
-  "notes": "Version 0.6.0 adds hybrid RSA-4096 plus ML-DSA-65 signing over identical canonical bytes, RFC 9881 SubjectPublicKeyInfo encoding with absent parameters, explicit if-present and required relying-party policies, a five-accepted/eight-rejected conformance corpus, and a deterministic six-package offline lab. Across six packages, two policies, and two independent implementations, all 24 verdict and first-failure-code observations agree. Prior version v0.5.0 is doi:10.5281/zenodo.21633255 under concept doi:10.5281/zenodo.21511608.",
+  "notes": "Version 0.6.0 adds hybrid RSA-4096 plus ML-DSA-65 signing over identical canonical bytes, RFC 9881 SubjectPublicKeyInfo encoding with absent parameters, explicit if-present and required relying-party policies, a five-accepted/eight-rejected conformance corpus, and a deterministic six-package offline lab. Across six packages, two policies, and two independent implementations, all 24 verdict and first-failure-code observations agree. Version DOI: 10.5281/zenodo.21763056. Reconnecting the GitHub integration started a new concept chain at 10.5281/zenodo.21763055; prior releases through v0.5.0 remain under concept DOI 10.5281/zenodo.21511608.",
   "publication_date": "2026-08-02"
 }
