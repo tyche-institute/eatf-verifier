@@ -178,8 +178,9 @@ v0.6.0 release adds hybrid signing, explicit downgrade policy, and the
 offline workshop bundle and is archived at
 [doi:10.5281/zenodo.21763056](https://doi.org/10.5281/zenodo.21763056).
 The current v0.6.1 patch makes the released workshop ZIP directly replayable
-after one-time verifier setup and remains in the Zenodo version chain that
-began at v0.6.0, with concept DOI
+after one-time verifier setup and is archived at
+[doi:10.5281/zenodo.21763768](https://doi.org/10.5281/zenodo.21763768). It
+remains in the Zenodo version chain that began at v0.6.0, with concept DOI
 [doi:10.5281/zenodo.21763055](https://doi.org/10.5281/zenodo.21763055).
 Releases through v0.5.0 remain under the earlier concept DOI
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).

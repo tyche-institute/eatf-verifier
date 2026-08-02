@@ -14,6 +14,9 @@ repository-code: "https://github.com/tyche-institute/eatf-verifier"
 url: "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.6.1"
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.21763768"
+    description: "Version DOI for EATF Agent Evidence Package toolkit v0.6.1"
+  - type: doi
     value: "10.5281/zenodo.21763055"
     description: "Concept DOI for the release series beginning with v0.6.0"
   - type: doi
