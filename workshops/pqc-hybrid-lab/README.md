@@ -1,9 +1,9 @@
 # Break the hybrid signature: an offline ML-DSA-65 lab
 
-This self-contained lab contrasts a transition verifier (`if-present`) with a
-policy that requires the post-quantum half (`required`). All packages are
-prepared, deterministic, and verified offline by independent TypeScript and
-Python implementations.
+This portable prepared-package lab contrasts a transition verifier
+(`if-present`) with a policy that requires the post-quantum half (`required`).
+All packages are deterministic and verified offline by independent TypeScript
+and Python implementations after the one-time toolkit setup.
 
 The conference core is designed for 60 minutes, with documented 45- and
 90-minute variants. Start with [QUICKSTART.md](QUICKSTART.md), then use
@@ -24,6 +24,11 @@ The cross-platform equivalent is:
 ```bash
 python workshops/pqc-hybrid-lab/run_lab.py
 ```
+
+The release ZIP includes `run_lab.py` and `run.sh`. After setup, set
+`EATF_REPO_ROOT` to the checkout, extract the ZIP, and run `python run_lab.py`
+inside the extracted directory. The runner then uses the downloaded packages,
+not the repository copies. See [QUICKSTART.md](QUICKSTART.md).
 
 There are two distinct downgrade observations:
 
@@ -48,9 +53,9 @@ SubjectPublicKeyInfo. The test TSA, RSA key, and deterministic ML-DSA seed are
 fixtures only. This lab is a research and interoperability artifact, not a
 certification or production deployment profile.
 
-The adjacent archive-migration worksheet is available in
+The archive-migration worksheet is available in the repository at
 [`docs/pqc-archive-migration-worksheet.md`](../../docs/pqc-archive-migration-worksheet.md)
-and in printable HTML/PDF forms.
+and in the release ZIP under `archive-migration/` in Markdown, HTML, and PDF.
 
 Regenerate the packages after changing the signer or verifier:
 

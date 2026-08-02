@@ -18,6 +18,8 @@ const files = [
   ["QUICKSTART.md", "workshops/pqc-hybrid-lab/QUICKSTART.md"],
   ["RUN-SHEETS.md", "workshops/pqc-hybrid-lab/RUN-SHEETS.md"],
   ["EXPECTED-TRANSCRIPT.md", "workshops/pqc-hybrid-lab/EXPECTED-TRANSCRIPT.md"],
+  ["run_lab.py", "workshops/pqc-hybrid-lab/run_lab.py"],
+  ["run.sh", "workshops/pqc-hybrid-lab/run.sh"],
   ["SHA256SUMS", "workshops/pqc-hybrid-lab/SHA256SUMS"],
   ["packages/manifest.json", "workshops/pqc-hybrid-lab/packages/manifest.json"],
   ["packages/01-valid-hybrid.aep", "workshops/pqc-hybrid-lab/packages/01-valid-hybrid.aep"],

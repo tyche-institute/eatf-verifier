@@ -40,7 +40,8 @@ Run the complete 60-minute core, then continue:
 
 ## No-network fallback
 
-If setup fails, the facilitator runs `./workshops/pqc-hybrid-lab/run.sh` and
-uses `EXPECTED-TRANSCRIPT.md`. Participants still complete the policy matrix
-from the prepared results. No live timestamp authority, hosted service, or
-conference network is required.
+If participant setup fails, the facilitator runs `python3 run_lab.py` from the
+extracted release bundle (or `./workshops/pqc-hybrid-lab/run.sh` from the
+checkout) and uses `EXPECTED-TRANSCRIPT.md`. Participants still complete the
+policy matrix from the prepared results. No live timestamp authority, hosted
+service, or conference network is required.

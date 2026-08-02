@@ -4,24 +4,50 @@
 from __future__ import annotations
 
 import json
+import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-PACKAGES = Path(__file__).resolve().parent / "packages"
+HERE = Path(__file__).resolve().parent
+PACKAGES = HERE / "packages"
 MANIFEST = json.loads((PACKAGES / "manifest.json").read_text(encoding="utf-8"))
-VENV_PYTHON = ROOT / ".venv" / (
-    "Scripts/python.exe" if sys.platform == "win32" else "bin/python"
-)
-PYTHON = str(VENV_PYTHON if VENV_PYTHON.exists() else Path(sys.executable))
-TS_VERIFIER = ["node", str(ROOT / "cli/eatf-verify/bin/eatf-verify.js")]
-PY_VERIFIER = [PYTHON, "-m", "eatf_verifier.cli"]
 
 
-def invoke(command: list[str]) -> dict[str, object]:
+def verifier_commands() -> tuple[Path, list[str], list[str]]:
+    """Locate both verifiers from a checkout or an installed-tool PATH."""
+
+    candidates = []
+    if configured_root := os.environ.get("EATF_REPO_ROOT"):
+        candidates.append(Path(configured_root).expanduser().resolve())
+    candidates.append(HERE.parents[1])
+
+    for root in candidates:
+        ts_cli = root / "cli/eatf-verify/bin/eatf-verify.js"
+        if not ts_cli.is_file():
+            continue
+        venv_python = root / ".venv" / (
+            "Scripts/python.exe" if sys.platform == "win32" else "bin/python"
+        )
+        python = str(venv_python if venv_python.exists() else Path(sys.executable))
+        return root, ["node", str(ts_cli)], [python, "-m", "eatf_verifier.cli"]
+
+    ts_cli = shutil.which("eatf-verify")
+    py_cli = shutil.which("eatf-verify-py")
+    if ts_cli and py_cli:
+        return HERE, [ts_cli], [py_cli]
+
+    raise RuntimeError(
+        "Verifier setup not found. Run 'bash bin/setup.sh' in an eatf-verifier "
+        "checkout, then set EATF_REPO_ROOT to that checkout or add its bin/ "
+        "directory to PATH."
+    )
+
+
+def invoke(command: list[str], working_directory: Path) -> dict[str, object]:
     completed = subprocess.run(
-        command, cwd=ROOT, text=True, capture_output=True, check=False
+        command, cwd=working_directory, text=True, capture_output=True, check=False
     )
     if completed.returncode not in (0, 1):
         raise RuntimeError(f"{' '.join(command)} failed:\n{completed.stderr}")
@@ -37,14 +63,15 @@ def observed(result: dict[str, object]) -> dict[str, object]:
 
 
 def main() -> int:
+    root, ts_verifier, py_verifier = verifier_commands()
     mismatches = 0
     print("package                              policy         TypeScript  Python  first code")
     for name, expected_package in MANIFEST["packages"].items():
         package = PACKAGES / name
         for policy in ("transitional", "required"):
             flag = [] if policy == "transitional" else ["--require-pqc"]
-            ts = invoke([*TS_VERIFIER, "--json", *flag, str(package)])
-            py = invoke([*PY_VERIFIER, "--json", *flag, str(package)])
+            ts = invoke([*ts_verifier, "--json", *flag, str(package)], root)
+            py = invoke([*py_verifier, "--json", *flag, str(package)], root)
             ts_observed = observed(ts)
             py_observed = observed(py)
             expected = expected_package[policy]

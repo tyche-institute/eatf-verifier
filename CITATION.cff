@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "EATF Agent Evidence Package toolkit"
 type: software
-version: 0.6.0
+version: 0.6.1
 date-released: 2026-08-02
 authors:
   - family-names: "Sokolov"
@@ -11,14 +11,14 @@ authors:
     affiliation: "Tyche Institute, Tallinn, Estonia"
 license: Apache-2.0
 repository-code: "https://github.com/tyche-institute/eatf-verifier"
-url: "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.6.0"
+url: "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.6.1"
 identifiers:
-  - type: doi
-    value: "10.5281/zenodo.21763056"
-    description: "Version DOI for EATF Agent Evidence Package toolkit v0.6.0"
   - type: doi
     value: "10.5281/zenodo.21763055"
     description: "Concept DOI for the release series beginning with v0.6.0"
+  - type: doi
+    value: "10.5281/zenodo.21763056"
+    description: "Version DOI for the previous v0.6.0 release"
   - type: doi
     value: "10.5281/zenodo.21511608"
     description: "Earlier concept DOI covering releases through v0.5.0"
