@@ -2,7 +2,7 @@
   "title": "EATF Agent Evidence Package toolkit",
   "upload_type": "software",
   "license": "Apache-2.0",
-  "version": "v0.5.0",
+  "version": "v0.6.0",
   "creators": [
     {
       "name": "Sokolov, Anton",
@@ -10,7 +10,7 @@
       "affiliation": "Tyche Institute"
     }
   ],
-  "description": "Open toolkit for creating, inspecting, and offline-verifying Agent Evidence Packages (.aep): TypeScript and Python verifiers, sign/verify/inspect CLIs, JSON schemas, runnable examples, and positive/negative conformance vectors. Version 0.3.0 adds stable machine-readable first-failure codes, a fixed model-based oracle, and a deterministic 21-case decision-path corpus. The preserved confirmatory run records 21/21 oracle matches and 21/21 TypeScript/Python verdict-and-code matches across two accepting paths and 16 distinct rejection states.",
+  "description": "Open toolkit for creating, inspecting, and offline-verifying Agent Evidence Packages (.aep): a hybrid RSA-4096 plus ML-DSA-65 signer, independent TypeScript and Python verifiers, sign/verify/inspect CLIs, RFC 9881 public-key encoding, JSON schemas, positive and negative conformance vectors, and a deterministic offline downgrade lab.",
   "keywords": [
     "AI agent attestation",
     "Agent Evidence Package",
@@ -25,11 +25,11 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.3.0",
+      "identifier": "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.6.0",
       "relation": "isSupplementTo",
       "scheme": "url"
     }
   ],
-  "notes": "Version 0.5.0 is archived at doi:10.5281/zenodo.21633255. Version 0.5.0 adds experiments/ordering, which measures how far a first-failure code depends on the order in which guards run. Guards are evaluated independently by calling the shipped public components, with no verifier source modified. Over 25 packages and 10 guards each: 3 with no rejecting guard, 15 with exactly one, and 7 with more than one, so for 7 of the 22 rejected packages the code depends on which violated guard is reached first; largest fault set 3. A prediction fixed before the harness existed was REFUTED and is recorded as such: order-dependence is not confined to packages touching a receipt witness. The directory also carries a repair-peeling harness that was built, run and withdrawn on its own evidence. Prior version v0.4.1 is doi:10.5281/zenodo.21625781 under concept doi:10.5281/zenodo.21511608.",
-  "publication_date": "2026-07-27"
+  "notes": "Version 0.6.0 adds hybrid RSA-4096 plus ML-DSA-65 signing over identical canonical bytes, RFC 9881 SubjectPublicKeyInfo encoding with absent parameters, explicit if-present and required relying-party policies, a five-accepted/eight-rejected conformance corpus, and a deterministic six-package offline lab. Across six packages, two policies, and two independent implementations, all 24 verdict and first-failure-code observations agree. Prior version v0.5.0 is doi:10.5281/zenodo.21633255 under concept doi:10.5281/zenodo.21511608.",
+  "publication_date": "2026-08-02"
 }

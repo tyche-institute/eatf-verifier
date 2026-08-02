@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "packages": {
+    "01-valid-hybrid.aep": {
+      "sha256": "e07a39625be01e4e138320edcd66b89dc73fd762206f69133c88c5e7a73ab64b",
+      "transitional": {
+        "valid": true,
+        "failureCode": null,
+        "pqcValid": true
+      },
+      "required": {
+        "valid": true,
+        "failureCode": null,
+        "pqcValid": true
+      }
+    },
+    "02-pqc-signature-tampered.aep": {
+      "sha256": "86f62efaa15150485d2a8e7addeaea5f6a2155b0b6eb536a776a863cc66386c5",
+      "transitional": {
+        "valid": false,
+        "failureCode": "PQC_SIGNATURE_INVALID",
+        "pqcValid": false
+      },
+      "required": {
+        "valid": false,
+        "failureCode": "PQC_SIGNATURE_INVALID",
+        "pqcValid": false
+      }
+    },
+    "03-pqc-pair-stripped.aep": {
+      "sha256": "9ae7f92c13de992095e08d882691f8b87c6260eb433d2d92fadda86ba2182d23",
+      "transitional": {
+        "valid": false,
+        "failureCode": "OVERT_INVALID",
+        "pqcValid": null
+      },
+      "required": {
+        "valid": false,
+        "failureCode": "OVERT_INVALID",
+        "pqcValid": null
+      }
+    },
+    "04-classical-transition.aep": {
+      "sha256": "4c4d39ed1fade01eb9499b466865fd9fa7e9d7b36ec7d52154563bcb9dff0c2b",
+      "transitional": {
+        "valid": true,
+        "failureCode": null,
+        "pqcValid": null
+      },
+      "required": {
+        "valid": false,
+        "failureCode": "PQC_SIGNATURE_REQUIRED",
+        "pqcValid": null
+      }
+    },
+    "05-pqc-signature-missing.aep": {
+      "sha256": "dead727563f922f4ef48b1a716b8451c99941e812cfbea40d3224cdab612a0de",
+      "transitional": {
+        "valid": false,
+        "failureCode": "OVERT_INVALID",
+        "pqcValid": null
+      },
+      "required": {
+        "valid": false,
+        "failureCode": "OVERT_INVALID",
+        "pqcValid": null
+      }
+    },
+    "06-response-tampered.aep": {
+      "sha256": "b471398bc50ae9fbcbc0f2d7b990413690604cc5f2aa80265729f1deff374f57",
+      "transitional": {
+        "valid": false,
+        "failureCode": "CANONICAL_FORM_MISMATCH",
+        "pqcValid": null
+      },
+      "required": {
+        "valid": false,
+        "failureCode": "CANONICAL_FORM_MISMATCH",
+        "pqcValid": null
+      }
+    }
+  }
+}

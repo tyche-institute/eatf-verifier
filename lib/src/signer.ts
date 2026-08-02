@@ -11,17 +11,16 @@
  * timestamp response must be supplied by the caller and must cover
  * the SHA-256 digest of this package's canonical bytes.
  *
- * Not yet implemented in this signer: ML-DSA-65 post-quantum signing.
- * Verifier already supports verifying packages that carry it
- * (entries signature_pqc.sig + pqc_public_key.pem); a future release
- * will extend this signer to emit them.
+ * When an ML-DSA-65 keypair is supplied, the signer emits a hybrid package:
+ * RSA-4096 and ML-DSA-65 signatures cover the same canonical bytes.
  */
 
-import { zipSync } from "fflate";
+import { zipSync, type Zippable } from "fflate";
 import { createSign } from "node:crypto";
 
 import { canonical as buildCanonical, jcs } from "./canonical.js";
 import { sha256, toHex } from "./hash.js";
+import { mlDsa65PublicKeyToPem, signMlDsa65 } from "./mldsa.js";
 import { inspectTsa } from "./tsa.js";
 import { verify } from "./verifier.js";
 
@@ -60,6 +59,15 @@ export type SignerInput = {
   timestampTsr: Uint8Array;
   /** Optional issuer identifier ("eatf-verifier" by default). */
   iap?: string;
+  /** Expanded ML-DSA-65 secret key. Must be supplied with pqcPublicKey. */
+  pqcSecretKey?: Uint8Array;
+  /** Matching raw ML-DSA-65 public key (1952 bytes). */
+  pqcPublicKey?: Uint8Array;
+  /**
+   * Optional ML-DSA signing entropy override. `false` is intended only for
+   * deterministic public test vectors; normal callers should leave it unset.
+   */
+  pqcExtraEntropy?: Uint8Array | false;
 };
 
 export type SignerOutput = {
@@ -117,6 +125,13 @@ export async function prepareCanonical(
  * whose canonical.bin contains response.txt alone.
  */
 export async function sign(input: SignerInput): Promise<SignerOutput> {
+  const hasPqcSecret = input.pqcSecretKey !== undefined;
+  const hasPqcPublic = input.pqcPublicKey !== undefined;
+  if (hasPqcSecret !== hasPqcPublic) {
+    throw new Error("ML-DSA-65 secret and public keys must be supplied together");
+  }
+  const hybrid = hasPqcSecret && hasPqcPublic;
+
   // Finalise metadata before canonicalisation so it is cryptographically
   // bound to the package. metadata.json remains human-readable; verification
   // parses it and reconstructs the RFC 8785 representation.
@@ -140,6 +155,20 @@ export async function sign(input: SignerInput): Promise<SignerOutput> {
   const rsaSig = signer.sign(input.privateKeyPem);
   const rsaSigB64 = Buffer.from(rsaSig).toString("base64");
   const signatureEntry = TEXT_ENC.encode(rsaSigB64 + "\n");
+
+  let pqcSignatureEntry: Uint8Array | null = null;
+  let pqcPublicKeyEntry: Uint8Array | null = null;
+  if (hybrid) {
+    const pqcSignature = await signMlDsa65(
+      input.pqcSecretKey!,
+      canonical,
+      input.pqcExtraEntropy,
+    );
+    pqcSignatureEntry = TEXT_ENC.encode(
+      Buffer.from(pqcSignature).toString("base64") + "\n",
+    );
+    pqcPublicKeyEntry = TEXT_ENC.encode(mlDsa65PublicKeyToPem(input.pqcPublicKey!));
+  }
 
   // OVERT receipt: derive from metadata + caller-supplied blocks.
   const policyFromMeta = {
@@ -178,7 +207,9 @@ export async function sign(input: SignerInput): Promise<SignerOutput> {
     prev: null,
     witness: {
       iap: input.iap ?? "eatf-verifier",
-      signature_refs: ["signature.sig", OVERT_RECEIPT_SIGNATURE],
+      signature_refs: hybrid
+        ? ["signature.sig", "signature_pqc.sig", OVERT_RECEIPT_SIGNATURE]
+        : ["signature.sig", OVERT_RECEIPT_SIGNATURE],
       timestamp_refs: ["timestamp.tsr"],
     },
   };
@@ -221,8 +252,22 @@ export async function sign(input: SignerInput): Promise<SignerOutput> {
     "signature.sig": signatureEntry,
     "timestamp.tsr": timestampEntry,
   };
-  const aep = zipSync(entries, { level: 0 });
-  const selfCheck = await verify(aep, { tsaTrustList: [] });
+  if (pqcSignatureEntry && pqcPublicKeyEntry) {
+    entries["signature_pqc.sig"] = pqcSignatureEntry;
+    entries["pqc_public_key.pem"] = pqcPublicKeyEntry;
+  }
+  // fflate serializes ZIP/DOS local-time fields. Construct the epoch in local
+  // time so the encoded fields remain 1980-01-01 00:00 in every timezone.
+  const fixedZipTime = new Date(1980, 0, 1, 0, 0, 0);
+  const deterministicEntries: Zippable = {};
+  for (const [name, bytes] of Object.entries(entries)) {
+    deterministicEntries[name] = [bytes, { mtime: fixedZipTime }];
+  }
+  const aep = zipSync(deterministicEntries, { level: 0 });
+  const selfCheck = await verify(aep, {
+    tsaTrustList: [],
+    pqcPolicy: hybrid ? "required" : "if-present",
+  });
   if (!selfCheck.valid) {
     throw new Error(
       `Refusing to emit an AEP that fails self-verification: ${selfCheck.failureReason ?? "unknown failure"}`,

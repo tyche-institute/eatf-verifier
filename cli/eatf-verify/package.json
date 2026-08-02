@@ -1,6 +1,6 @@
 {
   "name": "@eatf/verify-cli",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Offline command-line verifier for EATF .aep evidence packages. Thin wrapper over @eatf/verifier; no network calls; no API keys.",
   "license": "Apache-2.0",
   "type": "module",
@@ -16,7 +16,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@eatf/verifier": "0.5.0"
+    "@eatf/verifier": "0.6.0"
   },
   "scripts": {
     "verify": "node bin/eatf-verify.js"

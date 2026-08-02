@@ -7,7 +7,7 @@ feature proposals. Report vulnerabilities privately as described in
 
 ## Development setup
 
-Prerequisites are Node.js 20+, Python 3.11+, and OpenSSL for the timestamp
+Prerequisites are Node.js 20.19+, Python 3.11+, and OpenSSL for the timestamp
 demonstration.
 
 ```bash

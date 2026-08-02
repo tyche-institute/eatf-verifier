@@ -19,7 +19,7 @@ import { resolve, basename } from "node:path";
 import { existsSync, statSync, readdirSync } from "node:fs";
 import process from "node:process";
 
-const VERSION = "0.3.0";
+const VERSION = "0.6.0";
 
 function usage() {
   process.stdout.write(`\
@@ -42,6 +42,8 @@ Options:
                                              match this SPKI PEM. Repeatable.
   --tsa-trust-list <pem-file>                Advisory TSA issuer-name pin.
                                              Repeatable; not RFC 5280 validation.
+  --require-pqc                              Reject packages without a complete,
+                                             valid ML-DSA-65 signature pair.
   --offline-only                             Default. Refuse to consult any
                                              external resource.
   --version, -V                              Print version and exit.
@@ -64,6 +66,7 @@ function parseArgs(argv) {
   const args = {
     paths: [], batch: null, conformance: null,
     json: false, signerKeys: [], tsaTrustList: [], offlineOnly: true,
+    requirePqc: false,
   };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
@@ -71,6 +74,7 @@ function parseArgs(argv) {
     if (a === "--version" || a === "-V") return { version: true };
     if (a === "--json") { args.json = true; continue; }
     if (a === "--offline-only") { args.offlineOnly = true; continue; }
+    if (a === "--require-pqc") { args.requirePqc = true; continue; }
     if (a === "--batch") { args.batch = argv[++i]; continue; }
     if (a === "--conformance") { args.conformance = argv[++i]; continue; }
     if (a === "--signer-key") { args.signerKeys.push(argv[++i]); continue; }
@@ -157,6 +161,12 @@ async function main() {
   const { verify } = await loadVerifier();
   const tsaTrustList = await loadTsaTrustList(args.tsaTrustList);
   const trustedSignerPems = await loadSignerKeys(args.signerKeys);
+  const verifyOptions = {
+    offlineOnly: args.offlineOnly,
+    tsaTrustList,
+    trustedSignerPems,
+    pqcPolicy: args.requirePqc ? "required" : "if-present",
+  };
 
   if (args.paths.length > 0 && !args.batch && !args.conformance) {
     let anyFail = false;
@@ -166,7 +176,7 @@ async function main() {
         return 2;
       }
       const bytes = await readFile(resolve(p));
-      const result = await verify(bytes, { offlineOnly: args.offlineOnly, tsaTrustList, trustedSignerPems });
+      const result = await verify(bytes, verifyOptions);
       if (args.json) process.stdout.write(JSON.stringify({ path: p, ...result }) + "\n");
       else process.stdout.write(formatHuman(p, result) + "\n");
       if (!result.valid) anyFail = true;
@@ -183,7 +193,7 @@ async function main() {
     let pass = 0, fail = 0;
     for (const p of aeps) {
       const bytes = await readFile(resolve(p));
-      const result = await verify(bytes, { offlineOnly: args.offlineOnly, tsaTrustList, trustedSignerPems });
+      const result = await verify(bytes, verifyOptions);
       if (args.json) process.stdout.write(JSON.stringify({ path: p, ...result }) + "\n");
       else process.stdout.write(formatHuman(p, result) + "\n");
       if (result.valid) pass++; else fail++;
@@ -203,7 +213,7 @@ async function main() {
       const expected = expectedFromTreePath(p, args.conformance);
       if (expected === null) continue;
       const bytes = await readFile(resolve(p));
-      const result = await verify(bytes, { offlineOnly: args.offlineOnly, tsaTrustList, trustedSignerPems });
+      const result = await verify(bytes, verifyOptions);
       const actual = result.valid ? "true" : "false";
       const ok = actual === expected;
       if (args.json) {

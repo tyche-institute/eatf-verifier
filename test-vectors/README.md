@@ -10,9 +10,11 @@ Diagnostic wording may differ; the boolean verdict is the contract.
 | `valid/mcp-tools-call-valid` | true | MCP call with allow decision |
 | `valid/mcp-tools-call-denied-policy` | true | Authentic evidence of a deny decision |
 | `valid/minimal-roundtrip` | true | Current signer-to-verifier workflow |
+| `valid/hybrid-mldsa65` | true | RFC 9881 ML-DSA-65 + RSA hybrid package |
 | `invalid/tampered-canonical-bin` | false | Canonical bytes changed |
 | `invalid/tampered-metadata` | false | Metadata/receipt binding changed |
 | `invalid/bad-signature-classical` | false | RSA signature changed |
+| `invalid/bad-signature-pqc` | false | ML-DSA-65 signature changed |
 | `invalid/untrusted-issuer` | false | Embedded key does not verify signature |
 | `invalid/missing-canonical-bin` | false | Required entry absent |
 | `invalid/bad-timestamp` | false | RFC 3161 object malformed |
@@ -34,4 +36,4 @@ eatf-verify --conformance test-vectors
 eatf-verify-py --conformance test-vectors
 ```
 
-Expected from each: `4 verified, 7 rejected, 0 contract mismatches`.
+Expected from each: `5 verified, 8 rejected, 0 contract mismatches`.

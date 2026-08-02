@@ -11,7 +11,10 @@ from eatf_verifier import VerifyOptions, verify
 
 result = verify(
     open("action.aep", "rb").read(),
-    VerifyOptions(trusted_signer_pems=[open("expected.pem", "rb").read()]),
+    VerifyOptions(
+        trusted_signer_pems=[open("expected.pem", "rb").read()],
+        pqc_policy="required",
+    ),
 )
 print(result.valid, result.failure_reason)
 ```
@@ -22,15 +25,15 @@ CLI:
 eatf-verify-py --signer-key expected.pem action.aep
 eatf-verify-py --conformance test-vectors/
 eatf-verify-py --json action.aep
+eatf-verify-py --require-pqc hybrid.aep
 ```
 
-Base installation verifies RSA packages. The `[pqc]` extra installs the
-official `liboqs-python` bindings for ML-DSA-65; the liboqs shared library must
-also be available.
+Base installation verifies RSA and ML-DSA-65 packages. It uses
+`cryptography>=49` for FIPS 204 verification and RFC 9881 SPKI parsing; no
+separate liboqs installation is required.
 
 ```bash
 pip install eatf-verifier
-pip install 'eatf-verifier[pqc]'
 ```
 
 Security boundaries match the TypeScript implementation:

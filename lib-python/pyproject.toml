@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eatf-verifier"
-version = "0.5.0"
+version = "0.6.0"
 description = "Offline Python verifier for EATF .aep evidence packages; same conformance contract as the TypeScript implementation."
 readme = "README.md"
 license = "Apache-2.0"
@@ -21,13 +21,12 @@ classifiers = [
   "Topic :: Software Development :: Libraries",
 ]
 dependencies = [
-  "cryptography>=42",
+  "cryptography>=49",
   "asn1crypto>=1.5",
   "rfc8785>=0.1.4,<0.2",
 ]
 
 [project.optional-dependencies]
-pqc = ["liboqs-python>=0.16"]
 dev = ["build>=1.2", "jsonschema[format]>=4.23", "pytest>=7", "ruff>=0.4", "twine>=5"]
 
 [project.scripts]
