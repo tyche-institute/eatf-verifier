@@ -41,6 +41,7 @@ offline package and verification workflow for one recorded agent action.
 | `experiments/decision-path/` | Model-based differential oracle, generated corpus, and results |
 | `docs/aep-format.md` | Implemented wire-format and verification contract |
 | `docs/pqc-archive-migration-worksheet.md` | One-page inventory for long-lived signed records |
+| `docs/pqc-hybrid-lab-five-minute-fallback.md` | Timed no-network facilitator fallback for the workshop |
 
 This is the public AEP toolkit, not the larger EATF service or governance
 platform. It does not include tenants, hosted APIs, dashboards, policy
