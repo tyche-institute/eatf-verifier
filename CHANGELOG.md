@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.6.1 — portable conference download (2026-08-02)
+
+- Include `run_lab.py` and `run.sh` in the deterministic conference ZIP so the
+  downloaded six-package corpus can be replayed directly after one-time
+  verifier setup.
+- Let the runner locate a prepared checkout through `EATF_REPO_ROOT` or the
+  installed command `PATH`, while preserving its repository-local behavior.
+- Correct the quick start so downloaded-package commands no longer point back
+  to repository copies.
+- Add a CI check that extracts the built ZIP, verifies every listed SHA-256
+  value, and replays all 24 cross-language policy observations from the
+  extracted files.
+
 ## v0.6.0 — public hybrid ML-DSA-65 and downgrade lab (2026-08-02)
 
 - Add hybrid RSA-4096 + ML-DSA-65 signing to the TypeScript library and

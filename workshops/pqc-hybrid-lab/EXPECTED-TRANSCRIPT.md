@@ -1,9 +1,15 @@
 # Annotated expected transcript
 
-Run:
+Run from the repository checkout:
 
 ```bash
 ./workshops/pqc-hybrid-lab/run.sh
+```
+
+Or, after the one-time verifier setup, run from the extracted release ZIP:
+
+```bash
+python3 run_lab.py
 ```
 
 Expected decision table:

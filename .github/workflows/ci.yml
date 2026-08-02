@@ -57,6 +57,8 @@ jobs:
           git diff --exit-code -- workshops/pqc-hybrid-lab test-vectors/valid/hybrid-mldsa65 test-vectors/invalid/bad-signature-pqc
       - name: Build conference download bundle
         run: npm run build:conference-assets
+      - name: Check extracted conference download bundle
+        run: .venv/bin/python tests/check_conference_bundle.py
       - run: .venv/bin/python experiments/decision-path/run_experiment.py
       - name: Check npm tarballs
         run: |

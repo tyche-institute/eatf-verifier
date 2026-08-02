@@ -1,6 +1,6 @@
 {
   "name": "eatf-aep-toolkit",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": true,
   "description": "Workspace for the EATF Agent Evidence Package offline toolkit.",
   "license": "Apache-2.0",
