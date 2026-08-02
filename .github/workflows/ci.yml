@@ -50,7 +50,9 @@ jobs:
       - run: npm run test:toolkit
       - name: Check deterministic PQC workshop artifacts
         run: |
-          node scripts/generate-pqc-workshop.mjs
+          TZ=UTC node scripts/generate-pqc-workshop.mjs
+          git diff --exit-code -- workshops/pqc-hybrid-lab test-vectors/valid/hybrid-mldsa65 test-vectors/invalid/bad-signature-pqc
+          TZ=Europe/Berlin node scripts/generate-pqc-workshop.mjs
           git diff --exit-code -- workshops/pqc-hybrid-lab test-vectors/valid/hybrid-mldsa65 test-vectors/invalid/bad-signature-pqc
       - run: .venv/bin/python experiments/decision-path/run_experiment.py
       - name: Check npm tarballs

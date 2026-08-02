@@ -2,7 +2,7 @@
   "format": 1,
   "packages": {
     "01-valid-hybrid.aep": {
-      "sha256": "3028375210a6dc11e61773908d11d8f217a7f2c97791ffa2a856db086c4a307e",
+      "sha256": "e07a39625be01e4e138320edcd66b89dc73fd762206f69133c88c5e7a73ab64b",
       "transitional": {
         "valid": true,
         "failureCode": null,
@@ -15,7 +15,7 @@
       }
     },
     "02-pqc-signature-tampered.aep": {
-      "sha256": "cb680f4886ab1ed80c785fdf7d75fb572b933c6f9a267ac39d76ad6d444ff670",
+      "sha256": "86f62efaa15150485d2a8e7addeaea5f6a2155b0b6eb536a776a863cc66386c5",
       "transitional": {
         "valid": false,
         "failureCode": "PQC_SIGNATURE_INVALID",
@@ -28,7 +28,7 @@
       }
     },
     "03-pqc-pair-stripped.aep": {
-      "sha256": "33aca186ff69f2382774d9101d29fb24a2d4db052c513257c664f471e1f4bd67",
+      "sha256": "9ae7f92c13de992095e08d882691f8b87c6260eb433d2d92fadda86ba2182d23",
       "transitional": {
         "valid": false,
         "failureCode": "OVERT_INVALID",
@@ -41,7 +41,7 @@
       }
     },
     "04-classical-transition.aep": {
-      "sha256": "cd705e8e59c5a414e655fea33aa34e82ddae5fac2508797b799a211f63c05e94",
+      "sha256": "4c4d39ed1fade01eb9499b466865fd9fa7e9d7b36ec7d52154563bcb9dff0c2b",
       "transitional": {
         "valid": true,
         "failureCode": null,
@@ -54,7 +54,7 @@
       }
     },
     "05-pqc-signature-missing.aep": {
-      "sha256": "6be0e3c096224e914d3e841b2ac65c025fb603de5d3cd9709cdc95b4c7748348",
+      "sha256": "dead727563f922f4ef48b1a716b8451c99941e812cfbea40d3224cdab612a0de",
       "transitional": {
         "valid": false,
         "failureCode": "OVERT_INVALID",
@@ -67,7 +67,7 @@
       }
     },
     "06-response-tampered.aep": {
-      "sha256": "0d7907c1db78f776366e88dd762d05d5a364c8997814a39a440076f2eac381f7",
+      "sha256": "b471398bc50ae9fbcbc0f2d7b990413690604cc5f2aa80265729f1deff374f57",
       "transitional": {
         "valid": false,
         "failureCode": "CANONICAL_FORM_MISMATCH",

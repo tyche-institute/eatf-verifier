@@ -15,7 +15,9 @@ import {
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const WORKSHOP = resolve(ROOT, "workshops/pqc-hybrid-lab/packages");
-const FIXED_ZIP_TIME = new Date("1980-01-01T00:00:00.000Z");
+// fflate writes ZIP/DOS local-time fields, so use a local constructor. The
+// encoded value is then 1980-01-01 00:00 regardless of the host timezone.
+const FIXED_ZIP_TIME = new Date(1980, 0, 1, 0, 0, 0);
 const textDecoder = new TextDecoder();
 
 function pack(entries) {

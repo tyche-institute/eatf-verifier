@@ -256,7 +256,9 @@ export async function sign(input: SignerInput): Promise<SignerOutput> {
     entries["signature_pqc.sig"] = pqcSignatureEntry;
     entries["pqc_public_key.pem"] = pqcPublicKeyEntry;
   }
-  const fixedZipTime = new Date("1980-01-01T00:00:00.000Z");
+  // fflate serializes ZIP/DOS local-time fields. Construct the epoch in local
+  // time so the encoded fields remain 1980-01-01 00:00 in every timezone.
+  const fixedZipTime = new Date(1980, 0, 1, 0, 0, 0);
   const deterministicEntries: Zippable = {};
   for (const [name, bytes] of Object.entries(entries)) {
     deterministicEntries[name] = [bytes, { mtime: fixedZipTime }];
