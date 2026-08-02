@@ -1,5 +1,7 @@
 # EATF Agent Evidence Package toolkit
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21763055.svg)](https://doi.org/10.5281/zenodo.21763055)
+
 EATF is an open toolkit for creating, inspecting, and independently verifying
 Agent Evidence Packages (`.aep`). An AEP is a portable ZIP envelope that binds
 an AI-agent action record to canonical bytes, hashes, signatures, an optional
@@ -170,7 +172,7 @@ v0.3.0 release, which added the decision-path research bundle, is archived at
 v0.4.1 release, which added the path-shadowing and JCS-boundary experiments, is
 archived at
 [doi:10.5281/zenodo.21625781](https://doi.org/10.5281/zenodo.21625781). The
-The v0.5.0 release, which adds the guard-ordering measurement, is archived at
+v0.5.0 release, which adds the guard-ordering measurement, is archived at
 [doi:10.5281/zenodo.21633255](https://doi.org/10.5281/zenodo.21633255). The
 current v0.6.0 release adds hybrid signing, explicit downgrade policy, and the
 offline workshop bundle and is archived at
