@@ -38,6 +38,7 @@ offline package and verification workflow for one recorded agent action.
 | `workshops/pqc-hybrid-lab/` | Six prepared packages for ML-DSA tamper and downgrade exercises |
 | `experiments/decision-path/` | Model-based differential oracle, generated corpus, and results |
 | `docs/aep-format.md` | Implemented wire-format and verification contract |
+| `docs/pqc-archive-migration-worksheet.md` | One-page inventory for long-lived signed records |
 
 This is the public AEP toolkit, not the larger EATF service or governance
 platform. It does not include tenants, hosted APIs, dashboards, policy
@@ -151,7 +152,7 @@ cross-language matches, and zero boolean or first-code mismatches.
   implementations and a shared I-JSON domain that rejects unsafe
   integer-valued numbers and unpaired Unicode surrogates.
 - Full RFC 5280 TSA chain construction, revocation checking, HSM integration,
-  and automatic trust-registry discovery are outside version 0.3.0.
+  and automatic trust-registry discovery are outside the current scope.
 - EATF is not a trust service, certificate authority, legal-compliance
   determination, or substitute for an auditor's policy.
 
@@ -169,9 +170,11 @@ v0.3.0 release, which added the decision-path research bundle, is archived at
 v0.4.1 release, which added the path-shadowing and JCS-boundary experiments, is
 archived at
 [doi:10.5281/zenodo.21625781](https://doi.org/10.5281/zenodo.21625781). The
-current release, v0.5.0, which adds the guard-ordering measurement, is archived
-at [doi:10.5281/zenodo.21633255](https://doi.org/10.5281/zenodo.21633255). The
-all-versions concept DOI is
+Version v0.5.0, which adds the guard-ordering measurement, is archived at
+[doi:10.5281/zenodo.21633255](https://doi.org/10.5281/zenodo.21633255). The
+current v0.6.0 release adds hybrid signing, explicit downgrade policy, and the
+offline workshop bundle; its version DOI will be recorded here after Zenodo
+finishes archiving the release. The all-versions concept DOI is
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).
 
 ## Contributing and support

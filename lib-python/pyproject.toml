@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eatf-verifier"
-version = "0.5.0"
+version = "0.6.0"
 description = "Offline Python verifier for EATF .aep evidence packages; same conformance contract as the TypeScript implementation."
 readme = "README.md"
 license = "Apache-2.0"

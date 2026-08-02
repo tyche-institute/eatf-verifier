@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>PQC archive-migration worksheet</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">@page { size: A4; margin: 8mm; }
+html { font-family: Arial, Helvetica, sans-serif; color: #111; }
+body { max-width: 194mm; margin: 0 auto; font-size: 9pt; line-height: 1.18; }
+h1 { font-size: 16pt; margin: 0 0 4pt; }
+h2 { font-size: 11pt; margin: 7pt 0 3pt; border-bottom: 1px solid #777; }
+p { margin: 2pt 0 4pt; }
+table { width: 100%; border-collapse: collapse; margin: 3pt 0 5pt; }
+th, td { border: 1px solid #888; padding: 2.5pt 3pt; vertical-align: top; }
+th { background: #e9eef3; text-align: left; }
+ol { margin: 2pt 0 4pt 16pt; padding: 0; }
+li { margin: 1.5pt 0; }
+code { font-size: 8pt; }
+@media print {
+a { color: inherit; text-decoration: none; }
+h1, h2, table { break-after: avoid; }
+tr { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PQC archive-migration worksheet</h1>
+</header>
+<h1 id="pqc-archive-migration-worksheet">PQC archive-migration
+worksheet</h1>
+<p>Use one copy per record class. The worksheet identifies evidence that
+may need to remain verifiable after its original signer, certificate
+path, software stack, or approved algorithm set has changed. It is an
+engineering inventory, not legal advice, a compliance determination, or
+a trust-service profile.</p>
+<h2 id="a.-record-and-horizon">A. Record and horizon</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Record-class answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Record class and accountable owner</strong></td>
+<td>What is retained, who owns the decision, and can the record be
+recreated or reissued without changing its evidentiary meaning?</td>
+</tr>
+<tr class="even">
+<td><strong>2. Retention trigger and verification horizon</strong></td>
+<td>What starts the retention period, what source sets it, and until
+what date could an independent party need to verify the record?
+Distinguish retention from the shorter or longer period during which
+cryptographic proof is expected.</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Signer and trust basis</strong></td>
+<td>Which key signed the record? How is the signer bound to that key?
+Which certificate, explicit key pin, registry entry, or other trust
+decision must a future verifier reproduce?</td>
+</tr>
+<tr class="even">
+<td><strong>4. Timestamp and validation evidence</strong></td>
+<td>Is there a trusted time assertion? What bytes does it cover? Which
+certificate path, policy, revocation data, and validation time
+assumptions would be needed later?</td>
+</tr>
+<tr class="odd">
+<td><strong>5. Signature algorithm, encoding, and acceptance
+policy</strong></td>
+<td>Record the algorithm and parameters, wire encoding or OID, hybrid
+composition rule, and the relying party’s policy for classical-only
+transition evidence. Avoid a single value such as “PQC supported.”</td>
+</tr>
+<tr class="even">
+<td><strong>6. Preserved verification capability</strong></td>
+<td>Name the independent verifier, version, runtime, dependencies,
+schemas, positive vector, negative controls, expected first-failure
+codes, and the location of an offline replay bundle.</td>
+</tr>
+<tr class="odd">
+<td><strong>7. Renewal, revalidation, and disposition
+action</strong></td>
+<td>Choose and date the action: bounded classical acceptance; hybrid
+signing for new records; preservation plus evidence renewal; migration
+to a new container; or documented expiry and disposal. Name the trigger
+and owner.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="b.-decision-sequence">B. Decision sequence</h2>
+<ol type="1">
+<li><strong>Can the record be recreated later without changing what it
+proves?</strong> If yes, document the controlled reissue path. If no,
+treat it as archive evidence.</li>
+<li><strong>Does the expected verification horizon outlive any signing
+algorithm, key, certificate, timestamp path, dependency, or policy
+assumption?</strong> If yes or unknown, record a migration action rather
+than a generic support claim.</li>
+<li><strong>For new records, is classical-only evidence still
+permitted?</strong> State the end condition. If PQC is required, make
+that a relying-party verification policy and test a legitimately
+generated classical-only package.</li>
+<li><strong>Can an independent implementation verify a positive
+package?</strong> Preserve at least one positive cross-implementation
+vector before relying on the format.</li>
+<li><strong>Do negative controls reach the intended decision
+points?</strong> Include signature tamper, incomplete hybrid pair,
+structural stripping, payload change, and any encoding or trust-basis
+boundary that matters.</li>
+<li><strong>Can the evidence be replayed offline on a clean
+machine?</strong> Preserve the package, hashes, expected outputs,
+verifier source or binaries, dependency lock files, and a short operator
+procedure.</li>
+</ol>
+<h2 id="c.-recorded-outcome">C. Recorded outcome</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Decision</th>
+<th>Entry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Current acceptance policy</td>
+<td><code>classical allowed until: ____</code> /
+<code>hybrid if present</code> / <code>PQC required</code></td>
+</tr>
+<tr class="even">
+<td>Next migration or renewal event</td>
+<td>Trigger/date: ____ Owner: ____</td>
+</tr>
+<tr class="odd">
+<td>Preserved replay bundle</td>
+<td>Location/version/DOI: ____</td>
+</tr>
+<tr class="even">
+<td>Last independent replay</td>
+<td>Date: ____ Implementations: ____ Result: ____</td>
+</tr>
+<tr class="odd">
+<td>Residual limitation accepted by</td>
+<td>Name/role: ____ Date: ____</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Review rule:</strong> revisit the worksheet when the record
+class, retention source, algorithm policy, trust basis, verifier
+dependency, or archive process changes.</p>
+</body>
+</html>

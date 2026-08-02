@@ -58,4 +58,13 @@ describe("decision-procedure boundary states", () => {
     expect(result.valid).toBe(false);
     expect(result.failureCode).toBe("PQC_SIGNATURE_REQUIRED");
   });
+
+  test("rejects an unknown PQC policy instead of silently accepting it", async () => {
+    const source = await readFile(
+      new URL("../../test-vectors/valid/minimal-roundtrip/package.aep", import.meta.url),
+    );
+    await expect(
+      verify(source, { pqcPolicy: "unknown" as "if-present" }),
+    ).rejects.toThrow("pqcPolicy must be");
+  });
 });

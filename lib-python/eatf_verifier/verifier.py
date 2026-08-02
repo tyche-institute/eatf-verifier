@@ -13,7 +13,7 @@ import io
 import json
 import zipfile
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, Literal
 
 from .canonical import jcs
 from .hash import sha256, to_hex
@@ -35,7 +35,7 @@ class VerifyOptions:
     An empty list skips the pin. This is not full RFC 5280 path
     validation; see ``verify_tsa_trust``.
     """
-    pqc_policy: str = "if-present"
+    pqc_policy: Literal["if-present", "required"] = "if-present"
     """Use ``required`` to reject classical-only transition packages."""
 
 
@@ -69,6 +69,8 @@ MAX_ENTRIES = 32
 def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     """Verify an .aep package. Returns a VerifyResult."""
     opts = options or VerifyOptions()
+    if opts.pqc_policy not in ("if-present", "required"):
+        raise ValueError("pqc_policy must be 'if-present' or 'required'")
     report: list[str] = []
     metadata: dict[str, Any] | None = None
 

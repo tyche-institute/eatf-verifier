@@ -5,6 +5,11 @@ policy that requires the post-quantum half (`required`). All packages are
 prepared, deterministic, and verified offline by independent TypeScript and
 Python implementations.
 
+The conference core is designed for 60 minutes, with documented 45- and
+90-minute variants. Start with [QUICKSTART.md](QUICKSTART.md), then use
+[RUN-SHEETS.md](RUN-SHEETS.md) and the no-network
+[EXPECTED-TRANSCRIPT.md](EXPECTED-TRANSCRIPT.md).
+
 ## Run the complete lab
 
 From the repository root:
@@ -12,6 +17,12 @@ From the repository root:
 ```bash
 bash bin/setup.sh
 ./workshops/pqc-hybrid-lab/run.sh
+```
+
+The cross-platform equivalent is:
+
+```bash
+python workshops/pqc-hybrid-lab/run_lab.py
 ```
 
 There are two distinct downgrade observations:
@@ -37,9 +48,20 @@ SubjectPublicKeyInfo. The test TSA, RSA key, and deterministic ML-DSA seed are
 fixtures only. This lab is a research and interoperability artifact, not a
 certification or production deployment profile.
 
+The adjacent archive-migration worksheet is available in
+[`docs/pqc-archive-migration-worksheet.md`](../../docs/pqc-archive-migration-worksheet.md)
+and in printable HTML/PDF forms.
+
 Regenerate the packages after changing the signer or verifier:
 
 ```bash
 npm run build
 node scripts/generate-pqc-workshop.mjs
+```
+
+Build the deterministic release download, including this lab and the archive
+worksheet:
+
+```bash
+npm run build:conference-assets
 ```

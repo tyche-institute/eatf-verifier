@@ -19,7 +19,7 @@ import { resolve, basename } from "node:path";
 import { existsSync, statSync, readdirSync } from "node:fs";
 import process from "node:process";
 
-const VERSION = "0.3.0";
+const VERSION = "0.6.0";
 
 function usage() {
   process.stdout.write(`\

@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased — public hybrid ML-DSA-65 and downgrade lab
+## v0.6.0 — public hybrid ML-DSA-65 and downgrade lab (2026-08-02)
 
 - Add hybrid RSA-4096 + ML-DSA-65 signing to the TypeScript library and
   `eatf-sign`, with RFC 9881 SubjectPublicKeyInfo output.
@@ -14,6 +14,11 @@
 - Add a deterministic six-package offline lab covering valid hybrid,
   ML-DSA tamper, pair stripping, legitimate classical transition, incomplete
   pair, and payload tamper paths under both policies.
+- Add 45-, 60-, and 90-minute facilitator run sheets, checksums, an annotated
+  no-network transcript, and a deterministic downloadable workshop bundle.
+- Add a one-page PQC archive-migration worksheet in Markdown, HTML, and PDF.
+- Reject unknown PQC policy values instead of silently treating them as the
+  transition policy, and align the Python runtime version with the release.
 
 ## v0.5.0 — how far the first-failure code depends on guard order (2026-07-27)
 

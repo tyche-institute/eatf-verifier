@@ -34,6 +34,13 @@ export async function verify(
   input: Uint8Array | ArrayBuffer | Blob,
   opts: VerifyOptions = {},
 ): Promise<VerifyResult> {
+  if (
+    opts.pqcPolicy !== undefined
+    && opts.pqcPolicy !== "if-present"
+    && opts.pqcPolicy !== "required"
+  ) {
+    throw new Error("pqcPolicy must be 'if-present' or 'required'");
+  }
   const report: string[] = [];
   const bytes = await toBytes(input);
   let metadata: Record<string, unknown> | null = null;

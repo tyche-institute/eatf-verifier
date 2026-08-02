@@ -150,9 +150,16 @@ async function main() {
       },
     };
   }
+  const manifestBytes = Buffer.from(JSON.stringify(manifest, null, 2) + "\n");
+  await writeFile(resolve(WORKSHOP, "manifest.json"), manifestBytes);
+  const checksumLines = [];
+  for (const name of Object.keys(packages).sort()) {
+    checksumLines.push(`${manifest.packages[name].sha256}  packages/${name}`);
+  }
+  checksumLines.push(`${await sha256Hex(manifestBytes)}  packages/manifest.json`);
   await writeFile(
-    resolve(WORKSHOP, "manifest.json"),
-    JSON.stringify(manifest, null, 2) + "\n",
+    resolve(WORKSHOP, "..", "SHA256SUMS"),
+    checksumLines.join("\n") + "\n",
   );
 
   await writePackage(

@@ -173,6 +173,12 @@ def test_required_pqc_policy_rejects_classical_only_package() -> None:
     assert result.failure_code == "PQC_SIGNATURE_REQUIRED"
 
 
+def test_unknown_pqc_policy_is_not_silently_accepted() -> None:
+    package = VECTORS_ROOT / "valid" / "minimal-roundtrip" / "package.aep"
+    with pytest.raises(ValueError, match="pqc_policy must be"):
+        verify(package.read_bytes(), VerifyOptions(pqc_policy="unknown"))  # type: ignore[arg-type]
+
+
 def test_rfc9881_mldsa_vector_is_accepted_by_required_policy() -> None:
     package = VECTORS_ROOT / "valid" / "hybrid-mldsa65" / "package.aep"
     result = verify(package.read_bytes(), VerifyOptions(pqc_policy="required"))
