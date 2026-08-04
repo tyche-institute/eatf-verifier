@@ -25,6 +25,15 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.21511608"
     description: "Earlier concept DOI covering releases through v0.5.0"
+  - type: doi
+    value: "10.5281/zenodo.21633255"
+    description: "Version DOI for v0.5.0, the release pinned by the published
+      differential-testing study; its experiments/ trees are byte-identical to
+      those of v0.6.0 and v0.6.1"
+  - type: doi
+    value: "10.5281/zenodo.21618887"
+    description: "Version DOI for v0.3.0, the release carrying the 21-case
+      decision-path corpus cited by that study"
 keywords:
   - AI agent attestation
   - Agent Evidence Package
