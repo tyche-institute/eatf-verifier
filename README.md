@@ -5,7 +5,7 @@
 EATF is an open toolkit for creating, inspecting, and independently verifying
 Agent Evidence Packages (`.aep`). An AEP is a portable ZIP envelope that binds
 an AI-agent action record to canonical bytes, hashes, signatures, an optional
-OVERT receipt, and an RFC 3161 timestamp.
+OVERT-inspired receipt, and an RFC 3161 timestamp.
 
 The tools run locally after installation. They make no runtime network calls,
 need no account or API key, and do not depend on a hosted EATF service.
@@ -34,7 +34,7 @@ offline package and verification workflow for one recorded agent action.
 | `cli/eatf-sign/` | Offline AEP signer |
 | `cli/eatf-inspect/` | Non-validating package inspector |
 | `cli/eatf-verify/` | TypeScript verification CLI |
-| `schemas/` | JSON Schemas for AEP metadata and OVERT receipts |
+| `schemas/` | JSON Schemas for AEP metadata and the OVERT-inspired receipt |
 | `test-vectors/` | 5 accepted and 8 rejected conformance packages |
 | `examples/` | Five executable reviewer journeys, including hybrid signing |
 | `workshops/pqc-hybrid-lab/` | Six prepared packages for ML-DSA tamper and downgrade exercises |
@@ -98,7 +98,7 @@ Both verifiers apply the same decisive checks:
 3. SHA-256 binding of `canonical.bin`;
 4. optional exact signer-key pin, when supplied by the caller;
 5. RSA-4096 PKCS#1 v1.5/SHA-256 signature;
-6. OVERT receipt cross-checks and, for current signer output, its
+6. OVERT-inspired receipt cross-checks and, for current signer output, its
    downgrade-protected separate RSA signature;
 7. ML-DSA-65 signature, when its key/signature pair is present, plus an
    optional relying-party policy that requires the pair;
@@ -158,6 +158,22 @@ cross-language matches, and zero boolean or first-code mismatches.
   and automatic trust-registry discovery are outside the current scope.
 - EATF is not a trust service, certificate authority, legal-compliance
   determination, or substitute for an auditor's policy.
+
+## OVERT attribution and non-endorsement
+
+OVERT is an open standard published by [Glacis Technologies, Inc.](https://overt.is).
+Tyche Institute and this toolkit are independent of Glacis Technologies: there is no
+affiliation, partnership, sponsorship, funding, certification, or endorsement in
+either direction.
+
+The `overt_receipt.json` entry used here is an OVERT-inspired, receipt-shaped object
+defined and produced by this project's own tooling. It is not claimed to be
+OVERT-conformant, it has not been reviewed, certified, or approved by Glacis
+Technologies, and nothing in this repository should be read as a statement by them.
+Entry, field, and failure-code names that mention or resemble OVERT terminology
+(`overt_receipt.json`, the receipt's `overt` and `witness.iap` fields, the
+`OVERT_*` failure codes) are local wire-format and API identifiers, fixed by the
+frozen conformance corpus. They are not conformance claims.
 
 ## License and citation
 

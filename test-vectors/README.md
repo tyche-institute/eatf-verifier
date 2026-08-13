@@ -6,7 +6,7 @@ Diagnostic wording may differ; the boolean verdict is the contract.
 
 | Vector | Expected | Target |
 |---|---:|---|
-| `valid/valid-overt-profile` | true | Foundational OVERT profile |
+| `valid/valid-overt-profile` | true | Foundational OVERT-inspired receipt profile |
 | `valid/mcp-tools-call-valid` | true | MCP call with allow decision |
 | `valid/mcp-tools-call-denied-policy` | true | Authentic evidence of a deny decision |
 | `valid/minimal-roundtrip` | true | Current signer-to-verifier workflow |
@@ -37,3 +37,9 @@ eatf-verify-py --conformance test-vectors
 ```
 
 Expected from each: `5 verified, 8 rejected, 0 contract mismatches`.
+
+OVERT is an open standard published by Glacis Technologies, Inc. (https://overt.is).
+These vectors are independent of Glacis Technologies and carry no endorsement or
+certification by them; the `overt_receipt.json` entry they exercise is OVERT-inspired
+and is not claimed to be OVERT-conformant. See the repository
+[README](../README.md#overt-attribution-and-non-endorsement).

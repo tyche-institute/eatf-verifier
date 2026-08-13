@@ -2,7 +2,7 @@
  * Offline TypeScript signer for EATF .aep evidence packages.
  *
  * Mirrors the verifier in src/verifier.ts in reverse: given a payload,
- * an RSA keypair, OVERT receipt parameters, and an RFC 3161 timestamp
+ * an RSA keypair, OVERT-inspired receipt parameters, and an RFC 3161 timestamp
  * token, produces an .aep that the verifier in this package will accept.
  *
  * Wire format documented in ../docs/aep-format.md.
@@ -37,7 +37,7 @@ export type SignerInput = {
   /**
    * Base metadata for the package. The signer fills in `created_at`
    * (if absent) and validates that the caller-supplied metadata is
-   * consistent with the OVERT receipt it generates.
+   * consistent with the OVERT-inspired receipt it generates.
    */
   metadata: Record<string, unknown>;
   /**
@@ -170,7 +170,7 @@ export async function sign(input: SignerInput): Promise<SignerOutput> {
     pqcPublicKeyEntry = TEXT_ENC.encode(mlDsa65PublicKeyToPem(input.pqcPublicKey!));
   }
 
-  // OVERT receipt: derive from metadata + caller-supplied blocks.
+  // OVERT-inspired receipt: derive from metadata + caller-supplied blocks.
   const policyFromMeta = {
     id: metadata.policy_id,
     version: metadata.policy_version,

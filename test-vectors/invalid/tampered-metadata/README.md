@@ -6,7 +6,7 @@
 Derived by a scripted single-field mutation from
 `valid/minimal-roundtrip/package.aep` by flipping
 `metadata.policy_decision` (`allow` ↔ `deny`). The change makes the
-metadata file inconsistent with the OVERT receipt's
+metadata file inconsistent with the OVERT-inspired receipt's
 `policy.decision` field, which the verifier cross-checks in
 `parseAndValidateOvertReceipt`.
 
@@ -15,11 +15,11 @@ response-only canonical form (`canonical.bin == response.txt`) rather than the
 current AEP profile form
 (`canonical.bin == response.txt || LF || JCS(metadata)`). With the
 response-only form, modifying `metadata.json` does NOT change the
-hash chain. The cross-check in the OVERT receipt is what catches
+hash chain. The cross-check in the OVERT-inspired receipt is what catches
 this single-field mutation. The verifier explicitly warns that legacy
 metadata is not signature-bound.
 
 Current `eatf-sign` output uses the profile form, so even a coordinated change
 to metadata and receipt is rejected at canonical reconstruction. A compatible
-verifier MUST still reject this legacy negative package via the OVERT receipt
+verifier MUST still reject this legacy negative package via the OVERT-inspired receipt
 step.

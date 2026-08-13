@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.tyche.institute/eatf/overt-receipt-v1.schema.json",
-  "title": "EATF OVERT 1.0 receipt (as embedded in an AEP v1 package)",
-  "description": "Validates the overt_receipt.json entry inside an AEP v1 evidence package. Wire format documented in docs/aep-format.md. The receipt cross-references package fields and witness file paths; this schema constrains shape, not cross-document consistency (which the verifier checks).",
+  "title": "EATF OVERT-inspired receipt (as embedded in an AEP v1 package)",
+  "description": "Validates the overt_receipt.json entry inside an AEP v1 evidence package. Wire format documented in docs/aep-format.md. The receipt cross-references package fields and witness file paths; this schema constrains shape, not cross-document consistency (which the verifier checks). OVERT is an open standard published by Glacis Technologies, Inc. (https://overt.is); this schema is independent of Glacis Technologies, carries no endorsement or certification by them, and describes an OVERT-inspired receipt that is not claimed to be OVERT-conformant.",
   "type": "object",
   "required": [
     "overt",
@@ -17,7 +17,7 @@
   "additionalProperties": true,
   "properties": {
     "overt": {
-      "description": "OVERT receipt version. v0.1 packages MUST set this to '1.0.0'.",
+      "description": "Receipt version field. v0.1 packages MUST set this to '1.0.0'.",
       "type": "string",
       "const": "1.0.0"
     },
@@ -31,7 +31,7 @@
       "type": "string"
     },
     "scope": {
-      "description": "OVERT scope URN. Identifies the class of action being attested. v0.1 examples: 'foundational:aep-response', 'agentic-extended:mcp-tools-call'.",
+      "description": "Assessment scope URN. Identifies the class of action being attested. v0.1 examples: 'foundational:aep-response', 'agentic-extended:mcp-tools-call'.",
       "type": "string",
       "minLength": 1
     },
@@ -121,7 +121,7 @@
       "additionalProperties": true,
       "properties": {
         "iap": {
-          "description": "Independent attestation provider identifier. Free-form string identifying who produced or preserved the package.",
+          "description": "Independent attestation provider identifier: a local free-form string identifying who produced or preserved the package. The field name is a wire-format identifier only and asserts no OVERT assurance level or conformance.",
           "type": "string",
           "minLength": 1
         },

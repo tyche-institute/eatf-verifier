@@ -224,7 +224,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         )
     report.append("RSA-4096 signature verified.")
 
-    # 7. OVERT receipt.
+    # 7. OVERT-inspired receipt.
     receipt, err = parse_and_validate_overt_receipt(entries, metadata, expected_hash_hex)
     if err:
         return _fail(
@@ -236,9 +236,9 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             receipt,
         )
     if receipt is not None:
-        report.append(f"OVERT receipt verified ({receipt.get('scope')!s}).")
+        report.append(f"OVERT-inspired receipt verified ({receipt.get('scope')!s}).")
     else:
-        report.append("OVERT receipt absent (optional profile entry).")
+        report.append("OVERT-inspired receipt absent (optional profile entry).")
 
     receipt_signature_name = metadata.get("overt_receipt_signature")
     if receipt_signature_name is not None:
@@ -271,7 +271,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
                 return _fail(
                     report,
                     "OVERT_SIGNATURE_INVALID",
-                    "OVERT receipt signature does not verify against public_key.pem.",
+                    "OVERT-inspired receipt signature does not verify against public_key.pem.",
                     metadata,
                     None,
                     receipt,
@@ -280,12 +280,12 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             return _fail(
                 report,
                 "OVERT_SIGNATURE_ERROR",
-                f"OVERT receipt signature verify error: {exc}.",
+                f"OVERT-inspired receipt signature verify error: {exc}.",
                 metadata,
                 None,
                 receipt,
             )
-        report.append("OVERT receipt signature verified (required by signed metadata).")
+        report.append("OVERT-inspired receipt signature verified (required by signed metadata).")
     elif "overt_receipt.sig" in entries:
         return _fail(
             report,
@@ -297,7 +297,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         )
     elif receipt is not None:
         report.append(
-            "Legacy OVERT receipt is cross-checked but not separately signature-bound."
+            "Legacy OVERT-inspired receipt is cross-checked but not separately signature-bound."
         )
 
     # 8. Optional ML-DSA-65 verification.

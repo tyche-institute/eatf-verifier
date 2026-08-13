@@ -9,7 +9,7 @@ seed package, with the expected outcome for each case declared in `oracle.json`
 **before** the run.
 
 Four cases, in two matched pairs. The naive and refined members of each pair
-differ only in whether the OVERT receipt's witness reference to the mutated
+differ only in whether the OVERT-inspired receipt's witness reference to the mutated
 entry is cleared, and the receipt re-signed, before the entry is altered.
 
 | case | targets | observed in both implementations | outcome |

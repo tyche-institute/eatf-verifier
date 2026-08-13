@@ -19,5 +19,5 @@ the caller-supplied development signer key as an explicit trust pin.
 `canonical.bin` uses the current
 `response.txt || LF || RFC8785-JCS(metadata)` profile, so metadata is covered
 by the hash, RSA signature, and timestamp. The signed metadata requires
-`overt_receipt.sig`, which covers the exact OVERT receipt bytes and prevents
+`overt_receipt.sig`, which covers the exact OVERT-inspired receipt bytes and prevents
 unmarked downgrade.

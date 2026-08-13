@@ -54,7 +54,7 @@ function validReceipt(): Record<string, unknown> {
   };
 }
 
-describe("OVERT receipt validation", () => {
+describe("OVERT-inspired receipt validation", () => {
   test("accepts a receipt bound to package hash, metadata, and witness files", () => {
     const result = parseAndValidateOvertReceipt(entries(validReceipt()), metadata, HASH);
 

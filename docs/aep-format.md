@@ -16,7 +16,7 @@ external standard.
 | `public_key.pem` | required | Embedded RSA SPKI verification key |
 | `metadata.json` | required | Package metadata JSON object |
 | `timestamp.tsr` | required | Base64 RFC 3161 `TimeStampResp` or bare token |
-| `overt_receipt.json` | optional | OVERT receipt bound to hash and metadata |
+| `overt_receipt.json` | optional | OVERT-inspired receipt bound to hash and metadata |
 | `overt_receipt.sig` | conditional | RSA/SHA-256 signature over exact receipt bytes; required when named by signed metadata |
 | `signature_pqc.sig` | paired optional | Base64 ML-DSA-65 signature |
 | `pqc_public_key.pem` | paired optional | RFC 9881 ML-DSA-65 SubjectPublicKeyInfo; legacy raw-key PEM is read-only compatible |
@@ -35,7 +35,7 @@ external standard.
    match one exactly. Without this option, signer identity is explicitly
    reported as not evaluated.
 6. Verify `signature.sig` over `canonical.bin`.
-7. If present, validate the OVERT profile, scope, content hash, and
+7. If present, validate the receipt's profile, scope, content hash, and
    metadata-bound fields. When signed metadata contains
    `overt_receipt_signature: "overt_receipt.sig"`, require that entry and
    verify its RSA signature over the exact `overt_receipt.json` bytes.
@@ -78,3 +78,11 @@ ordering. To keep parsed JSON behavior identical across the two languages, the
 AEP metadata profile rejects integer-valued numbers outside
 `[-9007199254740991, 9007199254740991]`, non-finite values, unsupported JSON
 types, circular values, and unpaired Unicode surrogates.
+
+## OVERT attribution
+
+OVERT is an open standard published by Glacis Technologies, Inc.
+(https://overt.is). This project is independent of Glacis Technologies and
+carries no endorsement, certification, or conformance claim from them; the
+`overt_receipt.json` entry is OVERT-inspired and defined by this project. See
+the repository [README](../README.md#overt-attribution-and-non-endorsement).

@@ -238,8 +238,8 @@ export async function verify(
   }
   report.push(
     overtReceipt
-      ? `OVERT receipt verified (${String(overtReceipt.scope)}).`
-      : "OVERT receipt absent (optional profile entry).",
+      ? `OVERT-inspired receipt verified (${String(overtReceipt.scope)}).`
+      : "OVERT-inspired receipt absent (optional profile entry).",
   );
   const receiptSignatureName = metadata.overt_receipt_signature;
   if (receiptSignatureName !== undefined) {
@@ -271,7 +271,7 @@ export async function verify(
         return fail(
           report,
           "OVERT_SIGNATURE_INVALID",
-          "OVERT receipt signature does not verify against public_key.pem.",
+          "OVERT-inspired receipt signature does not verify against public_key.pem.",
           metadata,
           null,
           overtReceipt,
@@ -281,13 +281,13 @@ export async function verify(
       return fail(
         report,
         "OVERT_SIGNATURE_ERROR",
-        `OVERT receipt signature verify error: ${(e as Error).message}.`,
+        `OVERT-inspired receipt signature verify error: ${(e as Error).message}.`,
         metadata,
         null,
         overtReceipt,
       );
     }
-    report.push("OVERT receipt signature verified (required by signed metadata).");
+    report.push("OVERT-inspired receipt signature verified (required by signed metadata).");
   } else if (entries["overt_receipt.sig"]) {
     return fail(
       report,
@@ -299,7 +299,7 @@ export async function verify(
     );
   } else if (overtReceipt) {
     report.push(
-      "Legacy OVERT receipt is cross-checked but not separately signature-bound.",
+      "Legacy OVERT-inspired receipt is cross-checked but not separately signature-bound.",
     );
   }
 

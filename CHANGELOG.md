@@ -1,5 +1,13 @@
 # Changelog
 
+> **Terminology note.** Entries below use "OVERT receipt" as shorthand for the
+> `overt_receipt.json` package entry. OVERT is an open standard published by
+> Glacis Technologies, Inc. (https://overt.is); this project is independent of
+> them, carries no endorsement or certification by them, and the entry is
+> OVERT-inspired rather than claimed to be OVERT-conformant. See
+> [README](README.md#overt-attribution-and-non-endorsement). Historical entries
+> are left unedited so that the release record stays accurate.
+
 ## v0.6.1 — portable conference download (2026-08-02)
 
 - Include `run_lab.py` and `run.sh` in the deterministic conference ZIP so the

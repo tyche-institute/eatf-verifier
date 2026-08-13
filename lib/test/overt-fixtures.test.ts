@@ -19,10 +19,10 @@ describe("OVERT .aep golden fixtures", () => {
 
     expect(result.valid).toBe(true);
     expect(result.overtReceipt?.scope).toBe("foundational:aep-response");
-    expect(result.report.some((line) => line.includes("OVERT receipt verified"))).toBe(true);
+    expect(result.report.some((line) => line.includes("OVERT-inspired receipt verified"))).toBe(true);
   });
 
-  test("rejects the tampered OVERT receipt fixture", async () => {
+  test("rejects the tampered OVERT-inspired receipt fixture", async () => {
     const bytes = await readFile(resolve(INVALID_DIR, "tampered-overt-receipt/package.aep"));
 
     const result = await verify(bytes, { tsaTrustList: [] });

@@ -7,7 +7,7 @@
  * Thin wrapper around the @eatf/verifier library (../lib). Reads one or
  * more .aep files, runs the full offline verification pipeline (envelope,
  * canonicalisation, hashes, classical + post-quantum signatures,
- * optional signer-key pin, RFC 3161 timestamp, and OVERT receipt), and prints a
+ * optional signer-key pin, RFC 3161 timestamp, and OVERT-inspired receipt), and prints a
  * structured report.
  *
  * No network calls. No API keys. Trust anchors are passed in via CLI

@@ -1,7 +1,7 @@
 # `eatf-inspect`
 
 `eatf-inspect` prints the flat AEP v1 ZIP layout, entry sizes, parsed metadata,
-and an OVERT receipt summary. It does not validate hashes or signatures.
+and an OVERT-inspired receipt summary. It does not validate hashes or signatures.
 
 ```bash
 eatf-inspect test-vectors/valid/mcp-tools-call-valid/package.aep
