@@ -38,11 +38,14 @@ __pycache__/
 # Reference deployment artefacts (must never be checked in)
 *.aep
 !test-vectors/**/*.aep
+!artifacts/authority-record-v1/test-vectors/**/*.aep
 !workshops/pqc-hybrid-lab/packages/*.aep
 *.key
 *.pem
 !test-vectors/**/*.pem
 !test-vectors/**/*.key
+!artifacts/authority-record-v1/test-vectors/**/*.pem
+!artifacts/authority-record-v1/test-vectors/**/*.key
 !examples/**/*.pem
 !docs/**/*.pem
 node_modules/
