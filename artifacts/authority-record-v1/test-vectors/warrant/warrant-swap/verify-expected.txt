@@ -1,0 +1,2 @@
+verify=false
+diagnostic=warrant.json invalid: policy_ref.policy_id does not match metadata.policy_id.

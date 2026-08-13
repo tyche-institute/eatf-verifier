@@ -1,0 +1,2 @@
+verify=false
+diagnostic=RSA signature does not verify against public_key.pem.

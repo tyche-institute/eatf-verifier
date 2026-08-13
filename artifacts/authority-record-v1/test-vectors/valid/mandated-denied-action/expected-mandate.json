@@ -1,0 +1,27 @@
+{
+  "description": "The two-layer package recording policy_decision deny. The AEP is authentic evidence of the denial: the mandate binds and verifies, the warrant licenses allow outputs only and so does not apply (reported, never rejecting), and the package stays accepted. This is the baseline package the profile-form deny-to-allow rewrite is attempted against.",
+  "expect": {
+    "valid": true,
+    "canonicalForm": "profile",
+    "mandate": {
+      "claimed": true,
+      "bound": true,
+      "signatureVerified": true,
+      "inScope": true
+    },
+    "checks": {
+      "mandate-bound": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-signature": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "warrant-applicability": {
+        "verdict": "fail",
+        "enforced": false
+      }
+    }
+  }
+}

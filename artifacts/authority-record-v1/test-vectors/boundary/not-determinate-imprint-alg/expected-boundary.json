@@ -1,0 +1,21 @@
+{
+  "description": "valid/minimal-roundtrip with the TSTInfo messageImprint hash algorithm OID flipped to SHA-512. The verifier can only evaluate SHA-256 imprints, so tsa-imprint is not_determinate/capability_absent; the package still verifies.",
+  "options": {
+    "tsaTrustList": []
+  },
+  "expect": {
+    "valid": true,
+    "canonicalForm": "response-only",
+    "checks": {
+      "tsa-present": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "tsa-imprint": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "capability_absent"
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+verify=false
+diagnostic=warrant.json invalid: digest does not match metadata.warrant_digest.

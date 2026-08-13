@@ -1,0 +1,23 @@
+{
+  "description": "The baseline package with acceptance.json and acceptance.sig removed after signing. The digest reference is inside the signed metadata and survives, so the package advertises a named authority's acceptance it does not carry. Key binding is not determinable — there is nothing to verify — and it is output binding that rejects.",
+  "expect": {
+    "valid": false,
+    "failureReason": "acceptance invalid: acceptance.json entry is missing but metadata references an acceptance_digest.",
+    "canonicalForm": "profile",
+    "acceptingAuthority": {
+      "keyBindingValid": null,
+      "boundToOutput": false
+    },
+    "checks": {
+      "accepting-authority-binding": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "accepting-authority-key-binding": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      }
+    }
+  }
+}

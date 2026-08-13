@@ -1,0 +1,9 @@
+{
+  "name": "@eatf/scripts",
+  "private": true,
+  "type": "module",
+  "description": "Helper scripts: invalid-vector generator, fixture cookers, etc. Not published; not part of the runtime surface.",
+  "dependencies": {
+    "fflate": "^0.8.2"
+  }
+}

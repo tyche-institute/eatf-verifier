@@ -1,0 +1,23 @@
+{
+  "description": "The policy evaluated this action to deny; the warrant licenses allow outputs only. The deny output falls outside applies_to.policy_decisions — it may inform but carries no warrant to compel — and the package stays accepted (the AEP remains authentic evidence of the denial).",
+  "expect": {
+    "valid": true,
+    "warrant": {
+      "present": true,
+      "bound": true,
+      "policyLinked": true,
+      "applicable": false,
+      "acceptanceVerified": true,
+      "fresh": null
+    },
+    "checks": {
+      "warrant-applicability": {
+        "verdict": "fail",
+        "enforced": false
+      }
+    },
+    "reportIncludes": [
+      "Warrant does not apply to this action: the output may inform but carries no warrant to compel."
+    ]
+  }
+}

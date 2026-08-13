@@ -1,0 +1,23 @@
+{
+  "description": "valid/mandated-denied-action with policy_decision flipped deny->allow in metadata.json AND overt_receipt.json after signing — the identical rewrite that boundary/response-only-unsigned-policy-tamper performs on a response-only package, where it succeeds. Under the profile canonical form metadata.json is inside canonical.bin, so the rewrite no longer reproduces the signed bytes and verification fails at the canonical-form check, before the signature is even consulted.",
+  "expect": {
+    "valid": false,
+    "canonicalForm": null,
+    "failureReason": "canonical.bin does not match a supported canonical form.",
+    "checks": {
+      "canonical-profile": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "canonical-response-only": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "mandate-signature": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      }
+    }
+  }
+}

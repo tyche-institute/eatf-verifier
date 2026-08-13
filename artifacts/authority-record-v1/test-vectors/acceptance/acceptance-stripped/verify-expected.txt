@@ -1,0 +1,2 @@
+verify=false
+diagnostic=acceptance invalid: acceptance.json entry is missing but metadata references an acceptance_digest.

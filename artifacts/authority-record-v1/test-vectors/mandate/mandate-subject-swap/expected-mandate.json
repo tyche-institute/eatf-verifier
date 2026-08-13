@@ -1,0 +1,18 @@
+{
+  "description": "An authentic mandate, correctly signed by the granting authority, but granted to a different subject agent than the one this package attests. The grant is real; it is not a grant to this agent.",
+  "expect": {
+    "valid": false,
+    "failureReason": "mandate.json invalid: mandate subject does not match agent_id.",
+    "mandate": {
+      "claimed": true,
+      "present": true,
+      "bound": false
+    },
+    "checks": {
+      "mandate-bound": {
+        "verdict": "fail",
+        "enforced": true
+      }
+    }
+  }
+}

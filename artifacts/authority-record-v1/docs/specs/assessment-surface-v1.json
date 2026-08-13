@@ -1,0 +1,278 @@
+{
+  "$comment": "Assessment-surface map: every normative (MUST / MUST NOT / REQUIRED / forbidden, plus the imperative verifier contract of §7) statement of docs/specs/aep-profile-v1.md, mapped to the verifier check that executes it (lib/src/check-registry.ts) or to 'no-executable-check' when no code in the TypeScript verifier executes it. This file is the DENOMINATOR for any 'share of the spec assessed' figure: it is derived from the spec surface, not from the verifier's own check list, and lib/test/assessment-surface.test.ts two-set-diffs it against CHECK_REGISTRY so neither side can drift silently. Edit it only together with the spec or the registry. OVERT is an open standard published by Glacis Technologies, Inc. (https://overt.is); this project is independent of Glacis Technologies, carries no endorsement or certification by them, and the overt_receipt.json clauses below describe an OVERT-inspired entry that is not claimed to be OVERT-conformant.",
+  "surface": "docs/specs/aep-profile-v1.md (1.0-draft+mandate, acceptance-gate revision 2026-08-13)",
+  "version": "1.5.0",
+  "registry_version": "1.5.0",
+  "clauses": [
+    {
+      "clause": "§2 container",
+      "statement": "A v1 .aep package is a ZIP archive (PKZIP, store or deflate).",
+      "check": "zip-structure"
+    },
+    {
+      "clause": "§2 container",
+      "statement": "The archive is a flat directory of named files; nested directories are forbidden in v1.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§2 container",
+      "statement": "Maximum uncompressed size: 10 MB.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§3 required entries",
+      "statement": "Every v1 package MUST include response.txt, canonical.bin, hash.sha256, signature.sig, public_key.pem, metadata.json, timestamp.tsr with these exact names.",
+      "check": "required-entries"
+    },
+    {
+      "clause": "§3 response.txt",
+      "statement": "response.txt is UTF-8 text, no BOM, line endings preserved as-issued.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§3 hash.sha256",
+      "statement": "hash.sha256 is the lower-case hex SHA-256 of canonical.bin.",
+      "check": "hash-sha256"
+    },
+    {
+      "clause": "§3 signature.sig",
+      "statement": "signature.sig is the Base64 PKCS#1 v1.5 RSA signature over canonical.bin (inner digest SHA-256), verifiable against public_key.pem.",
+      "check": "rsa-signature"
+    },
+    {
+      "clause": "§3 signature.sig (DigestInfo fallback)",
+      "statement": "The same §3 signature obligation, executed a second way: signatures Web Crypto refuses are re-checked against the raw DigestInfo encoding for Java reference compatibility. The fallback mechanism itself is a verifier implementation detail, not a spec sentence.",
+      "check": "rsa-digestinfo-fallback"
+    },
+    {
+      "clause": "§3 metadata.json",
+      "statement": "metadata.json is machine-readable UTF-8 JSON.",
+      "check": "metadata-parse"
+    },
+    {
+      "clause": "§3 metadata.json",
+      "statement": "metadata.json is 'canonicalised per section 4.4' (a dangling reference — the JSON canonicalisation rules live in §6 step 2). Neither verifier checks that the stored entry bytes are in canonical JSON form, and the TypeScript signer writes non-canonical JSON.stringify output.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§4 PQC entries",
+      "statement": "When PQC entries are present, the ML-DSA-65 signature over canonical.bin verifies against pqc_public_key.pem.",
+      "check": "pqc-mldsa65"
+    },
+    {
+      "clause": "§4 PQC entries",
+      "statement": "When the issuing TSP is configured to emit post-quantum signatures, the PQC entries MUST be present. The verifier cannot observe the issuer's configuration, so absence is never distinguishable from a pre-Phase-1.9 deployment.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§4.1 overt_receipt.json",
+      "statement": "Verifiers that process overt_receipt.json MUST reject the package if the receipt is present and inconsistent: overt MUST equal 1.0.0; profile MUST equal urn:eatf:spec:aep:1.0; scope MUST be non-empty; subject.agent_id / subject.tenant_hash / event.timestamp / event.action_type / policy.version / policy.coverage / policy.decision MUST match their metadata.json counterparts when present; content_hash MUST equal sha256:<hash.sha256>; witness.signature_refs MUST be a non-empty array of flat filenames that exist non-empty in the package; witness.timestamp_refs MUST be an array of such filenames; unknown receipt fields MUST be ignored.",
+      "check": "overt-receipt"
+    },
+    {
+      "clause": "§4.1 overt_receipt.json",
+      "statement": "profile_revision MUST identify the AEP draft/release that generated the receipt. Not checked by either verifier.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§4.1 overt_receipt.json",
+      "statement": "subject.tenant_hash MUST NOT contain a raw tenant id. Undecidable from package contents alone.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§4.1 overt_receipt.json",
+      "statement": "witness.iap MUST identify the independent attestation provider. The verifier checks the refs arrays but never the iap field.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§4.2 warrant binding",
+      "statement": "metadata.json MUST carry a warrant_digest equal to the lower-case hex SHA-256 of warrant.json as packaged; a warrant.json without that reference, a reference without the entry, or a digest mismatch is inconsistent and MUST be rejected.",
+      "check": "warrant-digest"
+    },
+    {
+      "clause": "§4.2 warrant record",
+      "statement": "The packaged warrant bytes MUST be the RFC 8785 (JCS) canonical form of a record with the required fields of schemas/warrant-v1.schema.json (warrant_id, warrant_version, policy_ref, inference_form, statement, applies_to, valid_from, valid_until) and a machine/attested-partitioned void_if when present.",
+      "check": "warrant-parse"
+    },
+    {
+      "clause": "§4.2 warrant binding form",
+      "statement": "The warrant is bound through metadata.json, so the binding holds only under the profile canonical form of section 6; under the response-only compatibility form the verifier MUST report the warrant as unbound.",
+      "check": "warrant-bound"
+    },
+    {
+      "clause": "§4.2 warrant linkage",
+      "statement": "policy_ref.policy_id / policy_ref.policy_version MUST equal metadata.json policy_id / policy_version, and metadata warrant_id / warrant_version MUST match the record when present.",
+      "check": "warrant-policy-link"
+    },
+    {
+      "clause": "§4.2 warrant applicability",
+      "statement": "A metadata action_type or policy_decision outside applies_to is reported — the output may inform but carries no warrant to compel — and MUST NOT by itself fail verification.",
+      "check": "warrant-applicability"
+    },
+    {
+      "clause": "§4.2 warrant acceptance",
+      "statement": "acceptance.signature MUST verify as a PKCS#1 v1.5 RSA signature (inner digest SHA-256) over the JCS bytes of the warrant with acceptance.signature removed, against acceptance.public_key.",
+      "check": "warrant-acceptance-signature"
+    },
+    {
+      "clause": "§4.2 warrant freshness",
+      "statement": "An RFC 3161 genTime outside valid_from..valid_until is reported and MUST NOT by itself fail verification. A genTime inside the window supports a fresh verdict only when the timestamp chains to a trusted root (the tsa-chain-to-root tri-state), so the affirmative outcome needs a caller-supplied trust list.",
+      "check": "warrant-freshness"
+    },
+    {
+      "clause": "§4.2 warrant attested remainder",
+      "statement": "The soundness of the licensed inference and the key-to-principal binding of the accepting authority are attested, never machine-checked. Attested-only.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§4.2 warrant attested remainder",
+      "statement": "void_if entries of kind 'attested' carry text a human must attest to; entries of kind 'machine' carry predicates the v0.1 verifiers record but do not evaluate. Attested-only in this release.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§4.3 accepting authority binding",
+      "statement": "When metadata.json carries an accepting_authority block, the acceptance is bound to this output only under the profile canonical form; a detached acceptance.json, when packaged, MUST match accepting_authority.acceptance_digest (sha256 of its JCS bytes) and its principal / policy_id / policy_version MUST agree. Under the response-only compatibility form the whole block is unsigned and the acceptance is unbound. GATES: an acceptance that is not bound to this output makes verification FAIL.",
+      "check": "accepting-authority-binding"
+    },
+    {
+      "clause": "§4.3 accepting authority key binding",
+      "statement": "When a detached acceptance.json is packaged, acceptance.sig MUST verify as a PKCS#1 v1.5 RSA signature (inner digest SHA-256) over the JCS bytes of acceptance.json against its embedded public_key. Key binding is reported separately from role. GATES: a packaged acceptance whose signature does not verify makes verification FAIL.",
+      "check": "accepting-authority-key-binding"
+    },
+    {
+      "clause": "§4.3 accepting authority temporal containment",
+      "statement": "The RFC 3161 genTime is checked for containment in accepting_authority.validity (not_before..not_after). A genTime outside the window is reported and MUST NOT by itself fail verification. This imports AdES temporal-validation semantics (ETSI EN 319 102-1, TS 119 615), never invented.",
+      "check": "accepting-authority-temporal"
+    },
+    {
+      "clause": "§4.3 accepting authority role",
+      "statement": "Role assertion of the accepting authority is attested-only unless the caller supplies an authorityTrustList, mirroring the tsa-chain-to-root tri-state: when supplied, the accepting authority's public key is checked for membership and the result is reported separately from key binding.",
+      "check": "accepting-authority-role"
+    },
+    {
+      "clause": "§4.3 accepting authority attested remainder",
+      "statement": "The key-to-principal binding of the accepting authority is attested, never machine-checked (the same self-attestation trust model as public_key.pem); nothing in the profile establishes the accepting authority as a legally constituted authority. Attested-only.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§4.4 voiding predicates",
+      "statement": "When metadata.json carries a voiding array, the verifier evaluates every typed predicate at verify time against caller-supplied inputs (a dated registry snapshot, a supersession list) — never a network fetch — and emits a four-valued verdict per entry (holds / voided / unknown / not-assessed). For registry-status predicates the same snapshot is read at the RFC 3161 genTime and at the snapshot instant and the verdict PAIR is surfaced, never collapsed (imported AdES / eIDAS dual-time semantics, ETSI EN 319 102-1 / TS 119 615, polarity inverted). An unknown predicate type MUST yield not-assessed, never holds. Informational in this release; a voided verdict does not by itself fail verification.",
+      "check": "voiding-predicates"
+    },
+    {
+      "clause": "§4.4 voiding attested remainder",
+      "statement": "Voiding predicates of type 'attested', and predicates whose caller-supplied input is absent, are reported as not-assessed / unknown respectively; they are not machine-decided from package bytes alone. Attested-only / input-dependent.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§4.5 mandate binding",
+      "statement": "When metadata.json carries an authorizing_principal block that names a principal and nothing else, no signed mandate is claimed and the verifier MUST report every mandate check as not determinate rather than as a pass. When the block carries mandate_digest, or the package carries a mandate.json entry, a signed mandate is claimed: mandate_digest MUST equal 'sha256:' plus the lower-case hex SHA-256 of mandate.json as packaged, and a reference without the entry, an entry without the reference, or a mismatch MUST be rejected.",
+      "check": "mandate-digest"
+    },
+    {
+      "clause": "§4.5 mandate record",
+      "statement": "The packaged mandate bytes MUST be the RFC 8785 (JCS) canonical form of a record with the required fields of schemas/mandate-v1.schema.json (mandate_id, mandate_version, principal, subject, granted_at, statement, scope, valid_from, valid_until, public_key).",
+      "check": "mandate-parse"
+    },
+    {
+      "clause": "§4.5 mandate binding form",
+      "statement": "A claimed mandate MUST be bound to the bytes signature.sig covers: the package MUST use the profile canonical form of section 6, and the record's mandate_id / principal / subject MUST equal the signed metadata's authorizing_principal.mandate_ref / authorizing_principal.principal / agent_id. A mandate carried under the response-only compatibility form MUST be rejected — deliberately stricter than the corresponding obligations of sections 4.2 and 4.3, which report and accept.",
+      "check": "mandate-bound"
+    },
+    {
+      "clause": "§4.5 mandate signature",
+      "statement": "mandate.sig MUST verify as a PKCS#1 v1.5 RSA signature (inner digest SHA-256) over the JCS bytes of mandate.json, against the record's embedded public_key. A package cannot assert a mandate its named granting authority never signed, and a failure MUST be rejected.",
+      "check": "mandate-signature"
+    },
+    {
+      "clause": "§4.5 mandate scope",
+      "statement": "A metadata action_type or policy_id outside scope.action_types / scope.policy_ids is reported — the output may inform but carries no mandate to compel — and MUST NOT by itself fail verification.",
+      "check": "mandate-scope"
+    },
+    {
+      "clause": "§4.5 mandate temporal containment",
+      "statement": "The RFC 3161 genTime is checked for containment in the mandate's valid_from..valid_until. A genTime outside the window is reported and MUST NOT by itself fail verification.",
+      "check": "mandate-temporal"
+    },
+    {
+      "clause": "§4.5 mandate attested remainder",
+      "statement": "The key-to-principal binding of the granting authority is attested, never machine-checked (the same self-attestation trust model as public_key.pem), and whether the grant the mandate makes is lawful is attested, never machine-checked. Attested-only.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§5 metadata fields",
+      "statement": "Fields are REQUIRED unless explicitly optional. The TypeScript verifier only parses metadata.json; required-field presence is validated nowhere at verify time (schemas/aep-v1.schema.json covers it in CI over the test vectors only, and requires only created_at).",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§5 metadata fields",
+      "statement": "Implementations MUST ignore unknown metadata fields (forward compatibility). Satisfied by construction: the verifier reads only the fields it cross-checks.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§5.1 agent_id URN scheme",
+      "statement": "Verifiers MUST accept both the tenant-bound and the legacy urn:uuid form; new registrations MUST emit the tenant-bound form. The verifier never validates agent_id shape, so acceptance is trivial and the producer-side rule is unobservable.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§6 canonicalisation",
+      "statement": "canonical.bin is response.txt + LF + JCS(metadata.json), implementations MUST NOT include any other entries in the canonical bytes, and a verifier MUST refuse a package whose recomputed canonical bytes do not match the embedded canonical.bin.",
+      "check": "canonical-profile"
+    },
+    {
+      "clause": "§6 compatibility note",
+      "statement": "The reference verifiers additionally accept the legacy response-only form (canonical.bin equals response.txt verbatim) and report which form matched; relying parties that depend on signed metadata MUST check for the profile form.",
+      "check": "canonical-response-only"
+    },
+    {
+      "clause": "§6 line endings",
+      "statement": "Implementations that normalise response.txt line endings MUST do it before building the package and document the rule in metadata.canonicalisation. Producer-side; unobservable at verify time.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§7 timestamp token",
+      "statement": "timestamp.tsr decodes from Base64 and parses as an RFC 3161 TimeStampToken (contract items 1-2).",
+      "check": "tsa-present"
+    },
+    {
+      "clause": "§7 message imprint",
+      "statement": "messageImprint.hashAlgorithm is SHA-256 and messageImprint.hashedMessage equals the SHA-256 of the ASCII hash.sha256 hex string (contract items 3-4).",
+      "check": "tsa-imprint"
+    },
+    {
+      "clause": "§7 TSA signature",
+      "statement": "The TSA's signature verifies using the certificate carried in the token (contract item 5, in-token half).",
+      "check": "tsa-signerinfo"
+    },
+    {
+      "clause": "§7 TSA trust anchor",
+      "statement": "The TSA's certificate is validated against an out-of-band trust list (contract item 5, out-of-band half). Informational in v0.1: issuer-DN match against pinned roots, not full RFC 5280 path validation.",
+      "check": "tsa-chain-to-root"
+    },
+    {
+      "clause": "§8 certificate profile",
+      "statement": "EATF signing certificates conform to RFC 5280 with the stated algorithm, subject CN, validity, and EKU rules. The package carries a bare public key, never a signer certificate, so no verifier can execute this clause.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§8 signer key pinning",
+      "statement": "When the caller supplies a non-empty trusted-signer list, the verifier MUST check public_key.pem for membership (ignoring PEM whitespace) and MUST reject a package whose signing key is not a member. When no list is supplied the check is not assessed and the issuer is attested only — the default self-attestation trust model.",
+      "check": "signer-key-pinned"
+    },
+    {
+      "clause": "§8 certificate profile",
+      "statement": "Without a caller-supplied trusted-signer list, a package re-authored end to end under a different key (canonical bytes, hash, signature and public key all recomputed) is indistinguishable from a package of the expected issuer by any other obligation in this profile. Attested-only.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§10 versioning",
+      "statement": "Existing verifiers MUST still accept packages after a minor (additive) profile bump. A behavioural obligation on future verifier releases, not a per-package check.",
+      "check": "no-executable-check"
+    },
+    {
+      "clause": "§13 test vectors",
+      "statement": "A v1-conformant verifier MUST produce expected results on every vector (accept every valid/ vector, reject every invalid/ vector). Met by the CI conformance jobs, not by a check inside a single verification run.",
+      "check": "no-executable-check"
+    }
+  ]
+}

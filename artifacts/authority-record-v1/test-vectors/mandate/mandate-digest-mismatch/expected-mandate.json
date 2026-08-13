@@ -1,0 +1,22 @@
+{
+  "description": "valid/mandated-action with the mandate's granted scope widened (and the record re-canonicalised) after signing. The digest reference inside the signed metadata no longer matches the packaged bytes.",
+  "expect": {
+    "valid": false,
+    "failureReason": "mandate.json invalid: digest does not match authorizing_principal.mandate_digest.",
+    "mandate": {
+      "claimed": true,
+      "present": true
+    },
+    "checks": {
+      "mandate-digest": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "mandate-signature": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      }
+    }
+  }
+}

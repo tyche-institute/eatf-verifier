@@ -1,0 +1,23 @@
+{
+  "description": "The accepted warrant licenses agentic-extended:mcp-tools-call, but the package attests a foundational:aep-response action. The warrant does not apply — the output may inform but carries no warrant to compel — and the package stays accepted.",
+  "expect": {
+    "valid": true,
+    "warrant": {
+      "present": true,
+      "bound": true,
+      "policyLinked": true,
+      "applicable": false,
+      "acceptanceVerified": true,
+      "fresh": null
+    },
+    "checks": {
+      "warrant-applicability": {
+        "verdict": "fail",
+        "enforced": false
+      }
+    },
+    "reportIncludes": [
+      "Warrant does not apply to this action: the output may inform but carries no warrant to compel."
+    ]
+  }
+}

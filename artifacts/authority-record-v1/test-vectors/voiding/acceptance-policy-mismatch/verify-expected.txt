@@ -1,0 +1,2 @@
+verify=false
+diagnostic=acceptance invalid: acceptance policy_id does not match accepting_authority.policy_id.

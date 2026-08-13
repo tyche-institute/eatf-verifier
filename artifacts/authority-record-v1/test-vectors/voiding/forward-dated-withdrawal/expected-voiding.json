@@ -1,0 +1,28 @@
+{
+  "description": "A SYNTHETIC vector modelled on the forward-dated French registry withdrawal pattern (a notAfter/withdrawal timestamp in the future): the withdrawal is effective 2027-01-01, after both the genTime and the snapshot instant. A correct time comparison must NOT treat the entry as withdrawn now — both instants report holds. This exercises the time-comparison logic against premature voiding; no real registry data is copied into eatf.",
+  "options": {
+    "registrySnapshot": {
+      "inline": {
+        "registry": "demo-status-registry",
+        "entries": {
+          "atap-basic:1.0": {
+            "status": "active",
+            "withdrawn_at": "2027-01-01T00:00:00Z"
+          }
+        }
+      },
+      "date": "2026-06-01T00:00:00Z"
+    }
+  },
+  "expect": {
+    "valid": true,
+    "voiding": [
+      {
+        "id": "reg-forward",
+        "verdict": "holds",
+        "atSigning": "holds",
+        "now": "holds"
+      }
+    ]
+  }
+}

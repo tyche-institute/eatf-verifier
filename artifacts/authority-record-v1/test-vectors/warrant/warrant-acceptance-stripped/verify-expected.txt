@@ -1,0 +1,2 @@
+verify=false
+diagnostic=warrant.json invalid: acceptance block is missing.

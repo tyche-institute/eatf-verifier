@@ -1,0 +1,29 @@
+{
+  "description": "The accepted warrant packaged under the response-only canonical form: metadata.warrant_digest itself lies outside signature.sig, so the binding does not hold. bound=false is reported loudly; the package stays accepted.",
+  "expect": {
+    "valid": true,
+    "canonicalForm": "response-only",
+    "warrant": {
+      "present": true,
+      "bound": false,
+      "policyLinked": true,
+      "applicable": true,
+      "acceptanceVerified": true,
+      "fresh": null
+    },
+    "checks": {
+      "warrant-bound": {
+        "verdict": "fail",
+        "enforced": false
+      }
+    },
+    "unsignedFieldsInclude": [
+      "metadata.warrant_digest",
+      "metadata.warrant_id",
+      "metadata.warrant_version"
+    ],
+    "reportIncludes": [
+      "Warrant present but unbound: the response-only canonical form leaves metadata.warrant_digest outside signature.sig."
+    ]
+  }
+}

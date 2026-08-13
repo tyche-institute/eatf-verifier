@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.tyche.institute/eatf/acceptance-v1.schema.json",
+  "title": "EATF AEP v1 acceptance.json (detached epistemic acceptance)",
+  "description": "Validates the optional detached acceptance.json entry inside an AEP v1 evidence package (docs/specs/aep-profile-v1.md, section 4.3). It carries the epistemic accepting authority's acceptance record; acceptance.sig is the Base64 PKCS#1 v1.5 RSA signature (inner digest SHA-256) over the JCS-canonical bytes of this record, verifiable against public_key. The record is bound to the package by metadata.accepting_authority.acceptance_digest (sha256:<hex> of the packaged bytes). The accepting authority is a named principal with a verifiable key binding under the same self-attestation trust model as public_key.pem; nothing in this schema or profile establishes it as a legally constituted authority. Binding verification and authorization appraisal are separate verifier decisions.",
+  "type": "object",
+  "required": [
+    "principal",
+    "policy_id",
+    "policy_version",
+    "accepted_at",
+    "public_key"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "principal": {
+      "description": "Named principal identifier of the accepting authority. MUST equal metadata.accepting_authority.principal.",
+      "type": "string",
+      "minLength": 1
+    },
+    "policy_id": {
+      "description": "Policy identifier this acceptance is made against. MUST equal metadata.accepting_authority.policy_id (and metadata.policy_id).",
+      "type": "string",
+      "minLength": 1
+    },
+    "policy_version": {
+      "description": "Policy version this acceptance is made against. MUST equal metadata.accepting_authority.policy_version.",
+      "type": "string",
+      "minLength": 1
+    },
+    "accepted_at": {
+      "description": "When the acceptance was made (RFC 3339 / ISO 8601 UTC). Informational; the accepting_authority.validity window governs temporal containment.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "public_key": {
+      "description": "PEM-encoded RSA public key of the accepting authority (BEGIN/END PUBLIC KEY headers). acceptance.sig verifies against this key. Role verification against a caller-supplied authorityTrustList, when performed, is reported separately from this key binding.",
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

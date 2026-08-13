@@ -1,0 +1,22 @@
+{
+  "description": "The canonical-form overclaim guard: a valid acceptance packaged under the response-only canonical form. The whole accepting_authority block lies outside signature.sig and is rewritable, so boundToOutput=false even though the detached signature still verifies. §4.3 is surface added in this work and carries no compatibility debt to the response-only form, so — as with §4.5 — an accepting_authority in a response-only bundle is REJECTED rather than flagged. Until the binding family was promoted it verified valid:true with the overclaim reported beside the verdict.",
+  "expect": {
+    "valid": false,
+    "failureReason": "acceptance invalid: the response-only canonical form leaves metadata.accepting_authority outside signature.sig.",
+    "canonicalForm": "response-only",
+    "acceptingAuthority": {
+      "keyBindingValid": true,
+      "boundToOutput": false,
+      "temporalContainment": true
+    },
+    "checks": {
+      "accepting-authority-binding": {
+        "verdict": "fail",
+        "enforced": true
+      }
+    },
+    "reportIncludes": [
+      "Accepting authority present but unbound: the response-only canonical form leaves metadata.accepting_authority outside signature.sig."
+    ]
+  }
+}

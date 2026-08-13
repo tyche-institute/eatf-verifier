@@ -1,0 +1,23 @@
+{
+  "description": "valid/warranted-action with the warrant statement rewritten (and re-canonicalised) after signing. The digest reference in signed metadata no longer matches, so a warrant-aware verifier rejects.",
+  "expect": {
+    "valid": false,
+    "failureReason": "warrant.json invalid: digest does not match metadata.warrant_digest.",
+    "warrant": {
+      "present": true,
+      "bound": null,
+      "acceptanceVerified": null
+    },
+    "checks": {
+      "warrant-digest": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "warrant-acceptance-signature": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      }
+    }
+  }
+}

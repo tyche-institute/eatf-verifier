@@ -1,0 +1,17 @@
+{
+  "description": "Copy of valid/mcp-tools-call-valid verified with an empty tsaTrustList; the suppressed chain-to-root check must be visible in the boundary as option_disabled.",
+  "options": {
+    "tsaTrustList": []
+  },
+  "expect": {
+    "valid": true,
+    "canonicalForm": "response-only",
+    "checks": {
+      "tsa-chain-to-root": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "option_disabled"
+      }
+    }
+  }
+}

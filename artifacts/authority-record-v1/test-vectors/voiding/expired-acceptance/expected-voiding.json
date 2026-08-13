@@ -1,0 +1,25 @@
+{
+  "description": "The acceptance is authentic and bound, but its validity window closed 2025-12-01, before the package's genTime (2026-01-01): temporalContainment=false. This is the enforced/advisory line inside §4.3: the two binding-family checks gate, temporal containment is appraisal and does not reject. What lapsed is the licence, not the binding, and the genTime it is judged against is only as good as a TSA trust anchor the package cannot supply. The exact mirror of mandate/mandate-expired.",
+  "expect": {
+    "valid": true,
+    "acceptingAuthority": {
+      "keyBindingValid": true,
+      "boundToOutput": true,
+      "temporalContainment": false
+    },
+    "checks": {
+      "accepting-authority-binding": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-key-binding": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-temporal": {
+        "verdict": "fail",
+        "enforced": false
+      }
+    }
+  }
+}

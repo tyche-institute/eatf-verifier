@@ -1,0 +1,12 @@
+{
+  "description": "The telemetry underlying the decision was sampled a year before the genTime, far beyond its 3600-second max age: it was already stale at signing time, so the predicate reports voided. Judged offline against the RFC 3161 genTime — no extra caller input.",
+  "expect": {
+    "valid": true,
+    "voiding": [
+      {
+        "id": "tel-stale",
+        "verdict": "voided"
+      }
+    ]
+  }
+}

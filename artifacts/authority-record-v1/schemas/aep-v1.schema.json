@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.tyche.institute/eatf/aep-v1.schema.json",
+  "title": "EATF AEP v1 metadata.json",
+  "description": "Validates the metadata.json entry inside an AEP v1 evidence package. Wire format documented in docs/aep-profile.md. The signature, timestamp, and OVERT-inspired receipt are validated by the verifier separately; this schema only constrains metadata.json.",
+  "type": "object",
+  "required": [
+    "created_at"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema": {
+      "description": "Schema identifier URN. Optional in v0.1 for backwards compatibility with sparse early metadata payloads; when present MUST equal 'urn:eatf:spec:aep:metadata:1.0'.",
+      "type": "string",
+      "const": "urn:eatf:spec:aep:metadata:1.0"
+    },
+    "response_id": {
+      "description": "Optional producer-side identifier (legacy / sparse format).",
+      "type": [
+        "string",
+        "integer",
+        "number"
+      ]
+    },
+    "attestation_id": {
+      "description": "Globally unique identifier for this attestation. Producers are encouraged to use a ULID, UUIDv7, or another monotonically-sortable scheme.",
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 256
+    },
+    "tenant_id_hash": {
+      "description": "SHA-256 hex of the deployment-local tenant identifier; or all-zeros for fixtures. Optional.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "agent_id": {
+      "description": "URN identifier of the agent producing the attestation. Conventional form: urn:eatf:tenant:<tenant>:agent:<slug>.",
+      "type": "string",
+      "minLength": 1
+    },
+    "action_type": {
+      "description": "Free-form classifier of the action being attested, e.g. 'mcp.tools/call:github.create_issue' or 'foundational:llm-response'.",
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "description": "Identifier of the model that produced the underlying response (when applicable).",
+      "type": "string"
+    },
+    "policy_id": {
+      "description": "Identifier of the policy under which the action was evaluated.",
+      "type": "string"
+    },
+    "policy_version": {
+      "description": "Version string of the policy.",
+      "type": "string"
+    },
+    "policy_coverage": {
+      "description": "Fraction of policy rules that successfully evaluated (1.0 means full coverage).",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "policy_decision": {
+      "description": "Policy outcome for the recorded action.",
+      "type": "string",
+      "enum": [
+        "allow",
+        "deny",
+        "warn",
+        "abstain"
+      ]
+    },
+    "warrant_id": {
+      "description": "Identifier of the warrant.json entry carried in the same package. Optional; present when the package carries a warrant.",
+      "type": "string",
+      "minLength": 1
+    },
+    "warrant_version": {
+      "description": "Version string of the packaged warrant.",
+      "type": "string",
+      "minLength": 1
+    },
+    "warrant_digest": {
+      "description": "Lower-case hex SHA-256 of warrant.json as packaged (its JCS-canonical bytes). Binds the warrant to this package; under the profile canonical form this field sits inside the signed canonical bytes.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "voiding": {
+      "description": "Optional array of typed per-output voiding predicates (docs/specs/aep-profile-v1.md section 4.4). Each entry is a machine-evaluable condition that, when it holds, voids or degrades the output. Verifiers evaluate every predicate at verify time against caller-supplied inputs (a dated registry snapshot, a supersession list) and emit a four-valued verdict per entry (holds / voided / unknown / not-assessed); an unknown type MUST yield not-assessed, never holds. Informational in this release: a voided verdict does not by itself fail verification.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "on_true"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "id": {
+            "description": "Stable identifier of this voiding predicate within the package.",
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "description": "Predicate type. Determines which subject fields and which caller-supplied input the verifier consults.",
+            "type": "string",
+            "enum": [
+              "registry-status",
+              "mandate-revocation",
+              "artifact-supersession",
+              "telemetry-freshness",
+              "tsa-trust",
+              "attested"
+            ]
+          },
+          "subject": {
+            "description": "Type-specific subject of the predicate (e.g. { entry_id } for registry-status, { artifact_id } for artifact-supersession, { sampled_at, max_age_seconds } for telemetry-freshness).",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "on_true": {
+            "description": "Effect when the predicate holds: fully void the output, or degrade it.",
+            "type": "string",
+            "enum": [
+              "void",
+              "degrade"
+            ]
+          }
+        }
+      }
+    },
+    "authorizing_principal": {
+      "description": "Optional per-output DEONTIC authorizing principal (docs/specs/aep-profile-v1.md section 4.5): the authority that granted the subject agent a mandate to act. Distinct from the epistemic accepting_authority (who accepted that outputs under this policy license their action class). The block has two states. Named WITHOUT mandate_digest and without a packaged mandate.json, it is the REFERENCE form: no signed mandate is claimed, the verifier reports every mandate check as not determinate, and nothing about the grant is verified. With mandate_digest, or with a mandate.json entry packaged, a SIGNED mandate is claimed and the section 4.5 binding family gates verification: digest, record, binding to the protected bytes, and the granting authority's detached signature. A named principal under the same self-attestation trust model as public_key.pem; nothing here establishes it as a legally constituted authority, and whether the grant is lawful is attested, never machine-checked.",
+      "type": "object",
+      "required": [
+        "principal"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "principal": {
+          "description": "Named principal identifier of the deontic authorizing principal (the mandate granter).",
+          "type": "string",
+          "minLength": 1
+        },
+        "token_ref": {
+          "description": "Optional opaque reference to the mandate/authorization token held in the mandate layer. Not resolved or validated by this verifier.",
+          "type": "string",
+          "minLength": 1
+        },
+        "mandate_ref": {
+          "description": "Identifier of the mandate-layer record. When a signed mandate is claimed, it MUST equal the packaged record's mandate_id; in the reference form it is an opaque string the verifier does not resolve.",
+          "type": "string",
+          "minLength": 1
+        },
+        "mandate_digest": {
+          "description": "Binds a packaged mandate.json to this output: 'sha256:' followed by the lower-case hex SHA-256 of the RFC 8785 (JCS) bytes of mandate.json. Present only when a signed mandate is claimed. Under the profile canonical form this reference sits inside the signed canonical bytes; a claimed mandate under the response-only form is rejected, because there the reference is itself rewritable.",
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "accepting_authority": {
+      "description": "Optional per-output epistemic accepting authority (docs/specs/aep-profile-v1.md section 4.3): the named principal that accepted, once, that outputs under this policy version license their action class. Distinct from the deontic authorizing principal (who granted the mandate to act). A named principal with a verifiable key binding under the same self-attestation trust model as public_key.pem; nothing here establishes it as a legally constituted authority. When a detached acceptance.json is packaged, acceptance_digest binds it. Under the profile canonical form this block sits inside the signed canonical bytes; under the response-only form it is unsigned and rewritable, so the acceptance is bound to nothing and verification FAILS. The section 4.3 binding family gates: output binding and key binding decide validity, while temporal containment and role are appraisal and are reported without rejecting.",
+      "type": "object",
+      "required": [
+        "principal",
+        "policy_id",
+        "policy_version",
+        "validity"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "principal": {
+          "description": "Named principal identifier of the accepting authority.",
+          "type": "string",
+          "minLength": 1
+        },
+        "policy_id": {
+          "description": "Policy identifier this acceptance is made against; MUST equal metadata.policy_id.",
+          "type": "string",
+          "minLength": 1
+        },
+        "policy_version": {
+          "description": "Policy version this acceptance is made against; MUST equal metadata.policy_version.",
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance_digest": {
+          "description": "sha256:<lower-case hex> of acceptance.json as packaged (its JCS-canonical bytes), present when a detached acceptance.json / acceptance.sig pair is carried.",
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "validity": {
+          "description": "Acceptance validity window. The RFC 3161 genTime is checked for containment; a genTime outside the window is reported and does not by itself fail verification.",
+          "type": "object",
+          "required": [
+            "not_before",
+            "not_after"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "not_before": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "not_after": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    },
+    "created_at": {
+      "description": "ISO 8601 timestamp asserting when the producer sealed the package. The trusted timestamp in timestamp.tsr is authoritative; this field is informational.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "privacy_mode": {
+      "description": "Whether the underlying response is included verbatim (false) or only its hash (true).",
+      "type": "boolean"
+    },
+    "format_version": {
+      "description": "Optional embedded format version identifier (e.g. 'ATAP-1.0').",
+      "type": "string"
+    },
+    "mcp": {
+      "description": "Optional MCP-specific block for tools/call attestations.",
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "tool_name": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "gateway_mode": {
+          "type": "string",
+          "enum": [
+            "server",
+            "client",
+            "proxy"
+          ]
+        },
+        "request_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "description": "The warrant's validity window ended 2025-12-31, before the package's RFC 3161 genTime (2026-01-01). The warrant was not in force at signing time: fresh=false is reported and the package stays accepted.",
+  "expect": {
+    "valid": true,
+    "warrant": {
+      "present": true,
+      "bound": true,
+      "policyLinked": true,
+      "applicable": true,
+      "acceptanceVerified": true,
+      "fresh": false
+    },
+    "checks": {
+      "warrant-freshness": {
+        "verdict": "fail",
+        "enforced": false
+      }
+    },
+    "reportIncludes": [
+      "Warrant not in force at signing time: genTime 2026-01-01T00:00:00.000Z lies outside valid_from..valid_until."
+    ]
+  }
+}

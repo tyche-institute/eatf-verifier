@@ -1,0 +1,2 @@
+verify=false
+diagnostic=acceptance invalid: the response-only canonical form leaves metadata.accepting_authority outside signature.sig.

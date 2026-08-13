@@ -1,0 +1,22 @@
+{
+  "description": "A mandate authentically signed by the epistemic accepting authority's key, naming that principal, packaged where the signed metadata names the granting authority. Digest and signature are internally consistent; only the cross-binding of the record's principal to the signed authorizing_principal block exposes the substitution.",
+  "expect": {
+    "valid": false,
+    "failureReason": "mandate.json invalid: mandate principal does not match principal.",
+    "mandate": {
+      "claimed": true,
+      "present": true,
+      "bound": false
+    },
+    "checks": {
+      "mandate-parse": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-bound": {
+        "verdict": "fail",
+        "enforced": true
+      }
+    }
+  }
+}

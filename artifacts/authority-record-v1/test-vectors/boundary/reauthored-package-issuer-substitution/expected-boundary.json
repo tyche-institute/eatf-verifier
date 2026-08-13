@@ -1,0 +1,28 @@
+{
+  "description": "valid/mandated-denied-action re-authored end to end by an adversary holding a key of its own: policy_decision flipped deny->allow, canonical.bin, hash.sha256 and the receipt content_hash recomputed, signature.sig re-made and public_key.pem swapped. The profile canonical form does not close this class — every obligation inside the package holds, and the signed mandate still verifies, because a mandate binds the grant and not the decision. The package is authentic evidence of a DIFFERENT issuer's claim. Only spec §8.1 issuer pinning tells them apart: with the real issuer key in trustedSignerPems the same bytes verify false (lib/test/signer-pinning.test.ts).",
+  "expect": {
+    "valid": true,
+    "canonicalForm": "profile",
+    "mandate": {
+      "claimed": true,
+      "bound": true,
+      "signatureVerified": true,
+      "inScope": true
+    },
+    "checks": {
+      "rsa-signature": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "signer-key-pinned": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "option_disabled"
+      },
+      "mandate-signature": {
+        "verdict": "pass",
+        "enforced": true
+      }
+    }
+  }
+}

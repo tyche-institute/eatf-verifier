@@ -1,0 +1,27 @@
+{
+  "description": "valid/minimal-roundtrip with claimed_assessment_surface injected into metadata.json post-signing, claiming two checks the run never assesses (pqc-mldsa65, tsa-chain-to-root under an empty trust list) and one unknown id. claimedSurface must report the overclaim — and, the claim being unsigned in this form, unsignedFields must list it too.",
+  "options": {
+    "tsaTrustList": []
+  },
+  "expect": {
+    "valid": true,
+    "canonicalForm": "response-only",
+    "claimedSurface": {
+      "claimed": [
+        "not-a-real-check",
+        "pqc-mldsa65",
+        "tsa-chain-to-root"
+      ],
+      "unrecognized": [
+        "not-a-real-check"
+      ],
+      "notAssessed": [
+        "pqc-mldsa65",
+        "tsa-chain-to-root"
+      ]
+    },
+    "unsignedFieldsInclude": [
+      "metadata.claimed_assessment_surface"
+    ]
+  }
+}

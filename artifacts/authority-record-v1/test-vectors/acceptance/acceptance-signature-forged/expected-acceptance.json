@@ -1,0 +1,32 @@
+{
+  "description": "acceptance.sig replaced after signing with a signature the same authority made over a different acceptance record. The packaged record is untouched, so its digest still matches the signed metadata and the acceptance is bound to these bytes; what fails is key binding alone. A package cannot carry an acceptance its named authority never signed FOR THIS RECORD, and the verifier rejects rather than reporting it.",
+  "expect": {
+    "valid": false,
+    "failureReason": "acceptance invalid: acceptance.sig does not verify against the acceptance's public_key.",
+    "canonicalForm": "profile",
+    "acceptingAuthority": {
+      "keyBindingValid": false,
+      "boundToOutput": true,
+      "temporalContainment": true
+    },
+    "checks": {
+      "accepting-authority-binding": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-key-binding": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "accepting-authority-temporal": {
+        "verdict": "pass",
+        "enforced": false
+      },
+      "accepting-authority-role": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      }
+    }
+  }
+}

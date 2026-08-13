@@ -1,0 +1,2 @@
+verify=false
+diagnostic=warrant.json invalid: acceptance.signature does not verify against acceptance.public_key.

@@ -1,0 +1,61 @@
+{
+  "description": "Profile canonical form with a valid detached acceptance and two voiding predicates that hold at both evaluation instants: the atap-basic:1.0 registry entry is active, and the telemetry sample is within its max age. Under default (no-snapshot) options the registry predicate reads unknown; the conformance harness only requires valid=true.",
+  "options": {
+    "registrySnapshot": {
+      "inline": {
+        "registry": "demo-status-registry",
+        "entries": {
+          "atap-basic:1.0": {
+            "status": "active"
+          }
+        }
+      },
+      "date": "2026-06-01T00:00:00Z"
+    }
+  },
+  "expect": {
+    "valid": true,
+    "canonicalForm": "profile",
+    "voiding": [
+      {
+        "id": "reg-atap",
+        "verdict": "holds",
+        "atSigning": "holds",
+        "now": "holds"
+      },
+      {
+        "id": "telemetry-fresh",
+        "verdict": "holds"
+      }
+    ],
+    "acceptingAuthority": {
+      "keyBindingValid": true,
+      "boundToOutput": true,
+      "temporalContainment": true,
+      "roleVerified": null
+    },
+    "checks": {
+      "voiding-predicates": {
+        "verdict": "pass",
+        "enforced": false
+      },
+      "accepting-authority-binding": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-key-binding": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-temporal": {
+        "verdict": "pass",
+        "enforced": false
+      },
+      "accepting-authority-role": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": "A registry-status predicate verified WITHOUT a caller-supplied registry snapshot. It MUST yield unknown (reason input_absent) at both instants — never holds. A verdict is only ever asserted relative to a named snapshot.",
+  "expect": {
+    "valid": true,
+    "voiding": [
+      {
+        "id": "reg-nosnap",
+        "verdict": "unknown",
+        "atSigning": "unknown",
+        "now": "unknown",
+        "reason": "input_absent"
+      }
+    ]
+  }
+}

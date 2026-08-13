@@ -1,0 +1,31 @@
+{
+  "description": "The registry entry was withdrawn 2026-03-01 — after the genTime (2026-01-01) but before the snapshot instant (2026-06-01). The verdict PAIR (atSigning=holds, now=voided) is surfaced and never collapsed: authorised at signing, void now. This is the registry-half-life divergence rendered as a per-output machine verdict.",
+  "options": {
+    "registrySnapshot": {
+      "inline": {
+        "registry": "demo-status-registry",
+        "entries": {
+          "atap-basic:1.0": {
+            "status": "withdrawn",
+            "withdrawn_at": "2026-03-01T00:00:00Z"
+          }
+        }
+      },
+      "date": "2026-06-01T00:00:00Z"
+    }
+  },
+  "expect": {
+    "valid": true,
+    "voiding": [
+      {
+        "id": "reg-diverged",
+        "verdict": "voided",
+        "atSigning": "holds",
+        "now": "voided"
+      }
+    ],
+    "reportIncludes": [
+      "Voiding predicates evaluated (1): 1 voided, 1 with a diverged at-signing/now pair (informational)."
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "description": "The authentic, correctly signed mandate packaged under the response-only canonical form. Its own digest reference lies outside signature.sig and is rewritable, so the mandate is bound to nothing. Unlike an unbound warrant (§4.2) or an unbound acceptance (§4.3), which are reported and accepted, an unbound mandate is rejected.",
+  "expect": {
+    "valid": false,
+    "canonicalForm": "response-only",
+    "failureReason": "mandate.json invalid: the response-only canonical form leaves authorizing_principal.mandate_digest outside signature.sig.",
+    "mandate": {
+      "claimed": true,
+      "present": true,
+      "bound": false
+    },
+    "checks": {
+      "mandate-digest": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-parse": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-bound": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "mandate-signature": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      }
+    },
+    "unsignedFieldsInclude": [
+      "metadata.authorizing_principal"
+    ]
+  }
+}

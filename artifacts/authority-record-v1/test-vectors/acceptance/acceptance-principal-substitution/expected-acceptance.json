@@ -1,0 +1,23 @@
+{
+  "description": "The package is signed over an authentic acceptance whose digest matches, but the record's principal (impostor-authority) is not the principal the signed metadata.accepting_authority names (test-accepting-authority). The signature is real and the digest is right; what is wrong is WHO accepted. Cross-field binding rejects the package rather than reporting the mismatch beside a valid verdict.",
+  "expect": {
+    "valid": false,
+    "failureReason": "acceptance invalid: acceptance principal does not match accepting_authority.principal.",
+    "canonicalForm": "profile",
+    "acceptingAuthority": {
+      "keyBindingValid": true,
+      "boundToOutput": false,
+      "temporalContainment": true
+    },
+    "checks": {
+      "accepting-authority-binding": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "accepting-authority-key-binding": {
+        "verdict": "pass",
+        "enforced": true
+      }
+    }
+  }
+}

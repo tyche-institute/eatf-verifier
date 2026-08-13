@@ -1,0 +1,2 @@
+verify=false
+diagnostic=Hash mismatch.

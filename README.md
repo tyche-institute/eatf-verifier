@@ -159,6 +159,16 @@ cross-language matches, and zero boolean or first-code mismatches.
 - EATF is not a trust service, certificate authority, legal-compliance
   determination, or substitute for an auditor's policy.
 
+## Frozen research snapshots
+
+The [authority-record study artifact](artifacts/authority-record-v1/) freezes
+the two verifier implementations, additive authority-record extension,
+measured specification surface, census scripts, and 58-vector synthetic corpus
+used by *Valid Is a Floor, Not a Ceiling: The Assessed Perimeter of an Offline
+Signed-Evidence Verifier for Autonomous-Agent Actions*. Its own README states
+the evidentiary boundary and provides byte-level checksums and reproduction
+commands.
+
 ## OVERT attribution and non-endorsement
 
 OVERT is an open standard published by [Glacis Technologies, Inc.](https://overt.is).

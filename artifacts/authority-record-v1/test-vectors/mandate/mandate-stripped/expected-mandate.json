@@ -1,0 +1,17 @@
+{
+  "description": "valid/mandated-action with mandate.json and mandate.sig removed after signing. The digest reference lies inside the signed metadata and cannot be removed with them, so the package claims a mandate whose bytes are absent.",
+  "expect": {
+    "valid": false,
+    "failureReason": "mandate.json invalid: mandate.json entry is missing but metadata references a mandate.",
+    "mandate": {
+      "claimed": true,
+      "present": false
+    },
+    "checks": {
+      "mandate-digest": {
+        "verdict": "fail",
+        "enforced": true
+      }
+    }
+  }
+}

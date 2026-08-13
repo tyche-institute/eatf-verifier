@@ -1,0 +1,22 @@
+{
+  "description": "The detached acceptance is authentically signed (keyBindingValid=true) and its digest matches, but its policy_id (atap-extended) does not agree with metadata.accepting_authority (atap-basic): the acceptance is not bound to this output (boundToOutput=false). Authenticity and binding are separate properties; an authentic acceptance of a different policy is still not an acceptance of THIS output, and the package is REJECTED. Until the §4.3 binding family was promoted it verified valid:true.",
+  "expect": {
+    "valid": false,
+    "failureReason": "acceptance invalid: acceptance policy_id does not match accepting_authority.policy_id.",
+    "acceptingAuthority": {
+      "keyBindingValid": true,
+      "boundToOutput": false,
+      "temporalContainment": true
+    },
+    "checks": {
+      "accepting-authority-key-binding": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-binding": {
+        "verdict": "fail",
+        "enforced": true
+      }
+    }
+  }
+}

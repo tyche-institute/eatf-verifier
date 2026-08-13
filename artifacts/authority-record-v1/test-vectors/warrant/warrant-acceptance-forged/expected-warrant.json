@@ -1,0 +1,19 @@
+{
+  "description": "The acceptance block names test-accepting-authority and carries its public key, but the signature was made with a different private key. A package cannot assert an acceptance its named principal never signed.",
+  "expect": {
+    "valid": false,
+    "failureReason": "warrant.json invalid: acceptance.signature does not verify against acceptance.public_key.",
+    "warrant": {
+      "present": true,
+      "bound": true,
+      "policyLinked": true,
+      "acceptanceVerified": false
+    },
+    "checks": {
+      "warrant-acceptance-signature": {
+        "verdict": "fail",
+        "enforced": true
+      }
+    }
+  }
+}

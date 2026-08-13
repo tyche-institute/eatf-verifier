@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.tyche.institute/eatf/boundary-report-v1.schema.json",
+  "title": "EATF verifier BoundaryReport v1",
+  "description": "The per-check assessment boundary a verifier emits alongside every verification result (VerifyResult.boundary in the TypeScript verifier). One entry per check of the closed, versioned check registry (lib/src/check-registry.ts), in registry order, on success and failure alike. The report is computed from the verifier's own control flow, never from anything the package claims about itself; the registry is in turn pinned to the normative surface of docs/specs/aep-profile-v1.md by docs/specs/assessment-surface-v1.json and a CI two-set diff, so the denominator of 'what was assessed' cannot silently shrink.",
+  "type": "object",
+  "required": [
+    "registryVersion",
+    "registryDigest",
+    "checks",
+    "canonicalForm",
+    "unsignedFields",
+    "claimedSurface"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "registryVersion": {
+      "description": "Version of the check registry the report was computed against (CHECK_REGISTRY_VERSION).",
+      "type": "string",
+      "minLength": 1
+    },
+    "registryDigest": {
+      "description": "SHA-256 hex content digest of the registry: SHA-256 over the RFC 8785 (JCS) bytes of {version, checks}. Lets a relying party pin the exact check universe.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "checks": {
+      "description": "One entry per registry check, in registry order. A conforming report carries the FULL registry — including checks a short-circuited run never reached.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "clause", "verdict", "enforced"],
+        "additionalProperties": true,
+        "properties": {
+          "id": {
+            "description": "Stable check identifier from the registry.",
+            "type": "string",
+            "minLength": 1
+          },
+          "clause": {
+            "description": "The aep-profile-v1.md clause this check executes, as labelled in the registry and the assessment-surface map.",
+            "type": "string",
+            "minLength": 1
+          },
+          "verdict": {
+            "description": "pass/fail: the check executed and reached an outcome. not_assessed: the check never executed in this run. not_determinate: the check executed but could not reach an outcome (e.g. the TSA token carries no embedded certificate).",
+            "type": "string",
+            "enum": ["pass", "fail", "not_assessed", "not_determinate"]
+          },
+          "enforced": {
+            "description": "Whether this check's outcome counted toward the overall validity verdict in THIS run: true for gating checks that executed; false for advisory checks (a failure is reported without failing the package) and for checks that never executed.",
+            "type": "boolean"
+          },
+          "reason": {
+            "description": "Machine reason code for a non-pass/fail verdict, where applicable. input_absent: the material the check needs is not in the package. capability_absent: the material is present but uses an algorithm or form this verifier cannot evaluate. option_disabled: the caller disabled the check (e.g. an empty TSA trust list). parse_failure: the material did not parse. short_circuited: an earlier outcome ended assessment before this check ran.",
+            "type": "string",
+            "enum": [
+              "input_absent",
+              "capability_absent",
+              "option_disabled",
+              "parse_failure",
+              "short_circuited"
+            ]
+          }
+        }
+      }
+    },
+    "canonicalForm": {
+      "description": "Which supported canonical form canonical.bin matched (aep-profile-v1.md §6): 'profile' places metadata.json under the signature; 'response-only' leaves the whole of metadata.json outside it; null when verification failed before the canonical-form check.",
+      "type": ["string", "null"],
+      "enum": ["profile", "response-only", null]
+    },
+    "unsignedFields": {
+      "description": "Top-level metadata.json fields that lie outside signature.sig, hash.sha256, and the RFC 3161 imprint under the matched canonical form, as 'metadata.<field>'. Empty under the profile form and when verification failed before the canonical-form check. overt_receipt.json is outside the signature in BOTH forms and is cross-checked via its content_hash only.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "claimedSurface": {
+      "description": "Producer-claimed assessment surface, when metadata.json carries a claimed_assessment_surface string array (experimental; not yet part of the spec's §5 field table — and note that in the response-only canonical form the claim itself is unsigned). claimed echoes the sorted claim; unrecognized lists claimed ids absent from the registry; notAssessed lists claimed registry checks the run did not bring to a pass/fail outcome. A non-empty unrecognized or notAssessed is a claimed-vs-computed overclaim. null when the field is absent.",
+      "type": ["object", "null"],
+      "required": ["claimed", "unrecognized", "notAssessed"],
+      "additionalProperties": true,
+      "properties": {
+        "claimed": { "type": "array", "items": { "type": "string" } },
+        "unrecognized": { "type": "array", "items": { "type": "string" } },
+        "notAssessed": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

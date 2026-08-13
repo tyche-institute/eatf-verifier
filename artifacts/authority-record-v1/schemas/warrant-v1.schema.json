@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.tyche.institute/eatf/warrant-v1.schema.json",
+  "title": "EATF AEP v1 warrant.json",
+  "description": "Validates the optional warrant.json entry inside an AEP v1 evidence package (docs/specs/aep-profile-v1.md, section 4.2). A warrant is a once-authored, versioned statement that outputs a named policy evaluates to a listed decision are licensed for a listed action class, carried inside the package and referenced by digest from metadata.json. The packaged bytes MUST be the RFC 8785 (JCS) canonical form of this object; acceptance.signature is computed over the JCS bytes of the warrant with acceptance.signature removed. The accepting authority is a named principal with a verifiable key binding under the same self-attestation trust model as public_key.pem; nothing in this schema or profile establishes it as a legally constituted authority.",
+  "type": "object",
+  "required": [
+    "warrant_id",
+    "warrant_version",
+    "policy_ref",
+    "inference_form",
+    "statement",
+    "applies_to",
+    "valid_from",
+    "valid_until",
+    "acceptance"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "warrant_id": {
+      "description": "Stable identifier of the warrant. MUST match metadata.json warrant_id when that field is present.",
+      "type": "string",
+      "minLength": 1
+    },
+    "warrant_version": {
+      "description": "Version string of the warrant. Versioned together with the assurance case it summarises; MUST match metadata.json warrant_version when present.",
+      "type": "string",
+      "minLength": 1
+    },
+    "policy_ref": {
+      "description": "The policy this warrant is written against. MUST match the policy_id / policy_version fields of the same package's metadata.json.",
+      "type": "object",
+      "required": ["policy_id", "policy_version"],
+      "additionalProperties": true,
+      "properties": {
+        "policy_id": { "type": "string", "minLength": 1 },
+        "policy_version": { "type": "string", "minLength": 1 }
+      }
+    },
+    "inference_form": {
+      "description": "Free-form label for the form of inference the warrant licenses (e.g. 'policy-evaluation'). The soundness of the inference itself is attested, never machine-checked.",
+      "type": "string",
+      "minLength": 1
+    },
+    "statement": {
+      "description": "Human-readable statement of the warrant, e.g. 'Outputs that policy P evaluates to allow are licensed for action class A'.",
+      "type": "string",
+      "minLength": 1
+    },
+    "applies_to": {
+      "description": "The action classes and policy decisions the warrant applies to. A package whose metadata action_type or policy_decision falls outside these lists carries a warrant that does not apply: the output may inform but carries no warrant to compel.",
+      "type": "object",
+      "required": ["action_types", "policy_decisions"],
+      "additionalProperties": true,
+      "properties": {
+        "action_types": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "policy_decisions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "valid_from": {
+      "description": "Start of the warrant validity window (RFC 3339 / ISO 8601 UTC). Freshness is judged against the package's RFC 3161 genTime.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "valid_until": {
+      "description": "End of the warrant validity window (RFC 3339 / ISO 8601 UTC).",
+      "type": "string",
+      "format": "date-time"
+    },
+    "acceptance": {
+      "description": "The epistemic acceptance block: the named principal that accepted this warrant against its policy version. signature is the Base64 PKCS#1 v1.5 RSA signature (inner digest SHA-256) over the JCS bytes of the warrant with acceptance.signature removed, verifiable against public_key.",
+      "type": "object",
+      "required": ["authority_id", "accepted_at", "signature", "public_key"],
+      "additionalProperties": true,
+      "properties": {
+        "authority_id": {
+          "description": "Named principal identifier of the accepting authority.",
+          "type": "string",
+          "minLength": 1
+        },
+        "accepted_at": {
+          "description": "When the acceptance was made (RFC 3339 / ISO 8601 UTC). Informational; the validity window governs freshness.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "signature": {
+          "description": "Base64 (standard alphabet, with padding) acceptance signature.",
+          "type": "string",
+          "minLength": 1
+        },
+        "public_key": {
+          "description": "PEM-encoded RSA public key of the accepting authority (BEGIN/END PUBLIC KEY headers).",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "void_if": {
+      "description": "Conditions that void the warrant, partitioned by kind. machine entries carry a predicate intended for machine evaluation; attested entries carry text a human must attest to. Predicate evaluation is not performed by the v0.1 verifier; the partition itself is validated so the machine/attested split stays explicit.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["kind", "predicate"],
+            "additionalProperties": true,
+            "properties": {
+              "kind": { "const": "machine" },
+              "predicate": { "type": "string", "minLength": 1 }
+            }
+          },
+          {
+            "type": "object",
+            "required": ["kind", "text"],
+            "additionalProperties": true,
+            "properties": {
+              "kind": { "const": "attested" },
+              "text": { "type": "string", "minLength": 1 }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

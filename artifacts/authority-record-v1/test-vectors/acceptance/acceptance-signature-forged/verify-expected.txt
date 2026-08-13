@@ -1,0 +1,2 @@
+verify=false
+diagnostic=acceptance invalid: acceptance.sig does not verify against the acceptance's public_key.

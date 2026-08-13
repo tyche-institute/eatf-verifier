@@ -1,0 +1,28 @@
+{
+  "description": "An authentic, correctly accepted warrant for a DIFFERENT policy (atap-extended 2.0) packaged with an atap-basic action. Digest and acceptance are consistent; only the policy linkage check exposes the swap.",
+  "expect": {
+    "valid": false,
+    "failureReason": "warrant.json invalid: policy_ref.policy_id does not match metadata.policy_id.",
+    "warrant": {
+      "present": true,
+      "bound": true,
+      "policyLinked": false,
+      "acceptanceVerified": null
+    },
+    "checks": {
+      "warrant-digest": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "warrant-policy-link": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "warrant-acceptance-signature": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      }
+    }
+  }
+}

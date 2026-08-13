@@ -1,0 +1,42 @@
+EATF — Agent Trust Framework
+Copyright 2026 Tyche Institute
+
+This product includes software developed by the EATF community, maintained
+by Tyche Institute (Estonian non-profit, registration in progress).
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License in the accompanying LICENSE file or at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+EATF is a reference implementation and specification for cryptographically
+verifiable AI agent self-attestation. It does NOT constitute a trust
+service under eIDAS Article 3(16) of Regulation (EU) 910/2014. Tyche
+Institute does not issue qualified certificates, signatures, timestamps,
+or attestations as a service to external customers and does not operate
+as a Qualified Trust Service Provider. EATF agent attestations are
+technical self-attestations and do not constitute Qualified Electronic
+Attestations of Attributes (QEAA) under eIDAS Article 3(45).
+
+This product references but does not include the following technical
+standards and reference materials, which remain the property of their
+respective publishing organisations:
+
+- IETF RFC 3161 (Time-Stamp Protocol)
+- IETF RFC 5280 (Internet X.509 Public Key Infrastructure)
+- IETF RFC 8785 (JSON Canonicalization Scheme)
+- NIST FIPS 204 (Module-Lattice-Based Digital Signature Standard)
+- W3C Verifiable Credentials Data Model 2.0
+- OVERT 1.0 (Observable Verification Evidence for Runtime Trust), an open
+  standard published by Glacis Technologies, Inc. (https://overt.is)
+
+Standards-relationship classification is documented in docs/architecture.md
+under the legend IMPLEMENTED / ALIGNED / REFERENCED / ADDRESSED.
+
+Tyche Institute and the EATF project are independent of Glacis Technologies,
+Inc.: there is no affiliation, partnership, sponsorship, funding,
+certification, or endorsement in either direction. The `overt_receipt.json`
+entry emitted by this software is an OVERT-inspired, receipt-shaped object
+defined by the EATF AEP profile. It is not claimed to be OVERT-conformant and
+has not been reviewed, certified, or approved by Glacis Technologies.

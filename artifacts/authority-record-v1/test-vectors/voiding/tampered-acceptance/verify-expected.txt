@@ -1,0 +1,2 @@
+verify=false
+diagnostic=acceptance invalid: digest does not match accepting_authority.acceptance_digest.

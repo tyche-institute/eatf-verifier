@@ -1,59 +1,49 @@
-/**
- * v0.1 — pinned RFC 3161 TSA trust list, populated.
- *
- * <p>v0.2 (v0.1) shipped the API surface but kept
- * {@link DEFAULT_TSA_TRUST_LIST} empty so consumers had to bring
- * their own roots. v0.4 (this iteration) populates the default with
- * three DigiCert public root certificates used by the reference
- * profile with {@code https://timestamp.digicert.com}.
- *
- * <p>Each PEM was fetched verbatim from
- * {@code https://cacerts.digicert.com/<RootName>.crt.pem} on
- * 2026-05-12. The companion test {@code test/tsa-trust-list.test.ts}
- * recomputes each PEM's SHA-256 fingerprint and asserts equality with
- * the {@link DIGICERT_ROOT_FINGERPRINTS} table below; a future
- * inadvertent edit that mutates a single byte of any PEM will fail
- * that test immediately.
- *
- * <p>Maintenance:
- * <ul>
- *   <li>When DigiCert retires one of these roots (currently the
- *       latest expiry is 2038-01-15 — Trusted Root G4) replace the
- *       PEM here and update the fingerprint constant in lockstep.</li>
- *   <li>When a deployment relies on another external timestamp
- *       authority, add its root PEM and fingerprint in lockstep.</li>
- *   <li>{@code DEFAULT_TSA_TRUST_LIST} is consumed by the public
- *       {@code verifyAep(...)} helper via
- *       {@code VerifyOptions.tsaTrustList} fall-through; operators
- *       who want a different set pass their own list and bypass
- *       this default entirely.</li>
- * </ul>
- *
- * <p>These are <strong>public root certificates</strong>; no private
- * key is associated. Pinning them in source is the standard pattern
- * (matches how Node's {@code tls.rootCertificates} ships and how
- * Mozilla's certdata.txt ships in NSS).
- */
+"""Pinned RFC 3161 TSA trust list — Python port of lib/src/tsa-trust-list.ts.
 
-/**
- * SHA-256 fingerprints of the three pinned roots, in the canonical
- * uppercase colon-separated hex format that DigiCert publishes at
- * {@code https://www.digicert.com/kb/digicert-root-certificates.htm}.
- *
- * <p>The companion test recomputes each fingerprint from the embedded
- * PEM and asserts equality with this table.
- */
-export const DIGICERT_ROOT_FINGERPRINTS = {
-  DigiCertGlobalRootCA:
-    "43:48:A0:E9:44:4C:78:CB:26:5E:05:8D:5E:89:44:B4:D8:4F:96:62:BD:26:DB:25:7F:89:34:A4:43:C7:01:61",
-  DigiCertAssuredIDRootCA:
-    "3E:90:99:B5:01:5E:8F:48:6C:00:BC:EA:9D:11:1E:E7:21:FA:BA:35:5A:89:BC:F1:DF:69:56:1E:3D:C6:32:5C",
-  DigiCertTrustedRootG4:
-    "55:2F:7B:DC:F1:A7:AF:9E:6C:E6:72:01:7F:4F:12:AB:F7:72:40:C7:8E:76:1A:C2:03:D1:D9:D2:0A:C8:99:88",
-} as const;
+DigiCert public root certificates, pinned by SHA-256 fingerprint.
 
-/** DigiCert Global Root CA — RSA 2048. Valid 2006-11-10 → 2031-11-10 UTC. */
-export const DIGICERT_GLOBAL_ROOT_CA_PEM = `-----BEGIN CERTIFICATE-----
+The fingerprints match the TS reference and the values DigiCert
+publishes at https://www.digicert.com/kb/digicert-root-certificates.htm.
+The companion test `tests/test_trust_list.py` recomputes each
+PEM's SHA-256 fingerprint and asserts equality with
+`DIGICERT_ROOT_FINGERPRINTS` below — an inadvertent byte mutation
+in any PEM fails that test immediately.
+
+Maintenance:
+- When DigiCert retires one of these roots (the latest expiry is
+  Trusted Root G4 at 2038-01-15), replace the PEM and update the
+  fingerprint constant in lockstep.
+- `DEFAULT_TSA_TRUST_LIST` is consumed by `verify(...)` via
+  `VerifyOptions.tsa_trust_list` fall-through. Operators who want
+  a different set pass their own list and bypass this default.
+
+These are public root certificates; no private key is associated.
+Pinning them in source is the standard pattern (matches how
+Node's `tls.rootCertificates` ships and how Mozilla's
+`certdata.txt` ships in NSS).
+"""
+
+from __future__ import annotations
+
+# SHA-256 fingerprints in DigiCert's canonical uppercase
+# colon-separated hex format.
+DIGICERT_ROOT_FINGERPRINTS = {
+    "DigiCertGlobalRootCA": (
+        "43:48:A0:E9:44:4C:78:CB:26:5E:05:8D:5E:89:44:B4:"
+        "D8:4F:96:62:BD:26:DB:25:7F:89:34:A4:43:C7:01:61"
+    ),
+    "DigiCertAssuredIDRootCA": (
+        "3E:90:99:B5:01:5E:8F:48:6C:00:BC:EA:9D:11:1E:E7:"
+        "21:FA:BA:35:5A:89:BC:F1:DF:69:56:1E:3D:C6:32:5C"
+    ),
+    "DigiCertTrustedRootG4": (
+        "55:2F:7B:DC:F1:A7:AF:9E:6C:E6:72:01:7F:4F:12:AB:"
+        "F7:72:40:C7:8E:76:1A:C2:03:D1:D9:D2:0A:C8:99:88"
+    ),
+}
+
+# DigiCert Global Root CA — RSA 2048. Valid 2006-11-10 → 2031-11-10 UTC.
+DIGICERT_GLOBAL_ROOT_CA_PEM = b"""-----BEGIN CERTIFICATE-----
 MIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh
 MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
 d3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD
@@ -74,10 +64,11 @@ hMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg
 PnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls
 YSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk
 CAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=
------END CERTIFICATE-----`;
+-----END CERTIFICATE-----
+"""
 
-/** DigiCert Assured ID Root CA — RSA 2048. Valid 2006-11-10 → 2031-11-10 UTC. */
-export const DIGICERT_ASSURED_ID_ROOT_CA_PEM = `-----BEGIN CERTIFICATE-----
+# DigiCert Assured ID Root CA — RSA 2048. Valid 2006-11-10 → 2031-11-10 UTC.
+DIGICERT_ASSURED_ID_ROOT_CA_PEM = b"""-----BEGIN CERTIFICATE-----
 MIIDtzCCAp+gAwIBAgIQDOfg5RfYRv6P5WD8G/AwOTANBgkqhkiG9w0BAQUFADBl
 MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
 d3cuZGlnaWNlcnQuY29tMSQwIgYDVQQDExtEaWdpQ2VydCBBc3N1cmVkIElEIFJv
@@ -98,10 +89,11 @@ fwk8lOa4JiwgvT2zKIn3X/8i4peEH+ll74fg38FnSbNd67IJKusm7Xi+fT8r87cm
 NW1fiQG2SVufAQWbqz0lwcy2f8Lxb4bG+mRo64EtlOtCt/qMHt1i8b5QZ7dsvfPx
 H2sMNgcWfzd8qVttevESRmCD1ycEvkvOl77DZypoEd+A5wwzZr8TDRRu838fYxAe
 +o0bJW1sj6W3YQGx0qMmoRBxna3iw/nDmVG3KwcIzi7mULKn+gpFL6Lw8g==
------END CERTIFICATE-----`;
+-----END CERTIFICATE-----
+"""
 
-/** DigiCert Trusted Root G4 — RSA 4096. Valid 2013-08-01 → 2038-01-15 UTC. */
-export const DIGICERT_TRUSTED_ROOT_G4_PEM = `-----BEGIN CERTIFICATE-----
+# DigiCert Trusted Root G4 — RSA 4096. Valid 2013-08-01 → 2038-01-15 UTC.
+DIGICERT_TRUSTED_ROOT_G4_PEM = b"""-----BEGIN CERTIFICATE-----
 MIIFkDCCA3igAwIBAgIQBZsbV56OITLiOQe9p3d1XDANBgkqhkiG9w0BAQwFADBi
 MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
 d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQDExhEaWdpQ2VydCBUcnVzdGVkIFJvb3Qg
@@ -132,31 +124,14 @@ cCOGDErcgdLMMpSEDQgJlxxPwO5rIHQw0uA5NBCFIRUBCOhVMt5xSdkoF1BN5r5N
 r/OSmbaz5mEP0oUA51Aa5BuVnRmhuZyxm7EAHu/QD09CbMkKvO5D+jpxpchNJqU1
 /YldvIViHTLSoCtU7ZpXwdv6EM8Zt4tKG48BtieVU+i2iW1bvGjUI+iLUaJW+fCm
 gKDWHrO8Dw9TdSmq6hN35N6MgSGtBxBHEa2HPQfRdbzP82Z+
------END CERTIFICATE-----`;
+-----END CERTIFICATE-----
+"""
 
-/**
- * Default trust list applied when {@code verifyAep} consumers do not
- * pass a custom one. Production deployments anchor against
- * {@code https://timestamp.digicert.com} which chains up to these
- * three roots.
- */
-export const DEFAULT_TSA_TRUST_LIST: string[] = [
-  DIGICERT_GLOBAL_ROOT_CA_PEM,
-  DIGICERT_ASSURED_ID_ROOT_CA_PEM,
-  DIGICERT_TRUSTED_ROOT_G4_PEM,
-];
-
-/** Result of the trust-anchor cross-check. */
-export type TsaTrustResult = {
-  /**
-   * `true` = the TSA's signing cert chains to a pinned root.
-   * `false` = chain validation failed.
-   * `null` = no trust list was provided; the check was skipped.
-   */
-  trusted: boolean | null;
-  reason: string;
-  /** Subject DN of the embedded signing cert, when extractable. */
-  signerSubject?: string;
-  /** Issuer DN of the embedded signing cert, when extractable. */
-  signerIssuer?: string;
-};
+# Default trust list applied when verify(...) callers do not pass a
+# custom one. Production EATF deployments anchor against
+# https://timestamp.digicert.com which chains up to these three roots.
+DEFAULT_TSA_TRUST_LIST: list[bytes] = [
+    DIGICERT_GLOBAL_ROOT_CA_PEM,
+    DIGICERT_ASSURED_ID_ROOT_CA_PEM,
+    DIGICERT_TRUSTED_ROOT_G4_PEM,
+]

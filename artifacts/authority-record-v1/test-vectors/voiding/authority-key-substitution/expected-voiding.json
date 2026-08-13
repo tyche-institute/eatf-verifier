@@ -1,0 +1,31 @@
+{
+  "description": "The acceptance names test-accepting-authority but is signed with — and carries — a substituted key. The signature is internally consistent, so key binding passes; role verification against the caller's authorityTrustList (the genuine authority key) fails. Key binding and role are reported separately, and only key binding gates: role is undecidable from the package alone — without a caller-supplied trust list there is nothing to decide membership against — so a substituted key is reported and the package stays accepted. This is what the self-attestation trust model costs on the acceptance side, exactly as boundary/reauthored-package-issuer-substitution is what it costs on the issuer side.",
+  "options": {
+    "authorityTrustListKeys": [
+      "test-accepting-authority"
+    ]
+  },
+  "expect": {
+    "valid": true,
+    "acceptingAuthority": {
+      "keyBindingValid": true,
+      "boundToOutput": true,
+      "temporalContainment": true,
+      "roleVerified": false
+    },
+    "checks": {
+      "accepting-authority-binding": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-key-binding": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-role": {
+        "verdict": "fail",
+        "enforced": false
+      }
+    }
+  }
+}

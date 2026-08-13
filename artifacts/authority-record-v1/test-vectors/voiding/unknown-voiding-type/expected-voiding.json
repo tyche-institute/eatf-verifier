@@ -1,0 +1,13 @@
+{
+  "description": "A voiding predicate of a type the verifier does not understand. It MUST yield not-assessed (reason unknown_type), never holds: an unrecognised predicate is not silently satisfied. (Not schema-validated in CI — carried under test-vectors/voiding/, not valid/.)",
+  "expect": {
+    "valid": true,
+    "voiding": [
+      {
+        "id": "weird",
+        "verdict": "not-assessed",
+        "reason": "unknown_type"
+      }
+    ]
+  }
+}

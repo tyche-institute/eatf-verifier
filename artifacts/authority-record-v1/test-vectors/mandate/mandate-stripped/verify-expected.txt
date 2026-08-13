@@ -1,0 +1,2 @@
+verify=false
+diagnostic=mandate.json invalid: mandate.json entry is missing but metadata references a mandate.

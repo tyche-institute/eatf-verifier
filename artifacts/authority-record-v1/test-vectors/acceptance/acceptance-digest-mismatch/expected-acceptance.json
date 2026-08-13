@@ -1,0 +1,23 @@
+{
+  "description": "The acceptance pair swapped after signing for a DIFFERENT but entirely authentic acceptance by the same authority (a different accepted_at). Its detached signature verifies against its own embedded key, so key binding passes; the digest inside the signed metadata still names the record the package was signed over, so the acceptance is bound to other bytes and the package is rejected. Authenticity and binding are separate properties, and authenticity alone is not enough.",
+  "expect": {
+    "valid": false,
+    "failureReason": "acceptance invalid: digest does not match accepting_authority.acceptance_digest.",
+    "canonicalForm": "profile",
+    "acceptingAuthority": {
+      "keyBindingValid": true,
+      "boundToOutput": false,
+      "temporalContainment": true
+    },
+    "checks": {
+      "accepting-authority-binding": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "accepting-authority-key-binding": {
+        "verdict": "pass",
+        "enforced": true
+      }
+    }
+  }
+}

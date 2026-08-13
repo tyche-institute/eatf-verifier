@@ -1,0 +1,56 @@
+{
+  "description": "valid/minimal-roundtrip with the first hex digit of hash.sha256 swapped. Fails at hash-sha256; the boundary must list rsa-signature through tsa-chain-to-root as not_assessed/short_circuited.",
+  "options": {
+    "tsaTrustList": []
+  },
+  "expect": {
+    "valid": false,
+    "canonicalForm": "response-only",
+    "checks": {
+      "hash-sha256": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "rsa-signature": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      },
+      "rsa-digestinfo-fallback": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      },
+      "overt-receipt": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      },
+      "pqc-mldsa65": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      },
+      "tsa-present": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      },
+      "tsa-imprint": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      },
+      "tsa-signerinfo": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      },
+      "tsa-chain-to-root": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      }
+    }
+  }
+}

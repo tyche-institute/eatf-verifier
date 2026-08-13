@@ -1,0 +1,34 @@
+{
+  "description": "Profile canonical form carrying BOTH layers over the same signed action bytes: a deontic authorizing_principal (urn:eatf:mandate:demo:granting-authority, an attested mandate-layer reference the verifier assigns no validity semantics) and an epistemic accepting_authority (test-accepting-authority, a valid bound detached acceptance). The two named principals are distinct, so the F11 census counts this package as co-located with differing principals. Voiding predicate holds. Verifies valid; both layers are informational and do not flip valid.",
+  "options": {
+    "registrySnapshot": {
+      "inline": {
+        "registry": "demo-status-registry",
+        "entries": {
+          "atap-basic:1.0": {
+            "status": "active"
+          }
+        }
+      },
+      "date": "2026-06-01T00:00:00Z"
+    }
+  },
+  "expect": {
+    "valid": true,
+    "canonicalForm": "profile",
+    "voiding": [
+      {
+        "id": "reg-atap",
+        "verdict": "holds",
+        "atSigning": "holds",
+        "now": "holds"
+      }
+    ],
+    "acceptingAuthority": {
+      "keyBindingValid": true,
+      "boundToOutput": true,
+      "temporalContainment": true,
+      "roleVerified": null
+    }
+  }
+}

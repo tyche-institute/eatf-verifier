@@ -1,0 +1,32 @@
+{
+  "description": "The mandate record names the granting authority and carries its public key, but mandate.sig was made with a different private key. A package cannot assert a mandate its named granting authority never signed.",
+  "expect": {
+    "valid": false,
+    "failureReason": "mandate.json invalid: mandate.sig does not verify against the mandate's public_key.",
+    "mandate": {
+      "claimed": true,
+      "present": true,
+      "bound": true,
+      "signatureVerified": false
+    },
+    "checks": {
+      "mandate-digest": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-bound": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-signature": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "mandate-scope": {
+        "verdict": "not_assessed",
+        "enforced": false,
+        "reason": "short_circuited"
+      }
+    }
+  }
+}

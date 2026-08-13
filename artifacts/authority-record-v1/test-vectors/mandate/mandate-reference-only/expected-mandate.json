@@ -1,0 +1,47 @@
+{
+  "description": "metadata.authorizing_principal names a deontic principal and a mandate_ref, and carries no mandate_digest; no mandate.json is packaged. No signed mandate is claimed: every §4.5 check reports not determinate, nothing about the grant is verified, and the package stays accepted. This is the state §4.5 replaces.",
+  "expect": {
+    "valid": true,
+    "mandate": {
+      "claimed": false,
+      "present": false,
+      "bound": null,
+      "signatureVerified": null
+    },
+    "checks": {
+      "mandate-digest": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      },
+      "mandate-parse": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      },
+      "mandate-bound": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      },
+      "mandate-signature": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      },
+      "mandate-scope": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      },
+      "mandate-temporal": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      }
+    },
+    "reportIncludes": [
+      "Authorizing principal named without a signed mandate: the deontic layer is a reference only and nothing in it is verified."
+    ]
+  }
+}

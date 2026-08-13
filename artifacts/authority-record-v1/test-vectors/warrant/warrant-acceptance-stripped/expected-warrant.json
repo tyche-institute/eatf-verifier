@@ -1,0 +1,19 @@
+{
+  "description": "The warrant was packaged without its acceptance block; the digest reference is consistent with the stripped record. A warrant without a named acceptor is rejected: a package cannot assert policy backing without one.",
+  "expect": {
+    "valid": false,
+    "failureReason": "warrant.json invalid: acceptance block is missing.",
+    "warrant": {
+      "present": true,
+      "bound": true,
+      "policyLinked": true,
+      "acceptanceVerified": false
+    },
+    "checks": {
+      "warrant-acceptance-signature": {
+        "verdict": "fail",
+        "enforced": true
+      }
+    }
+  }
+}

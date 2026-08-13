@@ -1,0 +1,42 @@
+{
+  "description": "Both authority layers signed over the same protected bytes: a detached mandate signed by the granting authority (deontic) and an accepted warrant plus a detached acceptance record signed by the accepting authority (epistemic). Three distinct keys — package issuer, granting authority, accepting authority — and the enforced checks of both layers pass.",
+  "expect": {
+    "valid": true,
+    "canonicalForm": "profile",
+    "mandate": {
+      "claimed": true,
+      "present": true,
+      "bound": true,
+      "signatureVerified": true,
+      "inScope": true,
+      "temporalContainment": true,
+      "principal": "urn:eatf:mandate:demo:granting-authority"
+    },
+    "checks": {
+      "mandate-digest": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-bound": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-signature": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "warrant-acceptance-signature": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-binding": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "accepting-authority-key-binding": {
+        "verdict": "pass",
+        "enforced": true
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "description": "The detached acceptance.json was rewritten after signing (principal changed). acceptance.sig no longer verifies over the tampered bytes (keyBindingValid=false) and the digest no longer matches the signed metadata (boundToOutput=false). Both gating §4.3 checks fail and the package is REJECTED; output binding is reported first, in registry order. Until the §4.3 binding family was promoted this package verified valid:true with the tamper reported beside the verdict.",
+  "expect": {
+    "valid": false,
+    "failureReason": "acceptance invalid: digest does not match accepting_authority.acceptance_digest.",
+    "acceptingAuthority": {
+      "keyBindingValid": false,
+      "boundToOutput": false,
+      "temporalContainment": true
+    },
+    "checks": {
+      "accepting-authority-key-binding": {
+        "verdict": "fail",
+        "enforced": true
+      },
+      "accepting-authority-binding": {
+        "verdict": "fail",
+        "enforced": true
+      }
+    }
+  }
+}

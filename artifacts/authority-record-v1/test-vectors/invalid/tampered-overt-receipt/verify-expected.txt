@@ -1,0 +1,2 @@
+verify=false
+diagnostic=overt_receipt.json invalid

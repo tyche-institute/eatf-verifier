@@ -1,0 +1,44 @@
+{
+  "description": "Profile canonical form carrying a detached mandate.json / mandate.sig pair signed by the test-granting-authority principal, bound by authorizing_principal.mandate_digest from inside the signed metadata. The four binding-family checks gate and pass; the action lies inside the granted scope and the RFC 3161 genTime inside the mandate's validity window.",
+  "expect": {
+    "valid": true,
+    "canonicalForm": "profile",
+    "mandate": {
+      "claimed": true,
+      "present": true,
+      "bound": true,
+      "signatureVerified": true,
+      "inScope": true,
+      "temporalContainment": true
+    },
+    "checks": {
+      "mandate-digest": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-parse": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-bound": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-signature": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "mandate-scope": {
+        "verdict": "pass",
+        "enforced": false
+      },
+      "mandate-temporal": {
+        "verdict": "pass",
+        "enforced": false
+      }
+    },
+    "reportIncludes": [
+      "Mandate verified (urn:eatf:mandate:demo:mandate:0001, granted by urn:eatf:mandate:demo:granting-authority to urn:eatf:tenant:demo:agent:mandated-demo)."
+    ]
+  }
+}

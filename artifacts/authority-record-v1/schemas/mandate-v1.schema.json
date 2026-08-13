@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.tyche.institute/eatf/mandate-v1.schema.json",
+  "title": "EATF AEP v1 mandate.json",
+  "description": "Validates the optional detached mandate.json entry inside an AEP v1 evidence package (docs/specs/aep-profile-v1.md, section 4.5). A mandate is a once-authored, versioned grant by which a named granting authority authorises a subject agent to act within a stated scope for a stated period. The packaged bytes MUST be the RFC 8785 (JCS) canonical form of this object, referenced by authorizing_principal.mandate_digest from metadata.json, and signed by the granting authority's own key in the detached mandate.sig. The granting authority is a named principal with a verifiable key binding under the same self-attestation trust model as public_key.pem; nothing here establishes it as a legally constituted authority, and whether the grant is lawful is attested, never machine-checked.",
+  "type": "object",
+  "required": [
+    "mandate_id",
+    "mandate_version",
+    "principal",
+    "subject",
+    "granted_at",
+    "statement",
+    "scope",
+    "valid_from",
+    "valid_until",
+    "public_key"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "mandate_id": {
+      "description": "Stable identifier of this mandate. MUST equal metadata.authorizing_principal.mandate_ref.",
+      "type": "string",
+      "minLength": 1
+    },
+    "mandate_version": {
+      "description": "Version of the mandate record.",
+      "type": "string",
+      "minLength": 1
+    },
+    "principal": {
+      "description": "Named identifier of the granting authority — the deontic principal that made the grant. MUST equal metadata.authorizing_principal.principal.",
+      "type": "string",
+      "minLength": 1
+    },
+    "subject": {
+      "description": "Named identifier of the agent the mandate is granted to. MUST equal metadata.agent_id.",
+      "type": "string",
+      "minLength": 1
+    },
+    "granted_at": {
+      "description": "RFC 3339 instant at which the grant was made.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "statement": {
+      "description": "Human-readable statement of what the granting authority authorised. Attested, never machine-checked.",
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "description": "The action classes and policies the grant covers. An attested action outside this scope is reported and does not by itself fail verification.",
+      "type": "object",
+      "required": ["action_types", "policy_ids"],
+      "additionalProperties": true,
+      "properties": {
+        "action_types": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "policy_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "valid_from": {
+      "description": "RFC 3339 start of the mandate's validity window, checked against the RFC 3161 genTime.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "valid_until": {
+      "description": "RFC 3339 end of the mandate's validity window, checked against the RFC 3161 genTime.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "public_key": {
+      "description": "PEM-encoded RSA public key of the granting authority, against which the detached mandate.sig is verified. A principal distinct from the package issuer's public_key.pem and from the accepting authority of sections 4.2-4.3.",
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

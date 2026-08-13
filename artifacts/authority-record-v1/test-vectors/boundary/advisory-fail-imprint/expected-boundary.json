@@ -1,0 +1,23 @@
+{
+  "description": "Copy of valid/minimal-roundtrip under default options. The embedded RFC 3161 token covers a different hash, so tsa-imprint is verdict=fail — and enforced=false, because the verifier accepts the mismatch for Java reference compatibility. valid stays true.",
+  "expect": {
+    "valid": true,
+    "canonicalForm": "response-only",
+    "checks": {
+      "tsa-imprint": {
+        "verdict": "fail",
+        "enforced": false
+      },
+      "tsa-signerinfo": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      },
+      "tsa-chain-to-root": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      }
+    }
+  }
+}

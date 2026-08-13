@@ -1,0 +1,21 @@
+{
+  "description": "The signed mandate grants agentic-extended:mcp-tools-call, but the package attests a foundational:aep-response action. The action lies outside the granted mandate — it may inform but carries no mandate to compel — and the package stays accepted.",
+  "expect": {
+    "valid": true,
+    "mandate": {
+      "claimed": true,
+      "bound": true,
+      "signatureVerified": true,
+      "inScope": false
+    },
+    "checks": {
+      "mandate-scope": {
+        "verdict": "fail",
+        "enforced": false
+      }
+    },
+    "reportIncludes": [
+      "Action lies outside the granted mandate: the output may inform but carries no mandate to compel."
+    ]
+  }
+}

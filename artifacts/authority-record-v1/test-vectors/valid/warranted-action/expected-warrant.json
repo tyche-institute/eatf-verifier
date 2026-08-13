@@ -1,0 +1,49 @@
+{
+  "description": "Profile canonical form with an accepted warrant: warrant.json is JCS-canonical, digest-bound from signed metadata, policy-linked, applicable, and its acceptance signature verifies against the test-accepting-authority key. Freshness stays open because no shipped TSA token chains to a trusted root.",
+  "expect": {
+    "valid": true,
+    "canonicalForm": "profile",
+    "warrant": {
+      "present": true,
+      "bound": true,
+      "policyLinked": true,
+      "applicable": true,
+      "acceptanceVerified": true,
+      "fresh": null
+    },
+    "checks": {
+      "warrant-digest": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "warrant-parse": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "warrant-bound": {
+        "verdict": "pass",
+        "enforced": false
+      },
+      "warrant-policy-link": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "warrant-applicability": {
+        "verdict": "pass",
+        "enforced": false
+      },
+      "warrant-acceptance-signature": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "warrant-freshness": {
+        "verdict": "not_determinate",
+        "enforced": false,
+        "reason": "input_absent"
+      }
+    },
+    "reportIncludes": [
+      "Warrant verified (urn:eatf:warrant:demo:atap-basic-allow-01, accepted by test-accepting-authority)."
+    ]
+  }
+}

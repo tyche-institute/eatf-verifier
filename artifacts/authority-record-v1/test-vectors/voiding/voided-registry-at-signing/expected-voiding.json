@@ -1,0 +1,34 @@
+{
+  "description": "The atap-basic:1.0 registry entry was withdrawn 2025-06-01, before the package's genTime (2026-01-01). Both dual-time evaluations report voided; the output was already void at signing. Informational — the package stays accepted.",
+  "options": {
+    "registrySnapshot": {
+      "inline": {
+        "registry": "demo-status-registry",
+        "entries": {
+          "atap-basic:1.0": {
+            "status": "withdrawn",
+            "withdrawn_at": "2025-06-01T00:00:00Z"
+          }
+        }
+      },
+      "date": "2026-06-01T00:00:00Z"
+    }
+  },
+  "expect": {
+    "valid": true,
+    "voiding": [
+      {
+        "id": "reg-withdrawn",
+        "verdict": "voided",
+        "atSigning": "voided",
+        "now": "voided"
+      }
+    ],
+    "checks": {
+      "voiding-predicates": {
+        "verdict": "pass",
+        "enforced": false
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "description": "valid/mcp-tools-call-denied-policy with policy_decision flipped deny->allow in metadata.json AND overt_receipt.json after signing. Both files lie outside the response-only signature, so verification still succeeds; only the boundary's unsignedFields reveals that the policy decision was rewritable.",
+  "options": {
+    "tsaTrustList": []
+  },
+  "expect": {
+    "valid": true,
+    "canonicalForm": "response-only",
+    "metadata": {
+      "policy_decision": "allow"
+    },
+    "checks": {
+      "canonical-profile": {
+        "verdict": "fail",
+        "enforced": false
+      },
+      "canonical-response-only": {
+        "verdict": "pass",
+        "enforced": true
+      },
+      "overt-receipt": {
+        "verdict": "pass",
+        "enforced": true
+      }
+    },
+    "unsignedFieldsInclude": [
+      "metadata.policy_decision",
+      "metadata.policy_id",
+      "metadata.policy_version"
+    ]
+  }
+}

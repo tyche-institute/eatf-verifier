@@ -1,0 +1,2 @@
+verify=false
+diagnostic=acceptance invalid: acceptance principal does not match accepting_authority.principal.
