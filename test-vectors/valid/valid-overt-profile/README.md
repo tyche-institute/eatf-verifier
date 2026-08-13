@@ -2,8 +2,8 @@
 
 **Expected:** `verify=true`.
 
-A well-formed AEP containing a valid OVERT 1.0 foundational receipt
-(`scope: foundational:aep-response`). Exercises the full happy-path
+A well-formed AEP containing a valid OVERT-inspired foundational-scope
+receipt (`scope: foundational:aep-response`). Exercises the full happy-path
 pipeline: envelope integrity, manifest canonicalisation, hash chain,
 classical signature, ML-DSA-65 signature, RFC 3161 timestamp, and
 OVERT-inspired receipt validation.

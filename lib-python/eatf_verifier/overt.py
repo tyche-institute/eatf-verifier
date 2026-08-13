@@ -1,4 +1,4 @@
-"""OVERT 1.0 receipt validation. Mirrors lib/src/overt.ts."""
+"""OVERT-inspired receipt validation. Mirrors lib/src/overt.ts."""
 
 from __future__ import annotations
 
