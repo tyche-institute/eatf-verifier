@@ -49,7 +49,13 @@ administration, or identity registries.
 
 ## Install from source
 
-Prerequisites are Node.js 20.19+ and Python 3.11+.
+Prerequisites are Node.js 20.19+ and Python 3.11+, on a POSIX shell.
+
+**On Windows, use WSL.** `bin/setup.sh` and the CLI wrappers assume POSIX venv
+layout (`.venv/bin`, not `.venv/Scripts`) and POSIX argument handling, so they do
+not run under Git Bash or MSYS on native Windows. Under WSL the toolkit reproduces
+exactly as published — independently confirmed for v0.2.0 on Ubuntu/WSL2. A fresh
+Ubuntu image also needs `apt install python3-venv`.
 
 ```bash
 git clone https://github.com/tyche-institute/eatf-verifier.git
