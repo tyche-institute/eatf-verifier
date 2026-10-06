@@ -1,6 +1,6 @@
 # `@eatf/verifier`
 
-TypeScript library for creating and offline-verifying EATF Agent Evidence
+TypeScript library for creating and offline-verifying EATF Action Evidence
 Packages. The main entry runs in Node.js 20.19+; the verification-only
 `@eatf/verifier/browser` entry runs in modern browsers through Web Crypto.
 

@@ -1,5 +1,5 @@
 {
-  "title": "EATF Agent Evidence Package toolkit",
+  "title": "EATF Action Evidence Package toolkit",
   "upload_type": "software",
   "license": "Apache-2.0",
   "version": "v0.6.1",
@@ -10,10 +10,10 @@
       "affiliation": "Tyche Institute"
     }
   ],
-  "description": "Open toolkit for creating, inspecting, and offline-verifying Agent Evidence Packages (.aep): a hybrid RSA-4096 plus ML-DSA-65 signer, independent TypeScript and Python verifiers, sign/verify/inspect CLIs, RFC 9881 public-key encoding, JSON schemas, positive and negative conformance vectors, and a deterministic offline downgrade lab.",
+  "description": "Open toolkit for creating, inspecting, and offline-verifying Action Evidence Packages (.aep): a hybrid RSA-4096 plus ML-DSA-65 signer, independent TypeScript and Python verifiers, sign/verify/inspect CLIs, RFC 9881 public-key encoding, JSON schemas, positive and negative conformance vectors, and a deterministic offline downgrade lab.",
   "keywords": [
     "AI agent attestation",
-    "Agent Evidence Package",
+    "Action Evidence Package",
     "AEP",
     "offline verification",
     "model-based testing",
