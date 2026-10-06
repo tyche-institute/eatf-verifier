@@ -1,6 +1,6 @@
 # Governance and maintenance
 
-The EATF Agent Evidence Package toolkit is maintained by Anton Sokolov at
+The EATF Action Evidence Package toolkit is maintained by Anton Sokolov at
 Tyche Institute. The repository is an open research-software project rather
 than a hosted service or standards body.
 
@@ -37,5 +37,4 @@ maintainer availability.
 
 Accepted work must support the public package toolkit: signing, inspection,
 verification, schemas, vectors, examples, packaging, or reproducibility.
-Hosted tenant management, policy administration, dashboards, and managed
-trust services belong outside this repository.
+Hosted or operated components are out of scope.
