@@ -1,14 +1,14 @@
-# EATF Agent Evidence Package toolkit
+# EATF Action Evidence Package toolkit
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21763055.svg)](https://doi.org/10.5281/zenodo.21763055)
 
 EATF is an open toolkit for creating, inspecting, and independently verifying
-Agent Evidence Packages (`.aep`). An AEP is a portable ZIP envelope that binds
+Action Evidence Packages (`.aep`). An AEP is a portable ZIP envelope that binds
 an AI-agent action record to canonical bytes, hashes, signatures, an optional
 OVERT-inspired receipt, and an RFC 3161 timestamp.
 
-The tools run locally after installation. They make no runtime network calls,
-need no account or API key, and do not depend on a hosted EATF service.
+The tools run locally after installation. They make no runtime network calls
+and need no account or API key.
 
 ## Statement of need
 
@@ -43,9 +43,8 @@ offline package and verification workflow for one recorded agent action.
 | `docs/pqc-archive-migration-worksheet.md` | One-page inventory for long-lived signed records |
 | `docs/pqc-hybrid-lab-five-minute-fallback.md` | Timed no-network facilitator fallback for the workshop |
 
-This is the public AEP toolkit, not the larger EATF service or governance
-platform. It does not include tenants, hosted APIs, dashboards, policy
-administration, or identity registries.
+This repository is the public AEP toolkit. It has no hosted parts: no accounts,
+hosted APIs, dashboards or policy administration.
 
 ## Install from source
 
@@ -162,8 +161,8 @@ cross-language matches, and zero boolean or first-code mismatches.
   integer-valued numbers and unpaired Unicode surrogates.
 - Full RFC 5280 TSA chain construction, revocation checking, HSM integration,
   and automatic trust-registry discovery are outside the current scope.
-- EATF is not a trust service, certificate authority, legal-compliance
-  determination, or substitute for an auditor's policy.
+- A verifier result is not a legal-compliance determination or a substitute for
+  an auditor's policy.
 
 ## Frozen research snapshots
 
