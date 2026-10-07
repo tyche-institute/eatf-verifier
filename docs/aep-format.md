@@ -1,6 +1,6 @@
 # Implemented `.aep` package format
 
-An Agent Evidence Package is a ZIP archive for one recorded agent action. This
+An Action Evidence Package is a ZIP archive for one recorded agent action. This
 page documents the implemented behavior. The schemas, source, and shared vectors
 are the executable contract; the project does not claim that this summary is an
 external standard.
