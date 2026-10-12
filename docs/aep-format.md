@@ -72,12 +72,12 @@ The distinction is surfaced in reports and examples.
 
 ## Canonicalization domain
 
-The TypeScript and Python implementations use independent maintained RFC 8785
-libraries and share boundary tests for number formatting and UTF-16 member
-ordering. To keep parsed JSON behavior identical across the two languages, the
-AEP metadata profile rejects integer-valued numbers outside
-`[-9007199254740991, 9007199254740991]`, non-finite values, unsupported JSON
-types, circular values, and unpaired Unicode surrogates.
+The TypeScript and Python implementations use two third-party RFC 8785
+libraries (`canonicalize` and `rfc8785`) and share boundary tests for number
+formatting and UTF-16 member ordering. To keep parsed JSON behavior identical
+across the two languages, the AEP metadata profile rejects integer-valued
+numbers outside `[-9007199254740991, 9007199254740991]`, non-finite values,
+unsupported JSON types, circular values, and unpaired Unicode surrogates.
 
 ## OVERT attribution
 

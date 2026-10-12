@@ -10,7 +10,7 @@
       "affiliation": "Tyche Institute"
     }
   ],
-  "description": "Open toolkit for creating, inspecting, and offline-verifying Action Evidence Packages (.aep): a hybrid RSA-4096 plus ML-DSA-65 signer, independent TypeScript and Python verifiers, sign/verify/inspect CLIs, RFC 9881 public-key encoding, JSON schemas, positive and negative conformance vectors, and a deterministic offline downgrade lab.",
+  "description": "Open toolkit for creating, inspecting, and offline-verifying Action Evidence Packages (.aep): a hybrid RSA-4096 plus ML-DSA-65 signer, two verifiers (TypeScript and Python), both built by Tyche Institute, sign/verify/inspect CLIs, RFC 9881 public-key encoding, JSON schemas, positive and negative conformance vectors, and a deterministic offline downgrade lab.",
   "keywords": [
     "AI agent attestation",
     "Action Evidence Package",
@@ -35,6 +35,6 @@
       "scheme": "doi"
     }
   ],
-  "notes": "Version 0.6.1 makes the deterministic six-package ML-DSA lab download independently runnable after one-time verifier setup. The ZIP now includes its cross-platform Python runner and shell launcher, documents EATF_REPO_ROOT/PATH setup, verifies every packaged SHA-256 value, and is exercised from a fresh extraction in CI. Across six packages, two policies, and two independent implementations, all 24 verdict and first-failure-code observations agree. Version DOI: 10.5281/zenodo.21763768. Previous version v0.6.0 is doi:10.5281/zenodo.21763056 under concept doi:10.5281/zenodo.21763055; releases through v0.5.0 remain under earlier concept doi:10.5281/zenodo.21511608.",
+  "notes": "Version 0.6.1 makes the deterministic six-package ML-DSA lab download runnable from its extracted directory after one-time verifier setup. The ZIP now includes its cross-platform Python runner and shell launcher, documents EATF_REPO_ROOT/PATH setup, verifies every packaged SHA-256 value, and is exercised from a fresh extraction in CI. Across six packages and two policies, the two verifiers (TypeScript and Python, both built by Tyche Institute) return the same verdict and first-failure code for every package-policy pair: 24 observations, zero mismatches. Version DOI: 10.5281/zenodo.21763768. Previous version v0.6.0 is doi:10.5281/zenodo.21763056 under concept doi:10.5281/zenodo.21763055; releases through v0.5.0 remain under earlier concept doi:10.5281/zenodo.21511608.",
   "publication_date": "2026-08-02"
 }

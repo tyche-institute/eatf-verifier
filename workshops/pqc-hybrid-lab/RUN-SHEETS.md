@@ -35,7 +35,7 @@ Run the complete 60-minute core, then continue:
 |---:|---|---|
 | 60–68 | Generate disposable ML-DSA-65 development keys. | Seed PEM and RFC 9881 public SPKI are created. |
 | 68–78 | Sign a fresh local hybrid package. | RSA-4096 and ML-DSA-65 cover the same canonical bytes. |
-| 78–85 | Verify the new package with both implementations under `required`. | Both accept independently. |
+| 78–85 | Verify the new package with both implementations under `required`. | Both accept. |
 | 85–90 | Compare output with the prepared corpus and capture questions. | Participants leave with a replayable next step. |
 
 ## No-network fallback

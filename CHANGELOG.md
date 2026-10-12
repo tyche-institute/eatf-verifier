@@ -26,8 +26,9 @@
 - Add hybrid RSA-4096 + ML-DSA-65 signing to the TypeScript library and
   `eatf-sign`, with RFC 9881 SubjectPublicKeyInfo output.
 - Upgrade `@noble/post-quantum` to 0.6.1 and use `cryptography>=49` as the
-  independent Python FIPS 204 verifier. The positive vector is accepted by
-  both implementations.
+  Python FIPS 204 backend, a third-party library separate from the TypeScript
+  side's `@noble/post-quantum`. The positive vector is accepted by both
+  implementations.
 - Add explicit `if-present` and `required` PQC verification policies and the
   `--require-pqc` CLI flag in both languages.
 - Expand the conformance corpus to 5 accepted and 8 rejected packages with a
@@ -167,7 +168,7 @@ First public release of the EATF Agent Evidence Package (AEP) reference
 verifiers as an open, self-contained project under Apache-2.0.
 
 - TypeScript verifier library (`lib/`) and offline verifier SDK.
-- Independent Python verifier (`lib-python/`).
+- Python verifier (`lib-python/`), a second implementation by the same authors.
 - Offline CLIs: `eatf-verify`, `eatf-sign`, `eatf-inspect` (no network, no keys).
 - JSON Schemas for the AEP package, claims, and OVERT receipt.
 - Conformance test-vectors: 4 valid + 7 invalid (negative controls).
