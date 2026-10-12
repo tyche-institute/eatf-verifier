@@ -157,7 +157,7 @@ the repository's 4+7 conformance suite and does not vary transport roots.
         RESULTS / "SUMMARY.md",
     ]
     checksum_lines = [
-        f"{sha256(path)}  {path.relative_to(HERE)}"
+        f"{sha256(path)}  {path.relative_to(HERE).as_posix()}"
         for path in checksummed
         if path.is_file()
     ]

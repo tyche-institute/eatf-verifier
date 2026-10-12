@@ -221,7 +221,7 @@ def main() -> int:
     payload = {
         "schema": "urn:eatf:experiment:ordering-faultsets:1",
         "environment": {"python": platform.python_version()},
-        "seed": str(seed_path.relative_to(REPO_ROOT)),
+        "seed": seed_path.relative_to(REPO_ROOT).as_posix(),
         "unrepairable_codes": UNREPAIRABLE,
         "summary": summary,
         "rows": rows,
