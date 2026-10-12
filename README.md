@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21763055.svg)](https://doi.org/10.5281/zenodo.21763055)
 
-EATF is an open toolkit for creating, inspecting, and independently verifying
+EATF is an open toolkit for creating, inspecting, and offline-verifying
 Action Evidence Packages (`.aep`). An AEP is a portable ZIP envelope that binds
 an AI-agent action record to canonical bytes, hashes, signatures, an optional
 OVERT-inspired receipt, and an RFC 3161 timestamp.
@@ -156,6 +156,9 @@ cross-language matches, and zero boolean or first-code mismatches.
 - The current signer binds `response.txt` and `metadata.json` using the
   profile canonical form. Verifiers retain read-only support for legacy
   response-only packages and warn that their metadata is not signature-bound.
+- Both verifiers, TypeScript and Python, were written by Tyche Institute.
+  Matching verdicts show that the two ports implement the same reading of the
+  contract; they are not independent corroboration.
 - Metadata canonicalization uses maintained RFC 8785 libraries in both
   implementations and a shared I-JSON domain that rejects unsafe
   integer-valued numbers and unpaired Unicode surrogates.

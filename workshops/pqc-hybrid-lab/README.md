@@ -2,8 +2,9 @@
 
 This portable prepared-package lab contrasts a transition verifier
 (`if-present`) with a policy that requires the post-quantum half (`required`).
-All packages are deterministic and verified offline by independent TypeScript
-and Python implementations after the one-time toolkit setup.
+All packages are deterministic and verified offline by the toolkit's TypeScript
+and Python verifiers, both built by Tyche Institute, after the one-time toolkit
+setup.
 
 The conference core is designed for 60 minutes, with documented 45- and
 90-minute variants. Start with [QUICKSTART.md](QUICKSTART.md), then use

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the independent oracle against the TypeScript and Python verifiers."""
+"""Run the predeclared oracle against the TypeScript and Python verifiers."""
 
 from __future__ import annotations
 

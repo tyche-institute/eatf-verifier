@@ -8,8 +8,8 @@ conformance suite.
 `oracle.json` fixes the mutation operator, expected verdict, and expected
 machine-readable first-failure code before either implementation is run.
 `generate_corpus.py` applies those operators to the v0.2.0
-`minimal-roundtrip` fixture. `run_experiment.py` then executes the independent
-TypeScript and Python implementations and compares:
+`minimal-roundtrip` fixture. `run_experiment.py` then executes the TypeScript
+and Python implementations, both written by this project, and compares:
 
 1. each implementation with the predeclared oracle; and
 2. the implementations with one another.
