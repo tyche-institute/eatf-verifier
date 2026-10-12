@@ -106,12 +106,28 @@ Both verifiers apply the same decisive checks:
 6. OVERT-inspired receipt cross-checks and, for current signer output, its
    downgrade-protected separate RSA signature;
 7. ML-DSA-65 signature, when its key/signature pair is present, plus an
-   optional relying-party policy that requires the pair;
+   optional relying-party policy that requires the pair and an optional
+   ML-DSA-65 signer-key pin, compared on the decoded FIPS 204 key;
 8. RFC 3161 parsing, SHA-256 message-imprint equality, and CMS signature
    verification against the embedded TSA signing certificate.
 
 Without `--signer-key`, a successful result proves package consistency and
 control of the embedded private key, but does not establish who owns that key.
+`--signer-key` pins only the RSA key in `public_key.pem`. The ML-DSA-65 key in
+`pqc_public_key.pem` is a second embedded key that nothing else in the
+package authenticates. Without `--pqc-signer-key`, `--require-pqc` proves that
+some ML-DSA-65 key signed the same canonical bytes, not whose key it was.
+Against someone who can forge the RSA half, the PQC half then adds nothing.
+Both CLIs print a warning to stderr when `--require-pqc` is used without
+`--pqc-signer-key`. A PQC pin implies `--require-pqc`:
+
+```bash
+eatf-verify --require-pqc \
+  --signer-key test-vectors/keys/dev-rsa-4096.pem \
+  --pqc-signer-key test-vectors/keys/dev-mldsa65.pem \
+  test-vectors/valid/hybrid-mldsa65/package.aep
+```
+
 The current TSA trust-list option is an advisory issuer-name pin, not full RFC
 5280 path validation. These boundaries are reported rather than hidden.
 
@@ -125,7 +141,8 @@ eatf-verify-py --conformance test-vectors
 ```
 
 The shared set contains five positive vectors and eight single-fault negative
-controls. Tests also cover matching and non-matching signer-key pins, receipt
+controls. Tests also cover matching and non-matching RSA and ML-DSA-65
+signer-key pins, a foreign ML-DSA-65 key over the same canonical bytes, receipt
 signature downgrade, a positive RFC 9881/FIPS 204 package, required-PQC policy,
 RFC 8785 boundaries, and validation of every positive vector against both
 Draft 2020-12 schemas. CI runs the same build, unit,
@@ -151,8 +168,12 @@ cross-language matches, and zero boolean or first-code mismatches.
   use RFC 9881 SubjectPublicKeyInfo. The verifiers retain read-only support
   for the earlier raw-key PEM convention.
 - Transition verification accepts classical-only packages. Relying parties
-  that require post-quantum coverage must select `--require-pqc`; the prepared
-  workshop makes this policy boundary observable.
+  that require post-quantum coverage must select `--require-pqc` and pin the
+  expected ML-DSA-65 key with `--pqc-signer-key`; the prepared workshop makes
+  both boundaries observable.
+- There is no certificate or other binding between the RSA and ML-DSA-65
+  keys inside a package. ML-DSA-65 signer trust comes only from the
+  caller-supplied pin.
 - The current signer binds `response.txt` and `metadata.json` using the
   profile canonical form. Verifiers retain read-only support for legacy
   response-only packages and warn that their metadata is not signature-bound.

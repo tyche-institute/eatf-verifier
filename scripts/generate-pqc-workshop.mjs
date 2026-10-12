@@ -9,12 +9,15 @@ import { unzipSync, zipSync } from "fflate";
 
 import {
   generateMlDsa65Keypair,
+  mlDsa65PublicKeyToPem,
   sign,
+  signMlDsa65,
   verify,
 } from "../lib/dist/index.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const WORKSHOP = resolve(ROOT, "workshops/pqc-hybrid-lab/packages");
+const WORKSHOP_KEYS = resolve(ROOT, "workshops/pqc-hybrid-lab/keys");
 // fflate writes ZIP/DOS local-time fields, so use a local constructor. The
 // encoded value is then 1980-01-01 00:00 regardless of the host timezone.
 const FIXED_ZIP_TIME = new Date(1980, 0, 1, 0, 0, 0);
@@ -61,6 +64,21 @@ function tamperResponse(packageBytes) {
   return pack(entries);
 }
 
+// Keep every entry except the ML-DSA half, which an unrelated key re-makes
+// over the same canonical.bin. Only a caller-supplied ML-DSA key pin can
+// tell this package apart from the valid hybrid one.
+async function replacePqcSigner(packageBytes, keypair) {
+  const entries = cloneEntries(packageBytes);
+  const signature = await signMlDsa65(keypair.secretKey, entries["canonical.bin"], false);
+  entries["signature_pqc.sig"] = new TextEncoder().encode(
+    Buffer.from(signature).toString("base64") + "\n",
+  );
+  entries["pqc_public_key.pem"] = new TextEncoder().encode(
+    mlDsa65PublicKeyToPem(keypair.publicKey),
+  );
+  return pack(entries);
+}
+
 async function sha256Hex(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
 }
@@ -95,6 +113,11 @@ async function main() {
     .update("EATF public PKIC PQC workshop seed v1", "utf8")
     .digest();
   const keypair = await generateMlDsa65Keypair(seed);
+  const mlDsaPublicKey = mlDsa65PublicKeyToPem(keypair.publicKey);
+  const foreignSeed = createHash("sha256")
+    .update("EATF public PKIC PQC workshop foreign ML-DSA seed v1", "utf8")
+    .digest();
+  const foreignKeypair = await generateMlDsa65Keypair(foreignSeed);
   const signed = await sign({
     payload,
     privateKeyPem: rsaPrivateKey,
@@ -128,14 +151,31 @@ async function main() {
     "04-classical-transition.aep": classical.aep,
     "05-pqc-signature-missing.aep": remove(signed.aep, "signature_pqc.sig"),
     "06-response-tampered.aep": tamperResponse(signed.aep),
+    "07-foreign-mldsa-key.aep": await replacePqcSigner(signed.aep, foreignKeypair),
   };
   await mkdir(WORKSHOP, { recursive: true });
+
+  // The pinned policy is what a relying party should run: --require-pqc plus
+  // both signer keys obtained out of band.
+  const keyFiles = {
+    "dev-mldsa65.pem": Buffer.from(mlDsaPublicKey),
+    "dev-rsa-4096.pem": Buffer.from(rsaPublicKey),
+  };
+  await mkdir(WORKSHOP_KEYS, { recursive: true });
+  for (const [name, bytes] of Object.entries(keyFiles)) {
+    await writeFile(resolve(WORKSHOP_KEYS, name), bytes);
+  }
 
   const manifest = { format: 1, packages: {} };
   for (const [name, bytes] of Object.entries(packages)) {
     await writeFile(resolve(WORKSHOP, name), bytes);
     const transitional = await verify(bytes, { pqcPolicy: "if-present" });
     const required = await verify(bytes, { pqcPolicy: "required" });
+    const pinned = await verify(bytes, {
+      pqcPolicy: "required",
+      trustedSignerPems: [rsaPublicKey],
+      trustedPqcSignerPems: [mlDsaPublicKey],
+    });
     manifest.packages[name] = {
       sha256: await sha256Hex(bytes),
       transitional: {
@@ -148,6 +188,11 @@ async function main() {
         failureCode: required.failureCode,
         pqcValid: required.pqcValid,
       },
+      pinned: {
+        valid: pinned.valid,
+        failureCode: pinned.failureCode,
+        pqcValid: pinned.pqcValid,
+      },
     };
   }
   const manifestBytes = Buffer.from(JSON.stringify(manifest, null, 2) + "\n");
@@ -157,6 +202,9 @@ async function main() {
     checksumLines.push(`${manifest.packages[name].sha256}  packages/${name}`);
   }
   checksumLines.push(`${await sha256Hex(manifestBytes)}  packages/manifest.json`);
+  for (const name of Object.keys(keyFiles).sort()) {
+    checksumLines.push(`${await sha256Hex(keyFiles[name])}  keys/${name}`);
+  }
   await writeFile(
     resolve(WORKSHOP, "..", "SHA256SUMS"),
     checksumLines.join("\n") + "\n",
@@ -170,6 +218,7 @@ async function main() {
     "test-vectors/invalid/bad-signature-pqc/package.aep",
     packages["02-pqc-signature-tampered.aep"],
   );
+  await writePackage("test-vectors/keys/dev-mldsa65.pem", keyFiles["dev-mldsa65.pem"]);
   process.stdout.write("Generated deterministic PQC workshop and conformance packages.\n");
 }
 

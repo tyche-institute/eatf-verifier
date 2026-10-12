@@ -12,7 +12,20 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 PACKAGES = HERE / "packages"
+KEYS = HERE / "keys"
 MANIFEST = json.loads((PACKAGES / "manifest.json").read_text(encoding="utf-8"))
+POLICY_FLAGS = {
+    "transitional": [],
+    "required": ["--require-pqc"],
+    # The relying-party posture: require PQC and pin both signer keys.
+    "pinned": [
+        "--require-pqc",
+        "--signer-key",
+        str(KEYS / "dev-rsa-4096.pem"),
+        "--pqc-signer-key",
+        str(KEYS / "dev-mldsa65.pem"),
+    ],
+}
 
 
 def verifier_commands() -> tuple[Path, list[str], list[str]]:
@@ -68,8 +81,7 @@ def main() -> int:
     print("package                              policy         TypeScript  Python  first code")
     for name, expected_package in MANIFEST["packages"].items():
         package = PACKAGES / name
-        for policy in ("transitional", "required"):
-            flag = [] if policy == "transitional" else ["--require-pqc"]
+        for policy, flag in POLICY_FLAGS.items():
             ts = invoke([*ts_verifier, "--json", *flag, str(package)], root)
             py = invoke([*py_verifier, "--json", *flag, str(package)], root)
             ts_observed = observed(ts)

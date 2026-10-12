@@ -90,6 +90,8 @@ jobs:
             || { echo "::error::Python conformance did not run 5 + 8 vectors"; exit 1; }
       - run: node cli/eatf-verify/bin/eatf-verify.js --require-pqc test-vectors/valid/hybrid-mldsa65/package.aep
       - run: python -m eatf_verifier.cli --require-pqc test-vectors/valid/hybrid-mldsa65/package.aep
+      - run: node cli/eatf-verify/bin/eatf-verify.js --pqc-signer-key test-vectors/keys/dev-mldsa65.pem test-vectors/valid/hybrid-mldsa65/package.aep
+      - run: python -m eatf_verifier.cli --pqc-signer-key test-vectors/keys/dev-mldsa65.pem test-vectors/valid/hybrid-mldsa65/package.aep
       - run: python workshops/pqc-hybrid-lab/run_lab.py
       - run: python experiments/decision-path/run_experiment.py
 
@@ -110,9 +112,9 @@ jobs:
       - name: Check deterministic PQC workshop artifacts
         run: |
           TZ=UTC node scripts/generate-pqc-workshop.mjs
-          git diff --exit-code -- workshops/pqc-hybrid-lab test-vectors/valid/hybrid-mldsa65 test-vectors/invalid/bad-signature-pqc
+          git diff --exit-code -- workshops/pqc-hybrid-lab test-vectors/valid/hybrid-mldsa65 test-vectors/invalid/bad-signature-pqc test-vectors/keys/dev-mldsa65.pem
           TZ=Europe/Berlin node scripts/generate-pqc-workshop.mjs
-          git diff --exit-code -- workshops/pqc-hybrid-lab test-vectors/valid/hybrid-mldsa65 test-vectors/invalid/bad-signature-pqc
+          git diff --exit-code -- workshops/pqc-hybrid-lab test-vectors/valid/hybrid-mldsa65 test-vectors/invalid/bad-signature-pqc test-vectors/keys/dev-mldsa65.pem
       - name: Build conference download bundle
         run: npm run build:conference-assets
       - name: Check extracted conference download bundle

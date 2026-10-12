@@ -36,6 +36,7 @@ export type FailureCode =
   | "OVERT_SIGNATURE_UNMARKED"
   | "PQC_PAIR_INCOMPLETE"
   | "PQC_SIGNATURE_REQUIRED"
+  | "PQC_SIGNER_NOT_TRUSTED"
   | "PQC_SUPPORT_UNAVAILABLE"
   | "PQC_VERIFY_ERROR"
   | "PQC_SIGNATURE_INVALID"
@@ -82,6 +83,17 @@ export type VerifyOptions = {
    * from the package itself.
    */
   trustedSignerPems?: string[];
+
+  /**
+   * Optional explicit list of trusted ML-DSA-65 public keys (RFC 9881 SPKI
+   * PEM or the legacy raw-key PEM) for the post-quantum signer. Keys are
+   * compared on the decoded 1952-byte FIPS 204 encoding, so either PEM
+   * spelling matches. A non-empty list also requires a complete ML-DSA-65
+   * pair, as `pqcPolicy: "required"` does. If empty (default),
+   * `pqc_public_key.pem` is taken from the package itself and proves only
+   * control of that embedded key. A malformed entry throws.
+   */
+  trustedPqcSignerPems?: string[];
 
   /**
    * v0.1: PEM-encoded root certificates pinned for RFC 3161

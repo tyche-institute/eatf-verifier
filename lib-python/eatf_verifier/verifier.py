@@ -29,6 +29,15 @@ class VerifyOptions:
     offline_only: bool = True
     trusted_signer_pems: list[bytes] = field(default_factory=list)
     """Optional exact SPKI PEM trust set for the package signer."""
+    trusted_pqc_signer_pems: list[bytes] = field(default_factory=list)
+    """Optional ML-DSA-65 trust set (RFC 9881 SPKI or legacy raw-key PEM).
+
+    Keys are compared on the decoded 1952-byte FIPS 204 encoding, so either
+    PEM spelling matches. A non-empty list also requires a complete ML-DSA-65
+    pair, as ``pqc_policy="required"`` does. An empty list leaves
+    ``pqc_public_key.pem`` unauthenticated. A malformed entry raises
+    ``ValueError``.
+    """
     tsa_trust_list: list[bytes] = field(default_factory=list)
     """Optional PEM certificates for the advisory TSA issuer-name pin.
 
@@ -71,6 +80,17 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     opts = options or VerifyOptions()
     if opts.pqc_policy not in ("if-present", "required"):
         raise ValueError("pqc_policy must be 'if-present' or 'required'")
+    trusted_pqc_keys: list[bytes] = []
+    if opts.trusted_pqc_signer_pems:
+        from .mldsa import mldsa65_public_key_from_pem
+
+        for i, pem in enumerate(opts.trusted_pqc_signer_pems):
+            try:
+                trusted_pqc_keys.append(mldsa65_public_key_from_pem(pem))
+            except Exception as exc:
+                raise ValueError(
+                    f"trusted_pqc_signer_pems[{i}] is not an ML-DSA-65 public key: {exc}"
+                ) from exc
     report: list[str] = []
     metadata: dict[str, Any] | None = None
 
@@ -322,10 +342,47 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             pqc_valid,
             receipt,
         )
+    # A PQC key pin implies the pair is required; otherwise a classical-only
+    # package would bypass the pin.
+    if not has_pqc_signature and trusted_pqc_keys:
+        return _fail(
+            report,
+            "PQC_SIGNATURE_REQUIRED",
+            "A caller-supplied ML-DSA-65 key pin requires a complete ML-DSA-65 signature pair.",
+            metadata,
+            pqc_valid,
+            receipt,
+        )
     if has_pqc_signature and has_pqc_key:
         try:
-            from .mldsa import verify_mldsa65
+            from .mldsa import mldsa65_public_key_from_pem, verify_mldsa65
 
+            if trusted_pqc_keys:
+                try:
+                    packaged_pqc_key = mldsa65_public_key_from_pem(entries["pqc_public_key.pem"])
+                except Exception as exc:
+                    return _fail(
+                        report,
+                        "PQC_VERIFY_ERROR",
+                        f"ML-DSA-65 verify error: {exc}.",
+                        metadata,
+                        pqc_valid,
+                        receipt,
+                    )
+                if not any(_ct_eq(key, packaged_pqc_key) for key in trusted_pqc_keys):
+                    return _fail(
+                        report,
+                        "PQC_SIGNER_NOT_TRUSTED",
+                        "ML-DSA-65 signer public key is not in the caller-supplied trust set.",
+                        metadata,
+                        pqc_valid,
+                        receipt,
+                    )
+                report.append("ML-DSA-65 signer public key matched the caller-supplied trust set.")
+            else:
+                report.append(
+                    "ML-DSA-65 signer identity not evaluated (no trusted PQC signer keys supplied)."
+                )
             pqc_sig_b64 = entries["signature_pqc.sig"].decode("ascii").strip()
             pqc_sig = base64.b64decode(pqc_sig_b64, validate=False)
             pqc_valid = verify_mldsa65(

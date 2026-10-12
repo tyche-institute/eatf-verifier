@@ -62,5 +62,16 @@ eatf-verify --require-pqc packages/04-classical-transition.aep
 The first command accepts the package. The second rejects it with
 `PQC_SIGNATURE_REQUIRED`.
 
+Then replace the ML-DSA key and compare `--require-pqc` with a key pin:
+
+```bash
+eatf-verify --require-pqc packages/07-foreign-mldsa-key.aep
+eatf-verify --require-pqc --pqc-signer-key keys/dev-mldsa65.pem \
+  packages/07-foreign-mldsa-key.aep
+```
+
+The first command accepts the package, with a stderr warning that no ML-DSA
+key was pinned. The second rejects it with `PQC_SIGNER_NOT_TRUSTED`.
+
 The keys and timestamp material in this repository are public test fixtures.
 Never use them for production evidence.

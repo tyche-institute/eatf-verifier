@@ -9,6 +9,7 @@ import { verify } from "@eatf/verifier";
 
 const result = await verify(aepBytes, {
   trustedSignerPems: [expectedSignerPem],
+  trustedPqcSignerPems: [expectedMlDsa65Pem],
   pqcPolicy: "required",
 });
 if (!result.valid) throw new Error(result.failureReason ?? "invalid AEP");
@@ -20,7 +21,12 @@ receipt and ML-DSA-65 bindings, and a strict RFC 3161 message imprint plus CMS s
 See [`../docs/aep-format.md`](../docs/aep-format.md) for the ordered contract.
 
 `verify()` never performs network I/O. If no `trustedSignerPems` are supplied,
-the result says that signer identity trust was not evaluated. `tsaTrustList`
+the result says that signer identity trust was not evaluated.
+`trustedSignerPems` covers only the RSA key. `trustedPqcSignerPems` pins the
+ML-DSA-65 key, compared on the decoded FIPS 204 key, and implies the
+`required` PQC policy. Without it, `pqcValid: true` means only that some
+ML-DSA-65 key signed the canonical bytes, and the report says that ML-DSA-65
+signer identity was not evaluated. `tsaTrustList`
 performs an advisory issuer-name pin only; it is not full RFC 5280 validation.
 
 The same package exports the hybrid-capable reference `sign()` function used
@@ -39,7 +45,7 @@ npm run build
 npm test
 ```
 
-The tests include 34 unit/integration assertions and the shared AEP vectors.
+The tests include 42 unit/integration assertions and the shared AEP vectors.
 Cross-language conformance is run through the repository-level toolkit test.
 
 OVERT is an open standard published by Glacis Technologies, Inc. (https://overt.is).

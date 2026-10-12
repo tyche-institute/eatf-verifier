@@ -46,6 +46,16 @@ def main(argv: list[str] | None = None) -> int:
         help="Require the embedded signer key to match this SPKI PEM. Repeatable.",
     )
     parser.add_argument(
+        "--pqc-signer-key",
+        action="append",
+        default=[],
+        metavar="PEM",
+        help=(
+            "Require the embedded ML-DSA-65 key to match this RFC 9881 SPKI (or legacy "
+            "raw) PEM. Repeatable; implies --require-pqc."
+        ),
+    )
+    parser.add_argument(
         "--tsa-trust-list",
         action="append",
         default=[],
@@ -61,7 +71,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--require-pqc",
         action="store_true",
-        help="Reject packages without a complete, valid ML-DSA-65 signature pair.",
+        help=(
+            "Reject packages without a complete, valid ML-DSA-65 signature pair. Without "
+            "--pqc-signer-key this does not establish whose key signed."
+        ),
     )
     parser.add_argument(
         "-V", "--version", action="version", version=f"eatf-verify-py {__version__}"
@@ -72,9 +85,29 @@ def main(argv: list[str] | None = None) -> int:
         parser.print_help(sys.stderr)
         return 2
 
+    trusted_pqc_signer_pems = [pathlib.Path(p).read_bytes() for p in args.pqc_signer_key]
+    if trusted_pqc_signer_pems:
+        from .mldsa import mldsa65_public_key_from_pem
+    for path, pem in zip(args.pqc_signer_key, trusted_pqc_signer_pems, strict=True):
+        try:
+            mldsa65_public_key_from_pem(pem)
+        except ValueError as exc:
+            print(
+                f"eatf-verify-py: --pqc-signer-key {path} is not an ML-DSA-65 public key: {exc}",
+                file=sys.stderr,
+            )
+            return 2
+    if args.require_pqc and not trusted_pqc_signer_pems:
+        print(
+            "eatf-verify-py: warning: --require-pqc without --pqc-signer-key\n"
+            "  checks that an ML-DSA-65 signature verifies, not whose key made it.",
+            file=sys.stderr,
+        )
+
     opts = VerifyOptions(
         offline_only=args.offline_only,
         trusted_signer_pems=[pathlib.Path(p).read_bytes() for p in args.signer_key],
+        trusted_pqc_signer_pems=trusted_pqc_signer_pems,
         tsa_trust_list=[pathlib.Path(p).read_bytes() for p in args.tsa_trust_list],
         pqc_policy="required" if args.require_pqc else "if-present",
     )
