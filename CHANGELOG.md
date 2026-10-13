@@ -8,6 +8,34 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
+## Unreleased
+
+- **Fix `eatf-verify-py --conformance` on native Windows, which checked no
+  vectors and passed.** It classified vectors by a `valid/` or `invalid/`
+  string prefix, but `os.walk` joins paths with backslashes on Windows, so
+  nothing matched. The run printed "Conformance: 0 verified, 0 rejected, 0
+  contract mismatches." and exited 0. That is what the `windows-latest` CI job
+  has printed since the step was added for v0.2.0 (run 30170210404, 25 July
+  2026), next to the TypeScript line with the full count. The verifier itself
+  was never affected: run one package at a time on Windows, it accepts the 5
+  valid vectors and rejects the 8 invalid ones. The runner now compares path
+  components.
+- `--conformance` in both CLIs now exits 2 when it finds no vectors under
+  `valid/` or `invalid/`, for example with a wrong root, a category directory
+  or an empty tree. `eatf-verify-py` also exits 2 for a missing directory, as
+  `eatf-verify` already did. A run that checked nothing no longer reads as a
+  pass.
+- The TypeScript CLI was not affected, because it builds its own paths with
+  `/`. It now uses the same path-component comparison, so a future change to
+  path joining cannot reintroduce the bug.
+- CI now checks the conformance summary line ("5 verified, 8 rejected, 0
+  contract mismatches") for both CLIs on Linux, macOS and Windows, not just the
+  exit code. Regression tests are in `lib-python/tests/test_cli.py` and
+  `cli/eatf-verify/test/conformance.test.mjs`; the latter now runs as part of
+  `npm test`.
+- The decision-path and ordering experiments now write POSIX paths into
+  `SHA256SUMS` and `results.json` on every platform.
+
 ## v0.6.1 — portable conference download (2026-08-02)
 
 - Include `run_lab.py` and `run.sh` in the deterministic conference ZIP so the

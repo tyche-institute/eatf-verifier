@@ -15,7 +15,7 @@
  */
 
 import { readFile } from "node:fs/promises";
-import { resolve, basename } from "node:path";
+import { resolve, basename, relative, sep } from "node:path";
 import { existsSync, statSync, readdirSync } from "node:fs";
 import process from "node:process";
 
@@ -52,7 +52,8 @@ Options:
 Exit codes:
   0     All packages verified successfully (or --conformance contract met).
   1     At least one package failed verification.
-  2     Bad CLI usage or unreadable file.
+  2     Bad CLI usage, unreadable file, or a --conformance tree
+        with no vectors under valid/ or invalid/.
 
 Examples:
   eatf-verify action.aep
@@ -133,12 +134,12 @@ function findAep(root) {
 }
 
 function expectedFromTreePath(p, conformanceRoot) {
-  const base = conformanceRoot.replace(/\/+$/, "");
-  // findAep may produce paths with extra slashes when the root ends in /;
-  // strip any leading slashes from the relative portion before matching.
-  const rel = p.slice(base.length).replace(/^\/+/, "");
-  if (rel.startsWith("valid/")) return "true";
-  if (rel.startsWith("invalid/")) return "false";
+  // Compare the first path component, not a "valid/" string prefix: a
+  // prefix test only works while every path is joined with "/", which the
+  // Python port's os.walk does not do on Windows.
+  const top = relative(conformanceRoot, p).split(sep)[0];
+  if (top === "valid") return "true";
+  if (top === "invalid") return "false";
   return null;
 }
 
@@ -228,6 +229,11 @@ async function main() {
       }
       if (!ok) mismatch++;
       if (result.valid) pass++; else fail++;
+    }
+    if (pass + fail === 0) {
+      // A run that checked nothing must not read as a pass.
+      process.stderr.write(`eatf-verify: --conformance found no .aep vectors under valid/ or invalid/ in ${args.conformance}\n`);
+      return 2;
     }
     if (!args.json) {
       process.stdout.write(`\nConformance: ${pass} verified, ${fail} rejected, ${mismatch} contract mismatches.\n`);

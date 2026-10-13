@@ -19,7 +19,8 @@ Important options:
 - `--require-pqc` rejects packages without a complete, valid ML-DSA-65 pair.
   Without it, classical-only transition packages remain acceptable.
 - `--conformance` expects packages under `valid/` to pass and packages under
-  `invalid/` to fail.
+  `invalid/` to fail. A tree with no packages under either is an input error
+  (exit 2), not a pass.
 
 Exit status is 0 when all requested assertions hold, 1 when a package fails,
 and 2 for usage or input errors. The CLI makes no network calls.

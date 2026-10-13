@@ -119,18 +119,13 @@ def _run_batch(root: str, opts: VerifyOptions, *, json_out: bool) -> int:
 
 
 def _run_conformance(root: str, opts: VerifyOptions, *, json_out: bool) -> int:
+    if not os.path.isdir(root):
+        print(f"eatf-verify-py: --conformance directory missing: {root}", file=sys.stderr)
+        return 2
     aeps = _find_aeps(root)
     pass_, fail, mismatch = 0, 0, 0
-    base = root.rstrip("/")
     for p in aeps:
-        rel = p[len(base):].lstrip("/")
-        expected = (
-            "true"
-            if rel.startswith("valid/")
-            else "false"
-            if rel.startswith("invalid/")
-            else None
-        )
+        expected = _expected_verdict(pathlib.Path(p), pathlib.Path(root))
         if expected is None:
             continue
         with open(p, "rb") as f:
@@ -155,9 +150,28 @@ def _run_conformance(root: str, opts: VerifyOptions, *, json_out: bool) -> int:
             pass_ += 1
         else:
             fail += 1
+    if pass_ + fail == 0:
+        # A run that checked nothing must not read as a pass.
+        print(
+            f"eatf-verify-py: --conformance found no .aep vectors under valid/ or invalid/ "
+            f"in {root}",
+            file=sys.stderr,
+        )
+        return 2
     if not json_out:
         print(f"\nConformance: {pass_} verified, {fail} rejected, {mismatch} contract mismatches.")
     return 1 if mismatch else 0
+
+
+def _expected_verdict(path: pathlib.PurePath, root: pathlib.PurePath) -> str | None:
+    """Expected verdict from the vector's top-level directory under ``root``.
+
+    Compares path components rather than a "valid/" string prefix: os.walk
+    joins with the native separator, so on Windows the relative path is
+    ``valid\\...`` and a prefix test matches nothing.
+    """
+    top = path.relative_to(root).parts[0]
+    return {"valid": "true", "invalid": "false"}.get(top)
 
 
 def _emit(path: str, result, *, json_out: bool) -> None:

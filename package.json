@@ -13,7 +13,7 @@
   "scripts": {
     "build": "npm run build --workspace=@eatf/verifier",
     "build:conference-assets": "node scripts/build-pqc-workshop-bundle.mjs",
-    "test": "npm run test --workspace=@eatf/verifier",
+    "test": "npm run test --workspace=@eatf/verifier && npm run test --workspace=@eatf/verify-cli",
     "test:toolkit": "bash tests/toolkit-smoke.sh"
   },
   "engines": {
