@@ -35,6 +35,7 @@ REPO_ROOT = HERE.parents[1]
 GENERATED = HERE / "generated"
 
 sys.path.insert(0, str(REPO_ROOT / "lib-python"))
+from corpus import IncompleteCorpus, load_corpus  # noqa: E402
 from eatf_verifier import canonical, hash as hashmod, overt, rsa, tsa  # noqa: E402
 
 REQUIRED = ("response.txt", "metadata.json", "canonical.bin", "hash.sha256",
@@ -238,24 +239,11 @@ GUARDS = [
 ]
 
 
-def corpus() -> list[tuple[str, bytes, str]]:
-    out = []
-    for source, root in (
-        ("decision-path", REPO_ROOT / "experiments/decision-path/generated/corpus"),
-        ("path-shadowing", REPO_ROOT / "experiments/path-shadowing/generated"),
-    ):
-        if root.exists():
-            for d in sorted(root.iterdir()):
-                p = d / "package.aep"
-                if p.is_file():
-                    out.append((d.name, p.read_bytes(), source))
-    return out
-
-
 def main() -> int:
-    cases = corpus()
-    if not cases:
-        print("no corpus; run the other experiments first", file=sys.stderr)
+    try:
+        cases = load_corpus()
+    except IncompleteCorpus as exc:
+        print(exc, file=sys.stderr)
         return 1
 
     rows = []

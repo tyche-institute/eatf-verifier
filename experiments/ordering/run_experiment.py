@@ -25,6 +25,8 @@ import sys
 import zipfile
 from pathlib import Path
 
+from corpus import IncompleteCorpus, load_corpus
+
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parents[1]
 GENERATED = HERE / "generated"
@@ -152,30 +154,14 @@ def peel(case_id: str, data: bytes, seed: dict[str, bytes], limit: int = 12) -> 
     }
 
 
-def load_corpus() -> list[tuple[str, bytes, str]]:
-    """(case id, package bytes, source experiment) for every case we can reach."""
-    out: list[tuple[str, bytes, str]] = []
-    for source, root in (
-        ("decision-path", REPO_ROOT / "experiments/decision-path/generated/corpus"),
-        ("path-shadowing", REPO_ROOT / "experiments/path-shadowing/generated"),
-    ):
-        if not root.exists():
-            continue
-        for case_dir in sorted(root.iterdir()):
-            pkg = case_dir / "package.aep"
-            if pkg.is_file():
-                out.append((case_dir.name, pkg.read_bytes(), source))
-    return out
-
-
 def main() -> int:
     seed_path = REPO_ROOT / "test-vectors/valid/minimal-roundtrip/package.aep"
     seed = entries_of(seed_path.read_bytes())
 
-    corpus = load_corpus()
-    if not corpus:
-        print("no corpus found; run the decision-path and path-shadowing experiments first",
-              file=sys.stderr)
+    try:
+        corpus = load_corpus()
+    except IncompleteCorpus as exc:
+        print(exc, file=sys.stderr)
         return 1
 
     rows = []

@@ -35,6 +35,21 @@
   `npm test`.
 - The decision-path and ordering experiments now write POSIX paths into
   `SHA256SUMS` and `results.json` on every platform.
+- **Fix the ordering experiment, which ran on a partial corpus and exited 0.**
+  `experiments/ordering/run_experiment.py` and `guard_probe.py` analysed
+  whatever packages they found. The four path-shadowing packages are not
+  committed and exist only after `python
+  experiments/path-shadowing/run_experiment.py`, so on a fresh clone both
+  scripts analysed 21 packages instead of the 25 that the v0.5.0 figures
+  cover. They rewrote their output in `experiments/ordering/generated/` without
+  the `naive-*` and `refined-*` rows and exited 0. Both sentinels in
+  `guard_probe.py` passed on the smaller set, because they check consistency,
+  not coverage. Both scripts now take the case ids from
+  `experiments/decision-path/oracle.json` and
+  `experiments/path-shadowing/oracle.json`. If any declared package is missing,
+  they exit 1 before writing anything and name the missing cases and the
+  command that restores or produces them. The deposited results are unchanged:
+  with all 25 packages present, both scripts reproduce the committed CSV files.
 
 ## v0.6.1 — portable conference download (2026-08-02)
 
