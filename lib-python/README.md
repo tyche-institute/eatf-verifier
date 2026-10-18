@@ -42,11 +42,11 @@ Base installation verifies RSA and ML-DSA-65 packages. It uses
 `cryptography>=49` for FIPS 204 verification and RFC 9881 SPKI parsing; no
 separate liboqs installation is required.
 
-The PyPI project is not published yet. Install the versioned v0.7.0 source
+The PyPI project is not published yet. Install the versioned v0.7.1 source
 directly from GitHub instead:
 
 ```bash
-python -m pip install "eatf-verifier @ https://github.com/tyche-institute/eatf-verifier/archive/refs/tags/v0.7.0.zip#subdirectory=lib-python"
+python -m pip install "eatf-verifier @ https://github.com/tyche-institute/eatf-verifier/archive/refs/tags/v0.7.1.zip#subdirectory=lib-python"
 ```
 
 From an existing repository checkout, use `python -m pip install ./lib-python`.
