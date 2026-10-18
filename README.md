@@ -239,8 +239,9 @@ one-time verifier setup and is archived at
 v0.7.0 release added the caller-supplied ML-DSA-65 signer-key pin and made
 Windows conformance count its vectors; it is archived at
 [doi:10.5281/zenodo.23451134](https://doi.org/10.5281/zenodo.23451134). The
-current v0.7.1 patch makes both verifiers reject malformed ML-DSA entries with
-a shared failure code instead of crashing. It remains in the Zenodo version
+current v0.7.1 patch makes both verifiers return a failure code instead of
+crashing on malformed ML-DSA entries, with a shared code for every malformed
+signature entry. It remains in the Zenodo version
 chain that began at v0.6.0, with concept DOI
 [doi:10.5281/zenodo.21763055](https://doi.org/10.5281/zenodo.21763055).
 Releases through v0.5.0 remain under the earlier concept DOI
