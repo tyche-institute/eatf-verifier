@@ -323,8 +323,8 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
 
     # 8. Optional ML-DSA-65 verification.
     pqc_valid: bool | None = None
-    has_pqc_signature = bool(entries.get("signature_pqc.sig"))
-    has_pqc_key = bool(entries.get("pqc_public_key.pem"))
+    has_pqc_signature = "signature_pqc.sig" in entries
+    has_pqc_key = "pqc_public_key.pem" in entries
     if has_pqc_signature != has_pqc_key:
         return _fail(
             report,
@@ -355,55 +355,48 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             receipt,
         )
     if has_pqc_signature and has_pqc_key:
-        try:
-            from .mldsa import mldsa65_public_key_from_pem, verify_mldsa65, verify_mldsa65_raw
+        packaged_pqc_key: bytes | None = None
+        if trusted_pqc_keys:
+            # Already imported above to parse the pins.
+            from .mldsa import mldsa65_public_key_from_pem
 
-            packaged_pqc_key: bytes | None = None
-            if trusted_pqc_keys:
-                try:
-                    packaged_pqc_key = mldsa65_public_key_from_pem(entries["pqc_public_key.pem"])
-                except Exception as exc:
-                    return _fail(
-                        report,
-                        "PQC_VERIFY_ERROR",
-                        f"ML-DSA-65 verify error: {exc}.",
-                        metadata,
-                        pqc_valid,
-                        receipt,
-                    )
-                if not any(_ct_eq(key, packaged_pqc_key) for key in trusted_pqc_keys):
-                    return _fail(
-                        report,
-                        "PQC_SIGNER_NOT_TRUSTED",
-                        "ML-DSA-65 signer public key is not in the caller-supplied trust set.",
-                        metadata,
-                        pqc_valid,
-                        receipt,
-                    )
-                report.append("ML-DSA-65 signer public key matched the caller-supplied trust set.")
-            else:
-                report.append(
-                    "ML-DSA-65 signer identity not evaluated (no trusted PQC signer keys supplied)."
-                )
-            pqc_sig_b64 = entries["signature_pqc.sig"].decode("ascii").strip()
-            pqc_sig = base64.b64decode(pqc_sig_b64, validate=False)
-            if packaged_pqc_key is not None:
-                # Check the signature with the key that was compared with the pin.
-                pqc_valid = verify_mldsa65_raw(packaged_pqc_key, pqc_sig, canonical)
-            else:
-                pqc_valid = verify_mldsa65(
-                    entries["pqc_public_key.pem"], pqc_sig, canonical
-                )
-            report.append(f"ML-DSA-65 signature {'verified' if pqc_valid else 'FAILED'}.")
-            if not pqc_valid:
+            try:
+                packaged_pqc_key = mldsa65_public_key_from_pem(entries["pqc_public_key.pem"])
+            except Exception as exc:
                 return _fail(
                     report,
-                    "PQC_SIGNATURE_INVALID",
-                    "ML-DSA-65 signature does not verify.",
+                    "PQC_VERIFY_ERROR",
+                    f"ML-DSA-65 verify error: {exc}.",
                     metadata,
                     pqc_valid,
                     receipt,
                 )
+            if not any(_ct_eq(key, packaged_pqc_key) for key in trusted_pqc_keys):
+                return _fail(
+                    report,
+                    "PQC_SIGNER_NOT_TRUSTED",
+                    "ML-DSA-65 signer public key is not in the caller-supplied trust set.",
+                    metadata,
+                    pqc_valid,
+                    receipt,
+                )
+            report.append("ML-DSA-65 signer public key matched the caller-supplied trust set.")
+        else:
+            report.append(
+                "ML-DSA-65 signer identity not evaluated (no trusted PQC signer keys supplied)."
+            )
+        pqc_sig = _decode_pqc_signature(entries["signature_pqc.sig"])
+        if pqc_sig is None:
+            return _fail(
+                report,
+                "PQC_SIGNATURE_ENCODING",
+                "signature_pqc.sig is not valid base64.",
+                metadata,
+                False,
+                receipt,
+            )
+        try:
+            from .mldsa import mldsa65_supported, verify_mldsa65, verify_mldsa65_raw
         except ImportError as e:
             return _fail(
                 report,
@@ -411,6 +404,40 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
                 f"ML-DSA-65 support not compiled in: {e}",
                 metadata,
                 None,
+                receipt,
+            )
+        if not mldsa65_supported():
+            return _fail(
+                report,
+                "PQC_SUPPORT_UNAVAILABLE",
+                "ML-DSA-65 is not supported by this cryptography backend.",
+                metadata,
+                None,
+                receipt,
+            )
+        try:
+            if packaged_pqc_key is not None:
+                # Check the signature with the key that was compared with the pin.
+                pqc_valid = verify_mldsa65_raw(packaged_pqc_key, pqc_sig, canonical)
+            else:
+                pqc_valid = verify_mldsa65(entries["pqc_public_key.pem"], pqc_sig, canonical)
+        except Exception as e:
+            return _fail(
+                report,
+                "PQC_VERIFY_ERROR",
+                f"ML-DSA-65 verify error: {e}.",
+                metadata,
+                False,
+                receipt,
+            )
+        report.append(f"ML-DSA-65 signature {'verified' if pqc_valid else 'FAILED'}.")
+        if not pqc_valid:
+            return _fail(
+                report,
+                "PQC_SIGNATURE_INVALID",
+                "ML-DSA-65 signature does not verify.",
+                metadata,
+                pqc_valid,
                 receipt,
             )
     else:
@@ -519,6 +546,26 @@ def _ct_eq(a: bytes, b: bytes) -> bool:
     for x, y in zip(a, b, strict=True):
         result |= x ^ y
     return result == 0
+
+
+# Same byte-level rule as decodePqcSignature in lib/src/verifier.ts: bytes
+# 0x09-0x0D and 0x20 anywhere, otherwise base64 with at most two trailing "="
+# and a length that is a multiple of four. A bare b64decode(validate=False)
+# would skip stray bytes that atob rejects.
+_PQC_SIGNATURE_WHITESPACE = bytes(range(0x09, 0x0E)) + b" "
+_BASE64_ALPHABET = b"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+
+
+def _decode_pqc_signature(entry: bytes) -> bytes | None:
+    compact = entry.translate(None, _PQC_SIGNATURE_WHITESPACE)
+    body = compact.rstrip(b"=")
+    if (
+        len(compact) % 4
+        or len(compact) - len(body) > 2
+        or body.translate(None, _BASE64_ALPHABET)
+    ):
+        return None
+    return base64.b64decode(compact)
 
 
 def _normalized_pem_body(pem: bytes) -> bytes:

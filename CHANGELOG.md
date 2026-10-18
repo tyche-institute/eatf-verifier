@@ -8,6 +8,54 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
+## Unreleased
+
+- **Fix both verifiers crashing on malformed ML-DSA entries instead of
+  rejecting the package.** A `signature_pqc.sig` that is not base64 made
+  `eatf-verify` exit 2 with a stack trace and `eatf-verify-py` exit 1 with a
+  traceback and no JSON. A `pqc_public_key.pem` that neither parser can load,
+  such as an RSA SubjectPublicKeyInfo or text that is not PEM, gave
+  `PQC_VERIFY_ERROR` in TypeScript but crashed the Python verifier. v0.7.0 and
+  earlier are affected, with or without `--pqc-signer-key`. Both verifiers now
+  return `valid: false` with `pqcValid: false`: the new code
+  `PQC_SIGNATURE_ENCODING`, which mirrors `RSA_SIGNATURE_ENCODING`, when the
+  signature does not decode, and `PQC_VERIFY_ERROR` when the key cannot be
+  used. The signature encoding is checked after the optional key pin and
+  before the signature. Without a pin, a package with both an undecodable
+  signature and an unusable key fails with `PQC_SIGNATURE_ENCODING`. With a
+  pin, the pin check reports the key first (`PQC_VERIFY_ERROR` or
+  `PQC_SIGNER_NOT_TRUSTED`, with `pqcValid: null`).
+- **The Python verifier accepted an ML-DSA signature with a stray character in
+  it.** Its lenient base64 decoder skipped bytes outside the alphabet, so a
+  valid signature with one `!` inserted still verified, while TypeScript
+  crashed on the same package. Both verifiers now apply one byte-level rule to
+  `signature_pqc.sig`: TAB, LF, VT, FF, CR and space may appear anywhere, and
+  the remaining bytes must be base64 with at most two trailing `=` and a length
+  that is a multiple of four. Under that rule TypeScript also rejects a leading
+  byte-order mark or a non-breaking space, which it used to accept, and both
+  reject missing padding, which TypeScript reported as `PQC_SIGNATURE_INVALID`
+  and Python crashed on. Signatures written by `eatf-sign` are unaffected,
+  including ones re-wrapped at 64 columns.
+- **An empty ML-DSA entry now counts as present in Python, as it already did
+  in TypeScript.** Python treated a zero-byte `signature_pqc.sig` or
+  `pqc_public_key.pem` as missing. An empty pair added to a classical-only
+  package therefore verified in Python and failed in TypeScript, and an empty
+  key next to a signature gave `PQC_PAIR_INCOMPLETE` in Python and
+  `PQC_VERIFY_ERROR` in TypeScript. Both now return `PQC_VERIFY_ERROR`.
+- When its `cryptography` backend has no ML-DSA support (OpenSSL builds older
+  than 3.5), the Python verifier now returns `PQC_SUPPORT_UNAVAILABLE` with
+  `pqcValid: null` instead of crashing.
+- Not changed here: without a key pin, the two key parsers still disagree on
+  some malformed spellings of `pqc_public_key.pem` that only one of them can
+  load. For example, a bare base64 key without PEM armour verifies in Python
+  and fails with `PQC_VERIFY_ERROR` in TypeScript.
+- Regression tests built from the lab packages are in
+  `lib/test/pqc-malformed.test.ts` and `lib-python/tests/test_pqc_malformed.py`,
+  with the same cases in both; the signature cases run with and without a key
+  pin. The conformance corpus (5 verified, 8 rejected), the 42 lab
+  observations and the 21 decision-path cases give the same results as
+  before.
+
 ## v0.7.0 — ML-DSA-65 signer-key pin and counted conformance (2026-10-18)
 
 - **Fix `eatf-verify-py --conformance` on native Windows, which checked no
