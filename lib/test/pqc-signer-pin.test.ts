@@ -189,7 +189,8 @@ const PACKAGED: Array<[string, (spki: string, legacy: string) => string]> = [
   ["SPKI with CRLF line endings", (s) => s.replace(/\n/g, "\r\n")],
 ];
 
-const spki = await keyPem("dev-mldsa65.pem");
+// actions/checkout on Windows turns the fixture into CRLF; the rows below edit LF text.
+const spki = (await keyPem("dev-mldsa65.pem")).replace(/\r\n/g, "\n");
 const legacy = legacyRawPem(spki);
 const foreign = await foreignPem();
 const expected = mlDsa65PublicKeyFromPem(spki);

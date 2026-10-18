@@ -222,7 +222,8 @@ PACKAGED = [
     ("label", "make", "accepted"), SPELLINGS, ids=[row[0] for row in SPELLINGS]
 )
 def test_pem_parsing_matches_typescript(label: str, make, accepted: bool) -> None:
-    spki = MLDSA_KEY.decode("ascii")
+    # A Windows checkout turns the fixture into CRLF; the rows edit LF text.
+    spki = MLDSA_KEY.decode("ascii").replace("\r\n", "\n")
     pem = make(spki, _legacy_raw_pem(MLDSA_KEY).decode("ascii"), _foreign_key().decode("ascii"))
     if accepted:
         expected = mldsa65_public_key_from_pem(MLDSA_KEY)
@@ -234,7 +235,7 @@ def test_pem_parsing_matches_typescript(label: str, make, accepted: bool) -> Non
 
 @pytest.mark.parametrize(("label", "make"), PACKAGED, ids=[row[0] for row in PACKAGED])
 def test_pinned_package_with_accepted_key_spelling_verifies(label: str, make) -> None:
-    spki = MLDSA_KEY.decode("ascii")
+    spki = MLDSA_KEY.decode("ascii").replace("\r\n", "\n")
     packaged = make(spki, _legacy_raw_pem(MLDSA_KEY).decode("ascii")).encode("utf-8")
     result = verify(
         _with_entry(_package("01-valid-hybrid.aep"), "pqc_public_key.pem", packaged),
