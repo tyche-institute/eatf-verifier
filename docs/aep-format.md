@@ -53,8 +53,7 @@ external standard.
    FIPS 204 encoding, so an RFC 9881 SPKI pin matches a legacy raw-key
    package and vice versa. Each pin must be exactly one PEM block; both
    verifiers parse PEM text by the same rules. Without this option, ML-DSA
-   signer identity is
-   explicitly reported as not evaluated.
+   signer identity is explicitly reported as not evaluated.
 9. Decode the RFC 3161 object, require SHA-256 as the imprint algorithm,
    require the imprint to equal `hash.sha256`, and verify the CMS SignerInfo
    against the embedded TSA signing certificate.

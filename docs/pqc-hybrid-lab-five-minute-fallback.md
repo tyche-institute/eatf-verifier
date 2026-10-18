@@ -5,10 +5,10 @@ is available, or the remaining session time is reduced to five minutes. It
 uses the immutable v0.6.1 prepared results; it does not replace or modify the
 released workshop ZIP.
 
-v0.6.1 predates the ML-DSA-65 signer-key pin. Since v0.7.0, `required` alone
-is not enough: a package can carry any ML-DSA-65 key, so a relying party must
-also pin the expected key with `--pqc-signer-key`. The v0.7.0 lab shows this
-with package 07 and the `pinned` policy.
+v0.6.1 predates the ML-DSA-65 signer-key pin. `required` alone has never been
+enough: a package can carry any ML-DSA-65 key. Since v0.7.0 a relying party
+can, and should, also pin the expected key with `--pqc-signer-key`; the v0.7.0
+lab shows this with package 07 and the `pinned` policy.
 
 Keep local copies of:
 

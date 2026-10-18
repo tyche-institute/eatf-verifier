@@ -90,6 +90,11 @@
   read, `eatf-verify-py` now exits 2 with a one-line message instead of 1
   with a traceback, and `eatf-verify` prints a one-line message instead of a
   stack trace.
+- The ML-DSA-65 PEM parser could take cubic time on a crafted
+  `pqc_public_key.pem`, a long whitespace run without an END line, because its
+  pattern had three adjacent whitespace quantifiers. The TypeScript verifier
+  ran it on every package with an ML-DSA pair. The pattern now has one body
+  group and runs in linear time; it accepts the same PEM text as before.
 - `examples/05-hybrid-mldsa65` now verifies with both signer keys pinned.
 
 ## v0.6.1 — portable conference download (2026-08-02)

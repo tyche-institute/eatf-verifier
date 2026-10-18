@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: Apache-2.0
 //
-// --pqc-signer-key and the --require-pqc warning, mirrored from the Python
-// CLI tests in lib-python/tests/test_pqc_signer_pin.py. Needs `npm run build`
-// first (the CLI loads lib/dist).
+// --pqc-signer-key, unreadable trust files and the --require-pqc warning,
+// mirrored from the Python CLI tests in lib-python/tests/test_pqc_signer_pin.py.
+// Needs `npm run build` first (the CLI loads lib/dist).
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { chmodSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
@@ -23,12 +23,28 @@ const devKey = join(keys, "dev-mldsa65.pem");
 const run = (...args) => spawnSync(process.execPath, [cli, ...args], {
   cwd: repoRoot, encoding: "utf8",
 });
+const lines = (text) => text.split("\n").filter((line) => line !== "");
+
+function withTempDir(fn) {
+  const dir = mkdtempSync(join(tmpdir(), "eatf-pqc-pin-"));
+  try {
+    return fn(dir);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+}
 
 test("--require-pqc without --pqc-signer-key warns on stderr only", () => {
   const proc = run("--json", "--require-pqc", hybrid);
   assert.equal(proc.status, 0, proc.stderr);
   assert.ok(proc.stderr.includes("warning: --require-pqc without --pqc-signer-key"), proc.stderr);
   assert.equal(JSON.parse(proc.stdout).valid, true);
+});
+
+test("--require-pqc with --pqc-signer-key does not warn", () => {
+  const proc = run("--require-pqc", "--pqc-signer-key", devKey, hybrid);
+  assert.equal(proc.status, 0, proc.stderr);
+  assert.ok(!proc.stderr.includes("warning"), proc.stderr);
 });
 
 test("--pqc-signer-key without --require-pqc rejects a foreign ML-DSA key", () => {
@@ -38,25 +54,46 @@ test("--pqc-signer-key without --require-pqc rejects a foreign ML-DSA key", () =
   assert.ok(!proc.stderr.includes("warning"), proc.stderr);
 });
 
-for (const kind of ["rsa", "two-blocks", "missing"]) {
-  test(`an unusable --pqc-signer-key file exits 2 (${kind})`, () => {
-    const dir = mkdtempSync(join(tmpdir(), "eatf-pqc-pin-"));
-    try {
+test("a trust flag without a value is a usage error", () => {
+  const proc = run(hybrid, "--signer-key");
+  assert.equal(proc.status, 2);
+  assert.ok(proc.stderr.includes("option --signer-key requires a value"), proc.stderr);
+});
+
+for (const kind of ["rsa", "two-blocks"]) {
+  test(`a --pqc-signer-key file that is not one ML-DSA-65 key exits 2 (${kind})`, () => withTempDir((dir) => {
+    const path = join(dir, `${kind}.pem`);
+    if (kind === "rsa") writeFileSync(path, readFileSync(join(keys, "dev-rsa-4096.pem")));
+    else {
+      const foreign = unzipSync(readFileSync(foreignPackage))["pqc_public_key.pem"];
+      writeFileSync(path, Buffer.concat([readFileSync(devKey), Buffer.from(foreign)]));
+    }
+    const proc = run("--pqc-signer-key", path, hybrid);
+    assert.equal(proc.status, 2, proc.stdout + proc.stderr);
+    assert.equal(proc.stdout, "");
+    assert.equal(lines(proc.stderr).length, 1, proc.stderr);
+    assert.ok(proc.stderr.startsWith("eatf-verify: --pqc-signer-key "), proc.stderr);
+    assert.ok(proc.stderr.includes("is not an ML-DSA-65 public key"), proc.stderr);
+  }));
+}
+
+const unreadable = ["missing", "directory"];
+if (process.platform !== "win32" && process.getuid?.() !== 0) unreadable.push("no-permission");
+
+for (const flag of ["--pqc-signer-key", "--signer-key", "--tsa-trust-list"]) {
+  for (const kind of unreadable) {
+    test(`an unreadable ${flag} file exits 2 (${kind})`, () => withTempDir((dir) => {
       const path = join(dir, `${kind}.pem`);
-      if (kind === "rsa") writeFileSync(path, readFileSync(join(keys, "dev-rsa-4096.pem")));
-      if (kind === "two-blocks") {
-        const foreign = unzipSync(readFileSync(foreignPackage))["pqc_public_key.pem"];
-        writeFileSync(path, Buffer.concat([readFileSync(devKey), Buffer.from(foreign)]));
+      if (kind === "directory") mkdirSync(path);
+      if (kind === "no-permission") {
+        writeFileSync(path, readFileSync(devKey));
+        chmodSync(path, 0);
       }
-      const proc = run("--pqc-signer-key", path, hybrid);
+      const proc = run(flag, path, hybrid);
       assert.equal(proc.status, 2, proc.stdout + proc.stderr);
       assert.equal(proc.stdout, "");
-      const expected = kind === "missing"
-        ? "cannot read --pqc-signer-key"
-        : "is not an ML-DSA-65 public key";
-      assert.ok(proc.stderr.includes(expected), proc.stderr);
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
-  });
+      assert.equal(lines(proc.stderr).length, 1, proc.stderr);
+      assert.ok(proc.stderr.startsWith(`eatf-verify: cannot read ${flag} `), proc.stderr);
+    }));
+  }
 }

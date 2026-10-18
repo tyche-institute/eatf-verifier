@@ -177,7 +177,16 @@ const SPELLINGS: Array<[string, (spki: string, legacy: string, foreign: string) 
   ["END label differs from BEGIN", (s) => s.replace("-----END PUBLIC KEY-----", "-----END ML-DSA-65 PUBLIC KEY-----"), false],
   ["lower-case label", (s) => s.replace(/PUBLIC KEY/g, "public key"), false],
   ["'=' inside the body", (s) => s.replace("-----\nMII", "-----\nM=II"), false],
+  ["'==' inside the body", (s) => s.replace("-----\nMII", "-----\nM==II"), false],
+  ["END label differs only in case", (s) => s.replace("-----END PUBLIC KEY-----", "-----END public key-----"), false],
   ["SPKI body under the legacy label", (s) => s.replace(/PUBLIC KEY/g, "ML-DSA-65 PUBLIC KEY"), false],
+];
+// Packaged-key spellings that both parsers accept; a pinned verify must accept them too.
+const PACKAGED: Array<[string, (spki: string, legacy: string) => string]> = [
+  ["legacy raw-key PEM without padding", (_s, l) => l.replace("=\n-----END", "\n-----END")],
+  ["legacy raw-key PEM with a byte-order mark", (_s, l) => "﻿" + l],
+  ["SPKI with no-break-space indentation", (s) => s.replace(/\n(?=[A-Za-z0-9+/])/g, "\n ")],
+  ["SPKI with CRLF line endings", (s) => s.replace(/\n/g, "\r\n")],
 ];
 
 const spki = await keyPem("dev-mldsa65.pem");
@@ -193,5 +202,26 @@ describe("ML-DSA-65 PEM parsing (shared with the Python verifier)", () => {
     } else {
       expect(() => mlDsa65PublicKeyFromPem(pem)).toThrow();
     }
+  });
+
+  test.each(PACKAGED)("a pinned package whose key is %s verifies", async (_label, make) => {
+    const result = await verify(
+      withEntry(
+        await labPackage("01-valid-hybrid.aep"),
+        "pqc_public_key.pem",
+        new TextEncoder().encode(make(spki, legacy)),
+      ),
+      { trustedPqcSignerPems: [spki] },
+    );
+    expect(result.valid).toBe(true);
+    expect(result.pqcValid).toBe(true);
+  });
+
+  test("rejects a long whitespace run without an END line in linear time", () => {
+    // The earlier \s+(...)\s+ pattern needed about 4 s here and grows cubically.
+    const hostile = "-----BEGIN PUBLIC KEY-----" + " ".repeat(3000) + "x";
+    const started = performance.now();
+    expect(() => mlDsa65PublicKeyFromPem(hostile)).toThrow("Malformed PEM block");
+    expect(performance.now() - started).toBeLessThan(300);
   });
 });

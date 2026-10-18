@@ -69,6 +69,10 @@ Examples:
 `);
 }
 
+const VALUE_OPTIONS = new Set([
+  "--batch", "--conformance", "--signer-key", "--pqc-signer-key", "--tsa-trust-list",
+]);
+
 function parseArgs(argv) {
   const args = {
     paths: [], batch: null, conformance: null,
@@ -82,6 +86,10 @@ function parseArgs(argv) {
     if (a === "--json") { args.json = true; continue; }
     if (a === "--offline-only") { args.offlineOnly = true; continue; }
     if (a === "--require-pqc") { args.requirePqc = true; continue; }
+    if (VALUE_OPTIONS.has(a) && i + 1 >= argv.length) {
+      process.stderr.write(`eatf-verify: option ${a} requires a value\n`);
+      return { error: 2 };
+    }
     if (a === "--batch") { args.batch = argv[++i]; continue; }
     if (a === "--conformance") { args.conformance = argv[++i]; continue; }
     if (a === "--signer-key") { args.signerKeys.push(argv[++i]); continue; }

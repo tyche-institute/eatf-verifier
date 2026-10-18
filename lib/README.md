@@ -24,7 +24,8 @@ See [`../docs/aep-format.md`](../docs/aep-format.md) for the ordered contract.
 the result says that signer identity trust was not evaluated.
 `trustedSignerPems` covers only the RSA key. `trustedPqcSignerPems` pins the
 ML-DSA-65 key, compared on the decoded FIPS 204 key, and implies the
-`required` PQC policy. Without it, `pqcValid: true` means only that some
+`required` PQC policy. Each entry must be exactly one PEM block; pass several
+entries for several keys. Without it, `pqcValid: true` means only that some
 ML-DSA-65 key signed the canonical bytes, and the report says that ML-DSA-65
 signer identity was not evaluated. `tsaTrustList`
 performs an advisory issuer-name pin only; it is not full RFC 5280 validation.

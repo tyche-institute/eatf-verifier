@@ -35,10 +35,9 @@ class VerifyOptions:
     Keys are compared on the decoded 1952-byte FIPS 204 encoding, so the SPKI
     and legacy forms of one key match. Each entry must be exactly one PEM block,
     parsed by the same rules as the TypeScript verifier. A non-empty list also
-    requires a complete ML-DSA-65
-    pair, as ``pqc_policy="required"`` does. An empty list leaves
-    ``pqc_public_key.pem`` unauthenticated. A malformed entry raises
-    ``ValueError``.
+    requires a complete ML-DSA-65 pair, as ``pqc_policy="required"`` does. An
+    empty list leaves ``pqc_public_key.pem`` unauthenticated. A malformed entry
+    raises ``ValueError``.
     """
     tsa_trust_list: list[bytes] = field(default_factory=list)
     """Optional PEM certificates for the advisory TSA issuer-name pin.
@@ -357,8 +356,9 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         )
     if has_pqc_signature and has_pqc_key:
         try:
-            from .mldsa import mldsa65_public_key_from_pem, verify_mldsa65
+            from .mldsa import mldsa65_public_key_from_pem, verify_mldsa65, verify_mldsa65_raw
 
+            packaged_pqc_key: bytes | None = None
             if trusted_pqc_keys:
                 try:
                     packaged_pqc_key = mldsa65_public_key_from_pem(entries["pqc_public_key.pem"])
@@ -387,9 +387,13 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
                 )
             pqc_sig_b64 = entries["signature_pqc.sig"].decode("ascii").strip()
             pqc_sig = base64.b64decode(pqc_sig_b64, validate=False)
-            pqc_valid = verify_mldsa65(
-                entries["pqc_public_key.pem"], pqc_sig, canonical
-            )
+            if packaged_pqc_key is not None:
+                # Check the signature with the key that was compared with the pin.
+                pqc_valid = verify_mldsa65_raw(packaged_pqc_key, pqc_sig, canonical)
+            else:
+                pqc_valid = verify_mldsa65(
+                    entries["pqc_public_key.pem"], pqc_sig, canonical
+                )
             report.append(f"ML-DSA-65 signature {'verified' if pqc_valid else 'FAILED'}.")
             if not pqc_valid:
                 return _fail(

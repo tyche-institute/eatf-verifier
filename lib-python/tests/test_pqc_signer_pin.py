@@ -5,8 +5,11 @@ from __future__ import annotations
 import base64
 import io
 import json
+import os
 import pathlib
+import re
 import textwrap
+import time
 import zipfile
 
 import pytest
@@ -188,11 +191,30 @@ SPELLINGS = [
     ("END label differs from BEGIN", lambda s, lg, fg: s.replace(END_SPKI, END_LEGACY, 1), False),
     ("lower-case label", lambda s, lg, fg: s.replace("PUBLIC KEY", "public key"), False),
     ("'=' inside the body", lambda s, lg, fg: s.replace("-----\nMII", "-----\nM=II", 1), False),
+    ("'==' inside the body", lambda s, lg, fg: s.replace("-----\nMII", "-----\nM==II", 1), False),
+    (
+        "END label differs only in case",
+        lambda s, lg, fg: s.replace(END_SPKI, "-----END public key-----", 1),
+        False,
+    ),
     (
         "SPKI body under the legacy label",
         lambda s, lg, fg: s.replace("PUBLIC KEY", "ML-DSA-65 PUBLIC KEY"),
         False,
     ),
+]
+# Packaged-key spellings that both parsers accept; a pinned verify must accept them too.
+PACKAGED = [
+    (
+        "legacy raw-key PEM without padding",
+        lambda s, lg: lg.replace("=\n-----END", "\n-----END", 1),
+    ),
+    ("legacy raw-key PEM with a byte-order mark", lambda s, lg: "﻿" + lg),
+    (
+        "SPKI with no-break-space indentation",
+        lambda s, lg: re.sub(r"\n(?=[A-Za-z0-9+/])", "\n ", s),
+    ),
+    ("SPKI with CRLF line endings", lambda s, lg: s.replace("\n", "\r\n")),
 ]
 
 
@@ -210,10 +232,43 @@ def test_pem_parsing_matches_typescript(label: str, make, accepted: bool) -> Non
             mldsa65_public_key_from_pem(pem.encode("utf-8"))
 
 
-# CLI contract: exit 2 for unusable pin files, stderr-only warning.
+@pytest.mark.parametrize(("label", "make"), PACKAGED, ids=[row[0] for row in PACKAGED])
+def test_pinned_package_with_accepted_key_spelling_verifies(label: str, make) -> None:
+    spki = MLDSA_KEY.decode("ascii")
+    packaged = make(spki, _legacy_raw_pem(MLDSA_KEY).decode("ascii")).encode("utf-8")
+    result = verify(
+        _with_entry(_package("01-valid-hybrid.aep"), "pqc_public_key.pem", packaged),
+        VerifyOptions(trusted_pqc_signer_pems=[MLDSA_KEY]),
+    )
+    assert result.valid is True
+    assert result.pqc_valid is True
+
+
+def test_long_whitespace_run_is_rejected_in_linear_time() -> None:
+    # The earlier [ws]+(...)[ws]+ pattern needed about 1.7 s here and grows cubically.
+    hostile = b"-----BEGIN PUBLIC KEY-----" + b" " * 2000 + b"x"
+    started = time.perf_counter()
+    with pytest.raises(ValueError, match="Malformed PEM block"):
+        mldsa65_public_key_from_pem(hostile)
+    assert time.perf_counter() - started < 0.2
+
+
+# CLI contract: exit 2 with one stderr line for unusable key files, stderr-only warning.
 def test_cli_require_pqc_without_pin_warns(capsys: pytest.CaptureFixture[str]) -> None:
     assert main(["--require-pqc", str(HYBRID)]) == 0
     assert "warning: --require-pqc without --pqc-signer-key" in capsys.readouterr().err
+
+
+def test_cli_require_pqc_with_pin_does_not_warn(capsys: pytest.CaptureFixture[str]) -> None:
+    pin = str(KEYS / "dev-mldsa65.pem")
+    assert main(["--require-pqc", "--pqc-signer-key", pin, str(HYBRID)]) == 0
+    assert "warning" not in capsys.readouterr().err
+
+
+def test_cli_trust_flag_without_value_is_a_usage_error() -> None:
+    with pytest.raises(SystemExit) as raised:
+        main([str(HYBRID), "--signer-key"])
+    assert raised.value.code == 2
 
 
 def test_cli_pin_without_require_pqc_rejects_foreign_key(
@@ -229,20 +284,40 @@ def test_cli_pin_without_require_pqc_rejects_foreign_key(
     assert "warning" not in captured.err
 
 
-@pytest.mark.parametrize("kind", ["rsa", "two-blocks", "missing"])
-def test_cli_unusable_pin_file_exits_2(
+@pytest.mark.parametrize("kind", ["rsa", "two-blocks"])
+def test_cli_pin_file_that_is_not_one_mldsa_key_exits_2(
     kind: str, tmp_path: pathlib.Path, capsys: pytest.CaptureFixture[str]
 ) -> None:
     path = tmp_path / f"{kind}.pem"
-    if kind == "rsa":
-        path.write_bytes(RSA_KEY)
-    elif kind == "two-blocks":
-        path.write_bytes(MLDSA_KEY + _foreign_key())
+    path.write_bytes(RSA_KEY if kind == "rsa" else MLDSA_KEY + _foreign_key())
     code = main(["--pqc-signer-key", str(path), str(HYBRID)])
     captured = capsys.readouterr()
     assert code == 2
     assert captured.out == ""
-    if kind == "missing":
-        assert "cannot read --pqc-signer-key" in captured.err
-    else:
-        assert "is not an ML-DSA-65 public key" in captured.err
+    assert captured.err.count("\n") == 1
+    assert captured.err.startswith("eatf-verify-py: --pqc-signer-key ")
+    assert "is not an ML-DSA-65 public key" in captured.err
+
+
+UNREADABLE = ["missing", "directory"]
+if os.name == "posix" and os.geteuid() != 0:
+    UNREADABLE.append("no-permission")
+
+
+@pytest.mark.parametrize("flag", ["--pqc-signer-key", "--signer-key", "--tsa-trust-list"])
+@pytest.mark.parametrize("kind", UNREADABLE)
+def test_cli_unreadable_trust_file_exits_2(
+    flag: str, kind: str, tmp_path: pathlib.Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    path = tmp_path / f"{kind}.pem"
+    if kind == "directory":
+        path.mkdir()
+    elif kind == "no-permission":
+        path.write_bytes(MLDSA_KEY)
+        path.chmod(0)
+    code = main([flag, str(path), str(HYBRID)])
+    captured = capsys.readouterr()
+    assert code == 2
+    assert captured.out == ""
+    assert captured.err.count("\n") == 1
+    assert captured.err.startswith(f"eatf-verify-py: cannot read {flag} ")

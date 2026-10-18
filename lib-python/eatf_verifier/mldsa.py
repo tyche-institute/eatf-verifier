@@ -23,9 +23,11 @@ _JS_WHITESPACE = (
     "\t\n\x0b\x0c\r \u00a0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006"
     "\u2007\u2008\u2009\u200a\u2028\u2029\u202f\u205f\u3000\ufeff"
 )
+# One body group that starts and ends with whitespace, as in parsePem: the same
+# language as [ws]+(...)[ws]+, without cubic backtracking on long whitespace runs.
 _PEM_BLOCK = re.compile(
-    "-----BEGIN ([A-Z0-9 -]+)-----[" + _JS_WHITESPACE + "]+"
-    "([A-Za-z0-9+/=" + _JS_WHITESPACE + "]+)[" + _JS_WHITESPACE + "]+"
+    "-----BEGIN ([A-Z0-9 -]+)-----"
+    "([" + _JS_WHITESPACE + "][A-Za-z0-9+/=" + _JS_WHITESPACE + "]+[" + _JS_WHITESPACE + "])"
     "-----END \\1-----"
 )
 _BASE64_ALPHABET = frozenset(
@@ -73,6 +75,15 @@ def _forgiving_base64(body: str) -> bytes:
     return base64.b64decode(data + "=" * (-len(data) % 4))
 
 
+def verify_mldsa65_raw(public_key: bytes, signature: bytes, signed_data: bytes) -> bool:
+    """Verify with a raw 1952-byte FIPS 204 public key, as verifyMlDsa65 does in TS."""
+    try:
+        MLDSA65PublicKey.from_public_bytes(public_key).verify(signature, signed_data)
+    except (InvalidSignature, ValueError):
+        return False
+    return True
+
+
 def verify_mldsa65(public_key_pem: bytes, signature: bytes, signed_data: bytes) -> bool:
     """Verify an RFC 9881 SPKI key, with read-only legacy raw-PEM support."""
     if b"-----BEGIN PUBLIC KEY-----" in public_key_pem:
@@ -90,8 +101,6 @@ def verify_mldsa65(public_key_pem: bytes, signature: bytes, signed_data: bytes) 
 
 def _pem_body(pem: bytes) -> bytes:
     """Strip PEM headers/footers and base64-decode the body."""
-    import base64
-
     text = pem.decode("ascii").strip()
     lines = [line for line in text.splitlines() if not line.startswith("-----")]
     return base64.b64decode("".join(lines))
