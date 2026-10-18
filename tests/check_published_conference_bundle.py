@@ -1,6 +1,8 @@
 """Download, authenticate, extract, and replay the published v0.6.1, v0.7.0 and v0.7.1 labs.
 
-v0.6.1 backs docs/pqc-hybrid-lab-five-minute-fallback.md; v0.7.1 is the current release.
+v0.7.1 is the current release. v0.7.0 backs docs/pqc-hybrid-lab-five-minute-fallback.md
+(its lab ZIP has the same contents as v0.7.1's); v0.6.1 stays replayed because earlier
+documents cite its 24 observations.
 """
 
 from __future__ import annotations

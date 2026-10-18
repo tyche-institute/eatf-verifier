@@ -19,6 +19,9 @@
   `PQC_VERIFY_ERROR` with `pqcValid: false` for exactly the keys TypeScript
   rejects. The pinned path has used this parser since v0.7.0. This closes the
   unpinned key-parsing difference listed under "Not changed here" for v0.7.1.
+- `docs/pqc-hybrid-lab-five-minute-fallback.md` now replays the v0.7.0 results,
+  with the three policies and a timed row for package 07. The v0.7.1 lab ZIP has
+  the same contents. CI still replays the published v0.6.1 ZIP as well.
 
 ## v0.7.1 — malformed ML-DSA entries are rejected, not crashed on (2026-10-18)
 
