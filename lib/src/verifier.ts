@@ -8,7 +8,8 @@
  *   3. Recompute supported canonical forms and compare to canonical.bin.
  *   4. Hash canonical bytes with SHA-256; compare to hash.sha256.
  *   5. Verify RSA signature with public_key.pem.
- *   6. If PQC entries present, verify ML-DSA-65 signature.
+ *   6. If PQC entries present, check the optional ML-DSA-65 key pin and
+ *      verify the ML-DSA-65 signature.
  *   7. Structural-check the RFC 3161 timestamp.
  *
  * Each step appends to the report; a single failure short-circuits.
@@ -19,7 +20,7 @@ import { unzipSync } from "fflate";
 import { canonical, jcs } from "./canonical.js";
 import { sha256, toHex } from "./hash.js";
 import { decodeBase64, importRsaPublicKey, verifyRsa, verifyRsaDigestInfo } from "./rsa.js";
-import { verifyMlDsa65 } from "./mldsa.js";
+import { mlDsa65PublicKeyFromPem, verifyMlDsa65 } from "./mldsa.js";
 import { inspectTsa, verifyTsaTrust } from "./tsa.js";
 import { parseAndValidateOvertReceipt, type OvertReceipt } from "./overt.js";
 import type { FailureCode, VerifyOptions, VerifyResult } from "./index.js";
@@ -41,6 +42,15 @@ export async function verify(
   ) {
     throw new Error("pqcPolicy must be 'if-present' or 'required'");
   }
+  const trustedPqcKeys = (opts.trustedPqcSignerPems ?? []).map((pem, i) => {
+    try {
+      return mlDsa65PublicKeyFromPem(pem);
+    } catch (e) {
+      throw new Error(
+        `trustedPqcSignerPems[${i}] is not an ML-DSA-65 public key: ${(e as Error).message}`,
+      );
+    }
+  });
   const report: string[] = [];
   const bytes = await toBytes(input);
   let metadata: Record<string, unknown> | null = null;
@@ -327,10 +337,52 @@ export async function verify(
       overtReceipt,
     );
   }
+  // A PQC key pin implies the pair is required; otherwise a classical-only
+  // package would bypass the pin.
+  if (!hasPqcSignature && trustedPqcKeys.length > 0) {
+    return fail(
+      report,
+      "PQC_SIGNATURE_REQUIRED",
+      "A caller-supplied ML-DSA-65 key pin requires a complete ML-DSA-65 signature pair.",
+      metadata,
+      pqcValid,
+      overtReceipt,
+    );
+  }
   if (hasPqcSignature && hasPqcKey) {
+    const pqcPem = TEXT_DEC.decode(entries["pqc_public_key.pem"]!);
+    if (trustedPqcKeys.length > 0) {
+      let packagedPqcKey: Uint8Array;
+      try {
+        packagedPqcKey = mlDsa65PublicKeyFromPem(pqcPem);
+      } catch (e) {
+        return fail(
+          report,
+          "PQC_VERIFY_ERROR",
+          `ML-DSA-65 verify error: ${(e as Error).message}.`,
+          metadata,
+          pqcValid,
+          overtReceipt,
+        );
+      }
+      if (!trustedPqcKeys.some((key) => constantTimeEqual(key, packagedPqcKey))) {
+        return fail(
+          report,
+          "PQC_SIGNER_NOT_TRUSTED",
+          "ML-DSA-65 signer public key is not in the caller-supplied trust set.",
+          metadata,
+          pqcValid,
+          overtReceipt,
+        );
+      }
+      report.push("ML-DSA-65 signer public key matched the caller-supplied trust set.");
+    } else {
+      report.push(
+        "ML-DSA-65 signer identity not evaluated (no trustedPqcSignerPems supplied).",
+      );
+    }
     const pqcSigB64 = TEXT_DEC.decode(entries["signature_pqc.sig"]!).trim();
     const pqcSig = decodeBase64(pqcSigB64);
-    const pqcPem = TEXT_DEC.decode(entries["pqc_public_key.pem"]!);
     try {
       pqcValid = await verifyMlDsa65(pqcPem, pqcSig, canonicalBytes);
       report.push(`ML-DSA-65 signature ${pqcValid ? "verified" : "FAILED"}.`);

@@ -44,6 +44,7 @@ __pycache__/
 *.pem
 !test-vectors/**/*.pem
 !test-vectors/**/*.key
+!workshops/pqc-hybrid-lab/keys/*.pem
 !artifacts/authority-record-v1/test-vectors/**/*.pem
 !artifacts/authority-record-v1/test-vectors/**/*.key
 !examples/**/*.pem

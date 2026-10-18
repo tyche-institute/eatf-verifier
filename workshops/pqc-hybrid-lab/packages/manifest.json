@@ -12,6 +12,11 @@
         "valid": true,
         "failureCode": null,
         "pqcValid": true
+      },
+      "pinned": {
+        "valid": true,
+        "failureCode": null,
+        "pqcValid": true
       }
     },
     "02-pqc-signature-tampered.aep": {
@@ -22,6 +27,11 @@
         "pqcValid": false
       },
       "required": {
+        "valid": false,
+        "failureCode": "PQC_SIGNATURE_INVALID",
+        "pqcValid": false
+      },
+      "pinned": {
         "valid": false,
         "failureCode": "PQC_SIGNATURE_INVALID",
         "pqcValid": false
@@ -38,6 +48,11 @@
         "valid": false,
         "failureCode": "OVERT_INVALID",
         "pqcValid": null
+      },
+      "pinned": {
+        "valid": false,
+        "failureCode": "OVERT_INVALID",
+        "pqcValid": null
       }
     },
     "04-classical-transition.aep": {
@@ -48,6 +63,11 @@
         "pqcValid": null
       },
       "required": {
+        "valid": false,
+        "failureCode": "PQC_SIGNATURE_REQUIRED",
+        "pqcValid": null
+      },
+      "pinned": {
         "valid": false,
         "failureCode": "PQC_SIGNATURE_REQUIRED",
         "pqcValid": null
@@ -64,6 +84,11 @@
         "valid": false,
         "failureCode": "OVERT_INVALID",
         "pqcValid": null
+      },
+      "pinned": {
+        "valid": false,
+        "failureCode": "OVERT_INVALID",
+        "pqcValid": null
       }
     },
     "06-response-tampered.aep": {
@@ -76,6 +101,29 @@
       "required": {
         "valid": false,
         "failureCode": "CANONICAL_FORM_MISMATCH",
+        "pqcValid": null
+      },
+      "pinned": {
+        "valid": false,
+        "failureCode": "CANONICAL_FORM_MISMATCH",
+        "pqcValid": null
+      }
+    },
+    "07-foreign-mldsa-key.aep": {
+      "sha256": "04ec09378ff8277f2931a3f6137b1f6e4013cdbadfc5f340c66d533925e3a8dd",
+      "transitional": {
+        "valid": true,
+        "failureCode": null,
+        "pqcValid": true
+      },
+      "required": {
+        "valid": true,
+        "failureCode": null,
+        "pqcValid": true
+      },
+      "pinned": {
+        "valid": false,
+        "failureCode": "PQC_SIGNER_NOT_TRUSTED",
         "pqcValid": null
       }
     }

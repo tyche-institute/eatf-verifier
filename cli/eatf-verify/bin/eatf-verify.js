@@ -7,7 +7,7 @@
  * Thin wrapper around the @eatf/verifier library (../lib). Reads one or
  * more .aep files, runs the full offline verification pipeline (envelope,
  * canonicalisation, hashes, classical + post-quantum signatures,
- * optional signer-key pin, RFC 3161 timestamp, and OVERT-inspired receipt), and prints a
+ * optional RSA and ML-DSA-65 signer-key pins, RFC 3161 timestamp, and OVERT-inspired receipt), and prints a
  * structured report.
  *
  * No network calls. No API keys. Trust anchors are passed in via CLI
@@ -40,10 +40,16 @@ Options:
                                              on stdout (machine-readable).
   --signer-key <pem-file>                    Require the embedded signer key to
                                              match this SPKI PEM. Repeatable.
+  --pqc-signer-key <pem-file>                Require the embedded ML-DSA-65 key
+                                             to match this RFC 9881 SPKI (or
+                                             legacy raw) PEM, one key per file.
+                                             Repeatable; implies --require-pqc.
   --tsa-trust-list <pem-file>                Advisory TSA issuer-name pin.
                                              Repeatable; not RFC 5280 validation.
   --require-pqc                              Reject packages without a complete,
                                              valid ML-DSA-65 signature pair.
+                                             Without --pqc-signer-key this does
+                                             not establish whose key signed.
   --offline-only                             Default. Refuse to consult any
                                              external resource.
   --version, -V                              Print version and exit.
@@ -63,10 +69,14 @@ Examples:
 `);
 }
 
+const VALUE_OPTIONS = new Set([
+  "--batch", "--conformance", "--signer-key", "--pqc-signer-key", "--tsa-trust-list",
+]);
+
 function parseArgs(argv) {
   const args = {
     paths: [], batch: null, conformance: null,
-    json: false, signerKeys: [], tsaTrustList: [], offlineOnly: true,
+    json: false, signerKeys: [], pqcSignerKeys: [], tsaTrustList: [], offlineOnly: true,
     requirePqc: false,
   };
   for (let i = 2; i < argv.length; i++) {
@@ -76,9 +86,16 @@ function parseArgs(argv) {
     if (a === "--json") { args.json = true; continue; }
     if (a === "--offline-only") { args.offlineOnly = true; continue; }
     if (a === "--require-pqc") { args.requirePqc = true; continue; }
+    if (VALUE_OPTIONS.has(a) && i + 1 >= argv.length) {
+      process.stderr.write(
+        `eatf-verify: option ${a} requires a value; see eatf-verify --help\n`,
+      );
+      return { error: 2, quiet: true };
+    }
     if (a === "--batch") { args.batch = argv[++i]; continue; }
     if (a === "--conformance") { args.conformance = argv[++i]; continue; }
     if (a === "--signer-key") { args.signerKeys.push(argv[++i]); continue; }
+    if (a === "--pqc-signer-key") { args.pqcSignerKeys.push(argv[++i]); continue; }
     if (a === "--tsa-trust-list") { args.tsaTrustList.push(argv[++i]); continue; }
     if (a.startsWith("--")) {
       process.stderr.write(`eatf-verify: unknown option ${a}\n`);
@@ -108,16 +125,17 @@ Underlying error: ${e?.message ?? e}
   }
 }
 
-async function loadTsaTrustList(paths) {
-  if (paths.length === 0) return [];
+async function readTrustFiles(flag, paths) {
   const out = [];
-  for (const p of paths) out.push(await readFile(resolve(p), "utf8"));
+  for (const p of paths) {
+    try {
+      out.push(await readFile(resolve(p), "utf8"));
+    } catch (e) {
+      process.stderr.write(`eatf-verify: cannot read ${flag} ${p}: ${e?.message ?? e}\n`);
+      return null;
+    }
+  }
   return out;
-}
-
-async function loadSignerKeys(paths) {
-  if (paths.length === 0) return [];
-  return Promise.all(paths.map((p) => readFile(resolve(p), "utf8")));
 }
 
 function findAep(root) {
@@ -157,15 +175,34 @@ async function main() {
   const args = parseArgs(process.argv);
   if (args.help) { usage(); return 0; }
   if (args.version) { process.stdout.write(`eatf-verify ${VERSION}\n`); return 0; }
-  if (args.error) { usage(); return args.error; }
+  if (args.error) { if (!args.quiet) usage(); return args.error; }
 
-  const { verify } = await loadVerifier();
-  const tsaTrustList = await loadTsaTrustList(args.tsaTrustList);
-  const trustedSignerPems = await loadSignerKeys(args.signerKeys);
+  const { verify, mlDsa65PublicKeyFromPem } = await loadVerifier();
+  const tsaTrustList = await readTrustFiles("--tsa-trust-list", args.tsaTrustList);
+  const trustedSignerPems = await readTrustFiles("--signer-key", args.signerKeys);
+  const trustedPqcSignerPems = await readTrustFiles("--pqc-signer-key", args.pqcSignerKeys);
+  if (!tsaTrustList || !trustedSignerPems || !trustedPqcSignerPems) return 2;
+  for (const [i, pem] of trustedPqcSignerPems.entries()) {
+    try {
+      mlDsa65PublicKeyFromPem(pem);
+    } catch (e) {
+      process.stderr.write(
+        `eatf-verify: --pqc-signer-key ${args.pqcSignerKeys[i]} is not an ML-DSA-65 public key: ${e?.message ?? e}\n`,
+      );
+      return 2;
+    }
+  }
+  if (args.requirePqc && trustedPqcSignerPems.length === 0) {
+    process.stderr.write(`\
+eatf-verify: warning: --require-pqc without --pqc-signer-key
+  checks that an ML-DSA-65 signature verifies, not whose key made it.
+`);
+  }
   const verifyOptions = {
     offlineOnly: args.offlineOnly,
     tsaTrustList,
     trustedSignerPems,
+    trustedPqcSignerPems,
     pqcPolicy: args.requirePqc ? "required" : "if-present",
   };
 

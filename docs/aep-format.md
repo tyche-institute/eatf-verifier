@@ -19,7 +19,7 @@ external standard.
 | `overt_receipt.json` | optional | OVERT-inspired receipt bound to hash and metadata |
 | `overt_receipt.sig` | conditional | RSA/SHA-256 signature over exact receipt bytes; required when named by signed metadata |
 | `signature_pqc.sig` | paired optional | Base64 ML-DSA-65 signature |
-| `pqc_public_key.pem` | paired optional | RFC 9881 ML-DSA-65 SubjectPublicKeyInfo; legacy raw-key PEM is read-only compatible |
+| `pqc_public_key.pem` | paired optional | RFC 9881 ML-DSA-65 SubjectPublicKeyInfo; legacy raw-key PEM is read-only compatible. Not authenticated by anything else in the package |
 
 ## Ordered verification
 
@@ -46,7 +46,14 @@ external standard.
    The current writer stores `id-ml-dsa-65` (`2.16.840.1.101.3.4.3.18`) with
    absent `AlgorithmIdentifier` parameters as required by RFC 9881. When the
    caller selects the `required` PQC policy, reject a package with no pair as
-   `PQC_SIGNATURE_REQUIRED`.
+   `PQC_SIGNATURE_REQUIRED`. If the caller supplied trusted ML-DSA-65 PEMs,
+   a missing pair is rejected the same way, and `pqc_public_key.pem` must
+   match one of them before the signature is checked
+   (`PQC_SIGNER_NOT_TRUSTED`). Keys are compared on the decoded 1952-byte
+   FIPS 204 encoding, so an RFC 9881 SPKI pin matches a legacy raw-key
+   package and vice versa. Each pin must be exactly one PEM block; both
+   verifiers parse PEM text by the same rules. Without this option, ML-DSA
+   signer identity is explicitly reported as not evaluated.
 9. Decode the RFC 3161 object, require SHA-256 as the imprint algorithm,
    require the imprint to equal `hash.sha256`, and verify the CMS SignerInfo
    against the embedded TSA signing certificate.
@@ -65,6 +72,18 @@ A package can be internally consistent yet signed by an unknown key. Therefore:
   of the embedded key, not verified organizational identity;
 - `valid=true` with a matching signer trust set additionally proves that the
   embedded key is one the caller selected out of band;
+- the RSA signer trust set covers `public_key.pem` only. `pqc_public_key.pem`
+  is a second, independent embedded key, and nothing in the package binds it
+  to the RSA key. With `pqcValid=true` and no ML-DSA-65 trust set, the
+  package proves only that some ML-DSA-65 key signed the same canonical
+  bytes. Anyone who can produce the RSA signature can also add their own
+  ML-DSA key, so the PQC half adds no assurance against a forger of the
+  classical half. The `required` PQC policy alone does not change this: it
+  requires that an ML-DSA signature exists, not whose key made it;
+- `valid=true` with matching RSA and ML-DSA-65 trust sets proves that both
+  embedded keys are ones the caller selected out of band. Only then does the
+  ML-DSA-65 signature show control of a selected key independently of the
+  RSA half;
 - timestamp CMS verification proves internal token integrity, while external
   TSA identity assurance remains deployment policy.
 

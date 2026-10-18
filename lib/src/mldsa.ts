@@ -122,8 +122,10 @@ export async function signMlDsa65(
 }
 
 function parsePem(pem: string): { label: string; bytes: Uint8Array } {
+  // One body group that starts and ends with whitespace accepts the same text
+  // as \s+(...)\s+ but cannot backtrack cubically on a long whitespace run.
   const match = pem.trim().match(
-    /^-----BEGIN ([A-Z0-9 -]+)-----\s+([A-Za-z0-9+/=\s]+)\s+-----END \1-----$/,
+    /^-----BEGIN ([A-Z0-9 -]+)-----(\s[A-Za-z0-9+/=\s]+\s)-----END \1-----$/,
   );
   if (!match) throw new Error("Malformed PEM block");
   return { label: match[1]!, bytes: decodeBase64(match[2]!.replace(/\s+/g, "")) };

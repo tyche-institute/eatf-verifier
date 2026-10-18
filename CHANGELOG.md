@@ -50,6 +50,57 @@
   they exit 1 before writing anything and name the missing cases and the
   command that restores or produces them. The deposited results are unchanged:
   with all 25 packages present, both scripts reproduce the committed CSV files.
+- **Fix: the ML-DSA-65 key was not pinned.** Through v0.6.1, `--signer-key` /
+  `trustedSignerPems` / `trusted_signer_pems` covered only `public_key.pem`
+  (RSA). `pqc_public_key.pem` was taken from the package itself, and nothing
+  else in the package authenticates it. Replacing only `signature_pqc.sig`
+  and `pqc_public_key.pem` with an unrelated ML-DSA-65 key's signature over
+  the same `canonical.bin` was accepted by both verifiers with `valid=true`
+  and `pqcValid=true`, under `if-present` and `--require-pqc`, and with the
+  RSA key pinned. `--require-pqc` proved that an ML-DSA-65 signature existed,
+  not whose key made it. Against a forger of the RSA half, the PQC half added
+  nothing.
+- Add an optional caller-supplied ML-DSA-65 key pin: `--pqc-signer-key <PEM>`
+  in both CLIs (repeatable), `trustedPqcSignerPems` in TypeScript and
+  `trusted_pqc_signer_pems` in Python. Pins are RFC 9881 SPKI or legacy
+  raw-key PEM and are compared on the decoded 1952-byte FIPS 204 key, so an
+  SPKI pin matches the same key in legacy raw-key form. Each pin must be
+  exactly one PEM block, and both verifiers parse PEM text by the same rules;
+  repeat the flag for several keys. A mismatch fails with the new code
+  `PQC_SIGNER_NOT_TRUSTED`, before the ML-DSA signature is checked.
+- A PQC pin implies the `required` policy: a package without an ML-DSA pair
+  fails with `PQC_SIGNATURE_REQUIRED` even under `if-present`, so a
+  classical-only package cannot bypass the pin. A pin that is not an ML-DSA-65
+  public key makes the libraries throw (`ValueError` in Python) and the CLIs
+  exit with status 2.
+- Both CLIs print a warning to stderr when `--require-pqc` is used without
+  `--pqc-signer-key`. Exit status and `--json` stdout do not change. Reports
+  now say when ML-DSA-65 signer identity was not evaluated.
+- Add the deterministic negative package `07-foreign-mldsa-key.aep` to the
+  PQC lab, made from a second public seed, and a third lab policy, `pinned`
+  (`--require-pqc` plus both signer keys, shipped under `keys/`). The lab now
+  replays 42 observations: 7 packages × 3 policies × 2 verifiers. The
+  v0.6.1 24 (packages 01–06 under `transitional` and `required`) are
+  unchanged, and packages 01–06 and both corpus vectors are byte-identical.
+  Only package 07 under `pinned` changes verdict.
+- Publish `test-vectors/keys/dev-mldsa65.pem`, the public key of the
+  workshop ML-DSA-65 signer. The shared conformance corpus is unchanged at 5
+  accepted and 8 rejected packages.
+- When a `--signer-key`, `--pqc-signer-key` or `--tsa-trust-list` file cannot be
+  read, `eatf-verify-py` now exits 2 with a one-line message instead of 1
+  with a traceback, and `eatf-verify` prints a one-line message instead of a
+  stack trace.
+- **Fix:** in v0.6.0 and v0.6.1 the ML-DSA-65 PEM parser could take cubic
+  time on a crafted `pqc_public_key.pem`, a long whitespace run without an END
+  line, because its pattern had three adjacent whitespace quantifiers. The
+  TypeScript verifier ran it on every package with an ML-DSA pair. The pattern
+  now has one body group and runs in linear time; it accepts the same PEM text
+  as before.
+- `eatf-verify` now exits 2 with "option X requires a value" when `--batch`,
+  `--conformance`, `--signer-key`, `--pqc-signer-key` or `--tsa-trust-list` is
+  the last argument. Before, a trailing `--batch` or `--conformance` was
+  ignored and the other paths were verified.
+- `examples/05-hybrid-mldsa65` now verifies with both signer keys pinned.
 
 ## v0.6.1 — portable conference download (2026-08-02)
 

@@ -5,6 +5,11 @@ is available, or the remaining session time is reduced to five minutes. It
 uses the immutable v0.6.1 prepared results; it does not replace or modify the
 released workshop ZIP.
 
+v0.6.1 predates the ML-DSA-65 signer-key pin. `required` alone has never been
+enough: a package can carry any ML-DSA-65 key. Since v0.7.0 a relying party
+can, and should, also pin the expected key with `--pqc-signer-key`; the v0.7.0
+lab shows this with package 07 and the `pinned` policy.
+
 Keep local copies of:
 
 - the [v0.6.1 conference ZIP](https://github.com/tyche-institute/eatf-verifier/releases/download/v0.6.1/eatf-pqc-hybrid-lab-v0.6.1.zip);
@@ -22,7 +27,7 @@ Display the transcript rather than improvising terminal output.
 | 2:25–3:10 | Highlight `03-pqc-pair-stripped.aep` under `transitional`. | Signed witness binding rejects stripping with `OVERT_INVALID`. |
 | 3:10–4:10 | Contrast both `04-classical-transition.aep` rows. | The legitimate classical package passes transition policy and fails only when PQC is required. |
 | 4:10–4:35 | Point to the incomplete-pair and changed-payload controls. | Structural and canonical failures occur before policy can make invalid evidence acceptable. |
-| 4:35–5:00 | Ask attendees to write one evidence class or cut-over date after which their relying party must select `required`. | The fallback still produces an actionable acceptance rule. |
+| 4:35–5:00 | Ask attendees to write one evidence class or cut-over date after which their relying party must select `required` and pin the expected ML-DSA-65 key. | The fallback still produces an actionable acceptance rule. |
 
 Close on the transcript's final line:
 

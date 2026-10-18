@@ -18,19 +18,33 @@ Expected decision table:
 package                              policy         TypeScript  Python  first code
 01-valid-hybrid.aep                  transitional   True        True    -
 01-valid-hybrid.aep                  required       True        True    -
+01-valid-hybrid.aep                  pinned         True        True    -
 02-pqc-signature-tampered.aep        transitional   False       False   PQC_SIGNATURE_INVALID
 02-pqc-signature-tampered.aep        required       False       False   PQC_SIGNATURE_INVALID
+02-pqc-signature-tampered.aep        pinned         False       False   PQC_SIGNATURE_INVALID
 03-pqc-pair-stripped.aep             transitional   False       False   OVERT_INVALID
 03-pqc-pair-stripped.aep             required       False       False   OVERT_INVALID
+03-pqc-pair-stripped.aep             pinned         False       False   OVERT_INVALID
 04-classical-transition.aep          transitional   True        True    -
 04-classical-transition.aep          required       False       False   PQC_SIGNATURE_REQUIRED
+04-classical-transition.aep          pinned         False       False   PQC_SIGNATURE_REQUIRED
 05-pqc-signature-missing.aep         transitional   False       False   OVERT_INVALID
 05-pqc-signature-missing.aep         required       False       False   OVERT_INVALID
+05-pqc-signature-missing.aep         pinned         False       False   OVERT_INVALID
 06-response-tampered.aep             transitional   False       False   CANONICAL_FORM_MISMATCH
 06-response-tampered.aep             required       False       False   CANONICAL_FORM_MISMATCH
+06-response-tampered.aep             pinned         False       False   CANONICAL_FORM_MISMATCH
+07-foreign-mldsa-key.aep             transitional   True        True    -
+07-foreign-mldsa-key.aep             required       True        True    -
+07-foreign-mldsa-key.aep             pinned         False       False   PQC_SIGNER_NOT_TRUSTED
 
 Cross-language policy mismatches: 0
 ```
+
+The table holds 42 observations: seven packages, three policies, two
+verifiers. The `transitional` and `required` rows for packages 01–06 are the
+24 observations of v0.6.1 and are unchanged. `pinned` runs
+`--require-pqc --signer-key keys/dev-rsa-4096.pem --pqc-signer-key keys/dev-mldsa65.pem`.
 
 Interpretation:
 
@@ -42,3 +56,8 @@ Interpretation:
   explicit relying-party `required` policy rejects it.
 - An incomplete hybrid pair and a changed payload fail before a relying party
   could treat the package as valid evidence.
+- A foreign ML-DSA-65 key over the same canonical bytes passes `required`:
+  that policy proves an ML-DSA signature exists, not whose key made it.
+  Only the caller-supplied ML-DSA-65 key pin in `pinned` rejects it, with
+  `PQC_SIGNER_NOT_TRUSTED`. In every other row, `pinned` reaches the same
+  first code as `required`.

@@ -13,6 +13,7 @@ result = verify(
     open("action.aep", "rb").read(),
     VerifyOptions(
         trusted_signer_pems=[open("expected.pem", "rb").read()],
+        trusted_pqc_signer_pems=[open("expected-mldsa65.pem", "rb").read()],
         pqc_policy="required",
     ),
 )
@@ -26,7 +27,16 @@ eatf-verify-py --signer-key expected.pem action.aep
 eatf-verify-py --conformance test-vectors/
 eatf-verify-py --json action.aep
 eatf-verify-py --require-pqc hybrid.aep
+eatf-verify-py --require-pqc --signer-key expected.pem \
+  --pqc-signer-key expected-mldsa65.pem hybrid.aep
 ```
+
+`--signer-key` / `trusted_signer_pems` pins only the RSA key.
+`--pqc-signer-key` / `trusted_pqc_signer_pems` pins the ML-DSA-65 key, compared
+on the decoded FIPS 204 key, one PEM block per file, and implies
+`--require-pqc`. Repeat the flag for several keys. Without it,
+`--require-pqc` does not establish whose ML-DSA-65 key signed, and the CLI
+prints a warning to stderr.
 
 Base installation verifies RSA and ML-DSA-65 packages. It uses
 `cryptography>=49` for FIPS 204 verification and RFC 9881 SPKI parsing; no

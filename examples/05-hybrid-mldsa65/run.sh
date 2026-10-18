@@ -22,8 +22,12 @@ mkdir -p "$OUTPUT_DIR"
   --timestamp "$REPO_ROOT/test-vectors/valid/minimal-roundtrip/package.aep:timestamp.tsr" \
   --out "$OUTPUT_DIR/hybrid-mldsa65.aep"
 
-"$REPO_ROOT/bin/eatf-verify" --require-pqc "$OUTPUT_DIR/hybrid-mldsa65.aep"
-"$REPO_ROOT/bin/eatf-verify-py" --require-pqc "$OUTPUT_DIR/hybrid-mldsa65.aep"
+for verifier in eatf-verify eatf-verify-py; do
+  "$REPO_ROOT/bin/$verifier" --require-pqc \
+    --signer-key "$REPO_ROOT/test-vectors/keys/dev-rsa-4096.pem" \
+    --pqc-signer-key "$OUTPUT_DIR/dev-mldsa65.pem" \
+    "$OUTPUT_DIR/hybrid-mldsa65.aep"
+done
 
 printf 'Hybrid round-trip passed with both verifiers: %s\n' "$OUTPUT_DIR/hybrid-mldsa65.aep"
 if [[ "$REMOVE_OUTPUT" == true ]]; then
