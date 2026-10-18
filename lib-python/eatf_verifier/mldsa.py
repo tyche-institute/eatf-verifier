@@ -19,7 +19,7 @@ ML_DSA_65_PUBLIC_KEY_BYTES = 1952
 # same 22 bytes as ML_DSA_65_SPKI_PREFIX in lib/src/mldsa.ts.
 _ML_DSA_65_SPKI_PREFIX = bytes.fromhex("308207b2300b0609608648016503040312038207a100")
 
-# Pins, and packaged keys compared with a pin, are parsed exactly as
+# Pins and packaged keys, with or without a pin, are parsed exactly as
 # lib/src/mldsa.ts parsePem and decodeBase64 parse them, so the two verifiers
 # accept and reject the same PEM text. _JS_WHITESPACE is the set that
 # JavaScript's String.prototype.trim() and regex \s use.

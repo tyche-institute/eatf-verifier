@@ -239,11 +239,18 @@ const UNPINNED: Array<[string, (spki: string, legacy: string, rsa: string) => st
   ["a trailing NUL", (s) => s + "\u0000", false],
   ["a six-dash END line", (s) => s.replace("-----END PUBLIC KEY-----", "-----END PUBLIC KEY------"), false],
   ["an RSA public key", (_s, _l, r) => r, false],
+  ["a valid PEM block followed by a second block", (s, l) => s + l, false],
+  ["a valid PEM block followed by other text", (s) => s + "more text\n", false],
+  [
+    "the raw key as bare base64 without armour",
+    (_s, l) => l.split("\n").filter((line) => line && !line.startsWith("-----")).join("\n") + "\n",
+    false,
+  ],
 ];
 
 describe("packaged ML-DSA-65 key without a pin (shared with the Python verifier)", () => {
   test.each(UNPINNED)("%s", async (_label, make, accepted) => {
-    const rsa = await keyPem("dev-rsa-4096.pem");
+    const rsa = (await keyPem("dev-rsa-4096.pem")).replace(/\r\n/g, "\n");
     const result = await verify(
       withEntry(
         await labPackage("01-valid-hybrid.aep"),

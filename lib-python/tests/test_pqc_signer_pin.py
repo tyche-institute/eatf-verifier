@@ -352,6 +352,16 @@ UNPINNED = [
     ("a trailing NUL", lambda s, lg, r: s + "\x00", False),
     ("a six-dash END line", lambda s, lg, r: s.replace(END_SPKI, END_SPKI + "-", 1), False),
     ("an RSA public key", lambda s, lg, r: r, False),
+    ("a valid PEM block followed by a second block", lambda s, lg, r: s + lg, False),
+    ("a valid PEM block followed by other text", lambda s, lg, r: s + "more text\n", False),
+    (
+        "the raw key as bare base64 without armour",
+        lambda s, lg, r: "\n".join(
+            line for line in lg.split("\n") if line and not line.startswith("-----")
+        )
+        + "\n",
+        False,
+    ),
 ]
 
 

@@ -46,6 +46,8 @@ external standard.
    `signature_pqc.sig` (`PQC_SIGNATURE_ENCODING` if it is not padded base64)
    and verify it over the same canonical bytes (`PQC_VERIFY_ERROR` if
    `pqc_public_key.pem` cannot be loaded as an ML-DSA-65 key).
+   `pqc_public_key.pem` must be exactly one PEM block (RFC 9881 SPKI or the
+   legacy raw-key form) and is parsed by the same rules as a pin.
    The current writer stores `id-ml-dsa-65` (`2.16.840.1.101.3.4.3.18`) with
    absent `AlgorithmIdentifier` parameters as required by RFC 9881. When the
    caller selects the `required` PQC policy, reject a package with no pair as
