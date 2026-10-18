@@ -8,7 +8,7 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
-## Unreleased
+## v0.7.1 — malformed ML-DSA entries are rejected, not crashed on (2026-10-18)
 
 - **Fix both verifiers crashing on malformed ML-DSA entries instead of
   rejecting the package.** A `signature_pqc.sig` that is not base64 made
@@ -55,6 +55,8 @@
   pin. The conformance corpus (5 verified, 8 rejected), the 42 lab
   observations and the 21 decision-path cases give the same results as
   before.
+- All npm workspaces and the Python package are 0.7.1, and `eatf-verify`,
+  `eatf-sign` and `eatf-inspect --version` report 0.7.1.
 
 ## v0.7.0 — ML-DSA-65 signer-key pin and counted conformance (2026-10-18)
 
