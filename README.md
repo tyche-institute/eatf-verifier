@@ -238,8 +238,8 @@ one-time verifier setup and is archived at
 [doi:10.5281/zenodo.21763768](https://doi.org/10.5281/zenodo.21763768). The
 current v0.7.0 release adds the caller-supplied ML-DSA-65 signer-key pin and
 makes Windows conformance count its vectors. It is archived at
-[doi:10.5281/zenodo.23451134](https://doi.org/10.5281/zenodo.23451134) and remains in the Zenodo
-version chain that began at v0.6.0, with concept DOI
+[doi:10.5281/zenodo.23451134](https://doi.org/10.5281/zenodo.23451134) and
+remains in the Zenodo version chain that began at v0.6.0, with concept DOI
 [doi:10.5281/zenodo.21763055](https://doi.org/10.5281/zenodo.21763055).
 Releases through v0.5.0 remain under the earlier concept DOI
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).
