@@ -8,23 +8,24 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
-## Unreleased
+## v0.7.1 — malformed ML-DSA entries are rejected, not crashed on (2026-10-18)
 
 - **Fix both verifiers crashing on malformed ML-DSA entries instead of
   rejecting the package.** A `signature_pqc.sig` that is not base64 made
   `eatf-verify` exit 2 with a stack trace and `eatf-verify-py` exit 1 with a
-  traceback and no JSON. A `pqc_public_key.pem` that neither parser can load,
+  traceback and no JSON; in v0.7.0 this happened with or without
+  `--pqc-signer-key`. A `pqc_public_key.pem` that neither parser can load,
   such as an RSA SubjectPublicKeyInfo or text that is not PEM, gave
-  `PQC_VERIFY_ERROR` in TypeScript but crashed the Python verifier. v0.7.0 and
-  earlier are affected, with or without `--pqc-signer-key`. Both verifiers now
-  return `valid: false` with `pqcValid: false`: the new code
-  `PQC_SIGNATURE_ENCODING`, which mirrors `RSA_SIGNATURE_ENCODING`, when the
-  signature does not decode, and `PQC_VERIFY_ERROR` when the key cannot be
-  used. The signature encoding is checked after the optional key pin and
-  before the signature. Without a pin, a package with both an undecodable
-  signature and an unusable key fails with `PQC_SIGNATURE_ENCODING`. With a
-  pin, the pin check reports the key first (`PQC_VERIFY_ERROR` or
-  `PQC_SIGNER_NOT_TRUSTED`, with `pqcValid: null`).
+  `PQC_VERIFY_ERROR` in TypeScript but crashed the Python verifier unless
+  `--pqc-signer-key` was given. Both verifiers now return `valid: false`: the
+  new code `PQC_SIGNATURE_ENCODING`, which mirrors `RSA_SIGNATURE_ENCODING`,
+  with `pqcValid: false` when the signature does not decode, and
+  `PQC_VERIFY_ERROR` when the key cannot be used (`pqcValid: false`, or
+  `null` when a key pin is supplied). The signature encoding is checked after
+  the optional key pin and before the signature. Without a pin, a package with
+  both an undecodable signature and an unusable key fails with
+  `PQC_SIGNATURE_ENCODING`. With a pin, the pin check reports the key first
+  (`PQC_VERIFY_ERROR` or `PQC_SIGNER_NOT_TRUSTED`, with `pqcValid: null`).
 - **The Python verifier accepted an ML-DSA signature with a stray character in
   it.** Its lenient base64 decoder skipped bytes outside the alphabet, so a
   valid signature with one `!` inserted still verified, while TypeScript
@@ -47,14 +48,19 @@
   `pqcValid: null` instead of crashing.
 - Not changed here: without a key pin, the two key parsers still disagree on
   some malformed spellings of `pqc_public_key.pem` that only one of them can
-  load. For example, a bare base64 key without PEM armour verifies in Python
-  and fails with `PQC_VERIFY_ERROR` in TypeScript.
+  load. For example, the raw 1952-byte key as bare base64 without PEM armour,
+  a raw key under an arbitrary PEM label, or a valid PEM block followed by
+  other text verifies in Python and fails with `PQC_VERIFY_ERROR` in
+  TypeScript. With `--pqc-signer-key` both verifiers parse the key by the
+  same rules.
 - Regression tests built from the lab packages are in
-  `lib/test/pqc-malformed.test.ts` and `lib-python/tests/test_pqc_malformed.py`,
-  with the same cases in both; the signature cases run with and without a key
-  pin. The conformance corpus (5 verified, 8 rejected), the 42 lab
-  observations and the 21 decision-path cases give the same results as
-  before.
+  `lib/test/pqc-malformed.test.ts` and `lib-python/tests/test_pqc_malformed.py`:
+  31 cases shared by both, whose signature cases run with and without a key
+  pin, plus 4 Python-only tests for `PQC_SUPPORT_UNAVAILABLE`. The conformance
+  corpus (5 verified, 8 rejected), the 42 lab observations and the 21
+  decision-path cases give the same results as before.
+- All npm workspaces and the Python package are 0.7.1, and `eatf-verify`,
+  `eatf-sign` and `eatf-inspect --version` report 0.7.1.
 
 ## v0.7.0 — ML-DSA-65 signer-key pin and counted conformance (2026-10-18)
 
