@@ -87,8 +87,10 @@ function parseArgs(argv) {
     if (a === "--offline-only") { args.offlineOnly = true; continue; }
     if (a === "--require-pqc") { args.requirePqc = true; continue; }
     if (VALUE_OPTIONS.has(a) && i + 1 >= argv.length) {
-      process.stderr.write(`eatf-verify: option ${a} requires a value\n`);
-      return { error: 2 };
+      process.stderr.write(
+        `eatf-verify: option ${a} requires a value; see eatf-verify --help\n`,
+      );
+      return { error: 2, quiet: true };
     }
     if (a === "--batch") { args.batch = argv[++i]; continue; }
     if (a === "--conformance") { args.conformance = argv[++i]; continue; }
@@ -173,7 +175,7 @@ async function main() {
   const args = parseArgs(process.argv);
   if (args.help) { usage(); return 0; }
   if (args.version) { process.stdout.write(`eatf-verify ${VERSION}\n`); return 0; }
-  if (args.error) { usage(); return args.error; }
+  if (args.error) { if (!args.quiet) usage(); return args.error; }
 
   const { verify, mlDsa65PublicKeyFromPem } = await loadVerifier();
   const tsaTrustList = await readTrustFiles("--tsa-trust-list", args.tsaTrustList);

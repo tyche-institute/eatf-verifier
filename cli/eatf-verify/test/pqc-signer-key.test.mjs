@@ -54,11 +54,15 @@ test("--pqc-signer-key without --require-pqc rejects a foreign ML-DSA key", () =
   assert.ok(!proc.stderr.includes("warning"), proc.stderr);
 });
 
-test("a trust flag without a value is a usage error", () => {
-  const proc = run(hybrid, "--signer-key");
-  assert.equal(proc.status, 2);
-  assert.ok(proc.stderr.includes("option --signer-key requires a value"), proc.stderr);
-});
+for (const flag of ["--batch", "--conformance", "--signer-key", "--pqc-signer-key", "--tsa-trust-list"]) {
+  test(`${flag} as the last argument is a usage error`, () => {
+    const proc = run("--json", hybrid, flag);
+    assert.equal(proc.status, 2, proc.stdout + proc.stderr);
+    assert.equal(proc.stdout, "");
+    assert.equal(lines(proc.stderr).length, 1, proc.stderr);
+    assert.ok(proc.stderr.includes(`option ${flag} requires a value`), proc.stderr);
+  });
+}
 
 for (const kind of ["rsa", "two-blocks"]) {
   test(`a --pqc-signer-key file that is not one ML-DSA-65 key exits 2 (${kind})`, () => withTempDir((dir) => {
