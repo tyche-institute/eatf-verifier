@@ -12,8 +12,9 @@ only for tests.
 `dev-mldsa65.pem` is written by `scripts/generate-pqc-workshop.mjs`. Its
 private key is derived from the public seed
 SHA-256(`EATF public PKIC PQC workshop seed v1`), so it is just as public as
-the RSA fixtures. It signs `valid/hybrid-mldsa65` and the hybrid workshop
-packages.
+the RSA fixtures. It is the ML-DSA-65 key in `valid/hybrid-mldsa65` and in
+workshop packages 01, 02, 05 and 06. Package 07 carries a different key,
+derived from SHA-256(`EATF public PKIC PQC workshop foreign ML-DSA seed v1`).
 
 The TSA certificate has a critical `timeStamping` extended key usage and is
 used by `scripts/regenerate-test-timestamps.py`. The test vectors embed the TSA

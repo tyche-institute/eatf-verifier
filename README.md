@@ -37,7 +37,7 @@ offline package and verification workflow for one recorded agent action.
 | `schemas/` | JSON Schemas for AEP metadata and the OVERT-inspired receipt |
 | `test-vectors/` | 5 accepted and 8 rejected conformance packages |
 | `examples/` | Five executable reviewer journeys, including hybrid signing |
-| `workshops/pqc-hybrid-lab/` | Six prepared packages for ML-DSA tamper and downgrade exercises |
+| `workshops/pqc-hybrid-lab/` | Seven prepared packages for ML-DSA tamper, downgrade and key-substitution exercises |
 | `experiments/decision-path/` | Model-based differential oracle, generated corpus, and results |
 | `docs/aep-format.md` | Implemented wire-format and verification contract |
 | `docs/pqc-archive-migration-worksheet.md` | One-page inventory for long-lived signed records |

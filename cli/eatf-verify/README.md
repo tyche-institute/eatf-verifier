@@ -20,9 +20,10 @@ Important options:
   pin. It is not RFC 5280 path validation.
 - `--pqc-signer-key PEM` requires the embedded ML-DSA-65 key to match one of
   the caller-supplied keys (RFC 9881 SPKI or legacy raw-key PEM, compared on
-  the decoded key). Repeatable; it implies `--require-pqc`. A mismatch fails
-  with `PQC_SIGNER_NOT_TRUSTED`. A file that is not an ML-DSA-65 public key
-  exits with status 2.
+  the decoded key). Each file holds exactly one PEM block; repeat the flag for
+  several keys, for example during rotation. It implies `--require-pqc`. A
+  mismatch fails with `PQC_SIGNER_NOT_TRUSTED`. A file that cannot be read or
+  is not exactly one ML-DSA-65 public key exits with status 2.
 - `--require-pqc` rejects packages without a complete, valid ML-DSA-65 pair.
   Without it, classical-only transition packages remain acceptable. Without
   `--pqc-signer-key` it does not establish whose ML-DSA-65 key signed; the CLI

@@ -51,9 +51,9 @@ One substitution passes both policies:
   `if-present` and under `required`, even with the RSA key pinned. Only the
   `pinned` policy (`--require-pqc --signer-key keys/dev-rsa-4096.pem
   --pqc-signer-key keys/dev-mldsa65.pem`) rejects it, with
-  `PQC_SIGNER_NOT_TRUSTED`. `--require-pqc` alone proves that an ML-DSA-65 signature exists, not whose
-  key made it, and both CLIs print a warning to stderr when it is used without
-  `--pqc-signer-key`.
+  `PQC_SIGNER_NOT_TRUSTED`. `--require-pqc` alone proves that an ML-DSA-65
+  signature exists, not whose key made it, and both CLIs print a warning to
+  stderr when it is used without `--pqc-signer-key`.
 
 ## Inspect one package
 

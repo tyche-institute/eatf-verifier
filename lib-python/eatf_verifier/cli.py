@@ -52,7 +52,7 @@ def main(argv: list[str] | None = None) -> int:
         metavar="PEM",
         help=(
             "Require the embedded ML-DSA-65 key to match this RFC 9881 SPKI (or legacy "
-            "raw) PEM. Repeatable; implies --require-pqc."
+            "raw) PEM, one key per file. Repeatable; implies --require-pqc."
         ),
     )
     parser.add_argument(
@@ -85,7 +85,11 @@ def main(argv: list[str] | None = None) -> int:
         parser.print_help(sys.stderr)
         return 2
 
-    trusted_pqc_signer_pems = [pathlib.Path(p).read_bytes() for p in args.pqc_signer_key]
+    signer_pems = _read_files("--signer-key", args.signer_key)
+    trusted_pqc_signer_pems = _read_files("--pqc-signer-key", args.pqc_signer_key)
+    tsa_pems = _read_files("--tsa-trust-list", args.tsa_trust_list)
+    if signer_pems is None or trusted_pqc_signer_pems is None or tsa_pems is None:
+        return 2
     if trusted_pqc_signer_pems:
         from .mldsa import mldsa65_public_key_from_pem
     for path, pem in zip(args.pqc_signer_key, trusted_pqc_signer_pems, strict=True):
@@ -106,9 +110,9 @@ def main(argv: list[str] | None = None) -> int:
 
     opts = VerifyOptions(
         offline_only=args.offline_only,
-        trusted_signer_pems=[pathlib.Path(p).read_bytes() for p in args.signer_key],
+        trusted_signer_pems=signer_pems,
         trusted_pqc_signer_pems=trusted_pqc_signer_pems,
-        tsa_trust_list=[pathlib.Path(p).read_bytes() for p in args.tsa_trust_list],
+        tsa_trust_list=tsa_pems,
         pqc_policy="required" if args.require_pqc else "if-present",
     )
 
@@ -117,6 +121,17 @@ def main(argv: list[str] | None = None) -> int:
     if args.batch:
         return _run_batch(args.batch, opts, json_out=args.json)
     return _run_single_files(args.paths, opts, json_out=args.json)
+
+
+def _read_files(flag: str, paths: list[str]) -> list[bytes] | None:
+    out: list[bytes] = []
+    for p in paths:
+        try:
+            out.append(pathlib.Path(p).read_bytes())
+        except OSError as exc:
+            print(f"eatf-verify-py: cannot read {flag} {p}: {exc.strerror or exc}", file=sys.stderr)
+            return None
+    return out
 
 
 def _run_single_files(paths: list[str], opts: VerifyOptions, *, json_out: bool) -> int:

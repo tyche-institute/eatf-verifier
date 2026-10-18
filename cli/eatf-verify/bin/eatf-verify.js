@@ -42,8 +42,8 @@ Options:
                                              match this SPKI PEM. Repeatable.
   --pqc-signer-key <pem-file>                Require the embedded ML-DSA-65 key
                                              to match this RFC 9881 SPKI (or
-                                             legacy raw) PEM. Repeatable;
-                                             implies --require-pqc.
+                                             legacy raw) PEM, one key per file.
+                                             Repeatable; implies --require-pqc.
   --tsa-trust-list <pem-file>                Advisory TSA issuer-name pin.
                                              Repeatable; not RFC 5280 validation.
   --require-pqc                              Reject packages without a complete,
@@ -115,16 +115,17 @@ Underlying error: ${e?.message ?? e}
   }
 }
 
-async function loadTsaTrustList(paths) {
-  if (paths.length === 0) return [];
+async function readTrustFiles(flag, paths) {
   const out = [];
-  for (const p of paths) out.push(await readFile(resolve(p), "utf8"));
+  for (const p of paths) {
+    try {
+      out.push(await readFile(resolve(p), "utf8"));
+    } catch (e) {
+      process.stderr.write(`eatf-verify: cannot read ${flag} ${p}: ${e?.message ?? e}\n`);
+      return null;
+    }
+  }
   return out;
-}
-
-async function loadSignerKeys(paths) {
-  if (paths.length === 0) return [];
-  return Promise.all(paths.map((p) => readFile(resolve(p), "utf8")));
 }
 
 function findAep(root) {
@@ -167,9 +168,10 @@ async function main() {
   if (args.error) { usage(); return args.error; }
 
   const { verify, mlDsa65PublicKeyFromPem } = await loadVerifier();
-  const tsaTrustList = await loadTsaTrustList(args.tsaTrustList);
-  const trustedSignerPems = await loadSignerKeys(args.signerKeys);
-  const trustedPqcSignerPems = await loadSignerKeys(args.pqcSignerKeys);
+  const tsaTrustList = await readTrustFiles("--tsa-trust-list", args.tsaTrustList);
+  const trustedSignerPems = await readTrustFiles("--signer-key", args.signerKeys);
+  const trustedPqcSignerPems = await readTrustFiles("--pqc-signer-key", args.pqcSignerKeys);
+  if (!tsaTrustList || !trustedSignerPems || !trustedPqcSignerPems) return 2;
   for (const [i, pem] of trustedPqcSignerPems.entries()) {
     try {
       mlDsa65PublicKeyFromPem(pem);

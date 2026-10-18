@@ -32,8 +32,10 @@ class VerifyOptions:
     trusted_pqc_signer_pems: list[bytes] = field(default_factory=list)
     """Optional ML-DSA-65 trust set (RFC 9881 SPKI or legacy raw-key PEM).
 
-    Keys are compared on the decoded 1952-byte FIPS 204 encoding, so either
-    PEM spelling matches. A non-empty list also requires a complete ML-DSA-65
+    Keys are compared on the decoded 1952-byte FIPS 204 encoding, so the SPKI
+    and legacy forms of one key match. Each entry must be exactly one PEM block,
+    parsed by the same rules as the TypeScript verifier. A non-empty list also
+    requires a complete ML-DSA-65
     pair, as ``pqc_policy="required"`` does. An empty list leaves
     ``pqc_public_key.pem`` unauthenticated. A malformed entry raises
     ``ValueError``.

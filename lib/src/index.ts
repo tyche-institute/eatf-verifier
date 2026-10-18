@@ -87,8 +87,9 @@ export type VerifyOptions = {
   /**
    * Optional explicit list of trusted ML-DSA-65 public keys (RFC 9881 SPKI
    * PEM or the legacy raw-key PEM) for the post-quantum signer. Keys are
-   * compared on the decoded 1952-byte FIPS 204 encoding, so either PEM
-   * spelling matches. A non-empty list also requires a complete ML-DSA-65
+   * compared on the decoded 1952-byte FIPS 204 encoding, so the SPKI and
+   * legacy forms of one key match. Each entry must be exactly one PEM block.
+   * A non-empty list also requires a complete ML-DSA-65
    * pair, as `pqcPolicy: "required"` does. If empty (default),
    * `pqc_public_key.pem` is taken from the package itself and proves only
    * control of that embedded key. A malformed entry throws.

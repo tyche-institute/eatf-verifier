@@ -33,7 +33,8 @@ eatf-verify-py --require-pqc --signer-key expected.pem \
 
 `--signer-key` / `trusted_signer_pems` pins only the RSA key.
 `--pqc-signer-key` / `trusted_pqc_signer_pems` pins the ML-DSA-65 key, compared
-on the decoded FIPS 204 key, and implies `--require-pqc`. Without it,
+on the decoded FIPS 204 key, one PEM block per file, and implies
+`--require-pqc`. Repeat the flag for several keys. Without it,
 `--require-pqc` does not establish whose ML-DSA-65 key signed, and the CLI
 prints a warning to stderr.
 

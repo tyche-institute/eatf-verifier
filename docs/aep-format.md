@@ -51,7 +51,9 @@ external standard.
    match one of them before the signature is checked
    (`PQC_SIGNER_NOT_TRUSTED`). Keys are compared on the decoded 1952-byte
    FIPS 204 encoding, so an RFC 9881 SPKI pin matches a legacy raw-key
-   package and vice versa. Without this option, ML-DSA signer identity is
+   package and vice versa. Each pin must be exactly one PEM block; both
+   verifiers parse PEM text by the same rules. Without this option, ML-DSA
+   signer identity is
    explicitly reported as not evaluated.
 9. Decode the RFC 3161 object, require SHA-256 as the imprint algorithm,
    require the imprint to equal `hash.sha256`, and verify the CMS SignerInfo

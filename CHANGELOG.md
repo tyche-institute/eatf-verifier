@@ -63,8 +63,10 @@
 - Add an optional caller-supplied ML-DSA-65 key pin: `--pqc-signer-key <PEM>`
   in both CLIs (repeatable), `trustedPqcSignerPems` in TypeScript and
   `trusted_pqc_signer_pems` in Python. Pins are RFC 9881 SPKI or legacy
-  raw-key PEM and are compared on the decoded 1952-byte FIPS 204 key, so the
-  PEM spelling does not matter. A mismatch fails with the new code
+  raw-key PEM and are compared on the decoded 1952-byte FIPS 204 key, so an
+  SPKI pin matches the same key in legacy raw-key form. Each pin must be
+  exactly one PEM block, and both verifiers parse PEM text by the same rules;
+  repeat the flag for several keys. A mismatch fails with the new code
   `PQC_SIGNER_NOT_TRUSTED`, before the ML-DSA signature is checked.
 - A PQC pin implies the `required` policy: a package without an ML-DSA pair
   fails with `PQC_SIGNATURE_REQUIRED` even under `if-present`, so a
@@ -84,6 +86,10 @@
 - Publish `test-vectors/keys/dev-mldsa65.pem`, the public key of the
   workshop ML-DSA-65 signer. The shared conformance corpus is unchanged at 5
   accepted and 8 rejected packages.
+- When a `--signer-key`, `--pqc-signer-key` or `--tsa-trust-list` file cannot be
+  read, `eatf-verify-py` now exits 2 with a one-line message instead of 1
+  with a traceback, and `eatf-verify` prints a one-line message instead of a
+  stack trace.
 - `examples/05-hybrid-mldsa65` now verifies with both signer keys pinned.
 
 ## v0.6.1 — portable conference download (2026-08-02)
