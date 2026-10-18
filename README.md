@@ -241,8 +241,9 @@ Windows conformance count its vectors; it is archived at
 [doi:10.5281/zenodo.23451134](https://doi.org/10.5281/zenodo.23451134). The
 current v0.7.1 patch makes both verifiers return a failure code instead of
 crashing on malformed ML-DSA entries, with a shared code for every malformed
-signature entry. It remains in the Zenodo version
-chain that began at v0.6.0, with concept DOI
+signature entry. It is archived at
+[doi:10.5281/zenodo.23456866](https://doi.org/10.5281/zenodo.23456866) and
+remains in the Zenodo version chain that began at v0.6.0, with concept DOI
 [doi:10.5281/zenodo.21763055](https://doi.org/10.5281/zenodo.21763055).
 Releases through v0.5.0 remain under the earlier concept DOI
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).
