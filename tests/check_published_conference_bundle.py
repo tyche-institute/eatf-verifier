@@ -1,4 +1,7 @@
-"""Download, authenticate, extract, and replay the published v0.6.1 lab."""
+"""Download, authenticate, extract, and replay the published v0.6.1 and v0.7.0 labs.
+
+v0.6.1 backs docs/pqc-hybrid-lab-five-minute-fallback.md; v0.7.0 is the current release.
+"""
 
 from __future__ import annotations
 
@@ -12,13 +15,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.6.1"
-ARCHIVE_NAME = f"eatf-pqc-hybrid-lab-v{VERSION}.zip"
-RELEASE_BASE = (
-    f"https://github.com/tyche-institute/eatf-verifier/releases/download/v{VERSION}"
-)
-ARCHIVE_URL = f"{RELEASE_BASE}/{ARCHIVE_NAME}"
-CHECKSUM_URL = f"{ARCHIVE_URL}.sha256"
+VERSIONS = ("0.6.1", "0.7.0")
 REQUIRED_ENTRIES = {
     "README.md",
     "QUICKSTART.md",
@@ -30,8 +27,8 @@ REQUIRED_ENTRIES = {
 }
 
 
-def download(url: str) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": "eatf-release-audit/0.6.1"})
+def download(url: str, version: str) -> bytes:
+    request = urllib.request.Request(url, headers={"User-Agent": f"eatf-release-audit/{version}"})
     with urllib.request.urlopen(request, timeout=60) as response:
         return response.read()
 
@@ -64,20 +61,25 @@ def replay(extracted: Path) -> None:
         raise RuntimeError(f"Unexpected published runner output:\n{completed.stdout}")
 
 
-def main() -> int:
-    checksum_line = download(CHECKSUM_URL).decode("utf-8").strip()
+def check_release(version: str) -> None:
+    archive_name = f"eatf-pqc-hybrid-lab-v{version}.zip"
+    release_base = (
+        f"https://github.com/tyche-institute/eatf-verifier/releases/download/v{version}"
+    )
+    archive_url = f"{release_base}/{archive_name}"
+    checksum_line = download(f"{archive_url}.sha256", version).decode("utf-8").strip()
     expected, published_name = checksum_line.split(maxsplit=1)
-    if published_name.lstrip("* ") != ARCHIVE_NAME:
+    if published_name.lstrip("* ") != archive_name:
         raise RuntimeError(f"Unexpected release checksum filename: {published_name}")
 
-    archive_bytes = download(ARCHIVE_URL)
+    archive_bytes = download(archive_url, version)
     observed = hashlib.sha256(archive_bytes).hexdigest()
     if observed != expected:
         raise RuntimeError(f"Published ZIP SHA-256 mismatch: {observed} != {expected}")
 
     with tempfile.TemporaryDirectory(prefix="eatf-published-bundle-") as temp:
         temp_path = Path(temp)
-        archive = temp_path / ARCHIVE_NAME
+        archive = temp_path / archive_name
         archive.write_bytes(archive_bytes)
         extracted = temp_path / "extracted"
         extracted.mkdir()
@@ -91,9 +93,14 @@ def main() -> int:
         replay(extracted)
 
     print(
-        f"Published {ARCHIVE_NAME} passed external SHA-256, internal digest, "
+        f"Published {archive_name} passed external SHA-256, internal digest, "
         "and portable-runner checks."
     )
+
+
+def main() -> int:
+    for version in VERSIONS:
+        check_release(version)
     return 0
 
 
