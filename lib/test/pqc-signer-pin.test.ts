@@ -226,3 +226,33 @@ describe("ML-DSA-65 PEM parsing (shared with the Python verifier)", () => {
     expect(performance.now() - started).toBeLessThan(300);
   });
 });
+
+// Packaged keys without a pin: both verifiers must reach the same verdict, first
+// code and pqcValid. lib-python/tests/test_pqc_signer_pin.py asserts the same table.
+const UNPINNED: Array<[string, (spki: string, legacy: string, rsa: string) => string, boolean]> = [
+  ["SPKI as written", (s) => s, true],
+  ["legacy raw-key PEM without padding", (_s, l) => l.replace("=\n-----END", "\n-----END"), true],
+  ["legacy raw-key PEM with a byte-order mark", (_s, l) => "\ufeff" + l, true],
+  ["SPKI with no-break-space indentation", (s) => s.replace(/\n(?=[A-Za-z0-9+/])/g, "\n\u00a0"), true],
+  ["raw key under an unknown label", (_s, l) => l.replace(/ML-DSA-65 PUBLIC KEY/g, "FOO"), false],
+  ["mismatched BEGIN and END labels", (_s, l) => l.replace("-----END ML-DSA-65 PUBLIC KEY-----", "-----END PUBLIC KEY-----"), false],
+  ["a trailing NUL", (s) => s + "\u0000", false],
+  ["a six-dash END line", (s) => s.replace("-----END PUBLIC KEY-----", "-----END PUBLIC KEY------"), false],
+  ["an RSA public key", (_s, _l, r) => r, false],
+];
+
+describe("packaged ML-DSA-65 key without a pin (shared with the Python verifier)", () => {
+  test.each(UNPINNED)("%s", async (_label, make, accepted) => {
+    const rsa = await keyPem("dev-rsa-4096.pem");
+    const result = await verify(
+      withEntry(
+        await labPackage("01-valid-hybrid.aep"),
+        "pqc_public_key.pem",
+        new TextEncoder().encode(make(spki, legacy, rsa)),
+      ),
+    );
+    expect([result.valid, result.failureCode, result.pqcValid]).toEqual(
+      accepted ? [true, null, true] : [false, "PQC_VERIFY_ERROR", false],
+    );
+  });
+});

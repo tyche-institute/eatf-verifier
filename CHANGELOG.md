@@ -8,6 +8,18 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
+## Unreleased
+
+- Without a key pin, Python now parses `pqc_public_key.pem` with the same parser
+  as TypeScript. In v0.7.1 and earlier, the Python verifier used cryptography's
+  PEM loader there. That loader accepted key text the TypeScript verifier
+  rejects with `PQC_VERIFY_ERROR`, for example a raw key under any PEM label,
+  mismatched BEGIN and END labels, a trailing NUL or a six-dash END line, and
+  it rejected some spellings that TypeScript accepts. Python now returns
+  `PQC_VERIFY_ERROR` with `pqcValid: false` for exactly the keys TypeScript
+  rejects. The pinned path has used this parser since v0.7.0. This closes the
+  unpinned key-parsing difference listed under "Not changed here" for v0.7.1.
+
 ## v0.7.1 — malformed ML-DSA entries are rejected, not crashed on (2026-10-18)
 
 - **Fix both verifiers crashing on malformed ML-DSA entries instead of

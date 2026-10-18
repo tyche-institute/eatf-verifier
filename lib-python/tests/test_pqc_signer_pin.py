@@ -322,3 +322,46 @@ def test_cli_unreadable_trust_file_exits_2(
     assert captured.out == ""
     assert captured.err.count("\n") == 1
     assert captured.err.startswith(f"eatf-verify-py: cannot read {flag} ")
+
+
+# Packaged keys without a pin: both verifiers must reach the same verdict, first
+# code and pqc_valid. lib/test/pqc-signer-pin.test.ts asserts the same table.
+UNPINNED = [
+    ("SPKI as written", lambda s, lg, r: s, True),
+    (
+        "legacy raw-key PEM without padding",
+        lambda s, lg, r: lg.replace("=\n-----END", "\n-----END", 1),
+        True,
+    ),
+    ("legacy raw-key PEM with a byte-order mark", lambda s, lg, r: "\ufeff" + lg, True),
+    (
+        "SPKI with no-break-space indentation",
+        lambda s, lg, r: re.sub(r"\n(?=[A-Za-z0-9+/])", "\n\u00a0", s),
+        True,
+    ),
+    (
+        "raw key under an unknown label",
+        lambda s, lg, r: lg.replace("ML-DSA-65 PUBLIC KEY", "FOO"),
+        False,
+    ),
+    (
+        "mismatched BEGIN and END labels",
+        lambda s, lg, r: lg.replace(END_LEGACY, END_SPKI, 1),
+        False,
+    ),
+    ("a trailing NUL", lambda s, lg, r: s + "\x00", False),
+    ("a six-dash END line", lambda s, lg, r: s.replace(END_SPKI, END_SPKI + "-", 1), False),
+    ("an RSA public key", lambda s, lg, r: r, False),
+]
+
+
+@pytest.mark.parametrize(
+    ("label", "make", "accepted"), UNPINNED, ids=[row[0] for row in UNPINNED]
+)
+def test_unpinned_packaged_key_matches_typescript(label: str, make, accepted: bool) -> None:
+    spki = MLDSA_KEY.decode("ascii").replace("\r\n", "\n")
+    legacy = _legacy_raw_pem(MLDSA_KEY).decode("ascii")
+    packaged = make(spki, legacy, RSA_KEY.decode("ascii").replace("\r\n", "\n")).encode("utf-8")
+    result = verify(_with_entry(_package("01-valid-hybrid.aep"), "pqc_public_key.pem", packaged))
+    expected = (True, None, True) if accepted else (False, "PQC_VERIFY_ERROR", False)
+    assert (result.valid, result.failure_code, result.pqc_valid) == expected
