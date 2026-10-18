@@ -381,8 +381,18 @@ export async function verify(
         "ML-DSA-65 signer identity not evaluated (no trustedPqcSignerPems supplied).",
       );
     }
-    const pqcSigB64 = TEXT_DEC.decode(entries["signature_pqc.sig"]!).trim();
-    const pqcSig = decodeBase64(pqcSigB64);
+    const pqcSig = decodePqcSignature(entries["signature_pqc.sig"]!);
+    if (pqcSig === null) {
+      pqcValid = false;
+      return fail(
+        report,
+        "PQC_SIGNATURE_ENCODING",
+        "signature_pqc.sig is not valid base64.",
+        metadata,
+        pqcValid,
+        overtReceipt,
+      );
+    }
     try {
       pqcValid = await verifyMlDsa65(pqcPem, pqcSig, canonicalBytes);
       report.push(`ML-DSA-65 signature ${pqcValid ? "verified" : "FAILED"}.`);
@@ -526,6 +536,39 @@ function constantTimeEqual(a: Uint8Array, b: Uint8Array): boolean {
     diff |= (a[i]! ^ b[i]!);
   }
   return diff === 0;
+}
+
+// signature_pqc.sig is base64 text. Bytes 0x09-0x0D and 0x20 may appear
+// anywhere; the rest must be base64 with at most two trailing "=" and a length
+// that is a multiple of four. lib-python applies the same byte-level rule, so
+// both verifiers reject the same entries with the same code (atob alone
+// accepts missing padding; Python's lenient decoder skips stray bytes). This is
+// a single pass with no regex: a backtracking pattern overflows V8's stack on
+// multi-megabyte entries.
+function decodePqcSignature(entry: Uint8Array): Uint8Array | null {
+  const compact = new Uint8Array(entry.length);
+  let length = 0;
+  let padding = 0;
+  for (let i = 0; i < entry.length; i++) {
+    const byte = entry[i]!;
+    if (byte === 0x20 || (byte >= 0x09 && byte <= 0x0d)) continue;
+    if (byte === 0x3d) {
+      padding += 1;
+    } else if (padding > 0 || !isBase64AlphabetByte(byte)) {
+      return null;
+    }
+    compact[length++] = byte;
+  }
+  if (length % 4 !== 0 || padding > 2) return null;
+  return decodeBase64(TEXT_DEC.decode(compact.subarray(0, length)));
+}
+
+function isBase64AlphabetByte(byte: number): boolean {
+  return (byte >= 0x41 && byte <= 0x5a) // A-Z
+    || (byte >= 0x61 && byte <= 0x7a) // a-z
+    || (byte >= 0x30 && byte <= 0x39) // 0-9
+    || byte === 0x2b // +
+    || byte === 0x2f; // /
 }
 
 function normalizedPemBody(pem: string): string {

@@ -18,7 +18,7 @@ external standard.
 | `timestamp.tsr` | required | Base64 RFC 3161 `TimeStampResp` or bare token |
 | `overt_receipt.json` | optional | OVERT-inspired receipt bound to hash and metadata |
 | `overt_receipt.sig` | conditional | RSA/SHA-256 signature over exact receipt bytes; required when named by signed metadata |
-| `signature_pqc.sig` | paired optional | Base64 ML-DSA-65 signature |
+| `signature_pqc.sig` | paired optional | Base64 ML-DSA-65 signature; TAB, LF, VT, FF, CR and space are ignored, the rest must be padded base64 |
 | `pqc_public_key.pem` | paired optional | RFC 9881 ML-DSA-65 SubjectPublicKeyInfo; legacy raw-key PEM is read-only compatible. Not authenticated by anything else in the package |
 
 ## Ordered verification
@@ -42,7 +42,10 @@ external standard.
    Receipt signatures without the signed marker are rejected to prevent
    downgrade. Older receipts without either field remain readable and are
    explicitly reported as not separately signature-bound.
-8. If the ML-DSA pair is present, verify it over the same canonical bytes.
+8. If the ML-DSA pair is present (both entries exist, even if empty), decode
+   `signature_pqc.sig` (`PQC_SIGNATURE_ENCODING` if it is not padded base64)
+   and verify it over the same canonical bytes (`PQC_VERIFY_ERROR` if
+   `pqc_public_key.pem` cannot be loaded as an ML-DSA-65 key).
    The current writer stores `id-ml-dsa-65` (`2.16.840.1.101.3.4.3.18`) with
    absent `AlgorithmIdentifier` parameters as required by RFC 9881. When the
    caller selects the `required` PQC policy, reject a package with no pair as

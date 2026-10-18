@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import base64
+import functools
 import re
 
-from cryptography.exceptions import InvalidSignature
+from cryptography.exceptions import InvalidSignature, UnsupportedAlgorithm
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric.mldsa import MLDSA65PublicKey
 
@@ -80,6 +81,19 @@ def verify_mldsa65_raw(public_key: bytes, signature: bytes, signed_data: bytes) 
     try:
         MLDSA65PublicKey.from_public_bytes(public_key).verify(signature, signed_data)
     except (InvalidSignature, ValueError):
+        return False
+    return True
+
+
+@functools.cache
+def mldsa65_supported() -> bool:
+    """Whether the cryptography backend implements ML-DSA-65 (OpenSSL 3.5 or later).
+
+    Probed without the package's key, so the answer cannot depend on input.
+    """
+    try:
+        MLDSA65PublicKey.from_public_bytes(bytes(ML_DSA_65_PUBLIC_KEY_BYTES))
+    except UnsupportedAlgorithm:
         return False
     return True
 
