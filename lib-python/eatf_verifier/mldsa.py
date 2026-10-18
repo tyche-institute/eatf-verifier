@@ -1,4 +1,8 @@
-"""ML-DSA-65 verification using cryptography's FIPS 204 implementation."""
+"""ML-DSA-65 verification using cryptography's FIPS 204 implementation.
+
+PEM keys are parsed by mldsa65_public_key_from_pem, an exact port of the
+TypeScript parser, so both verifiers accept and reject the same key text.
+"""
 
 from __future__ import annotations
 
@@ -7,7 +11,6 @@ import functools
 import re
 
 from cryptography.exceptions import InvalidSignature, UnsupportedAlgorithm
-from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric.mldsa import MLDSA65PublicKey
 
 ML_DSA_65_PUBLIC_KEY_BYTES = 1952
@@ -16,7 +19,7 @@ ML_DSA_65_PUBLIC_KEY_BYTES = 1952
 # same 22 bytes as ML_DSA_65_SPKI_PREFIX in lib/src/mldsa.ts.
 _ML_DSA_65_SPKI_PREFIX = bytes.fromhex("308207b2300b0609608648016503040312038207a100")
 
-# Pins, and packaged keys compared with a pin, are parsed exactly as
+# Pins and packaged keys, with or without a pin, are parsed exactly as
 # lib/src/mldsa.ts parsePem and decodeBase64 parse them, so the two verifiers
 # accept and reject the same PEM text. _JS_WHITESPACE is the set that
 # JavaScript's String.prototype.trim() and regex \s use.
@@ -99,22 +102,8 @@ def mldsa65_supported() -> bool:
 
 
 def verify_mldsa65(public_key_pem: bytes, signature: bytes, signed_data: bytes) -> bool:
-    """Verify an RFC 9881 SPKI key, with read-only legacy raw-PEM support."""
-    if b"-----BEGIN PUBLIC KEY-----" in public_key_pem:
-        key = serialization.load_pem_public_key(public_key_pem)
-        if not isinstance(key, MLDSA65PublicKey):
-            raise ValueError("pqc_public_key.pem is not an ML-DSA-65 public key")
-    else:
-        key = MLDSA65PublicKey.from_public_bytes(_pem_body(public_key_pem))
-    try:
-        key.verify(signature, signed_data)
-    except InvalidSignature:
-        return False
-    return True
+    """Verify against a PEM key parsed as verifyMlDsa65 in lib/src/mldsa.ts parses it.
 
-
-def _pem_body(pem: bytes) -> bytes:
-    """Strip PEM headers/footers and base64-decode the body."""
-    text = pem.decode("ascii").strip()
-    lines = [line for line in text.splitlines() if not line.startswith("-----")]
-    return base64.b64decode("".join(lines))
+    Raises ValueError for a key that mldsa65_public_key_from_pem rejects.
+    """
+    return verify_mldsa65_raw(mldsa65_public_key_from_pem(public_key_pem), signature, signed_data)
