@@ -233,10 +233,12 @@ v0.5.0 release, which adds the guard-ordering measurement, is archived at
 v0.6.0 release adds hybrid signing, explicit downgrade policy, and the
 offline workshop bundle and is archived at
 [doi:10.5281/zenodo.21763056](https://doi.org/10.5281/zenodo.21763056).
-The current v0.6.1 patch makes the released workshop ZIP directly replayable
-after one-time verifier setup and is archived at
-[doi:10.5281/zenodo.21763768](https://doi.org/10.5281/zenodo.21763768). It
-remains in the Zenodo version chain that began at v0.6.0, with concept DOI
+The v0.6.1 patch made the released workshop ZIP directly replayable after
+one-time verifier setup and is archived at
+[doi:10.5281/zenodo.21763768](https://doi.org/10.5281/zenodo.21763768). The
+current v0.7.0 release adds the caller-supplied ML-DSA-65 signer-key pin and
+makes Windows conformance count its vectors. It remains in the Zenodo version
+chain that began at v0.6.0, with concept DOI
 [doi:10.5281/zenodo.21763055](https://doi.org/10.5281/zenodo.21763055).
 Releases through v0.5.0 remain under the earlier concept DOI
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).

@@ -8,7 +8,7 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
-## Unreleased
+## v0.7.0 — ML-DSA-65 signer-key pin and counted conformance (2026-10-18)
 
 - **Fix `eatf-verify-py --conformance` on native Windows, which checked no
   vectors and passed.** It classified vectors by a `valid/` or `invalid/`
@@ -101,6 +101,9 @@
   the last argument. Before, a trailing `--batch` or `--conformance` was
   ignored and the other paths were verified.
 - `examples/05-hybrid-mldsa65` now verifies with both signer keys pinned.
+- All npm workspaces and the Python package are 0.7.0. `eatf-verify --version`
+  reported 0.6.0 and `eatf-sign` / `eatf-inspect --version` reported 0.3.0; all
+  three now report 0.7.0.
 
 ## v0.6.1 — portable conference download (2026-08-02)
 
