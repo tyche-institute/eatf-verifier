@@ -10,23 +10,28 @@
 
 ## v0.7.2 — both verifiers parse packaged ML-DSA-65 keys alike (2026-10-19)
 
-- Without a key pin, Python now parses `pqc_public_key.pem` with the same parser
-  as TypeScript. In v0.7.1 and earlier, Python loaded a key containing a
-  `-----BEGIN PUBLIC KEY-----` line with cryptography's PEM loader, and read any
-  other key by dropping the lines that start with `-----` and decoding the rest
-  with a non-validating base64 decoder. Together these accepted key text that
-  TypeScript rejects with `PQC_VERIFY_ERROR`, for example a valid PEM block
-  followed by a second block or other text, the raw key as bare base64 without
-  armour, a raw key under any PEM label, mismatched BEGIN and END labels, a
-  trailing NUL or a six-dash END line. They also rejected some spellings that
-  TypeScript accepts, such as a legacy raw-key PEM without padding or with a
-  leading byte-order mark. Python now returns `PQC_VERIFY_ERROR` with
-  `pqcValid: false` for exactly the keys TypeScript rejects. The pinned path
-  has used this parser since v0.7.0. This closes the unpinned key-parsing
-  difference listed under "Not changed here" for v0.7.1.
+- Without a key pin, Python now parses `pqc_public_key.pem` by the same rules as
+  TypeScript, using an exact port of its PEM parser. In v0.7.1 and earlier,
+  Python loaded a key containing a `-----BEGIN PUBLIC KEY-----` line with
+  cryptography's PEM loader, and read any other key by dropping the lines that
+  start with `-----` and decoding the rest with a non-validating base64
+  decoder. Together these accepted key text that TypeScript rejects with
+  `PQC_VERIFY_ERROR`, for example an SPKI PEM block followed by a second block
+  or other text, the raw key as bare base64 without armour, a raw key under an
+  unknown PEM label, a legacy BEGIN line closed by END PUBLIC KEY, a trailing
+  NUL or an END line with a sixth trailing dash. They also rejected (and before
+  v0.7.1 crashed on) some spellings that TypeScript accepts, such as a legacy
+  raw-key PEM without padding or with a leading byte-order mark. Python now
+  returns `PQC_VERIFY_ERROR` with `pqcValid: false` for exactly the key text
+  TypeScript cannot parse. The pinned path has used this parser since v0.7.0.
+  This closes the unpinned key-parsing difference listed under "Not changed
+  here" for v0.7.1.
 - `docs/pqc-hybrid-lab-five-minute-fallback.md` now replays the v0.7.0 results,
-  with the three policies and a timed row for package 07. The v0.7.1 lab ZIP has
-  the same contents. CI still replays the published v0.6.1 ZIP as well.
+  with the three policies and a timed row for package 07. The v0.7.1 and v0.7.2
+  lab ZIPs have the same contents as the v0.7.0 one. CI still replays the
+  published v0.6.1 ZIP as well.
+- `docs/aep-format.md` states that `pqc_public_key.pem` must be exactly one PEM
+  block, parsed by the same rules as a pin.
 - All npm workspaces and the Python package are 0.7.2, and `eatf-verify`,
   `eatf-sign` and `eatf-inspect --version` report 0.7.2.
 
