@@ -8,6 +8,27 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
+## Unreleased
+
+- **Python now checks the CMS message-digest attribute of an RFC 3161
+  token.** The SignerInfo signature covers the signed attributes, which bind
+  the TSTInfo only through that digest. v0.7.2 and earlier did not compare
+  it, so Python accepted a genuine token whose genTime or imprint had been
+  edited after signing, including a token from another package with its
+  imprint rewritten to match. TypeScript (PKIjs) already rejected both with
+  `TSA_SIGNATURE_INVALID`; Python now does too.
+- Python reports an imprint under a hash other than SHA-256 as
+  `TSA_IMPRINT_UNVERIFIABLE`, as TypeScript does, instead of
+  `TSA_IMPRINT_MISMATCH`.
+- `docs/authority-record-v1-scope.md` explains why the root verifiers reject
+  every `verify=true` package of the frozen authority-record corpus: its
+  timestamp tokens bind none of its packages, which the frozen line accepts
+  and this one has not since v0.2.0, and the root verifiers do not implement
+  that profile's §4.2, §4.3 and §4.5 checks. It also records two latent
+  defects of the frozen line, which stays unchanged.
+  `scripts/authority-record-crosscheck.py` reproduces the 58-vector table
+  for both lines, with a control run that replaces only `timestamp.tsr`.
+
 ## v0.7.2 — both verifiers parse packaged ML-DSA-65 keys alike (2026-10-19)
 
 - Without a key pin, Python now parses `pqc_public_key.pem` by the same rules as

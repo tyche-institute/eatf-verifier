@@ -20,6 +20,13 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
 from cryptography.x509 import load_der_x509_certificate
 
+SHA256_OID = "2.16.840.1.101.3.4.2.1"
+_CMS_DIGESTS = {
+    "sha256": hashes.SHA256,
+    "sha384": hashes.SHA384,
+    "sha512": hashes.SHA512,
+}
+
 
 @dataclass
 class TsaCheck:
@@ -90,8 +97,13 @@ def inspect_tsa(tsr_b64: str, expected_hash_hex: str) -> TsaCheck:
             tst_info_bytes = encapsulated.native
             tst_info = tsp.TSTInfo.load(tst_info_bytes)
         imprint = tst_info["message_imprint"]["hashed_message"].native
-        imprint_hex = imprint.hex()
-        message_imprint_matches = imprint_hex == expected_hash_hex.lower()
+        imprint_alg = tst_info["message_imprint"]["hash_algorithm"]["algorithm"].dotted
+        # Mirrors lib/src/tsa.ts: an imprint under any algorithm other than
+        # SHA-256 cannot be compared with hash.sha256, so it is not
+        # determinable rather than a mismatch.
+        message_imprint_matches = (
+            imprint.hex() == expected_hash_hex.lower() if imprint_alg == SHA256_OID else None
+        )
         gen_time = tst_info["gen_time"].native.isoformat() if tst_info["gen_time"].native else None
     except Exception:
         message_imprint_matches = None
@@ -125,14 +137,28 @@ def inspect_tsa(tsr_b64: str, expected_hash_hex: str) -> TsaCheck:
                 # context-specific tag they're carried with on the wire.
                 signed_attrs_der = b"\x31" + signed_attrs_der[1:]
                 tbs = signed_attrs_der
+                # The signature covers the signed attributes, not the
+                # TSTInfo. RFC 5652 §5.4 binds the two through the
+                # message-digest attribute; without this comparison a
+                # token's genTime or imprint can be edited after signing
+                # and the signature still verifies. PKIjs makes the same
+                # check in lib/src/tsa.ts.
+                digests_match = _message_digest_matches(
+                    signed_attrs,
+                    signer_info["digest_algorithm"]["algorithm"].native,
+                    # bytes() joins the chunks of a BER constructed
+                    # OCTET STRING; .contents would keep their headers.
+                    bytes(sd["encap_content_info"]["content"]),
+                )
             else:
                 tbs = tst_info_bytes
+                digests_match = True
 
             pubkey = cert.public_key()
             if isinstance(pubkey, rsa.RSAPublicKey):
                 try:
                     pubkey.verify(signature, tbs, padding.PKCS1v15(), hashes.SHA256())
-                    signature_verified = True
+                    signature_verified = digests_match
                 except InvalidSignature:
                     signature_verified = False
             else:
@@ -218,6 +244,25 @@ def _parse_pem_cert(pem: bytes):
     )
     der = base64.b64decode(body)
     return load_der_x509_certificate(der)
+
+
+def _message_digest_matches(signed_attrs, digest_name: str, econtent: bytes) -> bool:
+    """True when exactly one message-digest attribute equals the digest of
+    the encapsulated TSTInfo octets under the SignerInfo digest algorithm."""
+    digest_cls = _CMS_DIGESTS.get(digest_name)
+    if digest_cls is None:
+        return False
+    values = [
+        value.native
+        for attr in signed_attrs
+        if attr["type"].native == "message_digest"
+        for value in attr["values"]
+    ]
+    if len(values) != 1:
+        return False
+    h = hashes.Hash(digest_cls())
+    h.update(econtent)
+    return values[0] == h.finalize()
 
 
 def _extract_token(raw: bytes) -> bytes | None:
