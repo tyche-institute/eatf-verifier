@@ -61,7 +61,8 @@ external standard.
    signer identity is explicitly reported as not evaluated.
 9. Decode the RFC 3161 object, require SHA-256 as the imprint algorithm,
    require the imprint to equal `hash.sha256`, and verify the CMS SignerInfo
-   against the embedded TSA signing certificate.
+   against the embedded TSA signing certificate, including that its signed
+   message-digest attribute equals the digest of the encapsulated TSTInfo.
 10. If caller-supplied TSA certificates are present, report the advisory
     issuer-name comparison.
 
