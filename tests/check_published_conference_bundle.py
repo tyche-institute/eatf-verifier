@@ -1,8 +1,8 @@
-"""Download, authenticate, extract, and replay the published v0.6.1 to v0.7.2 labs.
+"""Download, authenticate, extract, and replay the published v0.6.1 to v0.7.3 labs.
 
-v0.7.2 is the current release. v0.7.0 backs docs/pqc-hybrid-lab-five-minute-fallback.md
-(its lab ZIP has the same contents as those of v0.7.1 and v0.7.2); v0.6.1 stays replayed
-because earlier documents cite its 24 observations.
+v0.7.3 is the current release. v0.7.0 backs docs/pqc-hybrid-lab-five-minute-fallback.md
+(its lab ZIP has the same contents as those of v0.7.1, v0.7.2 and v0.7.3); v0.6.1 stays
+replayed because earlier documents cite its 24 observations.
 """
 
 from __future__ import annotations
@@ -17,7 +17,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSIONS = ("0.6.1", "0.7.0", "0.7.1", "0.7.2")
+VERSIONS = ("0.6.1", "0.7.0", "0.7.1", "0.7.2", "0.7.3")
 REQUIRED_ENTRIES = {
     "README.md",
     "QUICKSTART.md",
