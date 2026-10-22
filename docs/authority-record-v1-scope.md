@@ -1,6 +1,6 @@
 # Root verifier and the authority-record corpus
 
-The root toolkit (`lib/`, `lib-python/`, 0.7.2) and the frozen study artifact in
+The root toolkit (`lib/`, `lib-python/`, 0.7.3) and the frozen study artifact in
 [`artifacts/authority-record-v1/`](../artifacts/authority-record-v1/) (its own
 TypeScript library and Python 0.2.1, frozen on 2026-08-13) are two lines of
 one verifier. They share an author and a corpus. Agreement between them is a
@@ -73,7 +73,7 @@ kept the older tokens.
 
 | Line | Imprint compared with | Mismatch | No TSA certificate |
 |---|---|---|---|
-| Root TypeScript and Python 0.7.2 ([`aep-format.md`](aep-format.md) step 9) | the 32 bytes of `hash.sha256` | rejects | rejects (`TSA_CERT_MISSING`) |
+| Root TypeScript and Python 0.7.3 ([`aep-format.md`](aep-format.md) step 9) | the 32 bytes of `hash.sha256` | rejects | rejects (`TSA_CERT_MISSING`) |
 | Artifact TypeScript ([profile spec](../artifacts/authority-record-v1/docs/specs/aep-profile-v1.md) §7) | SHA-256 of the ASCII hex of `hash.sha256` | reports, accepts | not determinable, accepts |
 | Artifact Python 0.2.1 | the 32 bytes of `hash.sha256` | reports, accepts | not determinable, accepts |
 
