@@ -8,7 +8,7 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
-## Unreleased
+## v0.7.3 — the Python verifier checks what the time-stamp signature covers (2026-10-22)
 
 - **Python now checks the CMS message-digest attribute of an RFC 3161
   token.** The SignerInfo signature covers the signed attributes, which bind
@@ -28,6 +28,9 @@
   defects of the frozen line, which stays unchanged.
   `scripts/authority-record-crosscheck.py` reproduces the 58-vector table
   for both lines, with a control run that replaces only `timestamp.tsr`.
+- `docs/aep-format.md` step 9 names the message-digest comparison.
+- All npm workspaces and the Python package are 0.7.3, and `eatf-verify`,
+  `eatf-sign` and `eatf-inspect --version` report 0.7.3.
 
 ## v0.7.2 — both verifiers parse packaged ML-DSA-65 keys alike (2026-10-19)
 

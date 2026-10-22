@@ -2,7 +2,7 @@
   "title": "EATF Action Evidence Package toolkit",
   "upload_type": "software",
   "license": "Apache-2.0",
-  "version": "v0.7.2",
+  "version": "v0.7.3",
   "creators": [
     {
       "name": "Sokolov, Anton",
@@ -25,16 +25,16 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.7.2",
+      "identifier": "https://github.com/tyche-institute/eatf-verifier/releases/tag/v0.7.3",
       "relation": "isSupplementTo",
       "scheme": "url"
     },
     {
-      "identifier": "10.5281/zenodo.23456866",
+      "identifier": "10.5281/zenodo.23466228",
       "relation": "isNewVersionOf",
       "scheme": "doi"
     }
   ],
-  "notes": "Version 0.7.2 makes the two verifiers (TypeScript and Python, both built by Tyche Institute) parse a packaged pqc_public_key.pem by the same rules when no key pin is supplied. In v0.7.1 the Python verifier read an unpinned key with cryptography's PEM loader or a non-validating fallback, which accepted some key text the TypeScript verifier rejects, for example an SPKI PEM block followed by other text or the raw key as bare base64, and rejected some text it accepts (earlier versions crashed on those); with --pqc-signer-key the two already agreed. Python now uses the exact port of the TypeScript PEM parser that v0.7.0 added for pins. On differential corpora that are not part of this archive (34,522 generated signature and key entries and 5,088 PEM spellings), the two verifiers now return the same verdict and first-failure code in every case, with or without a key pin. The 5 accepted and 8 rejected conformance vectors, the 42 lab observations and the 21 decision-path cases give the same results as in v0.7.1. Version DOI: 10.5281/zenodo.23466228. Previous version v0.7.1 is doi:10.5281/zenodo.23456866 under concept doi:10.5281/zenodo.21763055; releases through v0.5.0 remain under earlier concept doi:10.5281/zenodo.21511608.",
-  "publication_date": "2026-10-19"
+  "notes": "Version 0.7.3 makes the Python verifier compare the CMS message-digest attribute of an RFC 3161 time-stamp token with the encapsulated TSTInfo (RFC 5652 section 5.4). In v0.7.2 and earlier Python verified the TSA signature over the signed attributes but not that those attributes cover the TSTInfo, so a genuine token whose genTime or message imprint had been edited after signing, including a token taken from another package with its imprint rewritten to match, still verified; the TypeScript verifier (TypeScript and Python are both built by Tyche Institute) already rejected both with TSA_SIGNATURE_INVALID, and Python now does too. Python also reports an imprint under a hash other than SHA-256 as TSA_IMPRINT_UNVERIFIABLE, as TypeScript does. docs/authority-record-v1-scope.md and scripts/authority-record-crosscheck.py explain and reproduce why the root verifiers reject every verify=true package of the frozen authority-record corpus under artifacts/authority-record-v1/: its time-stamp tokens are certificate-less placeholders that bind none of its packages, and the root verifiers do not implement that profile's warrant, accepting-authority and mandate checks; the frozen artifact is unchanged. The 5 accepted and 8 rejected conformance vectors, the 42 lab observations and the 21 decision-path cases give the same results as in v0.7.2. Previous version v0.7.2 is doi:10.5281/zenodo.23466228 under concept doi:10.5281/zenodo.21763055; releases through v0.5.0 remain under earlier concept doi:10.5281/zenodo.21511608.",
+  "publication_date": "2026-10-22"
 }

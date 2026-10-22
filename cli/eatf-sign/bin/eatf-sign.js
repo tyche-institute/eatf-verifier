@@ -16,7 +16,7 @@ import { existsSync } from "node:fs";
 import { generateKeyPairSync } from "node:crypto";
 import process from "node:process";
 
-const VERSION = "0.7.2";
+const VERSION = "0.7.3";
 
 function usage() {
   process.stdout.write(`\
