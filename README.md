@@ -200,8 +200,8 @@ commands.
 
 Reproduce that study with the artifact's own verifiers. The root verifiers
 reject every `verify=true` package in its corpus at the timestamp check,
-because the corpus's RFC 3161 tokens are placeholders that bind none of its
-packages, and they do not implement the artifact's authority-record checks.
+because no RFC 3161 token in its corpus has its imprint over the package's
+`hash.sha256`, and they do not implement the artifact's authority-record checks.
 [`docs/authority-record-v1-scope.md`](docs/authority-record-v1-scope.md) gives
 the bytes and a 58-vector table for both lines.
 
