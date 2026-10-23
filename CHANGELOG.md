@@ -8,6 +8,18 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
+## Unreleased
+
+- Corrected `docs/authority-record-v1-scope.md`, the README and the
+  cross-check table. The v0.7.3 text said the RFC 3161 tokens of the frozen
+  authority-record corpus bind none of its packages. Each parseable token's
+  imprint is in fact the SHA-256 of an RSA signature value: the package's own
+  `signature.sig` in 6 vectors, and that of `valid/valid-overt-profile` in the
+  other 51. None is over `hash.sha256`, which is what both lines compare it
+  with, so every verdict, count and class in the table is unchanged. The
+  table column is now "Imprint over `hash.sha256`", and
+  `lib-python/tests/test_authority_record_scope.py` pins the 6/51 split.
+
 ## v0.7.3 — the Python verifier checks what the time-stamp signature covers (2026-10-22)
 
 - **Python now checks the CMS message-digest attribute of an RFC 3161

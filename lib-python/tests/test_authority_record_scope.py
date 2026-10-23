@@ -1,9 +1,10 @@
 """Root verifier vs the frozen authority-record corpus.
 
 ``artifacts/authority-record-v1/`` ships its own verifier line and 58
-vectors. Every RFC 3161 token in that corpus is a certificate-less
-placeholder whose imprint matches none of the packages: the frozen line
-accepts that "for Java reference compatibility", while this verifier has
+vectors. No RFC 3161 token in that corpus carries a certificate or has its
+imprint over its package's hash.sha256; each imprint is the SHA-256 of an RSA
+signature value, mostly another package's. The frozen line accepts the
+mismatch "for Java reference compatibility", while this verifier has
 required imprint equality and a verified SignerInfo since v0.2.0. These
 tests pin that scope, and prove with a one-entry swap that the timestamp
 token is the only reason the root verifier rejects the corpus's ``valid/``
@@ -18,6 +19,7 @@ from __future__ import annotations
 
 import base64
 import datetime
+import hashlib
 import importlib.util
 import io
 import pathlib
@@ -88,6 +90,39 @@ def test_root_rejects_ar_true_vectors_at_the_timestamp(vector: pathlib.Path) -> 
         else "TSA_IMPRINT_MISMATCH"
     )
     assert result.failure_code == expected
+
+
+def test_ar_token_imprints_are_over_a_signature_value() -> None:
+    """Each parseable token's imprint is SHA-256 of an RSA signature value:
+    its own package's in six vectors, valid-overt-profile's in the rest."""
+
+    def sig_digest(vector: pathlib.Path) -> str:
+        sig = _entry((vector / "package.aep").read_bytes(), "signature.sig")
+        return hashlib.sha256(base64.b64decode(sig.strip(), validate=True)).hexdigest()
+
+    donor = sig_digest(AR_VECTORS / "valid" / "valid-overt-profile")
+    own, other, unparsed = [], [], []
+    for package in sorted(AR_VECTORS.rglob("package.aep")):
+        vector = package.parent
+        facts = _crosscheck().token_facts(package)
+        if facts["imprint"] is None:
+            unparsed.append(vector.relative_to(AR_VECTORS).as_posix())
+            continue
+        if facts["imprint"] == sig_digest(vector):
+            own.append(vector.relative_to(AR_VECTORS).as_posix())
+        else:
+            assert facts["imprint"] == donor
+            other.append(vector)
+    assert unparsed == ["invalid/bad-timestamp"]
+    assert own == [
+        "boundary/boundary-suppressed-tsa",
+        "boundary/response-only-unsigned-policy-tamper",
+        "invalid/tampered-overt-receipt",
+        "valid/mcp-tools-call-denied-policy",
+        "valid/mcp-tools-call-valid",
+        "valid/valid-overt-profile",
+    ]
+    assert len(other) == 51
 
 
 def test_swapping_only_the_token_makes_mandated_action_verify() -> None:

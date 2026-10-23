@@ -258,8 +258,9 @@ AR_TS_SIGNERINFO = "RFC 3161 SignerInfo signature did not verify against the emb
 def classify(shipped: dict, control: dict) -> list[str]:
     """Name every disagreement in one vector, or return ["?"].
 
-    T  shipped token binds nothing: root rejects at the timestamp, the
-       frozen line accepts (imprint advisory, SignerInfo not determinate).
+    T  shipped token's imprint is not over hash.sha256: root rejects at the
+       timestamp, the frozen line accepts (imprint advisory, SignerInfo not
+       determinate).
     S  root does not implement the §4.2/§4.3/§4.5 authority-record checks:
        visible once the token is valid, root accepts what they reject.
     D  frozen TypeScript line cannot verify a cert-bearing token's
@@ -341,7 +342,7 @@ def main() -> int:
 
     names = [name for name, _, _ in LINES]
     print(
-        "| Vector | Expected | Token binds package | "
+        "| Vector | Expected | Imprint over `hash.sha256` | "
         + " | ".join(names)
         + " | "
         + " | ".join(f"{n} (control)" for n in names)
