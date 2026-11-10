@@ -1,0 +1,24 @@
+name: conformance-matrix
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  jcs-canonicalization:
+    # Reports without blocking until the two over-2^53 numbers are decided (see the pull request).
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ./lib-python
+      - run: pip install -r requirements-conformance.txt
+      - uses: probityai/agent-evidence-vectors@v0.36.3
+        env:
+          A2A_JCS_TARGET: rfc8785
+          EATF_LIB_PYTHON: ${{ github.workspace }}/lib-python
+        with:
+          corpus: vectors-a2a-jcs-v01
+          verifier: python tools/eatf_jcs_cli.py
