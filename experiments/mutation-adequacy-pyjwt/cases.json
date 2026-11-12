@@ -1,0 +1,5227 @@
+{
+ "subject": {
+  "name": "PyJWT",
+  "version": "2.15.1",
+  "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+  "repository": "https://github.com/jpadilla/pyjwt",
+  "licence": "MIT",
+  "sha256": {
+   "jwt/api_jws.py": "80e83b3a4089f6a19692bb5b2f56784edc3bd65bf74043bad7a230f9c5bdcf12",
+   "jwt/api_jwt.py": "a2af9f3593c8cf9133163cb0b5b08223281b8292d5db5665309bc23c212cac76",
+   "jwt/algorithms.py": "31e174916a77d17f4ed9dbcd3b869e9264a146aaf8d97f02d9b43bf828fe0441",
+   "jwt/exceptions.py": "3540f48760343221d5e94f933edfc0af4a6b9c01f1c892748ba2c7216cddf154"
+  }
+ },
+ "rules": {
+  "case": "A case is one execution of a `with pytest.raises(...)` block of the subject's own tests/ whose statements call decode or decode_complete (of PyJWS or PyJWT, as a method, a module function or the jwt package function) and whose expected exception is a PyJWTError subclass.",
+  "target": "The target is the single check left after intersecting three candidate sets: the checks that raise the asserted class or a subclass; the checks whose message or attributes satisfy the test's assertions on the exception (match=, assertions after the block), if it makes any; and the checks whose message or condition the test's name names, if it names any. If more than one check is left, the block has no target."
+ },
+ "counts": {
+  "raises_blocks": 212,
+  "decode_blocks": 82,
+  "included_blocks": 79,
+  "labelled_blocks": 69,
+  "unlabelled_blocks": 10
+ },
+ "test_files_sha256": {
+  "test_advisory.py": "91721b6168ce2852be2ef1a6fc09140ecf48221c4d7437e6b29b76002f40cf1f",
+  "test_algorithms.py": "8c9dea6b4ac93e8a6353b1d6906703e212cb3110f9b14c0bcb69c4a4b59cb11a",
+  "test_api_jwk.py": "2d2449d3da91980b6e41da5b0308deb8065ba7322f341eaf2a4b8f8a022f44db",
+  "test_api_jws.py": "e9ac7fc9ffe880368126b85fe18166a3c19f959507c84370404f4dfb304d91bc",
+  "test_api_jwt.py": "07dd363c882e3ce91a8d5fbab5239aa197f611d1a648565f5613c99fe1454ade",
+  "test_compressed_jwt.py": "aa97e1eabecfd5f28cdc82dd7f01c62cbc53c59380c3893e5d51c61b7495916f",
+  "test_exceptions.py": "9a1f053e127878519df7a55d12cd9831ca4770442cd0c38504214e86a2c8f656",
+  "test_jwks_client.py": "f1f5e0076061c3931ecce432f7fa74986bc2febd820c8e1fb6a3035a3703d708",
+  "test_jwt.py": "53a2afb5046c6908bc9edc0a4e97c3895bddd4419b5a54c3b2366763bc5c0cbc",
+  "test_utils.py": "b962398f45934daa15e8620baf56b7daf9683c36202ab8c5daac04bf65df4eed"
+ },
+ "blocks": [
+  {
+   "key": "test_advisory.py::test_ghsa_ffqj_6fqr_9h24#0",
+   "file": "test_advisory.py",
+   "class": "TestAdvisory",
+   "test": "test_ghsa_ffqj_6fqr_9h24",
+   "k": 0,
+   "with_line": 63,
+   "call_lines": [
+    63,
+    63
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "InvalidKeyError only, which six checks raise; the name is an advisory identifier"
+   }
+  },
+  {
+   "key": "test_advisory.py::test_ghsa_ffqj_6fqr_9h24#1",
+   "file": "test_advisory.py",
+   "class": "TestAdvisory",
+   "test": "test_ghsa_ffqj_6fqr_9h24",
+   "k": 1,
+   "with_line": 114,
+   "call_lines": [
+    114,
+    114
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "InvalidKeyError only, which six checks raise; the name is an advisory identifier"
+   }
+  },
+  {
+   "key": "test_algorithms.py::test_check_crypto_key_type_should_fail_when_not_using_crypto#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_check_crypto_key_type_should_fail_when_not_using_crypto",
+   "k": 0,
+   "with_line": 45,
+   "call_lines": [
+    45,
+    45
+   ],
+   "expected": "ValueError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "check_crypto_key_type"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_none_algorithm_should_throw_exception_if_key_is_not_none#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_none_algorithm_should_throw_exception_if_key_is_not_none",
+   "k": 0,
+   "with_line": 51,
+   "call_lines": [
+    51,
+    51
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_none_algorithm_should_throw_exception_on_to_jwk#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_none_algorithm_should_throw_exception_on_to_jwk",
+   "k": 0,
+   "with_line": 57,
+   "call_lines": [
+    57,
+    57
+   ],
+   "expected": "NotImplementedError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "to_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_none_algorithm_should_throw_exception_on_from_jwk#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_none_algorithm_should_throw_exception_on_from_jwk",
+   "k": 0,
+   "with_line": 63,
+   "call_lines": [
+    63,
+    63
+   ],
+   "expected": "NotImplementedError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_should_reject_nonstring_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_should_reject_nonstring_key",
+   "k": 0,
+   "with_line": 69,
+   "call_lines": [
+    69,
+    69
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Expected a string or bytes value"
+    ]
+   ],
+   "calls": [
+    "object",
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_should_throw_exception#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_should_throw_exception",
+   "k": 0,
+   "with_line": 93,
+   "call_lines": [
+    93,
+    93
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "key_path",
+    "open",
+    "prepare_key",
+    "read"
+   ],
+   "parametrize": {
+    "key": [
+     "testkey2_rsa.pub.pem",
+     "testkey2_rsa.pub.pem",
+     "testkey_pkcs1.pub.pem",
+     "testkey_rsa.cer",
+     "testkey_rsa.pub"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_should_reject_loader_accepted_pem_mutations#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_should_reject_loader_accepted_pem_mutations",
+   "k": 0,
+   "with_line": 112,
+   "call_lines": [
+    112,
+    112
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {
+    "mutation": [
+     "lambda key: key.replace(b'-----END', b'\\t-----END')",
+     "lambda key: key.replace(b'\\n', b'\\r')",
+     "lambda key: key.replace(b'\\n', b'')"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_should_reject_a_later_pem_block#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_should_reject_a_later_pem_block",
+   "k": 0,
+   "with_line": 126,
+   "call_lines": [
+    126,
+    126
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_should_reject_a_pem_block_after_an_overlapping_end_marker#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_should_reject_a_pem_block_after_an_overlapping_end_marker",
+   "k": 0,
+   "with_line": 136,
+   "call_lines": [
+    136,
+    136
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_from_jwk_should_raise_exception_if_not_hmac_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_from_jwk_should_raise_exception_if_not_hmac_key",
+   "k": 0,
+   "with_line": 162,
+   "call_lines": [
+    162,
+    162
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_from_jwk_should_raise_exception_if_empty_json#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_from_jwk_should_raise_exception_if_empty_json",
+   "k": 0,
+   "with_line": 169,
+   "call_lines": [
+    169,
+    169
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_from_jwk_should_reject_empty_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_from_jwk_should_reject_empty_key",
+   "k": 0,
+   "with_line": 175,
+   "call_lines": [
+    175,
+    175
+   ],
+   "expected": "InvalidKeyError",
+   "match": "must not be empty",
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_empty_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_empty_key",
+   "k": 0,
+   "with_line": 184,
+   "call_lines": [
+    184,
+    184
+   ],
+   "expected": "InvalidKeyError",
+   "match": "must not be empty",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {
+    "empty_key": [
+     "",
+     "b''"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_jwk_json#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_jwk_json",
+   "k": 0,
+   "with_line": 200,
+   "call_lines": [
+    200,
+    200
+   ],
+   "expected": "InvalidKeyError",
+   "match": "looks like a JWK",
+   "post": [],
+   "calls": [
+    "prepare_key",
+    "read"
+   ],
+   "parametrize": {
+    "jwk_file": [
+     "jwk_rsa_pub.json",
+     "jwk_ec_pub_P-256.json",
+     "jwk_okp_pub_Ed25519.json",
+     "jwk_hmac.json"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_public_jwk_containers#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_public_jwk_containers",
+   "k": 0,
+   "with_line": 221,
+   "call_lines": [
+    221,
+    221
+   ],
+   "expected": "InvalidKeyError",
+   "match": "looks like a JWK",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {
+    "container": [
+     "jwks",
+     "array",
+     "nested-array",
+     "bom-jwks"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_deep_public_jwk_array#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_deep_public_jwk_array",
+   "k": 0,
+   "with_line": 229,
+   "call_lines": [
+    229,
+    229
+   ],
+   "expected": "InvalidKeyError",
+   "match": "looks like a JWK",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_deep_public_jwk_array_with_escaped_kty#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_deep_public_jwk_array_with_escaped_kty",
+   "k": 0,
+   "with_line": 239,
+   "call_lines": [
+    239,
+    239
+   ],
+   "expected": "InvalidKeyError",
+   "match": "looks like a JWK",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_jwks_with_oversized_integer#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_jwks_with_oversized_integer",
+   "k": 0,
+   "with_line": 258,
+   "call_lines": [
+    258,
+    258
+   ],
+   "expected": "InvalidKeyError",
+   "match": "looks like a JWK",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_bom_prefixed_jwk_json#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_bom_prefixed_jwk_json",
+   "k": 0,
+   "with_line": 280,
+   "call_lines": [
+    280,
+    280
+   ],
+   "expected": "InvalidKeyError",
+   "match": "looks like a JWK",
+   "post": [],
+   "calls": [
+    "encode",
+    "prepare_key",
+    "read"
+   ],
+   "parametrize": {
+    "encoding": [
+     "utf-8",
+     "utf-8-sig",
+     "utf-16",
+     "utf-16-le",
+     "utf-16-be",
+     "utf-32",
+     "utf-32-le",
+     "utf-32-be"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_deep_jwk_object#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_deep_jwk_object",
+   "k": 0,
+   "with_line": 300,
+   "call_lines": [
+    300,
+    300
+   ],
+   "expected": "InvalidKeyError",
+   "match": "looks like a JWK",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_deep_jwk_with_surrogate#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_deep_jwk_with_surrogate",
+   "k": 0,
+   "with_line": 328,
+   "call_lines": [
+    328,
+    328
+   ],
+   "expected": "InvalidKeyError",
+   "match": "looks like a JWK",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {
+    "encoding": [
+     "utf-8",
+     "utf-8-sig",
+     "utf-16",
+     "utf-16-le",
+     "utf-16-be",
+     "utf-32",
+     "utf-32-le",
+     "utf-32-be"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_der_public_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_der_public_key",
+   "k": 0,
+   "with_line": 345,
+   "call_lines": [
+    345,
+    345
+   ],
+   "expected": "InvalidKeyError",
+   "match": "asymmetric key",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {
+    "key_format_name": [
+     "SubjectPublicKeyInfo",
+     "PKCS1"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_prepare_key_rejects_der_certificate#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_hmac_prepare_key_rejects_der_certificate",
+   "k": 0,
+   "with_line": 355,
+   "call_lines": [
+    355,
+    355
+   ],
+   "expected": "InvalidKeyError",
+   "match": "x509 certificate",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_rsa_should_reject_non_string_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_rsa_should_reject_non_string_key",
+   "k": 0,
+   "with_line": 390,
+   "call_lines": [
+    390,
+    390
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_jwk_fails_on_invalid_json#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "k": 0,
+   "with_line": 460,
+   "call_lines": [
+    460,
+    460
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_jwk_fails_on_invalid_json#1",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "k": 1,
+   "with_line": 464,
+   "call_lines": [
+    464,
+    464
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_jwk_fails_on_invalid_json#2",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "k": 2,
+   "with_line": 468,
+   "call_lines": [
+    468,
+    468
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_jwk_fails_on_invalid_json#3",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "k": 3,
+   "with_line": 470,
+   "call_lines": [
+    470,
+    470
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_jwk_fails_on_invalid_json#4",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "k": 4,
+   "with_line": 472,
+   "call_lines": [
+    472,
+    472
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_jwk_fails_on_invalid_json#5",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "k": 5,
+   "with_line": 476,
+   "call_lines": [
+    476,
+    476
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_jwk_fails_on_invalid_json#6",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "k": 6,
+   "with_line": 480,
+   "call_lines": [
+    480,
+    480
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_jwk_fails_on_invalid_json#7",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "k": 7,
+   "with_line": 485,
+   "call_lines": [
+    485,
+    485
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_jwk_fails_on_invalid_json#8",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "k": 8,
+   "with_line": 492,
+   "call_lines": [
+    492,
+    492
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_to_jwk_raises_exception_on_invalid_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_to_jwk_raises_exception_on_invalid_key",
+   "k": 0,
+   "with_line": 574,
+   "call_lines": [
+    574,
+    574
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "to_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_to_jwk_with_invalid_curve#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_to_jwk_with_invalid_curve",
+   "k": 0,
+   "with_line": 616,
+   "call_lines": [
+    616,
+    616
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "to_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_rsa_jwk_private_key_with_other_primes_is_invalid#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_rsa_jwk_private_key_with_other_primes_is_invalid",
+   "k": 0,
+   "with_line": 661,
+   "call_lines": [
+    661,
+    661
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "dumps",
+    "from_jwk",
+    "loads",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_rsa_jwk_private_key_with_missing_values_is_invalid#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_rsa_jwk_private_key_with_missing_values_is_invalid",
+   "k": 0,
+   "with_line": 672,
+   "call_lines": [
+    672,
+    672
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "dumps",
+    "from_jwk",
+    "loads",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_rsa_jwk_private_key_with_missing_required_values_is_invalid#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_rsa_jwk_private_key_with_missing_required_values_is_invalid",
+   "k": 0,
+   "with_line": 707,
+   "call_lines": [
+    707,
+    707
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "dumps",
+    "from_jwk",
+    "loads",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_rsa_jwk_raises_exception_if_not_a_valid_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_rsa_jwk_raises_exception_if_not_a_valid_key",
+   "k": 0,
+   "with_line": 718,
+   "call_lines": [
+    718,
+    718
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_rsa_jwk_raises_exception_if_not_a_valid_key#1",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_rsa_jwk_raises_exception_if_not_a_valid_key",
+   "k": 1,
+   "with_line": 722,
+   "call_lines": [
+    722,
+    722
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_rsa_to_jwk_raises_exception_on_invalid_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_rsa_to_jwk_raises_exception_on_invalid_key",
+   "k": 0,
+   "with_line": 822,
+   "call_lines": [
+    822,
+    822
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "to_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_rsa_from_jwk_raises_exception_on_invalid_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_rsa_from_jwk_raises_exception_on_invalid_key",
+   "k": 0,
+   "with_line": 832,
+   "call_lines": [
+    832,
+    832
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_should_reject_non_string_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_should_reject_non_string_key",
+   "k": 0,
+   "with_line": 839,
+   "call_lines": [
+    839,
+    839
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_should_throw_exception_on_wrong_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_should_throw_exception_on_wrong_key",
+   "k": 0,
+   "with_line": 895,
+   "call_lines": [
+    895,
+    895
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "key_path",
+    "open",
+    "prepare_key",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_should_throw_exception_on_wrong_key#1",
+   "file": "test_algorithms.py",
+   "class": "TestAlgorithms",
+   "test": "test_ec_should_throw_exception_on_wrong_key",
+   "k": 1,
+   "with_line": 899,
+   "call_lines": [
+    899,
+    899
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "key_path",
+    "open",
+    "prepare_key",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_jwk_should_reject_inconsistent_private_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_jwk_should_reject_inconsistent_private_key",
+   "k": 0,
+   "with_line": 1085,
+   "call_lines": [
+    1085,
+    1085
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "dumps",
+    "from_jwk"
+   ],
+   "parametrize": {
+    "curve": [
+     "Ed25519",
+     "Ed448"
+    ],
+    "as_dict": [
+     false,
+     true
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_jwk_should_reject_private_key_with_invalid_public_length#0",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_jwk_should_reject_private_key_with_invalid_public_length",
+   "k": 0,
+   "with_line": 1098,
+   "call_lines": [
+    1098,
+    1098
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {
+    "curve": [
+     "Ed25519",
+     "Ed448"
+    ],
+    "length": [
+     0,
+     1,
+     56,
+     58
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_should_reject_non_string_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_should_reject_non_string_key",
+   "k": 0,
+   "with_line": 1108,
+   "call_lines": [
+    1108,
+    1108
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_prepare_key_should_reject_invalid_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_prepare_key_should_reject_invalid_key",
+   "k": 0,
+   "with_line": 1204,
+   "call_lines": [
+    1204,
+    1204
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_jwk_fails_on_invalid_json#0",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "k": 0,
+   "with_line": 1248,
+   "call_lines": [
+    1248,
+    1248
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_jwk_fails_on_invalid_json#1",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "k": 1,
+   "with_line": 1252,
+   "call_lines": [
+    1252,
+    1252
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_jwk_fails_on_invalid_json#2",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "k": 2,
+   "with_line": 1258,
+   "call_lines": [
+    1258,
+    1258
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_jwk_fails_on_invalid_json#3",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "k": 3,
+   "with_line": 1264,
+   "call_lines": [
+    1264,
+    1264
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_jwk_fails_on_invalid_json#4",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "k": 4,
+   "with_line": 1270,
+   "call_lines": [
+    1270,
+    1270
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_jwk_fails_on_invalid_json#5",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "k": 5,
+   "with_line": 1276,
+   "call_lines": [
+    1276,
+    1276
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_jwk_fails_on_invalid_json#6",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "k": 6,
+   "with_line": 1282,
+   "call_lines": [
+    1282,
+    1282
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed25519_jwk_fails_on_invalid_json#7",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "k": 7,
+   "with_line": 1288,
+   "call_lines": [
+    1288,
+    1288
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_to_jwk_raises_exception_on_invalid_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_to_jwk_raises_exception_on_invalid_key",
+   "k": 0,
+   "with_line": 1320,
+   "call_lines": [
+    1320,
+    1320
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "to_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed448_jwk_fails_on_invalid_json#0",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "k": 0,
+   "with_line": 1366,
+   "call_lines": [
+    1366,
+    1366
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed448_jwk_fails_on_invalid_json#1",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "k": 1,
+   "with_line": 1370,
+   "call_lines": [
+    1370,
+    1370
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed448_jwk_fails_on_invalid_json#2",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "k": 2,
+   "with_line": 1376,
+   "call_lines": [
+    1376,
+    1376
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed448_jwk_fails_on_invalid_json#3",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "k": 3,
+   "with_line": 1382,
+   "call_lines": [
+    1382,
+    1382
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed448_jwk_fails_on_invalid_json#4",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "k": 4,
+   "with_line": 1388,
+   "call_lines": [
+    1388,
+    1388
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed448_jwk_fails_on_invalid_json#5",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "k": 5,
+   "with_line": 1394,
+   "call_lines": [
+    1394,
+    1394
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed448_jwk_fails_on_invalid_json#6",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "k": 6,
+   "with_line": 1400,
+   "call_lines": [
+    1400,
+    1400
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_okp_ed448_jwk_fails_on_invalid_json#7",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "k": 7,
+   "with_line": 1406,
+   "call_lines": [
+    1406,
+    1406
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_jwk"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_rsa_prepare_key_raises_invalid_key_error_on_invalid_pem#0",
+   "file": "test_algorithms.py",
+   "class": "TestOKPAlgorithms",
+   "test": "test_rsa_prepare_key_raises_invalid_key_error_on_invalid_pem",
+   "k": 0,
+   "with_line": 1457,
+   "call_lines": [
+    1457,
+    1457
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "Could not parse the provided public key."
+    ]
+   ],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_curve_validation_rejects_wrong_curve_for_es256#0",
+   "file": "test_algorithms.py",
+   "class": "TestECCurveValidation",
+   "test": "test_ec_curve_validation_rejects_wrong_curve_for_es256",
+   "k": 0,
+   "with_line": 1478,
+   "call_lines": [
+    1478,
+    1478
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "secp384r1"
+    ],
+    [
+     "str_in",
+     "secp256r1"
+    ]
+   ],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_curve_validation_rejects_wrong_curve_for_es384#0",
+   "file": "test_algorithms.py",
+   "class": "TestECCurveValidation",
+   "test": "test_ec_curve_validation_rejects_wrong_curve_for_es384",
+   "k": 0,
+   "with_line": 1493,
+   "call_lines": [
+    1493,
+    1493
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "secp256r1"
+    ],
+    [
+     "str_in",
+     "secp384r1"
+    ]
+   ],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_curve_validation_rejects_wrong_curve_for_es512#0",
+   "file": "test_algorithms.py",
+   "class": "TestECCurveValidation",
+   "test": "test_ec_curve_validation_rejects_wrong_curve_for_es512",
+   "k": 0,
+   "with_line": 1508,
+   "call_lines": [
+    1508,
+    1508
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "secp256r1"
+    ],
+    [
+     "str_in",
+     "secp521r1"
+    ]
+   ],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_curve_validation_rejects_wrong_curve_for_es256k#0",
+   "file": "test_algorithms.py",
+   "class": "TestECCurveValidation",
+   "test": "test_ec_curve_validation_rejects_wrong_curve_for_es256k",
+   "k": 0,
+   "with_line": 1523,
+   "call_lines": [
+    1523,
+    1523
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "secp256r1"
+    ],
+    [
+     "str_in",
+     "secp256k1"
+    ]
+   ],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_curve_validation_rejects_p192_for_es256#0",
+   "file": "test_algorithms.py",
+   "class": "TestECCurveValidation",
+   "test": "test_ec_curve_validation_rejects_p192_for_es256",
+   "k": 0,
+   "with_line": 1579,
+   "call_lines": [
+    1579,
+    1579
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "secp192r1"
+    ],
+    [
+     "str_in",
+     "secp256r1"
+    ]
+   ],
+   "calls": [
+    "prepare_key",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_ec_curve_validation_with_pem_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestECCurveValidation",
+   "test": "test_ec_curve_validation_with_pem_key",
+   "k": 0,
+   "with_line": 1653,
+   "call_lines": [
+    1653,
+    1653
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "prepare_key",
+    "read"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_jwt_encode_decode_rejects_wrong_curve#0",
+   "file": "test_algorithms.py",
+   "class": "TestECCurveValidation",
+   "test": "test_jwt_encode_decode_rejects_wrong_curve",
+   "k": 0,
+   "with_line": 1667,
+   "call_lines": [
+    1667,
+    1667
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_jwt_encode_decode_rejects_wrong_curve#1",
+   "file": "test_algorithms.py",
+   "class": "TestECCurveValidation",
+   "test": "test_jwt_encode_decode_rejects_wrong_curve",
+   "k": 1,
+   "with_line": 1684,
+   "call_lines": [
+    1684,
+    1684
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "alg.ec-curve",
+    "segment": null,
+    "basis": "name: wrong curve"
+   }
+  },
+  {
+   "key": "test_algorithms.py::test_hmac_empty_key_rejected_outright#0",
+   "file": "test_algorithms.py",
+   "class": "TestKeyLengthValidation",
+   "test": "test_hmac_empty_key_rejected_outright",
+   "k": 0,
+   "with_line": 1726,
+   "call_lines": [
+    1726,
+    1726
+   ],
+   "expected": "InvalidKeyError",
+   "match": "must not be empty",
+   "post": [],
+   "calls": [
+    "prepare_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_pyjws_encode_enforces_short_hmac_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestKeyLengthValidation",
+   "test": "test_pyjws_encode_enforces_short_hmac_key",
+   "k": 0,
+   "with_line": 1830,
+   "call_lines": [
+    1830,
+    1830
+   ],
+   "expected": "InvalidKeyError",
+   "match": "below",
+   "post": [],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_pyjwt_encode_enforces_short_hmac_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestKeyLengthValidation",
+   "test": "test_pyjwt_encode_enforces_short_hmac_key",
+   "k": 0,
+   "with_line": 1855,
+   "call_lines": [
+    1855,
+    1855
+   ],
+   "expected": "InvalidKeyError",
+   "match": "below",
+   "post": [],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_algorithms.py::test_pyjwt_decode_enforces_short_hmac_key#0",
+   "file": "test_algorithms.py",
+   "class": "TestKeyLengthValidation",
+   "test": "test_pyjwt_decode_enforces_short_hmac_key",
+   "k": 0,
+   "with_line": 1871,
+   "call_lines": [
+    1871,
+    1871
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.key-length",
+    "segment": null,
+    "basis": "name: short HMAC key"
+   }
+  },
+  {
+   "key": "test_algorithms.py::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length#0",
+   "file": "test_algorithms.py",
+   "class": "TestKeyLengthValidation",
+   "test": "test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+   "k": 0,
+   "with_line": 1885,
+   "call_lines": [
+    1885,
+    1885
+   ],
+   "expected": "InvalidKeyError",
+   "match": "below",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.key-length",
+    "segment": null,
+    "basis": "match 'below'; name: minimum key length"
+   }
+  },
+  {
+   "key": "test_algorithms.py::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length#1",
+   "file": "test_algorithms.py",
+   "class": "TestKeyLengthValidation",
+   "test": "test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+   "k": 1,
+   "with_line": 1895,
+   "call_lines": [
+    1895,
+    1895
+   ],
+   "expected": "InvalidKeyError",
+   "match": "below",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.key-length",
+    "segment": null,
+    "basis": "match 'below'; name: minimum key length"
+   }
+  },
+  {
+   "key": "test_api_jwk.py::test_from_dict_should_throw_exception_if_arg_is_invalid#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWK",
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "k": 0,
+   "with_line": 181,
+   "call_lines": [
+    181,
+    181
+   ],
+   "expected": "PyJWKError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_dict"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_from_dict_should_throw_exception_if_arg_is_invalid#1",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWK",
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "k": 1,
+   "with_line": 187,
+   "call_lines": [
+    187,
+    187
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_dict"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_from_dict_should_throw_exception_if_arg_is_invalid#2",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWK",
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "k": 2,
+   "with_line": 193,
+   "call_lines": [
+    193,
+    193
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_dict"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_from_dict_should_throw_exception_if_arg_is_invalid#3",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWK",
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "k": 3,
+   "with_line": 199,
+   "call_lines": [
+    199,
+    199
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_dict"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_from_dict_should_throw_exception_if_arg_is_invalid#4",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWK",
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "k": 4,
+   "with_line": 205,
+   "call_lines": [
+    205,
+    205
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_dict"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_from_dict_should_throw_exception_if_arg_is_invalid#5",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWK",
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "k": 5,
+   "with_line": 211,
+   "call_lines": [
+    211,
+    211
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_dict"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_missing_crypto_library_good_error_message#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWK",
+   "test": "test_missing_crypto_library_good_error_message",
+   "k": 0,
+   "with_line": 216,
+   "call_lines": [
+    216,
+    216
+   ],
+   "expected": "PyJWKError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "PyJWK",
+    "str"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_missing_crypto_library_raises_missing_cryptography_error#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWK",
+   "test": "test_missing_crypto_library_raises_missing_cryptography_error",
+   "k": 0,
+   "with_line": 222,
+   "call_lines": [
+    222,
+    222
+   ],
+   "expected": "MissingCryptographyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "PyJWK"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_keyset_should_index_by_kid#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWKSet",
+   "test": "test_keyset_should_index_by_kid",
+   "k": 0,
+   "with_line": 308,
+   "call_lines": [
+    308,
+    308
+   ],
+   "expected": "KeyError",
+   "match": null,
+   "post": [],
+   "calls": [],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_keyset_of_only_non_object_members_raises_set_error#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWKSet",
+   "test": "test_keyset_of_only_non_object_members_raises_set_error",
+   "k": 0,
+   "with_line": 343,
+   "call_lines": [
+    343,
+    343
+   ],
+   "expected": "PyJWKSetError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_dict"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_keyset_skips_members_with_invalid_component_types#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWKSet",
+   "test": "test_keyset_skips_members_with_invalid_component_types",
+   "k": 0,
+   "with_line": 350,
+   "call_lines": [
+    350,
+    350
+   ],
+   "expected": "PyJWKSetError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_dict"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_jwk_with_invalid_component_type_raises_invalid_key_error#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWKSet",
+   "test": "test_jwk_with_invalid_component_type_raises_invalid_key_error",
+   "k": 0,
+   "with_line": 355,
+   "call_lines": [
+    355,
+    355
+   ],
+   "expected": "InvalidKeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "PyJWK"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_keyset_with_unknown_alg#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWKSet",
+   "test": "test_keyset_with_unknown_alg",
+   "k": 0,
+   "with_line": 373,
+   "call_lines": [
+    373,
+    373
+   ],
+   "expected": "PyJWKSetError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "from_json"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_invalid_keys_list#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWKSet",
+   "test": "test_invalid_keys_list",
+   "k": 0,
+   "with_line": 378,
+   "call_lines": [
+    378,
+    378
+   ],
+   "expected": "PyJWKSetError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid JWK Set value"
+    ]
+   ],
+   "calls": [
+    "PyJWKSet"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_empty_keys_list#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWKSet",
+   "test": "test_empty_keys_list",
+   "k": 0,
+   "with_line": 384,
+   "call_lines": [
+    384,
+    384
+   ],
+   "expected": "PyJWKSetError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "The JWK Set did not contain any keys"
+    ]
+   ],
+   "calls": [
+    "PyJWKSet"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwk.py::test_missing_crypto_library_raises_when_required#0",
+   "file": "test_api_jwk.py",
+   "class": "TestPyJWKSet",
+   "test": "test_missing_crypto_library_raises_when_required",
+   "k": 0,
+   "with_line": 390,
+   "call_lines": [
+    390,
+    390
+   ],
+   "expected": "MissingCryptographyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "PyJWKSet"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_register_algo_does_not_allow_duplicate_registration#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_register_algo_does_not_allow_duplicate_registration",
+   "k": 0,
+   "with_line": 56,
+   "call_lines": [
+    56,
+    56
+   ],
+   "expected": "ValueError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "NoneAlgorithm",
+    "register_algorithm"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_register_algo_rejects_non_algorithm_obj#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_register_algo_rejects_non_algorithm_obj",
+   "k": 0,
+   "with_line": 60,
+   "call_lines": [
+    60,
+    60
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "register_algorithm"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_unregister_algo_throws_error_if_not_registered#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_unregister_algo_throws_error_if_not_registered",
+   "k": 0,
+   "with_line": 77,
+   "call_lines": [
+    77,
+    77
+   ],
+   "expected": "KeyError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "unregister_algorithm"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_decode_fails_when_alg_is_not_on_method_algorithms_param#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_fails_when_alg_is_not_on_method_algorithms_param",
+   "k": 0,
+   "with_line": 118,
+   "call_lines": [
+    118,
+    118
+   ],
+   "expected": "InvalidAlgorithmError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.alg-allowed",
+    "segment": null,
+    "basis": "name: alg not on the algorithms parameter"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_missing_segments_throws_exception#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_missing_segments_throws_exception",
+   "k": 0,
+   "with_line": 135,
+   "call_lines": [
+    135,
+    135
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Not enough segments"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.segments",
+    "segment": null,
+    "basis": "message equals the check's"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_invalid_token_type_is_none#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_invalid_token_type_is_none",
+   "k": 0,
+   "with_line": 145,
+   "call_lines": [
+    145,
+    145
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid token type"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.token-type",
+    "segment": null,
+    "basis": "message contains 'Invalid token type'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_invalid_token_type_is_int#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_invalid_token_type_is_int",
+   "k": 0,
+   "with_line": 159,
+   "call_lines": [
+    159,
+    159
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid token type"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.token-type",
+    "segment": null,
+    "basis": "message contains 'Invalid token type'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_with_non_mapping_header_throws_exception#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_with_non_mapping_header_throws_exception",
+   "k": 0,
+   "with_line": 177,
+   "call_lines": [
+    177,
+    177
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid header string: must be a json object"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.header-object",
+    "segment": null,
+    "basis": "message equals the check's"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_encode_algorithm_param_should_be_case_sensitive#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_encode_algorithm_param_should_be_case_sensitive",
+   "k": 0,
+   "with_line": 200,
+   "call_lines": [
+    200,
+    200
+   ],
+   "expected": "NotImplementedError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Algorithm not supported"
+    ]
+   ],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_encode_with_headers_alg_none#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_encode_with_headers_alg_none",
+   "k": 0,
+   "with_line": 214,
+   "call_lines": [
+    214,
+    214
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Signature verification failed"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.signature",
+    "segment": null,
+    "basis": "message equals the check's"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_algorithm_param_should_be_case_sensitive#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_algorithm_param_should_be_case_sensitive",
+   "k": 0,
+   "with_line": 293,
+   "call_lines": [
+    293,
+    293
+   ],
+   "expected": "InvalidAlgorithmError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Algorithm not supported"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.alg-supported",
+    "segment": null,
+    "basis": "message equals the check's"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_bad_secret#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_bad_secret",
+   "k": 0,
+   "with_line": 304,
+   "call_lines": [
+    304,
+    304
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Signature verification failed"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.signature",
+    "segment": null,
+    "basis": "message equals the check's"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_bad_secret#1",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_bad_secret",
+   "k": 1,
+   "with_line": 309,
+   "call_lines": [
+    309,
+    309
+   ],
+   "expected": "InvalidSignatureError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Signature verification failed"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.signature",
+    "segment": null,
+    "basis": "message equals the check's"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decodes_with_jwk_and_mismatched_algorithm#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decodes_with_jwk_and_mismatched_algorithm",
+   "k": 0,
+   "with_line": 398,
+   "call_lines": [
+    398,
+    398
+   ],
+   "expected": "InvalidAlgorithmError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "InvalidAlgorithmError only; the name fits two checks: the allow-list check and the check that the token's algorithm matches the key's"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decodes_with_jwk_rejects_header_alg_outside_jwk_alg#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decodes_with_jwk_rejects_header_alg_outside_jwk_alg",
+   "k": 0,
+   "with_line": 423,
+   "call_lines": [
+    423,
+    425
+   ],
+   "expected": "InvalidAlgorithmError",
+   "match": "does not match the key's algorithm",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.jwk-alg-match",
+    "segment": null,
+    "basis": "match 'does not match the key's algorithm'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_with_optional_algorithms#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_with_optional_algorithms",
+   "k": 0,
+   "with_line": 501,
+   "call_lines": [
+    501,
+    501
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "It is required that you pass in a value for the \"algorithms\" argument when calling decode()."
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.alg-required",
+    "segment": null,
+    "basis": "message contains the check's"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_no_secret#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_no_secret",
+   "k": 0,
+   "with_line": 542,
+   "call_lines": [
+    542,
+    542
+   ],
+   "expected": "InvalidKeyError",
+   "match": "must not be empty",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "alg.hmac-empty-key",
+    "segment": null,
+    "basis": "match 'must not be empty'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_verify_signature_with_no_secret#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_verify_signature_with_no_secret",
+   "k": 0,
+   "with_line": 549,
+   "call_lines": [
+    549,
+    549
+   ],
+   "expected": "InvalidKeyError",
+   "match": "must not be empty",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "alg.hmac-empty-key",
+    "segment": null,
+    "basis": "match 'must not be empty'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_verify_signature_with_no_algo_header_throws_exception#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_verify_signature_with_no_algo_header_throws_exception",
+   "k": 0,
+   "with_line": 557,
+   "call_lines": [
+    557,
+    557
+   ],
+   "expected": "InvalidAlgorithmError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.alg-present",
+    "segment": null,
+    "basis": "name: no alg header"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_invalid_crypto_alg#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_invalid_crypto_alg",
+   "k": 0,
+   "with_line": 561,
+   "call_lines": [
+    561,
+    561
+   ],
+   "expected": "NotImplementedError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_missing_crypto_library_better_error_messages#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_missing_crypto_library_better_error_messages",
+   "k": 0,
+   "with_line": 568,
+   "call_lines": [
+    568,
+    568
+   ],
+   "expected": "NotImplementedError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "encode",
+    "str"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_decode_invalid_header_padding#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_invalid_header_padding",
+   "k": 0,
+   "with_line": 616,
+   "call_lines": [
+    616,
+    616
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "header padding"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.segment-encoding",
+    "segment": "header",
+    "basis": "message contains 'header padding'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_invalid_header_string#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_invalid_header_string",
+   "k": 0,
+   "with_line": 629,
+   "call_lines": [
+    629,
+    629
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid header"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "message contains 'Invalid header', as three checks' messages do; the name 'invalid header string' fits two of them, the JSON check and the object check"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_deeply_nested_header_throws_decode_error#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_deeply_nested_header_throws_decode_error",
+   "k": 0,
+   "with_line": 644,
+   "call_lines": [
+    644,
+    644
+   ],
+   "expected": "DecodeError",
+   "match": "Invalid header",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.header-json",
+    "segment": null,
+    "basis": "match 'Invalid header'; name: deeply nested header, which only the JSON check handles (it catches RecursionError)"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_invalid_payload_padding#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_invalid_payload_padding",
+   "k": 0,
+   "with_line": 655,
+   "call_lines": [
+    655,
+    655
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid payload padding"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.segment-encoding",
+    "segment": "payload",
+    "basis": "message contains 'Invalid payload padding'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_invalid_crypto_padding#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_invalid_crypto_padding",
+   "k": 0,
+   "with_line": 668,
+   "call_lines": [
+    668,
+    668
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid crypto padding"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.segment-encoding",
+    "segment": "crypto",
+    "basis": "message contains 'Invalid crypto padding'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_rejects_non_canonical_crypto_segment#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_rejects_non_canonical_crypto_segment",
+   "k": 0,
+   "with_line": 681,
+   "call_lines": [
+    681,
+    681
+   ],
+   "expected": "DecodeError",
+   "match": "Invalid crypto padding",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.segment-encoding",
+    "segment": "crypto",
+    "basis": "match 'Invalid crypto padding'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_rejects_embedded_padding_in_crypto_segment#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_rejects_embedded_padding_in_crypto_segment",
+   "k": 0,
+   "with_line": 708,
+   "call_lines": [
+    708,
+    708
+   ],
+   "expected": "DecodeError",
+   "match": "Invalid crypto padding",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.segment-encoding",
+    "segment": "crypto",
+    "basis": "match 'Invalid crypto padding'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_rejects_invalid_base64url_padding#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_rejects_invalid_base64url_padding",
+   "k": 0,
+   "with_line": 725,
+   "call_lines": [
+    725,
+    725
+   ],
+   "expected": "DecodeError",
+   "match": "Invalid crypto padding",
+   "post": [],
+   "calls": [
+    "_decode_base64url_segment"
+   ],
+   "parametrize": {
+    "segment": [
+     "b'Zg==='",
+     "b'Zg='",
+     "b'a'",
+     "b'Z?=='",
+     "b'Zh'",
+     "b'Zh=='"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_decode_with_algo_none_should_fail#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_with_algo_none_should_fail",
+   "k": 0,
+   "with_line": 739,
+   "call_lines": [
+    739,
+    739
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "DecodeError only; no check's message or condition names the 'none' algorithm"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_get_unverified_header_fails_on_bad_header_types#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_get_unverified_header_fails_on_bad_header_types",
+   "k": 0,
+   "with_line": 779,
+   "call_lines": [
+    779,
+    779
+   ],
+   "expected": "InvalidTokenError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Key ID header parameter must be a string"
+    ]
+   ],
+   "calls": [
+    "get_unverified_header"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_decode_options_must_be_dict#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_options_must_be_dict",
+   "k": 0,
+   "with_line": 901,
+   "call_lines": [
+    901,
+    901
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode",
+    "object"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "expects TypeError, which is not a PyJWTError"
+  },
+  {
+   "key": "test_api_jws.py::test_decode_options_must_be_dict#1",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_options_must_be_dict",
+   "k": 1,
+   "with_line": 904,
+   "call_lines": [
+    904,
+    904
+   ],
+   "expected": "(TypeError, ValueError)",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "expects (TypeError, ValueError), which is not a PyJWTError"
+  },
+  {
+   "key": "test_api_jws.py::test_custom_json_encoder#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_custom_json_encoder",
+   "k": 0,
+   "with_line": 915,
+   "call_lines": [
+    915,
+    915
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_encode_fails_on_invalid_kid_types#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_encode_fails_on_invalid_kid_types",
+   "k": 0,
+   "with_line": 1005,
+   "call_lines": [
+    1005,
+    1005
+   ],
+   "expected": "InvalidTokenError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Key ID header parameter must be a string"
+    ]
+   ],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_encode_fails_on_invalid_kid_types#1",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_encode_fails_on_invalid_kid_types",
+   "k": 1,
+   "with_line": 1010,
+   "call_lines": [
+    1010,
+    1010
+   ],
+   "expected": "InvalidTokenError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Key ID header parameter must be a string"
+    ]
+   ],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_decode_rejects_detached_payload_for_attached_content#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_rejects_detached_payload_for_attached_content",
+   "k": 0,
+   "with_line": 1031,
+   "call_lines": [
+    1031,
+    1031
+   ],
+   "expected": "DecodeError",
+   "match": "detached_payload.*b64.*false",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.detached-requires-b64-false",
+    "segment": null,
+    "basis": "match 'detached_payload.*b64.*false'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_b64_false_rejects_non_empty_payload_segment#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_b64_false_rejects_non_empty_payload_segment",
+   "k": 0,
+   "with_line": 1128,
+   "call_lines": [
+    1128,
+    1128
+   ],
+   "expected": "DecodeError",
+   "match": "Payload segment must be empty",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.b64-empty-payload",
+    "segment": null,
+    "basis": "match 'Payload segment must be empty'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_b64_false_without_crit_b64_is_rejected#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_b64_false_without_crit_b64_is_rejected",
+   "k": 0,
+   "with_line": 1149,
+   "call_lines": [
+    1149,
+    1149
+   ],
+   "expected": "InvalidTokenError",
+   "match": "b64.*crit",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.b64-requires-crit",
+    "segment": null,
+    "basis": "match 'b64.*crit'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_detached_content_without_proper_argument#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_detached_content_without_proper_argument",
+   "k": 0,
+   "with_line": 1160,
+   "call_lines": [
+    1160,
+    1160
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false."
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.b64-requires-detached",
+    "segment": null,
+    "basis": "message contains the check's"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_rejects_unknown_crit_extension#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_rejects_unknown_crit_extension",
+   "k": 0,
+   "with_line": 1223,
+   "call_lines": [
+    1223,
+    1223
+   ],
+   "expected": "InvalidTokenError",
+   "match": "Unsupported critical extension",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.crit-supported",
+    "segment": null,
+    "basis": "match 'Unsupported critical extension'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_rejects_empty_crit#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_rejects_empty_crit",
+   "k": 0,
+   "with_line": 1235,
+   "call_lines": [
+    1235,
+    1235
+   ],
+   "expected": "InvalidTokenError",
+   "match": "must be a non-empty list",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.crit-list",
+    "segment": null,
+    "basis": "match 'must be a non-empty list'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_rejects_non_list_crit#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_rejects_non_list_crit",
+   "k": 0,
+   "with_line": 1247,
+   "call_lines": [
+    1247,
+    1247
+   ],
+   "expected": "InvalidTokenError",
+   "match": "must be a non-empty list",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.crit-list",
+    "segment": null,
+    "basis": "match 'must be a non-empty list'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_rejects_crit_with_non_string_values#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_rejects_crit_with_non_string_values",
+   "k": 0,
+   "with_line": 1261,
+   "call_lines": [
+    1261,
+    1261
+   ],
+   "expected": "InvalidTokenError",
+   "match": "values must be strings",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.crit-strings",
+    "segment": null,
+    "basis": "match 'values must be strings'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_decode_rejects_crit_extension_missing_from_header#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_decode_rejects_crit_extension_missing_from_header",
+   "k": 0,
+   "with_line": 1275,
+   "call_lines": [
+    1275,
+    1275
+   ],
+   "expected": "InvalidTokenError",
+   "match": "missing from headers",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.crit-present",
+    "segment": null,
+    "basis": "match 'missing from headers'"
+   }
+  },
+  {
+   "key": "test_api_jws.py::test_get_unverified_header_rejects_unknown_crit#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_get_unverified_header_rejects_unknown_crit",
+   "k": 0,
+   "with_line": 1309,
+   "call_lines": [
+    1309,
+    1309
+   ],
+   "expected": "InvalidTokenError",
+   "match": "Unsupported critical extension",
+   "post": [],
+   "calls": [
+    "get_unverified_header"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jws.py::test_pyjwk_rejects_empty_hmac_key#0",
+   "file": "test_api_jws.py",
+   "class": "TestJWS",
+   "test": "test_pyjwk_rejects_empty_hmac_key",
+   "k": 0,
+   "with_line": 1315,
+   "call_lines": [
+    1315,
+    1315
+   ],
+   "expected": "jwt.InvalidKeyError",
+   "match": "must not be empty",
+   "post": [],
+   "calls": [
+    "from_dict"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwt.py::test_reused_options_do_not_disable_claim_verification#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_reused_options_do_not_disable_claim_verification",
+   "k": 0,
+   "with_line": 62,
+   "call_lines": [
+    62,
+    62
+   ],
+   "expected": "ExpiredSignatureError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.exp-expired",
+    "segment": null,
+    "basis": "class ExpiredSignatureError, which only the expiry check raises"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_invalid_payload_string#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_invalid_payload_string",
+   "k": 0,
+   "with_line": 177,
+   "call_lines": [
+    177,
+    177
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid payload string"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "message contains 'Invalid payload string', which two checks' messages start with; the name fits both"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_payload_recursion_error_throws_decode_error#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_payload_recursion_error_throws_decode_error",
+   "k": 0,
+   "with_line": 189,
+   "call_lines": [
+    189,
+    189
+   ],
+   "expected": "DecodeError",
+   "match": "Invalid payload",
+   "post": [
+    [
+     "cause_isinstance",
+     "RecursionError"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.payload-json",
+    "segment": null,
+    "basis": "match 'Invalid payload' and a RecursionError cause, which only the payload JSON check chains"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_non_mapping_payload_throws_exception#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_non_mapping_payload_throws_exception",
+   "k": 0,
+   "with_line": 202,
+   "call_lines": [
+    202,
+    202
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid payload string: must be a json object"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.payload-object",
+    "segment": null,
+    "basis": "message equals the check's"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_invalid_audience_param_throws_exception#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_invalid_audience_param_throws_exception",
+   "k": 0,
+   "with_line": 218,
+   "call_lines": [
+    218,
+    218
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "audience must be a string, iterable or None"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "expects TypeError, which is not a PyJWTError"
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_nonlist_aud_claim_throws_exception#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_nonlist_aud_claim_throws_exception",
+   "k": 0,
+   "with_line": 237,
+   "call_lines": [
+    237,
+    237
+   ],
+   "expected": "InvalidAudienceError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid claim format in token"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.aud-claim-format",
+    "segment": null,
+    "basis": "message equals the check's"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_invalid_aud_list_member_throws_exception#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_invalid_aud_list_member_throws_exception",
+   "k": 0,
+   "with_line": 258,
+   "call_lines": [
+    258,
+    258
+   ],
+   "expected": "InvalidAudienceError",
+   "match": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid claim format in token"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.aud-claim-format",
+    "segment": null,
+    "basis": "message equals the check's"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_encode_with_non_str_iss#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_encode_with_non_str_iss",
+   "k": 0,
+   "with_line": 280,
+   "call_lines": [
+    280,
+    280
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_raises_exception_if_exp_is_not_int#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_raises_exception_if_exp_is_not_int",
+   "k": 0,
+   "with_line": 322,
+   "call_lines": [
+    322,
+    322
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "exp"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.exp-type",
+    "segment": null,
+    "basis": "message contains 'exp'; name: exp is not an int"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_raises_exception_if_iat_is_not_int#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_raises_exception_if_iat_is_not_int",
+   "k": 0,
+   "with_line": 335,
+   "call_lines": [
+    335,
+    335
+   ],
+   "expected": "InvalidIssuedAtError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.iat-type",
+    "segment": null,
+    "basis": "class InvalidIssuedAtError, which only the iat type check raises"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_raises_exception_if_iat_is_greater_than_now#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_raises_exception_if_iat_is_greater_than_now",
+   "k": 0,
+   "with_line": 345,
+   "call_lines": [
+    345,
+    345
+   ],
+   "expected": "ImmatureSignatureError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.iat-future",
+    "segment": null,
+    "basis": "class ImmatureSignatureError (two checks); name: iat later than now"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_raises_exception_if_nbf_is_not_int#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_raises_exception_if_nbf_is_not_int",
+   "k": 0,
+   "with_line": 365,
+   "call_lines": [
+    365,
+    365
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.nbf-type",
+    "segment": null,
+    "basis": "name: nbf is not an int"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_raises_clean_error_if_claim_is_non_numeric_type#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_raises_clean_error_if_claim_is_non_numeric_type",
+   "k": 0,
+   "with_line": 379,
+   "call_lines": [
+    379,
+    379
+   ],
+   "expected": "expected",
+   "match": null,
+   "post": [
+    [
+     "str_in_param",
+     "claim"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {
+    "claim": [
+     "exp",
+     "nbf",
+     "iat"
+    ],
+    "value": [
+     "[1]",
+     "{'a': 1}",
+     "None",
+     "float('inf')"
+    ]
+   },
+   "included": true,
+   "label": {
+    "by_param": "claim",
+    "values": {
+     "exp": {
+      "target": "jwt.exp-type",
+      "segment": null,
+      "basis": "name: non-numeric claim; message contains 'exp'",
+      "expected": "DecodeError"
+     },
+     "nbf": {
+      "target": "jwt.nbf-type",
+      "segment": null,
+      "basis": "name: non-numeric claim; message contains 'nbf'",
+      "expected": "DecodeError"
+     },
+     "iat": {
+      "target": "jwt.iat-type",
+      "segment": null,
+      "basis": "name: non-numeric claim; message contains 'iat'",
+      "expected": "InvalidIssuedAtError"
+     }
+    }
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_expiration#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_expiration",
+   "k": 0,
+   "with_line": 474,
+   "call_lines": [
+    474,
+    474
+   ],
+   "expected": "ExpiredSignatureError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.exp-expired",
+    "segment": null,
+    "basis": "class ExpiredSignatureError, which only the expiry check raises"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_notbefore#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_notbefore",
+   "k": 0,
+   "with_line": 484,
+   "call_lines": [
+    484,
+    484
+   ],
+   "expected": "ImmatureSignatureError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.nbf-future",
+    "segment": null,
+    "basis": "class ImmatureSignatureError (two checks); name: not before"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_expiration_with_leeway#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_expiration_with_leeway",
+   "k": 0,
+   "with_line": 531,
+   "call_lines": [
+    531,
+    531
+   ],
+   "expected": "ExpiredSignatureError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.exp-expired",
+    "segment": null,
+    "basis": "class ExpiredSignatureError, which only the expiry check raises"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_notbefore_with_leeway#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_notbefore_with_leeway",
+   "k": 0,
+   "with_line": 544,
+   "call_lines": [
+    544,
+    544
+   ],
+   "expected": "ImmatureSignatureError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.nbf-future",
+    "segment": null,
+    "basis": "class ImmatureSignatureError (two checks); name: not before"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_check_audience_none_specified#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_check_audience_none_specified",
+   "k": 0,
+   "with_line": 565,
+   "call_lines": [
+    565,
+    565
+   ],
+   "expected": "InvalidAudienceError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.aud-unexpected",
+    "segment": null,
+    "basis": "name: no audience specified, while the token carries one"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_raise_exception_invalid_audience_list#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_raise_exception_invalid_audience_list",
+   "k": 0,
+   "with_line": 571,
+   "call_lines": [
+    571,
+    571
+   ],
+   "expected": "InvalidAudienceError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "InvalidAudienceError only; 'invalid audience' is one check's message and another check's condition"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_raise_exception_invalid_audience#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_raise_exception_invalid_audience",
+   "k": 0,
+   "with_line": 589,
+   "call_lines": [
+    589,
+    589
+   ],
+   "expected": "InvalidAudienceError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "InvalidAudienceError only; 'invalid audience' is one check's message and another check's condition"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_raise_exception_audience_as_bytes#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_raise_exception_audience_as_bytes",
+   "k": 0,
+   "with_line": 595,
+   "call_lines": [
+    595,
+    595
+   ],
+   "expected": "InvalidAudienceError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "InvalidAudienceError only; no check's message or condition names a bytes audience"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_raise_exception_invalid_audience_in_array#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_raise_exception_invalid_audience_in_array",
+   "k": 0,
+   "with_line": 611,
+   "call_lines": [
+    611,
+    611
+   ],
+   "expected": "InvalidAudienceError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": null,
+    "reason": "InvalidAudienceError only; 'invalid audience' is one check's message and another check's condition"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_raise_exception_token_without_issuer#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_raise_exception_token_without_issuer",
+   "k": 0,
+   "with_line": 621,
+   "call_lines": [
+    621,
+    621
+   ],
+   "expected": "MissingRequiredClaimError",
+   "match": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "iss"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.iss-present",
+    "segment": null,
+    "basis": "claim 'iss'; name: token without issuer"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_rasise_exception_on_partial_issuer_match#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_rasise_exception_on_partial_issuer_match",
+   "k": 0,
+   "with_line": 633,
+   "call_lines": [
+    633,
+    633
+   ],
+   "expected": "InvalidIssuerError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.iss-match",
+    "segment": null,
+    "basis": "class InvalidIssuerError (three checks); name: issuer match"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_raise_exception_token_without_audience#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_raise_exception_token_without_audience",
+   "k": 0,
+   "with_line": 640,
+   "call_lines": [
+    640,
+    640
+   ],
+   "expected": "MissingRequiredClaimError",
+   "match": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "aud"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.aud-present",
+    "segment": null,
+    "basis": "claim 'aud'; name: token without audience"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_raise_exception_token_with_aud_none_and_without_audience#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_raise_exception_token_with_aud_none_and_without_audience",
+   "k": 0,
+   "with_line": 651,
+   "call_lines": [
+    651,
+    651
+   ],
+   "expected": "MissingRequiredClaimError",
+   "match": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "aud"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.aud-present",
+    "segment": null,
+    "basis": "claim 'aud'; name: token without audience"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_raise_exception_invalid_issuer#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_raise_exception_invalid_issuer",
+   "k": 0,
+   "with_line": 675,
+   "call_lines": [
+    675,
+    675
+   ],
+   "expected": "InvalidIssuerError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.iss-match",
+    "segment": null,
+    "basis": "class InvalidIssuerError (three checks); name: the check's message"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_raise_exception_invalid_issuer_list#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_raise_exception_invalid_issuer_list",
+   "k": 0,
+   "with_line": 685,
+   "call_lines": [
+    685,
+    685
+   ],
+   "expected": "InvalidIssuerError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.iss-match",
+    "segment": null,
+    "basis": "class InvalidIssuerError (three checks); name: the check's message"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_should_raise_error_if_exp_required_but_not_present#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_should_raise_error_if_exp_required_but_not_present",
+   "k": 0,
+   "with_line": 720,
+   "call_lines": [
+    720,
+    720
+   ],
+   "expected": "MissingRequiredClaimError",
+   "match": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "exp"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.required",
+    "segment": null,
+    "basis": "claim 'exp'; name: required but not present"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_should_raise_error_if_iat_required_but_not_present#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_should_raise_error_if_iat_required_but_not_present",
+   "k": 0,
+   "with_line": 739,
+   "call_lines": [
+    739,
+    739
+   ],
+   "expected": "MissingRequiredClaimError",
+   "match": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "iat"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.required",
+    "segment": null,
+    "basis": "claim 'iat'; name: required but not present"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_should_raise_error_if_nbf_required_but_not_present#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_should_raise_error_if_nbf_required_but_not_present",
+   "k": 0,
+   "with_line": 758,
+   "call_lines": [
+    758,
+    758
+   ],
+   "expected": "MissingRequiredClaimError",
+   "match": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "nbf"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.required",
+    "segment": null,
+    "basis": "claim 'nbf'; name: required but not present"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_custom_json_encoder#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_custom_json_encoder",
+   "k": 0,
+   "with_line": 815,
+   "call_lines": [
+    815,
+    815
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "encode"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_verify_exp_option#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_verify_exp_option",
+   "k": 0,
+   "with_line": 837,
+   "call_lines": [
+    837,
+    837
+   ],
+   "expected": "ExpiredSignatureError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.exp-expired",
+    "segment": null,
+    "basis": "class ExpiredSignatureError, which only the expiry check raises"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_verify_exp_option_and_signature_off#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_verify_exp_option_and_signature_off",
+   "k": 0,
+   "with_line": 857,
+   "call_lines": [
+    857,
+    857
+   ],
+   "expected": "ExpiredSignatureError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.exp-expired",
+    "segment": null,
+    "basis": "class ExpiredSignatureError, which only the expiry check raises"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_optional_algorithms#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_optional_algorithms",
+   "k": 0,
+   "with_line": 869,
+   "call_lines": [
+    869,
+    869
+   ],
+   "expected": "DecodeError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "It is required that you pass in a value for the \"algorithms\" argument when calling decode()."
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.alg-required",
+    "segment": null,
+    "basis": "message contains the check's"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_strict_aud_forbids_list_audience#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_strict_aud_forbids_list_audience",
+   "k": 0,
+   "with_line": 963,
+   "call_lines": [
+    963,
+    963
+   ],
+   "expected": "InvalidAudienceError",
+   "match": "Invalid audience \\(strict\\)",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.aud-strict-param",
+    "segment": null,
+    "basis": "match 'Invalid audience \\(strict\\)'"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_strict_aud_forbids_list_claim#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_strict_aud_forbids_list_claim",
+   "k": 0,
+   "with_line": 989,
+   "call_lines": [
+    989,
+    991
+   ],
+   "expected": "InvalidAudienceError",
+   "match": "Invalid claim format in token \\(strict\\)",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.aud-strict-claim-format",
+    "segment": null,
+    "basis": "match 'Invalid claim format in token \\(strict\\)'"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_strict_aud_does_not_match#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_strict_aud_does_not_match",
+   "k": 0,
+   "with_line": 1007,
+   "call_lines": [
+    1007,
+    1009
+   ],
+   "expected": "InvalidAudienceError",
+   "match": "Audience doesn't match \\(strict\\)",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.aud-strict-match",
+    "segment": null,
+    "basis": "match 'Audience doesn't match \\(strict\\)'"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_missing_sub_but_required_claim#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_missing_sub_but_required_claim",
+   "k": 0,
+   "with_line": 1055,
+   "call_lines": [
+    1055,
+    1055
+   ],
+   "expected": "MissingRequiredClaimError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.required",
+    "segment": null,
+    "basis": "class MissingRequiredClaimError (three checks); name: sub required"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_invalid_int_sub_claim#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_invalid_int_sub_claim",
+   "k": 0,
+   "with_line": 1067,
+   "call_lines": [
+    1067,
+    1067
+   ],
+   "expected": "InvalidSubjectError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.sub-type",
+    "segment": null,
+    "basis": "class InvalidSubjectError (two checks); name: int sub claim"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_with_invalid_sub_claim#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_with_invalid_sub_claim",
+   "k": 0,
+   "with_line": 1088,
+   "call_lines": [
+    1088,
+    1088
+   ],
+   "expected": "InvalidSubjectError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid subject"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.sub-match",
+    "segment": null,
+    "basis": "message contains 'Invalid subject'"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_missing_jti_when_required_claim#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_missing_jti_when_required_claim",
+   "k": 0,
+   "with_line": 1120,
+   "call_lines": [
+    1120,
+    1120
+   ],
+   "expected": "MissingRequiredClaimError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "jti"
+    ]
+   ],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.required",
+    "segment": null,
+    "basis": "message contains 'jti'; name: jti required"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_jti_claim_with_invalid_int_value#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_jti_claim_with_invalid_int_value",
+   "k": 0,
+   "with_line": 1143,
+   "call_lines": [
+    1143,
+    1143
+   ],
+   "expected": "InvalidJTIError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jwt.jti-type",
+    "segment": null,
+    "basis": "class InvalidJTIError, which only the jti type check raises"
+   }
+  },
+  {
+   "key": "test_api_jwt.py::test_validate_iss_with_non_str#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_validate_iss_with_non_str",
+   "k": 0,
+   "with_line": 1165,
+   "call_lines": [
+    1165,
+    1165
+   ],
+   "expected": "InvalidIssuerError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "_validate_iss"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwt.py::test_validate_iss_with_non_str_issuer#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_validate_iss_with_non_str_issuer",
+   "k": 0,
+   "with_line": 1173,
+   "call_lines": [
+    1173,
+    1173
+   ],
+   "expected": "InvalidIssuerError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "_validate_iss"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_api_jwt.py::test_decode_rejects_token_with_unknown_crit_extension#0",
+   "file": "test_api_jwt.py",
+   "class": "TestJWT",
+   "test": "test_decode_rejects_token_with_unknown_crit_extension",
+   "k": 0,
+   "with_line": 1194,
+   "call_lines": [
+    1194,
+    1194
+   ],
+   "expected": "InvalidTokenError",
+   "match": "Unsupported critical extension",
+   "post": [],
+   "calls": [
+    "decode"
+   ],
+   "parametrize": {},
+   "included": true,
+   "label": {
+    "target": "jws.crit-supported",
+    "segment": null,
+    "basis": "match 'Unsupported critical extension'"
+   }
+  },
+  {
+   "key": "test_jwks_client.py::test_fetch_data_rejects_redirect_without_contacting_destination#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_fetch_data_rejects_redirect_without_contacting_destination",
+   "k": 0,
+   "with_line": 180,
+   "call_lines": [
+    180,
+    180
+   ],
+   "expected": "PyJWKClientConnectionError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "fetch_data"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_get_signing_keys_raises_if_none_found#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_get_signing_keys_raises_if_none_found",
+   "k": 0,
+   "with_line": 253,
+   "call_lines": [
+    253,
+    253
+   ],
+   "expected": "PyJWKClientError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "The JWKS endpoint did not contain any signing keys"
+    ]
+   ],
+   "calls": [
+    "get_signing_keys"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_get_signing_key_from_jwt_rejects_payload_recursion_error#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_get_signing_key_from_jwt_rejects_payload_recursion_error",
+   "k": 0,
+   "with_line": 341,
+   "call_lines": [
+    341,
+    341
+   ],
+   "expected": "DecodeError",
+   "match": "Invalid payload",
+   "post": [
+    [
+     "cause_isinstance",
+     "RecursionError"
+    ]
+   ],
+   "calls": [
+    "get_signing_key_from_jwt"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_cache_put_rejects_a_value_that_is_not_a_jwk_set#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_cache_put_rejects_a_value_that_is_not_a_jwk_set",
+   "k": 0,
+   "with_line": 458,
+   "call_lines": [
+    458,
+    458
+   ],
+   "expected": "PyJWKSetError",
+   "match": "Invalid JWK Set value",
+   "post": [],
+   "calls": [
+    "put"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_get_jwk_set_raises_when_endpoint_does_not_return_an_object#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_get_jwk_set_raises_when_endpoint_does_not_return_an_object",
+   "k": 0,
+   "with_line": 475,
+   "call_lines": [
+    475,
+    475
+   ],
+   "expected": "PyJWKClientError",
+   "match": "did not return a JSON object",
+   "post": [],
+   "calls": [
+    "get_jwk_set"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_get_jwt_set_failed_refresh_preserves_cached_jwks#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_get_jwt_set_failed_refresh_preserves_cached_jwks",
+   "k": 0,
+   "with_line": 528,
+   "call_lines": [
+    528,
+    528
+   ],
+   "expected": "PyJWKClientError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "get_jwk_set",
+    "mocked_failed_response"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_failed_request_should_raise_connection_error#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_failed_request_should_raise_connection_error",
+   "k": 0,
+   "with_line": 544,
+   "call_lines": [
+    544,
+    544
+   ],
+   "expected": "PyJWKClientConnectionError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "get_signing_key_from_jwt",
+    "mocked_failed_response"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_incomplete_read_should_raise_connection_error#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_incomplete_read_should_raise_connection_error",
+   "k": 0,
+   "with_line": 552,
+   "call_lines": [
+    552,
+    552
+   ],
+   "expected": "PyJWKClientConnectionError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "get_jwk_set",
+    "mocked_incomplete_read_response"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_get_jwt_set_no_matching_kid_after_second_attempt#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_get_jwt_set_no_matching_kid_after_second_attempt",
+   "k": 0,
+   "with_line": 577,
+   "call_lines": [
+    577,
+    577
+   ],
+   "expected": "PyJWKClientError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "get_signing_key",
+    "mocked_first_call_wrong_kid_second_call_correct_kid"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_unknown_kid_refresh_is_cooled_down#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_unknown_kid_refresh_is_cooled_down",
+   "k": 0,
+   "with_line": 598,
+   "call_lines": [
+    598,
+    598
+   ],
+   "expected": "PyJWKClientError",
+   "match": "matches",
+   "post": [],
+   "calls": [
+    "get_signing_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_unknown_kid_refresh_runs_again_after_cooldown#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_unknown_kid_refresh_runs_again_after_cooldown",
+   "k": 0,
+   "with_line": 621,
+   "call_lines": [
+    621,
+    621
+   ],
+   "expected": "PyJWKClientError",
+   "match": "matches",
+   "post": [],
+   "calls": [
+    "get_signing_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_unknown_kid_refresh_runs_again_after_cooldown#1",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_unknown_kid_refresh_runs_again_after_cooldown",
+   "k": 1,
+   "with_line": 624,
+   "call_lines": [
+    624,
+    624
+   ],
+   "expected": "PyJWKClientError",
+   "match": "matches",
+   "post": [],
+   "calls": [
+    "get_signing_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_unknown_kid_refresh_ignores_cooldown_when_cache_disabled#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_unknown_kid_refresh_ignores_cooldown_when_cache_disabled",
+   "k": 0,
+   "with_line": 706,
+   "call_lines": [
+    706,
+    706
+   ],
+   "expected": "PyJWKClientError",
+   "match": "matches",
+   "post": [],
+   "calls": [
+    "get_signing_key"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_unknown_kid_refresh_rejects_non_finite_cooldown#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_unknown_kid_refresh_rejects_non_finite_cooldown",
+   "k": 0,
+   "with_line": 719,
+   "call_lines": [
+    719,
+    719
+   ],
+   "expected": "PyJWKClientError",
+   "match": "Cooldown duration",
+   "post": [],
+   "calls": [
+    "PyJWKClient"
+   ],
+   "parametrize": {
+    "cooldown_duration": [
+     "float('nan')",
+     "float('inf')",
+     "float('-inf')"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_get_jwt_set_invalid_lifespan#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_get_jwt_set_invalid_lifespan",
+   "k": 0,
+   "with_line": 725,
+   "call_lines": [
+    725,
+    725
+   ],
+   "expected": "PyJWKClientError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "PyJWKClient"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_pyjwkclient_rejects_non_http_schemes#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_pyjwkclient_rejects_non_http_schemes",
+   "k": 0,
+   "with_line": 744,
+   "call_lines": [
+    744,
+    744
+   ],
+   "expected": "PyJWKClientError",
+   "match": "Invalid JWKS URI scheme",
+   "post": [],
+   "calls": [
+    "PyJWKClient"
+   ],
+   "parametrize": {
+    "uri": [
+     "file:///etc/passwd",
+     "ftp://example.org/keys.json",
+     "data:application/json,{\"keys\":[]}",
+     "/etc/passwd",
+     "ldap://internal.test/jwks"
+    ]
+   },
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_get_jwt_set_timeout#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_get_jwt_set_timeout",
+   "k": 0,
+   "with_line": 763,
+   "call_lines": [
+    763,
+    763
+   ],
+   "expected": "PyJWKClientError",
+   "match": null,
+   "post": [
+    [
+     "str_in",
+     "Fail to fetch data from the url, err: \"timed out\""
+    ]
+   ],
+   "calls": [
+    "get_jwk_set",
+    "mocked_timeout"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_get_jwt_set_sslcontext_no_ca#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_get_jwt_set_sslcontext_no_ca",
+   "k": 0,
+   "with_line": 800,
+   "call_lines": [
+    800,
+    800
+   ],
+   "expected": "PyJWKClientError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "get_jwk_set"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_jwks_client.py::test_http_error_is_closed_on_connection_failure#0",
+   "file": "test_jwks_client.py",
+   "class": "TestPyJWKClient",
+   "test": "test_http_error_is_closed_on_connection_failure",
+   "k": 0,
+   "with_line": 808,
+   "call_lines": [
+    808,
+    808
+   ],
+   "expected": "PyJWKClientConnectionError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "get_jwk_set"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  },
+  {
+   "key": "test_utils.py::test_force_bytes_raises_error_on_invalid_object#0",
+   "file": "test_utils.py",
+   "class": null,
+   "test": "test_force_bytes_raises_error_on_invalid_object",
+   "k": 0,
+   "with_line": 45,
+   "call_lines": [
+    45,
+    45
+   ],
+   "expected": "TypeError",
+   "match": null,
+   "post": [],
+   "calls": [
+    "force_bytes"
+   ],
+   "parametrize": {},
+   "included": false,
+   "exclusion": "the block calls no decode or decode_complete"
+  }
+ ]
+}

@@ -1,0 +1,1126 @@
+{
+ "subject": {
+  "name": "PyJWT",
+  "version": "2.15.1",
+  "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+  "repository": "https://github.com/jpadilla/pyjwt",
+  "licence": "MIT",
+  "sha256": {
+   "jwt/api_jws.py": "80e83b3a4089f6a19692bb5b2f56784edc3bd65bf74043bad7a230f9c5bdcf12",
+   "jwt/api_jwt.py": "a2af9f3593c8cf9133163cb0b5b08223281b8292d5db5665309bc23c212cac76",
+   "jwt/algorithms.py": "31e174916a77d17f4ed9dbcd3b869e9264a146aaf8d97f02d9b43bf828fe0441",
+   "jwt/exceptions.py": "3540f48760343221d5e94f933edfc0af4a6b9c01f1c892748ba2c7216cddf154"
+  }
+ },
+ "rule": "A check is the set of raise statements in one decode-path function that construct the same PyJWTError subclass with the same message template.",
+ "subject_functions": {
+  "jwt/api_jws.py": [
+   "PyJWS.__init__",
+   "PyJWS._get_default_options",
+   "PyJWS.get_algorithm_by_name",
+   "PyJWS.decode_complete",
+   "PyJWS.decode",
+   "PyJWS._decode_base64url_segment",
+   "PyJWS._load",
+   "PyJWS._verify_signature",
+   "PyJWS._validate_headers",
+   "PyJWS._validate_kid",
+   "PyJWS._validate_crit"
+  ],
+  "jwt/api_jwt.py": [
+   "PyJWT.__init__",
+   "PyJWT._get_default_options",
+   "PyJWT._get_sig_options",
+   "PyJWT._merge_options",
+   "PyJWT.decode_complete",
+   "PyJWT._decode_payload",
+   "PyJWT.decode",
+   "PyJWT._validate_claims",
+   "PyJWT._validate_required_claims",
+   "PyJWT._validate_sub",
+   "PyJWT._validate_jti",
+   "PyJWT._validate_iat",
+   "PyJWT._validate_nbf",
+   "PyJWT._validate_exp",
+   "PyJWT._validate_aud",
+   "PyJWT._validate_iss"
+  ]
+ },
+ "outside_functions": {
+  "jwt/api_jws.py": [
+   "PyJWS.register_algorithm",
+   "PyJWS.unregister_algorithm",
+   "PyJWS.get_algorithms",
+   "PyJWS.encode",
+   "PyJWS.get_unverified_header"
+  ],
+  "jwt/api_jwt.py": [
+   "PyJWT.encode",
+   "PyJWT._encode_payload"
+  ]
+ },
+ "checks": [
+  {
+   "id": "jws.alg-required",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode_complete",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     248,
+     250
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().'",
+   "mutated": true
+  },
+  {
+   "id": "jws.detached-requires-b64-false",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode_complete",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     257,
+     259
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "'It is only valid to pass \"detached_payload\" when the protected header has \"b64\" set to false.'",
+   "mutated": true
+  },
+  {
+   "id": "jws.b64-requires-crit",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode_complete",
+   "raises": [
+    2
+   ],
+   "lines": [
+    [
+     267,
+     269
+    ]
+   ],
+   "class": "InvalidTokenError",
+   "message": "\"The 'b64' header parameter requires 'b64' to be listed in 'crit'.\"",
+   "mutated": true
+  },
+  {
+   "id": "jws.b64-requires-detached",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode_complete",
+   "raises": [
+    3
+   ],
+   "lines": [
+    [
+     271,
+     273
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.'",
+   "mutated": true
+  },
+  {
+   "id": "jws.segment-encoding",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._decode_base64url_segment",
+   "raises": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "lines": [
+    [
+     336,
+     336
+    ],
+    [
+     339,
+     339
+    ],
+    [
+     344,
+     344
+    ],
+    [
+     349,
+     349
+    ],
+    [
+     352,
+     352
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "f'Invalid {name} padding'",
+   "mutated": true
+  },
+  {
+   "id": "jws.token-type",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     361,
+     361
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "f'Invalid token type. Token must be a {bytes}'",
+   "mutated": true
+  },
+  {
+   "id": "jws.segments",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     367,
+     367
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "'Not enough segments'",
+   "mutated": true
+  },
+  {
+   "id": "jws.header-json",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "raises": [
+    2
+   ],
+   "lines": [
+    [
+     374,
+     374
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "f'Invalid header string: {e}'",
+   "mutated": true
+  },
+  {
+   "id": "jws.header-object",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "raises": [
+    3
+   ],
+   "lines": [
+    [
+     377,
+     377
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "'Invalid header string: must be a json object'",
+   "mutated": true
+  },
+  {
+   "id": "jws.b64-empty-payload",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "raises": [
+    4
+   ],
+   "lines": [
+    [
+     388,
+     388
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "\"Payload segment must be empty when 'b64' is false.\"",
+   "mutated": true
+  },
+  {
+   "id": "jws.alg-present",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     413,
+     413
+    ]
+   ],
+   "class": "InvalidAlgorithmError",
+   "message": "'Algorithm not specified'",
+   "mutated": true
+  },
+  {
+   "id": "jws.alg-allowed",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     416,
+     416
+    ]
+   ],
+   "class": "InvalidAlgorithmError",
+   "message": "'The specified alg value is not allowed'",
+   "mutated": true
+  },
+  {
+   "id": "jws.jwk-alg-match",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "raises": [
+    2
+   ],
+   "lines": [
+    [
+     425,
+     428
+    ]
+   ],
+   "class": "InvalidAlgorithmError",
+   "message": "f\"Token algorithm {alg!r} does not match the key's algorithm {key.algorithm_name!r}\"",
+   "mutated": true
+  },
+  {
+   "id": "jws.alg-supported",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "raises": [
+    3
+   ],
+   "lines": [
+    [
+     435,
+     435
+    ]
+   ],
+   "class": "InvalidAlgorithmError",
+   "message": "'Algorithm not supported'",
+   "mutated": true
+  },
+  {
+   "id": "jws.key-length",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "raises": [
+    4
+   ],
+   "lines": [
+    [
+     441,
+     441
+    ]
+   ],
+   "class": "InvalidKeyError",
+   "message": "key_length_msg",
+   "mutated": true
+  },
+  {
+   "id": "jws.signature",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "raises": [
+    5
+   ],
+   "lines": [
+    [
+     446,
+     446
+    ]
+   ],
+   "class": "InvalidSignatureError",
+   "message": "'Signature verification failed'",
+   "mutated": true
+  },
+  {
+   "id": "jws.kid-type",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_kid",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     461,
+     461
+    ]
+   ],
+   "class": "InvalidTokenError",
+   "message": "'Key ID header parameter must be a string'",
+   "mutated": true
+  },
+  {
+   "id": "jws.crit-list",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_crit",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     466,
+     466
+    ]
+   ],
+   "class": "InvalidTokenError",
+   "message": "\"Invalid 'crit' header: must be a non-empty list\"",
+   "mutated": true
+  },
+  {
+   "id": "jws.crit-strings",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_crit",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     469,
+     469
+    ]
+   ],
+   "class": "InvalidTokenError",
+   "message": "\"Invalid 'crit' header: values must be strings\"",
+   "mutated": true
+  },
+  {
+   "id": "jws.crit-supported",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_crit",
+   "raises": [
+    2
+   ],
+   "lines": [
+    [
+     471,
+     471
+    ]
+   ],
+   "class": "InvalidTokenError",
+   "message": "f'Unsupported critical extension: {ext}'",
+   "mutated": true
+  },
+  {
+   "id": "jws.crit-present",
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_crit",
+   "raises": [
+    3
+   ],
+   "lines": [
+    [
+     473,
+     475
+    ]
+   ],
+   "class": "InvalidTokenError",
+   "message": "f\"Critical extension '{ext}' is missing from headers\"",
+   "mutated": true
+  },
+  {
+   "id": "jwt.payload-json",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._decode_payload",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     300,
+     300
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "f'Invalid payload string: {e}'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.payload-object",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._decode_payload",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     302,
+     302
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "'Invalid payload string: must be a json object'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.required",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_required_claims",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     433,
+     433
+    ]
+   ],
+   "class": "MissingRequiredClaimError",
+   "message": "claim",
+   "mutated": true
+  },
+  {
+   "id": "jwt.iat-type",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iat",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     479,
+     481
+    ]
+   ],
+   "class": "InvalidIssuedAtError",
+   "message": "'Issued At claim (iat) must be an integer.'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.iat-future",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iat",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     483,
+     483
+    ]
+   ],
+   "class": "ImmatureSignatureError",
+   "message": "'The token is not yet valid (iat)'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.nbf-type",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_nbf",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     494,
+     494
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "'Not Before claim (nbf) must be an integer.'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.nbf-future",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_nbf",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     497,
+     497
+    ]
+   ],
+   "class": "ImmatureSignatureError",
+   "message": "'The token is not yet valid (nbf)'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.exp-type",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_exp",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     508,
+     510
+    ]
+   ],
+   "class": "DecodeError",
+   "message": "'Expiration Time claim (exp) must be an integer.'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.exp-expired",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_exp",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     513,
+     513
+    ]
+   ],
+   "class": "ExpiredSignatureError",
+   "message": "'Signature has expired'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.iss-present",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iss",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     572,
+     572
+    ]
+   ],
+   "class": "MissingRequiredClaimError",
+   "message": "'iss'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.iss-type",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iss",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     576,
+     576
+    ]
+   ],
+   "class": "InvalidIssuerError",
+   "message": "'Payload Issuer (iss) must be a string'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.iss-match",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iss",
+   "raises": [
+    2,
+    3
+   ],
+   "lines": [
+    [
+     580,
+     580
+    ],
+    [
+     584,
+     584
+    ]
+   ],
+   "class": "InvalidIssuerError",
+   "message": "'Invalid issuer'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.iss-param-type",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iss",
+   "raises": [
+    4
+   ],
+   "lines": [
+    [
+     586,
+     588
+    ]
+   ],
+   "class": "InvalidIssuerError",
+   "message": "'Issuer param must be \"str\" or \"Container[str]\"'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.aud-unexpected",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     527,
+     527
+    ]
+   ],
+   "class": "InvalidAudienceError",
+   "message": "'Invalid audience'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.aud-present",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     532,
+     532
+    ]
+   ],
+   "class": "MissingRequiredClaimError",
+   "message": "'aud'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.aud-strict-param",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "raises": [
+    2
+   ],
+   "lines": [
+    [
+     541,
+     541
+    ]
+   ],
+   "class": "InvalidAudienceError",
+   "message": "'Invalid audience (strict)'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.aud-strict-claim-format",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "raises": [
+    3
+   ],
+   "lines": [
+    [
+     545,
+     545
+    ]
+   ],
+   "class": "InvalidAudienceError",
+   "message": "'Invalid claim format in token (strict)'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.aud-strict-match",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "raises": [
+    4
+   ],
+   "lines": [
+    [
+     548,
+     548
+    ]
+   ],
+   "class": "InvalidAudienceError",
+   "message": "\"Audience doesn't match (strict)\"",
+   "mutated": true
+  },
+  {
+   "id": "jwt.aud-claim-format",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "raises": [
+    5,
+    6
+   ],
+   "lines": [
+    [
+     555,
+     555
+    ],
+    [
+     557,
+     557
+    ]
+   ],
+   "class": "InvalidAudienceError",
+   "message": "'Invalid claim format in token'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.aud-match",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "raises": [
+    7
+   ],
+   "lines": [
+    [
+     563,
+     563
+    ]
+   ],
+   "class": "InvalidAudienceError",
+   "message": "\"Audience doesn't match\"",
+   "mutated": true
+  },
+  {
+   "id": "jwt.sub-type",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_sub",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     450,
+     450
+    ]
+   ],
+   "class": "InvalidSubjectError",
+   "message": "'Subject must be a string'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.sub-match",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_sub",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     454,
+     454
+    ]
+   ],
+   "class": "InvalidSubjectError",
+   "message": "'Invalid subject'",
+   "mutated": true
+  },
+  {
+   "id": "jwt.jti-type",
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_jti",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     468,
+     468
+    ]
+   ],
+   "class": "InvalidJTIError",
+   "message": "'JWT ID must be a string'",
+   "mutated": true
+  },
+  {
+   "id": "alg.none-key",
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.prepare_key",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     295,
+     295
+    ]
+   ],
+   "class": "InvalidKeyError",
+   "message": "'When alg = \"none\", key value must be None.'",
+   "mutated": false
+  },
+  {
+   "id": "alg.hmac-empty-key",
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.prepare_key",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     350,
+     350
+    ]
+   ],
+   "class": "InvalidKeyError",
+   "message": "'HMAC key must not be empty.'",
+   "mutated": false
+  },
+  {
+   "id": "alg.hmac-asymmetric-key",
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.prepare_key",
+   "raises": [
+    1
+   ],
+   "lines": [
+    [
+     357,
+     360
+    ]
+   ],
+   "class": "InvalidKeyError",
+   "message": "'The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret.'",
+   "mutated": false
+  },
+  {
+   "id": "alg.hmac-jwk-key",
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.prepare_key",
+   "raises": [
+    2,
+    3
+   ],
+   "lines": [
+    [
+     414,
+     418
+    ],
+    [
+     434,
+     438
+    ]
+   ],
+   "class": "InvalidKeyError",
+   "message": "'The specified key looks like a JWK and should not be used directly as an HMAC secret. Load it via PyJWK / HMACAlgorithm.from_jwk first.'",
+   "mutated": false
+  },
+  {
+   "id": "alg.ec-curve",
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm._validate_curve",
+   "raises": [
+    0
+   ],
+   "lines": [
+    [
+     722,
+     725
+    ]
+   ],
+   "class": "InvalidKeyError",
+   "message": "f\"The key's curve '{key.curve.name}' does not match the expected curve '{self.expected_curve.name}' for this algorithm\"",
+   "mutated": false
+  }
+ ],
+ "order": [
+  "jws.alg-required",
+  "jws.token-type",
+  "jws.segments",
+  "jws.segment-encoding:header",
+  "jws.header-json",
+  "jws.header-object",
+  "jws.b64-empty-payload",
+  "jws.segment-encoding:payload",
+  "jws.segment-encoding:crypto",
+  "jws.kid-type",
+  "jws.crit-list",
+  "jws.crit-strings",
+  "jws.crit-supported",
+  "jws.crit-present",
+  "jws.detached-requires-b64-false",
+  "jws.b64-requires-crit",
+  "jws.b64-requires-detached",
+  "jws.alg-present",
+  "jws.alg-allowed",
+  "jws.jwk-alg-match",
+  "jws.alg-supported",
+  "alg.none-key",
+  "alg.hmac-empty-key",
+  "alg.hmac-asymmetric-key",
+  "alg.hmac-jwk-key",
+  "alg.ec-curve",
+  "jws.key-length",
+  "jws.signature",
+  "jwt.payload-json",
+  "jwt.payload-object",
+  "jwt.required",
+  "jwt.iat-type",
+  "jwt.iat-future",
+  "jwt.nbf-type",
+  "jwt.nbf-future",
+  "jwt.exp-type",
+  "jwt.exp-expired",
+  "jwt.iss-present",
+  "jwt.iss-type",
+  "jwt.iss-match",
+  "jwt.iss-param-type",
+  "jwt.aud-unexpected",
+  "jwt.aud-present",
+  "jwt.aud-strict-param",
+  "jwt.aud-strict-claim-format",
+  "jwt.aud-strict-match",
+  "jwt.aud-claim-format",
+  "jwt.aud-match",
+  "jwt.sub-type",
+  "jwt.sub-match",
+  "jwt.jti-type"
+ ],
+ "segment_calls": {
+  "header": 0,
+  "payload": 1,
+  "crypto": 2
+ },
+ "non_check_raises": [
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.get_algorithm_by_name",
+   "raise": 0,
+   "line": 118,
+   "class": "NotImplementedError",
+   "message": "f\"Algorithm '{alg_name}' could not be found. Do you have cryptography installed?\""
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.get_algorithm_by_name",
+   "raise": 1,
+   "line": 121,
+   "class": "NotImplementedError",
+   "message": "'Algorithm not supported'"
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_claims",
+   "raise": 0,
+   "line": 397,
+   "class": "TypeError",
+   "message": "'audience must be a string, iterable or None'"
+  }
+ ],
+ "exception_ancestors": {
+  "PyJWTError": [
+   "PyJWTError",
+   "Exception"
+  ],
+  "InvalidTokenError": [
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "DecodeError": [
+   "DecodeError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "InvalidSignatureError": [
+   "InvalidSignatureError",
+   "DecodeError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "ExpiredSignatureError": [
+   "ExpiredSignatureError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "InvalidAudienceError": [
+   "InvalidAudienceError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "InvalidIssuerError": [
+   "InvalidIssuerError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "InvalidIssuedAtError": [
+   "InvalidIssuedAtError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "ImmatureSignatureError": [
+   "ImmatureSignatureError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "InvalidKeyError": [
+   "InvalidKeyError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "InvalidAlgorithmError": [
+   "InvalidAlgorithmError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "MissingRequiredClaimError": [
+   "MissingRequiredClaimError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "PyJWKError": [
+   "PyJWKError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "MissingCryptographyError": [
+   "MissingCryptographyError",
+   "PyJWKError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "PyJWKSetError": [
+   "PyJWKSetError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "PyJWKClientError": [
+   "PyJWKClientError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "PyJWKClientConnectionError": [
+   "PyJWKClientConnectionError",
+   "PyJWKClientError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "InvalidSubjectError": [
+   "InvalidSubjectError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ],
+  "InvalidJTIError": [
+   "InvalidJTIError",
+   "InvalidTokenError",
+   "PyJWTError",
+   "Exception"
+  ]
+ }
+}
