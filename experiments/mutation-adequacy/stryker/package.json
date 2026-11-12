@@ -1,0 +1,9 @@
+{
+  "name": "eatf-mutation-adequacy-stryker",
+  "private": true,
+  "description": "Pinned StrykerJS installation for experiments/mutation-adequacy; kept apart from the toolkit's own lockfile.",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@stryker-mutator/core": "9.6.1"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema": "urn:eatf:experiment:mutation-adequacy-regions:1",
+  "fixed_before_execution": "2026-11-12",
+  "subject": {
+    "tag": "v0.5.0",
+    "commit": "b8240fda1349b4823928cd19159acbd4e22121f7",
+    "note": "Source of the six subject files is identical to f758b60, the commit of the ordering experiment."
+  },
+  "guards": {
+    "1-zip": {"codes": ["ZIP_ARCHIVE_LIMIT", "ZIP_INVALID_OR_UNSAFE"]},
+    "2-required-entries": {"codes": ["REQUIRED_ENTRY_MISSING"]},
+    "3-metadata": {"codes": ["METADATA_NOT_OBJECT", "METADATA_INVALID_JSON"]},
+    "4-canonical-form": {"codes": ["METADATA_NOT_CANONICALIZABLE", "CANONICAL_FORM_MISMATCH"]},
+    "5-digest": {"codes": ["HASH_MISMATCH"]},
+    "6-signer-pin": {"codes": ["SIGNER_NOT_TRUSTED"]},
+    "7-rsa": {"codes": ["RSA_SIGNATURE_ENCODING", "RSA_VERIFY_ERROR", "RSA_SIGNATURE_INVALID"]},
+    "8a-overt-crosscheck": {"codes": ["OVERT_INVALID"]},
+    "8b-receipt-signature": {"codes": ["OVERT_SIGNATURE_MARKER_INVALID", "OVERT_SIGNATURE_REQUIRED", "OVERT_SIGNATURE_INVALID", "OVERT_SIGNATURE_ERROR", "OVERT_SIGNATURE_UNMARKED"]},
+    "9-pqc": {"codes": ["PQC_PAIR_INCOMPLETE", "PQC_SIGNATURE_INVALID", "PQC_SUPPORT_UNAVAILABLE", "PQC_VERIFY_ERROR"],
+              "note": "PQC_SUPPORT_UNAVAILABLE exists only in the Python port, PQC_VERIFY_ERROR only in the TypeScript port."},
+    "10-12-timestamp": {"codes": ["TSA_MISSING_OR_INVALID", "TSA_IMPRINT_MISMATCH", "TSA_IMPRINT_UNVERIFIABLE", "TSA_SIGNATURE_INVALID", "TSA_CERT_MISSING"]}
+  },
+  "unguarded_regions": {
+    "13-tsa-pin": "Advisory TSA issuer-name pin. It never rejects a package and no case supplies a TSA trust list, so no case reaches it.",
+    "shared": "Function entry, the accepting return, the failure constructor and helpers used by every guard."
+  },
+  "regions_note": "Inclusive 1-based line ranges in the original file. Every line of a subject file belongs to exactly one region. A line that computes a value used by several guards belongs to the region of the first guard that reads it. A tool mutant belongs to the region of the first original line it changes.",
+  "files": {
+    "python": {
+      "lib-python/eatf_verifier/verifier.py": {
+        "sha256": "fa6feee521fbb4457ce892b437af13e7851982da8839c06babd16cb87e9ff87a",
+        "lines": 453,
+        "regions": [
+          [1, 51, "shared"],
+          [52, 60, "2-required-entries"],
+          [61, 64, "1-zip"],
+          [65, 72, "shared"],
+          [73, 107, "1-zip"],
+          [108, 117, "2-required-entries"],
+          [118, 136, "3-metadata"],
+          [137, 163, "4-canonical-form"],
+          [164, 171, "5-digest"],
+          [172, 188, "6-signer-pin"],
+          [189, 222, "7-rsa"],
+          [223, 238, "8a-overt-crosscheck"],
+          [239, 298, "8b-receipt-signature"],
+          [299, 342, "9-pqc"],
+          [343, 397, "10-12-timestamp"],
+          [398, 405, "13-tsa-pin"],
+          [406, 438, "shared"],
+          [439, 447, "4-canonical-form"],
+          [448, 453, "6-signer-pin"]
+        ]
+      },
+      "lib-python/eatf_verifier/overt.py": {
+        "sha256": "3ff5174dfd2b0ea1ad86922c83dd0b42f754497e3ead3c5218d069a0a3d62f51",
+        "lines": 169,
+        "regions": [[1, 169, "8a-overt-crosscheck"]]
+      },
+      "lib-python/eatf_verifier/tsa.py": {
+        "sha256": "28e21c9c0c67e0dc5e3a87ae6a1bf50cc419f832df8d6b5b5d04caae0efa5a05",
+        "lines": 254,
+        "regions": [
+          [1, 158, "10-12-timestamp"],
+          [159, 222, "13-tsa-pin"],
+          [223, 254, "10-12-timestamp"]
+        ]
+      }
+    },
+    "typescript": {
+      "lib/src/verifier.ts": {
+        "sha256": "e131ab0c9180460c7ae6e72790cd4b41acf04a0102db3ae93929e676495ac695",
+        "lines": 468,
+        "regions": [
+          [1, 27, "shared"],
+          [28, 31, "1-zip"],
+          [32, 40, "shared"],
+          [41, 84, "1-zip"],
+          [85, 97, "2-required-entries"],
+          [98, 119, "3-metadata"],
+          [120, 153, "4-canonical-form"],
+          [154, 162, "5-digest"],
+          [163, 181, "6-signer-pin"],
+          [182, 219, "7-rsa"],
+          [220, 236, "8a-overt-crosscheck"],
+          [237, 298, "8b-receipt-signature"],
+          [299, 344, "9-pqc"],
+          [345, 398, "10-12-timestamp"],
+          [399, 411, "13-tsa-pin"],
+          [412, 452, "shared"],
+          [453, 461, "4-canonical-form"],
+          [462, 468, "6-signer-pin"]
+        ]
+      },
+      "lib/src/overt.ts": {
+        "sha256": "fd021d51c7ae3f04716b0411d418f5b547f3cba1354b38bd09b55eed6c70a851",
+        "lines": 173,
+        "regions": [[1, 173, "8a-overt-crosscheck"]]
+      },
+      "lib/src/tsa.ts": {
+        "sha256": "aab2bd4ae05fa4a86255bd2b842d3a36cf644a5db55835945e979e0ce98ad610",
+        "lines": 427,
+        "regions": [
+          [1, 330, "10-12-timestamp"],
+          [331, 397, "13-tsa-pin"],
+          [398, 427, "10-12-timestamp"]
+        ]
+      }
+    }
+  },
+  "deletion": {
+    "python": "In lib-python/eatf_verifier/verifier.py, every `return _fail(...)` statement whose code argument (a string literal, or both branches of a conditional expression) belongs to the guard is replaced by `pass`. For 1-zip, the five `raise ValueError(...)` statements inside the archive `try` block are also replaced by `pass`.",
+    "typescript": "In lib/src/verifier.ts, every `return fail(...)` statement whose code argument belongs to the guard is replaced by an empty block `{}`. For 1-zip, the five `throw new Error(...)` statements inside the unzip filter are also replaced by `{}`. The file is compiled with `// @ts-nocheck` prepended, the same device StrykerJS uses for its own mutants."
+  }
+}
