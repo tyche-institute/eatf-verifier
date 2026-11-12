@@ -310,6 +310,51 @@ def normalise(record: dict) -> dict:
     return {"blocks": blocks, "tests": record["tests"], "collect_errors": record["collect_errors"]}
 
 
+OBSERVED_FIELDS = ("outcome", "class", "pyjwt_error", "message", "claim", "cause_mro", "real")
+
+
+def observation(kind: str, rec: dict | None) -> list:
+    """One case in one run, for outcomes.jsonl: the status, and for an observed
+    case what the oracles read."""
+    if kind != "observed":
+        return [kind]
+    site = rec.get("site") or {}
+    return ["observed", *[rec.get(f) for f in OBSERVED_FIELDS], site.get("check"), site.get("segment")]
+
+
+class Outcomes:
+    """generated/outcomes.jsonl: a header with every baseline case, then one
+    line per run with each case's observation, or null where it equals the
+    first baseline run's."""
+
+    def __init__(self, cases: dict, base_state: dict) -> None:
+        self.order = list(cases)
+        self.base = {cid: observation(*base_state["cases"][cid]) for cid in self.order}
+        self.lines = [{
+            "schema": "urn:eatf:experiment:mutation-adequacy-pyjwt-outcomes:1",
+            "fields": ["status", *OBSERVED_FIELDS, "site_check", "site_segment"],
+            "note": "site_check in a deletion run is the check after the renumbering of PROTOCOL.md, deviation 6",
+            "cases": [{"case": cid, **{k: cases[cid][k] for k in ("test", "key", "occurrence", "expected", "B", "target",
+                                                                     "segment", "labelled", "site", "site_segment",
+                                                                     "post", "params")},
+                       "baseline": self.base[cid]} for cid in self.order],
+        }]
+
+    def add(self, run: str, kind: str, state: dict) -> None:
+        cases = None
+        if state["state"] == "ran":
+            cases = []
+            for cid in self.order:
+                obs = observation(*state["cases"][cid])
+                cases.append(None if obs == self.base[cid] else obs)
+        self.lines.append({"run": run, "set": kind, "state": state["state"], "cases": cases})
+
+    def write(self) -> None:
+        with (GENERATED / "outcomes.jsonl").open("w", encoding="utf-8") as handle:
+            for line in self.lines:
+                handle.write(json.dumps(line, ensure_ascii=False, separators=(",", ":"), default=list) + "\n")
+
+
 # -- mutmut's mutants -------------------------------------------------------
 
 def mutmut_operators() -> dict[str, dict]:
@@ -454,6 +499,10 @@ def main() -> int:
                    "message": cases[cid]["message"]}
                   for cid in labelled if cid not in s["O_T"]]
 
+    outcomes = Outcomes(cases, base_state)
+    outcomes.add("base-1", "baseline", base_state)
+    outcomes.add("base-2", "baseline", run_state(RECORDS / "baseline" / "base-2.json", None, cases))
+
     # ---- sentinel 1
     reference = normalise(base)
     sentinel1 = {"base-2": normalise(base2) == reference}
@@ -461,6 +510,8 @@ def main() -> int:
     none_path = RECORDS / "mutants" / "_none.json"
     sentinel1["control"] = control_path.exists() and normalise(load(control_path)) == reference
     sentinel1["mutated package, no mutant active"] = none_path.exists() and normalise(load(none_path)) == reference
+    outcomes.add("_control", "control", run_state(control_path, None, cases))
+    outcomes.add("_none", "no mutant active", run_state(none_path, None, cases))
 
     # ---- deletions
     deletion_log = run_log(RECORDS / "deletions" / "runs.jsonl")
@@ -477,6 +528,7 @@ def main() -> int:
         verdict = evaluate(state, s, cases)
         mv = moves(state, cases)
         deletions[cid_] = {"state": state, "verdict": verdict, "moves": mv, "reached": cid_ in reached}
+        outcomes.add(cid_, "deletion", state)
         changed = 0
         for cid, case in cases.items():
             kind, rec = state["cases"].get(cid, (state["state"], None))
@@ -529,6 +581,7 @@ def main() -> int:
             verdict = evaluate(state, s, cases)
             mv = moves(state, cases)
             kinds = Counter(kind for kind, _ in state["cases"].values())
+            outcomes.add(m["key"], "mutant", state)
             results[m["key"]] = {"verdict": verdict, "moves": mv, "state": state["state"], "tool": tool,
                                  "function": m["function"], "operator": label["operator"],
                                  "exception_argument": label["exception_argument"]}
@@ -700,6 +753,7 @@ def main() -> int:
         "runs": Counter(results[k]["state"] for k in subject_keys),
     }
 
+    outcomes.write()
     write_csv("mutants.csv", rows)
     write_csv("deletions.csv", deletion_rows)
     write_csv("deletion-cases.csv", deletion_case_rows)

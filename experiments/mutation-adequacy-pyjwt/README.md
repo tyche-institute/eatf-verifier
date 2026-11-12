@@ -118,7 +118,7 @@ work/venv/bin/python -I analyse_s2.py
 | `plugin/s2_recorder.py` | The pytest plugin that records each case |
 | `run_s2.py` | Runs the stages in the protocol's order |
 | `analyse_s2.py` | Scores every mutant and deletion under the five oracles and checks the predictions |
-| `generated/` | Results: `SUMMARY.md`, `summary.json`, the CSV tables, `environment.json`, `pip-freeze.txt`, `SHA256SUMS` |
+| `generated/` | Results: `SUMMARY.md`, `summary.json`, the CSV tables, `outcomes.jsonl`, `environment.json`, `pip-freeze.txt`, `SHA256SUMS` |
 
 In `generated/`:
 
@@ -130,6 +130,11 @@ In `generated/`:
   under each oracle; `p5.csv` gives the kills behind P5.
 - `functions.csv` and `operators.csv` give the kills by subject function and
   by mutation operator.
+- `outcomes.jsonl` holds what the oracles read for every case in every run:
+  the two baseline runs, the control, the run with no mutant active, the 44
+  deletions and the 880 subject mutants. Its first line describes each case
+  and its baseline observation; each later line gives a run's state and, for
+  each case, its observation, or null where it equals the baseline.
 - `environment.json` records the tool versions, the mutmut run and the SHA-256
   of each experiment source file.
 
