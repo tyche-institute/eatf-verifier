@@ -21,7 +21,9 @@ listed, dated, at the end of `PROTOCOL.md`.
   each with its default operators and with no mutant removed.
 - **Guard deletions.** For each of 11 guards, every statement that returns one
   of the guard's failure codes is deleted, with the rest of the program left
-  intact. An unmodified control copy goes through the same steps.
+  intact. For the archive guard, the five archive safety checks that raise an
+  exception are deleted too. An unmodified control copy goes through the same
+  steps.
 - **Observation.** For each mutant and case, the harness records the verdict
   and failure code, or the type of the exception raised. It never reads the
   failure reason.
@@ -58,11 +60,14 @@ behind each verdict.
     from Stryker's ConditionalExpression and BlockStatement operators.
   - **The same guard, with another of its codes:** 23 Python and 26
     TypeScript mutants.
-  - **No code the verifier defines:** 11 Python mutants, all from removing an
-    argument.
-  - **An earlier guard:** 1 mutant in each port. It makes the receipt's list of
-    timestamp witnesses mandatory. The two identical cases that empty the
-    timestamp are then stopped at `8a-overt-crosscheck` again.
+  - **No code the verifier defines:** 11 Python mutants, all from mutmut's
+    `arg_removal` operator: 8 remove an argument and 3 replace one with
+    `None`.
+  - **An earlier guard:** 1 mutant in each port. It requires the receipt's
+    `timestamp_refs` list to be non-empty, as `signature_refs` already is.
+    The package that clears that list and then empties the timestamp, named
+    both `timestamp-empty` and `refined-empty-timestamp`, is then stopped at
+    `8a-overt-crosscheck` with `OVERT_INVALID`, as the naive case is.
 
 ## Run it
 
@@ -81,8 +86,8 @@ experiments/mutation-adequacy/work/venv/bin/python experiments/mutation-adequacy
   `guard-regions.json`.
 - It writes only to `work/`, which is not tracked. `analyse.py` reads `work/`
   and writes `generated/`.
-- The reported run took 23 s for mutmut and 26 s for Stryker on a 24-core
-  machine.
+- The reported run took 23 s for mutmut and 26 s for Stryker on an Intel Core
+  i9-12900K (16 cores, 24 logical CPUs).
 - `analyse.py` exits nonzero if a sentinel fails.
 
 ## Files
