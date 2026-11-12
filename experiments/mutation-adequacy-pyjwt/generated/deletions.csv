@@ -1,0 +1,45 @@
+check,file,function,class,raise_statements,reached,baseline_cases_reaching,run,O_V,O_V^fc,O_C,O_T,O_S,O_CM,cases_changed,sites_renumbered,moves
+jws.alg-required,jwt/api_jws.py,PyJWS.decode_complete,DecodeError,1,yes,2,ran,yes,yes,yes,yes,yes,yes,2,3,no exception 2
+jws.detached-requires-b64-false,jwt/api_jws.py,PyJWS.decode_complete,DecodeError,1,yes,1,ran,yes,yes,yes,yes,yes,yes,1,2,no exception 1
+jws.b64-requires-crit,jwt/api_jws.py,PyJWS.decode_complete,InvalidTokenError,1,yes,1,ran,yes,yes,yes,yes,yes,yes,1,1,no exception 1
+jws.b64-requires-detached,jwt/api_jws.py,PyJWS.decode_complete,DecodeError,1,yes,1,ran,yes,no,yes,yes,yes,yes,1,0,no check 1
+jws.segment-encoding,jwt/api_jws.py,PyJWS._decode_base64url_segment,DecodeError,5,yes,5,ran,yes,yes,yes,yes,yes,yes,5,0,no check 4; no exception 1
+jws.token-type,jwt/api_jws.py,PyJWS._load,DecodeError,1,yes,2,ran,yes,no,yes,yes,yes,yes,2,5,no check 2
+jws.segments,jwt/api_jws.py,PyJWS._load,DecodeError,1,yes,1,ran,yes,no,yes,yes,yes,yes,1,4,no check 1
+jws.header-json,jwt/api_jws.py,PyJWS._load,DecodeError,1,yes,1,ran,yes,no,yes,no,yes,yes,1,3,no check 1
+jws.header-object,jwt/api_jws.py,PyJWS._load,DecodeError,1,yes,2,ran,yes,no,yes,yes,yes,yes,2,1,no check 2
+jws.b64-empty-payload,jwt/api_jws.py,PyJWS._load,DecodeError,1,yes,1,ran,yes,yes,yes,yes,yes,yes,1,0,no exception 1
+jws.alg-present,jwt/api_jws.py,PyJWS._verify_signature,InvalidAlgorithmError,1,yes,1,ran,yes,no,yes,yes,yes,yes,1,11,no check 1
+jws.alg-allowed,jwt/api_jws.py,PyJWS._verify_signature,InvalidAlgorithmError,1,yes,2,ran,yes,yes,yes,yes,yes,yes,2,10,later 1; no exception 1
+jws.jwk-alg-match,jwt/api_jws.py,PyJWS._verify_signature,InvalidAlgorithmError,1,yes,1,ran,no,no,yes,yes,yes,yes,1,9,later 1
+jws.alg-supported,jwt/api_jws.py,PyJWS._verify_signature,InvalidAlgorithmError,1,yes,1,ran,yes,no,yes,yes,yes,yes,1,7,no check 1
+jws.key-length,jwt/api_jws.py,PyJWS._verify_signature,InvalidKeyError,1,yes,3,ran,no,no,yes,yes,yes,yes,3,7,later 3
+jws.signature,jwt/api_jws.py,PyJWS._verify_signature,InvalidSignatureError,1,yes,4,ran,yes,yes,yes,yes,yes,yes,4,0,no exception 3; withheld 1
+jws.kid-type,jwt/api_jws.py,PyJWS._validate_kid,InvalidTokenError,1,no,0,ran,no,no,no,no,no,no,0,0,
+jws.crit-list,jwt/api_jws.py,PyJWS._validate_crit,InvalidTokenError,1,yes,2,ran,yes,yes,yes,yes,yes,yes,2,5,later 1; no exception 1
+jws.crit-strings,jwt/api_jws.py,PyJWS._validate_crit,InvalidTokenError,1,yes,1,ran,no,no,no,yes,yes,yes,1,4,later 1
+jws.crit-supported,jwt/api_jws.py,PyJWS._validate_crit,InvalidTokenError,1,yes,2,ran,yes,yes,yes,yes,yes,yes,2,1,no exception 2
+jws.crit-present,jwt/api_jws.py,PyJWS._validate_crit,InvalidTokenError,1,yes,1,ran,yes,yes,yes,yes,yes,yes,1,0,no exception 1
+jwt.payload-json,jwt/api_jwt.py,PyJWT._decode_payload,DecodeError,1,yes,2,ran,yes,no,yes,yes,yes,yes,2,1,no check 2
+jwt.payload-object,jwt/api_jwt.py,PyJWT._decode_payload,DecodeError,1,yes,1,ran,yes,no,yes,yes,yes,yes,1,0,no check 1
+jwt.required,jwt/api_jwt.py,PyJWT._validate_required_claims,MissingRequiredClaimError,1,yes,5,ran,yes,yes,yes,yes,yes,yes,5,0,no exception 5
+jwt.iat-type,jwt/api_jwt.py,PyJWT._validate_iat,InvalidIssuedAtError,1,yes,5,ran,yes,no,yes,yes,yes,yes,5,1,no check 5
+jwt.iat-future,jwt/api_jwt.py,PyJWT._validate_iat,ImmatureSignatureError,1,yes,1,ran,yes,yes,yes,yes,yes,yes,1,0,no exception 1
+jwt.nbf-type,jwt/api_jwt.py,PyJWT._validate_nbf,DecodeError,1,yes,5,ran,yes,no,yes,yes,yes,yes,5,2,no check 5
+jwt.nbf-future,jwt/api_jwt.py,PyJWT._validate_nbf,ImmatureSignatureError,1,yes,2,ran,yes,yes,yes,yes,yes,yes,2,0,no exception 2
+jwt.exp-type,jwt/api_jwt.py,PyJWT._validate_exp,DecodeError,1,yes,5,ran,yes,no,yes,yes,yes,yes,5,6,no check 5
+jwt.exp-expired,jwt/api_jwt.py,PyJWT._validate_exp,ExpiredSignatureError,1,yes,6,ran,yes,yes,yes,yes,yes,yes,6,0,no exception 6
+jwt.iss-present,jwt/api_jwt.py,PyJWT._validate_iss,MissingRequiredClaimError,1,yes,1,ran,yes,no,yes,yes,yes,yes,1,2,no check 1
+jwt.iss-type,jwt/api_jwt.py,PyJWT._validate_iss,InvalidIssuerError,1,no,0,ran,no,no,no,no,no,no,0,2,
+jwt.iss-match,jwt/api_jwt.py,PyJWT._validate_iss,InvalidIssuerError,2,yes,3,ran,yes,yes,yes,yes,yes,yes,3,0,no exception 3
+jwt.iss-param-type,jwt/api_jwt.py,PyJWT._validate_iss,InvalidIssuerError,1,no,0,ran,no,no,no,no,no,no,0,0,
+jwt.aud-unexpected,jwt/api_jwt.py,PyJWT._validate_aud,InvalidAudienceError,1,yes,1,ran,yes,no,yes,yes,yes,yes,1,10,no check 1
+jwt.aud-present,jwt/api_jwt.py,PyJWT._validate_aud,MissingRequiredClaimError,1,yes,2,ran,yes,no,yes,yes,yes,yes,2,9,later 1; no check 1
+jwt.aud-strict-param,jwt/api_jwt.py,PyJWT._validate_aud,InvalidAudienceError,1,yes,1,ran,no,no,no,yes,yes,yes,1,8,later 1
+jwt.aud-strict-claim-format,jwt/api_jwt.py,PyJWT._validate_aud,InvalidAudienceError,1,yes,1,ran,no,no,no,yes,yes,yes,1,7,later 1
+jwt.aud-strict-match,jwt/api_jwt.py,PyJWT._validate_aud,InvalidAudienceError,1,yes,1,ran,yes,yes,yes,yes,yes,yes,1,5,no exception 1
+jwt.aud-claim-format,jwt/api_jwt.py,PyJWT._validate_aud,InvalidAudienceError,2,yes,2,ran,yes,no,yes,yes,yes,yes,2,5,later 1; no check 1
+jwt.aud-match,jwt/api_jwt.py,PyJWT._validate_aud,InvalidAudienceError,1,yes,4,ran,yes,yes,yes,no,yes,yes,4,0,no exception 4
+jwt.sub-type,jwt/api_jwt.py,PyJWT._validate_sub,InvalidSubjectError,1,yes,1,ran,yes,yes,yes,yes,yes,yes,1,1,no exception 1
+jwt.sub-match,jwt/api_jwt.py,PyJWT._validate_sub,InvalidSubjectError,1,yes,1,ran,yes,yes,yes,yes,yes,yes,1,0,no exception 1
+jwt.jti-type,jwt/api_jwt.py,PyJWT._validate_jti,InvalidJTIError,1,yes,1,ran,yes,yes,yes,yes,yes,yes,1,0,no exception 1

@@ -1,0 +1,12 @@
+operator,mutants,exception_argument,O_V,O_V^fc,O_C,O_T,O_S
+arg_removal,329,53,157,149,171,171,206
+assignment,62,0,45,42,48,47,48
+augmented_assignment,1,0,0,0,0,0,0
+if_exp,4,0,1,1,2,2,2
+keywords,39,0,35,33,37,38,38
+name,34,0,21,21,21,22,22
+number,22,0,5,5,5,5,5
+remove_unary_ops,24,0,16,16,19,22,21
+string,322,115,99,87,116,116,168
+swap_op,40,0,24,23,26,27,27
+unsymmetrical_string_methods_swap,3,0,1,1,1,1,1

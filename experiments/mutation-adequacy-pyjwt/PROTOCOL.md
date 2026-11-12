@@ -323,3 +323,89 @@ definition above.
 ## Deviations
 
 None recorded at the time of fixing.
+
+The entries below were added on 2026-11-12, during and after execution. None
+changes a definition, an oracle, a prediction or the mutant sets above.
+Entries 5 and 6 correct the analysis after its first run, whose results had
+been seen. Neither correction changed the verdict of any prediction.
+
+1. **Mutant activation, before any run of the subject.** This clarifies
+   "Observation". mutmut imports the package and the tests in its parent
+   process with no mutant active and runs each mutant in a forked child, so
+   code that runs at import time is never mutated. The recorder does the
+   same. `MUTANT_UNDER_TEST` must be unset when pytest starts. Once collection
+   has finished, the recorder imports every module of `jwt`, and only then
+   activates the mutant named in `S2_MUTANT`. An empty `S2_MUTANT` activates
+   none: that is the run through mutmut's mutated package for sentinel 1.
+   On a small project that is not the subject, a run under the recorder
+   failed a test or a block for exactly the mutants that mutmut reported
+   killed, 65 of 65. In the reported runs, each of the 880 subject mutant
+   runs recorded that it activated its own mutant after importing the 12
+   modules of `jwt`.
+2. **Run settings the protocol does not name.**
+   - Each run under the recorder is `python -m pytest -q -p no:cacheprovider
+     -p no:randomly --rootdir=. --tb=native -p s2_recorder
+     --continue-on-collection-errors`, and runs only the tests that contain an
+     included block.
+   - Every run, mutmut's included, starts from a minimal environment: the
+     virtual environment first on `PATH`, `HOME`, `LANG` and `LC_ALL` set to
+     `C.UTF-8`, `PYTHONHASHSEED=0` and `PYTHONDONTWRITEBYTECODE=1`. No
+     `PYTHONPATH`, `PYTEST_ADDOPTS` or `MUTANT_UNDER_TEST` is inherited.
+   - The baseline runs, each deletion and the control run in a fresh copy of
+     `jwt/`, `tests/` and `pyproject.toml`, whose SHA-256 is checked against
+     the clone. The tool mutants run in mutmut's `mutants/` directory.
+   - At most 10 recorder runs at a time.
+   - The timeout rule gave 60 seconds; the slower baseline run took 0.518
+     seconds. No run reached the timeout.
+3. **Cases that did not run, written with the recorder.** This clarifies
+   "Observation". A test stopped by `AssertionError` or by pytest's `Failed`
+   makes its remaining cases withheld. Any other exception, a setup that did
+   not pass, or a test that was not collected makes them crashed. A case
+   absent from a test that did not stop would be "missing" and excluded like
+   a withheld case; none occurred.
+4. **O_S on the record, written with the analysis.** This clarifies "Oracles".
+   pytest's own check passed when its `pytest.raises` context manager accepted
+   the exception. The `post` assertions in `cases.json` are of five kinds: the
+   message equals a text (9 blocks), contains a text (13), contains the value
+   of a test parameter (1); the `claim` attribute equals a name (6); the cause
+   is an instance of a class (1), judged by the names of the recorded cause's
+   class and its ancestors.
+5. **The kill rule, corrected in the analysis.** As in the first study, the
+   two clauses of the kill rule are read together: a crashed case kills under
+   every oracle, and it is credited only if it is in S_O. The first run of the
+   analysis counted a crash only when the case was in S_O. The correction
+   changed no count: every subject mutant that crashes a case is also killed
+   under every oracle by a case in S_O, and no deletion crashed a case.
+6. **Raise numbers in deletion copies, corrected in the analysis.** The
+   recorder numbers the raise statements of the function that runs. In a
+   deletion copy the deleted statements are `pass`, so every later raise of
+   the same function has a lower number than in the unmodified source, and
+   the recorder named the wrong check for it. The first run of the analysis
+   used those names. It reported, for example, that O_T detects the deletion
+   of `jwt.iss-type`, which no case reaches, and it listed only
+   `jwt.aud-strict-param` under P2(b). The analysis now maps each number in
+   the deleted check's function back to the unmodified source before it
+   evaluates any oracle; `deletions.csv` gives the number of sites remapped
+   for each deletion. The correction changed the deletion results under O_T,
+   the moves and the cases changed, and P2(b) now lists 3 deletions. It
+   changed nothing for the tool mutants: no mutmut mutant adds or removes a
+   raise statement, which the analysis checks for each mutant.
+7. **Moves, written with the analysis.** This clarifies "Moves". A case whose
+   raise site changed is placed at a later or an earlier check, by the order
+   in `checks.json`; at no check, when the exception was raised elsewhere; or
+   at no exception, when the token was accepted. Cases that did not run are
+   counted as crashed or withheld. A site that the order does not place would
+   be "unordered"; none occurred. Besides the sets the protocol names, the
+   moves are also summed over all subject mutants.
+8. **P2(b), written with the analysis.** A deletion counts for (b) when O_C
+   does not detect it, and every case whose baseline raise site is the
+   deleted check is observed with class B(*c*), raised by another check of
+   the deleted check's class.
+9. **Operators and exception-argument mutants, written with the analysis.**
+   As in the first study, `analyse_s2.py` re-creates each mutant with
+   mutmut's own generator, checks it against the mutant mutmut wrote (all
+   1094 match), and labels it with the operator that produced it. A mutant
+   changes only the arguments of an exception when its function differs from
+   the original and the two become equal once the arguments of the exception
+   call in every raise statement are removed from both. 168 of the 880 subject
+   mutants do.

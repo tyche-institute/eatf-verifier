@@ -1,0 +1,40 @@
+{
+ "python": "3.12.3",
+ "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+ "cpu_count": 24,
+ "mutmut": "3.8.1",
+ "pytest": "9.1.1",
+ "subject": {
+  "name": "PyJWT",
+  "version": "2.15.1",
+  "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+  "repository": "https://github.com/jpadilla/pyjwt",
+  "licence": "MIT",
+  "sha256": {
+   "jwt/api_jws.py": "80e83b3a4089f6a19692bb5b2f56784edc3bd65bf74043bad7a230f9c5bdcf12",
+   "jwt/api_jwt.py": "a2af9f3593c8cf9133163cb0b5b08223281b8292d5db5665309bc23c212cac76",
+   "jwt/algorithms.py": "31e174916a77d17f4ed9dbcd3b869e9264a146aaf8d97f02d9b43bf828fe0441",
+   "jwt/exceptions.py": "3540f48760343221d5e94f933edfc0af4a6b9c01f1c892748ba2c7216cddf154"
+  }
+ },
+ "timeout": {
+  "baseline_seconds": 0.518,
+  "rule": "max(60 s, 10 x the slower baseline run)",
+  "timeout_seconds": 60.0
+ },
+ "mutmut_run": {
+  "returncode": 0,
+  "seconds": 25.1,
+  "config": "[tool.mutmut]\nsource_paths = [\"jwt\"]\nonly_mutate = [\"jwt/api_jws.py\", \"jwt/api_jwt.py\"]\npytest_add_cli_args_test_selection = [\"tests/\"]\nuse_git_change_detection = false"
+ },
+ "experiment_sources_sha256": {
+  "PROTOCOL.md": "ab927e0ebe9eda7c83414dbe0b5bd0ae5ae5aad5cda827fdef659019aaffade6",
+  "define_s2.py": "70545d03a0925b5a2e48ac66e745d1628d0fd2196886fd2788b930d0c3ca026b",
+  "checks.json": "4a132395acc22906e563daadf24599f84b50019286426cf33beb932bd4d36a86",
+  "cases.json": "77a2009aed62e493057499d46a60e02f91d262843d14be5190e049abc75a7330",
+  "plugin/s2_recorder.py": "51d8efb442245e9b65b405e3ecdada1176fce77155a5dffcb793e81d352d07d5",
+  "run_s2.py": "550f8c99248dcbf04abd25a0a00b41a6525bc53ee2f6d295d1f3f9a4e3ece360",
+  "analyse_s2.py": "56917168a22569dc67a4e7a0a87de96370e236a7fe69a9d2b2b6dc067fde5fbd",
+  ".gitignore": "61f65dd9598c7421870bf4918332637f83f34abe1f9fc7cc095852ef7a1b44f7"
+ }
+}

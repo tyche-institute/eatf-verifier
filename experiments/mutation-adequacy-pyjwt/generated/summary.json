@@ -1,0 +1,802 @@
+{
+ "schema": "urn:eatf:experiment:mutation-adequacy-pyjwt-results:1",
+ "subject": {
+  "name": "PyJWT",
+  "version": "2.15.1",
+  "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+  "repository": "https://github.com/jpadilla/pyjwt",
+  "licence": "MIT",
+  "sha256": {
+   "jwt/api_jws.py": "80e83b3a4089f6a19692bb5b2f56784edc3bd65bf74043bad7a230f9c5bdcf12",
+   "jwt/api_jwt.py": "a2af9f3593c8cf9133163cb0b5b08223281b8292d5db5665309bc23c212cac76",
+   "jwt/algorithms.py": "31e174916a77d17f4ed9dbcd3b869e9264a146aaf8d97f02d9b43bf828fe0441",
+   "jwt/exceptions.py": "3540f48760343221d5e94f933edfc0af4a6b9c01f1c892748ba2c7216cddf154"
+  }
+ },
+ "cases": {
+  "blocks": 79,
+  "cases": 91,
+  "labelled": 81,
+  "S": {
+   "O_V": 91,
+   "O_V^fc": 91,
+   "O_C": 91,
+   "O_T": 80,
+   "O_S": 91,
+   "O_CM": 91
+  }
+ },
+ "checks": {
+  "in_mutated_files": 44,
+  "reached": 41,
+  "external": 5
+ },
+ "totals": {
+  "O_V": {
+   "killed": 404,
+   "survived": 476,
+   "score": 0.4591
+  },
+  "O_V^fc": {
+   "killed": 378,
+   "survived": 502,
+   "score": 0.4295
+  },
+  "O_C": {
+   "killed": 446,
+   "survived": 434,
+   "score": 0.5068
+  },
+  "O_T": {
+   "killed": 451,
+   "survived": 429,
+   "score": 0.5125
+  },
+  "O_S": {
+   "killed": 538,
+   "survived": 342,
+   "score": 0.6114
+  },
+  "O_CM": {
+   "killed": 614,
+   "survived": 266,
+   "score": 0.6977
+  }
+ },
+ "tool_context": {
+  "O_V": {
+   "killed/killed": 404,
+   "killed/survived": 239,
+   "survived/survived": 237
+  },
+  "O_V^fc": {
+   "killed/killed": 378,
+   "killed/survived": 265,
+   "survived/survived": 237
+  },
+  "O_C": {
+   "killed/killed": 446,
+   "killed/survived": 197,
+   "survived/survived": 237
+  },
+  "O_T": {
+   "killed/killed": 451,
+   "killed/survived": 192,
+   "survived/survived": 237
+  },
+  "O_S": {
+   "killed/killed": 538,
+   "killed/survived": 105,
+   "survived/survived": 237
+  }
+ },
+ "gaps": {
+  "O_C - O_V": 42,
+  "share of O_C": 0.0942,
+  "O_T - O_C": 7,
+  "O_C - O_T": 2,
+  "O_S - O_C": 92,
+  "O_C - O_S": 0,
+  "O_S - O_V": 134,
+  "O_V - O_S": 0
+ },
+ "gaps_without_exception_argument": {
+  "mutants": 712,
+  "exception_argument_mutants": 168,
+  "O_C - O_V": 42,
+  "share of O_C": 0.0942,
+  "O_S - O_C": 14,
+  "O_C - O_S": 0,
+  "O_S - O_V": 56,
+  "O_V - O_S": 0,
+  "killed O_V": 404,
+  "killed O_V^fc": 378,
+  "killed O_C": 446,
+  "killed O_T": 451,
+  "killed O_S": 460
+ },
+ "moves": {
+  "case_runs": {
+   "same": 67354,
+   "crashed": 3196,
+   "no check": 5518,
+   "earlier": 3441,
+   "withheld": 120,
+   "no exception": 351,
+   "later": 100
+  },
+  "mutants_with": {
+   "no check": 200,
+   "earlier": 141,
+   "no exception": 113,
+   "later": 56
+  },
+  "by_set": {
+   "O_C - O_V": {
+    "mutants": 42,
+    "case_runs": {
+     "later": 54,
+     "earlier": 36
+    },
+    "mutants_with": {
+     "later": 25,
+     "earlier": 20
+    }
+   },
+   "O_T - O_C": {
+    "mutants": 7,
+    "case_runs": {
+     "later": 3,
+     "earlier": 17
+    },
+    "mutants_with": {
+     "later": 3,
+     "earlier": 7
+    }
+   },
+   "deletions of reached checks": {
+    "deletions": 41,
+    "case_runs": {
+     "no exception": 39,
+     "no check": 35,
+     "later": 11,
+     "withheld": 1
+    }
+   }
+  }
+ },
+ "deletions": {
+  "jws.alg-required": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.detached-requires-b64-false": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.b64-requires-crit": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.b64-requires-detached": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.segment-encoding": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.token-type": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.segments": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.header-json": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": false,
+   "O_S": true
+  },
+  "jws.header-object": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.b64-empty-payload": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.alg-present": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.alg-allowed": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.jwk-alg-match": {
+   "reached": true,
+   "O_V": false,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.alg-supported": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.key-length": {
+   "reached": true,
+   "O_V": false,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.signature": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.kid-type": {
+   "reached": false,
+   "O_V": false,
+   "O_V^fc": false,
+   "O_C": false,
+   "O_T": false,
+   "O_S": false
+  },
+  "jws.crit-list": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.crit-strings": {
+   "reached": true,
+   "O_V": false,
+   "O_V^fc": false,
+   "O_C": false,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.crit-supported": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jws.crit-present": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.payload-json": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.payload-object": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.required": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.iat-type": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.iat-future": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.nbf-type": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.nbf-future": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.exp-type": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.exp-expired": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.iss-present": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.iss-type": {
+   "reached": false,
+   "O_V": false,
+   "O_V^fc": false,
+   "O_C": false,
+   "O_T": false,
+   "O_S": false
+  },
+  "jwt.iss-match": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.iss-param-type": {
+   "reached": false,
+   "O_V": false,
+   "O_V^fc": false,
+   "O_C": false,
+   "O_T": false,
+   "O_S": false
+  },
+  "jwt.aud-unexpected": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.aud-present": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.aud-strict-param": {
+   "reached": true,
+   "O_V": false,
+   "O_V^fc": false,
+   "O_C": false,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.aud-strict-claim-format": {
+   "reached": true,
+   "O_V": false,
+   "O_V^fc": false,
+   "O_C": false,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.aud-strict-match": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.aud-claim-format": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": false,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.aud-match": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": false,
+   "O_S": true
+  },
+  "jwt.sub-type": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.sub-match": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  },
+  "jwt.jti-type": {
+   "reached": true,
+   "O_V": true,
+   "O_V^fc": true,
+   "O_C": true,
+   "O_T": true,
+   "O_S": true
+  }
+ },
+ "predictions": {
+  "P1": {
+   "held": false,
+   "parts": {
+    "every_case_raises_a_PyJWTError": true,
+    "O_S_holds_on_every_case": true,
+    "O_T_holds_on_every_labelled_case": false
+   },
+   "O_T_misses": [
+    {
+     "case": "tests/test_api_jws.py::TestJWS::test_decode_deeply_nested_header_throws_decode_error|test_api_jws.py::test_decode_deeply_nested_header_throws_decode_error#0|0",
+     "target": "jws.header-json",
+     "segment": null,
+     "site": "jws.header-object",
+     "site_segment": null,
+     "message": "Invalid header string: must be a json object"
+    }
+   ]
+  },
+  "P2": {
+   "held": true,
+   "a_undetected_O_V": [
+    "jws.jwk-alg-match",
+    "jws.key-length",
+    "jws.crit-strings",
+    "jwt.aud-strict-param",
+    "jwt.aud-strict-claim-format"
+   ],
+   "b_undetected_O_C_same_class": [
+    "jws.crit-strings",
+    "jwt.aud-strict-param",
+    "jwt.aud-strict-claim-format"
+   ],
+   "c_O_V_only_non_PyJWTError": [
+    "jws.b64-requires-detached",
+    "jws.token-type",
+    "jws.segments",
+    "jws.header-json",
+    "jws.header-object",
+    "jws.alg-present",
+    "jws.alg-supported",
+    "jwt.payload-json",
+    "jwt.payload-object",
+    "jwt.iat-type",
+    "jwt.nbf-type",
+    "jwt.exp-type",
+    "jwt.iss-present",
+    "jwt.aud-unexpected",
+    "jwt.aud-present",
+    "jwt.aud-claim-format"
+   ],
+   "reached": 41,
+   "deletions": 44
+  },
+  "P3": {
+   "held": true,
+   "killed_O_T_not_O_C": [
+    "jwt.api_jws.x\u01c1PyJWS\u01c1_verify_signature__mutmut_6",
+    "jwt.api_jws.x\u01c1PyJWS\u01c1_verify_signature__mutmut_7",
+    "jwt.api_jwt.x\u01c1PyJWT\u01c1_get_default_options__mutmut_29",
+    "jwt.api_jwt.x\u01c1PyJWT\u01c1_validate_aud__mutmut_27",
+    "jwt.api_jwt.x\u01c1PyJWT\u01c1_validate_aud__mutmut_32",
+    "jwt.api_jwt.x\u01c1PyJWT\u01c1_validate_iss__mutmut_11",
+    "jwt.api_jwt.x\u01c1PyJWT\u01c1_validate_iss__mutmut_8"
+   ]
+  },
+  "P4": {
+   "held": false,
+   "strict_subset": true,
+   "gap": 42,
+   "killed_O_C": 446,
+   "share": 0.0942
+  },
+  "P5": {
+   "held": false,
+   "cases": 77,
+   "failing": [
+    "tests/test_api_jws.py::TestJWS::test_bad_secret|test_api_jws.py::test_bad_secret#1|0"
+   ]
+  }
+ },
+ "sentinels": {
+  "1": {
+   "base-2": true,
+   "control": true,
+   "mutated package, no mutant active": true
+  },
+  "2": {
+   "case_tests_pass": true,
+   "pytest_check_passes_on_every_block": true,
+   "every_included_block_runs": true,
+   "suite_without_recorder_passes": true,
+   "suite_summary": "471 passed, 4 skipped in 5.61s",
+   "case_tests": 87,
+   "block_runs": 92,
+   "cases": 91
+  },
+  "3": {
+   "mutants": {
+    "O_V_fc in O_V": true,
+    "O_V in O_C": true,
+    "O_V in O_S": true
+   },
+   "deletions": {
+    "O_V_fc in O_V": true,
+    "O_V in O_C": true,
+    "O_V in O_S": true
+   }
+  },
+  "4": {
+   "holds": true,
+   "killed_under_O_S_not_by_mutmut": []
+  },
+  "5": {
+   "holds": true,
+   "targets": [
+    "jws.alg-allowed",
+    "jws.alg-present",
+    "jws.alg-required",
+    "jws.alg-supported",
+    "jws.b64-empty-payload",
+    "jws.b64-requires-crit",
+    "jws.b64-requires-detached",
+    "jws.crit-list",
+    "jws.crit-present",
+    "jws.crit-strings",
+    "jws.crit-supported",
+    "jws.detached-requires-b64-false",
+    "jws.header-object",
+    "jws.jwk-alg-match",
+    "jws.key-length",
+    "jws.segment-encoding",
+    "jws.segments",
+    "jws.signature",
+    "jws.token-type",
+    "jwt.aud-claim-format",
+    "jwt.aud-present",
+    "jwt.aud-strict-claim-format",
+    "jwt.aud-strict-match",
+    "jwt.aud-strict-param",
+    "jwt.aud-unexpected",
+    "jwt.exp-expired",
+    "jwt.exp-type",
+    "jwt.iat-future",
+    "jwt.iat-type",
+    "jwt.iss-match",
+    "jwt.iss-present",
+    "jwt.jti-type",
+    "jwt.nbf-future",
+    "jwt.nbf-type",
+    "jwt.payload-json",
+    "jwt.payload-object",
+    "jwt.required",
+    "jwt.sub-match",
+    "jwt.sub-type"
+   ],
+   "undetected": []
+  }
+ },
+ "exploratory": {
+  "O_CM": {
+   "killed": 614,
+   "O_CM - O_C": 168,
+   "O_S - O_CM": 0,
+   "O_CM - O_S": 76
+  },
+  "mutmut": {
+   "generated": 1094,
+   "statuses": {
+    "killed": 803,
+    "survived": 291
+   },
+   "classes": {
+    "killed": 803,
+    "survived": 291
+   },
+   "score_all": 0.734,
+   "subject_generated": 880,
+   "subject_killed": 643,
+   "subject_score": 0.7307,
+   "subject_excluded": 0
+  },
+  "withheld_as_failing": {
+   "O_V": {
+    "killed": 412,
+    "added": 8
+   },
+   "O_V^fc": {
+    "killed": 386,
+    "added": 8
+   },
+   "O_C": {
+    "killed": 454,
+    "added": 8
+   },
+   "O_T": {
+    "killed": 459,
+    "added": 8
+   },
+   "O_S": {
+    "killed": 542,
+    "added": 4
+   }
+  },
+  "unlabelled_cases": [
+   {
+    "case": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24|test_advisory.py::test_ghsa_ffqj_6fqr_9h24#0|0",
+    "site": "alg.hmac-asymmetric-key",
+    "segment": null,
+    "class": "jwt.exceptions.InvalidKeyError",
+    "reason": "InvalidKeyError only, which six checks raise; the name is an advisory identifier"
+   },
+   {
+    "case": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24|test_advisory.py::test_ghsa_ffqj_6fqr_9h24#1|0",
+    "site": "alg.hmac-asymmetric-key",
+    "segment": null,
+    "class": "jwt.exceptions.InvalidKeyError",
+    "reason": "InvalidKeyError only, which six checks raise; the name is an advisory identifier"
+   },
+   {
+    "case": "tests/test_api_jws.py::TestJWS::test_decodes_with_jwk_and_mismatched_algorithm|test_api_jws.py::test_decodes_with_jwk_and_mismatched_algorithm#0|0",
+    "site": "jws.alg-allowed",
+    "segment": null,
+    "class": "jwt.exceptions.InvalidAlgorithmError",
+    "reason": "InvalidAlgorithmError only; the name fits two checks: the allow-list check and the check that the token's algorithm matches the key's"
+   },
+   {
+    "case": "tests/test_api_jws.py::TestJWS::test_decode_invalid_header_string|test_api_jws.py::test_decode_invalid_header_string#0|0",
+    "site": "jws.header-json",
+    "segment": null,
+    "class": "jwt.exceptions.DecodeError",
+    "reason": "message contains 'Invalid header', as three checks' messages do; the name 'invalid header string' fits two of them, the JSON check and the object check"
+   },
+   {
+    "case": "tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_should_fail|test_api_jws.py::test_decode_with_algo_none_should_fail#0|0",
+    "site": "jws.signature",
+    "segment": null,
+    "class": "jwt.exceptions.InvalidSignatureError",
+    "reason": "DecodeError only; no check's message or condition names the 'none' algorithm"
+   },
+   {
+    "case": "tests/test_api_jwt.py::TestJWT::test_decode_invalid_payload_string|test_api_jwt.py::test_decode_invalid_payload_string#0|0",
+    "site": "jwt.payload-json",
+    "segment": null,
+    "class": "jwt.exceptions.DecodeError",
+    "reason": "message contains 'Invalid payload string', which two checks' messages start with; the name fits both"
+   },
+   {
+    "case": "tests/test_api_jwt.py::TestJWT::test_raise_exception_invalid_audience_list|test_api_jwt.py::test_raise_exception_invalid_audience_list#0|0",
+    "site": "jwt.aud-match",
+    "segment": null,
+    "class": "jwt.exceptions.InvalidAudienceError",
+    "reason": "InvalidAudienceError only; 'invalid audience' is one check's message and another check's condition"
+   },
+   {
+    "case": "tests/test_api_jwt.py::TestJWT::test_raise_exception_invalid_audience|test_api_jwt.py::test_raise_exception_invalid_audience#0|0",
+    "site": "jwt.aud-match",
+    "segment": null,
+    "class": "jwt.exceptions.InvalidAudienceError",
+    "reason": "InvalidAudienceError only; 'invalid audience' is one check's message and another check's condition"
+   },
+   {
+    "case": "tests/test_api_jwt.py::TestJWT::test_raise_exception_audience_as_bytes|test_api_jwt.py::test_raise_exception_audience_as_bytes#0|0",
+    "site": "jwt.aud-match",
+    "segment": null,
+    "class": "jwt.exceptions.InvalidAudienceError",
+    "reason": "InvalidAudienceError only; no check's message or condition names a bytes audience"
+   },
+   {
+    "case": "tests/test_api_jwt.py::TestJWT::test_raise_exception_invalid_audience_in_array|test_api_jwt.py::test_raise_exception_invalid_audience_in_array#0|0",
+    "site": "jwt.aud-match",
+    "segment": null,
+    "class": "jwt.exceptions.InvalidAudienceError",
+    "reason": "InvalidAudienceError only; 'invalid audience' is one check's message and another check's condition"
+   }
+  ],
+  "runs": {
+   "ran": 880
+  }
+ }
+}
