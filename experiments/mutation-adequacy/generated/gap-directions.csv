@@ -1,0 +1,168 @@
+port,id,region,operator,code_literal,direction,cases,codes
+python,eatf_verifier.verifier.x__ct_eq__mutmut_2,4-canonical-form,name,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+python,eatf_verifier.verifier.x__ct_eq__mutmut_12,4-canonical-form,augmented_assignment,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+python,eatf_verifier.verifier.x__ct_eq__mutmut_13,4-canonical-form,swap_op,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+python,eatf_verifier.verifier.x__fail__mutmut_5,shared,arg_removal,false,no defined code,zip-not-an-archive zip-too-many-entries zip-unsafe-name zip-duplicate-entry missing-canonical metadata-invalid-json metadata-not-object canonical-mismatch hash-mismatch signer-pin-mismatch rsa-signature-invalid overt-content-hash-mismatch overt-signature-missing overt-signature-invalid pqc-half-pair timestamp-empty timestamp-imprint-mismatch timestamp-cert-missing timestamp-signature-invalid naive-remove-receipt-signature refined-remove-receipt-signature naive-empty-timestamp refined-empty-timestamp,ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- REQUIRED_ENTRY_MISSING>- METADATA_INVALID_JSON>- METADATA_NOT_OBJECT>- CANONICAL_FORM_MISMATCH>- HASH_MISMATCH>- SIGNER_NOT_TRUSTED>- RSA_SIGNATURE_INVALID>- OVERT_INVALID>- OVERT_SIGNATURE_REQUIRED>- OVERT_SIGNATURE_INVALID>- PQC_PAIR_INCOMPLETE>- TSA_MISSING_OR_INVALID>- TSA_IMPRINT_MISMATCH>- TSA_CERT_MISSING>- TSA_SIGNATURE_INVALID>- OVERT_INVALID>- OVERT_SIGNATURE_REQUIRED>- OVERT_INVALID>- TSA_MISSING_OR_INVALID>-
+python,eatf_verifier.verifier.x__fail__mutmut_12,shared,arg_removal,false,no defined code,zip-not-an-archive zip-too-many-entries zip-unsafe-name zip-duplicate-entry missing-canonical metadata-invalid-json metadata-not-object canonical-mismatch hash-mismatch signer-pin-mismatch rsa-signature-invalid overt-content-hash-mismatch overt-signature-missing overt-signature-invalid pqc-half-pair timestamp-empty timestamp-imprint-mismatch timestamp-cert-missing timestamp-signature-invalid naive-remove-receipt-signature refined-remove-receipt-signature naive-empty-timestamp refined-empty-timestamp,ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- REQUIRED_ENTRY_MISSING>- METADATA_INVALID_JSON>- METADATA_NOT_OBJECT>- CANONICAL_FORM_MISMATCH>- HASH_MISMATCH>- SIGNER_NOT_TRUSTED>- RSA_SIGNATURE_INVALID>- OVERT_INVALID>- OVERT_SIGNATURE_REQUIRED>- OVERT_SIGNATURE_INVALID>- PQC_PAIR_INCOMPLETE>- TSA_MISSING_OR_INVALID>- TSA_IMPRINT_MISMATCH>- TSA_CERT_MISSING>- TSA_SIGNATURE_INVALID>- OVERT_INVALID>- OVERT_SIGNATURE_REQUIRED>- OVERT_INVALID>- TSA_MISSING_OR_INVALID>-
+python,eatf_verifier.verifier.x_verify__mutmut_66,1-zip,arg_removal,true,no defined code,zip-not-an-archive zip-too-many-entries zip-unsafe-name zip-duplicate-entry,ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>-
+python,eatf_verifier.verifier.x_verify__mutmut_73,1-zip,string,true,no defined code,zip-not-an-archive zip-too-many-entries zip-unsafe-name zip-duplicate-entry,ZIP_INVALID_OR_UNSAFE>XXZIP_INVALID_OR_UNSAFEXX ZIP_INVALID_OR_UNSAFE>XXZIP_INVALID_OR_UNSAFEXX ZIP_INVALID_OR_UNSAFE>XXZIP_INVALID_OR_UNSAFEXX ZIP_INVALID_OR_UNSAFE>XXZIP_INVALID_OR_UNSAFEXX
+python,eatf_verifier.verifier.x_verify__mutmut_74,1-zip,string,true,no defined code,zip-not-an-archive zip-too-many-entries zip-unsafe-name zip-duplicate-entry,ZIP_INVALID_OR_UNSAFE>zip_invalid_or_unsafe ZIP_INVALID_OR_UNSAFE>zip_invalid_or_unsafe ZIP_INVALID_OR_UNSAFE>zip_invalid_or_unsafe ZIP_INVALID_OR_UNSAFE>zip_invalid_or_unsafe
+python,eatf_verifier.verifier.x_verify__mutmut_78,2-required-entries,arg_removal,true,no defined code,missing-canonical,REQUIRED_ENTRY_MISSING>-
+python,eatf_verifier.verifier.x_verify__mutmut_85,2-required-entries,string,true,no defined code,missing-canonical,REQUIRED_ENTRY_MISSING>XXREQUIRED_ENTRY_MISSINGXX
+python,eatf_verifier.verifier.x_verify__mutmut_86,2-required-entries,string,true,no defined code,missing-canonical,REQUIRED_ENTRY_MISSING>required_entry_missing
+python,eatf_verifier.verifier.x_verify__mutmut_95,3-metadata,arg_removal,false,same guard,metadata-not-object,METADATA_NOT_OBJECT>METADATA_INVALID_JSON
+python,eatf_verifier.verifier.x_verify__mutmut_96,3-metadata,arg_removal,true,no defined code,metadata-not-object,METADATA_NOT_OBJECT>-
+python,eatf_verifier.verifier.x_verify__mutmut_98,3-metadata,arg_removal,false,same guard,metadata-not-object,METADATA_NOT_OBJECT>METADATA_INVALID_JSON
+python,eatf_verifier.verifier.x_verify__mutmut_99,3-metadata,arg_removal,false,same guard,metadata-not-object,METADATA_NOT_OBJECT>METADATA_INVALID_JSON
+python,eatf_verifier.verifier.x_verify__mutmut_100,3-metadata,arg_removal,false,same guard,metadata-not-object,METADATA_NOT_OBJECT>METADATA_INVALID_JSON
+python,eatf_verifier.verifier.x_verify__mutmut_101,3-metadata,arg_removal,false,same guard,metadata-not-object,METADATA_NOT_OBJECT>METADATA_INVALID_JSON
+python,eatf_verifier.verifier.x_verify__mutmut_102,3-metadata,string,true,no defined code,metadata-not-object,METADATA_NOT_OBJECT>XXMETADATA_NOT_OBJECTXX
+python,eatf_verifier.verifier.x_verify__mutmut_103,3-metadata,string,true,no defined code,metadata-not-object,METADATA_NOT_OBJECT>metadata_not_object
+python,eatf_verifier.verifier.x_verify__mutmut_108,3-metadata,arg_removal,true,no defined code,metadata-invalid-json,METADATA_INVALID_JSON>-
+python,eatf_verifier.verifier.x_verify__mutmut_114,3-metadata,string,true,no defined code,metadata-invalid-json,METADATA_INVALID_JSON>XXMETADATA_INVALID_JSONXX
+python,eatf_verifier.verifier.x_verify__mutmut_115,3-metadata,string,true,no defined code,metadata-invalid-json,METADATA_INVALID_JSON>metadata_invalid_json
+python,eatf_verifier.verifier.x_verify__mutmut_160,4-canonical-form,arg_removal,true,no defined code,canonical-mismatch,CANONICAL_FORM_MISMATCH>-
+python,eatf_verifier.verifier.x_verify__mutmut_167,4-canonical-form,string,true,no defined code,canonical-mismatch,CANONICAL_FORM_MISMATCH>XXCANONICAL_FORM_MISMATCHXX
+python,eatf_verifier.verifier.x_verify__mutmut_168,4-canonical-form,string,true,no defined code,canonical-mismatch,CANONICAL_FORM_MISMATCH>canonical_form_mismatch
+python,eatf_verifier.verifier.x_verify__mutmut_184,5-digest,arg_removal,true,no defined code,hash-mismatch,HASH_MISMATCH>-
+python,eatf_verifier.verifier.x_verify__mutmut_191,5-digest,string,true,no defined code,hash-mismatch,HASH_MISMATCH>XXHASH_MISMATCHXX
+python,eatf_verifier.verifier.x_verify__mutmut_192,5-digest,string,true,no defined code,hash-mismatch,HASH_MISMATCH>hash_mismatch
+python,eatf_verifier.verifier.x_verify__mutmut_210,6-signer-pin,arg_removal,true,no defined code,signer-pin-mismatch,SIGNER_NOT_TRUSTED>-
+python,eatf_verifier.verifier.x_verify__mutmut_217,6-signer-pin,string,true,no defined code,signer-pin-mismatch,SIGNER_NOT_TRUSTED>XXSIGNER_NOT_TRUSTEDXX
+python,eatf_verifier.verifier.x_verify__mutmut_218,6-signer-pin,string,true,no defined code,signer-pin-mismatch,SIGNER_NOT_TRUSTED>signer_not_trusted
+python,eatf_verifier.verifier.x_verify__mutmut_265,7-rsa,arg_removal,false,same guard,rsa-signature-invalid,RSA_SIGNATURE_INVALID>RSA_VERIFY_ERROR
+python,eatf_verifier.verifier.x_verify__mutmut_266,7-rsa,arg_removal,false,same guard,rsa-signature-invalid,RSA_SIGNATURE_INVALID>RSA_VERIFY_ERROR
+python,eatf_verifier.verifier.x_verify__mutmut_267,7-rsa,arg_removal,false,same guard,rsa-signature-invalid,RSA_SIGNATURE_INVALID>RSA_VERIFY_ERROR
+python,eatf_verifier.verifier.x_verify__mutmut_268,7-rsa,arg_removal,false,same guard,rsa-signature-invalid,RSA_SIGNATURE_INVALID>RSA_VERIFY_ERROR
+python,eatf_verifier.verifier.x_verify__mutmut_269,7-rsa,arg_removal,false,same guard,rsa-signature-invalid,RSA_SIGNATURE_INVALID>RSA_VERIFY_ERROR
+python,eatf_verifier.verifier.x_verify__mutmut_270,7-rsa,arg_removal,false,same guard,rsa-signature-invalid,RSA_SIGNATURE_INVALID>RSA_VERIFY_ERROR
+python,eatf_verifier.verifier.x_verify__mutmut_283,7-rsa,arg_removal,true,no defined code,rsa-signature-invalid,RSA_SIGNATURE_INVALID>-
+python,eatf_verifier.verifier.x_verify__mutmut_290,7-rsa,string,true,no defined code,rsa-signature-invalid,RSA_SIGNATURE_INVALID>XXRSA_SIGNATURE_INVALIDXX
+python,eatf_verifier.verifier.x_verify__mutmut_291,7-rsa,string,true,no defined code,rsa-signature-invalid,RSA_SIGNATURE_INVALID>rsa_signature_invalid
+python,eatf_verifier.verifier.x_verify__mutmut_307,8a-overt-crosscheck,arg_removal,true,no defined code,overt-content-hash-mismatch naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>- OVERT_INVALID>- OVERT_INVALID>-
+python,eatf_verifier.verifier.x_verify__mutmut_312,8a-overt-crosscheck,arg_removal,false,no defined code,overt-content-hash-mismatch naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>overt_receipt.json invalid: content_hash does not match hash.sha256. OVERT_INVALID>overt_receipt.json invalid: witness.signature_refs references missing file overt_receipt.sig. OVERT_INVALID>overt_receipt.json invalid: witness.timestamp_refs references empty file timestamp.tsr.
+python,eatf_verifier.verifier.x_verify__mutmut_317,8a-overt-crosscheck,string,true,no defined code,overt-content-hash-mismatch naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>XXOVERT_INVALIDXX OVERT_INVALID>XXOVERT_INVALIDXX OVERT_INVALID>XXOVERT_INVALIDXX
+python,eatf_verifier.verifier.x_verify__mutmut_318,8a-overt-crosscheck,string,true,no defined code,overt-content-hash-mismatch naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>overt_invalid OVERT_INVALID>overt_invalid OVERT_INVALID>overt_invalid
+python,eatf_verifier.verifier.x_verify__mutmut_359,8b-receipt-signature,swap_op,false,same guard,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_ERROR OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_ERROR
+python,eatf_verifier.verifier.x_verify__mutmut_365,8b-receipt-signature,arg_removal,true,no defined code,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>- OVERT_SIGNATURE_REQUIRED>-
+python,eatf_verifier.verifier.x_verify__mutmut_370,8b-receipt-signature,arg_removal,false,no defined code,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>Signed metadata requires overt_receipt.json and overt_receipt.sig. OVERT_SIGNATURE_REQUIRED>Signed metadata requires overt_receipt.json and overt_receipt.sig.
+python,eatf_verifier.verifier.x_verify__mutmut_375,8b-receipt-signature,string,true,no defined code,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>XXOVERT_SIGNATURE_REQUIREDXX OVERT_SIGNATURE_REQUIRED>XXOVERT_SIGNATURE_REQUIREDXX
+python,eatf_verifier.verifier.x_verify__mutmut_376,8b-receipt-signature,string,true,no defined code,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>overt_signature_required OVERT_SIGNATURE_REQUIRED>overt_signature_required
+python,eatf_verifier.verifier.x_verify__mutmut_396,8b-receipt-signature,arg_removal,false,same guard,overt-signature-invalid,OVERT_SIGNATURE_INVALID>OVERT_SIGNATURE_ERROR
+python,eatf_verifier.verifier.x_verify__mutmut_397,8b-receipt-signature,arg_removal,true,no defined code,overt-signature-invalid,OVERT_SIGNATURE_INVALID>-
+python,eatf_verifier.verifier.x_verify__mutmut_401,8b-receipt-signature,arg_removal,false,same guard,overt-signature-invalid,OVERT_SIGNATURE_INVALID>OVERT_SIGNATURE_ERROR
+python,eatf_verifier.verifier.x_verify__mutmut_402,8b-receipt-signature,arg_removal,false,no defined code,overt-signature-invalid,OVERT_SIGNATURE_INVALID>OVERT receipt signature does not verify against public_key.pem.
+python,eatf_verifier.verifier.x_verify__mutmut_407,8b-receipt-signature,string,true,no defined code,overt-signature-invalid,OVERT_SIGNATURE_INVALID>XXOVERT_SIGNATURE_INVALIDXX
+python,eatf_verifier.verifier.x_verify__mutmut_408,8b-receipt-signature,string,true,no defined code,overt-signature-invalid,OVERT_SIGNATURE_INVALID>overt_signature_invalid
+python,eatf_verifier.verifier.x_verify__mutmut_466,9-pqc,arg_removal,true,no defined code,pqc-half-pair,PQC_PAIR_INCOMPLETE>-
+python,eatf_verifier.verifier.x_verify__mutmut_472,9-pqc,arg_removal,false,no defined code,pqc-half-pair,PQC_PAIR_INCOMPLETE>ML-DSA-65 signature and public-key entries must be supplied together.
+python,eatf_verifier.verifier.x_verify__mutmut_477,9-pqc,string,true,no defined code,pqc-half-pair,PQC_PAIR_INCOMPLETE>XXPQC_PAIR_INCOMPLETEXX
+python,eatf_verifier.verifier.x_verify__mutmut_478,9-pqc,string,true,no defined code,pqc-half-pair,PQC_PAIR_INCOMPLETE>pqc_pair_incomplete
+python,eatf_verifier.verifier.x_verify__mutmut_564,10-12-timestamp,arg_removal,true,no defined code,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>- TSA_MISSING_OR_INVALID>-
+python,eatf_verifier.verifier.x_verify__mutmut_570,10-12-timestamp,arg_removal,false,no defined code,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>timestamp.tsr missing or empty. TSA_MISSING_OR_INVALID>timestamp.tsr missing or empty.
+python,eatf_verifier.verifier.x_verify__mutmut_575,10-12-timestamp,string,true,no defined code,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>XXTSA_MISSING_OR_INVALIDXX TSA_MISSING_OR_INVALID>XXTSA_MISSING_OR_INVALIDXX
+python,eatf_verifier.verifier.x_verify__mutmut_576,10-12-timestamp,string,true,no defined code,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>tsa_missing_or_invalid TSA_MISSING_OR_INVALID>tsa_missing_or_invalid
+python,eatf_verifier.verifier.x_verify__mutmut_594,10-12-timestamp,arg_removal,false,no defined code,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>-
+python,eatf_verifier.verifier.x_verify__mutmut_600,10-12-timestamp,arg_removal,false,no defined code,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>RFC 3161 message imprint does not match hash.sha256.
+python,eatf_verifier.verifier.x_verify__mutmut_605,10-12-timestamp,if_exp,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_IMPRINT_UNVERIFIABLE
+python,eatf_verifier.verifier.x_verify__mutmut_607,10-12-timestamp,string,true,no defined code,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>XXTSA_IMPRINT_MISMATCHXX
+python,eatf_verifier.verifier.x_verify__mutmut_608,10-12-timestamp,string,true,no defined code,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>tsa_imprint_mismatch
+python,eatf_verifier.verifier.x_verify__mutmut_609,10-12-timestamp,keywords,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_IMPRINT_UNVERIFIABLE
+python,eatf_verifier.verifier.x_verify__mutmut_610,10-12-timestamp,name,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_IMPRINT_UNVERIFIABLE
+python,eatf_verifier.verifier.x_verify__mutmut_627,10-12-timestamp,arg_removal,false,no defined code,timestamp-cert-missing timestamp-signature-invalid,TSA_CERT_MISSING>- TSA_SIGNATURE_INVALID>-
+python,eatf_verifier.verifier.x_verify__mutmut_633,10-12-timestamp,arg_removal,false,no defined code,timestamp-cert-missing timestamp-signature-invalid,TSA_CERT_MISSING>RFC 3161 token does not contain a verifiable embedded signing certificate. TSA_SIGNATURE_INVALID>RFC 3161 SignerInfo signature did not verify against the embedded certificate.
+python,eatf_verifier.verifier.x_verify__mutmut_638,10-12-timestamp,if_exp,false,same guard,timestamp-signature-invalid,TSA_SIGNATURE_INVALID>TSA_CERT_MISSING
+python,eatf_verifier.verifier.x_verify__mutmut_639,10-12-timestamp,if_exp,false,same guard,timestamp-cert-missing,TSA_CERT_MISSING>TSA_SIGNATURE_INVALID
+python,eatf_verifier.verifier.x_verify__mutmut_640,10-12-timestamp,string,true,no defined code,timestamp-signature-invalid,TSA_SIGNATURE_INVALID>XXTSA_SIGNATURE_INVALIDXX
+python,eatf_verifier.verifier.x_verify__mutmut_641,10-12-timestamp,string,true,no defined code,timestamp-signature-invalid,TSA_SIGNATURE_INVALID>tsa_signature_invalid
+python,eatf_verifier.verifier.x_verify__mutmut_642,10-12-timestamp,keywords,false,same guard,timestamp-cert-missing timestamp-signature-invalid,TSA_CERT_MISSING>TSA_SIGNATURE_INVALID TSA_SIGNATURE_INVALID>TSA_CERT_MISSING
+python,eatf_verifier.verifier.x_verify__mutmut_643,10-12-timestamp,name,false,same guard,timestamp-signature-invalid,TSA_SIGNATURE_INVALID>TSA_CERT_MISSING
+python,eatf_verifier.verifier.x_verify__mutmut_644,10-12-timestamp,string,true,no defined code,timestamp-cert-missing,TSA_CERT_MISSING>XXTSA_CERT_MISSINGXX
+python,eatf_verifier.verifier.x_verify__mutmut_645,10-12-timestamp,string,true,no defined code,timestamp-cert-missing,TSA_CERT_MISSING>tsa_cert_missing
+python,eatf_verifier.overt.x_parse_and_validate_overt_receipt__mutmut_154,8a-overt-crosscheck,assignment,false,later guard,naive-remove-receipt-signature,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED
+python,eatf_verifier.overt.x_parse_and_validate_overt_receipt__mutmut_169,8a-overt-crosscheck,assignment,false,later guard,naive-empty-timestamp,OVERT_INVALID>TSA_MISSING_OR_INVALID
+python,eatf_verifier.overt.x_parse_and_validate_overt_receipt__mutmut_183,8a-overt-crosscheck,name,false,earlier guard,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>OVERT_INVALID TSA_MISSING_OR_INVALID>OVERT_INVALID
+python,eatf_verifier.tsa.x__empty__mutmut_12,10-12-timestamp,name,false,same guard,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>TSA_IMPRINT_UNVERIFIABLE TSA_MISSING_OR_INVALID>TSA_IMPRINT_UNVERIFIABLE
+python,eatf_verifier.tsa.x_inspect_tsa__mutmut_102,10-12-timestamp,assignment,false,same guard,timestamp-signature-invalid,TSA_SIGNATURE_INVALID>TSA_CERT_MISSING
+typescript,44,8a-overt-crosscheck,ConditionalExpression,false,later guard,overt-content-hash-mismatch,OVERT_INVALID>OVERT_SIGNATURE_INVALID
+typescript,49,8a-overt-crosscheck,BlockStatement,false,later guard,overt-content-hash-mismatch,OVERT_INVALID>OVERT_SIGNATURE_INVALID
+typescript,50,8a-overt-crosscheck,ObjectLiteral,false,later guard,overt-content-hash-mismatch,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED
+typescript,51,8a-overt-crosscheck,StringLiteral,false,later guard,overt-content-hash-mismatch,OVERT_INVALID>OVERT_SIGNATURE_INVALID
+typescript,99,8a-overt-crosscheck,ConditionalExpression,false,later guard,naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,108,8a-overt-crosscheck,ConditionalExpression,false,later guard,naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,114,8a-overt-crosscheck,ConditionalExpression,false,later guard,naive-empty-timestamp,OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,117,8a-overt-crosscheck,ObjectLiteral,false,later guard,naive-remove-receipt-signature,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED
+typescript,115,8a-overt-crosscheck,ConditionalExpression,false,later guard,naive-remove-receipt-signature,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED
+typescript,116,8a-overt-crosscheck,BlockStatement,false,later guard,naive-remove-receipt-signature,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED
+typescript,119,8a-overt-crosscheck,BooleanLiteral,false,earlier guard,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>OVERT_INVALID TSA_MISSING_OR_INVALID>OVERT_INVALID
+typescript,121,8a-overt-crosscheck,ConditionalExpression,false,later guard,naive-empty-timestamp,OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,123,8a-overt-crosscheck,ObjectLiteral,false,later guard,naive-empty-timestamp,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED
+typescript,122,8a-overt-crosscheck,BlockStatement,false,later guard,naive-empty-timestamp,OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,160,8a-overt-crosscheck,BlockStatement,false,later guard,naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,175,8a-overt-crosscheck,BlockStatement,false,later guard,naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,199,8a-overt-crosscheck,StringLiteral,false,later guard,naive-remove-receipt-signature,OVERT_INVALID>OVERT_SIGNATURE_REQUIRED
+typescript,201,8a-overt-crosscheck,ConditionalExpression,false,later guard,naive-empty-timestamp,OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,204,8a-overt-crosscheck,StringLiteral,false,later guard,naive-empty-timestamp,OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,203,8a-overt-crosscheck,BlockStatement,false,later guard,naive-empty-timestamp,OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,267,10-12-timestamp,BooleanLiteral,false,same guard,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>TSA_IMPRINT_UNVERIFIABLE TSA_MISSING_OR_INVALID>TSA_IMPRINT_UNVERIFIABLE
+typescript,377,10-12-timestamp,ConditionalExpression,false,same guard,timestamp-cert-missing,TSA_CERT_MISSING>TSA_SIGNATURE_INVALID
+typescript,378,10-12-timestamp,LogicalOperator,false,same guard,timestamp-cert-missing,TSA_CERT_MISSING>TSA_SIGNATURE_INVALID
+typescript,379,10-12-timestamp,ConditionalExpression,false,same guard,timestamp-cert-missing,TSA_CERT_MISSING>TSA_SIGNATURE_INVALID
+typescript,392,10-12-timestamp,ObjectLiteral,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_MISSING_OR_INVALID
+typescript,393,10-12-timestamp,BooleanLiteral,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_MISSING_OR_INVALID
+typescript,495,10-12-timestamp,ConditionalExpression,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_SIGNATURE_INVALID
+typescript,497,10-12-timestamp,EqualityOperator,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_SIGNATURE_INVALID
+typescript,499,10-12-timestamp,AssignmentOperator,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_SIGNATURE_INVALID
+typescript,500,10-12-timestamp,ConditionalExpression,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_SIGNATURE_INVALID
+typescript,521,1-zip,AssignmentOperator,false,later guard,zip-too-many-entries,ZIP_INVALID_OR_UNSAFE>REQUIRED_ENTRY_MISSING
+typescript,524,1-zip,ConditionalExpression,false,later guard,zip-too-many-entries,ZIP_INVALID_OR_UNSAFE>REQUIRED_ENTRY_MISSING
+typescript,549,1-zip,ConditionalExpression,false,later guard,zip-duplicate-entry,ZIP_INVALID_OR_UNSAFE>CANONICAL_FORM_MISMATCH
+typescript,553,1-zip,StringLiteral,true,no defined code,zip-not-an-archive zip-too-many-entries zip-unsafe-name zip-duplicate-entry,ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>- ZIP_INVALID_OR_UNSAFE>-
+typescript,569,2-required-entries,StringLiteral,true,no defined code,missing-canonical,REQUIRED_ENTRY_MISSING>-
+typescript,573,3-metadata,ConditionalExpression,false,later guard,metadata-not-object,METADATA_NOT_OBJECT>CANONICAL_FORM_MISMATCH
+typescript,574,3-metadata,LogicalOperator,false,later guard,metadata-not-object,METADATA_NOT_OBJECT>CANONICAL_FORM_MISMATCH
+typescript,582,3-metadata,BlockStatement,false,later guard,metadata-not-object,METADATA_NOT_OBJECT>CANONICAL_FORM_MISMATCH
+typescript,583,3-metadata,StringLiteral,true,no defined code,metadata-not-object,METADATA_NOT_OBJECT>-
+typescript,585,3-metadata,BlockStatement,false,later guard,metadata-invalid-json,METADATA_INVALID_JSON>CANONICAL_FORM_MISMATCH
+typescript,586,3-metadata,StringLiteral,true,no defined code,metadata-invalid-json,METADATA_INVALID_JSON>-
+typescript,596,4-canonical-form,ConditionalExpression,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+typescript,600,4-canonical-form,ConditionalExpression,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+typescript,605,4-canonical-form,BlockStatement,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+typescript,606,4-canonical-form,StringLiteral,true,no defined code,canonical-mismatch,CANONICAL_FORM_MISMATCH>-
+typescript,612,5-digest,ConditionalExpression,false,later guard,hash-mismatch,HASH_MISMATCH>OVERT_INVALID
+typescript,614,5-digest,BlockStatement,false,later guard,hash-mismatch,HASH_MISMATCH>OVERT_INVALID
+typescript,615,5-digest,StringLiteral,true,no defined code,hash-mismatch,HASH_MISMATCH>-
+typescript,635,6-signer-pin,StringLiteral,true,no defined code,signer-pin-mismatch,SIGNER_NOT_TRUSTED>-
+typescript,658,7-rsa,StringLiteral,true,no defined code,rsa-signature-invalid,RSA_SIGNATURE_INVALID>-
+typescript,662,8a-overt-crosscheck,ConditionalExpression,false,later guard,overt-content-hash-mismatch naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>OVERT_SIGNATURE_INVALID OVERT_INVALID>OVERT_SIGNATURE_REQUIRED OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,663,8a-overt-crosscheck,BlockStatement,false,later guard,overt-content-hash-mismatch naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>OVERT_SIGNATURE_INVALID OVERT_INVALID>OVERT_SIGNATURE_REQUIRED OVERT_INVALID>TSA_MISSING_OR_INVALID
+typescript,664,8a-overt-crosscheck,StringLiteral,true,no defined code,overt-content-hash-mismatch naive-remove-receipt-signature naive-empty-timestamp,OVERT_INVALID>- OVERT_INVALID>- OVERT_INVALID>-
+typescript,683,8b-receipt-signature,LogicalOperator,false,same guard,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID
+typescript,682,8b-receipt-signature,ConditionalExpression,false,same guard,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID
+typescript,684,8b-receipt-signature,ConditionalExpression,false,same guard,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID
+typescript,685,8b-receipt-signature,LogicalOperator,false,same guard,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID
+typescript,689,8b-receipt-signature,BlockStatement,false,same guard,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID OVERT_SIGNATURE_REQUIRED>OVERT_SIGNATURE_INVALID
+typescript,690,8b-receipt-signature,StringLiteral,true,no defined code,overt-signature-missing refined-remove-receipt-signature,OVERT_SIGNATURE_REQUIRED>- OVERT_SIGNATURE_REQUIRED>-
+typescript,698,8b-receipt-signature,StringLiteral,true,no defined code,overt-signature-invalid,OVERT_SIGNATURE_INVALID>-
+typescript,720,9-pqc,StringLiteral,true,no defined code,pqc-half-pair,PQC_PAIR_INCOMPLETE>-
+typescript,749,10-12-timestamp,ConditionalExpression,false,same guard,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>TSA_IMPRINT_UNVERIFIABLE TSA_MISSING_OR_INVALID>TSA_IMPRINT_UNVERIFIABLE
+typescript,750,10-12-timestamp,BlockStatement,false,same guard,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>TSA_IMPRINT_UNVERIFIABLE TSA_MISSING_OR_INVALID>TSA_IMPRINT_UNVERIFIABLE
+typescript,751,10-12-timestamp,StringLiteral,true,no defined code,timestamp-empty refined-empty-timestamp,TSA_MISSING_OR_INVALID>- TSA_MISSING_OR_INVALID>-
+typescript,769,10-12-timestamp,ConditionalExpression,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_SIGNATURE_INVALID
+typescript,772,10-12-timestamp,BlockStatement,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_SIGNATURE_INVALID
+typescript,775,10-12-timestamp,EqualityOperator,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_IMPRINT_UNVERIFIABLE
+typescript,774,10-12-timestamp,ConditionalExpression,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_IMPRINT_UNVERIFIABLE
+typescript,776,10-12-timestamp,BooleanLiteral,false,same guard,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>TSA_IMPRINT_UNVERIFIABLE
+typescript,777,10-12-timestamp,StringLiteral,true,no defined code,timestamp-imprint-mismatch,TSA_IMPRINT_MISMATCH>-
+typescript,792,10-12-timestamp,EqualityOperator,false,same guard,timestamp-cert-missing timestamp-signature-invalid,TSA_CERT_MISSING>TSA_SIGNATURE_INVALID TSA_SIGNATURE_INVALID>TSA_CERT_MISSING
+typescript,790,10-12-timestamp,ConditionalExpression,false,same guard,timestamp-cert-missing,TSA_CERT_MISSING>TSA_SIGNATURE_INVALID
+typescript,791,10-12-timestamp,ConditionalExpression,false,same guard,timestamp-signature-invalid,TSA_SIGNATURE_INVALID>TSA_CERT_MISSING
+typescript,793,10-12-timestamp,BooleanLiteral,false,same guard,timestamp-signature-invalid,TSA_SIGNATURE_INVALID>TSA_CERT_MISSING
+typescript,795,10-12-timestamp,StringLiteral,true,no defined code,timestamp-cert-missing,TSA_CERT_MISSING>-
+typescript,794,10-12-timestamp,StringLiteral,true,no defined code,timestamp-signature-invalid,TSA_SIGNATURE_INVALID>-
+typescript,833,4-canonical-form,BooleanLiteral,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+typescript,836,4-canonical-form,EqualityOperator,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+typescript,834,4-canonical-form,ConditionalExpression,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+typescript,838,4-canonical-form,BlockStatement,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+typescript,839,4-canonical-form,AssignmentOperator,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH
+typescript,840,4-canonical-form,ConditionalExpression,false,later guard,canonical-mismatch,CANONICAL_FORM_MISMATCH>HASH_MISMATCH

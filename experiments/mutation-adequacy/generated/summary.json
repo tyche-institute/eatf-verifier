@@ -463,6 +463,83 @@
           "ZIP_ARCHIVE_LIMIT"
         ]
       }
+    },
+    "gap_directions": {
+      "python": {
+        "gap_mutants": 85,
+        "all": {
+          "earlier guard": 1,
+          "later guard": 5,
+          "no defined code": 56,
+          "same guard": 23
+        },
+        "without_code_literal_mutants": {
+          "earlier guard": 1,
+          "later guard": 5,
+          "no defined code": 11,
+          "same guard": 23
+        },
+        "operators_without_code_literal_mutants": {
+          "earlier guard": {
+            "name": 1
+          },
+          "later guard": {
+            "assignment": 2,
+            "augmented_assignment": 1,
+            "name": 1,
+            "swap_op": 1
+          },
+          "no defined code": {
+            "arg_removal": 11
+          },
+          "same guard": {
+            "arg_removal": 13,
+            "assignment": 1,
+            "if_exp": 3,
+            "keywords": 2,
+            "name": 3,
+            "swap_op": 1
+          }
+        }
+      },
+      "typescript": {
+        "gap_mutants": 82,
+        "all": {
+          "earlier guard": 1,
+          "later guard": 39,
+          "no defined code": 16,
+          "same guard": 26
+        },
+        "without_code_literal_mutants": {
+          "earlier guard": 1,
+          "later guard": 39,
+          "same guard": 26
+        },
+        "operators_without_code_literal_mutants": {
+          "earlier guard": {
+            "BooleanLiteral": 1
+          },
+          "later guard": {
+            "AssignmentOperator": 2,
+            "BlockStatement": 12,
+            "BooleanLiteral": 1,
+            "ConditionalExpression": 16,
+            "EqualityOperator": 1,
+            "LogicalOperator": 1,
+            "ObjectLiteral": 3,
+            "StringLiteral": 3
+          },
+          "same guard": {
+            "AssignmentOperator": 1,
+            "BlockStatement": 3,
+            "BooleanLiteral": 4,
+            "ConditionalExpression": 11,
+            "EqualityOperator": 3,
+            "LogicalOperator": 3,
+            "ObjectLiteral": 1
+          }
+        }
+      }
     }
   }
 }

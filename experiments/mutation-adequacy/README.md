@@ -49,6 +49,20 @@ behind each verdict.
 - **Suite-level score.** The suite-level mutation score does not separate the
   naive cases from the refined ones. The naive cases add kills of their own, and
   all of these lie in the region of the guard that shadows them.
+- **What the verdict-only gap consists of.** This analysis is exploratory and
+  was added after the results were seen (deviation 7). Leaving out the mutants
+  that only change a code literal leaves 40 Python and 66 TypeScript mutants
+  that O_C kills and O_V does not. For each, we recorded which guard now
+  decides the cases whose code changed:
+  - **A later guard:** 5 Python and 39 TypeScript mutants. Of the 39, 28 come
+    from Stryker's ConditionalExpression and BlockStatement operators.
+  - **The same guard, with another of its codes:** 23 Python and 26
+    TypeScript mutants.
+  - **No code the verifier defines:** 11 Python mutants, all from removing an
+    argument.
+  - **An earlier guard:** 1 mutant in each port. It makes the receipt's list of
+    timestamp witnesses mandatory. The two identical cases that empty the
+    timestamp are then stopped at `8a-overt-crosscheck` again.
 
 ## Run it
 
@@ -91,6 +105,9 @@ In `generated/`:
   kill under each oracle, and the cases credited with each kill.
 - `outcomes.jsonl` holds the observed state of every case under every executed
   mutant, and under both baselines.
+- `gap-directions.csv` has one row per mutant that O_C kills and O_V does not.
+  Each row gives the guard that decides instead, and the codes before and
+  after.
 - `environment.json` records the tool versions and the SHA-256 of each
   experiment source file.
 

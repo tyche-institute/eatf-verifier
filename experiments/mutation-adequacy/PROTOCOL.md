@@ -263,3 +263,14 @@ changes a definition, an oracle, a prediction or the mutant sets above.
    - One exploratory analysis was added that the list above does not contain:
      suite-level kills without the two naive cases, and without the two
      refined cases.
+7. **Analysis added after the results were seen.** A second exploratory
+   analysis was added once the numbers above were known, so it carries no
+   prediction. For every mutant killed under O_C but not under O_V,
+   `analyse.py` records which guard now decides each case whose code changed:
+   - a later guard;
+   - an earlier guard;
+   - the same guard, with another of its codes;
+   - none, when the code returned is not one the verifier defines.
+
+   The result is in `generated/gap-directions.csv` and under `exploratory` in
+   `generated/summary.json`. No other output changed.

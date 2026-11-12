@@ -436,6 +436,8 @@ def main() -> int:
 
     # tables -----------------------------------------------------------------------------------
     totals, region_rows, case_rows, operator_rows, suites = {}, [], [], [], {}
+    gap_rows, gap_directions = [], {}
+    guard_of = {code: g for g in GUARDS for code in REGIONS["guards"][g]["codes"]}
     for p in PORTS:
         rows, live = mutants[p], scored(mutants[p])
         totals[p] = {
@@ -488,6 +490,45 @@ def main() -> int:
             again = [score(r["record"], r["tool_status"], s[p], suite) for r in live]
             suites[p][name] = {o: sum(1 for x in again if x["killed"][o]) for o in ORACLES}
 
+        # exploratory, added after the results were seen (PROTOCOL.md, deviation 7):
+        # for every mutant killed under O_C but not under O_V, the guard that now
+        # decides each case whose code changed, against the guard that decided it
+        # on the unmutated program
+        for r in live:
+            if not (r["killed"]["O_C"] and not r["killed"]["O_V"]):
+                continue
+            if not (r["record"] and "outcomes" in r["record"]):
+                raise SystemExit(f"{r['id']}: a verdict-only gap mutant without a record")
+            changed = []
+            for c in CASE_IDS:
+                before, after = baseline[p][c], r["record"]["outcomes"][c]
+                if state(before) == state(after):
+                    continue
+                if after["exception"] is not None or after["valid"] != before["valid"]:
+                    raise SystemExit(f"{r['id']}: a verdict-only gap mutant changed a verdict or raised")
+                was, now = guard_of[before["code"]], guard_of.get(after["code"])
+                changed.append((c, before["code"], after["code"],
+                                "no defined code" if now is None
+                                else "later guard" if GUARDS.index(now) > GUARDS.index(was)
+                                else "earlier guard" if GUARDS.index(now) < GUARDS.index(was)
+                                else "same guard"))
+            directions = sorted({d for *_, d in changed})
+            gap_rows.append({"port": p, "id": r["id"], "region": r["region"], "operator": r["operator"],
+                             "code_literal": flag(r["code_literal"]),
+                             "direction": directions[0] if len(directions) == 1 else "mixed",
+                             "cases": " ".join(c for c, *_ in changed),
+                             "codes": " ".join(f"{a}>{b or '-'}" for _, a, b, _ in changed)})
+        mine = [g for g in gap_rows if g["port"] == p]
+        plain = [g for g in mine if g["code_literal"] == "false"]
+        gap_directions[p] = {
+            "gap_mutants": len(mine),
+            "all": dict(sorted(Counter(g["direction"] for g in mine).items())),
+            "without_code_literal_mutants": dict(sorted(Counter(g["direction"] for g in plain).items())),
+            "operators_without_code_literal_mutants": {
+                d: dict(sorted(Counter(g["operator"] for g in plain if g["direction"] == d).items()))
+                for d in sorted({g["direction"] for g in plain})},
+        }
+
     codes = {}
     for p, files in (("python", [f"lib-python/{f}" for f in PY_SUBJECT]),
                      ("typescript", ["lib/src/verifier.ts", "lib/src/overt.ts", "lib/src/tsa.ts"])):
@@ -522,6 +563,7 @@ def main() -> int:
     write_csv("regions.csv", region_rows)
     write_csv("cases.csv", case_rows)
     write_csv("operators.csv", operator_rows)
+    write_csv("gap-directions.csv", gap_rows)
     (GENERATED / "outcomes.jsonl").write_text("\n".join(outcome_lines) + "\n", encoding="utf-8")
 
     def run(cmd: list[str]) -> str:
@@ -551,7 +593,7 @@ def main() -> int:
         "totals": totals,
         "predictions": verdicts,
         "sentinels": sentinels,
-        "exploratory": {"suite_level_kills": suites, "codes": codes},
+        "exploratory": {"suite_level_kills": suites, "codes": codes, "gap_directions": gap_directions},
     }
     (GENERATED / "summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     freeze = WORK / "pip-freeze.txt"
@@ -620,6 +662,22 @@ def render(summary: dict, deletion_rows: list[dict], region_rows: list[dict], ca
     for p, rows in summary["exploratory"]["suite_level_kills"].items():
         for name, k in rows.items():
             out.append(f"| {p} | {name} | " + " | ".join(str(k[o]) for o in ORACLES) + " |")
+    gd = summary["exploratory"]["gap_directions"]
+    kinds = sorted({d for x in gd.values() for d in x["all"]})
+    out += ["", "## Exploratory: the guard that decides instead, for the verdict-only gap", "",
+            "Mutants killed under O_C but not under O_V. For each case whose code changed: a later "
+            "guard, an earlier guard or the same guard now decides it, or the code returned is none "
+            "of the codes the verifier defines. Rows: all gap mutants, then without code-literal "
+            "mutants. One row per mutant is in `gap-directions.csv`.", "",
+            "| Port | Mutants | " + " | ".join(kinds) + " |", "|---|---|" + "---|" * len(kinds)]
+    for p, x in gd.items():
+        for label, key in (("all", "all"), ("without code literals", "without_code_literal_mutants")):
+            out.append(f"| {p}, {label} | {sum(x[key].values())} | "
+                       + " | ".join(str(x[key].get(d, 0)) for d in kinds) + " |")
+    out += ["", "Operators of the gap mutants without code literals, by direction:", ""]
+    for p, x in gd.items():
+        for d, ops in x["operators_without_code_literal_mutants"].items():
+            out.append(f"- {p}, {d}: " + ", ".join(f"{op} {n}" for op, n in ops.items()))
     out += ["", "## Sentinels and prediction details", "", "```json",
             json.dumps({"sentinels": summary["sentinels"],
                         "P1": v["P1"], "P2": v["P2"], "P3": v["P3"], "P5": v["P5"]}, indent=2),
