@@ -1,0 +1,13 @@
+# Copied by run_experiment.py to work/py/pyproject.toml, next to a copy of
+# lib-python/eatf_verifier and tests/test_harness.py (= harness_py.py).
+# Only what the setup needs is set; mutation operators and timeouts are
+# mutmut 3.8.1 defaults.
+[tool.mutmut]
+source_paths = ["eatf_verifier"]
+only_mutate = [
+    "eatf_verifier/verifier.py",
+    "eatf_verifier/overt.py",
+    "eatf_verifier/tsa.py",
+]
+pytest_add_cli_args_test_selection = ["tests/"]
+use_git_change_detection = false

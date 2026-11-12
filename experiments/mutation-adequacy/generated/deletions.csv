@@ -1,0 +1,23 @@
+port,guard,statements_replaced,replaced_lines,detected_O_V,detected_O_V_fc,detected_O_C,detected_O_T,cases_changed,changed,raised
+python,1-zip,7,75 86 88 93 95 97 100,true,true,true,true,4,zip-not-an-archive zip-too-many-entries zip-unsafe-name zip-duplicate-entry,zip-not-an-archive
+python,2-required-entries,1,111,true,false,true,true,1,missing-canonical,missing-canonical
+python,3-metadata,2,122 129,false,false,true,true,2,metadata-invalid-json metadata-not-object,
+python,4-canonical-form,2,144 157,false,false,true,true,1,canonical-mismatch,
+python,5-digest,1,169,false,false,true,true,1,hash-mismatch,
+python,6-signer-pin,1,180,true,true,true,true,1,signer-pin-mismatch,
+python,7-rsa,3,193 208 215,true,true,true,true,1,rsa-signature-invalid,
+python,8a-overt-crosscheck,1,226,false,false,true,true,3,overt-content-hash-mismatch naive-remove-receipt-signature naive-empty-timestamp,
+python,8b-receipt-signature,5,242 253 267 276 286,true,true,true,true,3,overt-signature-missing overt-signature-invalid refined-remove-receipt-signature,
+python,9-pqc,3,304 323 332,true,true,true,true,1,pqc-half-pair,
+python,10-12-timestamp,3,347 367 385,true,true,true,true,5,timestamp-empty timestamp-imprint-mismatch timestamp-cert-missing timestamp-signature-invalid refined-empty-timestamp,
+typescript,1-zip,7,43 60 61 62 68 70 76,true,true,true,true,4,zip-not-an-archive zip-too-many-entries zip-unsafe-name zip-duplicate-entry,zip-not-an-archive
+typescript,2-required-entries,1,89,true,false,true,true,1,missing-canonical,missing-canonical
+typescript,3-metadata,2,102 111,false,false,true,true,2,metadata-invalid-json metadata-not-object,
+typescript,4-canonical-form,2,130 145,false,false,true,true,1,canonical-mismatch,
+typescript,5-digest,1,159,false,false,true,true,1,hash-mismatch,
+typescript,6-signer-pin,1,171,true,true,true,true,1,signer-pin-mismatch,
+typescript,7-rsa,3,187 203 211,true,true,true,true,1,rsa-signature-invalid,
+typescript,8a-overt-crosscheck,1,223,false,false,true,true,3,overt-content-hash-mismatch naive-remove-receipt-signature naive-empty-timestamp,
+typescript,8b-receipt-signature,5,240 252 264 274 285,true,true,true,true,3,overt-signature-missing overt-signature-invalid refined-remove-receipt-signature,
+typescript,9-pqc,3,304 321 332,true,true,true,true,1,pqc-half-pair,
+typescript,10-12-timestamp,3,351 371 385,true,true,true,true,5,timestamp-empty timestamp-imprint-mismatch timestamp-cert-missing timestamp-signature-invalid refined-empty-timestamp,

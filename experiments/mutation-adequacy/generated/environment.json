@@ -1,0 +1,26 @@
+{
+  "python": "3.12.3",
+  "node": "v22.22.3",
+  "typescript": "Version 5.9.3",
+  "mutmut": "3.8.1",
+  "stryker": "9.6.1",
+  "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+  "cpu_count": 24,
+  "subject_commit": "b8240fda1349b4823928cd19159acbd4e22121f7",
+  "experiment_sources_sha256": {
+    "PROTOCOL.md": "1561afd30ebd0d2bf9c039769ef024f156359ce08bc0f49cb440e2a5cf271a27",
+    "guard-regions.json": "160f1061b72e1c52277dc6398c6df97fdc3b7515a5fe7869459a4c914cd12101",
+    "cases.py": "b988b383ccc9a47dd0da99317627fe1462e55f541edff3249535eb2071d3c6ef",
+    "harness_py.py": "ec3e33bbbbc95e37f9288b370a3e030098eb43a70fd662869f63123294652fd8",
+    "harness-ts.mjs": "b374cf12ca7a8d8440639c359e2e4a28e660df09db63e297bc60bff008b9d34e",
+    "deletions.py": "97f2e13952c2fc534ba0a5ae28f88f945ab92a4e339781c152248debb97ec101",
+    "delete-ts.mjs": "99ee0718d805827798539c902e468a7978fcb41c5a3f07ca8df49ce8134579e4",
+    "run_experiment.py": "dfa267b3639f25b402fbf09937fe268cdc6589f3390bf262cd476572ebeea293",
+    "analyse.py": "6177e5fc76644f6d358978fab95e605101181768dcab5a89ab2415aede2556af",
+    "mutmut.toml": "aee2c02193f98f9df98c819a571de994cb744b5700f9446a41499505a5b7d09d",
+    "stryker/stryker.config.json": "3ef44a62ca1881cbc5f7e6f96bf2f694d3c585483a7d3b98162156b1d0538704",
+    "stryker/build-sandbox.sh": "ad5ff8a1dd2e4180c098eb11998a18a1354894295153b0593e887952c77e9e92",
+    "stryker/package.json": "e00fffa2b9b507843b695504fae0d312f6ef07ed747c5e394fdeb36e930cb6e2",
+    "stryker/package-lock.json": "1c68dd85de622ba41fbe3a712b7071ec363e9e55646cf4e457a313a032e28c10"
+  }
+}

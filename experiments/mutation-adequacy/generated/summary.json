@@ -1,0 +1,468 @@
+{
+  "schema": "urn:eatf:experiment:mutation-adequacy-results:1",
+  "subject_commit": "b8240fda1349b4823928cd19159acbd4e22121f7",
+  "suite": {
+    "named_cases": 25,
+    "distinct_invocations": 23,
+    "distinct_packages": 21,
+    "rejected_named": 23,
+    "rejected_distinct": 21
+  },
+  "totals": {
+    "python": {
+      "generated": 1149,
+      "excluded": 0,
+      "scored": 1149,
+      "tool_statuses": {
+        "killed": 500,
+        "no tests": 70,
+        "survived": 579
+      },
+      "bases": {
+        "not executed": 70,
+        "record": 1079
+      },
+      "code_literal_mutants": 74,
+      "malformed_result_records": 2,
+      "O_T_kills_only_through_an_uncredited_exception": 0,
+      "killed_O_V": 415,
+      "killed_O_V_fc": 355,
+      "killed_O_C": 500,
+      "killed_O_T": 496,
+      "survived_O_V": 734,
+      "survived_O_V_fc": 794,
+      "survived_O_C": 649,
+      "survived_O_T": 653,
+      "score_O_V": 0.3612,
+      "score_O_V_fc": 0.309,
+      "score_O_C": 0.4352,
+      "score_O_T": 0.4317
+    },
+    "typescript": {
+      "generated": 854,
+      "excluded": 0,
+      "scored": 854,
+      "tool_statuses": {
+        "Killed": 371,
+        "Survived": 481,
+        "Timeout": 2
+      },
+      "bases": {
+        "record": 852,
+        "tool timeout": 2
+      },
+      "code_literal_mutants": 26,
+      "malformed_result_records": 4,
+      "O_T_kills_only_through_an_uncredited_exception": 2,
+      "killed_O_V": 291,
+      "killed_O_V_fc": 277,
+      "killed_O_C": 373,
+      "killed_O_T": 356,
+      "survived_O_V": 563,
+      "survived_O_V_fc": 577,
+      "survived_O_C": 481,
+      "survived_O_T": 498,
+      "score_O_V": 0.3407,
+      "score_O_V_fc": 0.3244,
+      "score_O_C": 0.4368,
+      "score_O_T": 0.4169
+    }
+  },
+  "predictions": {
+    "P1": {
+      "held": true,
+      "per_port": {
+        "python": {
+          "O_V": 25,
+          "O_C": 25,
+          "O_T": 23,
+          "O_T_fails_on": [
+            "naive-empty-timestamp",
+            "naive-remove-receipt-signature"
+          ]
+        },
+        "typescript": {
+          "O_V": 25,
+          "O_C": 25,
+          "O_T": 23,
+          "O_T_fails_on": [
+            "naive-empty-timestamp",
+            "naive-remove-receipt-signature"
+          ]
+        }
+      },
+      "cross_port_agreement": "25/25"
+    },
+    "P2": {
+      "held": true,
+      "per_port": {
+        "python": {
+          "undetected_O_V": [
+            "3-metadata",
+            "4-canonical-form",
+            "5-digest",
+            "8a-overt-crosscheck"
+          ],
+          "undetected_O_V_fc": [
+            "2-required-entries",
+            "3-metadata",
+            "4-canonical-form",
+            "5-digest",
+            "8a-overt-crosscheck"
+          ],
+          "undetected_O_C": [],
+          "undetected_O_T": [],
+          "2_changes_only_through_exceptions": true,
+          "held": true
+        },
+        "typescript": {
+          "undetected_O_V": [
+            "3-metadata",
+            "4-canonical-form",
+            "5-digest",
+            "8a-overt-crosscheck"
+          ],
+          "undetected_O_V_fc": [
+            "2-required-entries",
+            "3-metadata",
+            "4-canonical-form",
+            "5-digest",
+            "8a-overt-crosscheck"
+          ],
+          "undetected_O_C": [],
+          "undetected_O_T": [],
+          "2_changes_only_through_exceptions": true,
+          "held": true
+        }
+      }
+    },
+    "P3": {
+      "held": true,
+      "per_port": {
+        "python": {
+          "rejected_cases_on_which_O_T_holds": 21,
+          "changed_by_deleting_own_target_guard": 21,
+          "not_changed": [],
+          "naive_changed_by_deleting_own_target_guard": {
+            "naive-remove-receipt-signature": false,
+            "naive-empty-timestamp": false
+          },
+          "naive_changed_by_deleting_8a": {
+            "naive-remove-receipt-signature": true,
+            "naive-empty-timestamp": true
+          },
+          "held": true
+        },
+        "typescript": {
+          "rejected_cases_on_which_O_T_holds": 21,
+          "changed_by_deleting_own_target_guard": 21,
+          "not_changed": [],
+          "naive_changed_by_deleting_own_target_guard": {
+            "naive-remove-receipt-signature": false,
+            "naive-empty-timestamp": false
+          },
+          "naive_changed_by_deleting_8a": {
+            "naive-remove-receipt-signature": true,
+            "naive-empty-timestamp": true
+          },
+          "held": true
+        }
+      }
+    },
+    "P4": {
+      "held": true,
+      "per_port": {
+        "python": {
+          "killed_O_C": 500,
+          "killed_O_V": 415,
+          "gap": 85,
+          "gap_share": 0.17,
+          "code_literal_mutants": 74,
+          "without_code_literal_mutants": {
+            "killed_O_C": 455,
+            "killed_O_V": 415,
+            "gap": 40,
+            "gap_share": 0.0879
+          },
+          "held": true
+        },
+        "typescript": {
+          "killed_O_C": 373,
+          "killed_O_V": 291,
+          "gap": 82,
+          "gap_share": 0.2198,
+          "code_literal_mutants": 26,
+          "without_code_literal_mutants": {
+            "killed_O_C": 357,
+            "killed_O_V": 291,
+            "gap": 66,
+            "gap_share": 0.1849
+          },
+          "held": true
+        }
+      }
+    },
+    "P5": {
+      "held": true,
+      "per_port": {
+        "python": {
+          "a_naive_kills_in_own_target_region": {
+            "naive-remove-receipt-signature": [],
+            "naive-empty-timestamp": []
+          },
+          "b_O_C_kills_in_own_target_region": {
+            "zip-not-an-archive": 8,
+            "zip-too-many-entries": 8,
+            "zip-unsafe-name": 10,
+            "zip-duplicate-entry": 9,
+            "missing-canonical": 8,
+            "metadata-invalid-json": 9,
+            "metadata-not-object": 14,
+            "canonical-mismatch": 36,
+            "hash-mismatch": 16,
+            "signer-pin-mismatch": 18,
+            "rsa-signature-invalid": 31,
+            "overt-content-hash-mismatch": 18,
+            "overt-signature-missing": 16,
+            "overt-signature-invalid": 37,
+            "pqc-half-pair": 11,
+            "timestamp-empty": 22,
+            "timestamp-imprint-mismatch": 87,
+            "timestamp-cert-missing": 89,
+            "timestamp-signature-invalid": 125,
+            "refined-remove-receipt-signature": 16,
+            "refined-empty-timestamp": 22
+          },
+          "b_cases_without_any": [],
+          "held": true
+        },
+        "typescript": {
+          "a_naive_kills_in_own_target_region": {
+            "naive-remove-receipt-signature": [],
+            "naive-empty-timestamp": []
+          },
+          "b_O_C_kills_in_own_target_region": {
+            "zip-not-an-archive": 5,
+            "zip-too-many-entries": 11,
+            "zip-unsafe-name": 14,
+            "zip-duplicate-entry": 10,
+            "missing-canonical": 5,
+            "metadata-invalid-json": 3,
+            "metadata-not-object": 5,
+            "canonical-mismatch": 16,
+            "hash-mismatch": 4,
+            "signer-pin-mismatch": 14,
+            "rsa-signature-invalid": 5,
+            "overt-content-hash-mismatch": 13,
+            "overt-signature-missing": 13,
+            "overt-signature-invalid": 17,
+            "pqc-half-pair": 5,
+            "timestamp-empty": 7,
+            "timestamp-imprint-mismatch": 58,
+            "timestamp-cert-missing": 66,
+            "timestamp-signature-invalid": 70,
+            "refined-remove-receipt-signature": 13,
+            "refined-empty-timestamp": 7
+          },
+          "b_cases_without_any": [],
+          "held": true
+        }
+      }
+    }
+  },
+  "sentinels": {
+    "1_baseline_matches_deposit": "checked by run_experiment.py baseline",
+    "deletion_control_equals_baseline": {
+      "python": true,
+      "typescript": true
+    },
+    "2_tool_status_equals_O_C": {
+      "python": {
+        "tool_status_differs_from_O_C": [],
+        "killed_by_tool_without_record": [],
+        "survived_without_record": []
+      },
+      "typescript": {
+        "tool_status_differs_from_O_C": [],
+        "killed_by_tool_without_record": [],
+        "survived_without_record": []
+      }
+    },
+    "3_subsets": {
+      "python": {
+        "O_V_in_O_C": true,
+        "O_T_in_O_C": true
+      },
+      "typescript": {
+        "O_V_in_O_C": true,
+        "O_T_in_O_C": true
+      }
+    }
+  },
+  "exploratory": {
+    "suite_level_kills": {
+      "python": {
+        "all 25": {
+          "O_V": 415,
+          "O_V_fc": 355,
+          "O_C": 500,
+          "O_T": 496
+        },
+        "without the 2 naive": {
+          "O_V": 415,
+          "O_V_fc": 355,
+          "O_C": 498,
+          "O_T": 496
+        },
+        "without the 2 refined": {
+          "O_V": 415,
+          "O_V_fc": 355,
+          "O_C": 500,
+          "O_T": 496
+        }
+      },
+      "typescript": {
+        "all 25": {
+          "O_V": 291,
+          "O_V_fc": 277,
+          "O_C": 373,
+          "O_T": 356
+        },
+        "without the 2 naive": {
+          "O_V": 289,
+          "O_V_fc": 277,
+          "O_C": 356,
+          "O_T": 354
+        },
+        "without the 2 refined": {
+          "O_V": 291,
+          "O_V_fc": 277,
+          "O_C": 373,
+          "O_T": 356
+        }
+      }
+    },
+    "codes": {
+      "python": {
+        "defined": [
+          "CANONICAL_FORM_MISMATCH",
+          "HASH_MISMATCH",
+          "METADATA_INVALID_JSON",
+          "METADATA_NOT_CANONICALIZABLE",
+          "METADATA_NOT_OBJECT",
+          "OVERT_INVALID",
+          "OVERT_SIGNATURE_ERROR",
+          "OVERT_SIGNATURE_INVALID",
+          "OVERT_SIGNATURE_MARKER_INVALID",
+          "OVERT_SIGNATURE_REQUIRED",
+          "OVERT_SIGNATURE_UNMARKED",
+          "PQC_PAIR_INCOMPLETE",
+          "PQC_SIGNATURE_INVALID",
+          "PQC_SUPPORT_UNAVAILABLE",
+          "REQUIRED_ENTRY_MISSING",
+          "RSA_SIGNATURE_ENCODING",
+          "RSA_SIGNATURE_INVALID",
+          "RSA_VERIFY_ERROR",
+          "SIGNER_NOT_TRUSTED",
+          "TSA_CERT_MISSING",
+          "TSA_IMPRINT_MISMATCH",
+          "TSA_IMPRINT_UNVERIFIABLE",
+          "TSA_MISSING_OR_INVALID",
+          "TSA_SIGNATURE_INVALID",
+          "ZIP_ARCHIVE_LIMIT",
+          "ZIP_INVALID_OR_UNSAFE"
+        ],
+        "reached": [
+          "CANONICAL_FORM_MISMATCH",
+          "HASH_MISMATCH",
+          "METADATA_INVALID_JSON",
+          "METADATA_NOT_OBJECT",
+          "OVERT_INVALID",
+          "OVERT_SIGNATURE_INVALID",
+          "OVERT_SIGNATURE_REQUIRED",
+          "PQC_PAIR_INCOMPLETE",
+          "REQUIRED_ENTRY_MISSING",
+          "RSA_SIGNATURE_INVALID",
+          "SIGNER_NOT_TRUSTED",
+          "TSA_CERT_MISSING",
+          "TSA_IMPRINT_MISMATCH",
+          "TSA_MISSING_OR_INVALID",
+          "TSA_SIGNATURE_INVALID",
+          "ZIP_INVALID_OR_UNSAFE"
+        ],
+        "never_reached": [
+          "METADATA_NOT_CANONICALIZABLE",
+          "OVERT_SIGNATURE_ERROR",
+          "OVERT_SIGNATURE_MARKER_INVALID",
+          "OVERT_SIGNATURE_UNMARKED",
+          "PQC_SIGNATURE_INVALID",
+          "PQC_SUPPORT_UNAVAILABLE",
+          "RSA_SIGNATURE_ENCODING",
+          "RSA_VERIFY_ERROR",
+          "TSA_IMPRINT_UNVERIFIABLE",
+          "ZIP_ARCHIVE_LIMIT"
+        ]
+      },
+      "typescript": {
+        "defined": [
+          "CANONICAL_FORM_MISMATCH",
+          "HASH_MISMATCH",
+          "METADATA_INVALID_JSON",
+          "METADATA_NOT_CANONICALIZABLE",
+          "METADATA_NOT_OBJECT",
+          "OVERT_INVALID",
+          "OVERT_SIGNATURE_ERROR",
+          "OVERT_SIGNATURE_INVALID",
+          "OVERT_SIGNATURE_MARKER_INVALID",
+          "OVERT_SIGNATURE_REQUIRED",
+          "OVERT_SIGNATURE_UNMARKED",
+          "PQC_PAIR_INCOMPLETE",
+          "PQC_SIGNATURE_INVALID",
+          "PQC_VERIFY_ERROR",
+          "REQUIRED_ENTRY_MISSING",
+          "RSA_SIGNATURE_ENCODING",
+          "RSA_SIGNATURE_INVALID",
+          "RSA_VERIFY_ERROR",
+          "SIGNER_NOT_TRUSTED",
+          "TSA_CERT_MISSING",
+          "TSA_IMPRINT_MISMATCH",
+          "TSA_IMPRINT_UNVERIFIABLE",
+          "TSA_MISSING_OR_INVALID",
+          "TSA_SIGNATURE_INVALID",
+          "ZIP_ARCHIVE_LIMIT",
+          "ZIP_INVALID_OR_UNSAFE"
+        ],
+        "reached": [
+          "CANONICAL_FORM_MISMATCH",
+          "HASH_MISMATCH",
+          "METADATA_INVALID_JSON",
+          "METADATA_NOT_OBJECT",
+          "OVERT_INVALID",
+          "OVERT_SIGNATURE_INVALID",
+          "OVERT_SIGNATURE_REQUIRED",
+          "PQC_PAIR_INCOMPLETE",
+          "REQUIRED_ENTRY_MISSING",
+          "RSA_SIGNATURE_INVALID",
+          "SIGNER_NOT_TRUSTED",
+          "TSA_CERT_MISSING",
+          "TSA_IMPRINT_MISMATCH",
+          "TSA_MISSING_OR_INVALID",
+          "TSA_SIGNATURE_INVALID",
+          "ZIP_INVALID_OR_UNSAFE"
+        ],
+        "never_reached": [
+          "METADATA_NOT_CANONICALIZABLE",
+          "OVERT_SIGNATURE_ERROR",
+          "OVERT_SIGNATURE_MARKER_INVALID",
+          "OVERT_SIGNATURE_UNMARKED",
+          "PQC_SIGNATURE_INVALID",
+          "PQC_VERIFY_ERROR",
+          "RSA_SIGNATURE_ENCODING",
+          "RSA_VERIFY_ERROR",
+          "TSA_IMPRINT_UNVERIFIABLE",
+          "ZIP_ARCHIVE_LIMIT"
+        ]
+      }
+    }
+  }
+}

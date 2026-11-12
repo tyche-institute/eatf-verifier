@@ -1,0 +1,29 @@
+{
+  "testRunner": "command",
+  "commandRunner": {
+    "command": "node experiments/mutation-adequacy/harness-ts.mjs"
+  },
+  "buildCommand": "sh experiments/mutation-adequacy/stryker/build-sandbox.sh",
+  "symlinkNodeModules": false,
+  "coverageAnalysis": "off",
+  "mutate": [
+    "lib/src/verifier.ts",
+    "lib/src/overt.ts",
+    "lib/src/tsa.ts"
+  ],
+  "ignorePatterns": [
+    "experiments/mutation-adequacy/work",
+    "experiments/mutation-adequacy/generated"
+  ],
+  "tempDirName": "experiments/mutation-adequacy/work/stryker-tmp",
+  "reporters": [
+    "json",
+    "clear-text",
+    "progress"
+  ],
+  "jsonReporter": {
+    "fileName": "experiments/mutation-adequacy/work/stryker/mutation.json"
+  },
+  "concurrency": 8,
+  "cleanTempDir": true
+}

@@ -220,3 +220,46 @@ definition above.
 ## Deviations
 
 None recorded at the time of fixing.
+
+The entries below were added on 2026-11-12, during and after execution. None
+changes a definition, an oracle, a prediction or the mutant sets above.
+
+1. **Python environment, before any harness ran.** The first virtual
+   environment could see the system site packages. It was deleted and rebuilt
+   without them, with the versions now in `work/pip-freeze.txt`.
+2. **Malformed results, before any harness ran.** This clarifies
+   "Observation". Both harnesses record a result as the exception
+   `MalformedResult(...)` when its verdict is not a boolean or its code is
+   neither a string nor absent. Without this, the two ports would have
+   recorded such results differently. It affects 2 Python and 4 TypeScript
+   mutants.
+3. **Deletion control, before the deletion stage ran.** The runner also puts
+   an unmodified copy of each port through the same copy, compile and harness
+   steps as the deletions. In both ports the control's observations equal the
+   baseline.
+4. **Stryker build, first Stryker attempt.** StrykerJS 9.6.1 runs the build
+   command before it links `node_modules` into its sandbox, so the first
+   attempt stopped at the build (`tsc: not found`, exit 127) before any mutant
+   ran. The build command is now `stryker/build-sandbox.sh`, which links the
+   original checkout's `node_modules` into the sandbox and then builds, and
+   `symlinkNodeModules` is false. The reported run is the second attempt.
+5. **Run settings the protocol does not name.**
+   - mutmut ran with `--max-children 10`, and its configuration names the
+     three files through `source_paths` and `only_mutate`.
+   - Stryker ran with concurrency 8 and its sandbox under `work/stryker-tmp`.
+     `work/` and `generated/` were excluded from the sandbox copy, and the JSON
+     report went to `work/stryker/mutation.json`.
+   - None of these settings changes the mutant set or the operators.
+6. **Analysis, written after the runs.**
+   - The two clauses of the kill rule are read together. A mutant that raises
+     on any case is killed under O_V, O_C and O_T, but the raising case is
+     credited only if it is in S_O. Under O_T this matters for 2 TypeScript
+     mutants, which raise only on `naive-remove-receipt-signature`.
+   - mutmut does not record operator names. `analyse.py` re-creates each
+     mutant with mutmut's own generator, checks it against the mutant mutmut
+     wrote (all 1149 match), and labels it with the operator that produced it.
+   - Unique kills are reported twice: per named case, and with named cases
+     that share a (package, invocation) pair merged.
+   - One exploratory analysis was added that the list above does not contain:
+     suite-level kills without the two naive cases, and without the two
+     refined cases.
