@@ -48,7 +48,11 @@ details behind each verdict.
   tests' own assertions hold on every case. O_T fails on 1 of the 81 cases
   with a target: the test of a deeply nested header was labelled with the JSON
   check, but on Python 3.12.3 `json.loads` parses that header, and the check
-  that the header is a JSON object rejects it.
+  that the header is a JSON object rejects it. Upstream commit `0657369` added
+  the test together with the JSON check's handling of `RecursionError`. On
+  Python 3.9 to 3.11 the test reaches that check, and with the commit's
+  change reverted its expectation fails: `version-check/`, added after the
+  results.
 - **Check deletions (P2), held.** 41 of the 44 checks are reached by some case.
   Of those 41 deletions, 5 go undetected under O_V, 21 under O_V^fc, 3 under
   O_C, 2 under O_T and none under O_S.
@@ -106,6 +110,12 @@ work/venv/bin/python -I analyse_s2.py
   of the subject mutants on an Intel Core i9-12900K (16 cores, 24 logical
   CPUs), 10 runs at a time.
 - `analyse_s2.py` exits nonzero if a sentinel fails.
+- `analyse_s2.py` writes the same values on every run, but `-I` leaves string
+  hashing randomized, so the order of keys within the `O_C - O_V` and
+  `O_T - O_C` entries of `moves` in `summary.json` and `SUMMARY.md`, and with
+  it two lines of `SHA256SUMS`, can differ from the deposited files. Of two
+  re-runs on 12 November 2026, one reproduced `generated/` byte for byte; the
+  other differed in that order only.
 
 ## Files
 
@@ -119,6 +129,7 @@ work/venv/bin/python -I analyse_s2.py
 | `run_s2.py` | Runs the stages in the protocol's order |
 | `analyse_s2.py` | Scores every mutant and deletion under the five oracles and checks the predictions |
 | `generated/` | Results: `SUMMARY.md`, `summary.json`, the CSV tables, `outcomes.jsonl`, `environment.json`, `pip-freeze.txt`, `SHA256SUMS` |
+| `version-check/` | Added after the results: where the nested-header test is rejected on Python 3.9 to 3.12 |
 
 In `generated/`:
 
@@ -144,8 +155,9 @@ In `generated/`:
   scores are low for every oracle. The differences between oracles are the
   quantity of interest.
 - **Targets.** The target of each block was assigned by one author from the
-  test text alone, before any observation. 10 blocks have none, and the
-  label of 1 case proved wrong on the Python version used.
+  test text alone, before any observation. 10 blocks have none, and 1 case
+  does not reach its target on the Python version used; on Python 3.9 to 3.11
+  it does (`version-check/`).
 - **Scope.** One library, its own tests, two of its files, and one Python
-  version. The suite was written by PyJWT's developers, not for this
-  experiment.
+  version; `version-check/` runs one test's decode on three more. The suite
+  was written by PyJWT's developers, not for this experiment.
