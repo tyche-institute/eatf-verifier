@@ -201,6 +201,19 @@ def test_prepare_pack(synthetic_pack):
     assert "src/syn/core.py: changed" in problems and "extra.txt: present and not listed" in problems
 
 
+def test_assertion_texts_name_the_operation():
+    """`excinfo.match(pattern)` searches the pattern in the text of the exception."""
+    b = {"match": "bad .*", "post": [["match", "Token expired"], ["str_eq", "x"], ["str_in", "y"],
+                                     ["attr_eq", "code", 3]]}
+    assert prepare.assertion_texts(b) == [
+        "match: bad .*",
+        "after the block: re.search 'Token expired' in str(exception)",
+        "after the block: str(exception) == 'x'",
+        "after the block: 'y' in str(exception)",
+        "after the block: exception.code == 3",
+    ]
+
+
 def test_prepare_reads_a_directory_of_a_repository(tmp_path):
     """The object store is read with git itself, for a package that lies in a
     directory of its repository (`repository_directory`): paths are relative to

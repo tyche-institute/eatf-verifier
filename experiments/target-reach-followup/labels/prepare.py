@@ -124,7 +124,7 @@ def assertion_texts(b: dict) -> list[str]:
         elif kind == "attr_eq":
             out.append(f"after the block: exception.{p[1]} == {p[2]!r}")
         elif kind == "match":
-            out.append(f"after the block: re.match {p[1]!r} on the exception")
+            out.append(f"after the block: re.search {p[1]!r} in str(exception)")
         elif kind == "unparsed":
             out.append(f"after the block: {p[1]}")
         else:
