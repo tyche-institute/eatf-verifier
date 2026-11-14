@@ -1704,17 +1704,17 @@
   "textual==8.2.8",
   "typing_extensions==4.16.0"
  ],
- "plugin_sha256": "ed4993c30d90e1d45e1bd2d022d45f4e7fb19e89cb7c63ff1e4769f49ab594d0",
+ "plugin_sha256": "0a29e451a3b1fa5bc9cbbbf42bffe9c464a68aa865ded5270d8a5228be5d10d7",
  "seconds": {
   "with_plugin": [
-   6.034,
-   6.092,
-   6.016
+   6.029,
+   5.998,
+   6.001
   ],
   "without_plugin": [
-   5.743,
-   5.765,
-   5.74
+   5.727,
+   5.761,
+   5.753
   ]
  },
  "sentinels": [
@@ -1732,6 +1732,11 @@
   },
   {
    "name": "T-map: every started code of a subject file is a function of checks.json or is listed under unmapped with its reason",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "T-files: no code of a subject file ran under a file name that the plugin did not hold when it started",
    "pass": true
   },
   {

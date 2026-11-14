@@ -1,0 +1,101 @@
+check,file,role,function,class,template,in_handler,reachable,decides,cases_decided,blocks_targeting,cases_fired
+auth._agent_identity_utils.parse_certificate#1,google/auth/_agent_identity_utils.py,subject,parse_certificate,ValueError,Certificate bytes cannot be empty or None.,no,yes,no,0,0,0
+auth._agent_identity_utils.parse_certificate#2,google/auth/_agent_identity_utils.py,subject,parse_certificate,ValueError,Malformed or truncated PEM certificate chain.,no,yes,no,0,0,0
+auth._agent_identity_utils.get_cached_cert_fingerprint#1,google/auth/_agent_identity_utils.py,subject,get_cached_cert_fingerprint,ValueError,mTLS connection is not configured.,no,yes,no,0,0,0
+auth._exponential_backoff._BaseExponentialBackoff.__init__#1,google/auth/_exponential_backoff.py,subject,_BaseExponentialBackoff.__init__,InvalidValue,total_attempts must be greater than or equal to 1 but was {*},no,no,no,0,0,0
+auth._helpers.copy_docstring.decorator#1,google/auth/_helpers.py,subject,copy_docstring.decorator,InvalidOperation,Method already has a docstring.,no,no,no,0,0,0
+auth._helpers.to_bytes#1,google/auth/_helpers.py,subject,to_bytes,InvalidValue,{*} could not be converted to bytes,no,yes,no,0,0,0
+auth._helpers.from_bytes#1,google/auth/_helpers.py,subject,from_bytes,InvalidValue,{*} could not be converted to unicode,no,yes,no,0,0,0
+auth._oauth2client.convert#1,google/auth/_oauth2client.py,subject,convert,ValueError,{*},yes,no,no,0,0,0
+auth._refresh_worker.RefreshThreadManager.start_refresh#1,google/auth/_refresh_worker.py,subject,RefreshThreadManager.start_refresh,InvalidValue,Unable to start refresh. cred and request must be valid and instantiated objects.,no,yes,no,0,0,0
+auth._service_account_info.from_dict#1,google/auth/_service_account_info.py,subject,from_dict,MalformedError,"Service account info was not in the expected format, missing fields {*}.",no,no,no,0,0,0
+auth.aio.credentials.StaticCredentials.refresh#1,google/auth/aio/credentials.py,subject,StaticCredentials.refresh,InvalidOperation,Static credentials cannot be refreshed.,no,yes,no,0,0,0
+auth.aio.credentials.AnonymousCredentials.refresh#1,google/auth/aio/credentials.py,subject,AnonymousCredentials.refresh,InvalidOperation,Anonymous credentials cannot be refreshed.,no,yes,no,0,0,0
+auth.aio.credentials.AnonymousCredentials.apply#1,google/auth/aio/credentials.py,subject,AnonymousCredentials.apply,InvalidValue,Anonymous credentials don't support tokens.,no,yes,no,0,0,0
+auth.api_key.Credentials.__init__#1,google/auth/api_key.py,subject,Credentials.__init__,InvalidValue,Token must be a non-empty API key string,no,no,no,0,0,0
+auth.aws.RequestSigner.get_request_options#1,google/auth/aws.py,subject,RequestSigner.get_request_options,InvalidResource,Invalid AWS service URL,no,yes,no,0,0,0
+auth.aws.Credentials.__init__#1,google/auth/aws.py,subject,Credentials.__init__,InvalidValue,A valid credential source or AWS security credentials supplier must be provided.,no,no,no,0,0,0
+auth.aws.Credentials.__init__#2,google/auth/aws.py,subject,Credentials.__init__,InvalidValue,AWS credential cannot have both a credential source and an AWS security credentials supplier.,no,no,no,0,0,0
+auth.aws.Credentials.__init__#3,google/auth/aws.py,subject,Credentials.__init__,InvalidResource,No valid AWS 'credential_source' provided,no,no,no,0,0,0
+auth.aws.Credentials.__init__#4,google/auth/aws.py,subject,Credentials.__init__,InvalidValue,aws version '{*}' is not supported in the current build.,no,no,no,0,0,0
+auth.compute_engine._metadata.get#1,google/auth/compute_engine/_metadata.py,subject,get,ValueError,Request body cannot be specified with GET method.,no,yes,no,0,0,0
+auth.compute_engine._mtls._parse_mds_mode#1,google/auth/compute_engine/_mtls.py,subject,_parse_mds_mode,ValueError,"Invalid value for GCE_METADATA_MTLS_MODE. Must be one of 'strict', 'none', or 'default'.",yes,yes,no,0,0,0
+auth.compute_engine.credentials.IDTokenCredentials.__init__#1,google/auth/compute_engine/credentials.py,subject,IDTokenCredentials.__init__,ValueError,"If use_metadata_identity_endpoint is set, token_uri, additional_claims, service_account_email, signer arguments must not be set",no,no,no,0,0,0
+auth.compute_engine.credentials.IDTokenCredentials.__init__#2,google/auth/compute_engine/credentials.py,subject,IDTokenCredentials.__init__,ValueError,"If use_metadata_identity_endpoint is False, bind_id_token must not be set",no,no,no,0,0,0
+auth.compute_engine.credentials.IDTokenCredentials.with_token_uri#1,google/auth/compute_engine/credentials.py,subject,IDTokenCredentials.with_token_uri,ValueError,"If use_metadata_identity_endpoint is set, token_uri must not be set",no,no,no,0,0,0
+auth.compute_engine.credentials.IDTokenCredentials.sign_bytes#1,google/auth/compute_engine/credentials.py,subject,IDTokenCredentials.sign_bytes,InvalidOperation,Signer is not available if metadata identity endpoint is used,no,no,no,0,0,0
+auth.credentials.AnonymousCredentials.refresh#1,google/auth/credentials.py,subject,AnonymousCredentials.refresh,InvalidOperation,Anonymous credentials cannot be refreshed.,no,yes,no,0,0,0
+auth.credentials.AnonymousCredentials.apply#1,google/auth/credentials.py,subject,AnonymousCredentials.apply,InvalidValue,Anonymous credentials don't support tokens.,no,yes,no,0,0,0
+auth.crypt._python_rsa.RSAVerifier.from_string#1,google/auth/crypt/_python_rsa.py,subject,RSAVerifier.from_string,InvalidValue,Unused bytes,no,yes,no,0,0,0
+auth.crypt._python_rsa.RSASigner.from_string#1,google/auth/crypt/_python_rsa.py,subject,RSASigner.from_string,InvalidValue,Unused bytes,no,yes,no,0,0,0
+auth.crypt._python_rsa.RSASigner.from_string#2,google/auth/crypt/_python_rsa.py,subject,RSASigner.from_string,MalformedError,No key could be detected.,no,yes,no,0,1,0
+auth.crypt.base.FromServiceAccountMixin.from_service_account_info#1,google/auth/crypt/base.py,subject,FromServiceAccountMixin.from_service_account_info,MalformedError,The private_key field was not found in the service account info.,no,no,no,0,0,0
+auth.crypt.rsa.RSAVerifier.__init__#1,google/auth/crypt/rsa.py,subject,RSAVerifier.__init__,ValueError,unrecognized public key type: {*},no,no,no,0,0,0
+auth.crypt.rsa.RSASigner.__init__#1,google/auth/crypt/rsa.py,subject,RSASigner.__init__,ValueError,unrecognized private key type: {*},no,no,no,0,0,0
+auth.downscoped.CredentialAccessBoundary.rules~2#1,google/auth/downscoped.py,subject,CredentialAccessBoundary.rules~2,InvalidValue,Credential access boundary rules can have a maximum of {*} rules.,no,yes,no,0,0,0
+auth.downscoped.CredentialAccessBoundary.add_rule#1,google/auth/downscoped.py,subject,CredentialAccessBoundary.add_rule,InvalidValue,Credential access boundary rules can have a maximum of {*} rules.,no,no,no,0,0,0
+auth.downscoped.AccessBoundaryRule.available_permissions~2#1,google/auth/downscoped.py,subject,AccessBoundaryRule.available_permissions~2,InvalidValue,available_permissions must be prefixed with 'inRole:'.,no,yes,no,0,0,0
+auth.external_account.Credentials.__init__#1,google/auth/external_account.py,subject,Credentials.__init__,InvalidValue,workforce_pool_user_project should not be set for non-workforce pool credentials,no,no,no,0,0,0
+auth.external_account_authorized_user.Credentials.__init__#1,google/auth/external_account_authorized_user.py,subject,Credentials.__init__,InvalidOperation,"Token should be created with fields to make it valid (`token` and `expiry`), or fields to allow it to refresh (`refresh_token`, `token_url`, `client_id`, `client_secret`).",no,no,no,0,0,0
+auth.identity_pool.Credentials.__init__#1,google/auth/identity_pool.py,subject,Credentials.__init__,InvalidValue,A valid credential source or a subject token supplier must be provided.,no,no,no,0,0,0
+auth.identity_pool.Credentials.__init__#2,google/auth/identity_pool.py,subject,Credentials.__init__,InvalidValue,Identity pool credential cannot have both a credential source and a subject token supplier.,no,no,no,0,0,0
+auth.identity_pool.Credentials.__init__#3,google/auth/identity_pool.py,subject,Credentials.__init__,MalformedError,Invalid credential_source. The credential_source is not a dict.,no,no,no,0,0,0
+auth.identity_pool.Credentials.__init__#4,google/auth/identity_pool.py,subject,Credentials.__init__,MalformedError,Invalid Identity Pool credential_source field 'environment_id',no,no,no,0,0,0
+auth.identity_pool.Credentials._validate_certificate_config#1,google/auth/identity_pool.py,subject,Credentials._validate_certificate_config,MalformedError,"Invalid certificate configuration, certificate_config_location cannot be specified when use_default_certificate_config = true.",no,no,no,0,0,0
+auth.identity_pool.Credentials._validate_certificate_config#2,google/auth/identity_pool.py,subject,Credentials._validate_certificate_config,MalformedError,"Invalid certificate configuration, use_default_certificate_config should be true if no certificate_config_location is provided.",no,no,no,0,0,0
+auth.identity_pool.Credentials._validate_file_or_url_config#1,google/auth/identity_pool.py,subject,Credentials._validate_file_or_url_config,MalformedError,Invalid credential_source format '{*}',no,no,no,0,0,0
+auth.identity_pool.Credentials._validate_file_or_url_config#2,google/auth/identity_pool.py,subject,Credentials._validate_file_or_url_config,MalformedError,Missing subject_token_field_name for JSON credential_source format,no,no,no,0,0,0
+auth.identity_pool.Credentials._validate_single_source#1,google/auth/identity_pool.py,subject,Credentials._validate_single_source,MalformedError,"Ambiguous credential_source. 'file', 'url', and 'certificate' are mutually exclusive..",no,no,no,0,0,0
+auth.identity_pool.Credentials._validate_single_source#2,google/auth/identity_pool.py,subject,Credentials._validate_single_source,MalformedError,"Missing credential_source. A 'file', 'url', or 'certificate' must be provided.",no,no,no,0,0,0
+auth.impersonated_credentials.Credentials.from_impersonated_service_account_info#1,google/auth/impersonated_credentials.py,subject,Credentials.from_impersonated_service_account_info,InvalidValue,Cannot extract target principal from {*},no,no,no,0,0,0
+auth.jwt._decode_jwt_segment#1,google/auth/jwt.py,subject,_decode_jwt_segment,MalformedError,Can't parse segment: {*},yes,yes,yes,1,0,1
+auth.jwt._unverified_decode#1,google/auth/jwt.py,subject,_unverified_decode,MalformedError,Wrong number of segments in token: {*},no,yes,yes,1,1,1
+auth.jwt._unverified_decode#2,google/auth/jwt.py,subject,_unverified_decode,MalformedError,Header segment should be a JSON object: {*},no,yes,yes,1,1,1
+auth.jwt._unverified_decode#3,google/auth/jwt.py,subject,_unverified_decode,MalformedError,Payload segment should be a JSON object: {*},no,yes,yes,1,1,1
+auth.jwt._verify_iat_and_exp#1,google/auth/jwt.py,subject,_verify_iat_and_exp,MalformedError,Token does not contain required claim {*},no,yes,yes,1,0,1
+auth.jwt._verify_iat_and_exp#2,google/auth/jwt.py,subject,_verify_iat_and_exp,InvalidValue,"Token used too early, {*} < {*}. Check that your computer's clock is set correctly.",no,yes,yes,1,1,1
+auth.jwt._verify_iat_and_exp#3,google/auth/jwt.py,subject,_verify_iat_and_exp,InvalidValue,"Token expired, {*} < {*}",no,yes,yes,1,1,1
+auth.jwt.decode#1,google/auth/jwt.py,subject,decode,InvalidValue,The key algorithm {*} requires the cryptography package to be installed.,no,yes,yes,1,0,1
+auth.jwt.decode#2,google/auth/jwt.py,subject,decode,InvalidValue,Unsupported signature algorithm {*},no,yes,yes,2,0,2
+auth.jwt.decode#3,google/auth/jwt.py,subject,decode,MalformedError,Certificate for key id {*} not found.,yes,yes,yes,2,0,2
+auth.jwt.decode#4,google/auth/jwt.py,subject,decode,InvalidValue,Certificate key type does not match signature algorithm {*}.,yes,yes,yes,6,1,6
+auth.jwt.decode#5,google/auth/jwt.py,subject,decode,MalformedError,Could not verify token signature.,no,yes,yes,2,1,2
+auth.jwt.decode#6,google/auth/jwt.py,subject,decode,InvalidValue,"Token has wrong audience {*}, expected one of {*}",no,yes,yes,2,2,2
+auth.pluggable.Credentials.__init__#1,google/auth/pluggable.py,subject,Credentials.__init__,MalformedError,Missing credential_source. The credential_source is not a dict.,no,no,no,0,0,0
+auth.pluggable.Credentials.__init__#2,google/auth/pluggable.py,subject,Credentials.__init__,MalformedError,Missing credential_source. An 'executable' must be provided.,no,no,no,0,0,0
+auth.pluggable.Credentials.__init__#3,google/auth/pluggable.py,subject,Credentials.__init__,MalformedError,Missing command field. Executable command must be provided.,no,no,no,0,0,0
+auth.pluggable.Credentials.__init__#4,google/auth/pluggable.py,subject,Credentials.__init__,InvalidValue,Timeout must be between 5 and 120 seconds.,no,no,no,0,0,0
+auth.pluggable.Credentials.__init__#5,google/auth/pluggable.py,subject,Credentials.__init__,InvalidValue,Interactive timeout must be between 30 seconds and 30 minutes.,no,no,no,0,0,0
+auth.pluggable.Credentials.revoke#1,google/auth/pluggable.py,subject,Credentials.revoke,InvalidValue,Revoke is only enabled under interactive mode.,no,no,no,0,0,0
+auth.pluggable.Credentials._parse_subject_token#1,google/auth/pluggable.py,subject,Credentials._parse_subject_token,MalformedError,Error code and message fields are required in the response.,no,yes,no,0,0,0
+auth.pluggable.Credentials._parse_subject_token#2,google/auth/pluggable.py,subject,Credentials._parse_subject_token,MalformedError,The executable response is missing the token_type field.,no,yes,no,0,0,0
+auth.pluggable.Credentials._validate_response_schema#1,google/auth/pluggable.py,subject,Credentials._validate_response_schema,MalformedError,The executable response is missing the version field.,no,yes,no,0,0,0
+auth.pluggable.Credentials._validate_response_schema#2,google/auth/pluggable.py,subject,Credentials._validate_response_schema,MalformedError,The executable response is missing the success field.,no,yes,no,0,0,0
+auth.pluggable.Credentials._validate_running_mode#1,google/auth/pluggable.py,subject,Credentials._validate_running_mode,MalformedError,Executables need to be explicitly allowed (set GOOGLE_EXTERNAL_ACCOUNT_ALLOW_EXECUTABLES to '1') to run.,no,yes,no,0,0,0
+auth.pluggable.Credentials._validate_running_mode#2,google/auth/pluggable.py,subject,Credentials._validate_running_mode,MalformedError,An output_file must be specified in the credential configuration for interactive mode.,no,yes,no,0,0,0
+auth.pluggable.Credentials._validate_running_mode#3,google/auth/pluggable.py,subject,Credentials._validate_running_mode,InvalidOperation,Interactive mode cannot run without an interactive timeout.,no,yes,no,0,0,0
+auth.pluggable.Credentials._validate_running_mode#4,google/auth/pluggable.py,subject,Credentials._validate_running_mode,InvalidValue,Interactive mode is only enabled for workforce pool.,no,yes,no,0,0,0
+auth.transport._aiohttp_requests.Request.__init__#1,google/auth/transport/_aiohttp_requests.py,subject,Request.__init__,InvalidOperation,Client sessions with auto_decompress=True are not supported.,no,no,no,0,0,0
+auth.transport.grpc.secure_authorized_channel#1,google/auth/transport/grpc.py,subject,secure_authorized_channel,MalformedError,Received both ssl_credentials and client_cert_callback; these are mutually exclusive.,no,no,no,0,0,0
+oauth2._id_token_async.verify_firebase_token#1,google/oauth2/_id_token_async.py,subject,verify_firebase_token,InvalidValue,Token does not contain a valid 'aud' claim.,no,no,no,0,0,0
+oauth2._id_token_async.verify_firebase_token#2,google/oauth2/_id_token_async.py,subject,verify_firebase_token,InvalidValue,Wrong issuer. 'iss' should be '{*}'.,no,no,no,0,0,0
+oauth2._id_token_async.verify_firebase_token#3,google/oauth2/_id_token_async.py,subject,verify_firebase_token,InvalidValue,Token does not contain a valid 'sub' claim.,no,no,no,0,0,0
+oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1,google/oauth2/challenges.py,subject,SecurityKeyChallenge._obtain_challenge_input_webauthn,InvalidValue,securityKey is None,no,yes,no,0,0,0
+oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2,google/oauth2/challenges.py,subject,SecurityKeyChallenge._obtain_challenge_input_webauthn,InvalidValue,challenges is None or empty,no,yes,no,0,0,0
+oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3,google/oauth2/challenges.py,subject,SecurityKeyChallenge._obtain_challenge_input_webauthn,InvalidValue,application_id is None,no,yes,no,0,0,0
+oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4,google/oauth2/challenges.py,subject,SecurityKeyChallenge._obtain_challenge_input_webauthn,InvalidValue,relying_party_id is None,no,yes,no,0,0,0
+oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5,google/oauth2/challenges.py,subject,SecurityKeyChallenge._obtain_challenge_input_webauthn,InvalidValue,keyHandle is None,no,yes,no,0,0,0
+oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6,google/oauth2/challenges.py,subject,SecurityKeyChallenge._obtain_challenge_input_webauthn,InvalidValue,challenge is None,no,yes,no,0,0,0
+oauth2.credentials.Credentials.from_authorized_user_info#1,google/oauth2/credentials.py,subject,Credentials.from_authorized_user_info,ValueError,"Authorized user info was not in the expected format, missing fields {*}.",no,no,no,0,0,0
+oauth2.gdch_credentials.ServiceAccountCredentials._from_signer_and_info#1,google/oauth2/gdch_credentials.py,subject,ServiceAccountCredentials._from_signer_and_info,ValueError,Only format version 1 is supported,no,no,no,0,0,0
+oauth2.id_token.verify_firebase_token#1,google/oauth2/id_token.py,subject,verify_firebase_token,InvalidValue,Token does not contain a valid 'aud' claim.,no,no,no,0,0,0
+oauth2.id_token.verify_firebase_token#2,google/oauth2/id_token.py,subject,verify_firebase_token,InvalidValue,Wrong issuer. 'iss' should be '{*}'.,no,no,no,0,0,0
+oauth2.id_token.verify_firebase_token#3,google/oauth2/id_token.py,subject,verify_firebase_token,InvalidValue,Token does not contain a valid 'sub' claim.,no,no,no,0,0,0
+oauth2.service_account.Credentials.with_always_use_jwt_access#1,google/oauth2/service_account.py,subject,Credentials.with_always_use_jwt_access,InvalidValue,always_use_jwt_access should be True for non-default universe domain,no,no,no,0,0,0
+oauth2.service_account.IDTokenCredentials._with_use_iam_endpoint#1,google/oauth2/service_account.py,subject,IDTokenCredentials._with_use_iam_endpoint,InvalidValue,use_iam_endpoint should be True for non-default universe domain,no,no,no,0,0,0
+oauth2.webauthn_handler.PluginHandler._call_plugin#1,google/oauth2/webauthn_handler.py,subject,PluginHandler._call_plugin,MalformedError,Plugin response length {*} does not match data {*},no,yes,no,0,0,0
+oauth2.webauthn_handler.PluginHandler._find_plugin#1,google/oauth2/webauthn_handler.py,subject,PluginHandler._find_plugin,InvalidResource,{*} env var is not set,no,yes,no,0,0,0
+oauth2.webauthn_types.GetResponse.from_json#1,google/oauth2/webauthn_types.py,subject,GetResponse.from_json,MalformedError,Invalid Get JSON response,yes,yes,no,0,0,0
+oauth2.webauthn_types.GetResponse.from_json#2,google/oauth2/webauthn_types.py,subject,GetResponse.from_json,MalformedError,Invalid Get response type: {*},no,yes,no,0,0,0
+oauth2.webauthn_types.GetResponse.from_json#3,google/oauth2/webauthn_types.py,subject,GetResponse.from_json,MalformedError,Get response is empty,no,yes,no,0,0,0
+oauth2.webauthn_types.GetResponse.from_json#4,google/oauth2/webauthn_types.py,subject,GetResponse.from_json,MalformedError,Invalid credential type: {*},no,yes,no,0,0,0

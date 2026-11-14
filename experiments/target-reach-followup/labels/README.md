@@ -17,6 +17,7 @@ changing them. All paths below are relative to the folder
 | `labels/check_labels.py` | checks a pack against its manifest and validates a labels file against it |
 | `labels/parts.py` | splits the blocks of a pack into parts by test file, and joins the labels files of the parts |
 | `labels/analyse_labels.py` | compares 1 or 2 labels files with the runs and with the rule |
+| `labels/summary.py` | summarizes the outputs of `analyse_labels.py` over several libraries |
 | `labels/convert_reference.py` | converts the labels of the PyJWT reference study into a labels file |
 | `labels/INSTRUCTION.md` | the instruction of a reading; it goes into every pack |
 | `labels/readings/<name>/` | the labels files of the readings (`A.tsv`, `B.tsv`) and the parts (`parts.tsv`) |
@@ -28,18 +29,27 @@ changing them. All paths below are relative to the folder
     python3 -I -B labels/prepare.py --subject ../target-reach/subjects/<name>/subject.json \
         --clone <clone of the subject> --instruction <instruction file> --out <empty folder>
 
-The pack holds `src/` (the paths that subject.json copies, read from the
-object store of the clone at the commit of subject.json; the working tree
-is not read), `checks.tsv` (every check: id, file, function, class, lines,
-message template, guards; no reachable field), `classes.tsv` (declared bases
-of the classes of the subject), `blocks.tsv` (every included block: key,
-file, lines, test, expected classes, assertions as text), `labels.tsv` (an
-empty template), the instruction file and `MANIFEST.txt` (SHA-256 of every
-other file). Targets, generated outputs, readings and records are not in a
-pack. `prepare.py` refuses an output folder inside the 3 experiment folders
-(except their `work/` folders) or one that is not empty, a file whose name
-is on its forbidden list, and a file other than the instruction whose bytes
-equal a file of the experiment folders outside `work/`.
+The pack holds:
+
+- `src/` (the paths that subject.json copies, read from the object store of
+  the clone at the commit of subject.json; the working tree is not read);
+- `checks.tsv` (every check: id, file, function, class, lines, message
+  template, guards; no reachable field);
+- `classes.tsv` (declared bases of the classes of the subject);
+- `blocks.tsv` (every included block: key, file, lines, test, expected
+  classes, assertions as text);
+- `labels.tsv` (an empty template);
+- the instruction file;
+- `MANIFEST.txt` (SHA-256 of every other file).
+
+Targets, generated outputs, readings and records are not in a pack.
+`prepare.py` refuses:
+
+- an output folder inside the 3 experiment folders (except their `work/`
+  folders) or one that is not empty;
+- a file whose name is on its forbidden list;
+- a file other than the instruction whose bytes equal a file of the
+  experiment folders outside `work/`.
 
 ## Labels file
 
@@ -77,8 +87,8 @@ files; every block of a test file is in the same part.
 
 `split` takes k, the smallest number of parts with at most `--max-blocks`
 blocks each on average (the number of blocks divided by the limit, rounded
-up), sorts the test files by path and closes part i after the first file
-with which the running number of blocks reaches i/k of all blocks; parts
+up). It sorts the test files by path and closes part i after the first file
+with which the running number of blocks reaches i/k of all blocks. Parts
 without a file are left out and the parts are numbered from 1. A test file
 with more blocks than the limit makes a part larger than the limit.
 `parts.tsv` has the columns `file`, `part` and `blocks`. `join` takes 1
@@ -86,7 +96,7 @@ labels file per part, in the order of the parts, reads from each only the
 rows of the blocks of its part, and writes the rows in the order of the
 pack's `labels.tsv`. It fails when a block of a part has no row or 2 rows,
 when a header is wrong or when the number of files is not the number of
-parts; a row of another part is not read and is listed when it carries a
+parts. A row of another part is not read and is listed when it carries a
 label.
 
 ## Analysis
@@ -115,16 +125,20 @@ Outputs:
   check" and "none". The values of a by-param label are sorted before the
   texts are compared. Kappa has no value when 1 category holds every label of
   both files.
-- `outcomes.csv`, per case of the study whose agreed label names a check:
-  decided by its label; label fires and another check decides; label fires
-  and no check decides; label does not fire and decides once the deciding
-  check is deleted; label does not fire and does not decide then either;
-  label does not fire, case not observed on the copy without the deciding
-  check; label does not fire and no check decides; deciding check not
-  deleted or record missing; fired checks not recorded. "Fires" means: the
-  label is among the fired checks of the case or is its raise site. The
-  copy without the deciding check is the deletion run of the toolkit for
-  that check.
+- `outcomes.csv`, per case of the study whose agreed label names a check.
+  "Fires" means: the label is among the fired checks of the case or is its
+  raise site. The copy without the deciding check is the deletion run of the
+  toolkit for that check. The outcomes:
+  - decided by its label;
+  - label fires and another check decides;
+  - label fires and no check decides;
+  - label does not fire and decides once the deciding check is deleted;
+  - label does not fire and does not decide then either;
+  - label does not fire, case not observed on the copy without the deciding
+    check;
+  - label does not fire and no check decides;
+  - deciding check not deleted or record missing;
+  - fired checks not recorded.
 - `rule-vs-label.csv`, per case and rule, with the tier of the rule
   (assertion, name, none): target equals label; target differs from label;
   target and label none; label none; no target; no agreed label. Rule 2 is
@@ -132,7 +146,9 @@ Outputs:
 - `rule-vs-label-blocks.csv`, per included block, in the cells of
   `../target-reach/VALIDATION.md`: both, equal; both, different; rule only;
   label only; neither; no agreed label.
-- `first-reading.csv`, per flag, when `first/<name>.tsv` exists.
+- `first-reading.csv`, per flag, when `first/<name>.tsv` exists. The count
+  `agreed_label_differs_from_described` of `counts.json` also holds the flags
+  whose agreed label is `none`; `summary.json` gives them apart.
 - `counts.json` and `COUNTS.md`: every count and the 9 sentinels.
 
 Sentinels (every output is written first; the exit status is 1 when 1
@@ -154,6 +170,26 @@ fails):
 9. the transcription of the first reading matches `flags.csv` (not
    applicable without a transcription).
 
+## Summary over the libraries
+
+    python3 -I -B labels/summary.py [--generated generated/labels] \
+        [--names google-auth oauthlib authlib joserfc] [--out generated/labels]
+
+The program reads the outputs of `analyse_labels.py` for each library and
+runs nothing on the libraries. `summary.json` holds, per library and for the
+libraries together, the agreement categories, the observed agreement and
+Cohen's kappa in both forms as exact fractions, the cases and their
+outcomes, and the rules against the agreed label. It also holds the first
+reading in 6 categories, the expectations L1 to L3 and the checks of the
+program.
+In the 4 libraries, every included block is labeled by both readings (271
+of 271), so the blocks labeled by both readings are the included blocks of
+section 4.1 of the protocol.
+Together, a label text is 1 category in every library; the kappa with each
+label qualified by its library is given as a variant. `SUMMARY.md` renders
+the same values as tables. The exit status is 1 when a check does not hold
+and 2 on bad input.
+
 ## Development runs
 
 PyJWT, with the labels of the reference study (79 blocks, 1 labels file):
@@ -162,20 +198,23 @@ PyJWT, with the labels of the reference study (79 blocks, 1 labels file):
     python3 -I -B labels/analyse_labels.py --subject ../target-reach/subjects/pyjwt/subject.json \
         --labels work/labels/dev/pyjwt-reference.tsv --out work/labels/dev/generated/pyjwt
 
-79 blocks: 68 with a check, 1 by parameter, 10 none; all 9 sentinels hold
-(sentinel 9 not applicable). 91 cases, 81 of them with an agreed label that
-names a check: 80 decided by their label and 1 where the label does not fire
+Of the 79 blocks, 68 are labeled with a check, 1 by parameter and 10 none;
+all 9 sentinels hold (sentinel 9 not applicable). Of the 91 cases, 81 have
+an agreed label that names a check: 80 decided by their label and 1 where the label does not fire
 and does not decide once the deciding check is deleted
 (`test_decode_deeply_nested_header_throws_decode_error`, label `_load#3`,
 deciding check `_load#4`). Rule 2 per block: both, equal 47; both, different
 0; rule only 1; label only 22; neither 9; per basis of the rule the same
 counts as in `../target-reach/VALIDATION.md`.
 
-jwcrypto, a pack and synthetic labels files (not readings): the pack holds
-12 source files, 146 checks, 109 classes and 42 included blocks, and its
-manifest checks; `check_labels.py` rejects a malformed file (exit status 1)
-and accepts the 2 complete synthetic files (exit status 0); the analysis of
-the 2 files with `targets.json` as rule 3 holds all sentinels.
+jwcrypto, a pack and synthetic labels files (not readings):
+
+- the pack holds 12 source files, 146 checks, 109 classes and 42 included
+  blocks, and its manifest checks;
+- `check_labels.py` rejects a malformed file (exit status 1) and accepts the
+  2 complete synthetic files (exit status 0);
+- the analysis of the 2 files with `targets.json` as rule 3 holds all
+  sentinels.
 
 ## Tests
 

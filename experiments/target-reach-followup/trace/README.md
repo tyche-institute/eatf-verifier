@@ -198,11 +198,16 @@ keeps `checks.json` unchanged in both derived folders, so those columns and
 counts give the reachability by name under both rules; only the targets, and
 what derives from them, differ.
 
-## Results on the development subjects
+## Results
 
-Run of 14 November 2026, CPython 3.12.3, 3 repeats per subject. All sentinels
-above hold for the 3 subjects in the runs whose outputs are in
-`generated/trace/`.
+Runs of 14 November 2026, CPython 3.12.3, 3 repeats per subject, with the
+plugin whose SHA-256 is
+`0a29e451a3b1fa5bc9cbbbf42bffe9c464a68aa865ded5270d8a5228be5d10d7`
+(`plugin_sha256` in every `reach.json`). The outputs are in
+`generated/trace/`. All sentinels above hold for the 7 subjects, except
+T3-repeat for `jwcrypto` (see "Repeats").
+
+### Development subjects
 
 | | pyjwt | pyjwt-package | jwcrypto |
 |---|---|---|---|
@@ -213,17 +218,17 @@ above hold for the 3 subjects in the runs whose outputs are in
 | By name only | 2 | 5 | 4 |
 | By execution only | 0 | 0 | 14 |
 | Neither | 26 | 42 | 39 |
+| Functions started / under an entry point | 73 / 39 | 115 / 47 | 261 / 148 |
 | Cases of the study | 91 | 91 | 42 |
 | Cases with a target, rule 2 / rule 3 | 49 / 49 | 49 / 49 | 14 / 14 |
 | Same target | 49 | 49 | 14 |
 | Changed, gained, lost a target | 0, 0, 0 | 0, 0, 0 | 0, 0, 0 |
+| Decided by the target, rule 2 / rule 3 | 48 / 48 | 48 / 48 | 10 / 10 |
 | Flags, rule 2 / rule 3 | 1 / 1 | 1 / 1 | 4 / 4 |
+| Assertion tier, rule 3: with a target / decided | 42 / 42 | 42 / 42 | 6 / 6 |
+| Name tier, rule 3: with a target / decided | 7 / 6 | 7 / 6 | 8 / 4 |
 | Fired checks under an entry point | 44 of 44 | 44 of 44 | 33 of 33 |
-| Suite, without / with the plugin (mean of 3, s) | 5.749 / 6.047 | 5.730 / 6.175 | 5.978 / 6.516 |
-
-The times are those of the run whose outputs are written; on the same
-machine, an earlier run of `jwcrypto` gave 5.722 / 6.980 s, so the overhead
-of the plugin varied between 5 % and 22 % across these runs.
+| Suite, without / with the plugin (mean of 3, s) | 5.747 / 6.009 | 5.765 / 6.276 | 6.077 / 6.698 |
 
 In `jwcrypto` the 14 checks reachable by execution only are 11 checks of
 `JWK.import_key`, 1 of `JWA.signing_alg`, 1 of `JWSCore._jwa` and 1 of
@@ -231,17 +236,87 @@ In `jwcrypto` the 14 checks reachable by execution only are 11 checks of
 subjects the analysis under rule 3 gives the outputs of the toolkit byte for
 byte, except the rule name in `summary.json` and `SUMMARY.md`.
 
-**Repeats.** In 2 earlier runs of `jwcrypto` (3 and 5 repeats), T3-repeat did
-not hold: the code `InvalidJWSSignature.__init__` (`jwcrypto/jws.py`) started
-under `deserialize` and `verify` in some runs and under `deserialize`,
-`validate` and `verify` in others (run 3 of 3 in the first, runs 2 to 5 of 5
-in the second, against run 1); the first start under `validate` was in
-`jwcrypto/tests.py::TestJWT::test_Issue_209`, which validates a token with a
-key set holding a newly generated key, so the order in which the keys are
-tried varies between runs. That function holds no check, and it started
-under at least 1 entry point in every run, so the input of rule 3 was the
-same; T3-repeat-reach was added after these runs and was not evaluated on
-them. In the run whose outputs are written, all 3 repeats agree.
+### The 4 held-out libraries
+
+| | google-auth | oauthlib | authlib | joserfc |
+|---|---|---|---|---|
+| Checks | 100 | 88 | 39 | 97 |
+| Reachable by name | 52 | 54 | 36 | 81 |
+| Reachable by execution | 14 | 61 | 35 | 84 |
+| Both | 14 | 54 | 33 | 71 |
+| By name only | 38 | 0 | 3 | 10 |
+| By execution only | 0 | 7 | 2 | 13 |
+| Neither | 48 | 27 | 1 | 3 |
+| Functions started / under an entry point | 848 / 21 | 373 / 53 | 1081 / 266 | 342 / 197 |
+| Cases of the study | 22 | 142 | 48 | 190 |
+| Cases with a target, rule 2 / rule 3 | 15 / 15 | 53 / 84 | 30 / 30 | 131 / 106 |
+| Same target | 15 | 53 | 30 | 59 |
+| Changed, gained, lost a target | 0, 0, 0 | 0, 31, 0 | 0, 0, 0 | 43, 4, 29 |
+| Decided by the target, rule 2 / rule 3 | 13 / 13 | 43 / 74 | 18 / 18 | 71 / 90 |
+| Flags, rule 2 / rule 3 | 2 / 2 | 10 / 10 | 12 / 12 | 60 / 16 |
+| Assertion tier, rule 3: with a target / decided | 0 / 0 | 31 / 31 | 5 / 5 | 38 / 38 |
+| Name tier, rule 3: with a target / decided | 15 / 13 | 53 / 43 | 25 / 13 | 68 / 52 |
+| Fired checks under an entry point | 13 of 13 | 47 of 47 | 24 of 24 | 55 of 55 |
+| Suite, without / with the plugin (mean of 3, s) | 81.623 / 81.987 | 1.690 / 3.373 | 26.586 / 30.649 | 6.766 / 8.593 |
+
+Over the 4 libraries, 229 cases have a target under rule 2 and its target
+decides 145 of them (84 flags); 235 have a target under rule 3 and its target
+decides 195 (40 flags). In the assertion tier the counts are 129, 76 and 53
+under rule 2 and 74, 74 and 0 under rule 3; in the name tier 100, 69 and 31
+under rule 2 and 161, 121 and 40 under rule 3.
+
+The checks reachable by execution only are, in `joserfc`, 9 checks of the 7
+methods `JWTClaimsRegistry.validate_aud`, `validate_exp`, `validate_iat`,
+`validate_iss`, `validate_jti`, `validate_nbf` and `validate_sub`
+(`joserfc/_rfc7519/claims.py`, started under `validate`), 2 of
+`decode_header` (`joserfc/_rfc7515/compact.py`), 2 of
+`extract_rfc7515_compact` (`joserfc/_rfc7797/compact.py`) and 1 of
+`extract_rfc7797_json` (`joserfc/_rfc7797/json.py`); in `oauthlib`, 7 checks
+of `GrantTypeBase._inflate_claims` and of the 3 methods
+`openid_authorization_validator` of `GrantTypeBase`, `HybridGrant` and
+`ImplicitGrant` (`oauthlib/openid/connect/core/grant_types/`); in `authlib`,
+2 checks of `decode_payload` (`authlib/jose/rfc7519/jwt.py`). In
+`google-auth` the 14 checks reachable by execution are all reachable by name
+too, and the entry point is `decode`: of the 848 functions that started, 21
+started under it.
+
+The targets of `google-auth` and `authlib` are the same under both rules. In
+`oauthlib` 31 cases gain a target and each is decided by it; no case changes
+or loses one. In `joserfc`, of the 60 cases that are flags under rule 2, 32
+are decided by their target under rule 3, 23 have no target under rule 3 and
+5 stay flags; of the 71 cases decided by their target under rule 2, 54 stay
+decided, 11 are flags under rule 3 and 6 have no target; 4 cases without a
+target under rule 2 gain one that decides them (`compare.csv`).
+
+The expectations of section 4.2 of `PROTOCOL.md`: T1 is not met (16 flags of
+`joserfc` under rule 3; the expectation was at most 10). T2 is met: the 3
+cases keep their target under rule 3 (`compare.csv`, transition "same
+target"). T3 is not met: the target decides 90 of the 106 cases of `joserfc`
+with a target under rule 3, 84.9 %, and the expectation was at least 85 %.
+
+The mean time of the suite with the plugin, against the mean without it, is
+higher by 0.4 % (`google-auth`), 4.6 % (`pyjwt`), 8.9 % (`pyjwt-package`),
+10.2 % (`jwcrypto`), 15.3 % (`authlib`), 27.0 % (`joserfc`) and 99.6 %
+(`oauthlib`, 1.690 s against 3.373 s).
+
+**Repeats.** For `jwcrypto`, T3-repeat does not hold in the run whose outputs
+are written: the code `InvalidJWSSignature.__init__` (`jwcrypto/jws.py`)
+started under `deserialize`, `validate` and `verify` in run 1 and under
+`deserialize` and `verify` in runs 2 and 3. The same difference appeared in 2
+earlier runs of `jwcrypto` (3 and 5 repeats): the first start under
+`validate` is in `jwcrypto/tests.py::TestJWT::test_Issue_209`, which
+validates a token with a key set holding a newly generated key, so the order
+in which the keys are tried varies between runs. That function holds no
+check, and it started under at least 1 entry point in every run, so the input
+of rule 3 is the same: T3 and T3-repeat-reach hold, which is the condition of
+section 4.2 of the protocol. The run was not repeated until the 3 traces
+agreed. For the other 6 subjects all 3 repeats agree.
+
+The traces were made 2 times: the first runs used the plugin as committed
+with the protocol, the runs whose outputs are written use the corrected
+plugin (`DEVIATIONS.md`, section 1.2). For `joserfc`, `oauthlib` and
+`authlib`, where both runs completed, the 2 runs give the same functions and
+the same entry-point sets.
 
 ## Limits
 

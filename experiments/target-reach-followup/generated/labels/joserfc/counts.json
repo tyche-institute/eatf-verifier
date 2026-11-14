@@ -1,0 +1,322 @@
+{
+ "agreement": {
+  "1 check and 1 none": 4,
+  "2 different checks": 1,
+  "both none": 22,
+  "same check": 111
+ },
+ "agreement_statistics": {
+  "check_or_none": {
+   "categories": 2,
+   "equal": 134,
+   "expected": 0.7122,
+   "items": 138,
+   "kappa": 0.8993,
+   "observed": 0.971
+  },
+  "labels": {
+   "categories": 46,
+   "equal": 133,
+   "expected": 0.07,
+   "items": 138,
+   "kappa": 0.961,
+   "observed": 0.9638
+  }
+ },
+ "cases": 190,
+ "cases_with_agreed_label_check": 137,
+ "cases_with_agreed_label_none": 48,
+ "cases_without_agreed_label": 5,
+ "first_reading": {
+  "agreed_label_differs_from_described": 20,
+  "agreed_label_equals_described": 40,
+  "flags": 60,
+  "not_compared": 0
+ },
+ "labels": {
+  "A.tsv": {
+   "blocks_labeled": 138,
+   "by_basis": {
+    "assert": 3,
+    "class": 28,
+    "class+name": 63,
+    "name": 22,
+    "none": 22
+   },
+   "class_outside": [],
+   "label_by_param": 0,
+   "label_check": 116,
+   "label_none": 22,
+   "warnings": 0
+  },
+  "B.tsv": {
+   "blocks_labeled": 138,
+   "by_basis": {
+    "class": 23,
+    "class+assert": 3,
+    "class+assert+name": 2,
+    "class+name": 84,
+    "none": 26
+   },
+   "class_outside": [],
+   "label_by_param": 0,
+   "label_check": 112,
+   "label_none": 26,
+   "warnings": 0
+  }
+ },
+ "labels_files": [
+  "A.tsv",
+  "B.tsv"
+ ],
+ "outcomes": {
+  "decided by its label": 129,
+  "deciding check not deleted or record missing": 0,
+  "fired checks not recorded": 0,
+  "label does not fire and decides once the deciding check is deleted": 4,
+  "label does not fire and does not decide then either": 4,
+  "label does not fire and no check decides": 0,
+  "label does not fire; case not observed on the copy without the deciding check": 0,
+  "label fires and another check decides": 0,
+  "label fires and no check decides": 0
+ },
+ "pinning_rows_compared": 190,
+ "rule_3": "targets.json",
+ "rule_vs_label": {
+  "rule 2": {
+   "all": {
+    "label none": 22,
+    "no agreed label": 5,
+    "no target": 30,
+    "target and label none": 26,
+    "target differs from label": 40,
+    "target equals label": 67
+   },
+   "by_tier": {
+    "assertion": {
+     "label none": 20,
+     "no agreed label": 2,
+     "no target": 0,
+     "target and label none": 0,
+     "target differs from label": 37,
+     "target equals label": 40
+    },
+    "name": {
+     "label none": 2,
+     "no agreed label": 0,
+     "no target": 0,
+     "target and label none": 0,
+     "target differs from label": 3,
+     "target equals label": 27
+    },
+    "none": {
+     "label none": 0,
+     "no agreed label": 3,
+     "no target": 30,
+     "target and label none": 26,
+     "target differs from label": 0,
+     "target equals label": 0
+    }
+   }
+  },
+  "rule 3": {
+   "all": {
+    "label none": 2,
+    "no agreed label": 5,
+    "no target": 35,
+    "target and label none": 46,
+    "target differs from label": 7,
+    "target equals label": 95
+   },
+   "by_tier": {
+    "assertion": {
+     "label none": 0,
+     "no agreed label": 0,
+     "no target": 0,
+     "target and label none": 0,
+     "target differs from label": 0,
+     "target equals label": 38
+    },
+    "name": {
+     "label none": 2,
+     "no agreed label": 2,
+     "no target": 0,
+     "target and label none": 0,
+     "target differs from label": 7,
+     "target equals label": 57
+    },
+    "none": {
+     "label none": 0,
+     "no agreed label": 3,
+     "no target": 35,
+     "target and label none": 46,
+     "target differs from label": 0,
+     "target equals label": 0
+    }
+   }
+  }
+ },
+ "rule_vs_label_blocks": {
+  "rule 2": {
+   "all": {
+    "both, different": 25,
+    "both, equal": 56,
+    "label only": 30,
+    "neither": 14,
+    "no agreed label": 5,
+    "rule only": 8
+   },
+   "by_basis": {
+    "class": {
+     "both, different": 22,
+     "both, equal": 32,
+     "label only": 0,
+     "neither": 0,
+     "no agreed label": 2,
+     "rule only": 6
+    },
+    "name": {
+     "both, different": 3,
+     "both, equal": 24,
+     "label only": 0,
+     "neither": 0,
+     "no agreed label": 0,
+     "rule only": 2
+    },
+    "none: no name token matches": {
+     "both, different": 0,
+     "both, equal": 0,
+     "label only": 15,
+     "neither": 10,
+     "no agreed label": 3,
+     "rule only": 0
+    },
+    "none: no reachable check of the expected class": {
+     "both, different": 0,
+     "both, equal": 0,
+     "label only": 4,
+     "neither": 0,
+     "no agreed label": 0,
+     "rule only": 0
+    },
+    "none: tie": {
+     "both, different": 0,
+     "both, equal": 0,
+     "label only": 11,
+     "neither": 4,
+     "no agreed label": 0,
+     "rule only": 0
+    }
+   }
+  },
+  "rule 3": {
+   "all": {
+    "both, different": 7,
+    "both, equal": 69,
+    "label only": 35,
+    "neither": 20,
+    "no agreed label": 5,
+    "rule only": 2
+   },
+   "by_basis": {
+    "assert-literal": {
+     "both, different": 0,
+     "both, equal": 2,
+     "label only": 0,
+     "neither": 0,
+     "no agreed label": 0,
+     "rule only": 0
+    },
+    "class": {
+     "both, different": 0,
+     "both, equal": 18,
+     "label only": 0,
+     "neither": 0,
+     "no agreed label": 0,
+     "rule only": 0
+    },
+    "name": {
+     "both, different": 7,
+     "both, equal": 49,
+     "label only": 0,
+     "neither": 0,
+     "no agreed label": 2,
+     "rule only": 2
+    },
+    "none: no name token matches": {
+     "both, different": 0,
+     "both, equal": 0,
+     "label only": 16,
+     "neither": 14,
+     "no agreed label": 3,
+     "rule only": 0
+    },
+    "none: tie": {
+     "both, different": 0,
+     "both, equal": 0,
+     "label only": 19,
+     "neither": 6,
+     "no agreed label": 0,
+     "rule only": 0
+    }
+   }
+  }
+ },
+ "sentinels": {
+  "1": {
+   "holds": true,
+   "problems": [],
+   "problems_total": 0,
+   "text": "the deposited files of generated/<name>/ match SHA256SUMS"
+  },
+  "2": {
+   "holds": true,
+   "problems": [],
+   "problems_total": 0,
+   "text": "cases.csv holds exactly the cases of the study of the first baseline record, with the same raise site and fired checks"
+  },
+  "3": {
+   "holds": true,
+   "problems": [],
+   "problems_total": 0,
+   "text": "the target of each row of cases.csv is the target of its block in targets.json"
+  },
+  "4": {
+   "holds": true,
+   "problems": [],
+   "problems_total": 0,
+   "text": "every labels file is valid: each included block exactly once, labels are check ids or none, bases are valid"
+  },
+  "5": {
+   "holds": true,
+   "problems": [],
+   "problems_total": 0,
+   "text": "every by-param label resolves to exactly 1 value in every case of its block"
+  },
+  "6": {
+   "holds": true,
+   "problems": [],
+   "problems_total": 0,
+   "text": "the agreement categories add up to the included blocks, the outcomes to the cases with an agreed label that names a check, and the rule categories to the cases of the study, for each rule and in each tier"
+  },
+  "7": {
+   "holds": true,
+   "problems": [],
+   "problems_total": 0,
+   "text": "every case decided by its label has its label among its fired checks"
+  },
+  "8": {
+   "holds": true,
+   "problems": [],
+   "problems_total": 0,
+   "text": "the deletion runs read here are those of deletions.csv, and for every case whose deciding check was deleted and gave a record, the status and raise site read from the records equal those of pinning.csv"
+  },
+  "9": {
+   "holds": true,
+   "problems": [],
+   "problems_total": 0,
+   "text": "the transcription of the first reading matches flags.csv: the same cases, targets and deciding checks, in the same order"
+  }
+ },
+ "subject": "joserfc"
+}

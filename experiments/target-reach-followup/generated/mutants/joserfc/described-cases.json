@@ -1,0 +1,1572 @@
+{
+ "cases": [
+  {
+   "O_C_detections_at_the_described_check_only": 0,
+   "case": "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": false,
+     "O_S": false,
+     "mutant": "D00008",
+     "own": false,
+     "suite": false,
+     "unique": false,
+     "variant": false
+    },
+    "described": {
+     "O_C": false,
+     "O_S": false,
+     "mutant": "D00012",
+     "own": false,
+     "suite": false,
+     "unique": false,
+     "variant": true
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": false,
+   "kind": "shadowed (labels and first reading)",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_compact.TestJWECompact::test_ciphertext_exceeds_size"
+   ],
+   "test": "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size",
+   "unique_kills_at_the_deciding_check": 0,
+   "variant": "extra|_extra.test_repaired_jwe_compact.TestJWECompactRepaired::test_repaired_ciphertext_exceeds_size",
+   "variant_kills_at_the_described_check": 1
+  },
+  {
+   "O_C_detections_at_the_described_check_only": 0,
+   "case": "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": false,
+     "O_S": false,
+     "mutant": "D00008",
+     "own": false,
+     "suite": false,
+     "unique": false,
+     "variant": false
+    },
+    "described": {
+     "O_C": false,
+     "O_S": false,
+     "mutant": "D00009",
+     "own": false,
+     "suite": false,
+     "unique": false,
+     "variant": true
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": false,
+   "kind": "shadowed (labels)",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_compact.TestJWECompact::test_header_exceeds_size"
+   ],
+   "test": "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size",
+   "unique_kills_at_the_deciding_check": 0,
+   "variant": "extra|_extra.test_repaired_jwe_compact_header.TestJWECompactHeaderRepaired::test_repaired_header_exceeds_size",
+   "variant_kills_at_the_described_check": 1
+  },
+  {
+   "O_C_detections_at_the_described_check_only": 0,
+   "case": "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0",
+   "deciding_check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": false,
+     "O_S": false,
+     "mutant": "D00004",
+     "own": false,
+     "suite": false,
+     "unique": false,
+     "variant": false
+    },
+    "described": {
+     "O_C": false,
+     "O_S": false,
+     "mutant": "D00006",
+     "own": false,
+     "suite": true,
+     "unique": false,
+     "variant": true
+    }
+   },
+   "described_check": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "shadowed (labels and first reading)",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jws.test_compact.TestCompact::test_payload_exceeded_size_error"
+   ],
+   "test": "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error",
+   "unique_kills_at_the_deciding_check": 0,
+   "variant": "extra|_extra.test_repaired_jws_compact.TestCompactRepaired::test_repaired_payload_exceeded_size_error",
+   "variant_kills_at_the_described_check": 1
+  },
+  {
+   "O_C_detections_at_the_described_check_only": 1,
+   "case": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0",
+   "deciding_check": "registry.reject_unprotected_crit_header#2",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": false,
+     "O_S": false,
+     "mutant": "D00029",
+     "own": false,
+     "suite": true,
+     "unique": false,
+     "variant": false
+    },
+    "described": {
+     "O_C": false,
+     "O_S": true,
+     "mutant": "D00022",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": true
+    }
+   },
+   "described_check": "_rfc7797.json._is_payload_base64_encoded#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "shadowed (labels and first reading)",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 5,
+     "own": 0,
+     "suite": 2,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": 0,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 1,
+     "O_S": 4,
+     "mutants": 8,
+     "own": 4,
+     "suite": 4,
+     "unique": 2,
+     "unique_kills": [
+      "M00395",
+      "M00396"
+     ],
+     "variant": 4,
+     "variant_kills": [
+      "M00394",
+      "M00395",
+      "M00396",
+      "M00397"
+     ]
+    },
+    "described_not_deciding": {
+     "O_C": 1,
+     "O_S": 4,
+     "mutants": 8,
+     "own": 4,
+     "suite": 4,
+     "unique": 2,
+     "unique_kills": [
+      "M00395",
+      "M00396"
+     ],
+     "variant": 4,
+     "variant_kills": [
+      "M00394",
+      "M00395",
+      "M00396",
+      "M00397"
+     ]
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jws.test_json.TestJSON::test_b64_must_be_protected"
+   ],
+   "test": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected",
+   "unique_kills_at_the_deciding_check": 0,
+   "variant": "extra|_extra.test_repaired_jws_json.TestJSONRepaired::test_repaired_b64_must_be_protected",
+   "variant_kills_at_the_described_check": 5
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jwe/test_compact.py::TestJWECompact::test_auth_tag_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_auth_tag_exceeds_size#0|0",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00013",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00013",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_compact.TestJWECompact::test_auth_tag_exceeds_size"
+   ],
+   "test": "tests/jwe/test_compact.py::TestJWECompact::test_auth_tag_exceeds_size",
+   "unique_kills_at_the_deciding_check": 1,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jwe/test_compact.py::TestJWECompact::test_encrypted_key_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_encrypted_key_exceeds_size#0|0",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00010",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00010",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_compact.TestJWECompact::test_encrypted_key_exceeds_size"
+   ],
+   "test": "tests/jwe/test_compact.py::TestJWECompact::test_encrypted_key_exceeds_size",
+   "unique_kills_at_the_deciding_check": 1,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jwe/test_compact.py::TestJWECompact::test_initialization_vector_size|tests/jwe/test_compact.py::TestJWECompact.test_initialization_vector_size#0|0",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00011",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00011",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_compact.TestJWECompact::test_initialization_vector_size"
+   ],
+   "test": "tests/jwe/test_compact.py::TestJWECompact::test_initialization_vector_size",
+   "unique_kills_at_the_deciding_check": 1,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jwe/test_json.py::TestJWEJSON::test_aad_size_limit|tests/jwe/test_json.py::TestJWEJSON.test_aad_size_limit#0|0",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00014",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00014",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 2,
+     "mutants": 2,
+     "own": 2,
+     "suite": 2,
+     "unique": 1,
+     "unique_kills": [
+      "M00170"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 2,
+     "mutants": 2,
+     "own": 2,
+     "suite": 2,
+     "unique": 1,
+     "unique_kills": [
+      "M00170"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_json.TestJWEJSON::test_aad_size_limit"
+   ],
+   "test": "tests/jwe/test_json.py::TestJWEJSON::test_aad_size_limit",
+   "unique_kills_at_the_deciding_check": 1,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jwe/test_json.py::TestJWEJSON::test_aad_size_limit|tests/jwe/test_json.py::TestJWEJSON.test_aad_size_limit#0|1",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00014",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00014",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 2,
+     "mutants": 2,
+     "own": 2,
+     "suite": 2,
+     "unique": 1,
+     "unique_kills": [
+      "M00170"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 2,
+     "mutants": 2,
+     "own": 2,
+     "suite": 2,
+     "unique": 1,
+     "unique_kills": [
+      "M00170"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_json.TestJWEJSON::test_aad_size_limit"
+   ],
+   "test": "tests/jwe/test_json.py::TestJWEJSON::test_aad_size_limit",
+   "unique_kills_at_the_deciding_check": 1,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jwe/test_json.py::TestJWEJSON::test_general_json_recipients_exceeded_size_error|tests/jwe/test_json.py::TestJWEJSON.test_general_json_recipients_exceeded_size_error#0|0",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00015",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00015",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 1,
+     "mutants": 2,
+     "own": 1,
+     "suite": 1,
+     "unique": 1,
+     "unique_kills": [
+      "M00172"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 1,
+     "mutants": 2,
+     "own": 1,
+     "suite": 1,
+     "unique": 1,
+     "unique_kills": [
+      "M00172"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_json.TestJWEJSON::test_general_json_recipients_exceeded_size_error"
+   ],
+   "test": "tests/jwe/test_json.py::TestJWEJSON::test_general_json_recipients_exceeded_size_error",
+   "unique_kills_at_the_deciding_check": 2,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jwe/test_json.py::TestJWEJSON::test_oversized_aad_rejected_before_decoding|tests/jwe/test_json.py::TestJWEJSON.test_oversized_aad_rejected_before_decoding#0|0",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00014",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00014",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 1,
+     "mutants": 2,
+     "own": 1,
+     "suite": 2,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 1,
+     "mutants": 2,
+     "own": 1,
+     "suite": 2,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_json.TestJWEJSON::test_oversized_aad_rejected_before_decoding"
+   ],
+   "test": "tests/jwe/test_json.py::TestJWEJSON::test_oversized_aad_rejected_before_decoding",
+   "unique_kills_at_the_deciding_check": 0,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jwe/test_json.py::TestJWEJSON::test_oversized_aad_rejected_before_decoding|tests/jwe/test_json.py::TestJWEJSON.test_oversized_aad_rejected_before_decoding#0|1",
+   "deciding_check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00014",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00014",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 1,
+     "mutants": 2,
+     "own": 1,
+     "suite": 2,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 1,
+     "mutants": 2,
+     "own": 1,
+     "suite": 2,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jwe.test_json.TestJWEJSON::test_oversized_aad_rejected_before_decoding"
+   ],
+   "test": "tests/jwe/test_json.py::TestJWEJSON::test_oversized_aad_rejected_before_decoding",
+   "unique_kills_at_the_deciding_check": 0,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jws/test_compact.py::TestCompact::test_signature_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_signature_exceeded_size_error#0|0",
+   "deciding_check": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00007",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00007",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 2,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 2,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jws.test_compact.TestCompact::test_signature_exceeded_size_error"
+   ],
+   "test": "tests/jws/test_compact.py::TestCompact::test_signature_exceeded_size_error",
+   "unique_kills_at_the_deciding_check": 0,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#0|0",
+   "deciding_check": "_rfc7797.json._is_payload_base64_encoded#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00022",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00022",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7797.json._is_payload_base64_encoded#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 4,
+     "O_S": 4,
+     "mutants": 8,
+     "own": 4,
+     "suite": 4,
+     "unique": 2,
+     "unique_kills": [
+      "M00395",
+      "M00396"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 4,
+     "O_S": 4,
+     "mutants": 8,
+     "own": 4,
+     "suite": 4,
+     "unique": 2,
+     "unique_kills": [
+      "M00395",
+      "M00396"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jws.test_json.TestJSON::test_b64_must_be_protected"
+   ],
+   "test": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected",
+   "unique_kills_at_the_deciding_check": 3,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jws/test_json.py::TestJSON::test_general_json_b64_must_match_across_signatures|tests/jws/test_json.py::TestJSON.test_general_json_b64_must_match_across_signatures#1|0",
+   "deciding_check": "_rfc7797.json._validate_general_members#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00021",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00021",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7797.json._validate_general_members#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 3,
+     "O_S": 5,
+     "mutants": 9,
+     "own": 5,
+     "suite": 5,
+     "unique": 2,
+     "unique_kills": [
+      "M00380",
+      "M00381"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 3,
+     "O_S": 5,
+     "mutants": 9,
+     "own": 5,
+     "suite": 5,
+     "unique": 2,
+     "unique_kills": [
+      "M00380",
+      "M00381"
+     ],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jws.test_json.TestJSON::test_general_json_b64_must_match_across_signatures"
+   ],
+   "test": "tests/jws/test_json.py::TestJSON::test_general_json_b64_must_match_across_signatures",
+   "unique_kills_at_the_deciding_check": 3,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jws/test_json.py::TestJSON::test_payload_exceeded_size_error|tests/jws/test_json.py::TestJSON.test_payload_exceeded_size_error#0|0",
+   "deciding_check": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00006",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00006",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jws.test_json.TestJSON::test_payload_exceeded_size_error"
+   ],
+   "test": "tests/jws/test_json.py::TestJSON::test_payload_exceeded_size_error",
+   "unique_kills_at_the_deciding_check": 1,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jws/test_json.py::TestJSON::test_payload_exceeded_size_error|tests/jws/test_json.py::TestJSON.test_payload_exceeded_size_error#1|0",
+   "deciding_check": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00006",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00006",
+     "own": true,
+     "suite": true,
+     "unique": true,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 3,
+     "own": 0,
+     "suite": 1,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jws.test_json.TestJSON::test_payload_exceeded_size_error"
+   ],
+   "test": "tests/jws/test_json.py::TestJSON::test_payload_exceeded_size_error",
+   "unique_kills_at_the_deciding_check": 1,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jws/test_json.py::TestJSON::test_signature_exceeded_size_error|tests/jws/test_json.py::TestJSON.test_signature_exceeded_size_error#0|0",
+   "deciding_check": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00007",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00007",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 2,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 2,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jws.test_json.TestJSON::test_signature_exceeded_size_error"
+   ],
+   "test": "tests/jws/test_json.py::TestJSON::test_signature_exceeded_size_error",
+   "unique_kills_at_the_deciding_check": 0,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  },
+  {
+   "O_C_detections_at_the_described_check_only": null,
+   "case": "tests/jws/test_json.py::TestJSON::test_signature_exceeded_size_error|tests/jws/test_json.py::TestJSON.test_signature_exceeded_size_error#1|0",
+   "deciding_check": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+   "deciding_file_mutated": true,
+   "deletions": {
+    "deciding": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00007",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    },
+    "described": {
+     "O_C": true,
+     "O_S": true,
+     "mutant": "D00007",
+     "own": true,
+     "suite": true,
+     "unique": false,
+     "variant": null
+    }
+   },
+   "described_check": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+   "described_file_mutated": true,
+   "described_fires_in_a_baseline_case": true,
+   "kind": "comparison",
+   "mutants": {
+    "deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 2,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 2,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    },
+    "described_not_deciding": {
+     "O_C": 0,
+     "O_S": 0,
+     "mutants": 0,
+     "own": 0,
+     "suite": 0,
+     "unique": 0,
+     "unique_kills": [],
+     "variant": null,
+     "variant_kills": []
+    }
+   },
+   "own_test_in_whole_suite": [
+    "all|tests.jws.test_json.TestJSON::test_signature_exceeded_size_error"
+   ],
+   "test": "tests/jws/test_json.py::TestJSON::test_signature_exceeded_size_error",
+   "unique_kills_at_the_deciding_check": 0,
+   "variant": null,
+   "variant_kills_at_the_described_check": null
+  }
+ ],
+ "expectations": {
+  "M1_cases": {
+   "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0": 0,
+   "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0": 0,
+   "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0": 0,
+   "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0": 0
+  },
+  "M1_tests_with_a_unique_kill_at_the_deciding_check": [],
+  "M2_cases_that_detect_a_mutant_at_the_described_check_only": [
+   "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0"
+  ],
+  "M3_variants": [
+   {
+    "case": "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0",
+    "holds": true
+   },
+   {
+    "case": "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0",
+    "holds": true
+   },
+   {
+    "case": "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0",
+    "holds": true
+   },
+   {
+    "case": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0",
+    "holds": true
+   }
+  ]
+ },
+ "expectations_by_reading": {
+  "tool_mutants": {
+   "M1": {
+    "status": "not held",
+    "tests_with_at_least_1": [],
+    "unique_kills_at_the_deciding_check": {
+     "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0": 0,
+     "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0": 0,
+     "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0": 0,
+     "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0": 0
+    }
+   },
+   "M2": {
+    "O_C_detections_at_the_described_check_only": {
+     "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0": 0,
+     "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0": 0,
+     "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0": 0,
+     "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0": 1
+    },
+    "cases_with_at_least_1": [
+     "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0"
+    ],
+    "status": "not held"
+   },
+   "M3": {
+    "rows": [
+     {
+      "case": "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0",
+      "first_sentence_holds": false,
+      "holds": false,
+      "second_sentence_applies": true,
+      "second_sentence_holds": true,
+      "variant_kills_at_the_described_check": 0
+     },
+     {
+      "case": "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0",
+      "first_sentence_holds": false,
+      "holds": false,
+      "second_sentence_applies": true,
+      "second_sentence_holds": true,
+      "variant_kills_at_the_described_check": 0
+     },
+     {
+      "case": "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0",
+      "first_sentence_holds": false,
+      "holds": false,
+      "second_sentence_applies": false,
+      "second_sentence_holds": null,
+      "variant_kills_at_the_described_check": 0
+     },
+     {
+      "case": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0",
+      "first_sentence_holds": true,
+      "holds": true,
+      "second_sentence_applies": false,
+      "second_sentence_holds": null,
+      "variant_kills_at_the_described_check": 4
+     }
+    ],
+    "status": "not held"
+   }
+  },
+  "tool_mutants_and_deletions": {
+   "M1": {
+    "status": "not held",
+    "tests_with_at_least_1": [],
+    "unique_kills_at_the_deciding_check": {
+     "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0": 0,
+     "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0": 0,
+     "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0": 0,
+     "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0": 0
+    }
+   },
+   "M2": {
+    "O_C_detections_at_the_described_check_only": {
+     "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0": 0,
+     "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0": 0,
+     "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0": 0,
+     "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0": 1
+    },
+    "cases_with_at_least_1": [
+     "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0"
+    ],
+    "status": "not held"
+   },
+   "M3": {
+    "rows": [
+     {
+      "case": "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0",
+      "first_sentence_holds": true,
+      "holds": true,
+      "second_sentence_applies": true,
+      "second_sentence_holds": true,
+      "variant_kills_at_the_described_check": 1
+     },
+     {
+      "case": "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0",
+      "first_sentence_holds": true,
+      "holds": true,
+      "second_sentence_applies": true,
+      "second_sentence_holds": true,
+      "variant_kills_at_the_described_check": 1
+     },
+     {
+      "case": "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0",
+      "first_sentence_holds": true,
+      "holds": true,
+      "second_sentence_applies": false,
+      "second_sentence_holds": null,
+      "variant_kills_at_the_described_check": 1
+     },
+     {
+      "case": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0",
+      "first_sentence_holds": true,
+      "holds": true,
+      "second_sentence_applies": false,
+      "second_sentence_holds": null,
+      "variant_kills_at_the_described_check": 5
+     }
+    ],
+    "status": "held"
+   }
+  }
+ },
+ "extra_tests_digest": "01638ac166e5a6c4",
+ "subject": {
+  "commit": "f345ff71cd6c36452a4e11e47b805ad450a95dd8",
+  "name": "joserfc",
+  "version": "1.8.0"
+ }
+}

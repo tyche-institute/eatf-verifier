@@ -1,9 +1,11 @@
-# Versions: the nested-header test on Python 3.13 and 3.14
+# Versions: tests on Python 3.13 and 3.14
 
 This folder repeats the version check of
 `../../mutation-adequacy-pyjwt/version-check/` (called "the earlier check"
 below) on CPython 3.13 and 3.14, with CPython 3.12.3 as a control, and
 measures how deep the `json` module can nest arrays on each interpreter.
+It also holds the run, on CPython 3.13, of the 4 tests of joserfc that hold a
+shadowed case and of their repaired variants (the section before "Files").
 
 The earlier check ran the test
 `test_decode_deeply_nested_header_throws_decode_error` of PyJWT 2.15.1
@@ -58,6 +60,46 @@ differs between runs: 3 runs of `depth_probe.py` gave 40111, 40121 and 40139.
 3.12.3 gave 9997 in both of 2 runs; 3.9, 3.10, 3.11 and 3.13 were run once.
 The deposited file holds 1 run per interpreter.
 
+## The tests of joserfc that an earlier check stops, on CPython 3.13
+
+Section 4.5 of the protocol asks, after its commit, for a run on CPython 3.13
+of the tests of joserfc 1.8.0 that hold a shadowed case and of their repaired
+variants (`../repaired/joserfc/`). `joserfc-313.json` is the output of
+`../repaired/joserfc/verify.py` with the interpreter of an environment on
+CPython 3.13.14 that holds the packages of
+`../../target-reach/subjects/joserfc/requirements.txt` at the same versions
+(pytest 9.2.0, cryptography 50.0.2, pycryptodome 4.4.0, cffi 2.1.1,
+pycparser 3.12, iniconfig 2.3.1, packaging 26.3, pluggy 1.7.0,
+Pygments 2.21.0), installed from wheels.
+
+| Original block | Deciding check on 3.13.14 | Variant | Deciding check on 3.13.14 |
+|---|---|---|---|
+| `TestJWECompact.test_ciphertext_exceeds_size#0` | `JWERegistry.validate_compact_value_size#1`, line 122 | `test_repaired_ciphertext_exceeds_size` | `JWERegistry.validate_ciphertext_size#1`, line 140 |
+| `TestJWECompact.test_header_exceeds_size#0` | `JWERegistry.validate_compact_value_size#1`, line 122 | `test_repaired_header_exceeds_size` | `JWERegistry.validate_protected_header_size#1`, line 126 |
+| `TestCompact.test_payload_exceeded_size_error#0` | `JWSRegistry.validate_compact_value_size#1`, line 107 | `test_repaired_payload_exceeded_size_error` | `JWSRegistry.validate_payload_size#1`, line 115 |
+| `TestJSON.test_b64_must_be_protected#1` | `registry.reject_unprotected_crit_header#2`, line 230 | `test_repaired_b64_must_be_protected` | `_rfc7797.json._is_payload_base64_encoded#1`, line 115 |
+
+For each of the 8 blocks, the deciding check, the line of the raise, the
+class and the message of the exception are those of the run on CPython 3.12.3
+(`../repaired/joserfc/verify.json`); the 8 tests pass; the whole suite gives
+310 passed without the variants and 314 with them (91 subtests each), as on
+3.12.3; no pytest call tried to reach another machine. Of the 7 sentinels of
+`verify.py`, S2 to S7 hold. S1 does not hold, for 1 stated reason: the
+toolkit's `verify` step requires the interpreter of `subject.json`
+(CPython 3.12.3) and reports "the interpreter is CPython 3.13.14, not CPython
+3.12.3". The clone is at the commit and its copied paths are clean. The
+recorder of the toolkit ran under 3.13.14 and gives each of the 8 blocks, in
+both of its baseline records, the deciding check of the table.
+
+    uv venv -p <CPython 3.13.14> ../work/versions/joserfc-313
+    uv pip install --only-binary :all: -p ../work/versions/joserfc-313/bin/python \
+        -r ../../target-reach/subjects/joserfc/requirements.txt
+    python3 -I -B ../repaired/joserfc/verify.py \
+        --python "$(realpath ../work/versions/joserfc-313/bin/python)" \
+        --work ../work/versions/joserfc-313-verify --out joserfc-313.json
+
+The command exits with status 1 because of S1.
+
 ## Files
 
 | File | Content |
@@ -67,6 +109,7 @@ The deposited file holds 1 run per interpreter.
 | `depth_probe.py` | the nesting-depth measurement |
 | `depth.jsonl` | 6 lines: 1 per interpreter, 3.9 to 3.14 |
 | `test_nested_header.py` | unit tests of `nested_header.py` on synthetic packages |
+| `joserfc-313.json` | the 4 tests of joserfc that hold a shadowed case and their 4 variants on CPython 3.13.14 (output of `../repaired/joserfc/verify.py`) |
 
 ## Differences from the earlier check
 

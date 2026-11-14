@@ -1,0 +1,464 @@
+{
+ "by_file": {
+  "joserfc/_rfc7515/registry.py": {
+   "errors": 0,
+   "killed": 63,
+   "killed_by_a_test": 63,
+   "mutants": 102,
+   "score": 0.617647,
+   "score_without_errors": 0.617647,
+   "survived": 39,
+   "timeouts": 0
+  },
+  "joserfc/_rfc7516/registry.py": {
+   "errors": 0,
+   "killed": 79,
+   "killed_by_a_test": 79,
+   "mutants": 106,
+   "score": 0.745283,
+   "score_without_errors": 0.745283,
+   "survived": 27,
+   "timeouts": 0
+  },
+  "joserfc/_rfc7797/json.py": {
+   "errors": 0,
+   "killed": 170,
+   "killed_by_a_test": 170,
+   "mutants": 196,
+   "score": 0.867347,
+   "score_without_errors": 0.867347,
+   "survived": 26,
+   "timeouts": 0
+  },
+  "joserfc/registry.py": {
+   "errors": 0,
+   "killed": 64,
+   "killed_by_a_test": 64,
+   "mutants": 112,
+   "score": 0.571429,
+   "score_without_errors": 0.571429,
+   "survived": 48,
+   "timeouts": 0
+  }
+ },
+ "by_operator": {
+  "arg_removal": {
+   "errors": 0,
+   "killed": 179,
+   "killed_by_a_test": 179,
+   "mutants": 245,
+   "score": 0.730612,
+   "score_without_errors": 0.730612,
+   "survived": 66,
+   "timeouts": 0
+  },
+  "assignment": {
+   "errors": 0,
+   "killed": 63,
+   "killed_by_a_test": 63,
+   "mutants": 71,
+   "score": 0.887324,
+   "score_without_errors": 0.887324,
+   "survived": 8,
+   "timeouts": 0
+  },
+  "if_exp": {
+   "errors": 0,
+   "killed": 6,
+   "killed_by_a_test": 6,
+   "mutants": 6,
+   "score": 1.0,
+   "score_without_errors": 1.0,
+   "survived": 0,
+   "timeouts": 0
+  },
+  "keywords": {
+   "errors": 0,
+   "killed": 26,
+   "killed_by_a_test": 26,
+   "mutants": 26,
+   "score": 1.0,
+   "score_without_errors": 1.0,
+   "survived": 0,
+   "timeouts": 0
+  },
+  "lambda": {
+   "errors": 0,
+   "killed": 1,
+   "killed_by_a_test": 1,
+   "mutants": 1,
+   "score": 1.0,
+   "score_without_errors": 1.0,
+   "survived": 0,
+   "timeouts": 0
+  },
+  "name": {
+   "errors": 0,
+   "killed": 8,
+   "killed_by_a_test": 8,
+   "mutants": 9,
+   "score": 0.888889,
+   "score_without_errors": 0.888889,
+   "survived": 1,
+   "timeouts": 0
+  },
+  "number": {
+   "errors": 0,
+   "killed": 4,
+   "killed_by_a_test": 4,
+   "mutants": 7,
+   "score": 0.571429,
+   "score_without_errors": 0.571429,
+   "survived": 3,
+   "timeouts": 0
+  },
+  "remove_unary_ops": {
+   "errors": 0,
+   "killed": 12,
+   "killed_by_a_test": 12,
+   "mutants": 12,
+   "score": 1.0,
+   "score_without_errors": 1.0,
+   "survived": 0,
+   "timeouts": 0
+  },
+  "string": {
+   "errors": 0,
+   "killed": 53,
+   "killed_by_a_test": 53,
+   "mutants": 99,
+   "score": 0.535354,
+   "score_without_errors": 0.535354,
+   "survived": 46,
+   "timeouts": 0
+  },
+  "swap_op": {
+   "errors": 0,
+   "killed": 24,
+   "killed_by_a_test": 24,
+   "mutants": 40,
+   "score": 0.6,
+   "score_without_errors": 0.6,
+   "survived": 16,
+   "timeouts": 0
+  }
+ },
+ "case_statuses": {
+  "crashed": 5298,
+  "observed": 92654,
+  "withheld": 88
+ },
+ "cases": 190,
+ "check_deletions": {
+  "error_mutants": [],
+  "errors": 0,
+  "killed": 21,
+  "killed_by_a_test": 21,
+  "killed_by_exactly_1_test": 13,
+  "mutant_level_oracles": {
+   "O_C": 17,
+   "O_S": 18,
+   "O_T": 9,
+   "O_V": 10,
+   "O_Vfc": 7,
+   "suite": 21
+  },
+  "mutants": 29,
+  "not_killed": [
+   "_rfc7515.registry.JWSRegistry.get_alg#1",
+   "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+   "_rfc7516.registry.JWERegistry._check_algorithm#1",
+   "_rfc7516.registry.JWERegistry._check_algorithm#2",
+   "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+   "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+   "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+   "registry.check_crit_header#2"
+  ],
+  "recorder_runs": {
+   "completed": 29
+  },
+  "score": 0.724138,
+  "score_without_errors": 0.724138,
+  "survived": 8,
+  "timeout_mutants": [],
+  "timeouts": 0,
+  "toolkit_deletions": {
+   "columns": [
+    "O_V",
+    "O_Vfc",
+    "O_C",
+    "O_T",
+    "O_S",
+    "suite",
+    "O_V withheld-as-failing",
+    "O_Vfc withheld-as-failing",
+    "O_C withheld-as-failing",
+    "O_T withheld-as-failing",
+    "whole_suite",
+    "whole_suite_tests_not_passing"
+   ],
+   "compared": 19,
+   "deleted_here_only": [
+    "_rfc7515.registry.JWSRegistry.get_alg#1",
+    "_rfc7515.registry.JWSRegistry.get_alg#3",
+    "_rfc7516.registry.JWERegistry._check_algorithm#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#2",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "registry.check_crit_header#1",
+    "registry.check_crit_header#2",
+    "registry.check_registry_header#1",
+    "registry.check_supported_header#1"
+   ],
+   "deletions_here": 29,
+   "deposited": 55,
+   "differences": [],
+   "not_run_in_the_deposit": []
+  }
+ },
+ "extra_tests": {
+  "check_deletions": {
+   "extra_tests_alone": {
+    "error_mutants": [],
+    "errors": 0,
+    "killed": 4,
+    "killed_by_a_test": 4,
+    "mutants": 29,
+    "score": 0.137931,
+    "score_without_errors": 0.137931,
+    "survived": 25,
+    "timeout_mutants": [],
+    "timeouts": 0
+   },
+   "newly_killed": [
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1"
+   ],
+   "with_extra_tests": {
+    "error_mutants": [],
+    "errors": 0,
+    "killed": 23,
+    "killed_by_a_test": 23,
+    "mutants": 29,
+    "score": 0.793103,
+    "score_without_errors": 0.793103,
+    "survived": 6,
+    "timeout_mutants": [],
+    "timeouts": 0
+   }
+  },
+  "digest": "01638ac166e5a6c4",
+  "extra_tests": [
+   "extra|_extra.test_repaired_jwe_compact.TestJWECompactRepaired::test_repaired_ciphertext_exceeds_size",
+   "extra|_extra.test_repaired_jwe_compact_header.TestJWECompactHeaderRepaired::test_repaired_header_exceeds_size",
+   "extra|_extra.test_repaired_jws_compact.TestCompactRepaired::test_repaired_payload_exceeded_size_error",
+   "extra|_extra.test_repaired_jws_json.TestJSONRepaired::test_repaired_b64_must_be_protected"
+  ],
+  "extra_tests_alone": {
+   "error_mutants": [],
+   "errors": 0,
+   "killed": 102,
+   "killed_by_a_test": 102,
+   "mutants": 516,
+   "score": 0.197674,
+   "score_without_errors": 0.197674,
+   "survived": 414,
+   "timeout_mutants": [],
+   "timeouts": 0
+  },
+  "extra_tests_passing_in_both_unmodified_runs": [
+   "extra|_extra.test_repaired_jwe_compact.TestJWECompactRepaired::test_repaired_ciphertext_exceeds_size",
+   "extra|_extra.test_repaired_jwe_compact_header.TestJWECompactHeaderRepaired::test_repaired_header_exceeds_size",
+   "extra|_extra.test_repaired_jws_compact.TestCompactRepaired::test_repaired_payload_exceeded_size_error",
+   "extra|_extra.test_repaired_jws_json.TestJSONRepaired::test_repaired_b64_must_be_protected"
+  ],
+  "files": [
+   "test_repaired_jwe_compact.py",
+   "test_repaired_jwe_compact_header.py",
+   "test_repaired_jws_compact.py",
+   "test_repaired_jws_json.py"
+  ],
+  "newly_killed": [],
+  "replacements": [
+   {
+    "error_mutants": [],
+    "errors": 0,
+    "killed": 376,
+    "killed_by_a_test": 376,
+    "mutants": 516,
+    "new": "extra|_extra.test_repaired_jwe_compact.TestJWECompactRepaired::test_repaired_ciphertext_exceeds_size",
+    "newly_killed": [],
+    "no_longer_killed": [],
+    "old": "all|tests.jwe.test_compact.TestJWECompact::test_ciphertext_exceeds_size",
+    "score": 0.728682,
+    "score_without_errors": 0.728682,
+    "survived": 140,
+    "timeout_mutants": [],
+    "timeouts": 0
+   },
+   {
+    "error_mutants": [],
+    "errors": 0,
+    "killed": 376,
+    "killed_by_a_test": 376,
+    "mutants": 516,
+    "new": "extra|_extra.test_repaired_jwe_compact_header.TestJWECompactHeaderRepaired::test_repaired_header_exceeds_size",
+    "newly_killed": [],
+    "no_longer_killed": [],
+    "old": "all|tests.jwe.test_compact.TestJWECompact::test_header_exceeds_size",
+    "score": 0.728682,
+    "score_without_errors": 0.728682,
+    "survived": 140,
+    "timeout_mutants": [],
+    "timeouts": 0
+   },
+   {
+    "error_mutants": [],
+    "errors": 0,
+    "killed": 376,
+    "killed_by_a_test": 376,
+    "mutants": 516,
+    "new": "extra|_extra.test_repaired_jws_compact.TestCompactRepaired::test_repaired_payload_exceeded_size_error",
+    "newly_killed": [],
+    "no_longer_killed": [],
+    "old": "all|tests.jws.test_compact.TestCompact::test_payload_exceeded_size_error",
+    "score": 0.728682,
+    "score_without_errors": 0.728682,
+    "survived": 140,
+    "timeout_mutants": [],
+    "timeouts": 0
+   },
+   {
+    "error_mutants": [],
+    "errors": 0,
+    "killed": 376,
+    "killed_by_a_test": 376,
+    "mutants": 516,
+    "new": "extra|_extra.test_repaired_jws_json.TestJSONRepaired::test_repaired_b64_must_be_protected",
+    "newly_killed": [],
+    "no_longer_killed": [],
+    "old": "all|tests.jws.test_json.TestJSON::test_b64_must_be_protected",
+    "score": 0.728682,
+    "score_without_errors": 0.728682,
+    "survived": 140,
+    "timeout_mutants": [],
+    "timeouts": 0
+   }
+  ],
+  "with_extra_tests": {
+   "error_mutants": [],
+   "errors": 0,
+   "killed": 376,
+   "killed_by_a_test": 376,
+   "mutants": 516,
+   "score": 0.728682,
+   "score_without_errors": 0.728682,
+   "survived": 140,
+   "timeout_mutants": [],
+   "timeouts": 0
+  }
+ },
+ "files": [
+  "joserfc/_rfc7515/registry.py",
+  "joserfc/_rfc7516/registry.py",
+  "joserfc/_rfc7797/json.py",
+  "joserfc/registry.py"
+ ],
+ "mutant_level_oracles": {
+  "O_C": 300,
+  "O_S": 313,
+  "O_T": 285,
+  "O_V": 275,
+  "O_Vfc": 236,
+  "suite": 345
+ },
+ "mutants_killed_by_exactly_1_test": 40,
+ "mutmut_version": "3.8.1",
+ "recorder_runs": {
+  "completed": 516
+ },
+ "sentinels": [
+  {
+   "detail": [],
+   "name": "S1",
+   "pass": true,
+   "text": "each modified file differs from the unmodified file only inside the span of the mutated function, keeps its number of lines, compiles, and is not the unmodified file; a deletion changes the lines of the check's raise statements and no other line; rechecked from the modified files, and the runs used them"
+  },
+  {
+   "detail": [],
+   "name": "S2",
+   "pass": true,
+   "text": "each mutated function has the syntax tree of the function mutmut writes for the mutant, and each file has as many mutants as mutmut's file generator yields, with the same names in the same order"
+  },
+  {
+   "detail": [],
+   "name": "S3",
+   "pass": true,
+   "text": "the unmodified copies give the deposited baseline: the same cases and the same deciding check for every case as the toolkit's cases.csv, the same tests passing in both whole-suite runs as its whole-suite baseline, and 2 identical recorder records, message texts aside"
+  },
+  {
+   "detail": [],
+   "name": "S4",
+   "pass": true,
+   "text": "every mutant has its recorder run and its whole-suite run (and the extra tests when given), each completed or stated as a timeout or an error after 1 repeat"
+  },
+  {
+   "detail": [
+    "compared 19 of 29 deletions"
+   ],
+   "name": "S6",
+   "pass": true,
+   "text": "the deletion of each check that the toolkit's deletions.csv lists gives here what the toolkit recorded for its own deletion copy: the same detection under each oracle and by the suite of the recorder run, the same withheld-as-failing columns, the same whole-suite status and the same number of tests not passing"
+  }
+ ],
+ "sha256_before_compression": {
+  "cases.csv": "1bbeb11157bd474a3f29681b193e1b28c51189012e6c535056a136b1690e8b2d",
+  "runs.jsonl": "fa97d9e0bd7f9eaa49a2481780df9215c84414ca71aa5f417a1f788b25d23f52"
+ },
+ "subject": {
+  "commit": "f345ff71cd6c36452a4e11e47b805ad450a95dd8",
+  "name": "joserfc",
+  "version": "1.8.0"
+ },
+ "targets": "targets.json",
+ "tests_killing_at_least_1_mutant": 306,
+ "tests_passing_in_both_unmodified_runs": 310,
+ "whole_suite": {
+  "error_mutants": [],
+  "errors": 0,
+  "killed": 376,
+  "killed_by_a_test": 376,
+  "mutants": 516,
+  "score": 0.728682,
+  "score_without_errors": 0.728682,
+  "survived": 140,
+  "timeout_mutants": [],
+  "timeouts": 0
+ },
+ "whole_suite_runs": {
+  "completed": 516
+ },
+ "without_tests": {
+  "error_mutants": [],
+  "errors": 0,
+  "killed": 374,
+  "killed_by_a_test": 374,
+  "mutants": 516,
+  "no_longer_killed": [
+   "M00395",
+   "M00396"
+  ],
+  "score": 0.724806,
+  "score_without_errors": 0.724806,
+  "survived": 142,
+  "tests_left_out": [
+   "all|tests.jwe.test_compact.TestJWECompact::test_ciphertext_exceeds_size",
+   "all|tests.jwe.test_compact.TestJWECompact::test_header_exceeds_size",
+   "all|tests.jws.test_compact.TestCompact::test_payload_exceeded_size_error",
+   "all|tests.jws.test_json.TestJSON::test_b64_must_be_protected"
+  ],
+  "timeout_mutants": [],
+  "timeouts": 0,
+  "unknown_tests": []
+ }
+}

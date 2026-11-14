@@ -1,0 +1,40 @@
+check,file,role,function,class,template,in_handler,reachable,decides,cases_decided,blocks_targeting,cases_fired
+jose.drafts._jwe_algorithms.ECDH1PUAlgorithm.generate_keys_and_prepare_headers#1,authlib/jose/drafts/_jwe_algorithms.py,subject,ECDH1PUAlgorithm.generate_keys_and_prepare_headers,InvalidEncryptionAlgorithmForECDH1PUWithKeyWrappingError,,no,yes,no,0,0,0
+jose.rfc7515.jws.JsonWebSignature.deserialize_compact#1,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature.deserialize_compact,DecodeError,Not enough segments,yes,yes,yes,1,0,1
+jose.rfc7515.jws.JsonWebSignature.deserialize_compact#2,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature.deserialize_compact,BadSignatureError,{*},no,yes,yes,3,2,3
+jose.rfc7515.jws.JsonWebSignature.deserialize_json#1,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature.deserialize_json,DecodeError,"Missing ""payload"" value",no,yes,yes,1,5,1
+jose.rfc7515.jws.JsonWebSignature.deserialize_json#2,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature.deserialize_json,BadSignatureError,{*},no,yes,yes,2,2,2
+jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#1,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature._prepare_algorithm_key,MissingAlgorithmError,,no,yes,no,0,0,0
+jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#2,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature._prepare_algorithm_key,UnsupportedAlgorithmError,,no,yes,yes,2,0,2
+jose.rfc7515.jws.JsonWebSignature._validate_private_headers#1,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature._validate_private_headers,InvalidHeaderParameterNameError,{*},no,yes,no,0,0,0
+jose.rfc7515.jws.JsonWebSignature._reject_unprotected_crit#1,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature._reject_unprotected_crit,InvalidHeaderParameterNameError,crit,no,yes,yes,1,2,1
+jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#1,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature._validate_crit_headers,InvalidHeaderParameterNameError,crit,no,yes,no,0,0,0
+jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#2,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature._validate_crit_headers,InvalidCritHeaderParameterNameError,{*},no,yes,yes,2,2,2
+jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature._validate_json_jws,DecodeError,"Missing ""protected"" value",no,yes,yes,1,0,1
+jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature._validate_json_jws,DecodeError,"Missing ""signature"" value",no,yes,yes,1,0,1
+jose.rfc7515.jws.JsonWebSignature._validate_json_jws#3,authlib/jose/rfc7515/jws.py,subject,JsonWebSignature._validate_json_jws,DecodeError,"Invalid ""header"" value",no,yes,no,0,0,0
+jose.rfc7516.jwe.JsonWebEncryption.serialize_json#1,authlib/jose/rfc7516/jwe.py,subject,JsonWebEncryption.serialize_json,InvalidAlgorithmForMultipleRecipientsMode,{*},no,no,no,0,0,0
+jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact#1,authlib/jose/rfc7516/jwe.py,subject,JsonWebEncryption.deserialize_compact,DecodeError,Not enough segments,yes,yes,yes,1,0,1
+jose.rfc7516.jwe.JsonWebEncryption.deserialize_json._unwrap_for_matching_recipient#1,authlib/jose/rfc7516/jwe.py,subject,JsonWebEncryption.deserialize_json._unwrap_for_matching_recipient,KeyMismatchError,,no,yes,no,0,0,0
+jose.rfc7516.jwe.JsonWebEncryption.get_header_alg#1,authlib/jose/rfc7516/jwe.py,subject,JsonWebEncryption.get_header_alg,MissingAlgorithmError,,no,yes,no,0,0,0
+jose.rfc7516.jwe.JsonWebEncryption.get_header_alg#2,authlib/jose/rfc7516/jwe.py,subject,JsonWebEncryption.get_header_alg,UnsupportedAlgorithmError,,no,yes,yes,1,0,1
+jose.rfc7516.jwe.JsonWebEncryption.get_header_enc#1,authlib/jose/rfc7516/jwe.py,subject,JsonWebEncryption.get_header_enc,MissingEncryptionAlgorithmError,,no,yes,no,0,0,0
+jose.rfc7516.jwe.JsonWebEncryption.get_header_enc#2,authlib/jose/rfc7516/jwe.py,subject,JsonWebEncryption.get_header_enc,UnsupportedEncryptionAlgorithmError,,no,yes,yes,1,1,1
+jose.rfc7516.jwe.JsonWebEncryption.get_header_zip#1,authlib/jose/rfc7516/jwe.py,subject,JsonWebEncryption.get_header_zip,UnsupportedCompressionAlgorithmError,,no,yes,no,0,0,0
+jose.rfc7516.jwe.JsonWebEncryption._validate_private_headers#1,authlib/jose/rfc7516/jwe.py,subject,JsonWebEncryption._validate_private_headers,InvalidHeaderParameterNameError,{*},no,yes,yes,3,0,3
+jose.rfc7517.base_key.Key.check_key_op#1,authlib/jose/rfc7517/base_key.py,subject,Key.check_key_op,InvalidUseError,,no,yes,no,0,0,0
+jose.rfc7519.claims.BaseClaims._validate_essential_claims#1,authlib/jose/rfc7519/claims.py,subject,BaseClaims._validate_essential_claims,MissingClaimError,{*},no,yes,yes,1,1,1
+jose.rfc7519.claims.BaseClaims._validate_essential_claims#2,authlib/jose/rfc7519/claims.py,subject,BaseClaims._validate_essential_claims,InvalidClaimError,{*},no,yes,yes,1,0,1
+jose.rfc7519.claims.BaseClaims._validate_claim_value#1,authlib/jose/rfc7519/claims.py,subject,BaseClaims._validate_claim_value,InvalidClaimError,{*},no,yes,yes,4,0,4
+jose.rfc7519.claims.JWTClaims.validate_aud#1,authlib/jose/rfc7519/claims.py,subject,JWTClaims.validate_aud,InvalidClaimError,aud,no,yes,yes,1,1,1
+jose.rfc7519.claims.JWTClaims.validate_exp#1,authlib/jose/rfc7519/claims.py,subject,JWTClaims.validate_exp,InvalidClaimError,exp,no,yes,yes,3,1,3
+jose.rfc7519.claims.JWTClaims.validate_exp#2,authlib/jose/rfc7519/claims.py,subject,JWTClaims.validate_exp,authlib.jose.errors.ExpiredTokenError,,no,yes,yes,1,1,1
+jose.rfc7519.claims.JWTClaims.validate_nbf#1,authlib/jose/rfc7519/claims.py,subject,JWTClaims.validate_nbf,InvalidClaimError,nbf,no,yes,yes,3,1,3
+jose.rfc7519.claims.JWTClaims.validate_nbf#2,authlib/jose/rfc7519/claims.py,subject,JWTClaims.validate_nbf,authlib.jose.errors.InvalidTokenError,,no,yes,yes,1,1,1
+jose.rfc7519.claims.JWTClaims.validate_iat#1,authlib/jose/rfc7519/claims.py,subject,JWTClaims.validate_iat,InvalidClaimError,iat,no,yes,yes,3,1,3
+jose.rfc7519.claims.JWTClaims.validate_iat#2,authlib/jose/rfc7519/claims.py,subject,JWTClaims.validate_iat,authlib.jose.errors.InvalidTokenError,,no,yes,yes,2,2,2
+jose.rfc7519.jwt.JsonWebToken.check_sensitive_data#1,authlib/jose/rfc7519/jwt.py,subject,JsonWebToken.check_sensitive_data,InsecureClaimError,{*},no,yes,no,0,0,0
+jose.rfc7519.jwt.JsonWebToken.decode#1,authlib/jose/rfc7519/jwt.py,subject,JsonWebToken.decode,DecodeError,Invalid input segments length,no,yes,no,0,7,0
+jose.rfc7519.jwt.decode_payload#1,authlib/jose/rfc7519/jwt.py,subject,decode_payload,DecodeError,Invalid payload value,yes,no,no,0,0,0
+jose.rfc7519.jwt.decode_payload#2,authlib/jose/rfc7519/jwt.py,subject,decode_payload,DecodeError,Invalid payload type,no,no,no,0,0,0
+jose.util.ensure_dict#1,authlib/jose/util.py,subject,ensure_dict,DecodeError,Invalid {*},yes,yes,yes,2,0,2

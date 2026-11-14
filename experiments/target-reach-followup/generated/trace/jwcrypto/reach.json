@@ -73,7 +73,7 @@
     "validate": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset"
    },
    "function": "InvalidJWEKeyLength.__init__",
-   "starts": 7,
+   "starts": 6,
    "starts_other_threads": 0,
    "starts_under_none": 1,
    "tests_under_none": [
@@ -252,7 +252,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
    },
    "function": "base64url_decode",
-   "starts": 3384,
+   "starts": 3382,
    "starts_other_threads": 0,
    "starts_under_none": 2052,
    "tests_under_none": [
@@ -278,7 +278,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
    },
    "function": "base64url_encode",
-   "starts": 1669,
+   "starts": 1668,
    "starts_other_threads": 0,
    "starts_under_none": 1271,
    "tests_under_none": [
@@ -330,7 +330,7 @@
     "verify": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
    },
    "function": "json_encode",
-   "starts": 519,
+   "starts": 518,
    "starts_other_threads": 0,
    "starts_under_none": 390,
    "tests_under_none": [
@@ -758,7 +758,7 @@
     "validate": "jwcrypto/tests.py::TestJWT::test_unexpected"
    },
    "function": "_AesKw._get_key",
-   "starts": 103,
+   "starts": 102,
    "starts_other_threads": 0,
    "starts_under_none": 38,
    "tests_under_none": [
@@ -782,7 +782,7 @@
     "validate": "jwcrypto/tests.py::TestJWT::test_unexpected"
    },
    "function": "_AesKw.unwrap",
-   "starts": 65,
+   "starts": 64,
    "starts_other_threads": 0,
    "starts_under_none": 0,
    "tests_under_none": []
@@ -913,7 +913,7 @@
     "verify": "jwcrypto/tests.py::TestJWS::test_A6"
    },
    "function": "_ES256.__init__",
-   "starts": 11,
+   "starts": 12,
    "starts_other_threads": 0,
    "starts_under_none": 4,
    "tests_under_none": [
@@ -1170,7 +1170,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
    },
    "function": "_HS256.__init__",
-   "starts": 116,
+   "starts": 115,
    "starts_other_threads": 0,
    "starts_under_none": 47,
    "tests_under_none": [
@@ -1473,7 +1473,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing"
    },
    "function": "_RawEC.__init__",
-   "starts": 40,
+   "starts": 41,
    "starts_other_threads": 0,
    "starts_under_none": 18,
    "tests_under_none": [
@@ -1513,7 +1513,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing"
    },
    "function": "_RawEC.verify",
-   "starts": 26,
+   "starts": 27,
    "starts_other_threads": 0,
    "starts_under_none": 0,
    "tests_under_none": []
@@ -1531,7 +1531,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
    },
    "function": "_RawHMAC.__init__",
-   "starts": 124,
+   "starts": 123,
    "starts_other_threads": 0,
    "starts_under_none": 53,
    "tests_under_none": [
@@ -1555,7 +1555,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
    },
    "function": "_RawHMAC._hmac_setup",
-   "starts": 108,
+   "starts": 107,
    "starts_other_threads": 0,
    "starts_under_none": 40,
    "tests_under_none": [
@@ -1595,7 +1595,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
    },
    "function": "_RawHMAC.verify",
-   "starts": 72,
+   "starts": 71,
    "starts_other_threads": 0,
    "starts_under_none": 0,
    "tests_under_none": []
@@ -1831,7 +1831,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
    },
    "function": "_bitsize",
-   "starts": 404,
+   "starts": 401,
    "starts_other_threads": 0,
    "starts_under_none": 118,
    "tests_under_none": [
@@ -2148,7 +2148,7 @@
     "validate": "jwcrypto/tests.py::TestJWT::test_A1"
    },
    "function": "JWE._unwrap_decrypt",
-   "starts": 110,
+   "starts": 109,
    "starts_other_threads": 0,
    "starts_under_none": 0,
    "tests_under_none": []
@@ -2488,7 +2488,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
    },
    "function": "JWK._check_constraints",
-   "starts": 429,
+   "starts": 428,
    "starts_other_threads": 0,
    "starts_under_none": 180,
    "tests_under_none": [
@@ -2783,7 +2783,7 @@
     "validate": "jwcrypto/tests.py::TestJWT::test_A1"
    },
    "function": "JWK._get_private_key",
-   "starts": 197,
+   "starts": 196,
    "starts_other_threads": 0,
    "starts_under_none": 90,
    "tests_under_none": [
@@ -3288,7 +3288,7 @@
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
    },
    "function": "JWK.get_op_key",
-   "starts": 436,
+   "starts": 435,
    "starts_other_threads": 0,
    "starts_under_none": 183,
    "tests_under_none": [
@@ -3428,11 +3428,11 @@
    "first_test_per_entry_point": {
     "decrypt": "jwcrypto/tests.py::TestJWE::test_decrypt_keyset",
     "deserialize": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
-    "validate": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_209",
     "verify": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
    },
    "function": "JWK.thumbprint",
-   "starts": 152,
+   "starts": 151,
    "starts_other_threads": 0,
    "starts_under_none": 124,
    "tests_under_none": [
@@ -3696,11 +3696,13 @@
   {
    "entry_points": [
     "deserialize",
+    "validate",
     "verify"
    ],
    "file": "jwcrypto/jws.py",
    "first_test_per_entry_point": {
     "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_209",
     "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing"
    },
    "function": "InvalidJWSSignature.__init__",
@@ -5946,17 +5948,17 @@
   "pytest==9.2.0",
   "typing_extensions==4.16.0"
  ],
- "plugin_sha256": "ed4993c30d90e1d45e1bd2d022d45f4e7fb19e89cb7c63ff1e4769f49ab594d0",
+ "plugin_sha256": "0a29e451a3b1fa5bc9cbbbf42bffe9c464a68aa865ded5270d8a5228be5d10d7",
  "seconds": {
   "with_plugin": [
-   6.576,
-   6.495,
-   6.476
+   6.478,
+   6.422,
+   7.194
   ],
   "without_plugin": [
-   6.043,
-   5.926,
-   5.965
+   5.707,
+   6.366,
+   6.157
   ]
  },
  "sentinels": [
@@ -5978,8 +5980,54 @@
   },
   {
    "detail": [],
-   "name": "T3-repeat: every traced run gives the same entry-point sets and the same passing tests",
+   "name": "T-files: no code of a subject file ran under a file name that the plugin did not hold when it started",
    "pass": true
+  },
+  {
+   "detail": [
+    {
+     "file": "jwcrypto/jws.py",
+     "first_line": 46,
+     "first_test_per_entry_point": {
+      "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+      "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing"
+     },
+     "holds_a_check": false,
+     "qualname": "InvalidJWSSignature.__init__",
+     "run": 2,
+     "run_1": [
+      "deserialize",
+      "validate",
+      "verify"
+     ],
+     "run_2": [
+      "deserialize",
+      "verify"
+     ]
+    },
+    {
+     "file": "jwcrypto/jws.py",
+     "first_line": 46,
+     "first_test_per_entry_point": {
+      "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+      "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing"
+     },
+     "holds_a_check": false,
+     "qualname": "InvalidJWSSignature.__init__",
+     "run": 3,
+     "run_1": [
+      "deserialize",
+      "validate",
+      "verify"
+     ],
+     "run_3": [
+      "deserialize",
+      "verify"
+     ]
+    }
+   ],
+   "name": "T3-repeat: every traced run gives the same entry-point sets and the same passing tests",
+   "pass": false
   },
   {
    "name": "T3-repeat-reach: every traced run gives the same set of codes that started under at least 1 entry point (the input of rule 3)",

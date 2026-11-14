@@ -1,24 +1,31 @@
-# Repaired variants of 3 joserfc 1.8.0 tests
+# Repaired variants of 4 joserfc 1.8.0 tests
 
 In 3 cases of `joserfc` 1.8.0 the target does not fire, because an earlier
 check rejects the input with the same exception class (class A in
 `../target-reach/readings/joserfc/FLAGS.md`; rows of
-`../target-reach/generated/joserfc/flags.csv`). This folder holds, for each of
-the 3, a repaired variant: a new test in the style of the original whose input
-differs from the original as little as found, and which the target decides on
-the unmodified library with its default limits. The original tests are not
-changed. No line of the library is changed, no check is deleted and no mutant
-is made.
+`../target-reach/generated/joserfc/flags.csv`). A 4th case of the same kind
+has no target under the rule, because its name tokens match 2 checks with the
+same score; both readings of the labels (`labels/readings/joserfc/`)
+describe it by a check that does not fire, and
+`generated/labels/joserfc/outcomes.csv` lists it with the 3 as shadowed.
+This folder holds, for each of the 4, a repaired variant: a new test in the
+style of the original whose input differs from the original as little as
+found, and which the described check decides on the unmodified library with
+its default limits. "Target" below means that described check: the target of
+the rule in cases 1 to 3, the agreed label in case 4. The original tests are
+not changed. No line of the library is changed, no check is deleted and no
+mutant is made in this folder.
 
 Line numbers refer to the commit of `../target-reach/subjects/joserfc/subject.json`
 (`f345ff71cd6c36452a4e11e47b805ad450a95dd8`); library paths are relative to
-`src/`.
+`src/`. Other paths are relative to the experiment directory.
 
 | File | Variant | Original block | Deciding check of the original | Target, deciding check of the variant |
 |---|---|---|---|---|
 | `tests_repaired/test_repaired_jwe_compact.py` | `TestJWECompactRepaired::test_repaired_ciphertext_exceeds_size` | `tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0` | `_rfc7516.registry.JWERegistry.validate_compact_value_size#1` | `_rfc7516.registry.JWERegistry.validate_ciphertext_size#1` |
 | `tests_repaired/test_repaired_jws_compact.py` | `TestCompactRepaired::test_repaired_payload_exceeded_size_error` | `tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0` | `_rfc7515.registry.JWSRegistry.validate_compact_value_size#1` | `_rfc7515.registry.JWSRegistry.validate_payload_size#1` |
 | `tests_repaired/test_repaired_jws_json.py` | `TestJSONRepaired::test_repaired_b64_must_be_protected` | `tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1` | `registry.reject_unprotected_crit_header#2` | `_rfc7797.json._is_payload_base64_encoded#1` |
+| `tests_repaired/test_repaired_jwe_compact_header.py` | `TestJWECompactHeaderRepaired::test_repaired_header_exceeds_size` | `tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0` | `_rfc7516.registry.JWERegistry.validate_compact_value_size#1` | `_rfc7516.registry.JWERegistry.validate_protected_header_size#1` |
 
 Each variant is 1 test method in a `unittest.TestCase` subclass, as the
 originals are, with the same `assertRaises` call: the same expected class,
@@ -26,8 +33,10 @@ the same entry point and the same key, and no other assertion. It imports
 from the same modules as the original (`joserfc.errors`, `joserfc.jwe` or
 `joserfc.jws`, `joserfc.jwk`, `joserfc.util`) and only the names it uses. The
 class names end in `Repaired` so that no node identifier repeats one of the
-original suite. All 3 work with the default limits; no
-`test_repaired_nondefault_*` variant was needed.
+original suite. All 4 work with the default limits; no
+`test_repaired_nondefault_*` variant was needed. The 4th variant is in a file
+of its own, so that the 3 files written before the labels were read keep
+their bytes.
 
 ## What each variant changes
 
@@ -81,6 +90,23 @@ protected segment has 55 characters, below `max_header_length = 512`
 `joserfc/_rfc7797/json.py`). The variant repeats the second block of the
 original only; the first block is already decided by its target.
 
+**4. Protected header size (JWE compact).** The only change is the number of
+members of the JSON object encoded into the protected header segment: 32
+instead of 1000 (`range(32)` instead of `range(1000)`), so the segment has
+1034 characters instead of 679188. The limit of the segment is
+`max_protected_header_length = 1024` (`joserfc/_rfc7516/registry.py`, line
+56), checked by `validate_protected_header_size` (lines 124 to 126), the
+first of the 5 segment checks (`joserfc/_rfc7516/compact.py`, line 44). As in
+case 1, `validate_compact_value_size` checks the whole value against 67712
+first (line 37 of `compact.py`). The original value has 679248 characters
+and is rejected there; the variant has 1094 and reaches line 44, where
+`validate_protected_header_size` rejects it. With the other segments of the
+test (60 characters with the 4 dots), every count of members from 32 to 309
+gives a segment above 1024 and a value of at most 67712 characters; 32 is the
+smallest, since 31 members give a segment of 980 characters. The members of
+the object do not matter to the check, which sees the encoded segment only;
+the variant keeps the form of the original object.
+
 ### Why the original input of case 3 cannot reach its target
 
 With the protected header of the original block, `{"alg": "HS256", "crit":
@@ -96,9 +122,11 @@ template "'{*}' header MUST be protected"), and the repair has to change the
 protected header. The other change of 1 item, removing `"b64"` from `crit`,
 was not tried.
 
-For cases 1 and 2 the same holds for every input whose whole value exceeds
-67712 or 129536 characters: lines 37 and 44 run before the segment checks, so
-the target can decide only an input below those sums.
+For cases 1, 2 and 4 the same holds for every input whose whole value exceeds
+67712 (cases 1 and 4) or 129536 characters (case 2): line 37 of
+`joserfc/_rfc7516/compact.py` and line 44 of `joserfc/_rfc7797/compact.py`
+run before the segment checks, so the target can decide only an input below
+those sums.
 
 ## Where the variants go and how they run
 
@@ -110,7 +138,7 @@ that copy, with `src/` on the module search path:
     <env>/bin/python -m pytest -q -p no:cacheprovider -p reach_offline --rootdir=. tests_repaired
 
 and, for the whole suite with the variants, `tests tests_repaired` as the
-test paths. The folder has no `__init__.py`; its 3 module names do not occur
+test paths. The folder has no `__init__.py`; its 4 module names do not occur
 in `tests/`. `verify.py` makes these copies and calls itself.
 
 ## Verification
@@ -142,7 +170,7 @@ The recorder step builds a derived subject in `work/repaired/verify/derived/`:
 a directory with the copied paths of the clone plus `tests_repaired/`, and a
 `subject.json` that differs from the toolkit's in 5 fields: `name`
 (`joserfc-repaired`), `commit` (removed, because the derived directory is no
-git clone), `copy` (`tests_repaired` added), `tests` (the 3 variant files
+git clone), `copy` (`tests_repaired` added), `tests` (the 4 variant files
 added) and `suite_runs` (`tests_repaired` added to the paths). The toolkit's
 runner then runs `define targets baseline` on it, with `--defs` and `--work`
 in that folder; `verify` of the runner is not run, because it requires the
@@ -161,31 +189,38 @@ All 7 sentinels hold (`verify.json`). 2 runs of the script gave byte-identical
 | variant 2 | `joserfc/_rfc7515/registry.py`, `JWSRegistry.validate_payload_size`, 115 | `_rfc7515.registry.JWSRegistry.validate_payload_size#1` | passes |
 | original 3 (`tests/jws/test_json.py:166`, second block) | `joserfc/registry.py`, `reject_unprotected_crit_header`, 230 | `registry.reject_unprotected_crit_header#2` | passes |
 | variant 3 | `joserfc/_rfc7797/json.py`, `_is_payload_base64_encoded`, 115 | `_rfc7797.json._is_payload_base64_encoded#1` | passes |
+| original 4 (`tests/jwe/test_compact.py:256`) | `joserfc/_rfc7516/registry.py`, `JWERegistry.validate_compact_value_size`, 122 | `_rfc7516.registry.JWERegistry.validate_compact_value_size#1` | passes |
+| variant 4 | `joserfc/_rfc7516/registry.py`, `JWERegistry.validate_protected_header_size`, 126 | `_rfc7516.registry.JWERegistry.validate_protected_header_size#1` | passes |
 
-The messages are "Value size exceeds 67712 bytes.", "Ciphertext size exceeds
-65536 bytes.", "Value size exceeds 129536 bytes.", "Payload size exceeds
-128000 bytes." and, for both blocks of case 3, "'b64' header MUST be
-protected".
+The messages are "Value size exceeds 67712 bytes." (originals 1 and 4),
+"Ciphertext size exceeds 65536 bytes.", "Value size exceeds 129536 bytes.",
+"Payload size exceeds 128000 bytes.", "Header size exceeds 1024 bytes." and,
+for both blocks of case 3, "'b64' header MUST be protected".
 
 Whole suite (`tests`, the suite run of `subject.json`): 310 tests pass
-without the variants and 313 with them (91 subtests pass in each run), with
+without the variants and 314 with them (91 subtests pass in each run), with
 no failure, error or skip; the passing tests with the variants are those
-without them plus the 3 variants. No pytest call made an attempt to reach
+without them plus the 4 variants. No pytest call made an attempt to reach
 another machine.
 
-Under the recorder of the toolkit, both baseline records give each of the 6
+Under the recorder of the toolkit, both baseline records give each of the 8
 blocks the deciding check of the table above, and each block fires that check
 only. The derived subject has the 97 checks of `checks.json` and the blocks of
-`blocks.json` for the original test files, plus 3 included blocks; the rule
-`reach-target-rule/2` gives the 3 variant blocks the targets named above (name
-tier) and every original block the target of
+`blocks.json` for the original test files, plus 4 included blocks; the rule
+`reach-target-rule/2` gives the variant blocks of cases 1 to 3 the targets
+named above (name tier), gives the variant block of case 4 no target, as it
+gives its original none (the name tokens `exceed`, `header` and `size` match
+`_rfc7515.registry.JWSRegistry.validate_header_size#1` and
+`_rfc7516.registry.JWERegistry.validate_protected_header_size#1` with the same
+score), and gives every original block the target of
 `../target-reach/subjects/joserfc/targets.json`.
 
 ## Files
 
 | Path | What it holds |
 |---|---|
-| `tests_repaired/` | The 3 variants, 1 file each |
+| `tests_repaired/` | The 4 variants, 1 file each |
+| `variants.tsv` | For each of the 4 cases: the case, the described check and the variant, as `mutants/cases_file.py` reads them |
 | `verify.py` | The verification script: standard library, plus pytest of the subject environment inside the pytest calls |
 | `verify.json` | Its output: per original and per variant the raise site, the check and the outcome of the test; the whole-suite counts; the recorder section; the 7 sentinels |
 | `selftest/` | Tests of `verify.py` on a small synthetic package |
@@ -197,9 +232,10 @@ The tests of `verify.py`, with an environment that has pytest:
 
 ## Not verified
 
-- The own test of each variant on a copy without its target was not run: no
-  check is deleted in this part. That each variant fails without its target
-  is therefore not shown.
+- The own test of each variant on a copy without its target is not run by
+  `verify.py`: no check is deleted in this folder. The deletion of each
+  described check, with and without the variants, belongs to the mutant
+  analysis (`mutants/`, results in `generated/mutants/joserfc/`).
 - The variants were run in 1 environment only: the pinned environment of
   `../target-reach/subjects/joserfc/requirements.txt` on CPython 3.12.3 (with
   pytest 9.2.0), which the toolkit's `verify` step checks at the start of

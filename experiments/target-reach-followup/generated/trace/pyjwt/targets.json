@@ -6008,7 +6008,7 @@
  "rule_version": "reach-target-rule/3",
  "variant": {
   "name": "reach-target-rule/3",
-  "reach_json_sha256": "ee85c570ca9e4384d64cf7a753a447bb583366a93643395a119fab62814cd9c5",
+  "reach_json_sha256": "bf69626ef7688eb3f748f935444fb88fbd581fd33c4046b8edecbb02610efd27",
   "reachability": {
    "checks": 80,
    "reachable_by_both": 52,

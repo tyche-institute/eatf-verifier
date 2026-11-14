@@ -236,7 +236,7 @@ its time limit, or of which a pytest call leaves no result file, is repeated
 | `score.json` | counts, by file and operator, the mutant-level oracle counts, the deletions, the recomputations asked for, the comparison with the reference study (PyJWT) and with the toolkit's deletions, and the sentinels |
 | `check-spans.csv` | per check of the mutated files: the lines of its raise statements, the kind and the lines of its guards, the number of tool mutants at it, and the id of its deletion |
 | `at-check.csv` | per mutant and check at which it is: the operator and the part of the span that it changes (`raise`, `guard`, `raise and guard`) |
-| `described-cases.csv`, `described-cases.json` | with `--cases`: per row, the tool mutants at the described check, at the deciding check and at the described check only, with the numbers of section "Definitions", the same for the 2 deletions, and what the rows give for the expectations M1 to M3 of `../PROTOCOL.md` |
+| `described-cases.csv`, `described-cases.json` | with `--cases`: per row, the tool mutants at the described check, at the deciding check and at the described check only, with the numbers of section "Definitions", the same for the 2 deletions, and what the rows give for the expectations M1 to M3 of `../PROTOCOL.md` (`expectations`, with the deletion of a check counted as a mutant at it); `described-cases.json` also gives M1 to M3 under both readings of "a mutant at a check" (`expectations_by_reading`: `tool_mutants` and `tool_mutants_and_deletions`, each with the per-row values and a status) |
 | `shadowed.csv`, `mutated-files.txt`, `cases.tsv` | written by `cases_file.py`: the shadowed rows with the files of their 2 checks, their source and their variant; the files to mutate; the cases file |
 | `SHA256SUMS` | digests of every file of the folder |
 
@@ -289,3 +289,96 @@ tool mutants and 46 deletions. All 6 sentinels hold: the whole-suite status
 agrees with the mutmut status of the reference study for 1094 of 1094 tool
 mutants, and 41 of the 46 deletions are of checks that the toolkit's
 `deletions.csv` lists, with no difference in any of the 12 compared columns.
+
+## Run on joserfc
+
+Of the 4 held-out libraries, joserfc 1.8.0 is the only one with a shadowed
+case (`generated/mutants/<name>/shadowed.csv` has no row for google-auth,
+oauthlib and authlib). It has 4, in 4 tests: the 3 class-A cases of the first
+reading, which both readings label as the program did, and 1 case that the
+labels alone show (`TestJWECompact.test_header_exceeds_size#0`). The 4 files
+that hold a described or a deciding check of these cases were mutated:
+`joserfc/_rfc7515/registry.py`, `joserfc/_rfc7516/registry.py`,
+`joserfc/_rfc7797/json.py` and `joserfc/registry.py`. They give 516 tool
+mutants (102, 106, 196 and 112) and 29 deletions of checks (7, 11, 4 and 7).
+`generated/mutants/joserfc/` holds the outputs; `records.tar.xz` there holds
+the raw records of the 545 runs (the recorder record and the run summary of
+every mutant, and the baseline records), without the 2 junit result files of
+the unmodified whole-suite runs, which name the machine.
+
+Sentinels S1 to S4 and S6 hold (S5 concerns PyJWT only). S6 compares 19 of
+the 29 deletions; the other 10 checks fire in no case of the baseline, and
+the toolkit did not delete them.
+
+**The suite.** The whole suite (310 tests) kills 376 of the 516 tool mutants
+(72.9%), all by a test; no run ended in a timeout or an error. Without the 4
+tests that hold a shadowed case it kills 374. With each of the 4 tests
+replaced by its repaired variant it kills 376, and with the 4 variants added
+it kills 376: the variants kill no tool mutant that the suite does not kill.
+Of the 29 deletions the suite kills 21, and with the 4 variants 23. The 2
+more are the deletions of `JWERegistry.validate_ciphertext_size#1` and
+`JWERegistry.validate_protected_header_size#1`, the described checks of 2
+shadowed cases, which fire in no test of the suite.
+
+**The shadowed cases.** "Test" is the test that holds the case; a mutant
+count is of tool mutants at the check.
+
+| Case | Described check: mutants, killed by the suite, by the test, by the variant | Its deletion: suite, variant | Deciding check: mutants, killed by the suite, by the test | Its deletion: suite, test |
+|---|---|---|---|---|
+| `TestJWECompact.test_ciphertext_exceeds_size#0` | `JWERegistry.validate_ciphertext_size#1`: 3, 1, 0, 0 | no, yes | `JWERegistry.validate_compact_value_size#1`: 3, 1, 0 | no, no |
+| `TestJWECompact.test_header_exceeds_size#0` | `JWERegistry.validate_protected_header_size#1`: 3, 1, 0, 0 | no, yes | `JWERegistry.validate_compact_value_size#1`: 3, 1, 0 | no, no |
+| `TestCompact.test_payload_exceeded_size_error#0` | `JWSRegistry.validate_payload_size#1`: 3, 1, 0, 0 | yes, yes | `JWSRegistry.validate_compact_value_size#1`: 3, 1, 0 | no, no |
+| `TestJSON.test_b64_must_be_protected#1` | `_rfc7797.json._is_payload_base64_encoded#1`: 8, 4, 4, 4 | yes, yes | `registry.reject_unprotected_crit_header#2`: 5, 2, 0 | yes, no |
+
+At each of the 5 size checks of the first 3 rows the tool makes the same 3
+mutants. `x and len(x) > limit` becomes `x or len(x) > limit`, which rejects
+accepted inputs and is killed by 40 to 72 tests of the suite. `>` becomes
+`>=`, and the message of the exception becomes `None`; no test kills these 2,
+and no variant does: the variants pass an input above the limit and assert
+the class of the exception. No tool mutant switches a size check off; the
+deletion does. The test of the 4th row kills 4 mutants at its described
+check, 2 of them alone, through its other block (`#0`), which that check
+decides.
+
+**Expectations.**
+
+- **M1 is not held.** No test that holds a shadowed case has a unique kill at
+  the check that decides the case. These 4 tests kill no tool mutant at the
+  deciding check (0 of 3, 0 of 3, 0 of 3 and 0 of 5), and none kills the
+  deletion of the deciding check. In every case the described check stands
+  behind the deciding check and raises the same class, so the test passes
+  when the deciding check is weakened or deleted. The note that the protocol
+  wrote on M1 expected this for 2 of the 3 class-A cases; it is so for the 4
+  cases. Both readings of "a mutant at a check" (tool mutants alone, or with
+  the deletion of the check) give this result.
+- **M2 is not held**, by 1 mutant. `M00394` changes the guard of
+  `_is_payload_base64_encoded#1` from `member.header and "b64" in
+  member.header` to `member.header or "b64" in member.header`. The first
+  statement of `test_b64_must_be_protected`, a serialization without an
+  unprotected header, then raises `TypeError`, and both blocks of the test
+  are recorded as crashed, which counts as a detection under each case
+  oracle. No other tool mutant at a described check is detected under O_C by
+  a shadowed case (16 of 17 are not). Both readings of "a mutant at a check"
+  give this result: no shadowed case detects the deletion of its described
+  check under O_C.
+- **M3 depends on how "mutant" is read.** Section 4.3 of the protocol counts
+  tool mutants and deletions apart, and also says that the deletion of a
+  check is at that check. With tool mutants alone, the first sentence of M3
+  holds for 1 of the 4 variants: `test_repaired_b64_must_be_protected` kills
+  4 of the 8 tool mutants at `_rfc7797.json._is_payload_base64_encoded#1`.
+  It does not hold for the 3 variants of the size tests; each kills 0 of the
+  3 tool mutants at its check. With the deletion counted as a mutant at its
+  check, it holds for the 4 variants, each of which kills the deletion of the
+  check that its test describes. The second sentence of M3 holds under both
+  readings for the 2 checks that fire in no case of the baseline,
+  `JWERegistry.validate_ciphertext_size#1` and
+  `JWERegistry.validate_protected_header_size#1` (rows 1 and 2): the whole
+  suite does not kill their deletions, and the suite with the variants does.
+  `described-cases.json` gives M3 as held with the deletions
+  (`tool_mutants_and_deletions`, as in `expectations`) and not held with tool
+  mutants alone (`tool_mutants`).
+
+**Comparison cases.** The 15 comparison cases (11 tests, 9 checks) are
+decided by the check they describe. The test of each kills the deletion of
+that check (15 of 15; for 8 cases it is the only test that does). The test
+kills at least 1 tool mutant at the check in 7 of the 15 cases.

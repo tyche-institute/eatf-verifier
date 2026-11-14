@@ -31,6 +31,42 @@ had been traced and rule 3 had not been computed; no mutant of the tool had
 been made. The programs had been written and tried on PyJWT 2.15.1 and
 jwcrypto 1.6.1, the 2 development subjects of `../target-reach/`.
 
+The steps of section 6 of the protocol have been carried out. A second
+commit holds the labels of the 2 readings as they were returned, and a third
+commit holds the results, the readings of the flags, the second computation
+and `DEVIATIONS.md`. Each of the 3 commits is time-stamped in the same way,
+and `timestamps/README.md` names them with their times.
+
+## Results
+
+The protocol's expectations are reported as held or not held, and no
+definition was changed after the protocol commit. `DEVIATIONS.md` lists the
+defects of programs that were corrected, the runs that were repeated, and
+what was added to the outputs that the protocol lists.
+
+| Step | Result | Stated in |
+|---|---|---|
+| Labels | The 2 readings give the same label for 257 of the 271 included blocks (Cohen's kappa 0.946 with every label text as a category). The agreed label names a check for 310 of the 402 cases, and that check decides 302 of them. The other 8 are in joserfc, and 4 of them are shadowed. | `generated/labels/SUMMARY.md`, `readings/joserfc/LABEL-OUTCOMES.md` |
+| Rule 3 | Over the 4 libraries, the cases with a target go from 229 under rule 2 to 235, the cases that their target decides from 145 to 195, and the flags from 84 to 40. | `trace/README.md`, `generated/trace/COMPARE.md`, `readings/joserfc/FLAGS-RULE3.md` |
+| Mutants | Only joserfc has shadowed cases. Its suite kills 376 of 516 tool mutants, 374 without the 4 tests that hold a shadowed case, and 376 with each of the 4 replaced by its repaired variant. The suite detects the deletion of 21 of 29 checks, and of 23 with the variants. | `mutants/README.md` ("Run on joserfc"), `generated/mutants/joserfc/` |
+| Recounts | Counts recomputed from the deposited outputs of `../target-reach/`. | `generated/recount/RECOUNT.md` |
+| Interpreter versions | The nested-header test of PyJWT on CPython 3.12 to 3.14, and the 4 tests of joserfc with their variants on CPython 3.13. | `versions/README.md` |
+| Second computation | On the 4 libraries, no compared value differs between the second scripts and the first programs. The report states what the 2 sides share. | `recompute/NOTES.md` |
+
+Expectations of section 2 of the protocol:
+
+| Expectation | Outcome |
+|---|---|
+| L1 | held: 3 of 3 units |
+| L2 | held: 52 of 52 units |
+| L3 | not held: 135 of 138 units |
+| T1 | not held: 16 flags of joserfc under rule 3, against 10 or fewer |
+| T2 | held |
+| T3 | not held: the target decides 90 of 106 cases of joserfc (84.9%), against at least 85% |
+| M1 | not held |
+| M2 | not held |
+| M3 | not held when only tool mutants count; held when the deletion of a check counts as a mutant at that check (`recompute/NOTES.md`, section 5.2) |
+
 ## Contents
 
 | Path | What it holds |
@@ -39,10 +75,19 @@ jwcrypto 1.6.1, the 2 development subjects of `../target-reach/`.
 | `labels/` | The instruction of a reading, the programs for packs, parts, validation and analysis, the transcribed first readings of the flags (`labels/README.md`) |
 | `trace/` | The trace plugin, rule 3 and its analysis (`trace/README.md`) |
 | `mutants/` | The programs that make, run and score the mutants and the deletions (`mutants/README.md`) |
-| `repaired/joserfc/` | Repaired variants of 3 tests of joserfc and their verification |
+| `labels/readings/<name>/` | The 2 readings of each held-out library (`A.tsv`, `B.tsv`) and the parts |
+| `repaired/joserfc/` | Repaired variants of 4 tests of joserfc and their verification (`repaired/joserfc/README.md`) |
 | `recount/` | The recounts (`recount/README.md`) |
-| `versions/` | The nested-header test of PyJWT on CPython 3.12, 3.13 and 3.14 (`versions/README.md`) |
-| `generated/` | Outputs: `recount/`, and the development runs in `trace/` and `mutants/pyjwt-package/` |
+| `versions/` | The nested-header test of PyJWT on CPython 3.12, 3.13 and 3.14, and the 4 tests of joserfc with their variants on CPython 3.13 (`versions/README.md`) |
+| `readings/joserfc/` | The reading of the 16 flags of joserfc under rule 3 (`FLAGS-RULE3.md`) and of the 8 cases that their agreed label does not decide (`LABEL-OUTCOMES.md`) |
+| `recompute/` | The second computation: 4 second scripts, 4 comparison scripts, their outputs in `recompute/out/`, unit tests, and the report `recompute/NOTES.md` |
+| `generated/labels/` | Per held-out library: agreement, outcomes of the cases, program against label. `SUMMARY.md` and `summary.json` hold the 4 libraries together and L1 to L3. |
+| `generated/trace/` | Per subject: functions started under an entry point, targets of rule 3, the analysis. `COMPARE.md` and `compare.json` compare rule 2 and rule 3. |
+| `generated/mutants/` | Per held-out library: the shadowed cases. For joserfc also the mutants, runs, kills per case and per test, mutants at each check, scores. `pyjwt-package/` holds the development run. |
+| `generated/recount/` | The recounts |
+| `generated/SHA256SUMS`, `recompute/out/SHA256SUMS` | The SHA-256 digest of every file under `generated/` and of every second output |
+| `timestamps/` | The tokens of the 3 commits and how to verify them (`timestamps/README.md`) |
+| `DEVIATIONS.md` | Deviations from the protocol |
 
 `work/` (copies, environments, logs, raw records, reading packs) is not
 deposited.
@@ -89,6 +134,14 @@ protocol gives the order and what is committed between the steps):
 
     # recounts
     python3 -I -B recount/recount.py
+
+After the 4 libraries, `labels/summary.py` writes `generated/labels/SUMMARY.md`
+and `summary.json`:
+
+    python3 -I -B labels/summary.py
+
+`recompute/NOTES.md`, section 3, gives the commands of the second computation
+and of its comparisons.
 
 ## Tests of the programs
 

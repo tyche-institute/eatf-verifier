@@ -1,0 +1,2163 @@
+{
+  "agreement": {
+    "label_texts_other_than_none_in_2_libraries": 0,
+    "label_texts_other_than_none_in_2_libraries_list": {},
+    "none_is_1_category_across_libraries_in_the_text_form": true,
+    "per_library": {
+      "authlib": {
+        "categories": {
+          "1 check and 1 none": 2,
+          "2 different checks": 0,
+          "both none": 14,
+          "same check": 27
+        },
+        "every_label_text_as_a_category": {
+          "agreeing_units": 41,
+          "categories": 21,
+          "expected_agreement": {
+            "denominator": 1849,
+            "numerator": 271,
+            "value": 0.1466
+          },
+          "kappa": {
+            "denominator": 789,
+            "numerator": 746,
+            "value": 0.9455
+          },
+          "observed_agreement": {
+            "denominator": 43,
+            "numerator": 41,
+            "value": 0.9535
+          },
+          "units": 43
+        },
+        "included_blocks": 43,
+        "names_a_check_or_none": {
+          "agreeing_units": 41,
+          "categories": 2,
+          "expected_agreement": {
+            "denominator": 1849,
+            "numerator": 1007,
+            "value": 0.5446
+          },
+          "kappa": {
+            "denominator": 421,
+            "numerator": 378,
+            "value": 0.8979
+          },
+          "observed_agreement": {
+            "denominator": 43,
+            "numerator": 41,
+            "value": 0.9535
+          },
+          "units": 43
+        }
+      },
+      "google-auth": {
+        "categories": {
+          "1 check and 1 none": 0,
+          "2 different checks": 0,
+          "both none": 0,
+          "same check": 17
+        },
+        "every_label_text_as_a_category": {
+          "agreeing_units": 17,
+          "categories": 13,
+          "expected_agreement": {
+            "denominator": 289,
+            "numerator": 25,
+            "value": 0.0865
+          },
+          "kappa": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "observed_agreement": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "units": 17
+        },
+        "included_blocks": 17,
+        "names_a_check_or_none": {
+          "agreeing_units": 17,
+          "categories": 1,
+          "expected_agreement": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "kappa": null,
+          "kappa_note": "expected agreement is 1: kappa has no value",
+          "observed_agreement": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "units": 17
+        }
+      },
+      "joserfc": {
+        "categories": {
+          "1 check and 1 none": 4,
+          "2 different checks": 1,
+          "both none": 22,
+          "same check": 111
+        },
+        "every_label_text_as_a_category": {
+          "agreeing_units": 133,
+          "categories": 46,
+          "expected_agreement": {
+            "denominator": 19044,
+            "numerator": 1333,
+            "value": 0.07
+          },
+          "kappa": {
+            "denominator": 17711,
+            "numerator": 17021,
+            "value": 0.961
+          },
+          "observed_agreement": {
+            "denominator": 138,
+            "numerator": 133,
+            "value": 0.9638
+          },
+          "units": 138
+        },
+        "included_blocks": 138,
+        "names_a_check_or_none": {
+          "agreeing_units": 134,
+          "categories": 2,
+          "expected_agreement": {
+            "denominator": 4761,
+            "numerator": 3391,
+            "value": 0.7122
+          },
+          "kappa": {
+            "denominator": 685,
+            "numerator": 616,
+            "value": 0.8993
+          },
+          "observed_agreement": {
+            "denominator": 69,
+            "numerator": 67,
+            "value": 0.971
+          },
+          "units": 138
+        }
+      },
+      "oauthlib": {
+        "categories": {
+          "1 check and 1 none": 7,
+          "2 different checks": 0,
+          "both none": 5,
+          "same check": 61
+        },
+        "every_label_text_as_a_category": {
+          "agreeing_units": 66,
+          "categories": 45,
+          "expected_agreement": {
+            "denominator": 5329,
+            "numerator": 245,
+            "value": 0.046
+          },
+          "kappa": {
+            "denominator": 5084,
+            "numerator": 4573,
+            "value": 0.8995
+          },
+          "observed_agreement": {
+            "denominator": 73,
+            "numerator": 66,
+            "value": 0.9041
+          },
+          "units": 73
+        },
+        "included_blocks": 73,
+        "names_a_check_or_none": {
+          "agreeing_units": 66,
+          "categories": 2,
+          "expected_agreement": {
+            "denominator": 5329,
+            "numerator": 4232,
+            "value": 0.7941
+          },
+          "kappa": {
+            "denominator": 1097,
+            "numerator": 586,
+            "value": 0.5342
+          },
+          "observed_agreement": {
+            "denominator": 73,
+            "numerator": 66,
+            "value": 0.9041
+          },
+          "units": 73
+        }
+      }
+    },
+    "pooled": {
+      "categories": {
+        "1 check and 1 none": 13,
+        "2 different checks": 1,
+        "both none": 41,
+        "same check": 216
+      },
+      "every_label_text_as_a_category": {
+        "agreeing_units": 257,
+        "categories": 123,
+        "expected_agreement": {
+          "denominator": 73441,
+          "numerator": 3260,
+          "value": 0.0444
+        },
+        "kappa": {
+          "denominator": 70181,
+          "numerator": 66387,
+          "value": 0.9459
+        },
+        "observed_agreement": {
+          "denominator": 271,
+          "numerator": 257,
+          "value": 0.9483
+        },
+        "units": 271
+      },
+      "every_label_text_qualified_by_library_variant": {
+        "agreeing_units": 257,
+        "categories": 125,
+        "expected_agreement": {
+          "denominator": 73441,
+          "numerator": 1874,
+          "value": 0.0255
+        },
+        "kappa": {
+          "denominator": 71567,
+          "numerator": 67773,
+          "value": 0.947
+        },
+        "observed_agreement": {
+          "denominator": 271,
+          "numerator": 257,
+          "value": 0.9483
+        },
+        "units": 271
+      },
+      "included_blocks": 271,
+      "names_a_check_or_none": {
+        "agreeing_units": 258,
+        "categories": 2,
+        "expected_agreement": {
+          "denominator": 73441,
+          "numerator": 52204,
+          "value": 0.7108
+        },
+        "kappa": {
+          "denominator": 21237,
+          "numerator": 17714,
+          "value": 0.8341
+        },
+        "observed_agreement": {
+          "denominator": 271,
+          "numerator": 258,
+          "value": 0.952
+        },
+        "units": 271
+      },
+      "names_a_check_or_none_marginals": {
+        "reading_A": {
+          "names a check": 225,
+          "none": 46
+        },
+        "reading_B": {
+          "names a check": 222,
+          "none": 49
+        }
+      }
+    }
+  },
+  "cases": {
+    "per_library": {
+      "authlib": {
+        "agreed_label_missing": 2,
+        "agreed_label_missing_by_param_unresolved": 0,
+        "agreed_label_names_a_check": 27,
+        "agreed_label_none": 19,
+        "cases_of_the_study": 48,
+        "class_a_cases_of_the_first_reading": 0,
+        "outcomes": {
+          "1 decided by its label": 27,
+          "2 label fires and another check decides": 0,
+          "3 label fires and no check decides": 0,
+          "4 label does not fire and no check decides": 0,
+          "5 deciding check not deleted or record missing": 0,
+          "6 label does not fire; case not observed on the copy without the deciding check": 0,
+          "7 label does not fire and decides once the deciding check is deleted": 0,
+          "8 label does not fire and does not decide then either": 0,
+          "fired checks not recorded": 0
+        },
+        "shadowed_by_agreed_label": 0,
+        "shadowed_by_agreed_label_ids": [],
+        "shadowed_or_class_a": 0,
+        "shadowed_or_class_a_ids": []
+      },
+      "google-auth": {
+        "agreed_label_missing": 0,
+        "agreed_label_missing_by_param_unresolved": 0,
+        "agreed_label_names_a_check": 22,
+        "agreed_label_none": 0,
+        "cases_of_the_study": 22,
+        "class_a_cases_of_the_first_reading": 0,
+        "outcomes": {
+          "1 decided by its label": 22,
+          "2 label fires and another check decides": 0,
+          "3 label fires and no check decides": 0,
+          "4 label does not fire and no check decides": 0,
+          "5 deciding check not deleted or record missing": 0,
+          "6 label does not fire; case not observed on the copy without the deciding check": 0,
+          "7 label does not fire and decides once the deciding check is deleted": 0,
+          "8 label does not fire and does not decide then either": 0,
+          "fired checks not recorded": 0
+        },
+        "shadowed_by_agreed_label": 0,
+        "shadowed_by_agreed_label_ids": [],
+        "shadowed_or_class_a": 0,
+        "shadowed_or_class_a_ids": []
+      },
+      "joserfc": {
+        "agreed_label_missing": 5,
+        "agreed_label_missing_by_param_unresolved": 0,
+        "agreed_label_names_a_check": 137,
+        "agreed_label_none": 48,
+        "cases_of_the_study": 190,
+        "class_a_cases_of_the_first_reading": 3,
+        "outcomes": {
+          "1 decided by its label": 129,
+          "2 label fires and another check decides": 0,
+          "3 label fires and no check decides": 0,
+          "4 label does not fire and no check decides": 0,
+          "5 deciding check not deleted or record missing": 0,
+          "6 label does not fire; case not observed on the copy without the deciding check": 0,
+          "7 label does not fire and decides once the deciding check is deleted": 4,
+          "8 label does not fire and does not decide then either": 4,
+          "fired checks not recorded": 0
+        },
+        "shadowed_by_agreed_label": 4,
+        "shadowed_by_agreed_label_ids": [
+          "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0",
+          "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0",
+          "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0",
+          "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0"
+        ],
+        "shadowed_or_class_a": 4,
+        "shadowed_or_class_a_ids": [
+          "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0",
+          "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0",
+          "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0",
+          "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0"
+        ]
+      },
+      "oauthlib": {
+        "agreed_label_missing": 9,
+        "agreed_label_missing_by_param_unresolved": 0,
+        "agreed_label_names_a_check": 124,
+        "agreed_label_none": 9,
+        "cases_of_the_study": 142,
+        "class_a_cases_of_the_first_reading": 0,
+        "outcomes": {
+          "1 decided by its label": 124,
+          "2 label fires and another check decides": 0,
+          "3 label fires and no check decides": 0,
+          "4 label does not fire and no check decides": 0,
+          "5 deciding check not deleted or record missing": 0,
+          "6 label does not fire; case not observed on the copy without the deciding check": 0,
+          "7 label does not fire and decides once the deciding check is deleted": 0,
+          "8 label does not fire and does not decide then either": 0,
+          "fired checks not recorded": 0
+        },
+        "shadowed_by_agreed_label": 0,
+        "shadowed_by_agreed_label_ids": [],
+        "shadowed_or_class_a": 0,
+        "shadowed_or_class_a_ids": []
+      }
+    },
+    "pooled": {
+      "agreed_label_missing": 16,
+      "agreed_label_missing_by_param_unresolved": 0,
+      "agreed_label_names_a_check": 310,
+      "agreed_label_none": 76,
+      "cases_of_the_study": 402,
+      "outcomes": {
+        "1 decided by its label": 302,
+        "2 label fires and another check decides": 0,
+        "3 label fires and no check decides": 0,
+        "4 label does not fire and no check decides": 0,
+        "5 deciding check not deleted or record missing": 0,
+        "6 label does not fire; case not observed on the copy without the deciding check": 0,
+        "7 label does not fire and decides once the deciding check is deleted": 4,
+        "8 label does not fire and does not decide then either": 4,
+        "fired checks not recorded": 0
+      },
+      "shadowed_by_agreed_label": 4,
+      "shadowed_by_agreed_label_ids": [
+        "joserfc: tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0",
+        "joserfc: tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0",
+        "joserfc: tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0",
+        "joserfc: tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0"
+      ],
+      "shadowed_or_class_a": 4,
+      "shadowed_or_class_a_ids": [
+        "joserfc: tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0",
+        "joserfc: tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0|0",
+        "joserfc: tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0",
+        "joserfc: tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0"
+      ]
+    }
+  },
+  "checks": {
+    "L1 recomputed equals the stated units and holding (authlib)": true,
+    "L1 recomputed equals the stated units and holding (google-auth)": true,
+    "L1 recomputed equals the stated units and holding (joserfc)": true,
+    "L1 recomputed equals the stated units and holding (oauthlib)": true,
+    "L1 recomputed status equals the stated status (authlib)": true,
+    "L1 recomputed status equals the stated status (google-auth)": true,
+    "L1 recomputed status equals the stated status (joserfc)": true,
+    "L1 recomputed status equals the stated status (oauthlib)": true,
+    "L2 recomputed equals the stated units and holding (authlib)": true,
+    "L2 recomputed equals the stated units and holding (google-auth)": true,
+    "L2 recomputed equals the stated units and holding (joserfc)": true,
+    "L2 recomputed equals the stated units and holding (oauthlib)": true,
+    "L2 recomputed status equals the stated status (authlib)": true,
+    "L2 recomputed status equals the stated status (google-auth)": true,
+    "L2 recomputed status equals the stated status (joserfc)": true,
+    "L2 recomputed status equals the stated status (oauthlib)": true,
+    "L3 recomputed equals the stated units and holding (authlib)": true,
+    "L3 recomputed equals the stated units and holding (google-auth)": true,
+    "L3 recomputed equals the stated units and holding (joserfc)": true,
+    "L3 recomputed equals the stated units and holding (oauthlib)": true,
+    "L3 recomputed status equals the stated status (authlib)": true,
+    "L3 recomputed status equals the stated status (google-auth)": true,
+    "L3 recomputed status equals the stated status (joserfc)": true,
+    "L3 recomputed status equals the stated status (oauthlib)": true,
+    "T1 recomputed equals the stated verdict (authlib)": true,
+    "T1 recomputed equals the stated verdict (google-auth)": true,
+    "T1 recomputed equals the stated verdict (joserfc)": true,
+    "T1 recomputed equals the stated verdict (oauthlib)": true,
+    "T2 recomputed equals the stated verdict (joserfc)": true,
+    "T3 recomputed equals the stated verdict (authlib)": true,
+    "T3 recomputed equals the stated verdict (google-auth)": true,
+    "T3 recomputed equals the stated verdict (joserfc)": true,
+    "T3 recomputed equals the stated verdict (oauthlib)": true,
+    "a case without a target is not decided (authlib, rule2)": true,
+    "a case without a target is not decided (authlib, rule3)": true,
+    "a case without a target is not decided (google-auth, rule2)": true,
+    "a case without a target is not decided (google-auth, rule3)": true,
+    "a case without a target is not decided (joserfc, rule2)": true,
+    "a case without a target is not decided (joserfc, rule3)": true,
+    "a case without a target is not decided (oauthlib, rule2)": true,
+    "a case without a target is not decided (oauthlib, rule3)": true,
+    "agreed label of a flag equals the agreed label of its case (authlib)": true,
+    "agreed label of a flag equals the agreed label of its case (google-auth)": true,
+    "agreed label of a flag equals the agreed label of its case (joserfc)": true,
+    "agreed label of a flag equals the agreed label of its case (oauthlib)": true,
+    "agreement categories sum to the included blocks (authlib)": true,
+    "agreement categories sum to the included blocks (google-auth)": true,
+    "agreement categories sum to the included blocks (joserfc)": true,
+    "agreement categories sum to the included blocks (oauthlib)": true,
+    "case partition by agreed label sums to the cases (authlib)": true,
+    "case partition by agreed label sums to the cases (google-auth)": true,
+    "case partition by agreed label sums to the cases (joserfc)": true,
+    "case partition by agreed label sums to the cases (oauthlib)": true,
+    "cases by agreed label recomputed equal the stated ones (authlib)": true,
+    "cases by agreed label recomputed equal the stated ones (google-auth)": true,
+    "cases by agreed label recomputed equal the stated ones (joserfc)": true,
+    "cases by agreed label recomputed equal the stated ones (oauthlib)": true,
+    "cases of the study equal the per-case rows (authlib)": true,
+    "cases of the study equal the per-case rows (google-auth)": true,
+    "cases of the study equal the per-case rows (joserfc)": true,
+    "cases of the study equal the per-case rows (oauthlib)": true,
+    "decides equals target is the deciding check (authlib, rule2)": true,
+    "decides equals target is the deciding check (authlib, rule3)": true,
+    "decides equals target is the deciding check (google-auth, rule2)": true,
+    "decides equals target is the deciding check (google-auth, rule3)": true,
+    "decides equals target is the deciding check (joserfc, rule2)": true,
+    "decides equals target is the deciding check (joserfc, rule3)": true,
+    "decides equals target is the deciding check (oauthlib, rule2)": true,
+    "decides equals target is the deciding check (oauthlib, rule3)": true,
+    "every case whose agreed label names a check has an outcome (authlib)": true,
+    "every case whose agreed label names a check has an outcome (google-auth)": true,
+    "every case whose agreed label names a check has an outcome (joserfc)": true,
+    "every case whose agreed label names a check has an outcome (oauthlib)": true,
+    "every flag of the first reading is a case of the study (authlib)": true,
+    "every flag of the first reading is a case of the study (google-auth)": true,
+    "every flag of the first reading is a case of the study (joserfc)": true,
+    "every flag of the first reading is a case of the study (oauthlib)": true,
+    "first-reading categories by class recomputed equal the stated ones (authlib)": true,
+    "first-reading categories by class recomputed equal the stated ones (google-auth)": true,
+    "first-reading categories by class recomputed equal the stated ones (joserfc)": true,
+    "first-reading categories by class recomputed equal the stated ones (oauthlib)": true,
+    "first-reading category recomputed equals the stated one (authlib)": true,
+    "first-reading category recomputed equals the stated one (google-auth)": true,
+    "first-reading category recomputed equals the stated one (joserfc)": true,
+    "first-reading category recomputed equals the stated one (oauthlib)": true,
+    "first-reading rows equal the flags counted (authlib)": true,
+    "first-reading rows equal the flags counted (google-auth)": true,
+    "first-reading rows equal the flags counted (joserfc)": true,
+    "first-reading rows equal the flags counted (oauthlib)": true,
+    "gain, keep and change sum to rule-3 cases with a target (authlib)": true,
+    "gain, keep and change sum to rule-3 cases with a target (google-auth)": true,
+    "gain, keep and change sum to rule-3 cases with a target (joserfc)": true,
+    "gain, keep and change sum to rule-3 cases with a target (oauthlib)": true,
+    "kappa recomputed equals the stated one (authlib, names)": true,
+    "kappa recomputed equals the stated one (authlib, text)": true,
+    "kappa recomputed equals the stated one (google-auth, names)": true,
+    "kappa recomputed equals the stated one (google-auth, text)": true,
+    "kappa recomputed equals the stated one (joserfc, names)": true,
+    "kappa recomputed equals the stated one (joserfc, text)": true,
+    "kappa recomputed equals the stated one (oauthlib, names)": true,
+    "kappa recomputed equals the stated one (oauthlib, text)": true,
+    "keep, change and lose sum to rule-2 cases with a target (authlib)": true,
+    "keep, change and lose sum to rule-2 cases with a target (google-auth)": true,
+    "keep, change and lose sum to rule-2 cases with a target (joserfc)": true,
+    "keep, change and lose sum to rule-2 cases with a target (oauthlib)": true,
+    "names-form agreement equals the categories other than 1 check and 1 none (authlib)": true,
+    "names-form agreement equals the categories other than 1 check and 1 none (google-auth)": true,
+    "names-form agreement equals the categories other than 1 check and 1 none (joserfc)": true,
+    "names-form agreement equals the categories other than 1 check and 1 none (oauthlib)": true,
+    "names-form marginals sum to the included blocks (authlib, marginals_reading_A)": true,
+    "names-form marginals sum to the included blocks (authlib, marginals_reading_B)": true,
+    "names-form marginals sum to the included blocks (google-auth, marginals_reading_A)": true,
+    "names-form marginals sum to the included blocks (google-auth, marginals_reading_B)": true,
+    "names-form marginals sum to the included blocks (joserfc, marginals_reading_A)": true,
+    "names-form marginals sum to the included blocks (joserfc, marginals_reading_B)": true,
+    "names-form marginals sum to the included blocks (oauthlib, marginals_reading_A)": true,
+    "names-form marginals sum to the included blocks (oauthlib, marginals_reading_B)": true,
+    "names-form units equal the included blocks (authlib)": true,
+    "names-form units equal the included blocks (google-auth)": true,
+    "names-form units equal the included blocks (joserfc)": true,
+    "names-form units equal the included blocks (oauthlib)": true,
+    "no outcome without an agreed label naming a check (authlib)": true,
+    "no outcome without an agreed label naming a check (joserfc)": true,
+    "no outcome without an agreed label naming a check (oauthlib)": true,
+    "no target tier holds only categories without a target (authlib, rule 2)": true,
+    "no target tier holds only categories without a target (authlib, rule 3)": true,
+    "no target tier holds only categories without a target (google-auth, rule 2)": true,
+    "no target tier holds only categories without a target (google-auth, rule 3)": true,
+    "no target tier holds only categories without a target (joserfc, rule 2)": true,
+    "no target tier holds only categories without a target (joserfc, rule 3)": true,
+    "no target tier holds only categories without a target (oauthlib, rule 2)": true,
+    "no target tier holds only categories without a target (oauthlib, rule 3)": true,
+    "observed agreement recomputed equals the stated one (authlib, names)": true,
+    "observed agreement recomputed equals the stated one (authlib, text)": true,
+    "observed agreement recomputed equals the stated one (google-auth, names)": true,
+    "observed agreement recomputed equals the stated one (google-auth, text)": true,
+    "observed agreement recomputed equals the stated one (joserfc, names)": true,
+    "observed agreement recomputed equals the stated one (joserfc, text)": true,
+    "observed agreement recomputed equals the stated one (oauthlib, names)": true,
+    "observed agreement recomputed equals the stated one (oauthlib, text)": true,
+    "outcome 1 means the label is the deciding check (authlib)": true,
+    "outcome 1 means the label is the deciding check (google-auth)": true,
+    "outcome 1 means the label is the deciding check (joserfc)": true,
+    "outcome 1 means the label is the deciding check (oauthlib)": true,
+    "outcomes recomputed equal the stated ones (authlib)": true,
+    "outcomes recomputed equal the stated ones (google-auth)": true,
+    "outcomes recomputed equal the stated ones (joserfc)": true,
+    "outcomes recomputed equal the stated ones (oauthlib)": true,
+    "outcomes sum to the cases whose agreed label names a check (authlib)": true,
+    "outcomes sum to the cases whose agreed label names a check (google-auth)": true,
+    "outcomes sum to the cases whose agreed label names a check (joserfc)": true,
+    "outcomes sum to the cases whose agreed label names a check (oauthlib)": true,
+    "pooled agreement categories sum to the pooled blocks": true,
+    "pooled case partition by agreed label sums to the pooled cases": true,
+    "pooled outcomes sum to the pooled cases whose agreed label names a check": true,
+    "pooled program against label sums to the pooled cases (rule 2)": true,
+    "pooled program against label sums to the pooled cases (rule 3)": true,
+    "pooled program against label: agreed target cases split into equal and not (rule 2, all tiers)": true,
+    "pooled program against label: agreed target cases split into equal and not (rule 2, assertion)": true,
+    "pooled program against label: agreed target cases split into equal and not (rule 2, name)": true,
+    "pooled program against label: agreed target cases split into equal and not (rule 2, no target)": true,
+    "pooled program against label: agreed target cases split into equal and not (rule 3, all tiers)": true,
+    "pooled program against label: agreed target cases split into equal and not (rule 3, assertion)": true,
+    "pooled program against label: agreed target cases split into equal and not (rule 3, name)": true,
+    "pooled program against label: agreed target cases split into equal and not (rule 3, no target)": true,
+    "pooled program against label: target cases split into agreed and missing (rule 2, all tiers)": true,
+    "pooled program against label: target cases split into agreed and missing (rule 2, assertion)": true,
+    "pooled program against label: target cases split into agreed and missing (rule 2, name)": true,
+    "pooled program against label: target cases split into agreed and missing (rule 2, no target)": true,
+    "pooled program against label: target cases split into agreed and missing (rule 3, all tiers)": true,
+    "pooled program against label: target cases split into agreed and missing (rule 3, assertion)": true,
+    "pooled program against label: target cases split into agreed and missing (rule 3, name)": true,
+    "pooled program against label: target cases split into agreed and missing (rule 3, no target)": true,
+    "pooled transitions sum to the pooled cases": true,
+    "program against label recomputed equals the stated counts (authlib, rule 2, all tiers)": true,
+    "program against label recomputed equals the stated counts (authlib, rule 2, assertion)": true,
+    "program against label recomputed equals the stated counts (authlib, rule 2, name)": true,
+    "program against label recomputed equals the stated counts (authlib, rule 2, no target)": true,
+    "program against label recomputed equals the stated counts (authlib, rule 3, all tiers)": true,
+    "program against label recomputed equals the stated counts (authlib, rule 3, assertion)": true,
+    "program against label recomputed equals the stated counts (authlib, rule 3, name)": true,
+    "program against label recomputed equals the stated counts (authlib, rule 3, no target)": true,
+    "program against label recomputed equals the stated counts (google-auth, rule 2, all tiers)": true,
+    "program against label recomputed equals the stated counts (google-auth, rule 2, assertion)": true,
+    "program against label recomputed equals the stated counts (google-auth, rule 2, name)": true,
+    "program against label recomputed equals the stated counts (google-auth, rule 2, no target)": true,
+    "program against label recomputed equals the stated counts (google-auth, rule 3, all tiers)": true,
+    "program against label recomputed equals the stated counts (google-auth, rule 3, assertion)": true,
+    "program against label recomputed equals the stated counts (google-auth, rule 3, name)": true,
+    "program against label recomputed equals the stated counts (google-auth, rule 3, no target)": true,
+    "program against label recomputed equals the stated counts (joserfc, rule 2, all tiers)": true,
+    "program against label recomputed equals the stated counts (joserfc, rule 2, assertion)": true,
+    "program against label recomputed equals the stated counts (joserfc, rule 2, name)": true,
+    "program against label recomputed equals the stated counts (joserfc, rule 2, no target)": true,
+    "program against label recomputed equals the stated counts (joserfc, rule 3, all tiers)": true,
+    "program against label recomputed equals the stated counts (joserfc, rule 3, assertion)": true,
+    "program against label recomputed equals the stated counts (joserfc, rule 3, name)": true,
+    "program against label recomputed equals the stated counts (joserfc, rule 3, no target)": true,
+    "program against label recomputed equals the stated counts (oauthlib, rule 2, all tiers)": true,
+    "program against label recomputed equals the stated counts (oauthlib, rule 2, assertion)": true,
+    "program against label recomputed equals the stated counts (oauthlib, rule 2, name)": true,
+    "program against label recomputed equals the stated counts (oauthlib, rule 2, no target)": true,
+    "program against label recomputed equals the stated counts (oauthlib, rule 3, all tiers)": true,
+    "program against label recomputed equals the stated counts (oauthlib, rule 3, assertion)": true,
+    "program against label recomputed equals the stated counts (oauthlib, rule 3, name)": true,
+    "program against label recomputed equals the stated counts (oauthlib, rule 3, no target)": true,
+    "program against label sums to the cases (authlib, rule 2)": true,
+    "program against label sums to the cases (authlib, rule 3)": true,
+    "program against label sums to the cases (google-auth, rule 2)": true,
+    "program against label sums to the cases (google-auth, rule 3)": true,
+    "program against label sums to the cases (joserfc, rule 2)": true,
+    "program against label sums to the cases (joserfc, rule 3)": true,
+    "program against label sums to the cases (oauthlib, rule 2)": true,
+    "program against label sums to the cases (oauthlib, rule 3)": true,
+    "program against label tiers sum to all tiers (authlib, rule 2)": true,
+    "program against label tiers sum to all tiers (authlib, rule 3)": true,
+    "program against label tiers sum to all tiers (google-auth, rule 2)": true,
+    "program against label tiers sum to all tiers (google-auth, rule 3)": true,
+    "program against label tiers sum to all tiers (joserfc, rule 2)": true,
+    "program against label tiers sum to all tiers (joserfc, rule 3)": true,
+    "program against label tiers sum to all tiers (oauthlib, rule 2)": true,
+    "program against label tiers sum to all tiers (oauthlib, rule 3)": true,
+    "rule counts recomputed equal the stated ones (authlib, rule2, all tiers)": true,
+    "rule counts recomputed equal the stated ones (authlib, rule2, assertion)": true,
+    "rule counts recomputed equal the stated ones (authlib, rule2, name)": true,
+    "rule counts recomputed equal the stated ones (authlib, rule3, all tiers)": true,
+    "rule counts recomputed equal the stated ones (authlib, rule3, assertion)": true,
+    "rule counts recomputed equal the stated ones (authlib, rule3, name)": true,
+    "rule counts recomputed equal the stated ones (google-auth, rule2, all tiers)": true,
+    "rule counts recomputed equal the stated ones (google-auth, rule2, assertion)": true,
+    "rule counts recomputed equal the stated ones (google-auth, rule2, name)": true,
+    "rule counts recomputed equal the stated ones (google-auth, rule3, all tiers)": true,
+    "rule counts recomputed equal the stated ones (google-auth, rule3, assertion)": true,
+    "rule counts recomputed equal the stated ones (google-auth, rule3, name)": true,
+    "rule counts recomputed equal the stated ones (joserfc, rule2, all tiers)": true,
+    "rule counts recomputed equal the stated ones (joserfc, rule2, assertion)": true,
+    "rule counts recomputed equal the stated ones (joserfc, rule2, name)": true,
+    "rule counts recomputed equal the stated ones (joserfc, rule3, all tiers)": true,
+    "rule counts recomputed equal the stated ones (joserfc, rule3, assertion)": true,
+    "rule counts recomputed equal the stated ones (joserfc, rule3, name)": true,
+    "rule counts recomputed equal the stated ones (oauthlib, rule2, all tiers)": true,
+    "rule counts recomputed equal the stated ones (oauthlib, rule2, assertion)": true,
+    "rule counts recomputed equal the stated ones (oauthlib, rule2, name)": true,
+    "rule counts recomputed equal the stated ones (oauthlib, rule3, all tiers)": true,
+    "rule counts recomputed equal the stated ones (oauthlib, rule3, assertion)": true,
+    "rule counts recomputed equal the stated ones (oauthlib, rule3, name)": true,
+    "rule counts: decided plus not decided equal cases with a target (authlib, rule2)": true,
+    "rule counts: decided plus not decided equal cases with a target (authlib, rule3)": true,
+    "rule counts: decided plus not decided equal cases with a target (google-auth, rule2)": true,
+    "rule counts: decided plus not decided equal cases with a target (google-auth, rule3)": true,
+    "rule counts: decided plus not decided equal cases with a target (joserfc, rule2)": true,
+    "rule counts: decided plus not decided equal cases with a target (joserfc, rule3)": true,
+    "rule counts: decided plus not decided equal cases with a target (oauthlib, rule2)": true,
+    "rule counts: decided plus not decided equal cases with a target (oauthlib, rule3)": true,
+    "rule tiers sum to all tiers (authlib, rule2)": true,
+    "rule tiers sum to all tiers (authlib, rule3)": true,
+    "rule tiers sum to all tiers (google-auth, rule2)": true,
+    "rule tiers sum to all tiers (google-auth, rule3)": true,
+    "rule tiers sum to all tiers (joserfc, rule2)": true,
+    "rule tiers sum to all tiers (joserfc, rule3)": true,
+    "rule tiers sum to all tiers (oauthlib, rule2)": true,
+    "rule tiers sum to all tiers (oauthlib, rule3)": true,
+    "shadowed cases recomputed equal the stated ones (authlib)": true,
+    "shadowed cases recomputed equal the stated ones (google-auth)": true,
+    "shadowed cases recomputed equal the stated ones (joserfc)": true,
+    "shadowed cases recomputed equal the stated ones (oauthlib)": true,
+    "shadowed union recomputed equals the stated one (authlib)": true,
+    "shadowed union recomputed equals the stated one (google-auth)": true,
+    "shadowed union recomputed equals the stated one (joserfc)": true,
+    "shadowed union recomputed equals the stated one (oauthlib)": true,
+    "text-form agreement equals same check plus both none (authlib)": true,
+    "text-form agreement equals same check plus both none (google-auth)": true,
+    "text-form agreement equals same check plus both none (joserfc)": true,
+    "text-form agreement equals same check plus both none (oauthlib)": true,
+    "text-form marginals sum to the included blocks (authlib, marginals_reading_A)": true,
+    "text-form marginals sum to the included blocks (authlib, marginals_reading_B)": true,
+    "text-form marginals sum to the included blocks (google-auth, marginals_reading_A)": true,
+    "text-form marginals sum to the included blocks (google-auth, marginals_reading_B)": true,
+    "text-form marginals sum to the included blocks (joserfc, marginals_reading_A)": true,
+    "text-form marginals sum to the included blocks (joserfc, marginals_reading_B)": true,
+    "text-form marginals sum to the included blocks (oauthlib, marginals_reading_A)": true,
+    "text-form marginals sum to the included blocks (oauthlib, marginals_reading_B)": true,
+    "text-form units equal the included blocks (authlib)": true,
+    "text-form units equal the included blocks (google-auth)": true,
+    "text-form units equal the included blocks (joserfc)": true,
+    "text-form units equal the included blocks (oauthlib)": true,
+    "the 2 inputs give the same deciding check (authlib)": true,
+    "the 2 inputs give the same deciding check (google-auth)": true,
+    "the 2 inputs give the same deciding check (joserfc)": true,
+    "the 2 inputs give the same deciding check (oauthlib)": true,
+    "the 2 inputs give the same rule 2 target (authlib)": true,
+    "the 2 inputs give the same rule 2 target (google-auth)": true,
+    "the 2 inputs give the same rule 2 target (joserfc)": true,
+    "the 2 inputs give the same rule 2 target (oauthlib)": true,
+    "the 2 inputs give the same rule 2 tier (authlib)": true,
+    "the 2 inputs give the same rule 2 tier (google-auth)": true,
+    "the 2 inputs give the same rule 2 tier (joserfc)": true,
+    "the 2 inputs give the same rule 2 tier (oauthlib)": true,
+    "the 2 inputs give the same rule 3 target (authlib)": true,
+    "the 2 inputs give the same rule 3 target (google-auth)": true,
+    "the 2 inputs give the same rule 3 target (joserfc)": true,
+    "the 2 inputs give the same rule 3 target (oauthlib)": true,
+    "the 2 inputs give the same rule 3 tier (authlib)": true,
+    "the 2 inputs give the same rule 3 tier (google-auth)": true,
+    "the 2 inputs give the same rule 3 tier (joserfc)": true,
+    "the 2 inputs give the same rule 3 tier (oauthlib)": true,
+    "the 2 inputs hold the same cases (authlib)": true,
+    "the 2 inputs hold the same cases (google-auth)": true,
+    "the 2 inputs hold the same cases (joserfc)": true,
+    "the 2 inputs hold the same cases (oauthlib)": true,
+    "transition counts recomputed equal the stated ones (authlib, changes its target)": true,
+    "transition counts recomputed equal the stated ones (authlib, gains a target)": true,
+    "transition counts recomputed equal the stated ones (authlib, keeps its target)": true,
+    "transition counts recomputed equal the stated ones (authlib, loses its target)": true,
+    "transition counts recomputed equal the stated ones (authlib, no target under either rule)": true,
+    "transition counts recomputed equal the stated ones (google-auth, changes its target)": true,
+    "transition counts recomputed equal the stated ones (google-auth, gains a target)": true,
+    "transition counts recomputed equal the stated ones (google-auth, keeps its target)": true,
+    "transition counts recomputed equal the stated ones (google-auth, loses its target)": true,
+    "transition counts recomputed equal the stated ones (google-auth, no target under either rule)": true,
+    "transition counts recomputed equal the stated ones (joserfc, changes its target)": true,
+    "transition counts recomputed equal the stated ones (joserfc, gains a target)": true,
+    "transition counts recomputed equal the stated ones (joserfc, keeps its target)": true,
+    "transition counts recomputed equal the stated ones (joserfc, loses its target)": true,
+    "transition counts recomputed equal the stated ones (joserfc, no target under either rule)": true,
+    "transition counts recomputed equal the stated ones (oauthlib, changes its target)": true,
+    "transition counts recomputed equal the stated ones (oauthlib, gains a target)": true,
+    "transition counts recomputed equal the stated ones (oauthlib, keeps its target)": true,
+    "transition counts recomputed equal the stated ones (oauthlib, loses its target)": true,
+    "transition counts recomputed equal the stated ones (oauthlib, no target under either rule)": true,
+    "transition recomputed equals the stated one (authlib)": true,
+    "transition recomputed equals the stated one (google-auth)": true,
+    "transition recomputed equals the stated one (joserfc)": true,
+    "transition recomputed equals the stated one (oauthlib)": true,
+    "transitions sum to the cases (authlib)": true,
+    "transitions sum to the cases (google-auth)": true,
+    "transitions sum to the cases (joserfc)": true,
+    "transitions sum to the cases (oauthlib)": true
+  },
+  "checks_failed": [],
+  "expectations_labels": {
+    "note": "L1 is stated for joserfc only; the other libraries have no class-A flag and no unit.",
+    "overall": {
+      "L1": {
+        "holding": 3,
+        "status": "held",
+        "units": 3
+      },
+      "L2": {
+        "holding": 52,
+        "status": "held",
+        "units": 52
+      },
+      "L3": {
+        "holding": 135,
+        "status": "not held",
+        "units": 138
+      }
+    },
+    "per_library": {
+      "authlib": {
+        "L1": {
+          "holding": 0,
+          "status": "not applicable",
+          "units": 0
+        },
+        "L2": {
+          "holding": 3,
+          "status": "held",
+          "units": 3
+        },
+        "L3": {
+          "holding": 15,
+          "status": "held",
+          "units": 15
+        }
+      },
+      "google-auth": {
+        "L1": {
+          "holding": 0,
+          "status": "not applicable",
+          "units": 0
+        },
+        "L2": {
+          "holding": 2,
+          "status": "held",
+          "units": 2
+        },
+        "L3": {
+          "holding": 13,
+          "status": "held",
+          "units": 13
+        }
+      },
+      "joserfc": {
+        "L1": {
+          "holding": 3,
+          "status": "held",
+          "units": 3
+        },
+        "L2": {
+          "holding": 37,
+          "status": "held",
+          "units": 37
+        },
+        "L3": {
+          "holding": 64,
+          "status": "not held",
+          "units": 67
+        }
+      },
+      "oauthlib": {
+        "L1": {
+          "holding": 0,
+          "status": "not applicable",
+          "units": 0
+        },
+        "L2": {
+          "holding": 10,
+          "status": "held",
+          "units": 10
+        },
+        "L3": {
+          "holding": 43,
+          "status": "held",
+          "units": 43
+        }
+      }
+    }
+  },
+  "expectations_rule": {
+    "note": "T1, T2 and T3 are stated for joserfc; the quantities of the other libraries are descriptive.",
+    "per_library_quantities": {
+      "authlib": {
+        "T1": {
+          "holds": false,
+          "rule2_flags": 12,
+          "rule2_flags_equal_stated_60": false,
+          "rule3_flags": 12
+        },
+        "T2": {
+          "class_a_cases": 0,
+          "class_a_ids": [],
+          "holds": null,
+          "keep_their_target": 0
+        },
+        "T3": {
+          "holds": false,
+          "rule2_decided": {
+            "denominator": 5,
+            "numerator": 3,
+            "value": 0.6
+          },
+          "rule2_equal_stated_71_of_131": false,
+          "rule3_decided": {
+            "denominator": 5,
+            "numerator": 3,
+            "value": 0.6
+          },
+          "rule3_decided_count": 18,
+          "rule3_with_a_target": 30
+        }
+      },
+      "google-auth": {
+        "T1": {
+          "holds": false,
+          "rule2_flags": 2,
+          "rule2_flags_equal_stated_60": false,
+          "rule3_flags": 2
+        },
+        "T2": {
+          "class_a_cases": 0,
+          "class_a_ids": [],
+          "holds": null,
+          "keep_their_target": 0
+        },
+        "T3": {
+          "holds": true,
+          "rule2_decided": {
+            "denominator": 15,
+            "numerator": 13,
+            "value": 0.8667
+          },
+          "rule2_equal_stated_71_of_131": false,
+          "rule3_decided": {
+            "denominator": 15,
+            "numerator": 13,
+            "value": 0.8667
+          },
+          "rule3_decided_count": 13,
+          "rule3_with_a_target": 15
+        }
+      },
+      "joserfc": {
+        "T1": {
+          "holds": false,
+          "rule2_flags": 60,
+          "rule2_flags_equal_stated_60": true,
+          "rule3_flags": 16
+        },
+        "T2": {
+          "class_a_cases": 3,
+          "class_a_ids": [
+            "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size|tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0|0",
+            "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error|tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0|0",
+            "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected|tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1|0"
+          ],
+          "holds": true,
+          "keep_their_target": 3
+        },
+        "T3": {
+          "holds": false,
+          "rule2_decided": {
+            "denominator": 131,
+            "numerator": 71,
+            "value": 0.542
+          },
+          "rule2_equal_stated_71_of_131": true,
+          "rule3_decided": {
+            "denominator": 53,
+            "numerator": 45,
+            "value": 0.8491
+          },
+          "rule3_decided_count": 90,
+          "rule3_with_a_target": 106
+        }
+      },
+      "oauthlib": {
+        "T1": {
+          "holds": false,
+          "rule2_flags": 10,
+          "rule2_flags_equal_stated_60": false,
+          "rule3_flags": 10
+        },
+        "T2": {
+          "class_a_cases": 0,
+          "class_a_ids": [],
+          "holds": null,
+          "keep_their_target": 0
+        },
+        "T3": {
+          "holds": true,
+          "rule2_decided": {
+            "denominator": 53,
+            "numerator": 43,
+            "value": 0.8113
+          },
+          "rule2_equal_stated_71_of_131": false,
+          "rule3_decided": {
+            "denominator": 42,
+            "numerator": 37,
+            "value": 0.881
+          },
+          "rule3_decided_count": 74,
+          "rule3_with_a_target": 84
+        }
+      }
+    },
+    "stated_for": "joserfc",
+    "status": {
+      "T1": "not held",
+      "T2": "held",
+      "T3": "not held"
+    }
+  },
+  "first_reading": {
+    "per_library": {
+      "authlib": {
+        "by_class": {
+          "C": {
+            "agreed label differs from described check": 0,
+            "agreed label equals described check": 3,
+            "agreed label names a check, no described check": 0,
+            "agreed label none, described check given": 3,
+            "agreed label none, no described check": 6,
+            "no agreed label": 0
+          }
+        },
+        "flags": 12,
+        "total": {
+          "agreed label differs from described check": 0,
+          "agreed label equals described check": 3,
+          "agreed label names a check, no described check": 0,
+          "agreed label none, described check given": 3,
+          "agreed label none, no described check": 6,
+          "no agreed label": 0
+        }
+      },
+      "google-auth": {
+        "by_class": {
+          "C": {
+            "agreed label differs from described check": 0,
+            "agreed label equals described check": 2,
+            "agreed label names a check, no described check": 0,
+            "agreed label none, described check given": 0,
+            "agreed label none, no described check": 0,
+            "no agreed label": 0
+          }
+        },
+        "flags": 2,
+        "total": {
+          "agreed label differs from described check": 0,
+          "agreed label equals described check": 2,
+          "agreed label names a check, no described check": 0,
+          "agreed label none, described check given": 0,
+          "agreed label none, no described check": 0,
+          "no agreed label": 0
+        }
+      },
+      "joserfc": {
+        "by_class": {
+          "A": {
+            "agreed label differs from described check": 0,
+            "agreed label equals described check": 3,
+            "agreed label names a check, no described check": 0,
+            "agreed label none, described check given": 0,
+            "agreed label none, no described check": 0,
+            "no agreed label": 0
+          },
+          "C": {
+            "agreed label differs from described check": 0,
+            "agreed label equals described check": 37,
+            "agreed label names a check, no described check": 0,
+            "agreed label none, described check given": 20,
+            "agreed label none, no described check": 0,
+            "no agreed label": 0
+          }
+        },
+        "flags": 60,
+        "total": {
+          "agreed label differs from described check": 0,
+          "agreed label equals described check": 40,
+          "agreed label names a check, no described check": 0,
+          "agreed label none, described check given": 20,
+          "agreed label none, no described check": 0,
+          "no agreed label": 0
+        }
+      },
+      "oauthlib": {
+        "by_class": {
+          "C": {
+            "agreed label differs from described check": 0,
+            "agreed label equals described check": 10,
+            "agreed label names a check, no described check": 0,
+            "agreed label none, described check given": 0,
+            "agreed label none, no described check": 0,
+            "no agreed label": 0
+          }
+        },
+        "flags": 10,
+        "total": {
+          "agreed label differs from described check": 0,
+          "agreed label equals described check": 10,
+          "agreed label names a check, no described check": 0,
+          "agreed label none, described check given": 0,
+          "agreed label none, no described check": 0,
+          "no agreed label": 0
+        }
+      }
+    },
+    "pooled": {
+      "by_class": {
+        "A": {
+          "agreed label differs from described check": 0,
+          "agreed label equals described check": 3,
+          "agreed label names a check, no described check": 0,
+          "agreed label none, described check given": 0,
+          "agreed label none, no described check": 0,
+          "no agreed label": 0
+        },
+        "C": {
+          "agreed label differs from described check": 0,
+          "agreed label equals described check": 52,
+          "agreed label names a check, no described check": 0,
+          "agreed label none, described check given": 23,
+          "agreed label none, no described check": 6,
+          "no agreed label": 0
+        }
+      },
+      "flags": 84,
+      "flags_by_class": {
+        "A": 3,
+        "C": 81
+      },
+      "total": {
+        "agreed label differs from described check": 0,
+        "agreed label equals described check": 55,
+        "agreed label names a check, no described check": 0,
+        "agreed label none, described check given": 23,
+        "agreed label none, no described check": 6,
+        "no agreed label": 0
+      }
+    }
+  },
+  "inputs": {
+    "files": [
+      "recompute/out/google-auth/second_labels.json",
+      "recompute/out/google-auth/second_rule3.json",
+      "recompute/out/oauthlib/second_labels.json",
+      "recompute/out/oauthlib/second_rule3.json",
+      "recompute/out/authlib/second_labels.json",
+      "recompute/out/authlib/second_rule3.json",
+      "recompute/out/joserfc/second_labels.json",
+      "recompute/out/joserfc/second_rule3.json"
+    ],
+    "names": [
+      "google-auth",
+      "oauthlib",
+      "authlib",
+      "joserfc"
+    ],
+    "out_dir": "recompute/out"
+  },
+  "program_vs_label": {
+    "rule 2": {
+      "per_library": {
+        "authlib": {
+          "all tiers": {
+            "cases_with_a_target": 30,
+            "cases_with_a_target_and_an_agreed_label": 30,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 7,
+              "no agreed label": 2,
+              "no target, agreed label names a check": 9,
+              "target differs from agreed label": 3,
+              "target equals agreed label": 15,
+              "target given, agreed label none": 12
+            },
+            "target_equals_label": 15,
+            "target_is_not_the_label": 15,
+            "target_is_not_the_label_agreed_label_none": 12,
+            "target_is_not_the_label_another_check": 3
+          },
+          "assertion": {
+            "cases_with_a_target": 5,
+            "cases_with_a_target_and_an_agreed_label": 5,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 5,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 5,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          },
+          "name": {
+            "cases_with_a_target": 25,
+            "cases_with_a_target_and_an_agreed_label": 25,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 3,
+              "target equals agreed label": 10,
+              "target given, agreed label none": 12
+            },
+            "target_equals_label": 10,
+            "target_is_not_the_label": 15,
+            "target_is_not_the_label_agreed_label_none": 12,
+            "target_is_not_the_label_another_check": 3
+          },
+          "no target": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 7,
+              "no agreed label": 2,
+              "no target, agreed label names a check": 9,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          }
+        },
+        "google-auth": {
+          "all tiers": {
+            "cases_with_a_target": 15,
+            "cases_with_a_target_and_an_agreed_label": 15,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 7,
+              "target differs from agreed label": 2,
+              "target equals agreed label": 13,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 13,
+            "target_is_not_the_label": 2,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 2
+          },
+          "assertion": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          },
+          "name": {
+            "cases_with_a_target": 15,
+            "cases_with_a_target_and_an_agreed_label": 15,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 2,
+              "target equals agreed label": 13,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 13,
+            "target_is_not_the_label": 2,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 2
+          },
+          "no target": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 7,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          }
+        },
+        "joserfc": {
+          "all tiers": {
+            "cases_with_a_target": 131,
+            "cases_with_a_target_and_an_agreed_label": 129,
+            "cases_with_a_target_and_no_agreed_label": 2,
+            "categories": {
+              "both none": 26,
+              "no agreed label": 5,
+              "no target, agreed label names a check": 30,
+              "target differs from agreed label": 40,
+              "target equals agreed label": 67,
+              "target given, agreed label none": 22
+            },
+            "target_equals_label": 67,
+            "target_is_not_the_label": 62,
+            "target_is_not_the_label_agreed_label_none": 22,
+            "target_is_not_the_label_another_check": 40
+          },
+          "assertion": {
+            "cases_with_a_target": 99,
+            "cases_with_a_target_and_an_agreed_label": 97,
+            "cases_with_a_target_and_no_agreed_label": 2,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 2,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 37,
+              "target equals agreed label": 40,
+              "target given, agreed label none": 20
+            },
+            "target_equals_label": 40,
+            "target_is_not_the_label": 57,
+            "target_is_not_the_label_agreed_label_none": 20,
+            "target_is_not_the_label_another_check": 37
+          },
+          "name": {
+            "cases_with_a_target": 32,
+            "cases_with_a_target_and_an_agreed_label": 32,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 3,
+              "target equals agreed label": 27,
+              "target given, agreed label none": 2
+            },
+            "target_equals_label": 27,
+            "target_is_not_the_label": 5,
+            "target_is_not_the_label_agreed_label_none": 2,
+            "target_is_not_the_label_another_check": 3
+          },
+          "no target": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 26,
+              "no agreed label": 3,
+              "no target, agreed label names a check": 30,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          }
+        },
+        "oauthlib": {
+          "all tiers": {
+            "cases_with_a_target": 53,
+            "cases_with_a_target_and_an_agreed_label": 53,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 9,
+              "no agreed label": 9,
+              "no target, agreed label names a check": 71,
+              "target differs from agreed label": 10,
+              "target equals agreed label": 43,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 43,
+            "target_is_not_the_label": 10,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 10
+          },
+          "assertion": {
+            "cases_with_a_target": 25,
+            "cases_with_a_target_and_an_agreed_label": 25,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 25,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 25,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          },
+          "name": {
+            "cases_with_a_target": 28,
+            "cases_with_a_target_and_an_agreed_label": 28,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 10,
+              "target equals agreed label": 18,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 18,
+            "target_is_not_the_label": 10,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 10
+          },
+          "no target": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 9,
+              "no agreed label": 9,
+              "no target, agreed label names a check": 71,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          }
+        }
+      },
+      "pooled": {
+        "all tiers": {
+          "cases_with_a_target": 229,
+          "cases_with_a_target_and_an_agreed_label": 227,
+          "cases_with_a_target_and_no_agreed_label": 2,
+          "categories": {
+            "both none": 42,
+            "no agreed label": 16,
+            "no target, agreed label names a check": 117,
+            "target differs from agreed label": 55,
+            "target equals agreed label": 138,
+            "target given, agreed label none": 34
+          },
+          "target_equals_label": 138,
+          "target_is_not_the_label": 89,
+          "target_is_not_the_label_agreed_label_none": 34,
+          "target_is_not_the_label_another_check": 55
+        },
+        "assertion": {
+          "cases_with_a_target": 129,
+          "cases_with_a_target_and_an_agreed_label": 127,
+          "cases_with_a_target_and_no_agreed_label": 2,
+          "categories": {
+            "both none": 0,
+            "no agreed label": 2,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 37,
+            "target equals agreed label": 70,
+            "target given, agreed label none": 20
+          },
+          "target_equals_label": 70,
+          "target_is_not_the_label": 57,
+          "target_is_not_the_label_agreed_label_none": 20,
+          "target_is_not_the_label_another_check": 37
+        },
+        "name": {
+          "cases_with_a_target": 100,
+          "cases_with_a_target_and_an_agreed_label": 100,
+          "cases_with_a_target_and_no_agreed_label": 0,
+          "categories": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 18,
+            "target equals agreed label": 68,
+            "target given, agreed label none": 14
+          },
+          "target_equals_label": 68,
+          "target_is_not_the_label": 32,
+          "target_is_not_the_label_agreed_label_none": 14,
+          "target_is_not_the_label_another_check": 18
+        },
+        "no target": {
+          "cases_with_a_target": 0,
+          "cases_with_a_target_and_an_agreed_label": 0,
+          "cases_with_a_target_and_no_agreed_label": 0,
+          "categories": {
+            "both none": 42,
+            "no agreed label": 14,
+            "no target, agreed label names a check": 117,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "target_equals_label": 0,
+          "target_is_not_the_label": 0,
+          "target_is_not_the_label_agreed_label_none": 0,
+          "target_is_not_the_label_another_check": 0
+        }
+      }
+    },
+    "rule 3": {
+      "per_library": {
+        "authlib": {
+          "all tiers": {
+            "cases_with_a_target": 30,
+            "cases_with_a_target_and_an_agreed_label": 30,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 7,
+              "no agreed label": 2,
+              "no target, agreed label names a check": 9,
+              "target differs from agreed label": 3,
+              "target equals agreed label": 15,
+              "target given, agreed label none": 12
+            },
+            "target_equals_label": 15,
+            "target_is_not_the_label": 15,
+            "target_is_not_the_label_agreed_label_none": 12,
+            "target_is_not_the_label_another_check": 3
+          },
+          "assertion": {
+            "cases_with_a_target": 5,
+            "cases_with_a_target_and_an_agreed_label": 5,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 5,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 5,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          },
+          "name": {
+            "cases_with_a_target": 25,
+            "cases_with_a_target_and_an_agreed_label": 25,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 3,
+              "target equals agreed label": 10,
+              "target given, agreed label none": 12
+            },
+            "target_equals_label": 10,
+            "target_is_not_the_label": 15,
+            "target_is_not_the_label_agreed_label_none": 12,
+            "target_is_not_the_label_another_check": 3
+          },
+          "no target": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 7,
+              "no agreed label": 2,
+              "no target, agreed label names a check": 9,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          }
+        },
+        "google-auth": {
+          "all tiers": {
+            "cases_with_a_target": 15,
+            "cases_with_a_target_and_an_agreed_label": 15,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 7,
+              "target differs from agreed label": 2,
+              "target equals agreed label": 13,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 13,
+            "target_is_not_the_label": 2,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 2
+          },
+          "assertion": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          },
+          "name": {
+            "cases_with_a_target": 15,
+            "cases_with_a_target_and_an_agreed_label": 15,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 2,
+              "target equals agreed label": 13,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 13,
+            "target_is_not_the_label": 2,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 2
+          },
+          "no target": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 7,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          }
+        },
+        "joserfc": {
+          "all tiers": {
+            "cases_with_a_target": 106,
+            "cases_with_a_target_and_an_agreed_label": 104,
+            "cases_with_a_target_and_no_agreed_label": 2,
+            "categories": {
+              "both none": 46,
+              "no agreed label": 5,
+              "no target, agreed label names a check": 35,
+              "target differs from agreed label": 7,
+              "target equals agreed label": 95,
+              "target given, agreed label none": 2
+            },
+            "target_equals_label": 95,
+            "target_is_not_the_label": 9,
+            "target_is_not_the_label_agreed_label_none": 2,
+            "target_is_not_the_label_another_check": 7
+          },
+          "assertion": {
+            "cases_with_a_target": 38,
+            "cases_with_a_target_and_an_agreed_label": 38,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 38,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 38,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          },
+          "name": {
+            "cases_with_a_target": 68,
+            "cases_with_a_target_and_an_agreed_label": 66,
+            "cases_with_a_target_and_no_agreed_label": 2,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 2,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 7,
+              "target equals agreed label": 57,
+              "target given, agreed label none": 2
+            },
+            "target_equals_label": 57,
+            "target_is_not_the_label": 9,
+            "target_is_not_the_label_agreed_label_none": 2,
+            "target_is_not_the_label_another_check": 7
+          },
+          "no target": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 46,
+              "no agreed label": 3,
+              "no target, agreed label names a check": 35,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          }
+        },
+        "oauthlib": {
+          "all tiers": {
+            "cases_with_a_target": 84,
+            "cases_with_a_target_and_an_agreed_label": 84,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 9,
+              "no agreed label": 9,
+              "no target, agreed label names a check": 40,
+              "target differs from agreed label": 10,
+              "target equals agreed label": 74,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 74,
+            "target_is_not_the_label": 10,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 10
+          },
+          "assertion": {
+            "cases_with_a_target": 31,
+            "cases_with_a_target_and_an_agreed_label": 31,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 31,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 31,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          },
+          "name": {
+            "cases_with_a_target": 53,
+            "cases_with_a_target_and_an_agreed_label": 53,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 0,
+              "no agreed label": 0,
+              "no target, agreed label names a check": 0,
+              "target differs from agreed label": 10,
+              "target equals agreed label": 43,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 43,
+            "target_is_not_the_label": 10,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 10
+          },
+          "no target": {
+            "cases_with_a_target": 0,
+            "cases_with_a_target_and_an_agreed_label": 0,
+            "cases_with_a_target_and_no_agreed_label": 0,
+            "categories": {
+              "both none": 9,
+              "no agreed label": 9,
+              "no target, agreed label names a check": 40,
+              "target differs from agreed label": 0,
+              "target equals agreed label": 0,
+              "target given, agreed label none": 0
+            },
+            "target_equals_label": 0,
+            "target_is_not_the_label": 0,
+            "target_is_not_the_label_agreed_label_none": 0,
+            "target_is_not_the_label_another_check": 0
+          }
+        }
+      },
+      "pooled": {
+        "all tiers": {
+          "cases_with_a_target": 235,
+          "cases_with_a_target_and_an_agreed_label": 233,
+          "cases_with_a_target_and_no_agreed_label": 2,
+          "categories": {
+            "both none": 62,
+            "no agreed label": 16,
+            "no target, agreed label names a check": 91,
+            "target differs from agreed label": 22,
+            "target equals agreed label": 197,
+            "target given, agreed label none": 14
+          },
+          "target_equals_label": 197,
+          "target_is_not_the_label": 36,
+          "target_is_not_the_label_agreed_label_none": 14,
+          "target_is_not_the_label_another_check": 22
+        },
+        "assertion": {
+          "cases_with_a_target": 74,
+          "cases_with_a_target_and_an_agreed_label": 74,
+          "cases_with_a_target_and_no_agreed_label": 0,
+          "categories": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 74,
+            "target given, agreed label none": 0
+          },
+          "target_equals_label": 74,
+          "target_is_not_the_label": 0,
+          "target_is_not_the_label_agreed_label_none": 0,
+          "target_is_not_the_label_another_check": 0
+        },
+        "name": {
+          "cases_with_a_target": 161,
+          "cases_with_a_target_and_an_agreed_label": 159,
+          "cases_with_a_target_and_no_agreed_label": 2,
+          "categories": {
+            "both none": 0,
+            "no agreed label": 2,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 22,
+            "target equals agreed label": 123,
+            "target given, agreed label none": 14
+          },
+          "target_equals_label": 123,
+          "target_is_not_the_label": 36,
+          "target_is_not_the_label_agreed_label_none": 14,
+          "target_is_not_the_label_another_check": 22
+        },
+        "no target": {
+          "cases_with_a_target": 0,
+          "cases_with_a_target_and_an_agreed_label": 0,
+          "cases_with_a_target_and_no_agreed_label": 0,
+          "categories": {
+            "both none": 62,
+            "no agreed label": 14,
+            "no target, agreed label names a check": 91,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "target_equals_label": 0,
+          "target_is_not_the_label": 0,
+          "target_is_not_the_label_agreed_label_none": 0,
+          "target_is_not_the_label_another_check": 0
+        }
+      }
+    }
+  },
+  "protocol": "PROTOCOL.md, sections 2 (L1, L2, L3, T1, T2, T3), 4.1 and 4.2",
+  "rules": {
+    "rule2": {
+      "per_library": {
+        "authlib": {
+          "all tiers": {
+            "cases_with_a_target": 30,
+            "decided_by_the_target": 18,
+            "not_decided_by_the_target": 12
+          },
+          "assertion": {
+            "cases_with_a_target": 5,
+            "decided_by_the_target": 5,
+            "not_decided_by_the_target": 0
+          },
+          "name": {
+            "cases_with_a_target": 25,
+            "decided_by_the_target": 13,
+            "not_decided_by_the_target": 12
+          }
+        },
+        "google-auth": {
+          "all tiers": {
+            "cases_with_a_target": 15,
+            "decided_by_the_target": 13,
+            "not_decided_by_the_target": 2
+          },
+          "assertion": {
+            "cases_with_a_target": 0,
+            "decided_by_the_target": 0,
+            "not_decided_by_the_target": 0
+          },
+          "name": {
+            "cases_with_a_target": 15,
+            "decided_by_the_target": 13,
+            "not_decided_by_the_target": 2
+          }
+        },
+        "joserfc": {
+          "all tiers": {
+            "cases_with_a_target": 131,
+            "decided_by_the_target": 71,
+            "not_decided_by_the_target": 60
+          },
+          "assertion": {
+            "cases_with_a_target": 99,
+            "decided_by_the_target": 46,
+            "not_decided_by_the_target": 53
+          },
+          "name": {
+            "cases_with_a_target": 32,
+            "decided_by_the_target": 25,
+            "not_decided_by_the_target": 7
+          }
+        },
+        "oauthlib": {
+          "all tiers": {
+            "cases_with_a_target": 53,
+            "decided_by_the_target": 43,
+            "not_decided_by_the_target": 10
+          },
+          "assertion": {
+            "cases_with_a_target": 25,
+            "decided_by_the_target": 25,
+            "not_decided_by_the_target": 0
+          },
+          "name": {
+            "cases_with_a_target": 28,
+            "decided_by_the_target": 18,
+            "not_decided_by_the_target": 10
+          }
+        }
+      },
+      "pooled": {
+        "all tiers": {
+          "cases_with_a_target": 229,
+          "decided_by_the_target": 145,
+          "not_decided_by_the_target": 84
+        },
+        "assertion": {
+          "cases_with_a_target": 129,
+          "decided_by_the_target": 76,
+          "not_decided_by_the_target": 53
+        },
+        "name": {
+          "cases_with_a_target": 100,
+          "decided_by_the_target": 69,
+          "not_decided_by_the_target": 31
+        }
+      }
+    },
+    "rule3": {
+      "per_library": {
+        "authlib": {
+          "all tiers": {
+            "cases_with_a_target": 30,
+            "decided_by_the_target": 18,
+            "not_decided_by_the_target": 12
+          },
+          "assertion": {
+            "cases_with_a_target": 5,
+            "decided_by_the_target": 5,
+            "not_decided_by_the_target": 0
+          },
+          "name": {
+            "cases_with_a_target": 25,
+            "decided_by_the_target": 13,
+            "not_decided_by_the_target": 12
+          }
+        },
+        "google-auth": {
+          "all tiers": {
+            "cases_with_a_target": 15,
+            "decided_by_the_target": 13,
+            "not_decided_by_the_target": 2
+          },
+          "assertion": {
+            "cases_with_a_target": 0,
+            "decided_by_the_target": 0,
+            "not_decided_by_the_target": 0
+          },
+          "name": {
+            "cases_with_a_target": 15,
+            "decided_by_the_target": 13,
+            "not_decided_by_the_target": 2
+          }
+        },
+        "joserfc": {
+          "all tiers": {
+            "cases_with_a_target": 106,
+            "decided_by_the_target": 90,
+            "not_decided_by_the_target": 16
+          },
+          "assertion": {
+            "cases_with_a_target": 38,
+            "decided_by_the_target": 38,
+            "not_decided_by_the_target": 0
+          },
+          "name": {
+            "cases_with_a_target": 68,
+            "decided_by_the_target": 52,
+            "not_decided_by_the_target": 16
+          }
+        },
+        "oauthlib": {
+          "all tiers": {
+            "cases_with_a_target": 84,
+            "decided_by_the_target": 74,
+            "not_decided_by_the_target": 10
+          },
+          "assertion": {
+            "cases_with_a_target": 31,
+            "decided_by_the_target": 31,
+            "not_decided_by_the_target": 0
+          },
+          "name": {
+            "cases_with_a_target": 53,
+            "decided_by_the_target": 43,
+            "not_decided_by_the_target": 10
+          }
+        }
+      },
+      "pooled": {
+        "all tiers": {
+          "cases_with_a_target": 235,
+          "decided_by_the_target": 195,
+          "not_decided_by_the_target": 40
+        },
+        "assertion": {
+          "cases_with_a_target": 74,
+          "decided_by_the_target": 74,
+          "not_decided_by_the_target": 0
+        },
+        "name": {
+          "cases_with_a_target": 161,
+          "decided_by_the_target": 121,
+          "not_decided_by_the_target": 40
+        }
+      }
+    },
+    "transitions": {
+      "per_library": {
+        "authlib": {
+          "changes its target": {
+            "count": 0,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          },
+          "gains a target": {
+            "count": 0,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          },
+          "keeps its target": {
+            "count": 30,
+            "decided_by_the_rule2_target": 18,
+            "decided_by_the_rule3_target": 18
+          },
+          "loses its target": {
+            "count": 0,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          },
+          "no target under either rule": {
+            "count": 18,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          }
+        },
+        "google-auth": {
+          "changes its target": {
+            "count": 0,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          },
+          "gains a target": {
+            "count": 0,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          },
+          "keeps its target": {
+            "count": 15,
+            "decided_by_the_rule2_target": 13,
+            "decided_by_the_rule3_target": 13
+          },
+          "loses its target": {
+            "count": 0,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          },
+          "no target under either rule": {
+            "count": 7,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          }
+        },
+        "joserfc": {
+          "changes its target": {
+            "count": 43,
+            "decided_by_the_rule2_target": 11,
+            "decided_by_the_rule3_target": 32
+          },
+          "gains a target": {
+            "count": 4,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 4
+          },
+          "keeps its target": {
+            "count": 59,
+            "decided_by_the_rule2_target": 54,
+            "decided_by_the_rule3_target": 54
+          },
+          "loses its target": {
+            "count": 29,
+            "decided_by_the_rule2_target": 6,
+            "decided_by_the_rule3_target": 0
+          },
+          "no target under either rule": {
+            "count": 55,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          }
+        },
+        "oauthlib": {
+          "changes its target": {
+            "count": 0,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          },
+          "gains a target": {
+            "count": 31,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 31
+          },
+          "keeps its target": {
+            "count": 53,
+            "decided_by_the_rule2_target": 43,
+            "decided_by_the_rule3_target": 43
+          },
+          "loses its target": {
+            "count": 0,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          },
+          "no target under either rule": {
+            "count": 58,
+            "decided_by_the_rule2_target": 0,
+            "decided_by_the_rule3_target": 0
+          }
+        }
+      },
+      "pooled": {
+        "changes its target": {
+          "count": 43,
+          "decided_by_the_rule2_target": 11,
+          "decided_by_the_rule3_target": 32
+        },
+        "gains a target": {
+          "count": 35,
+          "decided_by_the_rule2_target": 0,
+          "decided_by_the_rule3_target": 35
+        },
+        "keeps its target": {
+          "count": 157,
+          "decided_by_the_rule2_target": 128,
+          "decided_by_the_rule3_target": 128
+        },
+        "loses its target": {
+          "count": 29,
+          "decided_by_the_rule2_target": 6,
+          "decided_by_the_rule3_target": 0
+        },
+        "no target under either rule": {
+          "count": 138,
+          "decided_by_the_rule2_target": 0,
+          "decided_by_the_rule3_target": 0
+        }
+      }
+    }
+  }
+}

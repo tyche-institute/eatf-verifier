@@ -1,0 +1,2704 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_header_object#0",
+   "name_tokens": [
+    "decode",
+    "header",
+    "object"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.jwt._unverified_decode#2",
+     "score": 8.452534,
+     "tokens": [
+      "decode",
+      "header",
+      "object"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#3",
+     "score": 4.50129,
+     "tokens": [
+      "decode",
+      "object"
+     ]
+    },
+    {
+     "check": "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+     "score": 2.852631,
+     "tokens": [
+      "object"
+     ]
+    }
+   ],
+   "target": "auth.jwt._unverified_decode#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_payload_object#0",
+   "name_tokens": [
+    "decode",
+    "object",
+    "payload"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.jwt._unverified_decode#3",
+     "score": 7.759387,
+     "tokens": [
+      "decode",
+      "object",
+      "payload"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#2",
+     "score": 4.50129,
+     "tokens": [
+      "decode",
+      "object"
+     ]
+    },
+    {
+     "check": "auth.jwt._verify_iat_and_exp#1",
+     "score": 3.258097,
+     "tokens": [
+      "payload"
+     ]
+    }
+   ],
+   "target": "auth.jwt._unverified_decode#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'Wrong number of segments'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'Wrong number of segments'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'Wrong number of segments'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'Wrong number of segments'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'Wrong number of segments'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+   "name_tokens": [
+    "bad",
+    "decode",
+    "number",
+    "segment",
+    "token",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "score": 12.566126,
+     "tokens": [
+      "decode",
+      "number",
+      "segment",
+      "token",
+      "wrong"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#6",
+     "score": 6.252125,
+     "tokens": [
+      "decode",
+      "token",
+      "wrong"
+     ]
+    },
+    {
+     "check": "auth.jwt._decode_jwt_segment#1",
+     "score": 4.011416,
+     "tokens": [
+      "decode",
+      "segment"
+     ]
+    }
+   ],
+   "target": "auth.jwt._unverified_decode#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match \"Can\\\\'t parse segment\""
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match \"Can\\\\'t parse segment\""
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match \"Can\\\\'t parse segment\""
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match \"Can\\\\'t parse segment\""
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match \"Can\\\\'t parse segment\""
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+   "name_tokens": [
+    "bad",
+    "decode",
+    "json",
+    "not",
+    "token"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.jwt.decode#5",
+     "score": 4.865831,
+     "tokens": [
+      "decode",
+      "not",
+      "token"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#2",
+     "score": 3.605951,
+     "tokens": [
+      "decode",
+      "json"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#3",
+     "score": 3.605951,
+     "tokens": [
+      "decode",
+      "json"
+     ]
+    }
+   ],
+   "target": "auth.jwt.decode#5",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'Token does not contain required claim'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'Token does not contain required claim'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'Token does not contain required claim'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'Token does not contain required claim'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'Token does not contain required claim'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+   "name_tokens": [
+    "bad",
+    "decode",
+    "exp",
+    "iat",
+    "no",
+    "token"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "auth.jwt._verify_iat_and_exp#1",
+     "score": 7.050633,
+     "tokens": [
+      "exp",
+      "iat",
+      "token"
+     ]
+    },
+    {
+     "check": "auth.jwt._verify_iat_and_exp#2",
+     "score": 7.050633,
+     "tokens": [
+      "exp",
+      "iat",
+      "token"
+     ]
+    },
+    {
+     "check": "auth.jwt._verify_iat_and_exp#3",
+     "score": 7.050633,
+     "tokens": [
+      "exp",
+      "iat",
+      "token"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'Token used too early'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'Token used too early'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'Token used too early'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'Token used too early'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'Token used too early'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+   "name_tokens": [
+    "bad",
+    "decode",
+    "early",
+    "token",
+    "too"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.jwt._verify_iat_and_exp#2",
+     "score": 9.247858,
+     "tokens": [
+      "early",
+      "token",
+      "too"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "score": 3.095125,
+     "tokens": [
+      "decode",
+      "token"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#5",
+     "score": 3.095125,
+     "tokens": [
+      "decode",
+      "token"
+     ]
+    }
+   ],
+   "target": "auth.jwt._verify_iat_and_exp#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'Token expired'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'Token expired'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'Token expired'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'Token expired'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'Token expired'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_bad_token_expired#0",
+   "name_tokens": [
+    "bad",
+    "decode",
+    "expired",
+    "token"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.jwt._verify_iat_and_exp#3",
+     "score": 5.39771,
+     "tokens": [
+      "expired",
+      "token"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "score": 3.095125,
+     "tokens": [
+      "decode",
+      "token"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#5",
+     "score": 3.095125,
+     "tokens": [
+      "decode",
+      "token"
+     ]
+    }
+   ],
+   "target": "auth.jwt._verify_iat_and_exp#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'Token has wrong audience'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'Token has wrong audience'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'Token has wrong audience'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'Token has wrong audience'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'Token has wrong audience'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+   "name_tokens": [
+    "audience",
+    "bad",
+    "decode",
+    "token",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.jwt.decode#6",
+     "score": 10.102273,
+     "tokens": [
+      "audience",
+      "decode",
+      "token",
+      "wrong"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "score": 6.252125,
+     "tokens": [
+      "decode",
+      "token",
+      "wrong"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#5",
+     "score": 3.095125,
+     "tokens": [
+      "decode",
+      "token"
+     ]
+    }
+   ],
+   "target": "auth.jwt.decode#6",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'Token has wrong audience'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'Token has wrong audience'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'Token has wrong audience'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'Token has wrong audience'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'Token has wrong audience'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+   "name_tokens": [
+    "audience",
+    "bad",
+    "decode",
+    "list",
+    "token",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.jwt.decode#6",
+     "score": 10.102273,
+     "tokens": [
+      "audience",
+      "decode",
+      "token",
+      "wrong"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "score": 6.252125,
+     "tokens": [
+      "decode",
+      "token",
+      "wrong"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#5",
+     "score": 3.095125,
+     "tokens": [
+      "decode",
+      "token"
+     ]
+    }
+   ],
+   "target": "auth.jwt.decode#6",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'Could not verify token signature'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'Could not verify token signature'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'Could not verify token signature'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'Could not verify token signature'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'Could not verify token signature'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_wrong_cert#0",
+   "name_tokens": [
+    "cert",
+    "decode",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "score": 4.704563,
+     "tokens": [
+      "decode",
+      "wrong"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#6",
+     "score": 4.704563,
+     "tokens": [
+      "decode",
+      "wrong"
+     ]
+    },
+    {
+     "check": "auth.jwt._decode_jwt_segment#1",
+     "score": 1.547563,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt.decode#6"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'Could not verify token signature'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'Could not verify token signature'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'Could not verify token signature'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'Could not verify token signature'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'Could not verify token signature'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+   "name_tokens": [
+    "bad",
+    "cert",
+    "decode",
+    "multicert"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "auth.jwt._decode_jwt_segment#1",
+     "score": 1.547563,
+     "tokens": [
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "score": 1.547563,
+     "tokens": [
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#2",
+     "score": 1.547563,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'Certificate for key id 1 not found'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'Certificate for key id 1 not found'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'Certificate for key id 1 not found'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'Certificate for key id 1 not found'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'Certificate for key id 1 not found'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_no_cert#0",
+   "name_tokens": [
+    "cert",
+    "decode",
+    "no"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.crypt._python_rsa.RSASigner.from_string#2",
+     "score": 3.850148,
+     "tokens": [
+      "no"
+     ]
+    },
+    {
+     "check": "auth.jwt._decode_jwt_segment#1",
+     "score": 1.547563,
+     "tokens": [
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "score": 1.547563,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": "auth.crypt._python_rsa.RSASigner.from_string#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'fakealg'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'fakealg'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'fakealg'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'fakealg'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'fakealg'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_unknown_alg#0",
+   "name_tokens": [
+    "alg",
+    "decode",
+    "unknown"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "auth.jwt.decode#1",
+     "score": 4.704563,
+     "tokens": [
+      "alg",
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#2",
+     "score": 4.704563,
+     "tokens": [
+      "alg",
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt._decode_jwt_segment#1",
+     "score": 1.547563,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1",
+    "auth._agent_identity_utils.parse_certificate#1",
+    "auth._agent_identity_utils.parse_certificate#2",
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.aio.credentials.AnonymousCredentials.refresh#1",
+    "auth.aio.credentials.StaticCredentials.refresh#1",
+    "auth.aws.RequestSigner.get_request_options#1",
+    "auth.compute_engine._metadata.get#1",
+    "auth.compute_engine._mtls._parse_mds_mode#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.refresh#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#5",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "auth.pluggable.Credentials._validate_running_mode#3",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_handler.PluginHandler._find_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {
+    "auth._agent_identity_utils.get_cached_cert_fingerprint#1": [
+     "match 'cryptography'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#1": [
+     "match 'cryptography'"
+    ],
+    "auth._agent_identity_utils.parse_certificate#2": [
+     "match 'cryptography'"
+    ],
+    "auth.compute_engine._metadata.get#1": [
+     "match 'cryptography'"
+    ],
+    "auth.compute_engine._mtls._parse_mds_mode#1": [
+     "match 'cryptography'"
+    ]
+   },
+   "expected": [
+    "ValueError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+   "name_tokens": [
+    "alg",
+    "crytography",
+    "decode",
+    "missing"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "auth.jwt.decode#1",
+     "score": 4.704563,
+     "tokens": [
+      "alg",
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#2",
+     "score": 4.704563,
+     "tokens": [
+      "alg",
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.pluggable.Credentials._parse_subject_token#2",
+     "score": 2.751535,
+     "tokens": [
+      "missing"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6"
+   ],
+   "C_class": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidValue"
+   ],
+   "key": "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+   "name_tokens": [
+    "cert",
+    "decode",
+    "key",
+    "mismatched",
+    "type"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "auth.jwt.decode#4",
+     "score": 6.277395,
+     "tokens": [
+      "decode",
+      "key",
+      "type"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#1",
+     "score": 3.186353,
+     "tokens": [
+      "decode",
+      "key"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#2",
+     "score": 3.186353,
+     "tokens": [
+      "decode",
+      "key"
+     ]
+    }
+   ],
+   "target": "auth.jwt.decode#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6"
+   ],
+   "C_class": [
+    "auth._helpers.from_bytes#1",
+    "auth._helpers.to_bytes#1",
+    "auth._refresh_worker.RefreshThreadManager.start_refresh#1",
+    "auth.aio.credentials.AnonymousCredentials.apply#1",
+    "auth.credentials.AnonymousCredentials.apply#1",
+    "auth.crypt._python_rsa.RSASigner.from_string#1",
+    "auth.crypt._python_rsa.RSAVerifier.from_string#1",
+    "auth.downscoped.AccessBoundaryRule.available_permissions~2#1",
+    "auth.downscoped.CredentialAccessBoundary.rules~2#1",
+    "auth.jwt._verify_iat_and_exp#2",
+    "auth.jwt._verify_iat_and_exp#3",
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2",
+    "auth.jwt.decode#4",
+    "auth.jwt.decode#6",
+    "auth.pluggable.Credentials._validate_running_mode#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5",
+    "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidValue"
+   ],
+   "key": "tests/test_jwt.py::test_decode_unhashable_alg#0",
+   "name_tokens": [
+    "alg",
+    "decode",
+    "unhashable"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "auth.jwt.decode#1",
+     "score": 4.102643,
+     "tokens": [
+      "alg",
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#2",
+     "score": 4.102643,
+     "tokens": [
+      "alg",
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt.decode#4",
+     "score": 1.704748,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "auth.jwt.decode#1",
+    "auth.jwt.decode#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#5",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_class": [
+    "auth.crypt._python_rsa.RSASigner.from_string#2",
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt._verify_iat_and_exp#1",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#5",
+    "auth.pluggable.Credentials._parse_subject_token#1",
+    "auth.pluggable.Credentials._parse_subject_token#2",
+    "auth.pluggable.Credentials._validate_response_schema#1",
+    "auth.pluggable.Credentials._validate_response_schema#2",
+    "auth.pluggable.Credentials._validate_running_mode#1",
+    "auth.pluggable.Credentials._validate_running_mode#2",
+    "oauth2.webauthn_handler.PluginHandler._call_plugin#1",
+    "oauth2.webauthn_types.GetResponse.from_json#1",
+    "oauth2.webauthn_types.GetResponse.from_json#2",
+    "oauth2.webauthn_types.GetResponse.from_json#3",
+    "oauth2.webauthn_types.GetResponse.from_json#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MalformedError"
+   ],
+   "key": "tests/test_jwt.py::test_decode_unhashable_kid#0",
+   "name_tokens": [
+    "decode",
+    "kid",
+    "unhashable"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "auth.jwt._decode_jwt_segment#1",
+     "score": 1.15268,
+     "tokens": [
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "score": 1.15268,
+     "tokens": [
+      "decode"
+     ]
+    },
+    {
+     "check": "auth.jwt._unverified_decode#2",
+     "score": 1.15268,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "auth.jwt._decode_jwt_segment#1",
+    "auth.jwt._unverified_decode#1",
+    "auth.jwt._unverified_decode#2",
+    "auth.jwt._unverified_decode#3",
+    "auth.jwt.decode#3",
+    "auth.jwt.decode#5"
+   ],
+   "tier": null
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "assert+name": 7,
+  "name": 3,
+  "none: tie": 7
+ },
+ "rule_version": "reach-target-rule/3",
+ "variant": {
+  "name": "reach-target-rule/3",
+  "reach_json_sha256": "ccd0e3492d1c429c954b7a5bff13eb48c3c4eb756ea6c7f96db3c4d36040c538",
+  "reachability": {
+   "checks": 100,
+   "reachable_by_both": 14,
+   "reachable_by_execution": 14,
+   "reachable_by_execution_only": 0,
+   "reachable_by_name": 52,
+   "reachable_by_name_only": 38,
+   "reachable_by_neither": 48,
+   "reachable_under_rule_3": 52
+  },
+  "reachable": "reachable by name (checks.json) or the function started under an entry point in the traced whole-suite run (reach.json)",
+  "rule_code": "reach-target-rule/2",
+  "sentinels": [
+   {
+    "name": "T1: with an empty execution set the rule gives targets.json of the toolkit byte for byte",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "every function of reach.json is a function of checks.json",
+    "pass": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,3 @@
+block,index,test_node,class,target,deciding_check,described_first,label_1,label_2,agreed_label,agreed_equals_described
+tests/test_jwt.py::test_decode_bad_token_not_json#0,0,tests/test_jwt.py::test_decode_bad_token_not_json,C,auth.jwt.decode#5,auth.jwt._decode_jwt_segment#1,auth.jwt._decode_jwt_segment#1,auth.jwt._decode_jwt_segment#1,auth.jwt._decode_jwt_segment#1,auth.jwt._decode_jwt_segment#1,yes
+tests/test_jwt.py::test_decode_no_cert#0,0,tests/test_jwt.py::test_decode_no_cert,C,auth.crypt._python_rsa.RSASigner.from_string#2,auth.jwt.decode#3,auth.jwt.decode#3,auth.jwt.decode#3,auth.jwt.decode#3,auth.jwt.decode#3,yes

@@ -68,14 +68,14 @@
   ],
   "seconds": {
    "with_plugin": [
-    6.034,
-    6.092,
-    6.016
+    6.029,
+    5.998,
+    6.001
    ],
    "without_plugin": [
-    5.743,
-    5.765,
-    5.74
+    5.727,
+    5.761,
+    5.753
    ]
   },
   "sentinels": [
@@ -174,14 +174,14 @@
   ],
   "seconds": {
    "with_plugin": [
-    6.163,
-    6.181,
-    6.18
+    6.286,
+    6.32,
+    6.221
    ],
    "without_plugin": [
-    5.709,
-    5.738,
-    5.742
+    5.721,
+    5.85,
+    5.725
    ]
   },
   "sentinels": [
@@ -280,14 +280,14 @@
   ],
   "seconds": {
    "with_plugin": [
-    6.576,
-    6.495,
-    6.476
+    6.478,
+    6.422,
+    7.194
    ],
    "without_plugin": [
-    6.043,
-    5.926,
-    5.965
+    5.707,
+    6.366,
+    6.157
    ]
   },
   "sentinels": [
@@ -315,6 +315,438 @@
    "functions_started_only_under_no_entry_point": 113,
    "functions_started_under_an_entry_point": 148,
    "unmapped_codes": 2
+  }
+ },
+ {
+  "block_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 7,
+   "same target": 10
+  },
+  "case_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 7,
+   "same target": 15
+  },
+  "decides_rule2_to_rule3_for_moved_cases": {},
+  "fired_checks": {
+   "under an entry point": 13
+  },
+  "reachability": {
+   "checks": 100,
+   "reachable_by_both": 14,
+   "reachable_by_execution": 14,
+   "reachable_by_execution_only": 0,
+   "reachable_by_name": 52,
+   "reachable_by_name_only": 38,
+   "reachable_by_neither": 48,
+   "reachable_under_rule_3": 52
+  },
+  "rule2": {
+   "all": {
+    "cases_with_a_target": 15,
+    "decided_by_the_target": 13,
+    "not_decided_flags": 2
+   },
+   "assertion": {
+    "cases_with_a_target": 0,
+    "decided_by_the_target": 0,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 15,
+    "decided_by_the_target": 13,
+    "not_decided_flags": 2
+   }
+  },
+  "rule3": {
+   "all": {
+    "cases_with_a_target": 15,
+    "decided_by_the_target": 13,
+    "not_decided_flags": 2
+   },
+   "assertion": {
+    "cases_with_a_target": 0,
+    "decided_by_the_target": 0,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 15,
+    "decided_by_the_target": 13,
+    "not_decided_flags": 2
+   }
+  },
+  "rule_versions": [
+   "reach-target-rule/2",
+   "reach-target-rule/3"
+  ],
+  "seconds": {
+   "with_plugin": [
+    80.299,
+    82.816,
+    82.845
+   ],
+   "without_plugin": [
+    80.967,
+    82.354,
+    81.547
+   ]
+  },
+  "sentinels": [
+   {
+    "name": "T2: every fired check lies in a function that started under an entry point, or is listed with the reason",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "T4: the analysis under rule 3 passes the 7 sentinels of analyse.py",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "R2: the analysis under rule 2 from the deposited records reproduces the deposited outputs",
+    "pass": true
+   }
+  ],
+  "subject": "google-auth",
+  "trace_counts": {
+   "functions_in_checks_json": 892,
+   "functions_started": 848,
+   "functions_started_at_least_once_under_no_entry_point": 845,
+   "functions_started_in_another_thread": 94,
+   "functions_started_only_under_no_entry_point": 827,
+   "functions_started_under_an_entry_point": 21,
+   "unmapped_codes": 16
+  }
+ },
+ {
+  "block_transitions": {
+   "changed target": 0,
+   "gained a target": 11,
+   "lost a target": 0,
+   "no target under either": 36,
+   "same target": 26
+  },
+  "case_transitions": {
+   "changed target": 0,
+   "gained a target": 31,
+   "lost a target": 0,
+   "no target under either": 58,
+   "same target": 53
+  },
+  "decides_rule2_to_rule3_for_moved_cases": {
+   "no target -> yes": 31
+  },
+  "fired_checks": {
+   "under an entry point": 47
+  },
+  "reachability": {
+   "checks": 88,
+   "reachable_by_both": 54,
+   "reachable_by_execution": 61,
+   "reachable_by_execution_only": 7,
+   "reachable_by_name": 54,
+   "reachable_by_name_only": 0,
+   "reachable_by_neither": 27,
+   "reachable_under_rule_3": 61
+  },
+  "rule2": {
+   "all": {
+    "cases_with_a_target": 53,
+    "decided_by_the_target": 43,
+    "not_decided_flags": 10
+   },
+   "assertion": {
+    "cases_with_a_target": 25,
+    "decided_by_the_target": 25,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 28,
+    "decided_by_the_target": 18,
+    "not_decided_flags": 10
+   }
+  },
+  "rule3": {
+   "all": {
+    "cases_with_a_target": 84,
+    "decided_by_the_target": 74,
+    "not_decided_flags": 10
+   },
+   "assertion": {
+    "cases_with_a_target": 31,
+    "decided_by_the_target": 31,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 53,
+    "decided_by_the_target": 43,
+    "not_decided_flags": 10
+   }
+  },
+  "rule_versions": [
+   "reach-target-rule/2",
+   "reach-target-rule/3"
+  ],
+  "seconds": {
+   "with_plugin": [
+    3.37,
+    3.386,
+    3.362
+   ],
+   "without_plugin": [
+    1.69,
+    1.677,
+    1.703
+   ]
+  },
+  "sentinels": [
+   {
+    "name": "T2: every fired check lies in a function that started under an entry point, or is listed with the reason",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "T4: the analysis under rule 3 passes the 7 sentinels of analyse.py",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "R2: the analysis under rule 2 from the deposited records reproduces the deposited outputs",
+    "pass": true
+   }
+  ],
+  "subject": "oauthlib",
+  "trace_counts": {
+   "functions_in_checks_json": 413,
+   "functions_started": 373,
+   "functions_started_at_least_once_under_no_entry_point": 351,
+   "functions_started_in_another_thread": 0,
+   "functions_started_only_under_no_entry_point": 320,
+   "functions_started_under_an_entry_point": 53,
+   "unmapped_codes": 9
+  }
+ },
+ {
+  "block_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 13,
+   "same target": 30
+  },
+  "case_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 18,
+   "same target": 30
+  },
+  "decides_rule2_to_rule3_for_moved_cases": {},
+  "fired_checks": {
+   "under an entry point": 24
+  },
+  "reachability": {
+   "checks": 39,
+   "reachable_by_both": 33,
+   "reachable_by_execution": 35,
+   "reachable_by_execution_only": 2,
+   "reachable_by_name": 36,
+   "reachable_by_name_only": 3,
+   "reachable_by_neither": 1,
+   "reachable_under_rule_3": 38
+  },
+  "rule2": {
+   "all": {
+    "cases_with_a_target": 30,
+    "decided_by_the_target": 18,
+    "not_decided_flags": 12
+   },
+   "assertion": {
+    "cases_with_a_target": 5,
+    "decided_by_the_target": 5,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 25,
+    "decided_by_the_target": 13,
+    "not_decided_flags": 12
+   }
+  },
+  "rule3": {
+   "all": {
+    "cases_with_a_target": 30,
+    "decided_by_the_target": 18,
+    "not_decided_flags": 12
+   },
+   "assertion": {
+    "cases_with_a_target": 5,
+    "decided_by_the_target": 5,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 25,
+    "decided_by_the_target": 13,
+    "not_decided_flags": 12
+   }
+  },
+  "rule_versions": [
+   "reach-target-rule/2",
+   "reach-target-rule/3"
+  ],
+  "seconds": {
+   "with_plugin": [
+    31.174,
+    30.34,
+    30.433
+   ],
+   "without_plugin": [
+    26.641,
+    26.532,
+    26.586
+   ]
+  },
+  "sentinels": [
+   {
+    "name": "T2: every fired check lies in a function that started under an entry point, or is listed with the reason",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "T4: the analysis under rule 3 passes the 7 sentinels of analyse.py",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "R2: the analysis under rule 2 from the deposited records reproduces the deposited outputs",
+    "pass": true
+   }
+  ],
+  "subject": "authlib",
+  "trace_counts": {
+   "functions_in_checks_json": 1301,
+   "functions_started": 1081,
+   "functions_started_at_least_once_under_no_entry_point": 967,
+   "functions_started_in_another_thread": 0,
+   "functions_started_only_under_no_entry_point": 815,
+   "functions_started_under_an_entry_point": 266,
+   "unmapped_codes": 10
+  }
+ },
+ {
+  "block_transitions": {
+   "changed target": 28,
+   "gained a target": 4,
+   "lost a target": 15,
+   "no target under either": 43,
+   "same target": 48
+  },
+  "case_transitions": {
+   "changed target": 43,
+   "gained a target": 4,
+   "lost a target": 29,
+   "no target under either": 55,
+   "same target": 59
+  },
+  "decides_rule2_to_rule3_for_moved_cases": {
+   "no -> no target": 23,
+   "no -> yes": 32,
+   "no target -> yes": 4,
+   "yes -> no": 11,
+   "yes -> no target": 6
+  },
+  "fired_checks": {
+   "under an entry point": 55
+  },
+  "reachability": {
+   "checks": 97,
+   "reachable_by_both": 71,
+   "reachable_by_execution": 84,
+   "reachable_by_execution_only": 13,
+   "reachable_by_name": 81,
+   "reachable_by_name_only": 10,
+   "reachable_by_neither": 3,
+   "reachable_under_rule_3": 94
+  },
+  "rule2": {
+   "all": {
+    "cases_with_a_target": 131,
+    "decided_by_the_target": 71,
+    "not_decided_flags": 60
+   },
+   "assertion": {
+    "cases_with_a_target": 99,
+    "decided_by_the_target": 46,
+    "not_decided_flags": 53
+   },
+   "name": {
+    "cases_with_a_target": 32,
+    "decided_by_the_target": 25,
+    "not_decided_flags": 7
+   }
+  },
+  "rule3": {
+   "all": {
+    "cases_with_a_target": 106,
+    "decided_by_the_target": 90,
+    "not_decided_flags": 16
+   },
+   "assertion": {
+    "cases_with_a_target": 38,
+    "decided_by_the_target": 38,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 68,
+    "decided_by_the_target": 52,
+    "not_decided_flags": 16
+   }
+  },
+  "rule_versions": [
+   "reach-target-rule/2",
+   "reach-target-rule/3"
+  ],
+  "seconds": {
+   "with_plugin": [
+    8.515,
+    8.597,
+    8.668
+   ],
+   "without_plugin": [
+    6.828,
+    6.756,
+    6.714
+   ]
+  },
+  "sentinels": [
+   {
+    "name": "T2: every fired check lies in a function that started under an entry point, or is listed with the reason",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "T4: the analysis under rule 3 passes the 7 sentinels of analyse.py",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "R2: the analysis under rule 2 from the deposited records reproduces the deposited outputs",
+    "pass": true
+   }
+  ],
+  "subject": "joserfc",
+  "trace_counts": {
+   "functions_in_checks_json": 402,
+   "functions_started": 342,
+   "functions_started_at_least_once_under_no_entry_point": 264,
+   "functions_started_in_another_thread": 0,
+   "functions_started_only_under_no_entry_point": 145,
+   "functions_started_under_an_entry_point": 197,
+   "unmapped_codes": 8
   }
  }
 ]

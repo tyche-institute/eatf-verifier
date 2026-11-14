@@ -1,0 +1,1962 @@
+{
+  "agreement": {
+    "blocks_with_agreed_label_none": 0,
+    "blocks_with_agreed_label_none_ids": [],
+    "blocks_with_an_agreed_label_naming_a_check": 17,
+    "blocks_with_an_agreed_label_naming_a_check_ids": [
+      "tests/test_jwt.py::test_decode_bad_token_expired#0",
+      "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+      "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+      "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+      "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+      "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+      "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+      "tests/test_jwt.py::test_decode_header_object#0",
+      "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+      "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+      "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+      "tests/test_jwt.py::test_decode_no_cert#0",
+      "tests/test_jwt.py::test_decode_payload_object#0",
+      "tests/test_jwt.py::test_decode_unhashable_alg#0",
+      "tests/test_jwt.py::test_decode_unhashable_kid#0",
+      "tests/test_jwt.py::test_decode_unknown_alg#0",
+      "tests/test_jwt.py::test_decode_wrong_cert#0"
+    ],
+    "blocks_without_an_agreed_label": 0,
+    "blocks_without_an_agreed_label_with_both_answers": {},
+    "categories": {
+      "counts": {
+        "1 check and 1 none": 0,
+        "2 different checks": 0,
+        "both none": 0,
+        "same check": 17
+      },
+      "ids": {
+        "1 check and 1 none": [],
+        "2 different checks": [],
+        "both none": [],
+        "same check": [
+          "tests/test_jwt.py::test_decode_bad_token_expired#0",
+          "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+          "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+          "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+          "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+          "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+          "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+          "tests/test_jwt.py::test_decode_header_object#0",
+          "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+          "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+          "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+          "tests/test_jwt.py::test_decode_no_cert#0",
+          "tests/test_jwt.py::test_decode_payload_object#0",
+          "tests/test_jwt.py::test_decode_unhashable_alg#0",
+          "tests/test_jwt.py::test_decode_unhashable_kid#0",
+          "tests/test_jwt.py::test_decode_unknown_alg#0",
+          "tests/test_jwt.py::test_decode_wrong_cert#0"
+        ]
+      },
+      "total": 17
+    },
+    "every_label_text_as_a_category": {
+      "agree": 17,
+      "categories": 13,
+      "expected_agreement": 0.08650519,
+      "expected_agreement_fraction": "25/289",
+      "kappa": 1.0,
+      "kappa_fraction": "1/1",
+      "marginals_reading_A": {
+        "auth.jwt._decode_jwt_segment#1": 1,
+        "auth.jwt._unverified_decode#1": 1,
+        "auth.jwt._unverified_decode#2": 1,
+        "auth.jwt._unverified_decode#3": 1,
+        "auth.jwt._verify_iat_and_exp#1": 1,
+        "auth.jwt._verify_iat_and_exp#2": 1,
+        "auth.jwt._verify_iat_and_exp#3": 1,
+        "auth.jwt.decode#1": 1,
+        "auth.jwt.decode#2": 2,
+        "auth.jwt.decode#3": 2,
+        "auth.jwt.decode#4": 1,
+        "auth.jwt.decode#5": 2,
+        "auth.jwt.decode#6": 2
+      },
+      "marginals_reading_B": {
+        "auth.jwt._decode_jwt_segment#1": 1,
+        "auth.jwt._unverified_decode#1": 1,
+        "auth.jwt._unverified_decode#2": 1,
+        "auth.jwt._unverified_decode#3": 1,
+        "auth.jwt._verify_iat_and_exp#1": 1,
+        "auth.jwt._verify_iat_and_exp#2": 1,
+        "auth.jwt._verify_iat_and_exp#3": 1,
+        "auth.jwt.decode#1": 1,
+        "auth.jwt.decode#2": 2,
+        "auth.jwt.decode#3": 2,
+        "auth.jwt.decode#4": 1,
+        "auth.jwt.decode#5": 2,
+        "auth.jwt.decode#6": 2
+      },
+      "observed_agreement": 1.0,
+      "observed_agreement_fraction": "1/1",
+      "units": 17
+    },
+    "names_a_check_or_none": {
+      "agree": 17,
+      "categories": 1,
+      "expected_agreement": 1.0,
+      "expected_agreement_fraction": "1/1",
+      "kappa": null,
+      "kappa_note": "1 category holds every label of both readings",
+      "marginals_reading_A": {
+        "names a check": 17
+      },
+      "marginals_reading_B": {
+        "names a check": 17
+      },
+      "observed_agreement": 1.0,
+      "observed_agreement_fraction": "1/1",
+      "units": 17
+    }
+  },
+  "cases": {
+    "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0": {
+      "block": "tests/test_jwt.py::test_decode_bad_token_expired#0",
+      "deciding_check": "auth.jwt._verify_iat_and_exp#3",
+      "fired": [
+        "auth.jwt._verify_iat_and_exp#3"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt._verify_iat_and_exp#3",
+        "B": "auth.jwt._verify_iat_and_exp#3",
+        "agreed": "auth.jwt._verify_iat_and_exp#3"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "assert+name",
+        "target": "auth.jwt._verify_iat_and_exp#3",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "assert+name",
+        "target": "auth.jwt._verify_iat_and_exp#3",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_bad_token_expired"
+    },
+    "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0": {
+      "block": "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+      "deciding_check": "auth.jwt._verify_iat_and_exp#1",
+      "fired": [
+        "auth.jwt._verify_iat_and_exp#1"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt._verify_iat_and_exp#1",
+        "B": "auth.jwt._verify_iat_and_exp#1",
+        "agreed": "auth.jwt._verify_iat_and_exp#1"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "rule 2 target outcome as label": null,
+      "rule 3": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "test": "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp"
+    },
+    "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0": {
+      "block": "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+      "deciding_check": "auth.jwt._decode_jwt_segment#1",
+      "fired": [
+        "auth.jwt._decode_jwt_segment#1"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt._decode_jwt_segment#1",
+        "B": "auth.jwt._decode_jwt_segment#1",
+        "agreed": "auth.jwt._decode_jwt_segment#1"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "assert+name",
+        "target": "auth.jwt.decode#5",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "8 label does not fire and does not decide then either",
+      "rule 3": {
+        "basis": "assert+name",
+        "target": "auth.jwt.decode#5",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_bad_token_not_json"
+    },
+    "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0": {
+      "block": "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+      "deciding_check": "auth.jwt._verify_iat_and_exp#2",
+      "fired": [
+        "auth.jwt._verify_iat_and_exp#2"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt._verify_iat_and_exp#2",
+        "B": "auth.jwt._verify_iat_and_exp#2",
+        "agreed": "auth.jwt._verify_iat_and_exp#2"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "assert+name",
+        "target": "auth.jwt._verify_iat_and_exp#2",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "assert+name",
+        "target": "auth.jwt._verify_iat_and_exp#2",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_bad_token_too_early"
+    },
+    "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0": {
+      "block": "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+      "deciding_check": "auth.jwt.decode#6",
+      "fired": [
+        "auth.jwt.decode#6"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#6",
+        "B": "auth.jwt.decode#6",
+        "agreed": "auth.jwt.decode#6"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "assert+name",
+        "target": "auth.jwt.decode#6",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "assert+name",
+        "target": "auth.jwt.decode#6",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list"
+    },
+    "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0": {
+      "block": "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+      "deciding_check": "auth.jwt.decode#6",
+      "fired": [
+        "auth.jwt.decode#6"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#6",
+        "B": "auth.jwt.decode#6",
+        "agreed": "auth.jwt.decode#6"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "assert+name",
+        "target": "auth.jwt.decode#6",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "assert+name",
+        "target": "auth.jwt.decode#6",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_bad_token_wrong_audience"
+    },
+    "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0": {
+      "block": "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+      "deciding_check": "auth.jwt._unverified_decode#1",
+      "fired": [
+        "auth.jwt._unverified_decode#1"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt._unverified_decode#1",
+        "B": "auth.jwt._unverified_decode#1",
+        "agreed": "auth.jwt._unverified_decode#1"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "assert+name",
+        "target": "auth.jwt._unverified_decode#1",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "assert+name",
+        "target": "auth.jwt._unverified_decode#1",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments"
+    },
+    "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0": {
+      "block": "tests/test_jwt.py::test_decode_header_object#0",
+      "deciding_check": "auth.jwt._unverified_decode#2",
+      "fired": [
+        "auth.jwt._unverified_decode#2"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt._unverified_decode#2",
+        "B": "auth.jwt._unverified_decode#2",
+        "agreed": "auth.jwt._unverified_decode#2"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "name",
+        "target": "auth.jwt._unverified_decode#2",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "name",
+        "target": "auth.jwt._unverified_decode#2",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_header_object"
+    },
+    "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0": {
+      "block": "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+      "deciding_check": "auth.jwt.decode#4",
+      "fired": [
+        "auth.jwt.decode#4"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#4",
+        "B": "auth.jwt.decode#4",
+        "agreed": "auth.jwt.decode#4"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]"
+    },
+    "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0": {
+      "block": "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+      "deciding_check": "auth.jwt.decode#4",
+      "fired": [
+        "auth.jwt.decode#4"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#4",
+        "B": "auth.jwt.decode#4",
+        "agreed": "auth.jwt.decode#4"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]"
+    },
+    "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0": {
+      "block": "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+      "deciding_check": "auth.jwt.decode#4",
+      "fired": [
+        "auth.jwt.decode#4"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#4",
+        "B": "auth.jwt.decode#4",
+        "agreed": "auth.jwt.decode#4"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]"
+    },
+    "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0": {
+      "block": "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+      "deciding_check": "auth.jwt.decode#4",
+      "fired": [
+        "auth.jwt.decode#4"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#4",
+        "B": "auth.jwt.decode#4",
+        "agreed": "auth.jwt.decode#4"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]"
+    },
+    "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0": {
+      "block": "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+      "deciding_check": "auth.jwt.decode#4",
+      "fired": [
+        "auth.jwt.decode#4"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#4",
+        "B": "auth.jwt.decode#4",
+        "agreed": "auth.jwt.decode#4"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]"
+    },
+    "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0": {
+      "block": "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+      "deciding_check": "auth.jwt.decode#4",
+      "fired": [
+        "auth.jwt.decode#4"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#4",
+        "B": "auth.jwt.decode#4",
+        "agreed": "auth.jwt.decode#4"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "name",
+        "target": "auth.jwt.decode#4",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]"
+    },
+    "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0": {
+      "block": "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+      "deciding_check": "auth.jwt.decode#1",
+      "fired": [
+        "auth.jwt.decode#1"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#1",
+        "B": "auth.jwt.decode#1",
+        "agreed": "auth.jwt.decode#1"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "rule 2 target outcome as label": null,
+      "rule 3": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "test": "tests/test_jwt.py::test_decode_missing_crytography_alg"
+    },
+    "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0": {
+      "block": "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+      "deciding_check": "auth.jwt.decode#5",
+      "fired": [
+        "auth.jwt.decode#5"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#5",
+        "B": "auth.jwt.decode#5",
+        "agreed": "auth.jwt.decode#5"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "rule 2 target outcome as label": null,
+      "rule 3": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "test": "tests/test_jwt.py::test_decode_multicert_bad_cert"
+    },
+    "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0": {
+      "block": "tests/test_jwt.py::test_decode_no_cert#0",
+      "deciding_check": "auth.jwt.decode#3",
+      "fired": [
+        "auth.jwt.decode#3"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#3",
+        "B": "auth.jwt.decode#3",
+        "agreed": "auth.jwt.decode#3"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "assert+name",
+        "target": "auth.crypt._python_rsa.RSASigner.from_string#2",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "8 label does not fire and does not decide then either",
+      "rule 3": {
+        "basis": "assert+name",
+        "target": "auth.crypt._python_rsa.RSASigner.from_string#2",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_no_cert"
+    },
+    "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0": {
+      "block": "tests/test_jwt.py::test_decode_payload_object#0",
+      "deciding_check": "auth.jwt._unverified_decode#3",
+      "fired": [
+        "auth.jwt._unverified_decode#3"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt._unverified_decode#3",
+        "B": "auth.jwt._unverified_decode#3",
+        "agreed": "auth.jwt._unverified_decode#3"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": "name",
+        "target": "auth.jwt._unverified_decode#3",
+        "tier": "name"
+      },
+      "rule 2 target outcome as label": "1 decided by its label",
+      "rule 3": {
+        "basis": "name",
+        "target": "auth.jwt._unverified_decode#3",
+        "tier": "name"
+      },
+      "test": "tests/test_jwt.py::test_decode_payload_object"
+    },
+    "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0": {
+      "block": "tests/test_jwt.py::test_decode_unhashable_alg#0",
+      "deciding_check": "auth.jwt.decode#2",
+      "fired": [
+        "auth.jwt.decode#2"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#2",
+        "B": "auth.jwt.decode#2",
+        "agreed": "auth.jwt.decode#2"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "rule 2 target outcome as label": null,
+      "rule 3": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "test": "tests/test_jwt.py::test_decode_unhashable_alg"
+    },
+    "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0": {
+      "block": "tests/test_jwt.py::test_decode_unhashable_kid#0",
+      "deciding_check": "auth.jwt.decode#3",
+      "fired": [
+        "auth.jwt.decode#3"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#3",
+        "B": "auth.jwt.decode#3",
+        "agreed": "auth.jwt.decode#3"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "rule 2 target outcome as label": null,
+      "rule 3": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "test": "tests/test_jwt.py::test_decode_unhashable_kid"
+    },
+    "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0": {
+      "block": "tests/test_jwt.py::test_decode_unknown_alg#0",
+      "deciding_check": "auth.jwt.decode#2",
+      "fired": [
+        "auth.jwt.decode#2"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#2",
+        "B": "auth.jwt.decode#2",
+        "agreed": "auth.jwt.decode#2"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "rule 2 target outcome as label": null,
+      "rule 3": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "test": "tests/test_jwt.py::test_decode_unknown_alg"
+    },
+    "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0": {
+      "block": "tests/test_jwt.py::test_decode_wrong_cert#0",
+      "deciding_check": "auth.jwt.decode#5",
+      "fired": [
+        "auth.jwt.decode#5"
+      ],
+      "index": 0,
+      "labels": {
+        "A": "auth.jwt.decode#5",
+        "B": "auth.jwt.decode#5",
+        "agreed": "auth.jwt.decode#5"
+      },
+      "outcomes": {
+        "A": "1 decided by its label",
+        "B": "1 decided by its label",
+        "agreed": "1 decided by its label"
+      },
+      "raise_site_kind": "check",
+      "rule 2": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "rule 2 target outcome as label": null,
+      "rule 3": {
+        "basis": null,
+        "target": null,
+        "tier": null
+      },
+      "test": "tests/test_jwt.py::test_decode_wrong_cert"
+    }
+  },
+  "expectations": {
+    "L1": {
+      "detail": {},
+      "holding": 0,
+      "holding_ids": [],
+      "readings_compared": [
+        "A",
+        "B"
+      ],
+      "status": "not applicable",
+      "units": 0,
+      "units_ids": []
+    },
+    "L2": {
+      "class_c_flags": 2,
+      "class_c_flags_without_an_agreed_label_naming_a_check": [],
+      "detail": {
+        "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0": {
+          "agreed label": "auth.jwt._decode_jwt_segment#1",
+          "holds": true,
+          "rule 2 target": "auth.jwt.decode#5"
+        },
+        "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0": {
+          "agreed label": "auth.jwt.decode#3",
+          "holds": true,
+          "rule 2 target": "auth.crypt._python_rsa.RSASigner.from_string#2"
+        }
+      },
+      "holding": 2,
+      "holding_ids": [
+        "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+        "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+      ],
+      "status": "held",
+      "units": 2,
+      "units_ids": [
+        "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+        "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+      ]
+    },
+    "L3": {
+      "holding": 13,
+      "not_holding": {},
+      "status": "held",
+      "units": 13,
+      "units_ids": [
+        "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+        "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+        "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+        "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+        "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0",
+        "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0"
+      ]
+    },
+    "L3_with_rule_3_targets_supplementary": {
+      "holding": 13,
+      "not_holding": {},
+      "status": "held",
+      "units": 13,
+      "units_ids": [
+        "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+        "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+        "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+        "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+        "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0",
+        "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+        "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0"
+      ]
+    }
+  },
+  "first_reading": {
+    "categories": {
+      "counts": {
+        "agreed label differs from described check": 0,
+        "agreed label equals described check": 2,
+        "agreed label names a check, no described check": 0,
+        "agreed label none, described check given": 0,
+        "agreed label none, no described check": 0,
+        "no agreed label": 0
+      },
+      "ids": {
+        "agreed label differs from described check": [],
+        "agreed label equals described check": [
+          "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+          "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+        ],
+        "agreed label names a check, no described check": [],
+        "agreed label none, described check given": [],
+        "agreed label none, no described check": [],
+        "no agreed label": []
+      },
+      "total": 2
+    },
+    "categories_by_class": {
+      "C": {
+        "counts": {
+          "agreed label differs from described check": 0,
+          "agreed label equals described check": 2,
+          "agreed label names a check, no described check": 0,
+          "agreed label none, described check given": 0,
+          "agreed label none, no described check": 0,
+          "no agreed label": 0
+        },
+        "ids": {
+          "agreed label differs from described check": [],
+          "agreed label equals described check": [
+            "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+            "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+          ],
+          "agreed label names a check, no described check": [],
+          "agreed label none, described check given": [],
+          "agreed label none, no described check": [],
+          "no agreed label": []
+        },
+        "total": 2
+      }
+    },
+    "given": true,
+    "per_flag": {
+      "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0": {
+        "agreed_label": "auth.jwt._decode_jwt_segment#1",
+        "agreed_label_outcome": "1 decided by its label",
+        "category": "agreed label equals described check",
+        "class": "C",
+        "deciding_check": "auth.jwt._decode_jwt_segment#1",
+        "described_check": "auth.jwt._decode_jwt_segment#1",
+        "rule 2 target": "auth.jwt.decode#5"
+      },
+      "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0": {
+        "agreed_label": "auth.jwt.decode#3",
+        "agreed_label_outcome": "1 decided by its label",
+        "category": "agreed label equals described check",
+        "class": "C",
+        "deciding_check": "auth.jwt.decode#3",
+        "described_check": "auth.jwt.decode#3",
+        "rule 2 target": "auth.crypt._python_rsa.RSASigner.from_string#2"
+      }
+    },
+    "rows": 2,
+    "rows_by_class": {
+      "C": 2
+    },
+    "rows_that_differ_from_targets_json_or_the_records": [],
+    "rows_whose_case_is_not_a_case_of_the_study": []
+  },
+  "inputs": {
+    "cases of the study": 22,
+    "deletions in the manifest": 13,
+    "fired checks recorded": true,
+    "first reading given": true,
+    "included blocks": 17,
+    "readings": 2,
+    "rule 3 targets given": true
+  },
+  "outcomes": {
+    "A": {
+      "cases_by_label": {
+        "names a check": 22
+      },
+      "outcomes": {
+        "counts": {
+          "1 decided by its label": 22,
+          "2 label fires and another check decides": 0,
+          "3 label fires and no check decides": 0,
+          "4 label does not fire and no check decides": 0,
+          "5 deciding check not deleted or record missing": 0,
+          "6 label does not fire; case not observed on the copy without the deciding check": 0,
+          "7 label does not fire and decides once the deciding check is deleted": 0,
+          "8 label does not fire and does not decide then either": 0,
+          "fired checks not recorded": 0
+        },
+        "ids": {
+          "1 decided by its label": [
+            "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0",
+            "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0",
+            "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0",
+            "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0",
+            "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0",
+            "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0",
+            "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0"
+          ],
+          "2 label fires and another check decides": [],
+          "3 label fires and no check decides": [],
+          "4 label does not fire and no check decides": [],
+          "5 deciding check not deleted or record missing": [],
+          "6 label does not fire; case not observed on the copy without the deciding check": [],
+          "7 label does not fire and decides once the deciding check is deleted": [],
+          "8 label does not fire and does not decide then either": [],
+          "fired checks not recorded": []
+        },
+        "total": 22
+      }
+    },
+    "B": {
+      "cases_by_label": {
+        "names a check": 22
+      },
+      "outcomes": {
+        "counts": {
+          "1 decided by its label": 22,
+          "2 label fires and another check decides": 0,
+          "3 label fires and no check decides": 0,
+          "4 label does not fire and no check decides": 0,
+          "5 deciding check not deleted or record missing": 0,
+          "6 label does not fire; case not observed on the copy without the deciding check": 0,
+          "7 label does not fire and decides once the deciding check is deleted": 0,
+          "8 label does not fire and does not decide then either": 0,
+          "fired checks not recorded": 0
+        },
+        "ids": {
+          "1 decided by its label": [
+            "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0",
+            "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0",
+            "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0",
+            "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0",
+            "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0",
+            "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0",
+            "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0"
+          ],
+          "2 label fires and another check decides": [],
+          "3 label fires and no check decides": [],
+          "4 label does not fire and no check decides": [],
+          "5 deciding check not deleted or record missing": [],
+          "6 label does not fire; case not observed on the copy without the deciding check": [],
+          "7 label does not fire and decides once the deciding check is deleted": [],
+          "8 label does not fire and does not decide then either": [],
+          "fired checks not recorded": []
+        },
+        "total": 22
+      }
+    },
+    "agreed": {
+      "cases_by_label": {
+        "names a check": 22
+      },
+      "outcomes": {
+        "counts": {
+          "1 decided by its label": 22,
+          "2 label fires and another check decides": 0,
+          "3 label fires and no check decides": 0,
+          "4 label does not fire and no check decides": 0,
+          "5 deciding check not deleted or record missing": 0,
+          "6 label does not fire; case not observed on the copy without the deciding check": 0,
+          "7 label does not fire and decides once the deciding check is deleted": 0,
+          "8 label does not fire and does not decide then either": 0,
+          "fired checks not recorded": 0
+        },
+        "ids": {
+          "1 decided by its label": [
+            "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0",
+            "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0",
+            "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0",
+            "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0",
+            "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0",
+            "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0",
+            "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0"
+          ],
+          "2 label fires and another check decides": [],
+          "3 label fires and no check decides": [],
+          "4 label does not fire and no check decides": [],
+          "5 deciding check not deleted or record missing": [],
+          "6 label does not fire; case not observed on the copy without the deciding check": [],
+          "7 label does not fire and decides once the deciding check is deleted": [],
+          "8 label does not fire and does not decide then either": [],
+          "fired checks not recorded": []
+        },
+        "total": 22
+      }
+    }
+  },
+  "program_vs_label": {
+    "blocks_rule_2_to_rule_3": {
+      "counts": {
+        "changes": 0,
+        "gains": 0,
+        "keeps": 10,
+        "loses": 0,
+        "neither": 7
+      },
+      "ids": {
+        "changes": [],
+        "gains": [],
+        "keeps": [
+          "tests/test_jwt.py::test_decode_bad_token_expired#0",
+          "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+          "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+          "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+          "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+          "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+          "tests/test_jwt.py::test_decode_header_object#0",
+          "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+          "tests/test_jwt.py::test_decode_no_cert#0",
+          "tests/test_jwt.py::test_decode_payload_object#0"
+        ],
+        "loses": [],
+        "neither": [
+          "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+          "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+          "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+          "tests/test_jwt.py::test_decode_unhashable_alg#0",
+          "tests/test_jwt.py::test_decode_unhashable_kid#0",
+          "tests/test_jwt.py::test_decode_unknown_alg#0",
+          "tests/test_jwt.py::test_decode_wrong_cert#0"
+        ]
+      },
+      "total": 17
+    },
+    "rule 2": {
+      "per_block": {
+        "counts": {
+          "both none": 0,
+          "no agreed label": 0,
+          "no target, agreed label names a check": 7,
+          "target differs from agreed label": 2,
+          "target equals agreed label": 8,
+          "target given, agreed label none": 0
+        },
+        "ids": {
+          "both none": [],
+          "no agreed label": [],
+          "no target, agreed label names a check": [
+            "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+            "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+            "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+            "tests/test_jwt.py::test_decode_unhashable_alg#0",
+            "tests/test_jwt.py::test_decode_unhashable_kid#0",
+            "tests/test_jwt.py::test_decode_unknown_alg#0",
+            "tests/test_jwt.py::test_decode_wrong_cert#0"
+          ],
+          "target differs from agreed label": [
+            "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+            "tests/test_jwt.py::test_decode_no_cert#0"
+          ],
+          "target equals agreed label": [
+            "tests/test_jwt.py::test_decode_bad_token_expired#0",
+            "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+            "tests/test_jwt.py::test_decode_header_object#0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+            "tests/test_jwt.py::test_decode_payload_object#0"
+          ],
+          "target given, agreed label none": []
+        },
+        "total": 17
+      },
+      "per_block_by_basis": {
+        "assert+name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 2,
+            "target equals agreed label": 5,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+              "tests/test_jwt.py::test_decode_no_cert#0"
+            ],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_expired#0",
+              "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        },
+        "name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 3,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_header_object#0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+              "tests/test_jwt.py::test_decode_payload_object#0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 3
+        },
+        "no target": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 7,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [
+              "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+              "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+              "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+              "tests/test_jwt.py::test_decode_unhashable_alg#0",
+              "tests/test_jwt.py::test_decode_unhashable_kid#0",
+              "tests/test_jwt.py::test_decode_unknown_alg#0",
+              "tests/test_jwt.py::test_decode_wrong_cert#0"
+            ],
+            "target differs from agreed label": [],
+            "target equals agreed label": [],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        }
+      },
+      "per_block_by_tier": {
+        "name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 2,
+            "target equals agreed label": 8,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+              "tests/test_jwt.py::test_decode_no_cert#0"
+            ],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_expired#0",
+              "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+              "tests/test_jwt.py::test_decode_header_object#0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+              "tests/test_jwt.py::test_decode_payload_object#0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 10
+        },
+        "no target": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 7,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [
+              "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+              "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+              "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+              "tests/test_jwt.py::test_decode_unhashable_alg#0",
+              "tests/test_jwt.py::test_decode_unhashable_kid#0",
+              "tests/test_jwt.py::test_decode_unknown_alg#0",
+              "tests/test_jwt.py::test_decode_wrong_cert#0"
+            ],
+            "target differs from agreed label": [],
+            "target equals agreed label": [],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        }
+      },
+      "per_case": {
+        "counts": {
+          "both none": 0,
+          "no agreed label": 0,
+          "no target, agreed label names a check": 7,
+          "target differs from agreed label": 2,
+          "target equals agreed label": 13,
+          "target given, agreed label none": 0
+        },
+        "ids": {
+          "both none": [],
+          "no agreed label": [],
+          "no target, agreed label names a check": [
+            "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0",
+            "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0",
+            "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0",
+            "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0",
+            "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0"
+          ],
+          "target differs from agreed label": [
+            "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+            "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+          ],
+          "target equals agreed label": [
+            "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0",
+            "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0"
+          ],
+          "target given, agreed label none": []
+        },
+        "total": 22
+      },
+      "per_case_by_basis": {
+        "assert+name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 2,
+            "target equals agreed label": 5,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+              "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+            ],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        },
+        "name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 8,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 8
+        },
+        "no target": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 7,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [
+              "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0",
+              "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0",
+              "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0",
+              "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0",
+              "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0",
+              "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0",
+              "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0"
+            ],
+            "target differs from agreed label": [],
+            "target equals agreed label": [],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        }
+      },
+      "per_case_by_tier": {
+        "name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 2,
+            "target equals agreed label": 13,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+              "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+            ],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0",
+              "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 15
+        },
+        "no target": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 7,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [
+              "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0",
+              "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0",
+              "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0",
+              "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0",
+              "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0",
+              "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0",
+              "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0"
+            ],
+            "target differs from agreed label": [],
+            "target equals agreed label": [],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        }
+      }
+    },
+    "rule 3": {
+      "per_block": {
+        "counts": {
+          "both none": 0,
+          "no agreed label": 0,
+          "no target, agreed label names a check": 7,
+          "target differs from agreed label": 2,
+          "target equals agreed label": 8,
+          "target given, agreed label none": 0
+        },
+        "ids": {
+          "both none": [],
+          "no agreed label": [],
+          "no target, agreed label names a check": [
+            "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+            "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+            "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+            "tests/test_jwt.py::test_decode_unhashable_alg#0",
+            "tests/test_jwt.py::test_decode_unhashable_kid#0",
+            "tests/test_jwt.py::test_decode_unknown_alg#0",
+            "tests/test_jwt.py::test_decode_wrong_cert#0"
+          ],
+          "target differs from agreed label": [
+            "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+            "tests/test_jwt.py::test_decode_no_cert#0"
+          ],
+          "target equals agreed label": [
+            "tests/test_jwt.py::test_decode_bad_token_expired#0",
+            "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+            "tests/test_jwt.py::test_decode_header_object#0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+            "tests/test_jwt.py::test_decode_payload_object#0"
+          ],
+          "target given, agreed label none": []
+        },
+        "total": 17
+      },
+      "per_block_by_basis": {
+        "assert+name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 2,
+            "target equals agreed label": 5,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+              "tests/test_jwt.py::test_decode_no_cert#0"
+            ],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_expired#0",
+              "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        },
+        "name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 3,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_header_object#0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+              "tests/test_jwt.py::test_decode_payload_object#0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 3
+        },
+        "no target": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 7,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [
+              "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+              "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+              "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+              "tests/test_jwt.py::test_decode_unhashable_alg#0",
+              "tests/test_jwt.py::test_decode_unhashable_kid#0",
+              "tests/test_jwt.py::test_decode_unknown_alg#0",
+              "tests/test_jwt.py::test_decode_wrong_cert#0"
+            ],
+            "target differs from agreed label": [],
+            "target equals agreed label": [],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        }
+      },
+      "per_block_by_tier": {
+        "name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 2,
+            "target equals agreed label": 8,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+              "tests/test_jwt.py::test_decode_no_cert#0"
+            ],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_expired#0",
+              "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+              "tests/test_jwt.py::test_decode_header_object#0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+              "tests/test_jwt.py::test_decode_payload_object#0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 10
+        },
+        "no target": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 7,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [
+              "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+              "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+              "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+              "tests/test_jwt.py::test_decode_unhashable_alg#0",
+              "tests/test_jwt.py::test_decode_unhashable_kid#0",
+              "tests/test_jwt.py::test_decode_unknown_alg#0",
+              "tests/test_jwt.py::test_decode_wrong_cert#0"
+            ],
+            "target differs from agreed label": [],
+            "target equals agreed label": [],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        }
+      },
+      "per_case": {
+        "counts": {
+          "both none": 0,
+          "no agreed label": 0,
+          "no target, agreed label names a check": 7,
+          "target differs from agreed label": 2,
+          "target equals agreed label": 13,
+          "target given, agreed label none": 0
+        },
+        "ids": {
+          "both none": [],
+          "no agreed label": [],
+          "no target, agreed label names a check": [
+            "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0",
+            "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0",
+            "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0",
+            "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0",
+            "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0",
+            "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0"
+          ],
+          "target differs from agreed label": [
+            "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+            "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+          ],
+          "target equals agreed label": [
+            "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+            "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0",
+            "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+            "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0"
+          ],
+          "target given, agreed label none": []
+        },
+        "total": 22
+      },
+      "per_case_by_basis": {
+        "assert+name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 2,
+            "target equals agreed label": 5,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+              "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+            ],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        },
+        "name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 8,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 8
+        },
+        "no target": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 7,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [
+              "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0",
+              "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0",
+              "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0",
+              "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0",
+              "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0",
+              "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0",
+              "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0"
+            ],
+            "target differs from agreed label": [],
+            "target equals agreed label": [],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        }
+      },
+      "per_case_by_tier": {
+        "name": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 0,
+            "target differs from agreed label": 2,
+            "target equals agreed label": 13,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [],
+            "target differs from agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_not_json|tests/test_jwt.py::test_decode_bad_token_not_json#0|0",
+              "tests/test_jwt.py::test_decode_no_cert|tests/test_jwt.py::test_decode_no_cert#0|0"
+            ],
+            "target equals agreed label": [
+              "tests/test_jwt.py::test_decode_bad_token_expired|tests/test_jwt.py::test_decode_bad_token_expired#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_too_early|tests/test_jwt.py::test_decode_bad_token_too_early#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list|tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_audience|tests/test_jwt.py::test_decode_bad_token_wrong_audience#0|0",
+              "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments|tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0|0",
+              "tests/test_jwt.py::test_decode_header_object|tests/test_jwt.py::test_decode_header_object#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256]|tests/test_jwt.py::test_decode_mismatched_cert_key_type#0|0",
+              "tests/test_jwt.py::test_decode_payload_object|tests/test_jwt.py::test_decode_payload_object#0|0"
+            ],
+            "target given, agreed label none": []
+          },
+          "total": 15
+        },
+        "no target": {
+          "counts": {
+            "both none": 0,
+            "no agreed label": 0,
+            "no target, agreed label names a check": 7,
+            "target differs from agreed label": 0,
+            "target equals agreed label": 0,
+            "target given, agreed label none": 0
+          },
+          "ids": {
+            "both none": [],
+            "no agreed label": [],
+            "no target, agreed label names a check": [
+              "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp|tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0|0",
+              "tests/test_jwt.py::test_decode_missing_crytography_alg|tests/test_jwt.py::test_decode_missing_crytography_alg#0|0",
+              "tests/test_jwt.py::test_decode_multicert_bad_cert|tests/test_jwt.py::test_decode_multicert_bad_cert#0|0",
+              "tests/test_jwt.py::test_decode_unhashable_alg|tests/test_jwt.py::test_decode_unhashable_alg#0|0",
+              "tests/test_jwt.py::test_decode_unhashable_kid|tests/test_jwt.py::test_decode_unhashable_kid#0|0",
+              "tests/test_jwt.py::test_decode_unknown_alg|tests/test_jwt.py::test_decode_unknown_alg#0|0",
+              "tests/test_jwt.py::test_decode_wrong_cert|tests/test_jwt.py::test_decode_wrong_cert#0|0"
+            ],
+            "target differs from agreed label": [],
+            "target equals agreed label": [],
+            "target given, agreed label none": []
+          },
+          "total": 7
+        }
+      }
+    }
+  },
+  "protocol": "PROTOCOL.md, sections 2 (L1, L2, L3) and 4.1",
+  "readings": {
+    "A": {
+      "blocks": 17,
+      "blocks_labeled_by_param": 0,
+      "blocks_labeled_by_param_ids": [],
+      "blocks_labeled_none": 0,
+      "blocks_labeled_with_a_check": 17,
+      "file": "A.tsv",
+      "form_remarks": []
+    },
+    "B": {
+      "blocks": 17,
+      "blocks_labeled_by_param": 0,
+      "blocks_labeled_by_param_ids": [],
+      "blocks_labeled_none": 0,
+      "blocks_labeled_with_a_check": 17,
+      "file": "B.tsv",
+      "form_remarks": []
+    },
+    "by_param_cases_that_do_not_resolve": {}
+  },
+  "shadowed": {
+    "by_agreed_label": 0,
+    "by_agreed_label_ids": [],
+    "by_reading": {
+      "A": {
+        "count": 0,
+        "ids": []
+      },
+      "B": {
+        "count": 0,
+        "ids": []
+      }
+    },
+    "by_rule_2_target_in_place_of_the_label": 0,
+    "by_rule_2_target_in_place_of_the_label_ids": [],
+    "first_reading_class_a_rows": {},
+    "shadowed_cases_count": 0,
+    "shadowed_cases_with_sources": {}
+  },
+  "subject": "google-auth",
+  "version": "2.62.2"
+}

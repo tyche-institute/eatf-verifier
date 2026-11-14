@@ -1,0 +1,466 @@
+{
+ "counts": {
+  "block_targets_by_basis": {
+   "assert-literal": 2,
+   "class": 18,
+   "name": 60,
+   "none: no name token matches": 33,
+   "none: tie": 25
+  },
+  "blocks": 193,
+  "cases": 190,
+  "cases_another_check_fires_too": 13,
+  "cases_by_site_kind": {
+   "check": 190
+  },
+  "cases_class_only": 168,
+  "cases_fired_in_other_threads": 0,
+  "cases_left_out": 0,
+  "cases_left_out_by_reason": {},
+  "cases_message_text_differs_between_unmodified_runs": 0,
+  "cases_nested": 0,
+  "cases_of_included_blocks": 190,
+  "cases_reaching_target": 90,
+  "cases_target_fires": 90,
+  "cases_with_target": 106,
+  "cases_with_target_by_basis": {
+   "assert-literal": 16,
+   "class": 22,
+   "name": 68
+  },
+  "cases_with_target_by_outcome": {
+   "decided by the target": 90,
+   "decided by the target; own test without the target: fails": 90,
+   "the target does not fire": 16,
+   "the target does not fire; own test without the target: fails": 4,
+   "the target does not fire; own test without the target: passes": 10,
+   "the target does not fire; own test without the target: target not deleted": 2
+  },
+  "cases_with_target_by_tier": {
+   "assertion": 38,
+   "name": 68
+  },
+  "checks": 97,
+  "checks_deciding": 53,
+  "checks_deciding_in_subject_files": 53,
+  "checks_deciding_not_statically_reachable": 13,
+  "checks_firing": 55,
+  "checks_firing_and_never_deciding": 2,
+  "checks_in_subject_files": 97,
+  "checks_reachable": 81,
+  "deletion_runs_repeated": 0,
+  "deletions": 55,
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": 0,
+   "O_V within O_C": 0,
+   "O_V within O_S": 0,
+   "O_Vfc within O_V": 0,
+   "suite within whole suite": 0
+  },
+  "deletions_in_handler": 12,
+  "deletions_not_detected": {
+   "O_C": 2,
+   "O_S": 2,
+   "O_T": 27,
+   "O_V": 12,
+   "O_Vfc": 31,
+   "suite": 2,
+   "whole suite": 2
+  },
+  "deletions_not_detected_of_deciding_checks": {
+   "O_C": 2,
+   "O_S": 2,
+   "O_T": 25,
+   "O_V": 12,
+   "O_Vfc": 29,
+   "suite": 2,
+   "whole suite": 2
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": 2,
+   "O_T": 27,
+   "O_V": 12,
+   "O_Vfc": 31
+  },
+  "deletions_not_detected_withheld_as_failing_of_deciding_checks": {
+   "O_C": 2,
+   "O_T": 25,
+   "O_V": 12,
+   "O_Vfc": 29
+  },
+  "deletions_of_checks_that_fire_and_never_decide": 2,
+  "deletions_of_deciding_checks": 53,
+  "deletions_time_limit": 0,
+  "deletions_without_record": 0,
+  "fired_recorded": true,
+  "flags": 16,
+  "flags_by_tier": {
+   "name": 16
+  },
+  "flags_target_fires": 0,
+  "included_blocks": 138,
+  "included_blocks_class_only": 133,
+  "included_blocks_never_run": 0,
+  "included_blocks_with_target": 80,
+  "pinning": {
+   "cases": 190,
+   "cases_not_counted_deciding_check_not_deleted": 0,
+   "cases_not_counted_no_deciding_check": 0,
+   "cases_not_counted_no_record": 0,
+   "cases_not_counted_time_limit": 0,
+   "class_only": {
+    "cases": 168,
+    "test_passes": 4
+   },
+   "message": {
+    "cases": 22,
+    "test_passes": 0
+   },
+   "test_fails": 186,
+   "test_passes": 4,
+   "test_passes_by_what_the_case_does": {
+    "same class, another check": 4
+   }
+  },
+  "reached_targets": 28,
+  "reached_targets_deletion_not_detected_O_T": 0,
+  "test_files_not_collected": 0,
+  "tests_collected_again": 0,
+  "tests_expected_to_fail_at_baseline": 0,
+  "tests_imported_and_kept": 0,
+  "tests_run": 147,
+  "tests_with_cases": 80
+ },
+ "expected_baseline_failures": [],
+ "lists": {
+  "cases_left_out": [],
+  "checks_deciding_not_statically_reachable": [
+   "_rfc7515.compact.decode_header#1",
+   "_rfc7515.compact.decode_header#2",
+   "_rfc7519.claims.JWTClaimsRegistry.validate_aud#1",
+   "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+   "_rfc7519.claims.JWTClaimsRegistry.validate_exp#2",
+   "_rfc7519.claims.JWTClaimsRegistry.validate_iat#1",
+   "_rfc7519.claims.JWTClaimsRegistry.validate_iss#1",
+   "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+   "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+   "_rfc7519.claims.JWTClaimsRegistry.validate_sub#1",
+   "_rfc7797.compact.extract_rfc7515_compact#1",
+   "_rfc7797.compact.extract_rfc7515_compact#2",
+   "_rfc7797.json.extract_rfc7797_json#1"
+  ],
+  "deletion_runs_repeated": [],
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": [],
+   "O_V within O_C": [],
+   "O_V within O_S": [],
+   "O_Vfc within O_V": [],
+   "suite within whole suite": []
+  },
+  "deletions_not_detected": {
+   "O_C": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1"
+   ],
+   "O_S": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1"
+   ],
+   "O_T": [
+    "_rfc7515.compact.decode_header#2",
+    "_rfc7515.registry.JWSRegistry.get_alg#2",
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7516.models.KeyManagement.check_key_type#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#3",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7518.ec_key.ECKey.exchange_derive_key#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+    "_rfc7797.compact.extract_rfc7515_compact#1",
+    "_rfc7797.compact.extract_rfc7515_compact#2",
+    "_rfc7797.json.extract_general_json#1",
+    "_rfc7797.json.extract_rfc7797_json#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1",
+    "_rfc8037.okp_key.OKPKey.exchange_derive_key#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1",
+    "jws.validate_compact#1",
+    "registry.check_registry_header#2",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "O_V": [
+    "_rfc7515.compact.decode_header#1",
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7797.compact.extract_rfc7515_compact#2",
+    "_rfc7797.json._validate_general_members#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "O_Vfc": [
+    "_rfc7515.compact.decode_header#1",
+    "_rfc7515.compact.decode_header#2",
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.compact.extract_compact#1",
+    "_rfc7516.compact.extract_compact#2",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.models.KeyManagement.check_key_type#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7518.ec_key.ECKey.exchange_derive_key#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7797.compact.extract_rfc7515_compact#1",
+    "_rfc7797.compact.extract_rfc7515_compact#2",
+    "_rfc7797.json._validate_general_members#1",
+    "_rfc7797.json.extract_general_json#1",
+    "_rfc7797.json.extract_rfc7797_json#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1",
+    "_rfc8037.okp_key.OKPKey.exchange_derive_key#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1",
+    "jws.validate_compact#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "suite": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1"
+   ],
+   "whole suite": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1"
+   ]
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1"
+   ],
+   "O_T": [
+    "_rfc7515.compact.decode_header#2",
+    "_rfc7515.registry.JWSRegistry.get_alg#2",
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7516.models.KeyManagement.check_key_type#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#3",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7518.ec_key.ECKey.exchange_derive_key#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+    "_rfc7797.compact.extract_rfc7515_compact#1",
+    "_rfc7797.compact.extract_rfc7515_compact#2",
+    "_rfc7797.json.extract_general_json#1",
+    "_rfc7797.json.extract_rfc7797_json#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1",
+    "_rfc8037.okp_key.OKPKey.exchange_derive_key#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1",
+    "jws.validate_compact#1",
+    "registry.check_registry_header#2",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "O_V": [
+    "_rfc7515.compact.decode_header#1",
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7797.compact.extract_rfc7515_compact#2",
+    "_rfc7797.json._validate_general_members#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "O_Vfc": [
+    "_rfc7515.compact.decode_header#1",
+    "_rfc7515.compact.decode_header#2",
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.compact.extract_compact#1",
+    "_rfc7516.compact.extract_compact#2",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.models.KeyManagement.check_key_type#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7518.ec_key.ECKey.exchange_derive_key#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7797.compact.extract_rfc7515_compact#1",
+    "_rfc7797.compact.extract_rfc7515_compact#2",
+    "_rfc7797.json._validate_general_members#1",
+    "_rfc7797.json.extract_general_json#1",
+    "_rfc7797.json.extract_rfc7797_json#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1",
+    "_rfc8037.okp_key.OKPKey.exchange_derive_key#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1",
+    "jws.validate_compact#1",
+    "registry.reject_unprotected_crit_header#2"
+   ]
+  },
+  "deletions_of_checks_that_fire_and_never_decide": [
+   "_rfc7518.ec_key.ECKey.exchange_derive_key#1",
+   "_rfc8037.okp_key.OKPKey.exchange_derive_key#1"
+  ],
+  "deletions_time_limit": [],
+  "deletions_without_record": [],
+  "included_blocks_never_run": []
+ },
+ "refused_connection_attempts": {
+  "baseline_recorder_runs": [
+   0,
+   0
+  ],
+  "deletion_recorder_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 56,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "suite_run": 0,
+  "tests": [],
+  "whole_suite_baseline_runs": [
+   0,
+   0
+  ],
+  "whole_suite_deletion_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 56,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "witness_runs": 0
+ },
+ "rule_version": "reach-target-rule/3",
+ "sentinels": [
+  {
+   "detail": "",
+   "name": "2 baseline runs and the control copy give identical records, message texts aside",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "in the baseline recorder run every test passes or is skipped, every test file is collected, and the tests deselected are the expected baseline failures",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "under the deletion of a check, that check fires in no case",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "every deletion run gave a record or exceeded the time limit 2 times",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the check that decides a case is among the checks that fire in it",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the whole suite ran on every deletion copy, and on the control copy it ends with its results and loses no test that passes in both unmodified runs",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the deleted checks are the checks of the subject files that fire in at least 1 case of the study",
+   "pass": true
+  }
+ ],
+ "subject": {
+  "commit": "f345ff71cd6c36452a4e11e47b805ad450a95dd8",
+  "name": "joserfc",
+  "version": "1.8.0"
+ },
+ "suite_without_recorder": "147 passed, 49 subtests passed",
+ "test_files_not_collected": [],
+ "tests_collected_again": [],
+ "tests_imported_and_kept": [],
+ "whole_suite": {
+  "counts": {
+   "passing in both": 310,
+   "run 1": {
+    "passed": 310
+   },
+   "run 2": {
+    "passed": 310
+   },
+   "unstable": 0
+  },
+  "deletions_no_result": [],
+  "deletions_run": true,
+  "deletions_time_limit": [],
+  "runs_repeated": [],
+  "suite_runs": [
+   {
+    "name": "all",
+    "paths": [
+     "tests"
+    ]
+   }
+  ]
+ },
+ "witnesses": {
+  "test_jwe_compact_length_with_separators.py": {
+   "check": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+   "failure_messages_without_the_check": {
+    "witness|_witness.test_jwe_compact_length_with_separators::test_segments_within_their_limits_whole_value_beyond_the_total": "Failed: DID NOT RAISE ExceededSizeError"
+   },
+   "holds": true,
+   "tests": 1,
+   "tests_failing_without_the_check": 1,
+   "tests_not_passing_without_the_check": 1,
+   "tests_passing_on_the_unmodified_copy": 1
+  },
+  "test_jws_compact_length_with_separators.py": {
+   "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+   "failure_messages_without_the_check": {
+    "witness|_witness.test_jws_compact_length_with_separators::test_segments_within_their_limits_whole_value_beyond_the_total": "Failed: DID NOT RAISE ExceededSizeError"
+   },
+   "holds": true,
+   "tests": 1,
+   "tests_failing_without_the_check": 1,
+   "tests_not_passing_without_the_check": 1,
+   "tests_passing_on_the_unmodified_copy": 1
+  }
+ }
+}

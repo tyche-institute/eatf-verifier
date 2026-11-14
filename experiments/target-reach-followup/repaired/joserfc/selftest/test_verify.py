@@ -181,7 +181,7 @@ def test_derived_subject_differs_in_5_fields():
     assert derived["copy"] == ["src", "tests", "tests_repaired"]
     assert derived["suite_runs"] == [{"name": "all", "paths": ["tests", "tests_repaired"]}]
     names = [f"tests_repaired/{f.name}" for f in verify.variant_files()]
-    assert len(names) == 3
+    assert len(names) == 4
     assert derived["tests"] == sorted(["tests/a.py", "tests/b.py", *names])
     assert subject["copy"] == ["src", "tests"]
 

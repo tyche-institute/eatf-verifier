@@ -11,9 +11,10 @@ described-cases.csv and described-cases.json; SHA256SUMS is written again.
 Every output is sorted and holds no time.
 
 The span of a check: the lines of each of its raise statements, and the lines
-of the innermost guard of each: the test of the enclosing `if` statement (the
-raise may stand in its body or in its `else` part), or the header of the
-enclosing `except` clause (from `except` to the end of the exception type).
+of the innermost guard of each. That guard is the test of the enclosing `if`
+statement (the raise may stand in its body or in its `else` part), or the
+header of the enclosing `except` clause (from `except` to the end of the
+exception type).
 The guard is found as the toolkit finds it (reach.checks.guard_of). A check
 whose raise statements stand under no `if` and no `except` has only its raise
 lines. Conditions further out, and the statements that compute what a guard
@@ -24,9 +25,9 @@ span of the check. The deletion of a check changes the lines of its raise
 statements, so it is at its check. A mutant can be at several checks.
 
 --cases TSV: a tab-separated file with the header `case`, `described`, `kind`,
-`variant`. `case` is the key of a case as cases.csv writes it; `described` is
-the id of the check that the case is said to describe; `kind` is free text
-(for instance `shadowed` or `comparison`); `variant` is empty, or names 1 test
+`variant`. `case` is the key of a case as cases.csv writes it. `described` is
+the id of the check that the case is said to describe. `kind` is free text
+(for instance `shadowed` or `comparison`). `variant` is empty, or names 1 test
 of the extra tests (the end of its id), the repaired variant of the case's
 test. For each row the program reports, for the mutants of mutmut at the
 described check, at the check that decides the case in the unmodified
@@ -45,6 +46,35 @@ and the same for the deletion of each of the 2 checks. A unique kill: the
 tests of the whole suite that kill the mutant are 1 test (a test that runs in
 several suite runs is 1 test). With --extra-tests DIR the runs of that folder
 are read (the folder gives the digest under which run_mutants.py kept them).
+
+The expectations M1 to M3 of ../PROTOCOL.md speak of "a mutant at a check".
+Section 4.3 of the protocol says "Counts of mutants are of tool mutants; the
+deletions are counted apart." and also "the deletion of a check is at that
+check". The phrase therefore has 2 readings:
+
+    tool_mutants                 (reading T) a tool mutant at the check
+    tool_mutants_and_deletions   (reading TD) a tool mutant at the check, or
+                                 the deletion of the check
+
+The key "expectations" of described-cases.json uses reading TD. The key
+"expectations_by_reading" gives M1 to M3 under both readings. A row is
+shadowed when its described check is not its deciding check. M1 and M2 cover
+the shadowed rows, and M3 covers the shadowed rows that have a variant:
+
+    M1  per case, the unique kills of its test at the deciding check; the
+        tests with at least 1; "held" when such a test exists
+    M2  per case, the mutants at the described check and not at the deciding
+        check that the case detects under O_C; the cases with at least 1;
+        "held" when no case has one
+    M3  per row, the mutants at the described check that the variant kills,
+        and whether that is at least 1 (first sentence). Also whether the
+        described check fires in no case of the baseline (the second sentence
+        applies), and if so, whether the whole suite does not kill its
+        deletion and the variant does. "held" when every row holds
+
+A status is "not applicable" when it has 0 rows. The program exits with status
+1 when the member "tool_mutants_and_deletions" does not reproduce the key
+"expectations".
 """
 
 from __future__ import annotations
@@ -134,6 +164,62 @@ def test_name(key: str) -> str:
     return key.split("|", 1)[1]
 
 
+READINGS = {"tool_mutants": False, "tool_mutants_and_deletions": True}
+
+
+def status(rows: int, held: bool) -> str:
+    return "not applicable" if rows == 0 else "held" if held else "not held"
+
+
+def expectations_under(results: list[dict], with_deletions: bool) -> dict:
+    """M1 to M3 for the entries of described-cases.json, counting the deletion
+    of a check as a mutant at that check when `with_deletions` is true. Only
+    shadowed rows enter: all of them for M1 and M2, those with a variant for M3."""
+    def add(flag) -> int:
+        return int(with_deletions and bool(flag))
+
+    shadowed = [e for e in results if e["described_check"] != e["deciding_check"]]
+    m1 = {}
+    for e in shadowed:
+        dd = e["deletions"]["deciding"]
+        m1[e["case"]] = e["mutants"]["deciding"]["unique"] + add(dd and dd["unique"])
+    m1_tests = sorted({e["test"] for e in shadowed if m1[e["case"]] >= 1})
+    m2 = {}
+    for e in shadowed:
+        dl = e["deletions"]["described"]
+        m2[e["case"]] = e["mutants"]["described_not_deciding"]["O_C"] + add(dl and dl["O_C"])
+    m2_cases = sorted(k for k, v in m2.items() if v >= 1)
+    m3 = []
+    for e in shadowed:
+        if e["variant"] is None:
+            continue
+        dl = e["deletions"]["described"]
+        kills = e["mutants"]["described"]["variant"] + add(dl and dl["variant"])
+        applies = e["described_fires_in_a_baseline_case"] is False and dl is not None
+        second = (not dl["suite"] and bool(dl["variant"])) if applies else None
+        first = kills >= 1
+        m3.append({"case": e["case"], "variant_kills_at_the_described_check": kills,
+                   "first_sentence_holds": first, "second_sentence_applies": applies,
+                   "second_sentence_holds": second, "holds": first and (second if applies else True)})
+    return {
+        "M1": {"unique_kills_at_the_deciding_check": m1, "tests_with_at_least_1": m1_tests,
+               "status": status(len(m1), bool(m1_tests))},
+        "M2": {"O_C_detections_at_the_described_check_only": m2, "cases_with_at_least_1": m2_cases,
+               "status": status(len(m2), not m2_cases)},
+        "M3": {"rows": m3, "status": status(len(m3), all(r["holds"] for r in m3))},
+    }
+
+
+def as_expectations(member: dict) -> dict:
+    """A member of expectations_by_reading in the form of the key "expectations"."""
+    return {
+        "M1_tests_with_a_unique_kill_at_the_deciding_check": member["M1"]["tests_with_at_least_1"],
+        "M1_cases": member["M1"]["unique_kills_at_the_deciding_check"],
+        "M2_cases_that_detect_a_mutant_at_the_described_check_only": member["M2"]["cases_with_at_least_1"],
+        "M3_variants": [{"case": r["case"], "holds": r["holds"]} for r in member["M3"]["rows"]],
+    }
+
+
 def main(argv: list[str]) -> int:
     need_python_312()
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
@@ -172,10 +258,15 @@ def main(argv: list[str]) -> int:
                                      "mutants_at_the_check", "deletion"], span_rows),
         "at-check.csv": csv_text(["mutant", "operator", "check", "part"], at_rows),
     }
-    summary = None
+    summary = statuses = None
     if args.cases:
         written.update(described(args, out, work, subject, checks, by_id, at, deletion_of))
-        summary = json.loads(written["described-cases.json"])["expectations"]
+        doc = json.loads(written["described-cases.json"])
+        summary = doc["expectations"]
+        statuses = {reading: {m: member[m]["status"] for m in ("M1", "M2", "M3")}
+                    for reading, member in doc["expectations_by_reading"].items()}
+        if as_expectations(doc["expectations_by_reading"]["tool_mutants_and_deletions"]) != summary:
+            problems.append("expectations_by_reading.tool_mutants_and_deletions does not reproduce expectations")
     for fname, text in written.items():
         (out / fname).write_text(text, encoding="utf-8")
     sums = [f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.name}"
@@ -184,7 +275,8 @@ def main(argv: list[str]) -> int:
     tool_at = len({m for ms in at.values() for m in ms})
     print(f"at_check: {name}: {len(spans)} checks in {len(files)} files; {tool_at} of "
           f"{sum(1 for r in rows if r['operator'] != DELETION)} mutants of mutmut are at a check; "
-          f"{len(deletion_of)} deletions" + (f"; expectations {json.dumps(summary)}" if summary else ""))
+          f"{len(deletion_of)} deletions" + (f"; expectations {json.dumps(summary)}" if summary else "")
+          + (f"; statuses by reading {json.dumps(statuses, sort_keys=True)}" if statuses else ""))
     for p in problems[:10]:
         print(f"  problem: {p}")
     return 1 if problems else 0
@@ -313,7 +405,7 @@ def described(args, out: Path, work: Path, subject: dict, checks: dict, by_id: d
         row += [yn(entry["described_fires_in_a_baseline_case"])]
         table.append(row)
     shadowed = [e for e in results if e["described_check"] != e["deciding_check"]]
-    with_variant = [e for e in results if e["variant"] is not None]
+    with_variant = [e for e in shadowed if e["variant"] is not None]
     m3_rows = []
     for e in with_variant:
         dl = e["deletions"]["described"]
@@ -336,7 +428,9 @@ def described(args, out: Path, work: Path, subject: dict, checks: dict, by_id: d
         header += [f"deletion_{label}_{x}" for x in ("mutant", "suite", "O_C", "O_S", "own", "unique", "variant")]
     header += ["described_fires_in_a_baseline_case"]
     doc = {"subject": {k: subject.get(k) for k in ("name", "version", "commit")},
-           "extra_tests_digest": digest, "cases": results, "expectations": expectations}
+           "extra_tests_digest": digest, "cases": results, "expectations": expectations,
+           "expectations_by_reading": {reading: expectations_under(results, flag)
+                                       for reading, flag in sorted(READINGS.items())}}
     return {"described-cases.csv": csv_text(header, table),
             "described-cases.json": json.dumps(doc, indent=1, sort_keys=True, ensure_ascii=False) + "\n"}
 

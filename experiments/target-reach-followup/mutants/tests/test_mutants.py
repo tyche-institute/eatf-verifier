@@ -23,7 +23,7 @@ from pathlib import Path
 import pytest
 
 from analyse_mutants import case_detection, mutant_detection, parse_lines, score_counts, whole_killed
-from at_check import attribution, check_span, part_of, spans_of
+from at_check import as_expectations, attribution, check_span, expectations_under, part_of, spans_of
 from common import DELETION, EXPERIMENT, REFERENCE, TOOLKIT, functions, junit_key, read_packed, split_lines
 from materialize import Problem, deletion_mutants, place
 from reach.analyse import Run, oracles
@@ -179,6 +179,85 @@ def test_deletion_mutants(tmp_path):
     wrong = [dict(guard_checks()[0], lines=[[9, 9]])]
     rows, texts, problems, _ = deletion_mutants(tmp_path, ["pkg/m.py"], subject, wrong)
     assert len(problems) == 1 and texts == {}
+
+
+def entry(case, test, described, deciding, variant, tool, dl, dd, fires):
+    """An entry of described-cases.json with the fields that the expectations read."""
+    groups = ("described", "deciding", "described_not_deciding")
+    return {"case": case, "test": test, "described_check": described, "deciding_check": deciding,
+            "variant": variant, "described_fires_in_a_baseline_case": fires,
+            "mutants": {g: dict(tool[g]) for g in groups}, "deletions": {"described": dl, "deciding": dd}}
+
+
+def deletion(**flags):
+    d = {"mutant": "D00001", "suite": False, "O_C": False, "O_S": False, "own": False, "unique": False,
+         "variant": False}
+    d.update(flags)
+    return d
+
+
+def test_expectations_under_the_2_readings():
+    zero = {"unique": 0, "O_C": 0, "variant": 0}
+    # row a: the variant kills only the deletion of the described check, which fires in no baseline case
+    a = entry("a", "t::a", "c#2", "c#1", "v_a", {"described": zero, "deciding": zero, "described_not_deciding": zero},
+              deletion(variant=True), deletion(unique=True), False)
+    # row b: the variant kills 2 tool mutants at the described check; the case detects 1 under O_C
+    b = entry("b", "t::b", "c#3", "c#1", "v_b",
+              {"described": {"unique": 0, "O_C": 1, "variant": 2}, "deciding": zero,
+               "described_not_deciding": {"unique": 0, "O_C": 1, "variant": 2}},
+              deletion(suite=True, variant=True, O_C=True), deletion(), True)
+    # row c: a comparison row, the described check decides the case
+    c = entry("c", "t::c", "c#1", "c#1", None, {"described": zero, "deciding": zero, "described_not_deciding": zero},
+              deletion(), deletion(), True)
+    t = expectations_under([a, b, c], False)
+    td = expectations_under([a, b, c], True)
+    assert t["M1"] == {"unique_kills_at_the_deciding_check": {"a": 0, "b": 0}, "tests_with_at_least_1": [],
+                       "status": "not held"}
+    assert td["M1"] == {"unique_kills_at_the_deciding_check": {"a": 1, "b": 0}, "tests_with_at_least_1": ["t::a"],
+                        "status": "held"}
+    assert t["M2"]["O_C_detections_at_the_described_check_only"] == {"a": 0, "b": 1}
+    assert td["M2"]["O_C_detections_at_the_described_check_only"] == {"a": 0, "b": 2}
+    assert t["M2"]["status"] == td["M2"]["status"] == "not held"
+    assert [r["case"] for r in t["M3"]["rows"]] == ["a", "b"]
+    ra, rb = t["M3"]["rows"]
+    assert (ra["variant_kills_at_the_described_check"], ra["first_sentence_holds"], ra["second_sentence_applies"],
+            ra["second_sentence_holds"], ra["holds"]) == (0, False, True, True, False)
+    assert (rb["variant_kills_at_the_described_check"], rb["second_sentence_applies"],
+            rb["second_sentence_holds"], rb["holds"]) == (2, False, None, True)
+    assert t["M3"]["status"] == "not held"
+    ra, rb = td["M3"]["rows"]
+    assert (ra["variant_kills_at_the_described_check"], ra["holds"]) == (1, True)
+    assert (rb["variant_kills_at_the_described_check"], rb["holds"]) == (3, True)
+    assert td["M3"]["status"] == "held"
+    # the second sentence fails when the whole suite already kills the deletion
+    a2 = dict(a, deletions={"described": deletion(variant=True, suite=True), "deciding": deletion()})
+    assert expectations_under([a2], True)["M3"]["rows"][0]["holds"] is False
+    # no row: not applicable
+    none = expectations_under([c], True)
+    assert [none[m]["status"] for m in ("M1", "M2", "M3")] == ["not applicable"] * 3
+    assert as_expectations(td) == {
+        "M1_tests_with_a_unique_kill_at_the_deciding_check": ["t::a"], "M1_cases": {"a": 1, "b": 0},
+        "M2_cases_that_detect_a_mutant_at_the_described_check_only": ["b"],
+        "M3_variants": [{"case": "a", "holds": True}, {"case": "b", "holds": True}]}
+
+
+def test_m3_leaves_out_a_row_that_is_not_shadowed():
+    zero = {"unique": 0, "O_C": 0, "variant": 0}
+    # row d: the described check decides the case, and the row has a variant that kills a mutant at it
+    d = entry("d", "t::d", "c#4", "c#4", "v_d",
+              {"described": {"unique": 0, "O_C": 0, "variant": 1}, "deciding": zero, "described_not_deciding": zero},
+              deletion(variant=True), deletion(), False)
+    # row e: shadowed, with a variant that kills nothing at the described check
+    e = entry("e", "t::e", "c#5", "c#1", "v_e", {"described": zero, "deciding": zero, "described_not_deciding": zero},
+              deletion(suite=True), deletion(), True)
+    for flag in (False, True):
+        x = expectations_under([d, e], flag)
+        assert [r["case"] for r in x["M3"]["rows"]] == ["e"] and x["M3"]["status"] == "not held"
+        assert list(x["M1"]["unique_kills_at_the_deciding_check"]) == ["e"]
+        assert list(x["M2"]["O_C_detections_at_the_described_check_only"]) == ["e"]
+        alone = expectations_under([d], flag)
+        assert alone["M3"] == {"rows": [], "status": "not applicable"}
+    assert as_expectations(expectations_under([d, e], True))["M3_variants"] == [{"case": "e", "holds": False}]
 
 
 # -- scoring -------------------------------------------------------------------------------------------
@@ -372,7 +451,23 @@ def test_end_to_end():
     # the deletion of the deciding check moves or removes the rejection: the whole suite kills it here
     assert first["deletions"]["deciding"]["mutant"] in {d["mutant"] for d in deletions}
     assert second["described_check"] == other and second["O_C_detections_at_the_described_check_only"] is not None
-    assert doc["expectations"]["M3_variants"] == [{"case": key, "holds": False}]
+    # M3 covers shadowed rows with a variant only: the comparison row with a variant does not enter
+    assert doc["expectations"]["M3_variants"] == []
+    # the 2 readings: tool mutants alone, and tool mutants with the deletion of the check
+    by_reading = doc["expectations_by_reading"]
+    assert sorted(by_reading) == ["tool_mutants", "tool_mutants_and_deletions"]
+    assert as_expectations(by_reading["tool_mutants_and_deletions"]) == doc["expectations"]
+    t_m3, td_m3 = by_reading["tool_mutants"]["M3"], by_reading["tool_mutants_and_deletions"]["M3"]
+    assert t_m3 == td_m3 == {"rows": [], "status": "not applicable"}
+    assert first["mutants"]["described"]["variant"] == 0
+    # the shadowed row: under reading TD each count adds the deletion of its check
+    t_m1 = by_reading["tool_mutants"]["M1"]["unique_kills_at_the_deciding_check"]
+    td_m1 = by_reading["tool_mutants_and_deletions"]["M1"]["unique_kills_at_the_deciding_check"]
+    assert list(t_m1) == [key] and t_m1[key] == second["mutants"]["deciding"]["unique"]
+    assert td_m1[key] - t_m1[key] == int(second["deletions"]["deciding"]["unique"])
+    t_m2 = by_reading["tool_mutants"]["M2"]["O_C_detections_at_the_described_check_only"]
+    td_m2 = by_reading["tool_mutants_and_deletions"]["M2"]["O_C_detections_at_the_described_check_only"]
+    assert td_m2[key] - t_m2[key] == int(second["deletions"]["described"]["O_C"])
     sums = (out / "SHA256SUMS").read_text(encoding="utf-8")
     assert "at-check.csv" in sums and "described-cases.json" in sums
     run_ok(at)

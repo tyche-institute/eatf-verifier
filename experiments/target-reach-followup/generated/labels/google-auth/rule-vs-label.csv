@@ -1,0 +1,45 @@
+rule,block,index,test_node,target,tier,label,category
+rule 2,tests/test_jwt.py::test_decode_bad_token_expired#0,0,tests/test_jwt.py::test_decode_bad_token_expired,auth.jwt._verify_iat_and_exp#3,name,auth.jwt._verify_iat_and_exp#3,target equals label
+rule 2,tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0,0,tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp,,none,auth.jwt._verify_iat_and_exp#1,no target
+rule 2,tests/test_jwt.py::test_decode_bad_token_not_json#0,0,tests/test_jwt.py::test_decode_bad_token_not_json,auth.jwt.decode#5,name,auth.jwt._decode_jwt_segment#1,target differs from label
+rule 2,tests/test_jwt.py::test_decode_bad_token_too_early#0,0,tests/test_jwt.py::test_decode_bad_token_too_early,auth.jwt._verify_iat_and_exp#2,name,auth.jwt._verify_iat_and_exp#2,target equals label
+rule 2,tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0,0,tests/test_jwt.py::test_decode_bad_token_wrong_audience_list,auth.jwt.decode#6,name,auth.jwt.decode#6,target equals label
+rule 2,tests/test_jwt.py::test_decode_bad_token_wrong_audience#0,0,tests/test_jwt.py::test_decode_bad_token_wrong_audience,auth.jwt.decode#6,name,auth.jwt.decode#6,target equals label
+rule 2,tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0,0,tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments,auth.jwt._unverified_decode#1,name,auth.jwt._unverified_decode#1,target equals label
+rule 2,tests/test_jwt.py::test_decode_header_object#0,0,tests/test_jwt.py::test_decode_header_object,auth.jwt._unverified_decode#2,name,auth.jwt._unverified_decode#2,target equals label
+rule 2,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 2,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 2,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 2,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 2,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 2,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 2,tests/test_jwt.py::test_decode_missing_crytography_alg#0,0,tests/test_jwt.py::test_decode_missing_crytography_alg,,none,auth.jwt.decode#1,no target
+rule 2,tests/test_jwt.py::test_decode_multicert_bad_cert#0,0,tests/test_jwt.py::test_decode_multicert_bad_cert,,none,auth.jwt.decode#5,no target
+rule 2,tests/test_jwt.py::test_decode_no_cert#0,0,tests/test_jwt.py::test_decode_no_cert,auth.crypt._python_rsa.RSASigner.from_string#2,name,auth.jwt.decode#3,target differs from label
+rule 2,tests/test_jwt.py::test_decode_payload_object#0,0,tests/test_jwt.py::test_decode_payload_object,auth.jwt._unverified_decode#3,name,auth.jwt._unverified_decode#3,target equals label
+rule 2,tests/test_jwt.py::test_decode_unhashable_alg#0,0,tests/test_jwt.py::test_decode_unhashable_alg,,none,auth.jwt.decode#2,no target
+rule 2,tests/test_jwt.py::test_decode_unhashable_kid#0,0,tests/test_jwt.py::test_decode_unhashable_kid,,none,auth.jwt.decode#3,no target
+rule 2,tests/test_jwt.py::test_decode_unknown_alg#0,0,tests/test_jwt.py::test_decode_unknown_alg,,none,auth.jwt.decode#2,no target
+rule 2,tests/test_jwt.py::test_decode_wrong_cert#0,0,tests/test_jwt.py::test_decode_wrong_cert,,none,auth.jwt.decode#5,no target
+rule 3,tests/test_jwt.py::test_decode_bad_token_expired#0,0,tests/test_jwt.py::test_decode_bad_token_expired,auth.jwt._verify_iat_and_exp#3,name,auth.jwt._verify_iat_and_exp#3,target equals label
+rule 3,tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0,0,tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp,,none,auth.jwt._verify_iat_and_exp#1,no target
+rule 3,tests/test_jwt.py::test_decode_bad_token_not_json#0,0,tests/test_jwt.py::test_decode_bad_token_not_json,auth.jwt.decode#5,name,auth.jwt._decode_jwt_segment#1,target differs from label
+rule 3,tests/test_jwt.py::test_decode_bad_token_too_early#0,0,tests/test_jwt.py::test_decode_bad_token_too_early,auth.jwt._verify_iat_and_exp#2,name,auth.jwt._verify_iat_and_exp#2,target equals label
+rule 3,tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0,0,tests/test_jwt.py::test_decode_bad_token_wrong_audience_list,auth.jwt.decode#6,name,auth.jwt.decode#6,target equals label
+rule 3,tests/test_jwt.py::test_decode_bad_token_wrong_audience#0,0,tests/test_jwt.py::test_decode_bad_token_wrong_audience,auth.jwt.decode#6,name,auth.jwt.decode#6,target equals label
+rule 3,tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0,0,tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments,auth.jwt._unverified_decode#1,name,auth.jwt._unverified_decode#1,target equals label
+rule 3,tests/test_jwt.py::test_decode_header_object#0,0,tests/test_jwt.py::test_decode_header_object,auth.jwt._unverified_decode#2,name,auth.jwt._unverified_decode#2,target equals label
+rule 3,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs0-certs0-ES256],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 3,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs1-certs1-ES256],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 3,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs2-certs2-ES384],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 3,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs3-certs3-ES384],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 3,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs4-certs4-RS256],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 3,tests/test_jwt.py::test_decode_mismatched_cert_key_type#0,0,tests/test_jwt.py::test_decode_mismatched_cert_key_type[token_kwargs5-certs5-RS256],auth.jwt.decode#4,name,auth.jwt.decode#4,target equals label
+rule 3,tests/test_jwt.py::test_decode_missing_crytography_alg#0,0,tests/test_jwt.py::test_decode_missing_crytography_alg,,none,auth.jwt.decode#1,no target
+rule 3,tests/test_jwt.py::test_decode_multicert_bad_cert#0,0,tests/test_jwt.py::test_decode_multicert_bad_cert,,none,auth.jwt.decode#5,no target
+rule 3,tests/test_jwt.py::test_decode_no_cert#0,0,tests/test_jwt.py::test_decode_no_cert,auth.crypt._python_rsa.RSASigner.from_string#2,name,auth.jwt.decode#3,target differs from label
+rule 3,tests/test_jwt.py::test_decode_payload_object#0,0,tests/test_jwt.py::test_decode_payload_object,auth.jwt._unverified_decode#3,name,auth.jwt._unverified_decode#3,target equals label
+rule 3,tests/test_jwt.py::test_decode_unhashable_alg#0,0,tests/test_jwt.py::test_decode_unhashable_alg,,none,auth.jwt.decode#2,no target
+rule 3,tests/test_jwt.py::test_decode_unhashable_kid#0,0,tests/test_jwt.py::test_decode_unhashable_kid,,none,auth.jwt.decode#3,no target
+rule 3,tests/test_jwt.py::test_decode_unknown_alg#0,0,tests/test_jwt.py::test_decode_unknown_alg,,none,auth.jwt.decode#2,no target
+rule 3,tests/test_jwt.py::test_decode_wrong_cert#0,0,tests/test_jwt.py::test_decode_wrong_cert,,none,auth.jwt.decode#5,no target

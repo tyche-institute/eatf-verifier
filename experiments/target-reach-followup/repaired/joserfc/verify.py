@@ -1,4 +1,4 @@
-"""Verification of the repaired variants of 3 joserfc 1.8.0 tests.
+"""Verification of the repaired variants of 4 joserfc 1.8.0 tests.
 
     python3 -I -B repaired/joserfc/verify.py [--python VENV_PYTHON] [--clone DIR]
                                              [--work DIR] [--out FILE] [--no-recorder]
@@ -16,8 +16,8 @@ What it does, on fresh copies of the unmodified release (the paths of
    the `verify` step of ../target-reach/reach/run.py passes on the clone and
    the interpreter (its work folder, which receives only local.json, is
    <work>/toolkit-verify).
-1. Probe run. 1 pytest call on a copy that also holds tests_repaired/: the 3
-   original tests and the 3 variants, with the offline module of the toolkit
+1. Probe run. 1 pytest call on a copy that also holds tests_repaired/: the 4
+   original tests and the 4 variants, with the offline module of the toolkit
    (../target-reach/guard/reach_offline.py) and a probe plugin that this
    script writes into the work folder. The probe wraps the `__exit__` method
    of unittest's assertRaises context, which serves the callable form too,
@@ -37,7 +37,7 @@ What it does, on fresh copies of the unmodified release (the paths of
    fields only (name, no commit, copy, tests, suite_runs). The toolkit's own
    runner (../target-reach/reach/run.py) runs `define targets baseline` on it
    with its definitions and records in the work folder; the deciding check of
-   each of the 6 blocks is read from both baseline recorder records.
+   each of the 8 blocks is read from both baseline recorder records.
 
 Every pytest call gets the environment of the toolkit's runner: PATH, HOME,
 LANG and LC_ALL set to C.UTF-8, PYTHONHASHSEED=0, PYTHONDONTWRITEBYTECODE=1,
@@ -85,11 +85,11 @@ SENTINELS = {
           "test passes",
     "S5": "the whole suite with the variants exits with 0, has no failed or erroneous test and no "
           "collection error, and its passing tests are those of the whole suite without the "
-          "variants plus the 3 variants",
+          "variants plus the 4 variants",
     "S6": "no pytest call made an attempt to reach another machine",
     "S7": "recorder run (when made): the derived checks are those of checks.json, the blocks of the "
           "original test files are those of blocks.json, the rule gives every original block the target "
-          "of targets.json, both baseline records give each of the 6 "
+          "of targets.json, both baseline records give each of the 8 "
           "blocks the same deciding check, and it is the check of the probe run",
 }
 
@@ -126,6 +126,17 @@ CASES = [
         "target": "_rfc7797.json._is_payload_base64_encoded#1",
         "variant_test": "tests_repaired/test_repaired_jws_json.py::TestJSONRepaired::"
                         "test_repaired_b64_must_be_protected",
+    },
+    {
+        "original_test": "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size",
+        "original_index": 0,
+        "original_where": "tests/jwe/test_compact.py:256",
+        "original_block": "tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0",
+        "expected_class": "joserfc.errors.ExceededSizeError",
+        "deciding": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+        "target": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+        "variant_test": "tests_repaired/test_repaired_jwe_compact_header.py::TestJWECompactHeaderRepaired::"
+                        "test_repaired_header_exceeds_size",
     },
 ]
 
@@ -440,7 +451,7 @@ def recorder_section(subject, checks, blocks, clone, python, work, probe_rows) -
     (work / "logs" / "recorder-run.log").write_text(proc.stdout + proc.stderr, encoding="utf-8")
     section = {"runner_returncode": proc.returncode,
                "derived_subject_differs_in": ["name", "commit (removed)", "copy (+ tests_repaired)",
-                                              "tests (+ the 3 variant files)",
+                                              "tests (+ the 4 variant files)",
                                               "suite_runs (+ tests_repaired in each)"]}
     if proc.returncode != 0:
         return section, [f"the runner exited with {proc.returncode} (see the log of the recorder run)"]

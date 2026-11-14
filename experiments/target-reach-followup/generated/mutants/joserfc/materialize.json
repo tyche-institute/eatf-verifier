@@ -1,0 +1,108 @@
+{
+ "blank_lines_added": 10,
+ "by_operator": {
+  "arg_removal": 245,
+  "assignment": 71,
+  "if_exp": 6,
+  "keywords": 26,
+  "lambda": 1,
+  "name": 9,
+  "number": 7,
+  "remove_unary_ops": 12,
+  "string": 99,
+  "swap_op": 40
+ },
+ "check_deletions": 29,
+ "checks_json_sha256": "49eaea742bda9a5f6743061d8d8161e939d9639f46f8aec11f77611a99428e49",
+ "files": {
+  "joserfc/_rfc7515/registry.py": {
+   "by_operator": {
+    "arg_removal": 61,
+    "assignment": 15,
+    "keywords": 6,
+    "lambda": 1,
+    "name": 2,
+    "number": 3,
+    "string": 3,
+    "swap_op": 11
+   },
+   "check_deletions": 7,
+   "mutants": 102,
+   "mutmut_names": 102,
+   "sha256": "f3b40db9d24341f244fa40d8c2a601d24359cd564fd721b32bd694e8446adf3f"
+  },
+  "joserfc/_rfc7516/registry.py": {
+   "by_operator": {
+    "arg_removal": 56,
+    "assignment": 14,
+    "keywords": 6,
+    "name": 3,
+    "number": 1,
+    "string": 8,
+    "swap_op": 18
+   },
+   "check_deletions": 11,
+   "mutants": 106,
+   "mutmut_names": 106,
+   "sha256": "5bf634da9a4838153bd2dd05c20c116976e8fc67b52fd6896357d2f4c55b9712"
+  },
+  "joserfc/_rfc7797/json.py": {
+   "by_operator": {
+    "arg_removal": 100,
+    "assignment": 27,
+    "if_exp": 2,
+    "keywords": 4,
+    "name": 1,
+    "number": 3,
+    "remove_unary_ops": 1,
+    "string": 54,
+    "swap_op": 4
+   },
+   "check_deletions": 4,
+   "mutants": 196,
+   "mutmut_names": 196,
+   "sha256": "bd8b69397150eb51142fc9ae57d0931a7e2fc2c4e1d68c077314a52aa66ee37d"
+  },
+  "joserfc/registry.py": {
+   "by_operator": {
+    "arg_removal": 28,
+    "assignment": 15,
+    "if_exp": 4,
+    "keywords": 10,
+    "name": 3,
+    "remove_unary_ops": 11,
+    "string": 34,
+    "swap_op": 7
+   },
+   "check_deletions": 7,
+   "mutants": 112,
+   "mutmut_names": 112,
+   "sha256": "757c62de65ea358f0527ce097da8782d3eda78731edb7695d86913e1c9030c54"
+  }
+ },
+ "generator_sha256": "9e4fe3e5a84ed1e4db6fe659ae2792686234ef7eac80780e6723a955cb1e0cea",
+ "mutants": 516,
+ "mutants_padded_with_blank_lines": 5,
+ "mutmut_version": "3.8.1",
+ "sentinels": [
+  {
+   "detail": [],
+   "failures": 0,
+   "name": "S1",
+   "pass": true,
+   "text": "each modified file differs from the unmodified file only inside the span of the mutated function, keeps its number of lines, compiles, and is not the unmodified file; a deletion changes the lines of the check's raise statements and no other line"
+  },
+  {
+   "detail": [],
+   "failures": 0,
+   "name": "S2",
+   "pass": true,
+   "text": "each mutated function has the syntax tree of the function mutmut writes for the mutant, and each file has as many mutants as mutmut's file generator yields, with the same names in the same order"
+  }
+ ],
+ "subject": {
+  "commit": "f345ff71cd6c36452a4e11e47b805ad450a95dd8",
+  "name": "joserfc",
+  "version": "1.8.0"
+ }
+}

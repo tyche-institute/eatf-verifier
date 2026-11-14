@@ -1,0 +1,40 @@
+check,file,function,role,reachable_by_name,reachable_by_execution,reachable_rule_3,entry_points
+jose.drafts._jwe_algorithms.ECDH1PUAlgorithm.generate_keys_and_prepare_headers#1,authlib/jose/drafts/_jwe_algorithms.py,ECDH1PUAlgorithm.generate_keys_and_prepare_headers,subject,yes,no,yes,
+jose.rfc7515.jws.JsonWebSignature.deserialize_compact#1,authlib/jose/rfc7515/jws.py,JsonWebSignature.deserialize_compact,subject,yes,yes,yes,decode deserialize deserialize_compact
+jose.rfc7515.jws.JsonWebSignature.deserialize_compact#2,authlib/jose/rfc7515/jws.py,JsonWebSignature.deserialize_compact,subject,yes,yes,yes,decode deserialize deserialize_compact
+jose.rfc7515.jws.JsonWebSignature.deserialize_json#1,authlib/jose/rfc7515/jws.py,JsonWebSignature.deserialize_json,subject,yes,yes,yes,deserialize deserialize_json
+jose.rfc7515.jws.JsonWebSignature.deserialize_json#2,authlib/jose/rfc7515/jws.py,JsonWebSignature.deserialize_json,subject,yes,yes,yes,deserialize deserialize_json
+jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#1,authlib/jose/rfc7515/jws.py,JsonWebSignature._prepare_algorithm_key,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#2,authlib/jose/rfc7515/jws.py,JsonWebSignature._prepare_algorithm_key,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7515.jws.JsonWebSignature._validate_private_headers#1,authlib/jose/rfc7515/jws.py,JsonWebSignature._validate_private_headers,subject,yes,no,yes,
+jose.rfc7515.jws.JsonWebSignature._reject_unprotected_crit#1,authlib/jose/rfc7515/jws.py,JsonWebSignature._reject_unprotected_crit,subject,yes,yes,yes,deserialize deserialize_json
+jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#1,authlib/jose/rfc7515/jws.py,JsonWebSignature._validate_crit_headers,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#2,authlib/jose/rfc7515/jws.py,JsonWebSignature._validate_crit_headers,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1,authlib/jose/rfc7515/jws.py,JsonWebSignature._validate_json_jws,subject,yes,yes,yes,deserialize deserialize_json
+jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2,authlib/jose/rfc7515/jws.py,JsonWebSignature._validate_json_jws,subject,yes,yes,yes,deserialize deserialize_json
+jose.rfc7515.jws.JsonWebSignature._validate_json_jws#3,authlib/jose/rfc7515/jws.py,JsonWebSignature._validate_json_jws,subject,yes,yes,yes,deserialize deserialize_json
+jose.rfc7516.jwe.JsonWebEncryption.serialize_json#1,authlib/jose/rfc7516/jwe.py,JsonWebEncryption.serialize_json,subject,no,no,no,
+jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact#1,authlib/jose/rfc7516/jwe.py,JsonWebEncryption.deserialize_compact,subject,yes,yes,yes,decode deserialize deserialize_compact
+jose.rfc7516.jwe.JsonWebEncryption.deserialize_json._unwrap_for_matching_recipient#1,authlib/jose/rfc7516/jwe.py,JsonWebEncryption.deserialize_json._unwrap_for_matching_recipient,subject,yes,yes,yes,deserialize deserialize_json
+jose.rfc7516.jwe.JsonWebEncryption.get_header_alg#1,authlib/jose/rfc7516/jwe.py,JsonWebEncryption.get_header_alg,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7516.jwe.JsonWebEncryption.get_header_alg#2,authlib/jose/rfc7516/jwe.py,JsonWebEncryption.get_header_alg,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7516.jwe.JsonWebEncryption.get_header_enc#1,authlib/jose/rfc7516/jwe.py,JsonWebEncryption.get_header_enc,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7516.jwe.JsonWebEncryption.get_header_enc#2,authlib/jose/rfc7516/jwe.py,JsonWebEncryption.get_header_enc,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7516.jwe.JsonWebEncryption.get_header_zip#1,authlib/jose/rfc7516/jwe.py,JsonWebEncryption.get_header_zip,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7516.jwe.JsonWebEncryption._validate_private_headers#1,authlib/jose/rfc7516/jwe.py,JsonWebEncryption._validate_private_headers,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7517.base_key.Key.check_key_op#1,authlib/jose/rfc7517/base_key.py,Key.check_key_op,subject,yes,yes,yes,decode deserialize deserialize_compact deserialize_json
+jose.rfc7519.claims.BaseClaims._validate_essential_claims#1,authlib/jose/rfc7519/claims.py,BaseClaims._validate_essential_claims,subject,yes,yes,yes,validate
+jose.rfc7519.claims.BaseClaims._validate_essential_claims#2,authlib/jose/rfc7519/claims.py,BaseClaims._validate_essential_claims,subject,yes,yes,yes,validate
+jose.rfc7519.claims.BaseClaims._validate_claim_value#1,authlib/jose/rfc7519/claims.py,BaseClaims._validate_claim_value,subject,yes,yes,yes,validate
+jose.rfc7519.claims.JWTClaims.validate_aud#1,authlib/jose/rfc7519/claims.py,JWTClaims.validate_aud,subject,yes,yes,yes,validate
+jose.rfc7519.claims.JWTClaims.validate_exp#1,authlib/jose/rfc7519/claims.py,JWTClaims.validate_exp,subject,yes,yes,yes,validate
+jose.rfc7519.claims.JWTClaims.validate_exp#2,authlib/jose/rfc7519/claims.py,JWTClaims.validate_exp,subject,yes,yes,yes,validate
+jose.rfc7519.claims.JWTClaims.validate_nbf#1,authlib/jose/rfc7519/claims.py,JWTClaims.validate_nbf,subject,yes,yes,yes,validate
+jose.rfc7519.claims.JWTClaims.validate_nbf#2,authlib/jose/rfc7519/claims.py,JWTClaims.validate_nbf,subject,yes,yes,yes,validate
+jose.rfc7519.claims.JWTClaims.validate_iat#1,authlib/jose/rfc7519/claims.py,JWTClaims.validate_iat,subject,yes,yes,yes,validate
+jose.rfc7519.claims.JWTClaims.validate_iat#2,authlib/jose/rfc7519/claims.py,JWTClaims.validate_iat,subject,yes,yes,yes,validate
+jose.rfc7519.jwt.JsonWebToken.check_sensitive_data#1,authlib/jose/rfc7519/jwt.py,JsonWebToken.check_sensitive_data,subject,yes,no,yes,
+jose.rfc7519.jwt.JsonWebToken.decode#1,authlib/jose/rfc7519/jwt.py,JsonWebToken.decode,subject,yes,yes,yes,decode
+jose.rfc7519.jwt.decode_payload#1,authlib/jose/rfc7519/jwt.py,decode_payload,subject,no,yes,yes,decode deserialize_compact
+jose.rfc7519.jwt.decode_payload#2,authlib/jose/rfc7519/jwt.py,decode_payload,subject,no,yes,yes,decode deserialize_compact
+jose.util.ensure_dict#1,authlib/jose/util.py,ensure_dict,subject,yes,yes,yes,deserialize deserialize_json

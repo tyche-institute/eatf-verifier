@@ -152,6 +152,57 @@
     "where": "tests_repaired/test_repaired_jws_json.py:29"
    },
    "variant_pass": true
+  },
+  {
+   "deciding_check_of_the_original": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+   "original": {
+    "block": "tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0",
+    "check": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "class": "joserfc.errors.ExceededSizeError",
+    "expected_check": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "index": 0,
+    "innermost_frame": {
+     "file": "joserfc/_rfc7516/registry.py",
+     "function": "JWERegistry.validate_compact_value_size",
+     "inside_package": true,
+     "line": 122
+    },
+    "message": "exceeded_size: Value size exceeds 67712 bytes.",
+    "raise_site": {
+     "file": "joserfc/_rfc7516/registry.py",
+     "function": "JWERegistry.validate_compact_value_size",
+     "inside_package": true,
+     "line": 122
+    },
+    "recorded": true,
+    "test_outcome": "passed",
+    "where": "tests/jwe/test_compact.py:256"
+   },
+   "original_pass": true,
+   "target": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+   "variant": {
+    "check": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "class": "joserfc.errors.ExceededSizeError",
+    "expected_check": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "innermost_frame": {
+     "file": "joserfc/_rfc7516/registry.py",
+     "function": "JWERegistry.validate_protected_header_size",
+     "inside_package": true,
+     "line": 126
+    },
+    "message": "exceeded_size: Header size exceeds 1024 bytes.",
+    "raise_site": {
+     "file": "joserfc/_rfc7516/registry.py",
+     "function": "JWERegistry.validate_protected_header_size",
+     "inside_package": true,
+     "line": 126
+    },
+    "recorded": true,
+    "test": "tests_repaired/test_repaired_jwe_compact_header.py::TestJWECompactHeaderRepaired::test_repaired_header_exceeds_size",
+    "test_outcome": "passed",
+    "where": "tests_repaired/test_repaired_jwe_compact_header.py:24"
+   },
+   "variant_pass": true
   }
  ],
  "definitions": {
@@ -172,7 +223,7 @@
  "probe_run": {
   "refused_attempts": 0,
   "returncode": 0,
-  "summary": "6 passed"
+  "summary": "8 passed"
  },
  "raise_site_rule": "innermost frame of the traceback of the exception that reached assertRaises; its file relative to the source root and its line, looked up in the line ranges of the checks",
  "recorder": {
@@ -320,16 +371,64 @@
     "rule_basis": "name",
     "rule_target": "_rfc7797.json._is_payload_base64_encoded#1",
     "rule_tier": "name"
+   },
+   {
+    "block": "tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0",
+    "check_result": [
+     "accepted",
+     "accepted"
+    ],
+    "deciding_check": [
+     "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+     "_rfc7516.registry.JWERegistry.validate_compact_value_size#1"
+    ],
+    "fired": [
+     [
+      "_rfc7516.registry.JWERegistry.validate_compact_value_size#1"
+     ],
+     [
+      "_rfc7516.registry.JWERegistry.validate_compact_value_size#1"
+     ]
+    ],
+    "included": true,
+    "kind": "original",
+    "rule_basis": null,
+    "rule_target": null,
+    "rule_tier": null
+   },
+   {
+    "block": "tests_repaired/test_repaired_jwe_compact_header.py::TestJWECompactHeaderRepaired.test_repaired_header_exceeds_size#0",
+    "check_result": [
+     "accepted",
+     "accepted"
+    ],
+    "deciding_check": [
+     "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+     "_rfc7516.registry.JWERegistry.validate_protected_header_size#1"
+    ],
+    "fired": [
+     [
+      "_rfc7516.registry.JWERegistry.validate_protected_header_size#1"
+     ],
+     [
+      "_rfc7516.registry.JWERegistry.validate_protected_header_size#1"
+     ]
+    ],
+    "included": true,
+    "kind": "variant",
+    "rule_basis": null,
+    "rule_target": null,
+    "rule_tier": null
    }
   ],
   "derived_subject_differs_in": [
    "name",
    "commit (removed)",
    "copy (+ tests_repaired)",
-   "tests (+ the 3 variant files)",
+   "tests (+ the 4 variant files)",
    "suite_runs (+ tests_repaired in each)"
   ],
-  "new_blocks": 3,
+  "new_blocks": 4,
   "original_blocks_with_another_target": [],
   "recorder_refused_attempts": {
    "base-1": 0,
@@ -340,7 +439,7 @@
    "failures": [],
    "not_collected": [],
    "refused_attempts": 0,
-   "summary": "150 passed, 49 subtests passed"
+   "summary": "151 passed, 49 subtests passed"
   }
  },
  "sentinels": {
@@ -367,7 +466,7 @@
   "S5": {
    "held": true,
    "problems": [],
-   "statement": "the whole suite with the variants exits with 0, has no failed or erroneous test and no collection error, and its passing tests are those of the whole suite without the variants plus the 3 variants"
+   "statement": "the whole suite with the variants exits with 0, has no failed or erroneous test and no collection error, and its passing tests are those of the whole suite without the variants plus the 4 variants"
   },
   "S6": {
    "held": true,
@@ -377,7 +476,7 @@
   "S7": {
    "held": true,
    "problems": [],
-   "statement": "recorder run (when made): the derived checks are those of checks.json, the blocks of the original test files are those of blocks.json, the rule gives every original block the target of targets.json, both baseline records give each of the 6 blocks the same deciding check, and it is the check of the probe run"
+   "statement": "recorder run (when made): the derived checks are those of checks.json, the blocks of the original test files are those of blocks.json, the rule gives every original block the target of targets.json, both baseline records give each of the 8 blocks the same deciding check, and it is the check of the probe run"
   }
  },
  "subject": {
@@ -392,12 +491,12 @@
   "with_variants": {
    "error": 0,
    "failed": 0,
-   "passed": 313,
+   "passed": 314,
    "refused_attempts": 0,
    "returncode": 0,
    "skipped": 0,
-   "summary": "313 passed, 91 subtests passed",
-   "tests": 313
+   "summary": "314 passed, 91 subtests passed",
+   "tests": 314
   },
   "without_variants": {
    "error": 0,
@@ -412,6 +511,7 @@
  },
  "whole_suite_passing_added_by_variants": [
   "tests_repaired/test_repaired_jwe_compact.py::TestJWECompactRepaired::test_repaired_ciphertext_exceeds_size",
+  "tests_repaired/test_repaired_jwe_compact_header.py::TestJWECompactHeaderRepaired::test_repaired_header_exceeds_size",
   "tests_repaired/test_repaired_jws_compact.py::TestCompactRepaired::test_repaired_payload_exceeded_size_error",
   "tests_repaired/test_repaired_jws_json.py::TestJSONRepaired::test_repaired_b64_must_be_protected"
  ],
