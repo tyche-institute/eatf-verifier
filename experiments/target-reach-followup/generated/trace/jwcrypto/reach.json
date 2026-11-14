@@ -1,0 +1,6026 @@
+{
+ "counts": {
+  "functions_in_checks_json": 307,
+  "functions_started": 261,
+  "functions_started_at_least_once_under_no_entry_point": 217,
+  "functions_started_in_another_thread": 0,
+  "functions_started_only_under_no_entry_point": 113,
+  "functions_started_under_an_entry_point": 148,
+  "unmapped_codes": 2
+ },
+ "definition": "a function started under an entry point when, at 1 of its PY_START events in the traced whole-suite run, a frame of the same thread whose code is a function code of a subject file named like an entry point was on the frame chain from the new frame outward, the new frame included",
+ "entry_points": [
+  "JWT",
+  "decrypt",
+  "deserialize",
+  "validate",
+  "verify"
+ ],
+ "files": [
+  "jwcrypto/__init__.py",
+  "jwcrypto/common.py",
+  "jwcrypto/jwa.py",
+  "jwcrypto/jwe.py",
+  "jwcrypto/jwk.py",
+  "jwcrypto/jws.py",
+  "jwcrypto/jwt.py",
+  "jwcrypto/version.py"
+ ],
+ "functions": [
+  {
+   "entry_points": [],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {},
+   "function": "InvalidJWAAlgorithm.__init__",
+   "starts": 92,
+   "starts_other_threads": 0,
+   "starts_under_none": 92,
+   "tests_under_none": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_A5",
+    "deserialize": "jwcrypto/tests.py::TestJWE::test_A5",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2"
+   },
+   "function": "InvalidJWEData.__init__",
+   "starts": 18,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::ConformanceTests::test_jwe_no_alg_in_jose_headers",
+    "jwcrypto/tests.py::ConformanceTests::test_jwe_no_enc_in_jose_headers"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_decrypt_keyset",
+    "deserialize": "jwcrypto/tests.py::TestJWE::test_decrypt_keyset",
+    "validate": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset"
+   },
+   "function": "InvalidJWEKeyLength.__init__",
+   "starts": 7,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::ConformanceTests::test_jws_small_hmac_key_rejected"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_A4",
+    "deserialize": "jwcrypto/tests.py::TestJWE::test_A4",
+    "validate": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "verify": "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_wrong_key_type"
+   },
+   "function": "InvalidJWEKeyType.__init__",
+   "starts": 11,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_A5",
+    "deserialize": "jwcrypto/tests.py::TestJWE::test_A5",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2"
+   },
+   "function": "InvalidJWEOperation.__init__",
+   "starts": 10,
+   "starts_other_threads": 0,
+   "starts_under_none": 8,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWE::test_compact_invalid_header",
+    "jwcrypto/tests.py::TestJWE::test_compact_protected_header",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_equality",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_representations"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {},
+   "function": "InvalidJWSERegOperation.__init__",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_customhdr_jws_exists",
+    "jwcrypto/tests.py::TestJWE::test_customhdr_jwe_exists"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_decrypt_keyset",
+    "deserialize": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "validate": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "verify": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   },
+   "function": "JWKeyNotFound.__init__",
+   "starts": 22,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWSEHeaderRegistry.__getitem__",
+   "starts": 676,
+   "starts_other_threads": 0,
+   "starts_under_none": 38,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_7_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWS::test_A6",
+    "jwcrypto/tests.py::TestJWS::test_jws_issue_281"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWSEHeaderRegistry.__init__",
+   "starts": 265,
+   "starts_other_threads": 0,
+   "starts_under_none": 187,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {},
+   "function": "JWSEHeaderRegistry.__setitem__",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 6,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_customhdr_jws",
+    "jwcrypto/tests.py::TestJWS::test_customhdr_jws_exists",
+    "jwcrypto/tests.py::TestJWE::test_customhdr_jwe",
+    "jwcrypto/tests.py::TestJWE::test_customhdr_jwe_exists"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWSEHeaderRegistry.check_header",
+   "starts": 504,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "base64url_decode",
+   "starts": 3384,
+   "starts_other_threads": 0,
+   "starts_under_none": 2052,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "base64url_encode",
+   "starts": 1669,
+   "starts_other_threads": 0,
+   "starts_under_none": 1271,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "json_decode",
+   "starts": 1313,
+   "starts_other_threads": 0,
+   "starts_under_none": 449,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/common.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_decrypt_keyset",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   },
+   "function": "json_encode",
+   "starts": 519,
+   "starts_other_threads": 0,
+   "starts_under_none": 390,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWA.encryption_alg",
+   "starts": 221,
+   "starts_other_threads": 0,
+   "starts_under_none": 114,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWA.instantiate_alg",
+   "starts": 714,
+   "starts_other_threads": 0,
+   "starts_under_none": 369,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWA.keymgmt_alg",
+   "starts": 223,
+   "starts_other_threads": 0,
+   "starts_under_none": 115,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWA.signing_alg",
+   "starts": 252,
+   "starts_other_threads": 0,
+   "starts_under_none": 122,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "JWAAlgorithm.input_keysize",
+   "starts": 18,
+   "starts_other_threads": 0,
+   "starts_under_none": 18,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "jwcrypto/tests.py::TestJWS::test_jws_issue_224",
+    "jwcrypto/tests.py::TestJWS::test_jws_issue_281"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_A128CbcHs256.__init__",
+   "starts": 73,
+   "starts_other_threads": 0,
+   "starts_under_none": 24,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_A192CbcHs384.__init__",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::ConformanceTests::test_aes_192",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_JWE_Issue_136",
+    "deserialize": "jwcrypto/tests.py::TestJWE::test_JWE_Issue_136",
+    "validate": "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   },
+   "function": "_A256CbcHs512.__init__",
+   "starts": 24,
+   "starts_other_threads": 0,
+   "starts_under_none": 16,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWE::test_JWE_Issue_136",
+    "jwcrypto/tests.py::ConformanceTests::test_aes_256",
+    "jwcrypto/tests.py::ConformanceTests::test_jwe_headers_as_dicts",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw_custom_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_AesCbcHmacSha2.__init__",
+   "starts": 99,
+   "starts_other_threads": 0,
+   "starts_under_none": 42,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_AesCbcHmacSha2._mac",
+   "starts": 82,
+   "starts_other_threads": 0,
+   "starts_under_none": 34,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_AesCbcHmacSha2.decrypt",
+   "starts": 48,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_AesCbcHmacSha2.encrypt",
+   "starts": 34,
+   "starts_other_threads": 0,
+   "starts_under_none": 34,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_unexpected"
+   },
+   "function": "_AesGcm.__init__",
+   "starts": 83,
+   "starts_other_threads": 0,
+   "starts_under_none": 33,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_unexpected"
+   },
+   "function": "_AesGcm.decrypt",
+   "starts": 48,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_AesGcm.encrypt",
+   "starts": 27,
+   "starts_other_threads": 0,
+   "starts_under_none": 27,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption"
+   },
+   "function": "_AesGcmKw.__init__",
+   "starts": 9,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption"
+   },
+   "function": "_AesGcmKw._get_key",
+   "starts": 5,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption"
+   },
+   "function": "_AesGcmKw.unwrap",
+   "starts": 4,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_AesGcmKw.wrap",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_unexpected"
+   },
+   "function": "_AesKw.__init__",
+   "starts": 111,
+   "starts_other_threads": 0,
+   "starts_under_none": 48,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_unexpected"
+   },
+   "function": "_AesKw._get_key",
+   "starts": 103,
+   "starts_other_threads": 0,
+   "starts_under_none": 38,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_unexpected"
+   },
+   "function": "_AesKw.unwrap",
+   "starts": 65,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_AesKw.wrap",
+   "starts": 38,
+   "starts_other_threads": 0,
+   "starts_under_none": 38,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "verify": "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification"
+   },
+   "function": "_BP256R1.__init__",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "verify": "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification"
+   },
+   "function": "_BP384R1.__init__",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "verify": "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification"
+   },
+   "function": "_BP512R1.__init__",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_6_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_6_encryption"
+   },
+   "function": "_Direct._check_key",
+   "starts": 4,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_6_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_6_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_6_encryption"
+   },
+   "function": "_Direct.unwrap",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_Direct.wrap",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_6_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWS::test_A6",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "verify": "jwcrypto/tests.py::TestJWS::test_A6"
+   },
+   "function": "_ES256.__init__",
+   "starts": 11,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_A3",
+    "jwcrypto/tests.py::TestJWS::test_A6",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "verify": "jwcrypto/tests.py::TestJWK::test_p256k_alias"
+   },
+   "function": "_ES256K.__init__",
+   "starts": 5,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias",
+    "jwcrypto/tests.py::TestJWS::test_secp256k1_signing_and_verification",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_ES384.__init__",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing"
+   },
+   "function": "_ES512.__init__",
+   "starts": 14,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWS::test_A4",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   },
+   "function": "_EcdhEs.__init__",
+   "starts": 23,
+   "starts_other_threads": 0,
+   "starts_under_none": 12,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWE::test_JWE_Issue_136",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestJWE::test_bare_ecdh_with_ek_fails"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   },
+   "function": "_EcdhEs._check_key",
+   "starts": 15,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWE::test_JWE_Issue_136",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestJWE::test_bare_ecdh_with_ek_fails"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   },
+   "function": "_EcdhEs._derive",
+   "starts": 15,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWE::test_JWE_Issue_136",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestJWE::test_bare_ecdh_with_ek_fails"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   },
+   "function": "_EcdhEs.unwrap",
+   "starts": 11,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_EcdhEs.wrap",
+   "starts": 5,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWE::test_JWE_Issue_136",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestJWE::test_bare_ecdh_with_ek_fails"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_Ed25519.sign",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519",
+    "verify": "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519"
+   },
+   "function": "_Ed25519.verify",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_Ed448.sign",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed448"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestRfc9864::test_jws_ed448",
+    "verify": "jwcrypto/tests.py::TestRfc9864::test_jws_ed448"
+   },
+   "function": "_Ed448.verify",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_EdDsa.sign",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "jwcrypto/tests.py::TestJWS::test_EdDsa_signing_and_verification"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "verify": "jwcrypto/tests.py::TestJWK::test_pem_okp"
+   },
+   "function": "_EdDsa.verify",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   },
+   "function": "_HS256.__init__",
+   "starts": 116,
+   "starts_other_threads": 0,
+   "starts_under_none": 47,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_7_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWS::test_A1"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_HS384.__init__",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::ConformanceTests::test_jws_headers_as_dicts",
+    "verify": "jwcrypto/tests.py::ConformanceTests::test_jws_headers_as_dicts"
+   },
+   "function": "_HS512.__init__",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "jwcrypto/tests.py::ConformanceTests::test_jws_headers_as_dicts",
+    "jwcrypto/tests.py::ConformanceTests::test_jws_loopback",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_PS256.__init__",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_unsafe_rsa",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing"
+   },
+   "function": "_PS384.__init__",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_PS512.__init__",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption"
+   },
+   "function": "_Pbes2HsAesKw.__init__",
+   "starts": 16,
+   "starts_other_threads": 0,
+   "starts_under_none": 10,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw_custom_params",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption"
+   },
+   "function": "_Pbes2HsAesKw._get_key",
+   "starts": 11,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw_custom_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption"
+   },
+   "function": "_Pbes2HsAesKw.unwrap",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_Pbes2HsAesKw.wrap",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 6,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw_custom_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "_RS256.__init__",
+   "starts": 19,
+   "starts_other_threads": 0,
+   "starts_under_none": 6,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWS::test_A2",
+    "jwcrypto/tests.py::TestJWS::test_A6"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_RS384.__init__",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_RS512.__init__",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_RSA.__init__",
+   "starts": 55,
+   "starts_other_threads": 0,
+   "starts_under_none": 22,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "jwcrypto/tests.py::TestJWK::test_public",
+    "jwcrypto/tests.py::TestJWE::test_A1",
+    "jwcrypto/tests.py::TestJWE::test_A2"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_RSA._check_key",
+   "starts": 72,
+   "starts_other_threads": 0,
+   "starts_under_none": 19,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "jwcrypto/tests.py::TestJWK::test_public",
+    "jwcrypto/tests.py::TestJWE::test_A1",
+    "jwcrypto/tests.py::TestJWE::test_A2"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_RSA.unwrap",
+   "starts": 27,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_RSA.wrap",
+   "starts": 19,
+   "starts_other_threads": 0,
+   "starts_under_none": 19,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "jwcrypto/tests.py::TestJWK::test_public",
+    "jwcrypto/tests.py::TestJWE::test_A1",
+    "jwcrypto/tests.py::TestJWE::test_A2"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing"
+   },
+   "function": "_RawEC.__init__",
+   "starts": 40,
+   "starts_other_threads": 0,
+   "starts_under_none": 18,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias",
+    "jwcrypto/tests.py::TestJWS::test_A3",
+    "jwcrypto/tests.py::TestJWS::test_A4"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_RawEC.sign",
+   "starts": 11,
+   "starts_other_threads": 0,
+   "starts_under_none": 11,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias",
+    "jwcrypto/tests.py::TestJWS::test_A3",
+    "jwcrypto/tests.py::TestJWS::test_A4"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing"
+   },
+   "function": "_RawEC.verify",
+   "starts": 26,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   },
+   "function": "_RawHMAC.__init__",
+   "starts": 124,
+   "starts_other_threads": 0,
+   "starts_under_none": 53,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_7_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWS::test_A1"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   },
+   "function": "_RawHMAC._hmac_setup",
+   "starts": 108,
+   "starts_other_threads": 0,
+   "starts_under_none": 40,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_7_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWS::test_A1"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_RawHMAC.sign",
+   "starts": 40,
+   "starts_other_threads": 0,
+   "starts_under_none": 40,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_7_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWS::test_A1"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   },
+   "function": "_RawHMAC.verify",
+   "starts": 72,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification",
+    "verify": "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification"
+   },
+   "function": "_RawMLDSA._check_key",
+   "starts": 27,
+   "starts_other_threads": 0,
+   "starts_under_none": 12,
+   "tests_under_none": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_tampered_signature",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_wrong_key_type",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_rfc9964_jws_sign_verify"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_RawMLDSA.sign",
+   "starts": 12,
+   "starts_other_threads": 0,
+   "starts_under_none": 12,
+   "tests_under_none": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_tampered_signature",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_wrong_key_type",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_rfc9964_jws_sign_verify"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification",
+    "verify": "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification"
+   },
+   "function": "_RawMLDSA.verify",
+   "starts": 15,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_RawNone.sign",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_A5"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::ConformanceTests::test_none_key",
+    "validate": "jwcrypto/tests.py::ConformanceTests::test_none_key",
+    "verify": "jwcrypto/tests.py::TestJWS::test_A5"
+   },
+   "function": "_RawNone.verify",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "_RawRSA.__init__",
+   "starts": 30,
+   "starts_other_threads": 0,
+   "starts_under_none": 13,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_unsafe_rsa"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_RawRSA.sign",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 6,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWK::test_unsafe_rsa",
+    "jwcrypto/tests.py::TestJWS::test_A2"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "_RawRSA.verify",
+   "starts": 18,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_Rsa15.__init__",
+   "starts": 37,
+   "starts_other_threads": 0,
+   "starts_under_none": 11,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests.py::TestJWE::test_A2",
+    "jwcrypto/tests.py::TestJWE::test_A4",
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_Rsa15.unwrap",
+   "starts": 26,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   },
+   "function": "_RsaOaep.__init__",
+   "starts": 17,
+   "starts_other_threads": 0,
+   "starts_under_none": 10,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "jwcrypto/tests.py::TestJWK::test_public",
+    "jwcrypto/tests.py::TestJWE::test_A1",
+    "jwcrypto/tests.py::TestJWE::test_compact_invalid_dots",
+    "jwcrypto/tests.py::TestJWE::test_compact_invalid_header"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {},
+   "function": "_RsaOaep256.__init__",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   },
+   "function": "_bitsize",
+   "starts": 404,
+   "starts_other_threads": 0,
+   "starts_under_none": 118,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_7_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_encode_int",
+   "starts": 104,
+   "starts_other_threads": 0,
+   "starts_under_none": 56,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_inbytes",
+   "starts": 490,
+   "starts_other_threads": 0,
+   "starts_under_none": 262,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwa.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "_randombits",
+   "starts": 137,
+   "starts_other_threads": 0,
+   "starts_under_none": 117,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {},
+   "function": "JWE.__eq__",
+   "starts": 7,
+   "starts_other_threads": 0,
+   "starts_under_none": 7,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_equality",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE.__init__",
+   "starts": 111,
+   "starts_other_threads": 0,
+   "starts_under_none": 80,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {},
+   "function": "JWE.__repr__",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_representations"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {},
+   "function": "JWE.__str__",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_representations"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE._check_crit",
+   "starts": 110,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE._decrypt",
+   "starts": 110,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {},
+   "function": "JWE._encrypt",
+   "starts": 61,
+   "starts_other_threads": 0,
+   "starts_under_none": 61,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {},
+   "function": "JWE._get_alg_enc_from_headers",
+   "starts": 70,
+   "starts_other_threads": 0,
+   "starts_under_none": 70,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE._get_jose_header",
+   "starts": 206,
+   "starts_other_threads": 0,
+   "starts_under_none": 72,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE._jwa_enc",
+   "starts": 176,
+   "starts_other_threads": 0,
+   "starts_under_none": 68,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE._jwa_keymgmt",
+   "starts": 178,
+   "starts_other_threads": 0,
+   "starts_under_none": 69,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE._merge_headers",
+   "starts": 266,
+   "starts_other_threads": 0,
+   "starts_under_none": 95,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE._unwrap_decrypt",
+   "starts": 110,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {},
+   "function": "JWE.add_recipient",
+   "starts": 65,
+   "starts_other_threads": 0,
+   "starts_under_none": 65,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE.allowed_algs~2",
+   "starts": 27,
+   "starts_other_threads": 0,
+   "starts_under_none": 7,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_claim_params",
+    "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "jwcrypto/tests.py::TestJWT::test_decrypt_keyset_dup_kid",
+    "jwcrypto/tests.py::TestJWT::test_invalid_claim_type"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE.decrypt",
+   "starts": 104,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption"
+   },
+   "function": "JWE.deserialize",
+   "starts": 107,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {},
+   "function": "JWE.from_jose_token",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_equality"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_customhdr_jwe",
+    "deserialize": "jwcrypto/tests.py::TestJWE::test_customhdr_jwe",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE.jose_header",
+   "starts": 25,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWE::test_multiple_recipients_keyset"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWE.payload",
+   "starts": 76,
+   "starts_other_threads": 0,
+   "starts_under_none": 54,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwe.py",
+   "first_test_per_entry_point": {},
+   "function": "JWE.serialize",
+   "starts": 67,
+   "starts_other_threads": 0,
+   "starts_under_none": 67,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "InvalidJWKType.__init__",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.__eq__",
+   "starts": 4,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.__getattr__",
+   "starts": 9,
+   "starts_other_threads": 0,
+   "starts_under_none": 9,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests.py::TestJWK::test_jwk_as_dict"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_multiple_recipients_keyset",
+    "deserialize": "jwcrypto/tests.py::TestJWS::test_multiple_signatures_keyset",
+    "validate": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "verify": "jwcrypto/tests.py::TestJWS::test_multiple_signatures_keyset"
+   },
+   "function": "JWK.__hash__",
+   "starts": 73,
+   "starts_other_threads": 0,
+   "starts_under_none": 60,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption"
+   },
+   "function": "JWK.__init__",
+   "starts": 358,
+   "starts_other_threads": 0,
+   "starts_under_none": 336,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWK.__setattr__",
+   "starts": 3846,
+   "starts_other_threads": 0,
+   "starts_under_none": 3593,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption"
+   },
+   "function": "JWK.__setitem__",
+   "starts": 1978,
+   "starts_other_threads": 0,
+   "starts_under_none": 1881,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._akp_alg_from_pyca_key",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 6,
+   "tests_under_none": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._akp_pri",
+   "starts": 21,
+   "starts_other_threads": 0,
+   "starts_under_none": 21,
+   "tests_under_none": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_seed_roundtrip",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_tampered_signature",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_wrong_key_type"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification",
+    "verify": "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification"
+   },
+   "function": "JWK._akp_pub",
+   "starts": 21,
+   "starts_other_threads": 0,
+   "starts_under_none": 9,
+   "tests_under_none": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_seed_roundtrip"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWK._check_constraints",
+   "starts": 429,
+   "starts_other_threads": 0,
+   "starts_under_none": 180,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWK._decode_int",
+   "starts": 973,
+   "starts_other_threads": 0,
+   "starts_under_none": 810,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   },
+   "function": "JWK._ec_pri",
+   "starts": 24,
+   "starts_other_threads": 0,
+   "starts_under_none": 15,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   },
+   "function": "JWK._ec_pri_n",
+   "starts": 20,
+   "starts_other_threads": 0,
+   "starts_under_none": 15,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing"
+   },
+   "function": "JWK._ec_pub",
+   "starts": 50,
+   "starts_other_threads": 0,
+   "starts_under_none": 15,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_EC_key",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing"
+   },
+   "function": "JWK._ec_pub_n",
+   "starts": 55,
+   "starts_other_threads": 0,
+   "starts_under_none": 30,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_EC_key"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._encode_int",
+   "starts": 143,
+   "starts_other_threads": 0,
+   "starts_under_none": 143,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._export_all",
+   "starts": 36,
+   "starts_other_threads": 0,
+   "starts_under_none": 36,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_create_symKeys",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_symmetric",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._generate_AKP",
+   "starts": 38,
+   "starts_other_threads": 0,
+   "starts_under_none": 38,
+   "tests_under_none": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_priKeys_mldsa",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_pubKeys_mldsa",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_generate_AKP_invalid_alg",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_generate_AKP_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_generate_AKP_missing_alg"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._generate_EC",
+   "starts": 18,
+   "starts_other_threads": 0,
+   "starts_under_none": 18,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_EC_key",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._generate_OKP",
+   "starts": 8,
+   "starts_other_threads": 0,
+   "starts_under_none": 8,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_generate_OKP_keys",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed448"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._generate_RSA",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_generate_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._generate_oct",
+   "starts": 34,
+   "starts_other_threads": 0,
+   "starts_under_none": 34,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key",
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_json",
+    "jwcrypto/tests.py::TestJWS::test_compact_invalid_dots",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing"
+   },
+   "function": "JWK._get_curve_by_name",
+   "starts": 81,
+   "starts_other_threads": 0,
+   "starts_under_none": 56,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_EC_key"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._get_gen_size",
+   "starts": 37,
+   "starts_other_threads": 0,
+   "starts_under_none": 37,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key",
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_json",
+    "jwcrypto/tests.py::TestJWS::test_compact_invalid_dots",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWK._get_private_key",
+   "starts": 197,
+   "starts_other_threads": 0,
+   "starts_under_none": 90,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWK._get_public_key",
+   "starts": 235,
+   "starts_other_threads": 0,
+   "starts_under_none": 93,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._import_pyca_pri_akp",
+   "starts": 39,
+   "starts_other_threads": 0,
+   "starts_under_none": 39,
+   "tests_under_none": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_priKeys_mldsa",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_pubKeys_mldsa",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_generate_AKP_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_json_roundtrip"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._import_pyca_pri_ec",
+   "starts": 19,
+   "starts_other_threads": 0,
+   "starts_under_none": 19,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_EC_key",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._import_pyca_pri_okp",
+   "starts": 9,
+   "starts_other_threads": 0,
+   "starts_under_none": 9,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_generate_OKP_keys",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed448"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._import_pyca_pri_rsa",
+   "starts": 9,
+   "starts_other_threads": 0,
+   "starts_under_none": 9,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._import_pyca_pub_akp",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._import_pyca_pub_ec",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._import_pyca_pub_okp",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_import_x25519_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._import_pyca_pub_rsa",
+   "starts": 5,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._okp_curve_from_pyca_key",
+   "starts": 11,
+   "starts_other_threads": 0,
+   "starts_under_none": 11,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_generate_OKP_keys",
+    "jwcrypto/tests.py::TestJWK::test_import_x25519_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "deserialize": "jwcrypto/tests.py::TestJWE::test_X25519_ECDH"
+   },
+   "function": "JWK._okp_pri",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "jwcrypto/tests.py::TestJWS::test_EdDsa_signing_and_verification",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed448"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "deserialize": "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "verify": "jwcrypto/tests.py::TestJWK::test_pem_okp"
+   },
+   "function": "JWK._okp_pub",
+   "starts": 7,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_import_x25519_from_pem",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK._public_params",
+   "starts": 34,
+   "starts_other_threads": 0,
+   "starts_under_none": 34,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWK._rsa_pri",
+   "starts": 34,
+   "starts_other_threads": 0,
+   "starts_under_none": 7,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_unsafe_rsa"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWK._rsa_pri_n",
+   "starts": 19,
+   "starts_other_threads": 0,
+   "starts_under_none": 7,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_unsafe_rsa"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWK._rsa_pub",
+   "starts": 42,
+   "starts_other_threads": 0,
+   "starts_under_none": 24,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWK._rsa_pub_n",
+   "starts": 40,
+   "starts_other_threads": 0,
+   "starts_under_none": 22,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.export",
+   "starts": 29,
+   "starts_other_threads": 0,
+   "starts_under_none": 29,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_create_symKeys",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_x25519_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_json"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.export_private",
+   "starts": 5,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_priKeys_mldsa"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.export_public",
+   "starts": 12,
+   "starts_other_threads": 0,
+   "starts_under_none": 12,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.export_symmetric",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_symmetric"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.export_to_pem",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_x25519_from_pem"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.from_json",
+   "starts": 9,
+   "starts_other_threads": 0,
+   "starts_under_none": 9,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_json",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys",
+    "jwcrypto/tests.py::TestJWS::test_EdDsa_signing_and_verification",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_json_roundtrip",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_thumbprint_mldsa"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.from_password",
+   "starts": 4,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_password",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw_custom_params"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.from_pem",
+   "starts": 12,
+   "starts_other_threads": 0,
+   "starts_under_none": 12,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.from_pyca",
+   "starts": 11,
+   "starts_other_threads": 0,
+   "starts_under_none": 11,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.generate",
+   "starts": 97,
+   "starts_other_threads": 0,
+   "starts_under_none": 97,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_EC_key",
+    "jwcrypto/tests.py::TestJWK::test_generate_OKP_keys",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.generate_key",
+   "starts": 4,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_unexpected",
+    "jwcrypto/tests.py::ConformanceTests::test_none_key"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWK.get_op_key",
+   "starts": 436,
+   "starts_other_threads": 0,
+   "starts_under_none": 183,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.has_private",
+   "starts": 33,
+   "starts_other_threads": 0,
+   "starts_under_none": 33,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_export_symmetric",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.has_public",
+   "starts": 50,
+   "starts_other_threads": 0,
+   "starts_under_none": 50,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.import_from_pem",
+   "starts": 13,
+   "starts_other_threads": 0,
+   "starts_under_none": 13,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.import_from_pyca",
+   "starts": 24,
+   "starts_other_threads": 0,
+   "starts_under_none": 24,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption"
+   },
+   "function": "JWK.import_key",
+   "starts": 349,
+   "starts_other_threads": 0,
+   "starts_under_none": 327,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.is_symmetric",
+   "starts": 88,
+   "starts_other_threads": 0,
+   "starts_under_none": 88,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.public",
+   "starts": 22,
+   "starts_other_threads": 0,
+   "starts_under_none": 22,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias",
+    "jwcrypto/tests.py::TestJWK::test_public",
+    "jwcrypto/tests.py::TestJWS::test_EdDsa_signing_and_verification",
+    "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification",
+    "jwcrypto/tests.py::TestJWS::test_secp256k1_signing_and_verification"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_decrypt_keyset",
+    "deserialize": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "validate": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "verify": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   },
+   "function": "JWK.thumbprint",
+   "starts": 152,
+   "starts_other_threads": 0,
+   "starts_under_none": 124,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWK.thumbprint_uri",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_thumbprint_uri"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption"
+   },
+   "function": "JWK.update",
+   "starts": 341,
+   "starts_other_threads": 0,
+   "starts_under_none": 319,
+   "tests_under_none": [
+    "",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWKSet.__contains__",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWKSet.__init__",
+   "starts": 27,
+   "starts_other_threads": 0,
+   "starts_under_none": 27,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_invalid",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_decrypt_keyset",
+    "deserialize": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "verify": "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   },
+   "function": "JWKSet.__iter__",
+   "starts": 10,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWKSet.add",
+   "starts": 25,
+   "starts_other_threads": 0,
+   "starts_under_none": 25,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_issue_208",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "jwcrypto/tests.py::TestJWS::test_multiple_signatures_keyset"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWKSet.export",
+   "starts": 7,
+   "starts_other_threads": 0,
+   "starts_under_none": 7,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_issue_208",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_key_in_jwkset"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWKSet.from_json",
+   "starts": 12,
+   "starts_other_threads": 0,
+   "starts_under_none": 12,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWKSet.get_key",
+   "starts": 8,
+   "starts_other_threads": 0,
+   "starts_under_none": 8,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_key_in_jwkset"
+   ]
+  },
+  {
+   "entry_points": [
+    "decrypt",
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {
+    "decrypt": "jwcrypto/tests.py::TestJWE::test_multiple_recipients_keyset",
+    "deserialize": "jwcrypto/tests.py::TestJWS::test_multiple_signatures_keyset",
+    "validate": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "verify": "jwcrypto/tests.py::TestJWS::test_multiple_signatures_keyset"
+   },
+   "function": "JWKSet.get_keys",
+   "starts": 22,
+   "starts_other_threads": 0,
+   "starts_under_none": 9,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_key_in_jwkset"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWKSet.import_keyset",
+   "starts": 20,
+   "starts_other_threads": 0,
+   "starts_under_none": 20,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_invalid",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "JWKSet.update",
+   "starts": 27,
+   "starts_other_threads": 0,
+   "starts_under_none": 27,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_invalid",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwk.py",
+   "first_test_per_entry_point": {},
+   "function": "_JWKkeys.add",
+   "starts": 46,
+   "starts_other_threads": 0,
+   "starts_under_none": 46,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWS::test_compact_invalid_dots",
+    "verify": "jwcrypto/tests.py::TestJWS::test_E"
+   },
+   "function": "InvalidJWSObject.__init__",
+   "starts": 7,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestUnencodedPayload::test_mismatching_encoding",
+    "jwcrypto/tests.py::TestUnencodedPayload::test_misses_crit"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "InvalidJWSOperation.__init__",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_A5",
+    "jwcrypto/tests.py::ConformanceTests::test_no_default_rsa_1_5",
+    "jwcrypto/tests.py::TestUnencodedPayload::test_compat_unencoded"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing"
+   },
+   "function": "InvalidJWSSignature.__init__",
+   "starts": 42,
+   "starts_other_threads": 0,
+   "starts_under_none": 6,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_equality",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_representations"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "JWS.__eq__",
+   "starts": 8,
+   "starts_other_threads": 0,
+   "starts_under_none": 8,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_equality",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A2"
+   },
+   "function": "JWS.__init__",
+   "starts": 154,
+   "starts_other_threads": 0,
+   "starts_under_none": 107,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "JWS.__repr__",
+   "starts": 4,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_representations",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_representations"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "JWS.__str__",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_representations"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWS._deserialize_b64",
+   "starts": 129,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWS._deserialize_signature",
+   "starts": 53,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWS._get_obj_payload",
+   "starts": 112,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWS._merge_check_headers",
+   "starts": 249,
+   "starts_other_threads": 0,
+   "starts_under_none": 73,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWS._verify",
+   "starts": 130,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "JWS.add_signature",
+   "starts": 72,
+   "starts_other_threads": 0,
+   "starts_under_none": 72,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "JWS.allowed_algs",
+   "starts": 70,
+   "starts_other_threads": 0,
+   "starts_under_none": 70,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_unexpected"
+   },
+   "function": "JWS.allowed_algs~2",
+   "starts": 8,
+   "starts_other_threads": 0,
+   "starts_under_none": 6,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWS.deserialize",
+   "starts": 115,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "JWS.detach_payload",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestUnencodedPayload::test_compat_unencoded"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "JWS.from_jose_token",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_equality"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWS.is_valid",
+   "starts": 186,
+   "starts_other_threads": 0,
+   "starts_under_none": 30,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "jwcrypto/tests.py::TestJWS::test_EdDsa_signing_and_verification",
+    "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWS::test_customhdr_jws",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests.py::TestJWS::test_customhdr_jws"
+   },
+   "function": "JWS.jose_header",
+   "starts": 48,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWS::test_A6",
+    "jwcrypto/tests.py::ConformanceTests::test_jws_headers_as_dicts"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A2",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2"
+   },
+   "function": "JWS.payload",
+   "starts": 61,
+   "starts_other_threads": 0,
+   "starts_under_none": 17,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "jwcrypto/tests.py::TestJWS::test_EdDsa_signing_and_verification",
+    "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "JWS.serialize",
+   "starts": 87,
+   "starts_other_threads": 0,
+   "starts_under_none": 87,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWS.verify",
+   "starts": 112,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWSCore.__init__",
+   "starts": 206,
+   "starts_other_threads": 0,
+   "starts_under_none": 76,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWSCore._jwa",
+   "starts": 206,
+   "starts_other_threads": 0,
+   "starts_under_none": 76,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWSCore._payload",
+   "starts": 204,
+   "starts_other_threads": 0,
+   "starts_under_none": 74,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {},
+   "function": "JWSCore.sign",
+   "starts": 74,
+   "starts_other_threads": 0,
+   "starts_under_none": 74,
+   "tests_under_none": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate",
+    "verify"
+   ],
+   "file": "jwcrypto/jws.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A2",
+    "verify": "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing"
+   },
+   "function": "JWSCore.verify",
+   "starts": 137,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.__eq__",
+   "starts": 10,
+   "starts_other_threads": 0,
+   "starts_under_none": 10,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.__init__",
+   "starts": 111,
+   "starts_other_threads": 0,
+   "starts_under_none": 111,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_A2",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.__repr__",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_representations"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.__str__",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_representations"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT._add_default_claims",
+   "starts": 16,
+   "starts_other_threads": 0,
+   "starts_under_none": 16,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT._add_jti_claim",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT._add_optional_claim",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT._add_time_claim",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT._check_array_or_string_claim",
+   "starts": 100,
+   "starts_other_threads": 0,
+   "starts_under_none": 39,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params",
+    "jwcrypto/tests.py::TestJWT::test_claims_scope"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT._check_check_claims",
+   "starts": 39,
+   "starts_other_threads": 0,
+   "starts_under_none": 39,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params",
+    "jwcrypto/tests.py::TestJWT::test_claims_scope"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT._check_default_claims",
+   "starts": 61,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT._check_exp",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT._check_integer_claim",
+   "starts": 291,
+   "starts_other_threads": 0,
+   "starts_under_none": 108,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params",
+    "jwcrypto/tests.py::TestJWT::test_claims_scope"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT._check_provided_claims",
+   "starts": 66,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT._check_string_claim",
+   "starts": 432,
+   "starts_other_threads": 0,
+   "starts_under_none": 188,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params",
+    "jwcrypto/tests.py::TestJWT::test_claims_scope"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT._expected_type_heuristics",
+   "starts": 82,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_strict_serialization_jwe"
+   },
+   "function": "JWT._is_json_serialization",
+   "starts": 5,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT.claims",
+   "starts": 105,
+   "starts_other_threads": 0,
+   "starts_under_none": 41,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_A2",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT.claims~2",
+   "starts": 94,
+   "starts_other_threads": 0,
+   "starts_under_none": 28,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT.deserialize",
+   "starts": 81,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.expected_type~2",
+   "starts": 5,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_unexpected",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.from_jose_token",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.header",
+   "starts": 28,
+   "starts_other_threads": 0,
+   "starts_under_none": 28,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT.header~2",
+   "starts": 94,
+   "starts_other_threads": 0,
+   "starts_under_none": 28,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.make_encrypted_token",
+   "starts": 10,
+   "starts_other_threads": 0,
+   "starts_under_none": 10,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_claim_params",
+    "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "jwcrypto/tests.py::TestJWT::test_decrypt_keyset_dup_kid",
+    "jwcrypto/tests.py::TestJWT::test_invalid_claim_type"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.make_signed_token",
+   "starts": 18,
+   "starts_other_threads": 0,
+   "starts_under_none": 18,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claims_scope",
+    "jwcrypto/tests.py::TestJWT::test_claims_typ"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_claims_typ",
+    "validate": "jwcrypto/tests.py::TestJWT::test_claims_typ"
+   },
+   "function": "JWT.norm_typ",
+   "starts": 12,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.serialize",
+   "starts": 30,
+   "starts_other_threads": 0,
+   "starts_under_none": 30,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT.token",
+   "starts": 565,
+   "starts_other_threads": 0,
+   "starts_under_none": 50,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT.token~2",
+   "starts": 106,
+   "starts_other_threads": 0,
+   "starts_under_none": 28,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWT.validate",
+   "starts": 82,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWT.validity",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_A1",
+    "validate": "jwcrypto/tests.py::TestJWT::test_A1"
+   },
+   "function": "JWTExpired.__init__",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "JWTInvalidClaimFormat.__init__",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claims_scope"
+   ]
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "validate": "jwcrypto/tests.py::TestJWT::test_Issue_277"
+   },
+   "function": "JWTInvalidClaimValue.__init__",
+   "starts": 13,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_claims_scope",
+    "validate": "jwcrypto/tests.py::TestJWT::test_claims_scope"
+   },
+   "function": "JWTMissingClaim.__init__",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_test_per_entry_point": {
+    "deserialize": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "validate": "jwcrypto/tests.py::TestJWT::test_decrypt_keyset"
+   },
+   "function": "JWTMissingKey.__init__",
+   "starts": 4,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  }
+ ],
+ "functions_started_only_under_no_entry_point": [
+  {
+   "file": "jwcrypto/common.py",
+   "function": "InvalidJWAAlgorithm.__init__",
+   "starts": 92,
+   "tests": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "file": "jwcrypto/common.py",
+   "function": "InvalidJWSERegOperation.__init__",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestJWS::test_customhdr_jws_exists",
+    "jwcrypto/tests.py::TestJWE::test_customhdr_jwe_exists"
+   ]
+  },
+  {
+   "file": "jwcrypto/common.py",
+   "function": "JWSEHeaderRegistry.__setitem__",
+   "starts": 6,
+   "tests": [
+    "jwcrypto/tests.py::TestJWS::test_customhdr_jws",
+    "jwcrypto/tests.py::TestJWS::test_customhdr_jws_exists",
+    "jwcrypto/tests.py::TestJWE::test_customhdr_jwe",
+    "jwcrypto/tests.py::TestJWE::test_customhdr_jwe_exists"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "JWAAlgorithm.input_keysize",
+   "starts": 18,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "jwcrypto/tests.py::TestJWS::test_jws_issue_224",
+    "jwcrypto/tests.py::TestJWS::test_jws_issue_281"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_A192CbcHs384.__init__",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::ConformanceTests::test_aes_192",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_AesCbcHmacSha2.encrypt",
+   "starts": 34,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_AesGcm.encrypt",
+   "starts": 27,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_AesGcmKw.wrap",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_7_encryption"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_AesKw.wrap",
+   "starts": 38,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_Direct.wrap",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_6_encryption"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_ES384.__init__",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_EcdhEs.wrap",
+   "starts": 5,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWE::test_JWE_Issue_136",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestJWE::test_bare_ecdh_with_ek_fails"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_Ed25519.sign",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_Ed448.sign",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed448"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_EdDsa.sign",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "jwcrypto/tests.py::TestJWS::test_EdDsa_signing_and_verification"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_HS384.__init__",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_PS256.__init__",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_unsafe_rsa",
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_PS512.__init__",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_Pbes2HsAesKw.wrap",
+   "starts": 6,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_3_encryption",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw_custom_params"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_RS384.__init__",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_RS512.__init__",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_RSA.wrap",
+   "starts": 19,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption",
+    "jwcrypto/tests.py::TestJWK::test_public",
+    "jwcrypto/tests.py::TestJWE::test_A1",
+    "jwcrypto/tests.py::TestJWE::test_A2"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_RawEC.sign",
+   "starts": 11,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias",
+    "jwcrypto/tests.py::TestJWS::test_A3",
+    "jwcrypto/tests.py::TestJWS::test_A4"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_RawHMAC.sign",
+   "starts": 40,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_7_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWS::test_A1"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_RawMLDSA.sign",
+   "starts": 12,
+   "tests": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_tampered_signature",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_wrong_key_type",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_rfc9964_jws_sign_verify"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_RawNone.sign",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::TestJWS::test_A5"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_RawRSA.sign",
+   "starts": 6,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_8_signing",
+    "jwcrypto/tests.py::TestJWK::test_unsafe_rsa",
+    "jwcrypto/tests.py::TestJWS::test_A2"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwa.py",
+   "function": "_RsaOaep256.__init__",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::JWATests::test_jwa_create"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwe.py",
+   "function": "JWE.__eq__",
+   "starts": 7,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_equality",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwe.py",
+   "function": "JWE.__repr__",
+   "starts": 3,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_representations"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwe.py",
+   "function": "JWE.__str__",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_representations"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwe.py",
+   "function": "JWE._encrypt",
+   "starts": 61,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwe.py",
+   "function": "JWE._get_alg_enc_from_headers",
+   "starts": 70,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwe.py",
+   "function": "JWE.add_recipient",
+   "starts": 65,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwe.py",
+   "function": "JWE.from_jose_token",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwe_equality"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwe.py",
+   "function": "JWE.serialize",
+   "starts": 67,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_10_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_11_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_12_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_1_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_2_encryption"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "InvalidJWKType.__init__",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.__eq__",
+   "starts": 4,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.__getattr__",
+   "starts": 9,
+   "tests": [
+    "",
+    "jwcrypto/tests.py::TestJWK::test_jwk_as_dict"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._akp_alg_from_pyca_key",
+   "starts": 6,
+   "tests": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._akp_pri",
+   "starts": 21,
+   "tests": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_seed_roundtrip",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_signing_and_verification",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_tampered_signature",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_wrong_key_type"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._encode_int",
+   "starts": 143,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._export_all",
+   "starts": 36,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_create_symKeys",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_symmetric",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._generate_AKP",
+   "starts": 38,
+   "tests": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_priKeys_mldsa",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_pubKeys_mldsa",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_generate_AKP_invalid_alg",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_generate_AKP_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_generate_AKP_missing_alg"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._generate_EC",
+   "starts": 18,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_EC_key",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._generate_OKP",
+   "starts": 8,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_generate_OKP_keys",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed448"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._generate_RSA",
+   "starts": 3,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_generate_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._generate_oct",
+   "starts": 34,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key",
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_json",
+    "jwcrypto/tests.py::TestJWS::test_compact_invalid_dots",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._get_gen_size",
+   "starts": 37,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_generate_oct_key",
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_json",
+    "jwcrypto/tests.py::TestJWS::test_compact_invalid_dots",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._import_pyca_pri_akp",
+   "starts": 39,
+   "tests": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_priKeys_mldsa",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_pubKeys_mldsa",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_generate_AKP_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_json_roundtrip"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._import_pyca_pri_ec",
+   "starts": 19,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_EC_key",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._import_pyca_pri_okp",
+   "starts": 9,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_generate_OKP_keys",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed448"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._import_pyca_pri_rsa",
+   "starts": 9,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._import_pyca_pub_akp",
+   "starts": 3,
+   "tests": [
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._import_pyca_pub_ec",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._import_pyca_pub_okp",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_import_x25519_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._import_pyca_pub_rsa",
+   "starts": 5,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._okp_curve_from_pyca_key",
+   "starts": 11,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_generate_OKP_keys",
+    "jwcrypto/tests.py::TestJWK::test_import_x25519_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp",
+    "jwcrypto/tests.py::TestJWE::test_X25519_ECDH",
+    "jwcrypto/tests.py::TestRfc9864::test_jws_ed25519"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK._public_params",
+   "starts": 34,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.export",
+   "starts": 29,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_create_symKeys",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_x25519_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_json"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.export_private",
+   "starts": 5,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_create_priKeys_mldsa"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.export_public",
+   "starts": 12,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.export_symmetric",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_symmetric"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.export_to_pem",
+   "starts": 3,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_x25519_from_pem"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.from_json",
+   "starts": 9,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_json",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys",
+    "jwcrypto/tests.py::TestJWS::test_EdDsa_signing_and_verification",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_json_roundtrip",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_thumbprint_mldsa"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.from_password",
+   "starts": 4,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_jwk_from_password",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw",
+    "jwcrypto/tests.py::ConformanceTests::test_pbes2_hs256_aeskw_custom_params"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.from_pem",
+   "starts": 12,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.from_pyca",
+   "starts": 11,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_import_pyca_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_import_pyca_mldsa_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.generate",
+   "starts": 97,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_generate_EC_key",
+    "jwcrypto/tests.py::TestJWK::test_generate_OKP_keys",
+    "jwcrypto/tests.py::TestJWK::test_generate_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.generate_key",
+   "starts": 4,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_unexpected",
+    "jwcrypto/tests.py::ConformanceTests::test_none_key"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.has_private",
+   "starts": 33,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_export_symmetric",
+    "jwcrypto/tests.py::TestJWK::test_pem_okp"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.has_public",
+   "starts": 50,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.import_from_pem",
+   "starts": 13,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.import_from_pyca",
+   "starts": 24,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public",
+    "jwcrypto/tests.py::TestJWK::test_import_ec_from_pem",
+    "jwcrypto/tests.py::TestJWK::test_import_from_pem"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.is_symmetric",
+   "starts": 88,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_4_encryption",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWETests::test_5_5_encryption",
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_export_private",
+    "jwcrypto/tests.py::TestJWK::test_export_public"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.public",
+   "starts": 22,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_p256k_alias",
+    "jwcrypto/tests.py::TestJWK::test_public",
+    "jwcrypto/tests.py::TestJWS::test_EdDsa_signing_and_verification",
+    "jwcrypto/tests.py::TestJWS::test_brainpool_signing_and_verification",
+    "jwcrypto/tests.py::TestJWS::test_secp256k1_signing_and_verification"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWK.thumbprint_uri",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_thumbprint_uri"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWKSet.__contains__",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWKSet.__init__",
+   "starts": 27,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_invalid",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWKSet.add",
+   "starts": 25,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_issue_208",
+    "jwcrypto/tests.py::TestJWS::test_decrypt_keyset",
+    "jwcrypto/tests.py::TestJWS::test_multiple_signatures_keyset"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWKSet.export",
+   "starts": 7,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_issue_208",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_key_in_jwkset"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWKSet.from_json",
+   "starts": 12,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWKSet.get_key",
+   "starts": 8,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys",
+    "jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_key_in_jwkset"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWKSet.import_keyset",
+   "starts": 20,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_invalid",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "JWKSet.update",
+   "starts": 27,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_invalid",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwk.py",
+   "function": "_JWKkeys.add",
+   "starts": 46,
+   "tests": [
+    "jwcrypto/tests.py::TestJWK::test_export_as_dict",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_skips_unknown_kty",
+    "jwcrypto/tests.py::TestJWK::test_import_keyset_unknown_kty_then_ec",
+    "jwcrypto/tests.py::TestJWK::test_jwkset",
+    "jwcrypto/tests.py::TestJWK::test_jwkset_get_keys"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "InvalidJWSOperation.__init__",
+   "starts": 3,
+   "tests": [
+    "jwcrypto/tests.py::TestJWS::test_A5",
+    "jwcrypto/tests.py::ConformanceTests::test_no_default_rsa_1_5",
+    "jwcrypto/tests.py::TestUnencodedPayload::test_compat_unencoded"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "JWS.__eq__",
+   "starts": 8,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_equality",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "JWS.__repr__",
+   "starts": 4,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_representations",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_representations"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "JWS.__str__",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_representations"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "JWS.add_signature",
+   "starts": 72,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "JWS.allowed_algs",
+   "starts": 70,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "JWS.detach_payload",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::TestUnencodedPayload::test_compat_unencoded"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "JWS.from_jose_token",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jws_equality"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "JWS.serialize",
+   "starts": 87,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "file": "jwcrypto/jws.py",
+   "function": "JWSCore.sign",
+   "starts": 74,
+   "tests": [
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_1_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_2_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_3_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_4_signing",
+    "jwcrypto/tests-cookbook.py::Cookbook08JWSTests::test_4_6_signing"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.__eq__",
+   "starts": 10,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.__init__",
+   "starts": 111,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_A2",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.__repr__",
+   "starts": 3,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_representations"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.__str__",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_representations"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT._add_default_claims",
+   "starts": 16,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT._add_jti_claim",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT._add_optional_claim",
+   "starts": 3,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT._add_time_claim",
+   "starts": 3,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT._check_check_claims",
+   "starts": 39,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params",
+    "jwcrypto/tests.py::TestJWT::test_claims_scope"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.expected_type~2",
+   "starts": 5,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_unexpected",
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.from_jose_token",
+   "starts": 2,
+   "tests": [
+    "jwcrypto/tests.py::TestOverloadedOperators::test_jwt_equality"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.header",
+   "starts": 28,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.make_encrypted_token",
+   "starts": 10,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_claim_params",
+    "jwcrypto/tests.py::TestJWT::test_decrypt_keyset",
+    "jwcrypto/tests.py::TestJWT::test_decrypt_keyset_dup_kid",
+    "jwcrypto/tests.py::TestJWT::test_invalid_claim_type"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.make_signed_token",
+   "starts": 18,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claims_scope",
+    "jwcrypto/tests.py::TestJWT::test_claims_typ"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.serialize",
+   "starts": 30,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_A1",
+    "jwcrypto/tests.py::TestJWT::test_Issue_209",
+    "jwcrypto/tests.py::TestJWT::test_Issue_277",
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWT.validity",
+   "starts": 1,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_claim_params"
+   ]
+  },
+  {
+   "file": "jwcrypto/jwt.py",
+   "function": "JWTInvalidClaimFormat.__init__",
+   "starts": 3,
+   "tests": [
+    "jwcrypto/tests.py::TestJWT::test_claim_aud",
+    "jwcrypto/tests.py::TestJWT::test_claims_scope"
+   ]
+  }
+ ],
+ "interpreter": "CPython 3.12.3",
+ "outcomes": {
+  "deposited_whole_baseline": {
+   "passing in both": 163,
+   "run 1": {
+    "passed": 163
+   },
+   "run 2": {
+    "passed": 163
+   },
+   "unstable": 0
+  },
+  "refused_connection_attempts_traced": 0,
+  "traced": {
+   "passed": 163
+  }
+ },
+ "packages": [
+  "Pygments==2.21.0",
+  "cffi==2.1.1",
+  "cryptography==50.0.2",
+  "iniconfig==2.3.1",
+  "packaging==26.3",
+  "pip==24.0",
+  "pluggy==1.7.0",
+  "pycparser==3.12",
+  "pytest==9.2.0",
+  "typing_extensions==4.16.0"
+ ],
+ "plugin_sha256": "ed4993c30d90e1d45e1bd2d022d45f4e7fb19e89cb7c63ff1e4769f49ab594d0",
+ "seconds": {
+  "with_plugin": [
+   6.576,
+   6.495,
+   6.476
+  ],
+  "without_plugin": [
+   6.043,
+   5.926,
+   5.965
+  ]
+ },
+ "sentinels": [
+  {
+   "detail": {
+    "extra": [],
+    "missing": [],
+    "no_result": [],
+    "passing_deposited": 163,
+    "passing_traced": 163,
+    "trace_files_written": true
+   },
+   "name": "T3: the tests that pass in the traced run are the tests that pass in both deposited whole-baseline runs, and every traced pytest call left its result file",
+   "pass": true
+  },
+  {
+   "name": "T-map: every started code of a subject file is a function of checks.json or is listed under unmapped with its reason",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "T3-repeat: every traced run gives the same entry-point sets and the same passing tests",
+   "pass": true
+  },
+  {
+   "name": "T3-repeat-reach: every traced run gives the same set of codes that started under at least 1 entry point (the input of rule 3)",
+   "pass": true
+  }
+ ],
+ "subject": "jwcrypto",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "jwcrypto"
+   ]
+  }
+ ],
+ "tool_id": 5,
+ "unmapped": [
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_line": 444,
+   "name": "<genexpr>",
+   "qualname": "JWT._check_array_or_string_claim.<locals>.<genexpr>",
+   "reason": "a generator expression; it holds no raise statement",
+   "starts": 17
+  },
+  {
+   "entry_points": [
+    "deserialize",
+    "validate"
+   ],
+   "file": "jwcrypto/jwt.py",
+   "first_line": 539,
+   "name": "<genexpr>",
+   "qualname": "JWT._check_provided_claims.<locals>.<genexpr>",
+   "reason": "a generator expression; it holds no raise statement",
+   "starts": 10
+  }
+ ],
+ "version": "1.6.1"
+}

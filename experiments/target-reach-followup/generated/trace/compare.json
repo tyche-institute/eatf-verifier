@@ -1,0 +1,320 @@
+[
+ {
+  "block_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 31,
+   "same target": 48
+  },
+  "case_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 42,
+   "same target": 49
+  },
+  "decides_rule2_to_rule3_for_moved_cases": {},
+  "fired_checks": {
+   "under an entry point": 44
+  },
+  "reachability": {
+   "checks": 80,
+   "reachable_by_both": 52,
+   "reachable_by_execution": 52,
+   "reachable_by_execution_only": 0,
+   "reachable_by_name": 54,
+   "reachable_by_name_only": 2,
+   "reachable_by_neither": 26,
+   "reachable_under_rule_3": 54
+  },
+  "rule2": {
+   "all": {
+    "cases_with_a_target": 49,
+    "decided_by_the_target": 48,
+    "not_decided_flags": 1
+   },
+   "assertion": {
+    "cases_with_a_target": 42,
+    "decided_by_the_target": 42,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 7,
+    "decided_by_the_target": 6,
+    "not_decided_flags": 1
+   }
+  },
+  "rule3": {
+   "all": {
+    "cases_with_a_target": 49,
+    "decided_by_the_target": 48,
+    "not_decided_flags": 1
+   },
+   "assertion": {
+    "cases_with_a_target": 42,
+    "decided_by_the_target": 42,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 7,
+    "decided_by_the_target": 6,
+    "not_decided_flags": 1
+   }
+  },
+  "rule_versions": [
+   "reach-target-rule/2",
+   "reach-target-rule/3"
+  ],
+  "seconds": {
+   "with_plugin": [
+    6.034,
+    6.092,
+    6.016
+   ],
+   "without_plugin": [
+    5.743,
+    5.765,
+    5.74
+   ]
+  },
+  "sentinels": [
+   {
+    "name": "T2: every fired check lies in a function that started under an entry point, or is listed with the reason",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "T4: the analysis under rule 3 passes the 7 sentinels of analyse.py",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "R2: the analysis under rule 2 from the deposited records reproduces the deposited outputs",
+    "pass": true
+   }
+  ],
+  "subject": "pyjwt",
+  "trace_counts": {
+   "functions_in_checks_json": 88,
+   "functions_started": 73,
+   "functions_started_at_least_once_under_no_entry_point": 58,
+   "functions_started_in_another_thread": 6,
+   "functions_started_only_under_no_entry_point": 34,
+   "functions_started_under_an_entry_point": 39,
+   "unmapped_codes": 4
+  }
+ },
+ {
+  "block_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 31,
+   "same target": 48
+  },
+  "case_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 42,
+   "same target": 49
+  },
+  "decides_rule2_to_rule3_for_moved_cases": {},
+  "fired_checks": {
+   "under an entry point": 44
+  },
+  "reachability": {
+   "checks": 99,
+   "reachable_by_both": 52,
+   "reachable_by_execution": 52,
+   "reachable_by_execution_only": 0,
+   "reachable_by_name": 57,
+   "reachable_by_name_only": 5,
+   "reachable_by_neither": 42,
+   "reachable_under_rule_3": 57
+  },
+  "rule2": {
+   "all": {
+    "cases_with_a_target": 49,
+    "decided_by_the_target": 48,
+    "not_decided_flags": 1
+   },
+   "assertion": {
+    "cases_with_a_target": 42,
+    "decided_by_the_target": 42,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 7,
+    "decided_by_the_target": 6,
+    "not_decided_flags": 1
+   }
+  },
+  "rule3": {
+   "all": {
+    "cases_with_a_target": 49,
+    "decided_by_the_target": 48,
+    "not_decided_flags": 1
+   },
+   "assertion": {
+    "cases_with_a_target": 42,
+    "decided_by_the_target": 42,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 7,
+    "decided_by_the_target": 6,
+    "not_decided_flags": 1
+   }
+  },
+  "rule_versions": [
+   "reach-target-rule/2",
+   "reach-target-rule/3"
+  ],
+  "seconds": {
+   "with_plugin": [
+    6.163,
+    6.181,
+    6.18
+   ],
+   "without_plugin": [
+    5.709,
+    5.738,
+    5.742
+   ]
+  },
+  "sentinels": [
+   {
+    "name": "T2: every fired check lies in a function that started under an entry point, or is listed with the reason",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "T4: the analysis under rule 3 passes the 7 sentinels of analyse.py",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "R2: the analysis under rule 2 from the deposited records reproduces the deposited outputs",
+    "pass": true
+   }
+  ],
+  "subject": "pyjwt-package",
+  "trace_counts": {
+   "functions_in_checks_json": 132,
+   "functions_started": 115,
+   "functions_started_at_least_once_under_no_entry_point": 100,
+   "functions_started_in_another_thread": 27,
+   "functions_started_only_under_no_entry_point": 68,
+   "functions_started_under_an_entry_point": 47,
+   "unmapped_codes": 4
+  }
+ },
+ {
+  "block_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 28,
+   "same target": 14
+  },
+  "case_transitions": {
+   "changed target": 0,
+   "gained a target": 0,
+   "lost a target": 0,
+   "no target under either": 28,
+   "same target": 14
+  },
+  "decides_rule2_to_rule3_for_moved_cases": {},
+  "fired_checks": {
+   "under an entry point": 33
+  },
+  "reachability": {
+   "checks": 146,
+   "reachable_by_both": 89,
+   "reachable_by_execution": 103,
+   "reachable_by_execution_only": 14,
+   "reachable_by_name": 93,
+   "reachable_by_name_only": 4,
+   "reachable_by_neither": 39,
+   "reachable_under_rule_3": 107
+  },
+  "rule2": {
+   "all": {
+    "cases_with_a_target": 14,
+    "decided_by_the_target": 10,
+    "not_decided_flags": 4
+   },
+   "assertion": {
+    "cases_with_a_target": 6,
+    "decided_by_the_target": 6,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 8,
+    "decided_by_the_target": 4,
+    "not_decided_flags": 4
+   }
+  },
+  "rule3": {
+   "all": {
+    "cases_with_a_target": 14,
+    "decided_by_the_target": 10,
+    "not_decided_flags": 4
+   },
+   "assertion": {
+    "cases_with_a_target": 6,
+    "decided_by_the_target": 6,
+    "not_decided_flags": 0
+   },
+   "name": {
+    "cases_with_a_target": 8,
+    "decided_by_the_target": 4,
+    "not_decided_flags": 4
+   }
+  },
+  "rule_versions": [
+   "reach-target-rule/2",
+   "reach-target-rule/3"
+  ],
+  "seconds": {
+   "with_plugin": [
+    6.576,
+    6.495,
+    6.476
+   ],
+   "without_plugin": [
+    6.043,
+    5.926,
+    5.965
+   ]
+  },
+  "sentinels": [
+   {
+    "name": "T2: every fired check lies in a function that started under an entry point, or is listed with the reason",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "T4: the analysis under rule 3 passes the 7 sentinels of analyse.py",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "R2: the analysis under rule 2 from the deposited records reproduces the deposited outputs",
+    "pass": true
+   }
+  ],
+  "subject": "jwcrypto",
+  "trace_counts": {
+   "functions_in_checks_json": 307,
+   "functions_started": 261,
+   "functions_started_at_least_once_under_no_entry_point": 217,
+   "functions_started_in_another_thread": 0,
+   "functions_started_only_under_no_entry_point": 113,
+   "functions_started_under_an_entry_point": 148,
+   "unmapped_codes": 2
+  }
+ }
+]

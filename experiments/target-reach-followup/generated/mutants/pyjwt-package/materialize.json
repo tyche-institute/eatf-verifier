@@ -1,0 +1,80 @@
+{
+ "blank_lines_added": 114,
+ "by_operator": {
+  "arg_removal": 412,
+  "assignment": 92,
+  "augmented_assignment": 1,
+  "if_exp": 4,
+  "keywords": 47,
+  "name": 42,
+  "number": 25,
+  "remove_unary_ops": 29,
+  "string": 398,
+  "swap_op": 41,
+  "unsymmetrical_string_methods_swap": 3
+ },
+ "check_deletions": 46,
+ "checks_json_sha256": "750d91cb2ae9a9826ac0edeed126d23c741fd79ea490e32f1a29f3a92e1859d2",
+ "files": {
+  "jwt/api_jws.py": {
+   "by_operator": {
+    "arg_removal": 189,
+    "assignment": 60,
+    "augmented_assignment": 1,
+    "if_exp": 4,
+    "keywords": 27,
+    "name": 17,
+    "number": 19,
+    "remove_unary_ops": 15,
+    "string": 161,
+    "swap_op": 23,
+    "unsymmetrical_string_methods_swap": 3
+   },
+   "check_deletions": 23,
+   "mutants": 519,
+   "mutmut_names": 519,
+   "sha256": "80e83b3a4089f6a19692bb5b2f56784edc3bd65bf74043bad7a230f9c5bdcf12"
+  },
+  "jwt/api_jwt.py": {
+   "by_operator": {
+    "arg_removal": 223,
+    "assignment": 32,
+    "keywords": 20,
+    "name": 25,
+    "number": 6,
+    "remove_unary_ops": 14,
+    "string": 237,
+    "swap_op": 18
+   },
+   "check_deletions": 23,
+   "mutants": 575,
+   "mutmut_names": 575,
+   "sha256": "a2af9f3593c8cf9133163cb0b5b08223281b8292d5db5665309bc23c212cac76"
+  }
+ },
+ "generator_sha256": "9e4fe3e5a84ed1e4db6fe659ae2792686234ef7eac80780e6723a955cb1e0cea",
+ "mutants": 1094,
+ "mutants_padded_with_blank_lines": 74,
+ "mutmut_version": "3.8.1",
+ "sentinels": [
+  {
+   "detail": [],
+   "failures": 0,
+   "name": "S1",
+   "pass": true,
+   "text": "each modified file differs from the unmodified file only inside the span of the mutated function, keeps its number of lines, compiles, and is not the unmodified file; a deletion changes the lines of the check's raise statements and no other line"
+  },
+  {
+   "detail": [],
+   "failures": 0,
+   "name": "S2",
+   "pass": true,
+   "text": "each mutated function has the syntax tree of the function mutmut writes for the mutant, and each file has as many mutants as mutmut's file generator yields, with the same names in the same order"
+  }
+ ],
+ "subject": {
+  "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+  "name": "pyjwt-package",
+  "version": "2.15.1"
+ }
+}

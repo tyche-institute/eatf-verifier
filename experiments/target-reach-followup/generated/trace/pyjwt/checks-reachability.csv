@@ -1,0 +1,81 @@
+check,file,function,role,reachable_by_name,reachable_by_execution,reachable_rule_3,entry_points
+algorithms.Algorithm.check_crypto_key_type#1,jwt/algorithms.py,Algorithm.check_crypto_key_type,observed,yes,yes,yes,decode decode_complete
+algorithms.NoneAlgorithm.prepare_key#1,jwt/algorithms.py,NoneAlgorithm.prepare_key,observed,yes,yes,yes,decode decode_complete
+algorithms.HMACAlgorithm.prepare_key#1,jwt/algorithms.py,HMACAlgorithm.prepare_key,observed,yes,yes,yes,decode decode_complete
+algorithms.HMACAlgorithm.prepare_key#2,jwt/algorithms.py,HMACAlgorithm.prepare_key,observed,yes,yes,yes,decode decode_complete
+algorithms.HMACAlgorithm.prepare_key#3,jwt/algorithms.py,HMACAlgorithm.prepare_key,observed,yes,yes,yes,decode decode_complete
+algorithms.HMACAlgorithm.from_jwk#1,jwt/algorithms.py,HMACAlgorithm.from_jwk,observed,no,no,no,
+algorithms.HMACAlgorithm.from_jwk#2,jwt/algorithms.py,HMACAlgorithm.from_jwk,observed,no,no,no,
+algorithms.HMACAlgorithm.from_jwk#3,jwt/algorithms.py,HMACAlgorithm.from_jwk,observed,no,no,no,
+algorithms.RSAAlgorithm.prepare_key#1,jwt/algorithms.py,RSAAlgorithm.prepare_key,observed,yes,yes,yes,decode decode_complete
+algorithms.RSAAlgorithm.to_jwk~3#1,jwt/algorithms.py,RSAAlgorithm.to_jwk~3,observed,no,no,no,
+algorithms.RSAAlgorithm.from_jwk#1,jwt/algorithms.py,RSAAlgorithm.from_jwk,observed,no,no,no,
+algorithms.RSAAlgorithm.from_jwk#2,jwt/algorithms.py,RSAAlgorithm.from_jwk,observed,no,no,no,
+algorithms.RSAAlgorithm.from_jwk#3,jwt/algorithms.py,RSAAlgorithm.from_jwk,observed,no,no,no,
+algorithms.RSAAlgorithm.from_jwk#4,jwt/algorithms.py,RSAAlgorithm.from_jwk,observed,no,no,no,
+algorithms.RSAAlgorithm.from_jwk#5,jwt/algorithms.py,RSAAlgorithm.from_jwk,observed,no,no,no,
+algorithms.ECAlgorithm._validate_curve#1,jwt/algorithms.py,ECAlgorithm._validate_curve,observed,yes,yes,yes,decode decode_complete
+algorithms.ECAlgorithm.to_jwk~3#1,jwt/algorithms.py,ECAlgorithm.to_jwk~3,observed,no,no,no,
+algorithms.ECAlgorithm.to_jwk~3#2,jwt/algorithms.py,ECAlgorithm.to_jwk~3,observed,no,no,no,
+algorithms.ECAlgorithm.from_jwk#1,jwt/algorithms.py,ECAlgorithm.from_jwk,observed,no,no,no,
+algorithms.ECAlgorithm.from_jwk#2,jwt/algorithms.py,ECAlgorithm.from_jwk,observed,no,no,no,
+algorithms.ECAlgorithm.from_jwk#3,jwt/algorithms.py,ECAlgorithm.from_jwk,observed,no,no,no,
+algorithms.ECAlgorithm.from_jwk#4,jwt/algorithms.py,ECAlgorithm.from_jwk,observed,no,no,no,
+algorithms.ECAlgorithm.from_jwk#5,jwt/algorithms.py,ECAlgorithm.from_jwk,observed,no,no,no,
+algorithms.ECAlgorithm.from_jwk#6,jwt/algorithms.py,ECAlgorithm.from_jwk,observed,no,no,no,
+algorithms.ECAlgorithm.from_jwk#7,jwt/algorithms.py,ECAlgorithm.from_jwk,observed,no,no,no,
+algorithms.ECAlgorithm.from_jwk#8,jwt/algorithms.py,ECAlgorithm.from_jwk,observed,no,no,no,
+algorithms.OKPAlgorithm.prepare_key#1,jwt/algorithms.py,OKPAlgorithm.prepare_key,observed,yes,yes,yes,decode decode_complete
+algorithms.OKPAlgorithm.to_jwk~3#1,jwt/algorithms.py,OKPAlgorithm.to_jwk~3,observed,no,no,no,
+algorithms.OKPAlgorithm.from_jwk#1,jwt/algorithms.py,OKPAlgorithm.from_jwk,observed,no,no,no,
+algorithms.OKPAlgorithm.from_jwk#2,jwt/algorithms.py,OKPAlgorithm.from_jwk,observed,no,no,no,
+algorithms.OKPAlgorithm.from_jwk#3,jwt/algorithms.py,OKPAlgorithm.from_jwk,observed,no,no,no,
+algorithms.OKPAlgorithm.from_jwk#4,jwt/algorithms.py,OKPAlgorithm.from_jwk,observed,no,no,no,
+algorithms.OKPAlgorithm.from_jwk#5,jwt/algorithms.py,OKPAlgorithm.from_jwk,observed,no,no,no,
+algorithms.OKPAlgorithm.from_jwk#6,jwt/algorithms.py,OKPAlgorithm.from_jwk,observed,no,no,no,
+api_jws.PyJWS.encode#1,jwt/api_jws.py,PyJWS.encode,subject,yes,no,yes,
+api_jws.PyJWS.encode#2,jwt/api_jws.py,PyJWS.encode,subject,yes,no,yes,
+api_jws.PyJWS.decode_complete#1,jwt/api_jws.py,PyJWS.decode_complete,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS.decode_complete#2,jwt/api_jws.py,PyJWS.decode_complete,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS.decode_complete#3,jwt/api_jws.py,PyJWS.decode_complete,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS.decode_complete#4,jwt/api_jws.py,PyJWS.decode_complete,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._decode_base64url_segment#1,jwt/api_jws.py,PyJWS._decode_base64url_segment,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._load#1,jwt/api_jws.py,PyJWS._load,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._load#2,jwt/api_jws.py,PyJWS._load,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._load#3,jwt/api_jws.py,PyJWS._load,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._load#4,jwt/api_jws.py,PyJWS._load,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._load#5,jwt/api_jws.py,PyJWS._load,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._verify_signature#1,jwt/api_jws.py,PyJWS._verify_signature,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._verify_signature#2,jwt/api_jws.py,PyJWS._verify_signature,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._verify_signature#3,jwt/api_jws.py,PyJWS._verify_signature,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._verify_signature#4,jwt/api_jws.py,PyJWS._verify_signature,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._verify_signature#5,jwt/api_jws.py,PyJWS._verify_signature,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._verify_signature#6,jwt/api_jws.py,PyJWS._verify_signature,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._validate_kid#1,jwt/api_jws.py,PyJWS._validate_kid,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._validate_crit#1,jwt/api_jws.py,PyJWS._validate_crit,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._validate_crit#2,jwt/api_jws.py,PyJWS._validate_crit,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._validate_crit#3,jwt/api_jws.py,PyJWS._validate_crit,subject,yes,yes,yes,decode decode_complete
+api_jws.PyJWS._validate_crit#4,jwt/api_jws.py,PyJWS._validate_crit,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._decode_payload#1,jwt/api_jwt.py,PyJWT._decode_payload,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._decode_payload#2,jwt/api_jwt.py,PyJWT._decode_payload,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_required_claims#1,jwt/api_jwt.py,PyJWT._validate_required_claims,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_sub#1,jwt/api_jwt.py,PyJWT._validate_sub,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_sub#2,jwt/api_jwt.py,PyJWT._validate_sub,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_jti#1,jwt/api_jwt.py,PyJWT._validate_jti,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_iat#1,jwt/api_jwt.py,PyJWT._validate_iat,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_iat#2,jwt/api_jwt.py,PyJWT._validate_iat,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_nbf#1,jwt/api_jwt.py,PyJWT._validate_nbf,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_nbf#2,jwt/api_jwt.py,PyJWT._validate_nbf,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_exp#1,jwt/api_jwt.py,PyJWT._validate_exp,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_exp#2,jwt/api_jwt.py,PyJWT._validate_exp,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_aud#1,jwt/api_jwt.py,PyJWT._validate_aud,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_aud#2,jwt/api_jwt.py,PyJWT._validate_aud,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_aud#3,jwt/api_jwt.py,PyJWT._validate_aud,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_aud#4,jwt/api_jwt.py,PyJWT._validate_aud,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_aud#5,jwt/api_jwt.py,PyJWT._validate_aud,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_aud#6,jwt/api_jwt.py,PyJWT._validate_aud,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_aud#7,jwt/api_jwt.py,PyJWT._validate_aud,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_iss#1,jwt/api_jwt.py,PyJWT._validate_iss,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_iss#2,jwt/api_jwt.py,PyJWT._validate_iss,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_iss#3,jwt/api_jwt.py,PyJWT._validate_iss,subject,yes,yes,yes,decode decode_complete
+api_jwt.PyJWT._validate_iss#4,jwt/api_jwt.py,PyJWT._validate_iss,subject,yes,yes,yes,decode decode_complete

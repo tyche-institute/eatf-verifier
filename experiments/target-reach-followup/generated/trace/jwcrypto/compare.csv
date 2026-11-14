@@ -1,0 +1,43 @@
+block,index,test_node,target_rule2,basis_rule2,tier_rule2,decides_rule2,target_rule3,basis_rule3,tier_rule3,decides_rule3,baseline_site,transition
+jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#0,0,jwcrypto/tests.py::ConformanceTests::test_jwe_decompression_max,jwe.JWE._decrypt#4,name,name,no,jwe.JWE._decrypt#4,name,name,no,jwe.JWE.decrypt#3,same target
+jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#1,0,jwcrypto/tests.py::ConformanceTests::test_jwe_decompression_max,jwe.JWE._decrypt#4,name,name,no,jwe.JWE._decrypt#4,name,name,no,jwe.JWE.decrypt#3,same target
+jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#2,0,jwcrypto/tests.py::ConformanceTests::test_jwe_decompression_max,jwe.JWE._decrypt#4,name,name,no,jwe.JWE._decrypt#4,name,name,no,jwe.JWE.decrypt#3,same target
+jwcrypto/tests.py::TestJWE.test_A5#0,0,jwcrypto/tests.py::TestJWE::test_A5,,,,,,,,,jwe.JWE.decrypt#3,no target under either
+jwcrypto/tests.py::TestJWE.test_bare_ecdh_with_ek_fails#0,0,jwcrypto/tests.py::TestJWE::test_bare_ecdh_with_ek_fails,jwa._EcdhEs.unwrap#1,name,name,no,jwa._EcdhEs.unwrap#1,name,name,no,jwe.JWE.decrypt#3,same target
+jwcrypto/tests.py::TestJWE.test_compact_invalid_dots#0,0,jwcrypto/tests.py::TestJWE::test_compact_invalid_dots,,,,,,,,,jwe.JWE.deserialize#2,no target under either
+jwcrypto/tests.py::TestJWE.test_compact_invalid_dots#1,0,jwcrypto/tests.py::TestJWE::test_compact_invalid_dots,,,,,,,,,jwe.JWE.deserialize#2,no target under either
+jwcrypto/tests.py::TestJWE.test_customhdr_jwe#0,0,jwcrypto/tests.py::TestJWE::test_customhdr_jwe,,,,,,,,,jwe.JWE.decrypt#3,no target under either
+jwcrypto/tests.py::TestJWE.test_decrypt_keyset#0,0,jwcrypto/tests.py::TestJWE::test_decrypt_keyset,,,,,,,,,jwe.JWE.decrypt#2,no target under either
+jwcrypto/tests.py::TestJWE.test_multiple_recipients_keyset#0,0,jwcrypto/tests.py::TestJWE::test_multiple_recipients_keyset,,,,,,,,,jwe.JWE.decrypt#2,no target under either
+jwcrypto/tests.py::TestJWS.test_E#0,0,jwcrypto/tests.py::TestJWS::test_E,,,,,,,,,jws.JWS.verify#3,no target under either
+jwcrypto/tests.py::TestJWS.test_compact_invalid_dots#0,0,jwcrypto/tests.py::TestJWS::test_compact_invalid_dots,,,,,,,,,jws.JWS.deserialize#2,no target under either
+jwcrypto/tests.py::TestJWS.test_compact_invalid_dots#1,0,jwcrypto/tests.py::TestJWS::test_compact_invalid_dots,,,,,,,,,jws.JWS.deserialize#2,no target under either
+jwcrypto/tests.py::TestJWS.test_customhdr_jws#0,0,jwcrypto/tests.py::TestJWS::test_customhdr_jws,,,,,,,,,jws.JWS.verify#3,no target under either
+jwcrypto/tests.py::TestJWS.test_decrypt_keyset#0,0,jwcrypto/tests.py::TestJWS::test_decrypt_keyset,,,,,,,,,jws.JWS.verify#2,no target under either
+jwcrypto/tests.py::TestJWS.test_multiple_signatures_keyset#0,0,jwcrypto/tests.py::TestJWS::test_multiple_signatures_keyset,,,,,,,,,jws.JWS.verify#2,no target under either
+jwcrypto/tests.py::TestJWT.test_A1#0,0,jwcrypto/tests.py::TestJWT::test_A1,jwt.JWT._check_exp#1,class,assertion,yes,jwt.JWT._check_exp#1,class,assertion,yes,jwt.JWT._check_exp#1,same target
+jwcrypto/tests.py::TestJWT.test_A2#0,0,jwcrypto/tests.py::TestJWT::test_A2,,,,,,,,,jwe.JWE.decrypt#3,no target under either
+jwcrypto/tests.py::TestJWT.test_Issue_277#0,0,jwcrypto/tests.py::TestJWT::test_Issue_277,,,,,,,,,jwt.JWT._check_provided_claims#4,no target under either
+jwcrypto/tests.py::TestJWT.test_Issue_277#1,0,jwcrypto/tests.py::TestJWT::test_Issue_277,,,,,,,,,jwt.JWT._check_provided_claims#4,no target under either
+jwcrypto/tests.py::TestJWT.test_Issue_277#2,0,jwcrypto/tests.py::TestJWT::test_Issue_277,,,,,,,,,jwt.JWT._check_provided_claims#4,no target under either
+jwcrypto/tests.py::TestJWT.test_claim_aud#0,0,jwcrypto/tests.py::TestJWT::test_claim_aud,,,,,,,,,jwt.JWT._check_array_or_string_claim#1,no target under either
+jwcrypto/tests.py::TestJWT.test_claims_scope#0,0,jwcrypto/tests.py::TestJWT::test_claims_scope,jwt.JWT._check_provided_claims#2,class,assertion,yes,jwt.JWT._check_provided_claims#2,class,assertion,yes,jwt.JWT._check_provided_claims#2,same target
+jwcrypto/tests.py::TestJWT.test_claims_scope#1,0,jwcrypto/tests.py::TestJWT::test_claims_scope,,,,,,,,,jwt.JWT._check_provided_claims#6,no target under either
+jwcrypto/tests.py::TestJWT.test_claims_scope#2,0,jwcrypto/tests.py::TestJWT::test_claims_scope,,,,,,,,,jwt.JWT._check_provided_claims#7,no target under either
+jwcrypto/tests.py::TestJWT.test_claims_scope#3,0,jwcrypto/tests.py::TestJWT::test_claims_scope,,,,,,,,,jwt.JWT._check_provided_claims#7,no target under either
+jwcrypto/tests.py::TestJWT.test_claims_scope#4,0,jwcrypto/tests.py::TestJWT::test_claims_scope,,,,,,,,,jwt.JWT._check_provided_claims#7,no target under either
+jwcrypto/tests.py::TestJWT.test_claims_scope#5,0,jwcrypto/tests.py::TestJWT::test_claims_scope,,,,,,,,,jwt.JWT._check_string_claim#1,no target under either
+jwcrypto/tests.py::TestJWT.test_claims_scope#6,0,jwcrypto/tests.py::TestJWT::test_claims_scope,,,,,,,,,jwt.JWT._check_string_claim#1,no target under either
+jwcrypto/tests.py::TestJWT.test_claims_typ#0,0,jwcrypto/tests.py::TestJWT::test_claims_typ,jwt.JWT._check_provided_claims#5,name,name,yes,jwt.JWT._check_provided_claims#5,name,name,yes,jwt.JWT._check_provided_claims#5,same target
+jwcrypto/tests.py::TestJWT.test_claims_typ#1,0,jwcrypto/tests.py::TestJWT::test_claims_typ,jwt.JWT._check_provided_claims#5,name,name,yes,jwt.JWT._check_provided_claims#5,name,name,yes,jwt.JWT._check_provided_claims#5,same target
+jwcrypto/tests.py::TestJWT.test_claims_typ#2,0,jwcrypto/tests.py::TestJWT::test_claims_typ,jwt.JWT._check_provided_claims#5,name,name,yes,jwt.JWT._check_provided_claims#5,name,name,yes,jwt.JWT._check_provided_claims#5,same target
+jwcrypto/tests.py::TestJWT.test_claims_typ#3,0,jwcrypto/tests.py::TestJWT::test_claims_typ,jwt.JWT._check_provided_claims#5,name,name,yes,jwt.JWT._check_provided_claims#5,name,name,yes,jwt.JWT._check_provided_claims#5,same target
+jwcrypto/tests.py::TestJWT.test_decrypt_keyset#0,0,jwcrypto/tests.py::TestJWT::test_decrypt_keyset,jwt.JWT.validate#1,class,assertion,yes,jwt.JWT.validate#1,class,assertion,yes,jwt.JWT.validate#1,same target
+jwcrypto/tests.py::TestJWT.test_decrypt_keyset#1,0,jwcrypto/tests.py::TestJWT::test_decrypt_keyset,jwt.JWT.validate#1,class,assertion,yes,jwt.JWT.validate#1,class,assertion,yes,jwt.JWT.validate#1,same target
+jwcrypto/tests.py::TestJWT.test_decrypt_keyset#2,0,jwcrypto/tests.py::TestJWT::test_decrypt_keyset,jwt.JWT.validate#1,class,assertion,yes,jwt.JWT.validate#1,class,assertion,yes,jwt.JWT.validate#1,same target
+jwcrypto/tests.py::TestJWT.test_decrypt_keyset_dup_kid#0,0,jwcrypto/tests.py::TestJWT::test_decrypt_keyset_dup_kid,jwt.JWT.validate#1,class,assertion,yes,jwt.JWT.validate#1,class,assertion,yes,jwt.JWT.validate#1,same target
+jwcrypto/tests.py::TestJWT.test_invalid_claim_type#0,0,jwcrypto/tests.py::TestJWT::test_invalid_claim_type,,,,,,,,,jwt.JWT._check_provided_claims#3,no target under either
+jwcrypto/tests.py::TestJWT.test_invalid_claim_type#1,0,jwcrypto/tests.py::TestJWT::test_invalid_claim_type,,,,,,,,,jwt.JWT._check_provided_claims#3,no target under either
+jwcrypto/tests_mldsa.py::TestMLDSA.test_mldsa_tampered_signature#0,0,jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_tampered_signature,,,,,,,,,jws.JWS.verify#3,no target under either
+jwcrypto/tests_mldsa.py::TestMLDSA.test_mldsa_tampered_signature#0,1,jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_tampered_signature,,,,,,,,,jws.JWS.verify#3,no target under either
+jwcrypto/tests_mldsa.py::TestMLDSA.test_mldsa_tampered_signature#0,2,jwcrypto/tests_mldsa.py::TestMLDSA::test_mldsa_tampered_signature,,,,,,,,,jws.JWS.verify#3,no target under either

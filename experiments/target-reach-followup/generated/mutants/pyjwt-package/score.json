@@ -1,0 +1,318 @@
+{
+ "by_file": {
+  "jwt/api_jws.py": {
+   "errors": 8,
+   "killed": 418,
+   "killed_by_a_test": 410,
+   "mutants": 519,
+   "score": 0.805395,
+   "score_without_errors": 0.802348,
+   "survived": 101,
+   "timeouts": 0
+  },
+  "jwt/api_jwt.py": {
+   "errors": 5,
+   "killed": 385,
+   "killed_by_a_test": 380,
+   "mutants": 575,
+   "score": 0.669565,
+   "score_without_errors": 0.666667,
+   "survived": 190,
+   "timeouts": 0
+  }
+ },
+ "by_operator": {
+  "arg_removal": {
+   "errors": 2,
+   "killed": 322,
+   "killed_by_a_test": 320,
+   "mutants": 412,
+   "score": 0.781553,
+   "score_without_errors": 0.780488,
+   "survived": 90,
+   "timeouts": 0
+  },
+  "assignment": {
+   "errors": 4,
+   "killed": 81,
+   "killed_by_a_test": 77,
+   "mutants": 92,
+   "score": 0.880435,
+   "score_without_errors": 0.875,
+   "survived": 11,
+   "timeouts": 0
+  },
+  "augmented_assignment": {
+   "errors": 0,
+   "killed": 0,
+   "killed_by_a_test": 0,
+   "mutants": 1,
+   "score": 0.0,
+   "score_without_errors": 0.0,
+   "survived": 1,
+   "timeouts": 0
+  },
+  "if_exp": {
+   "errors": 1,
+   "killed": 3,
+   "killed_by_a_test": 2,
+   "mutants": 4,
+   "score": 0.75,
+   "score_without_errors": 0.666667,
+   "survived": 1,
+   "timeouts": 0
+  },
+  "keywords": {
+   "errors": 2,
+   "killed": 46,
+   "killed_by_a_test": 44,
+   "mutants": 47,
+   "score": 0.978723,
+   "score_without_errors": 0.977778,
+   "survived": 1,
+   "timeouts": 0
+  },
+  "name": {
+   "errors": 0,
+   "killed": 29,
+   "killed_by_a_test": 29,
+   "mutants": 42,
+   "score": 0.690476,
+   "score_without_errors": 0.690476,
+   "survived": 13,
+   "timeouts": 0
+  },
+  "number": {
+   "errors": 0,
+   "killed": 12,
+   "killed_by_a_test": 12,
+   "mutants": 25,
+   "score": 0.48,
+   "score_without_errors": 0.48,
+   "survived": 13,
+   "timeouts": 0
+  },
+  "remove_unary_ops": {
+   "errors": 0,
+   "killed": 28,
+   "killed_by_a_test": 28,
+   "mutants": 29,
+   "score": 0.965517,
+   "score_without_errors": 0.965517,
+   "survived": 1,
+   "timeouts": 0
+  },
+  "string": {
+   "errors": 4,
+   "killed": 247,
+   "killed_by_a_test": 243,
+   "mutants": 398,
+   "score": 0.620603,
+   "score_without_errors": 0.616751,
+   "survived": 151,
+   "timeouts": 0
+  },
+  "swap_op": {
+   "errors": 0,
+   "killed": 34,
+   "killed_by_a_test": 34,
+   "mutants": 41,
+   "score": 0.829268,
+   "score_without_errors": 0.829268,
+   "survived": 7,
+   "timeouts": 0
+  },
+  "unsymmetrical_string_methods_swap": {
+   "errors": 0,
+   "killed": 1,
+   "killed_by_a_test": 1,
+   "mutants": 3,
+   "score": 0.333333,
+   "score_without_errors": 0.333333,
+   "survived": 2,
+   "timeouts": 0
+  }
+ },
+ "case_statuses": {
+  "crashed": 5594,
+  "no record": 1183,
+  "observed": 92616,
+  "withheld": 161
+ },
+ "cases": 91,
+ "check_deletions": {
+  "error_mutants": [],
+  "errors": 0,
+  "killed": 44,
+  "killed_by_a_test": 44,
+  "killed_by_exactly_1_test": 23,
+  "mutant_level_oracles": {
+   "O_C": 38,
+   "O_S": 41,
+   "O_T": 29,
+   "O_V": 36,
+   "O_Vfc": 20,
+   "suite": 44
+  },
+  "mutants": 46,
+  "not_killed": [
+   "api_jws.PyJWS.encode#1",
+   "api_jwt.PyJWT._validate_iss#2"
+  ],
+  "recorder_runs": {
+   "completed": 46
+  },
+  "score": 0.956522,
+  "score_without_errors": 0.956522,
+  "survived": 2,
+  "timeout_mutants": [],
+  "timeouts": 0,
+  "toolkit_deletions": {
+   "columns": [
+    "O_V",
+    "O_Vfc",
+    "O_C",
+    "O_T",
+    "O_S",
+    "suite",
+    "O_V withheld-as-failing",
+    "O_Vfc withheld-as-failing",
+    "O_C withheld-as-failing",
+    "O_T withheld-as-failing",
+    "whole_suite",
+    "whole_suite_tests_not_passing"
+   ],
+   "compared": 41,
+   "deleted_here_only": [
+    "api_jws.PyJWS._validate_kid#1",
+    "api_jws.PyJWS.encode#1",
+    "api_jws.PyJWS.encode#2",
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#4"
+   ],
+   "deletions_here": 46,
+   "deposited": 44,
+   "differences": [],
+   "not_run_in_the_deposit": []
+  }
+ },
+ "files": [
+  "jwt/api_jws.py",
+  "jwt/api_jwt.py"
+ ],
+ "mutant_level_oracles": {
+  "O_C": 536,
+  "O_S": 634,
+  "O_T": 503,
+  "O_V": 484,
+  "O_Vfc": 458,
+  "suite": 787
+ },
+ "mutants_killed_by_exactly_1_test": 175,
+ "mutmut_version": "3.8.1",
+ "recorder_runs": {
+  "completed": 1081,
+  "error": 13
+ },
+ "reference_study": {
+  "agree": 1094,
+  "compared": 1094,
+  "differ": 0,
+  "differences": [],
+  "differences_by_cause": {},
+  "differences_by_direction": {},
+  "files": [
+   "jwt/api_jws.py",
+   "jwt/api_jwt.py"
+  ],
+  "mutants_here": 1094,
+  "mutants_reference": 1094,
+  "only_here": [],
+  "only_reference": [],
+  "reference": "../mutation-adequacy-pyjwt/generated/mutants.csv (tool_class: killed or survived, from mutmut's own run); test selection from its work/mutmut/mutants/mutmut-stats.json"
+ },
+ "sentinels": [
+  {
+   "detail": [],
+   "name": "S1",
+   "pass": true,
+   "text": "each modified file differs from the unmodified file only inside the span of the mutated function, keeps its number of lines, compiles, and is not the unmodified file; a deletion changes the lines of the check's raise statements and no other line; rechecked from the modified files, and the runs used them"
+  },
+  {
+   "detail": [],
+   "name": "S2",
+   "pass": true,
+   "text": "each mutated function has the syntax tree of the function mutmut writes for the mutant, and each file has as many mutants as mutmut's file generator yields, with the same names in the same order"
+  },
+  {
+   "detail": [],
+   "name": "S3",
+   "pass": true,
+   "text": "the unmodified copies give the deposited baseline: the same cases and the same deciding check for every case as the toolkit's cases.csv, the same tests passing in both whole-suite runs as its whole-suite baseline, and 2 identical recorder records, message texts aside"
+  },
+  {
+   "detail": [],
+   "name": "S4",
+   "pass": true,
+   "text": "every mutant has its recorder run and its whole-suite run (and the extra tests when given), each completed or stated as a timeout or an error after 1 repeat"
+  },
+  {
+   "detail": [
+    "agree 1094 of 1094"
+   ],
+   "name": "S5",
+   "pass": true,
+   "text": "the mutants of the 2 PyJWT modules are those of the reference study, by mutmut name; the agreement of the whole-suite status with its mutmut status is reported, with every difference"
+  },
+  {
+   "detail": [
+    "compared 41 of 46 deletions"
+   ],
+   "name": "S6",
+   "pass": true,
+   "text": "the deletion of each check that the toolkit's deletions.csv lists gives here what the toolkit recorded for its own deletion copy: the same detection under each oracle and by the suite of the recorder run, the same withheld-as-failing columns, the same whole-suite status and the same number of tests not passing"
+  }
+ ],
+ "sha256_before_compression": {
+  "cases.csv": "06b9a08fac82da2aa12f4d1c054c28ca6839c0d7cfb45784e9a10682527a1a8b",
+  "runs.jsonl": "289e9d0179f5f39371aa2c08c1047bc7d4598ca501a1df8868968e1699c518d6"
+ },
+ "subject": {
+  "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+  "name": "pyjwt-package",
+  "version": "2.15.1"
+ },
+ "targets": "targets.json",
+ "tests_killing_at_least_1_mutant": 215,
+ "tests_passing_in_both_unmodified_runs": 471,
+ "whole_suite": {
+  "error_mutants": [
+   "M00001",
+   "M00002",
+   "M00004",
+   "M00006",
+   "M00007",
+   "M00008",
+   "M00010",
+   "M00011",
+   "M00520",
+   "M00526",
+   "M00527",
+   "M00560",
+   "M00561"
+  ],
+  "errors": 13,
+  "killed": 803,
+  "killed_by_a_test": 790,
+  "mutants": 1094,
+  "score": 0.734004,
+  "score_without_errors": 0.730805,
+  "survived": 291,
+  "timeout_mutants": [],
+  "timeouts": 0
+ },
+ "whole_suite_runs": {
+  "completed": 1081,
+  "error": 13
+ }
+}

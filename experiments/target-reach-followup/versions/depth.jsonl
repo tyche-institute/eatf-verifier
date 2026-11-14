@@ -1,0 +1,6 @@
+{"python": "3.9.25", "implementation": "CPython", "recursion_limit": 1000, "c_scanner_module": "_json", "deepest_c": 993, "deepest_py": 496}
+{"python": "3.10.20", "implementation": "CPython", "recursion_limit": 1000, "c_scanner_module": "_json", "deepest_c": 993, "deepest_py": 496}
+{"python": "3.11.15", "implementation": "CPython", "recursion_limit": 1000, "c_scanner_module": "_json", "deepest_c": 993, "deepest_py": 496}
+{"python": "3.12.3", "implementation": "CPython", "recursion_limit": 1000, "c_scanner_module": "_json", "deepest_c": 9997, "deepest_py": 496}
+{"python": "3.13.14", "implementation": "CPython", "recursion_limit": 1000, "c_scanner_module": "_json", "deepest_c": 9998, "deepest_py": 496}
+{"python": "3.14.6", "implementation": "CPython", "recursion_limit": 1000, "c_scanner_module": "_json", "deepest_c": 40121, "deepest_py": 496}

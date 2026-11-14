@@ -1,0 +1,147 @@
+check,file,function,role,reachable_by_name,reachable_by_execution,reachable_rule_3,entry_points
+common.JWSEHeaderRegistry.__init__#1,jwcrypto/common.py,JWSEHeaderRegistry.__init__,subject,no,yes,yes,deserialize
+common.JWSEHeaderRegistry.check_header#1,jwcrypto/common.py,JWSEHeaderRegistry.check_header,subject,yes,yes,yes,decrypt deserialize validate verify
+common.JWSEHeaderRegistry.__delitem__#1,jwcrypto/common.py,JWSEHeaderRegistry.__delitem__,subject,no,no,no,
+common.JWSEHeaderRegistry.__setitem__#1,jwcrypto/common.py,JWSEHeaderRegistry.__setitem__,subject,yes,no,yes,
+common.JWSEHeaderRegistry.__setitem__#2,jwcrypto/common.py,JWSEHeaderRegistry.__setitem__,subject,yes,no,yes,
+jwa._RawHMAC._hmac_setup#1,jwcrypto/jwa.py,_RawHMAC._hmac_setup,subject,yes,yes,yes,deserialize validate verify
+jwa._RSA._check_key#1,jwcrypto/jwa.py,_RSA._check_key,subject,yes,yes,yes,decrypt deserialize validate
+jwa._RSA.unwrap#1,jwcrypto/jwa.py,_RSA.unwrap,subject,yes,yes,yes,decrypt deserialize validate
+jwa._AesKw._get_key#1,jwcrypto/jwa.py,_AesKw._get_key,subject,yes,yes,yes,decrypt deserialize validate
+jwa._AesKw._get_key#2,jwcrypto/jwa.py,_AesKw._get_key,subject,yes,yes,yes,decrypt deserialize validate
+jwa._AesKw.unwrap#1,jwcrypto/jwa.py,_AesKw.unwrap,subject,yes,yes,yes,decrypt deserialize validate
+jwa._AesGcmKw._get_key#1,jwcrypto/jwa.py,_AesGcmKw._get_key,subject,yes,yes,yes,decrypt deserialize
+jwa._AesGcmKw._get_key#2,jwcrypto/jwa.py,_AesGcmKw._get_key,subject,yes,yes,yes,decrypt deserialize
+jwa._AesGcmKw.unwrap#1,jwcrypto/jwa.py,_AesGcmKw.unwrap,subject,yes,yes,yes,decrypt deserialize
+jwa._Pbes2HsAesKw._get_key#1,jwcrypto/jwa.py,_Pbes2HsAesKw._get_key,subject,yes,yes,yes,decrypt deserialize
+jwa._Direct._check_key#1,jwcrypto/jwa.py,_Direct._check_key,subject,yes,yes,yes,decrypt deserialize
+jwa._Direct.wrap#1,jwcrypto/jwa.py,_Direct.wrap,subject,no,no,no,
+jwa._Direct.unwrap#1,jwcrypto/jwa.py,_Direct.unwrap,subject,yes,yes,yes,decrypt deserialize
+jwa._EcdhEs._check_key#1,jwcrypto/jwa.py,_EcdhEs._check_key,subject,yes,yes,yes,decrypt deserialize
+jwa._EcdhEs._check_key#2,jwcrypto/jwa.py,_EcdhEs._check_key,subject,yes,yes,yes,decrypt deserialize
+jwa._EcdhEs.wrap#1,jwcrypto/jwa.py,_EcdhEs.wrap,subject,no,no,no,
+jwa._EcdhEs.unwrap#1,jwcrypto/jwa.py,_EcdhEs.unwrap,subject,yes,yes,yes,decrypt deserialize
+jwa._Ed25519.sign#1,jwcrypto/jwa.py,_Ed25519.sign,subject,no,no,no,
+jwa._Ed25519.verify#1,jwcrypto/jwa.py,_Ed25519.verify,subject,yes,yes,yes,deserialize verify
+jwa._Ed448.sign#1,jwcrypto/jwa.py,_Ed448.sign,subject,no,no,no,
+jwa._Ed448.verify#1,jwcrypto/jwa.py,_Ed448.verify,subject,yes,yes,yes,deserialize verify
+jwa._RawMLDSA._check_key#1,jwcrypto/jwa.py,_RawMLDSA._check_key,subject,yes,yes,yes,deserialize verify
+jwa._RawMLDSA._check_key#2,jwcrypto/jwa.py,_RawMLDSA._check_key,subject,yes,yes,yes,deserialize verify
+jwa.JWA.instantiate_alg#1,jwcrypto/jwa.py,JWA.instantiate_alg,subject,yes,yes,yes,decrypt deserialize validate verify
+jwa.JWA.signing_alg#1,jwcrypto/jwa.py,JWA.signing_alg,subject,no,yes,yes,deserialize validate verify
+jwa.JWA.keymgmt_alg#1,jwcrypto/jwa.py,JWA.keymgmt_alg,subject,yes,yes,yes,decrypt deserialize validate
+jwa.JWA.encryption_alg#1,jwcrypto/jwa.py,JWA.encryption_alg,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._jwa_keymgmt#1,jwcrypto/jwe.py,JWE._jwa_keymgmt,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._jwa_enc#1,jwcrypto/jwe.py,JWE._jwa_enc,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._merge_headers#1,jwcrypto/jwe.py,JWE._merge_headers,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._get_alg_enc_from_headers#1,jwcrypto/jwe.py,JWE._get_alg_enc_from_headers,subject,no,no,no,
+jwe.JWE._get_alg_enc_from_headers#2,jwcrypto/jwe.py,JWE._get_alg_enc_from_headers,subject,no,no,no,
+jwe.JWE.serialize#1,jwcrypto/jwe.py,JWE.serialize,subject,no,no,no,
+jwe.JWE.serialize#2,jwcrypto/jwe.py,JWE.serialize,subject,no,no,no,
+jwe.JWE.serialize#3,jwcrypto/jwe.py,JWE.serialize,subject,no,no,no,
+jwe.JWE.serialize#4,jwcrypto/jwe.py,JWE.serialize,subject,no,no,no,
+jwe.JWE.serialize#5,jwcrypto/jwe.py,JWE.serialize,subject,no,no,no,
+jwe.JWE._check_crit#1,jwcrypto/jwe.py,JWE._check_crit,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._check_crit#2,jwcrypto/jwe.py,JWE._check_crit,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._decrypt#1,jwcrypto/jwe.py,JWE._decrypt,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._decrypt#2,jwcrypto/jwe.py,JWE._decrypt,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._decrypt#3,jwcrypto/jwe.py,JWE._decrypt,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._decrypt#4,jwcrypto/jwe.py,JWE._decrypt,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE._decrypt#5,jwcrypto/jwe.py,JWE._decrypt,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE.decrypt#1,jwcrypto/jwe.py,JWE.decrypt,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE.decrypt#2,jwcrypto/jwe.py,JWE.decrypt,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE.decrypt#3,jwcrypto/jwe.py,JWE.decrypt,subject,yes,yes,yes,decrypt deserialize validate
+jwe.JWE.deserialize#1,jwcrypto/jwe.py,JWE.deserialize,subject,yes,yes,yes,deserialize
+jwe.JWE.deserialize#2,jwcrypto/jwe.py,JWE.deserialize,subject,yes,yes,yes,deserialize
+jwe.JWE.payload#1,jwcrypto/jwe.py,JWE.payload,subject,yes,yes,yes,deserialize validate
+jwe.JWE.jose_header#1,jwcrypto/jwe.py,JWE.jose_header,subject,yes,yes,yes,decrypt deserialize validate
+jwk.JWK.generate#1,jwcrypto/jwk.py,JWK.generate,subject,no,no,no,
+jwk.JWK.generate_key#1,jwcrypto/jwk.py,JWK.generate_key,subject,no,no,no,
+jwk.JWK._get_curve_by_name#1,jwcrypto/jwk.py,JWK._get_curve_by_name,subject,yes,yes,yes,decrypt deserialize validate verify
+jwk.JWK._get_curve_by_name#2,jwcrypto/jwk.py,JWK._get_curve_by_name,subject,yes,yes,yes,decrypt deserialize validate verify
+jwk.JWK._get_curve_by_name#3,jwcrypto/jwk.py,JWK._get_curve_by_name,subject,yes,yes,yes,decrypt deserialize validate verify
+jwk.JWK._generate_OKP#1,jwcrypto/jwk.py,JWK._generate_OKP,subject,no,no,no,
+jwk.JWK._okp_curve_from_pyca_key#1,jwcrypto/jwk.py,JWK._okp_curve_from_pyca_key,subject,no,no,no,
+jwk.JWK._generate_AKP#1,jwcrypto/jwk.py,JWK._generate_AKP,subject,no,no,no,
+jwk.JWK._akp_alg_from_pyca_key#1,jwcrypto/jwk.py,JWK._akp_alg_from_pyca_key,subject,no,no,no,
+jwk.JWK.import_key#1,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#2,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#3,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#4,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#5,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#6,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#7,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#8,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#9,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#10,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.import_key#11,jwcrypto/jwk.py,JWK.import_key,subject,no,yes,yes,decrypt deserialize
+jwk.JWK.from_json#1,jwcrypto/jwk.py,JWK.from_json,subject,no,no,no,
+jwk.JWK._public_params#1,jwcrypto/jwk.py,JWK._public_params,subject,no,no,no,
+jwk.JWK.export_private#1,jwcrypto/jwk.py,JWK.export_private,subject,no,no,no,
+jwk.JWK.export_symmetric#1,jwcrypto/jwk.py,JWK.export_symmetric,subject,no,no,no,
+jwk.JWK.key_curve#1,jwcrypto/jwk.py,JWK.key_curve,subject,no,no,no,
+jwk.JWK._check_constraints#1,jwcrypto/jwk.py,JWK._check_constraints,subject,yes,yes,yes,decrypt deserialize validate verify
+jwk.JWK._check_constraints#2,jwcrypto/jwk.py,JWK._check_constraints,subject,yes,yes,yes,decrypt deserialize validate verify
+jwk.JWK._okp_pub#1,jwcrypto/jwk.py,JWK._okp_pub,subject,yes,yes,yes,decrypt deserialize verify
+jwk.JWK._okp_pri#1,jwcrypto/jwk.py,JWK._okp_pri,subject,yes,yes,yes,decrypt deserialize
+jwk.JWK._akp_pub#1,jwcrypto/jwk.py,JWK._akp_pub,subject,yes,yes,yes,deserialize verify
+jwk.JWK._akp_pri#1,jwcrypto/jwk.py,JWK._akp_pri,subject,yes,no,yes,
+jwk.JWK.get_op_key#1,jwcrypto/jwk.py,JWK.get_op_key,subject,yes,yes,yes,decrypt deserialize validate verify
+jwk.JWK.import_from_pyca#1,jwcrypto/jwk.py,JWK.import_from_pyca,subject,no,no,no,
+jwk.JWK.export_to_pem#1,jwcrypto/jwk.py,JWK.export_to_pem,subject,no,no,no,
+jwk.JWK.export_to_pem#2,jwcrypto/jwk.py,JWK.export_to_pem,subject,no,no,no,
+jwk.JWK.thumbprint_uri#1,jwcrypto/jwk.py,JWK.thumbprint_uri,subject,no,no,no,
+jwk.JWK.thumbprint_uri#2,jwcrypto/jwk.py,JWK.thumbprint_uri,subject,no,no,no,
+jwk.JWK.__setitem__#1,jwcrypto/jwk.py,JWK.__setitem__,subject,yes,yes,yes,decrypt deserialize
+jwk.JWK.__setitem__#2,jwcrypto/jwk.py,JWK.__setitem__,subject,yes,yes,yes,decrypt deserialize
+jwk.JWK.__setitem__#3,jwcrypto/jwk.py,JWK.__setitem__,subject,yes,yes,yes,decrypt deserialize
+jwk.JWK.from_password#1,jwcrypto/jwk.py,JWK.from_password,subject,no,no,no,
+jwk.JWKSet.import_keyset#1,jwcrypto/jwk.py,JWKSet.import_keyset,subject,no,no,no,
+jwk.JWKSet.get_key#1,jwcrypto/jwk.py,JWKSet.get_key,subject,no,no,no,
+jws.JWSCore._jwa#1,jwcrypto/jws.py,JWSCore._jwa,subject,no,yes,yes,deserialize validate verify
+jws.JWSCore.verify#1,jwcrypto/jws.py,JWSCore.verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._merge_check_headers#1,jwcrypto/jws.py,JWS._merge_check_headers,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._merge_check_headers#2,jwcrypto/jws.py,JWS._merge_check_headers,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._merge_check_headers#3,jwcrypto/jws.py,JWS._merge_check_headers,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._merge_check_headers#4,jwcrypto/jws.py,JWS._merge_check_headers,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._merge_check_headers#5,jwcrypto/jws.py,JWS._merge_check_headers,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._merge_check_headers#6,jwcrypto/jws.py,JWS._merge_check_headers,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._verify#1,jwcrypto/jws.py,JWS._verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._verify#2,jwcrypto/jws.py,JWS._verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._verify#3,jwcrypto/jws.py,JWS._verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._verify#4,jwcrypto/jws.py,JWS._verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._verify#5,jwcrypto/jws.py,JWS._verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._verify#6,jwcrypto/jws.py,JWS._verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._verify#7,jwcrypto/jws.py,JWS._verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._get_obj_payload#1,jwcrypto/jws.py,JWS._get_obj_payload,subject,yes,yes,yes,deserialize validate verify
+jws.JWS.verify#1,jwcrypto/jws.py,JWS.verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS.verify#2,jwcrypto/jws.py,JWS.verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS.verify#3,jwcrypto/jws.py,JWS.verify,subject,yes,yes,yes,deserialize validate verify
+jws.JWS._deserialize_b64#1,jwcrypto/jws.py,JWS._deserialize_b64,subject,yes,yes,yes,deserialize
+jws.JWS._deserialize_b64#2,jwcrypto/jws.py,JWS._deserialize_b64,subject,yes,yes,yes,deserialize
+jws.JWS.deserialize#1,jwcrypto/jws.py,JWS.deserialize,subject,yes,yes,yes,deserialize
+jws.JWS.deserialize#2,jwcrypto/jws.py,JWS.deserialize,subject,yes,yes,yes,deserialize
+jws.JWS.add_signature#1,jwcrypto/jws.py,JWS.add_signature,subject,no,no,no,
+jws.JWS.add_signature#2,jwcrypto/jws.py,JWS.add_signature,subject,no,no,no,
+jws.JWS.serialize#1,jwcrypto/jws.py,JWS.serialize,subject,no,no,no,
+jws.JWS.serialize#2,jwcrypto/jws.py,JWS.serialize,subject,no,no,no,
+jws.JWS.serialize#3,jwcrypto/jws.py,JWS.serialize,subject,no,no,no,
+jws.JWS.serialize#4,jwcrypto/jws.py,JWS.serialize,subject,no,no,no,
+jws.JWS.serialize#5,jwcrypto/jws.py,JWS.serialize,subject,no,no,no,
+jws.JWS.serialize#6,jwcrypto/jws.py,JWS.serialize,subject,no,no,no,
+jws.JWS.payload#1,jwcrypto/jws.py,JWS.payload,subject,yes,yes,yes,deserialize validate
+jws.JWS.jose_header#1,jwcrypto/jws.py,JWS.jose_header,subject,yes,yes,yes,deserialize validate verify
+jwt.JWT._check_string_claim#1,jwcrypto/jwt.py,JWT._check_string_claim,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_array_or_string_claim#1,jwcrypto/jwt.py,JWT._check_array_or_string_claim,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_array_or_string_claim#2,jwcrypto/jwt.py,JWT._check_array_or_string_claim,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_integer_claim#1,jwcrypto/jwt.py,JWT._check_integer_claim,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_exp#1,jwcrypto/jwt.py,JWT._check_exp,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_nbf#1,jwcrypto/jwt.py,JWT._check_nbf,subject,yes,no,yes,
+jwt.JWT._check_provided_claims#1,jwcrypto/jwt.py,JWT._check_provided_claims,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_provided_claims#2,jwcrypto/jwt.py,JWT._check_provided_claims,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_provided_claims#3,jwcrypto/jwt.py,JWT._check_provided_claims,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_provided_claims#4,jwcrypto/jwt.py,JWT._check_provided_claims,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_provided_claims#5,jwcrypto/jwt.py,JWT._check_provided_claims,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_provided_claims#6,jwcrypto/jwt.py,JWT._check_provided_claims,subject,yes,yes,yes,deserialize validate
+jwt.JWT._check_provided_claims#7,jwcrypto/jwt.py,JWT._check_provided_claims,subject,yes,yes,yes,deserialize validate
+jwt.JWT.validate#1,jwcrypto/jwt.py,JWT.validate,subject,yes,yes,yes,deserialize validate

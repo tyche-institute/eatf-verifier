@@ -1,0 +1,6036 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_class": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "key": "tests/test_advisory.py::TestAdvisory.test_ghsa_ffqj_6fqr_9h24#0",
+   "name_tokens": [
+    "6fqr",
+    "9h24",
+    "ffqj",
+    "ghsa"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "algorithms.Algorithm.check_crypto_key_type#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "algorithms.ECAlgorithm._validate_curve#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "algorithms.HMACAlgorithm.prepare_key#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_class": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "key": "tests/test_advisory.py::TestAdvisory.test_ghsa_ffqj_6fqr_9h24#1",
+   "name_tokens": [
+    "6fqr",
+    "9h24",
+    "ffqj",
+    "ghsa"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "algorithms.Algorithm.check_crypto_key_type#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "algorithms.ECAlgorithm._validate_curve#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "algorithms.HMACAlgorithm.prepare_key#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_class": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "key": "tests/test_algorithms.py::TestECCurveValidation.test_jwt_encode_decode_rejects_wrong_curve#1",
+   "name_tokens": [
+    "curve",
+    "decode",
+    "encode",
+    "jwt",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "algorithms.ECAlgorithm._validate_curve#1",
+     "score": 2.302585,
+     "tokens": [
+      "curve"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS.encode#2",
+     "score": 2.302585,
+     "tokens": [
+      "encode"
+     ]
+    },
+    {
+     "check": "algorithms.Algorithm.check_crypto_key_type#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_class": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "key": "tests/test_algorithms.py::TestKeyLengthValidation.test_pyjwt_decode_enforces_short_hmac_key#0",
+   "name_tokens": [
+    "decode",
+    "enforce",
+    "hmac",
+    "key",
+    "pyjwt",
+    "short"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._verify_signature#5",
+     "score": 1.609438,
+     "tokens": [
+      "enforce",
+      "key"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS.encode#2",
+     "score": 1.609438,
+     "tokens": [
+      "enforce",
+      "key"
+     ]
+    },
+    {
+     "check": "algorithms.HMACAlgorithm.prepare_key#1",
+     "score": 1.203973,
+     "tokens": [
+      "hmac",
+      "key"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_class": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {
+    "algorithms.HMACAlgorithm.prepare_key#1": [
+     "match 'below'"
+    ],
+    "algorithms.HMACAlgorithm.prepare_key#2": [
+     "match 'below'"
+    ],
+    "algorithms.HMACAlgorithm.prepare_key#3": [
+     "match 'below'"
+    ],
+    "algorithms.NoneAlgorithm.prepare_key#1": [
+     "match 'below'"
+    ],
+    "algorithms.OKPAlgorithm.prepare_key#1": [
+     "match 'below'"
+    ],
+    "algorithms.RSAAlgorithm.prepare_key#1": [
+     "match 'below'"
+    ]
+   },
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "key": "tests/test_algorithms.py::TestKeyLengthValidation.test_pyjwt_decode_honors_per_call_enforce_minimum_key_length#0",
+   "name_tokens": [
+    "call",
+    "decode",
+    "enforce",
+    "honor",
+    "key",
+    "length",
+    "minimum",
+    "per",
+    "pyjwt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._verify_signature#5",
+     "score": 2.079442,
+     "tokens": [
+      "enforce",
+      "key",
+      "length",
+      "minimum"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS.encode#2",
+     "score": 2.079442,
+     "tokens": [
+      "enforce",
+      "key",
+      "length",
+      "minimum"
+     ]
+    },
+    {
+     "check": "algorithms.Algorithm.check_crypto_key_type#1",
+     "score": 0.0,
+     "tokens": [
+      "key"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_class": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {
+    "algorithms.HMACAlgorithm.prepare_key#1": [
+     "match 'below'"
+    ],
+    "algorithms.HMACAlgorithm.prepare_key#2": [
+     "match 'below'"
+    ],
+    "algorithms.HMACAlgorithm.prepare_key#3": [
+     "match 'below'"
+    ],
+    "algorithms.NoneAlgorithm.prepare_key#1": [
+     "match 'below'"
+    ],
+    "algorithms.OKPAlgorithm.prepare_key#1": [
+     "match 'below'"
+    ],
+    "algorithms.RSAAlgorithm.prepare_key#1": [
+     "match 'below'"
+    ]
+   },
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "key": "tests/test_algorithms.py::TestKeyLengthValidation.test_pyjwt_decode_honors_per_call_enforce_minimum_key_length#1",
+   "name_tokens": [
+    "call",
+    "decode",
+    "enforce",
+    "honor",
+    "key",
+    "length",
+    "minimum",
+    "per",
+    "pyjwt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._verify_signature#5",
+     "score": 2.079442,
+     "tokens": [
+      "enforce",
+      "key",
+      "length",
+      "minimum"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS.encode#2",
+     "score": 2.079442,
+     "tokens": [
+      "enforce",
+      "key",
+      "length",
+      "minimum"
+     ]
+    },
+    {
+     "check": "algorithms.Algorithm.check_crypto_key_type#1",
+     "score": 0.0,
+     "tokens": [
+      "key"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_fails_when_alg_is_not_on_method_algorithms_param#0",
+   "name_tokens": [
+    "alg",
+    "algorithm",
+    "decode",
+    "method",
+    "not",
+    "param"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._verify_signature#2",
+     "score": 0.693147,
+     "tokens": [
+      "alg",
+      "algorithm",
+      "not"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._verify_signature#3",
+     "score": 0.693147,
+     "tokens": [
+      "alg",
+      "algorithm",
+      "not"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._verify_signature#1",
+     "score": 0.0,
+     "tokens": [
+      "algorithm",
+      "not"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._load#2"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._load#2"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jws.PyJWS._decode_base64url_segment#1": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jws.PyJWS._load#1": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jws.PyJWS._load#3": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jwt.PyJWT._decode_payload#1": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "str == 'Not enough segments'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "str == 'Not enough segments'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_missing_segments_throws_exception#0",
+   "name_tokens": [
+    "decode",
+    "missing",
+    "segment"
+   ],
+   "positive": {
+    "api_jws.PyJWS._load#2": [
+     "str == 'Not enough segments'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._load#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._load#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'Invalid token type' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'Invalid token type' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'Invalid token type' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'Invalid token type' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_token_type_is_none#0",
+   "name_tokens": [
+    "decode",
+    "invalid",
+    "none",
+    "token",
+    "type"
+   ],
+   "positive": {
+    "api_jws.PyJWS._load#1": [
+     "'Invalid token type' in str"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._load#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._load#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'Invalid token type' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'Invalid token type' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'Invalid token type' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'Invalid token type' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'Invalid token type' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_token_type_is_int#0",
+   "name_tokens": [
+    "decode",
+    "int",
+    "invalid",
+    "token",
+    "type"
+   ],
+   "positive": {
+    "api_jws.PyJWS._load#1": [
+     "'Invalid token type' in str"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._load#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4"
+   ],
+   "basis": null,
+   "excluded": {
+    "api_jws.PyJWS._decode_base64url_segment#1": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jws.PyJWS._load#1": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jws.PyJWS._load#2": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jwt.PyJWT._decode_payload#1": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "str == 'Invalid header string: must be a json object'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_with_non_mapping_header_throws_exception#0",
+   "name_tokens": [
+    "decode",
+    "header",
+    "mapping",
+    "non"
+   ],
+   "pool": "C_pos",
+   "positive": {
+    "api_jws.PyJWS._load#3": [
+     "str == 'Invalid header string: must be a json object'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "str == 'Invalid header string: must be a json object'"
+    ]
+   },
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._load#3",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "header"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#4",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "header"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._verify_signature#6"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._verify_signature#6"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jws.PyJWS._decode_base64url_segment#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#2": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#3": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jwt.PyJWT._decode_payload#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "str == 'Signature verification failed'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_encode_with_headers_alg_none#0",
+   "name_tokens": [
+    "alg",
+    "encode",
+    "header",
+    "none"
+   ],
+   "positive": {
+    "api_jws.PyJWS._verify_signature#6": [
+     "str == 'Signature verification failed'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._verify_signature#6",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jws.PyJWS._verify_signature#1": [
+     "str == 'Algorithm not supported'"
+    ],
+    "api_jws.PyJWS._verify_signature#2": [
+     "str == 'Algorithm not supported'"
+    ],
+    "api_jws.PyJWS._verify_signature#3": [
+     "str == 'Algorithm not supported'"
+    ]
+   },
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_algorithm_param_should_be_case_sensitive#0",
+   "name_tokens": [
+    "algorithm",
+    "case",
+    "decode",
+    "param",
+    "sensitive"
+   ],
+   "positive": {
+    "api_jws.PyJWS._verify_signature#4": [
+     "str == 'Algorithm not supported'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._verify_signature#4",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._verify_signature#6"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._verify_signature#6"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jws.PyJWS._decode_base64url_segment#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#2": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#3": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jwt.PyJWT._decode_payload#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "str == 'Signature verification failed'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "str == 'Signature verification failed'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_bad_secret#0",
+   "name_tokens": [
+    "bad",
+    "secret"
+   ],
+   "positive": {
+    "api_jws.PyJWS._verify_signature#6": [
+     "str == 'Signature verification failed'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._verify_signature#6",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._verify_signature#6"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._verify_signature#6"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._verify_signature#6"
+   ],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidSignatureError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_bad_secret#1",
+   "name_tokens": [
+    "bad",
+    "secret"
+   ],
+   "positive": {
+    "api_jws.PyJWS._verify_signature#6": [
+     "str == 'Signature verification failed'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._verify_signature#6",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decodes_with_jwk_and_mismatched_algorithm#0",
+   "name_tokens": [
+    "algorithm",
+    "decode",
+    "jwk",
+    "mismatched"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._verify_signature#1",
+     "score": 0.0,
+     "tokens": [
+      "algorithm"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._verify_signature#2",
+     "score": 0.0,
+     "tokens": [
+      "algorithm"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._verify_signature#3",
+     "score": 0.0,
+     "tokens": [
+      "algorithm"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._verify_signature#3"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._verify_signature#3"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jws.PyJWS._verify_signature#1": [
+     "match \"does not match the key's algorithm\""
+    ],
+    "api_jws.PyJWS._verify_signature#2": [
+     "match \"does not match the key's algorithm\""
+    ],
+    "api_jws.PyJWS._verify_signature#4": [
+     "match \"does not match the key's algorithm\""
+    ]
+   },
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decodes_with_jwk_rejects_header_alg_outside_jwk_alg#0",
+   "name_tokens": [
+    "alg",
+    "decode",
+    "header",
+    "jwk",
+    "outside"
+   ],
+   "positive": {
+    "api_jws.PyJWS._verify_signature#3": [
+     "match \"does not match the key's algorithm\""
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._verify_signature#3",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS.decode_complete#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_with_optional_algorithms#0",
+   "name_tokens": [
+    "algorithm",
+    "decode",
+    "optional"
+   ],
+   "positive": {
+    "api_jws.PyJWS.decode_complete#1": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS.decode_complete#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_class": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_pos": [
+    "algorithms.HMACAlgorithm.prepare_key#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "algorithms.HMACAlgorithm.prepare_key#2": [
+     "match 'must not be empty'"
+    ],
+    "algorithms.HMACAlgorithm.prepare_key#3": [
+     "match 'must not be empty'"
+    ],
+    "algorithms.NoneAlgorithm.prepare_key#1": [
+     "match 'must not be empty'"
+    ],
+    "algorithms.OKPAlgorithm.prepare_key#1": [
+     "match 'must not be empty'"
+    ],
+    "algorithms.RSAAlgorithm.prepare_key#1": [
+     "match 'must not be empty'"
+    ]
+   },
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_no_secret#0",
+   "name_tokens": [
+    "no",
+    "secret"
+   ],
+   "positive": {
+    "algorithms.HMACAlgorithm.prepare_key#1": [
+     "match 'must not be empty'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "algorithms.HMACAlgorithm.prepare_key#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_class": [
+    "algorithms.Algorithm.check_crypto_key_type#1",
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "algorithms.HMACAlgorithm.prepare_key#3",
+    "algorithms.NoneAlgorithm.prepare_key#1",
+    "algorithms.OKPAlgorithm.prepare_key#1",
+    "algorithms.RSAAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.encode#2"
+   ],
+   "C_pos": [
+    "algorithms.HMACAlgorithm.prepare_key#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "algorithms.HMACAlgorithm.prepare_key#2": [
+     "match 'must not be empty'"
+    ],
+    "algorithms.HMACAlgorithm.prepare_key#3": [
+     "match 'must not be empty'"
+    ],
+    "algorithms.NoneAlgorithm.prepare_key#1": [
+     "match 'must not be empty'"
+    ],
+    "algorithms.OKPAlgorithm.prepare_key#1": [
+     "match 'must not be empty'"
+    ],
+    "algorithms.RSAAlgorithm.prepare_key#1": [
+     "match 'must not be empty'"
+    ]
+   },
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_verify_signature_with_no_secret#0",
+   "name_tokens": [
+    "no",
+    "secret",
+    "signature",
+    "verify"
+   ],
+   "positive": {
+    "algorithms.HMACAlgorithm.prepare_key#1": [
+     "match 'must not be empty'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "algorithms.HMACAlgorithm.prepare_key#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_verify_signature_with_no_algo_header_throws_exception#0",
+   "name_tokens": [
+    "algo",
+    "header",
+    "no",
+    "signature",
+    "verify"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._verify_signature#1",
+     "score": 0.0,
+     "tokens": [
+      "signature",
+      "verify"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._verify_signature#2",
+     "score": 0.0,
+     "tokens": [
+      "signature",
+      "verify"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._verify_signature#3",
+     "score": 0.0,
+     "tokens": [
+      "signature",
+      "verify"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'header padding' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'header padding' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'header padding' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'header padding' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "'header padding' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'header padding' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'header padding' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'header padding' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'header padding' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'header padding' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_header_padding#0",
+   "name_tokens": [
+    "decode",
+    "header",
+    "invalid",
+    "padding"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._decode_base64url_segment#1",
+     "score": 1.386294,
+     "tokens": [
+      "decode",
+      "invalid",
+      "padding"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#3",
+     "score": 1.386294,
+     "tokens": [
+      "decode",
+      "header",
+      "invalid"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#1",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4"
+   ],
+   "basis": null,
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'Invalid header' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'Invalid header' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'Invalid header' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "'Invalid header' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'Invalid header' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'Invalid header' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'Invalid header' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'Invalid header' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'Invalid header' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_header_string#0",
+   "name_tokens": [
+    "decode",
+    "header",
+    "invalid",
+    "string"
+   ],
+   "pool": "C_pos",
+   "positive": {
+    "api_jws.PyJWS._load#3": [
+     "'Invalid header' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'Invalid header' in str"
+    ]
+   },
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._load#3",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "header",
+      "invalid",
+      "string"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#4",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "header",
+      "invalid",
+      "string"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4"
+   ],
+   "basis": null,
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'Invalid header'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'Invalid header'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'Invalid header'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'Invalid header'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'Invalid header'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'Invalid header'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'Invalid header'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'Invalid header'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'Invalid header'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_deeply_nested_header_throws_decode_error#0",
+   "name_tokens": [
+    "decode",
+    "deeply",
+    "header",
+    "nested"
+   ],
+   "pool": "C_pos",
+   "positive": {
+    "api_jws.PyJWS._load#3": [
+     "match 'Invalid header'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'Invalid header'"
+    ]
+   },
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._load#3",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "header"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#4",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "header"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'Invalid payload padding' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'Invalid payload padding' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'Invalid payload padding' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'Invalid payload padding' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "'Invalid payload padding' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'Invalid payload padding' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'Invalid payload padding' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'Invalid payload padding' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'Invalid payload padding' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'Invalid payload padding' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_payload_padding#0",
+   "name_tokens": [
+    "decode",
+    "invalid",
+    "padding",
+    "payload"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._decode_base64url_segment#1",
+     "score": 1.386294,
+     "tokens": [
+      "decode",
+      "invalid",
+      "padding"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._decode_payload#1",
+     "score": 1.386294,
+     "tokens": [
+      "decode",
+      "invalid",
+      "payload"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#1",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'Invalid crypto padding' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'Invalid crypto padding' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'Invalid crypto padding' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'Invalid crypto padding' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "'Invalid crypto padding' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'Invalid crypto padding' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'Invalid crypto padding' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'Invalid crypto padding' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'Invalid crypto padding' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'Invalid crypto padding' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_crypto_padding#0",
+   "name_tokens": [
+    "crypto",
+    "decode",
+    "invalid",
+    "padding"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._decode_base64url_segment#1",
+     "score": 1.386294,
+     "tokens": [
+      "decode",
+      "invalid",
+      "padding"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#1",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "invalid"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#3",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "invalid"
+     ]
+    }
+   ],
+   "target": "api_jws.PyJWS._decode_base64url_segment#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'Invalid crypto padding'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_non_canonical_crypto_segment#0",
+   "name_tokens": [
+    "canonical",
+    "crypto",
+    "decode",
+    "non",
+    "segment"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._decode_base64url_segment#1",
+     "score": 1.386294,
+     "tokens": [
+      "decode",
+      "segment"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#1",
+     "score": 0.0,
+     "tokens": [
+      "decode"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#3",
+     "score": 0.0,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": "api_jws.PyJWS._decode_base64url_segment#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [],
+   "basis": "assert+name",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'Invalid crypto padding'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'Invalid crypto padding'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_embedded_padding_in_crypto_segment#0",
+   "name_tokens": [
+    "crypto",
+    "decode",
+    "embedded",
+    "padding",
+    "segment"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._decode_base64url_segment#1",
+     "score": 2.772589,
+     "tokens": [
+      "decode",
+      "padding",
+      "segment"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#1",
+     "score": 0.0,
+     "tokens": [
+      "decode"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#3",
+     "score": 0.0,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": "api_jws.PyJWS._decode_base64url_segment#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_with_algo_none_should_fail#0",
+   "name_tokens": [
+    "algo",
+    "decode",
+    "none"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS._decode_base64url_segment#1",
+     "score": 0.074108,
+     "tokens": [
+      "decode"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#1",
+     "score": 0.074108,
+     "tokens": [
+      "decode"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#2",
+     "score": 0.074108,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4"
+   ],
+   "basis": null,
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'detached_payload.*b64.*false'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'detached_payload.*b64.*false'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'detached_payload.*b64.*false'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'detached_payload.*b64.*false'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'detached_payload.*b64.*false'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'detached_payload.*b64.*false'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'detached_payload.*b64.*false'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'detached_payload.*b64.*false'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_detached_payload_for_attached_content#0",
+   "name_tokens": [
+    "attached",
+    "content",
+    "decode",
+    "detached",
+    "payload"
+   ],
+   "pool": "C_pos",
+   "positive": {
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'detached_payload.*b64.*false'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'detached_payload.*b64.*false'"
+    ]
+   },
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jws.PyJWS.decode_complete#2",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "detached",
+      "payload"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS.decode_complete#4",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "detached",
+      "payload"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#5",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._load#5"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'Payload segment must be empty'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'Payload segment must be empty'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'Payload segment must be empty'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'Payload segment must be empty'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'Payload segment must be empty'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'Payload segment must be empty'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'Payload segment must be empty'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'Payload segment must be empty'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'Payload segment must be empty'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_b64_false_rejects_non_empty_payload_segment#0",
+   "name_tokens": [
+    "b64",
+    "decode",
+    "empty",
+    "false",
+    "non",
+    "payload",
+    "segment"
+   ],
+   "positive": {
+    "api_jws.PyJWS._load#5": [
+     "match 'Payload segment must be empty'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._load#5",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS.decode_complete#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._validate_crit#1",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._validate_kid#1",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#3",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jws.PyJWS.encode#1",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_exp#2",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4",
+    "api_jwt.PyJWT._validate_jti#1",
+    "api_jwt.PyJWT._validate_nbf#1",
+    "api_jwt.PyJWT._validate_nbf#2",
+    "api_jwt.PyJWT._validate_required_claims#1",
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS.decode_complete#3"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS._validate_crit#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS._validate_crit#2": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS._validate_kid#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS._verify_signature#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS._verify_signature#2": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS._verify_signature#4": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'b64.*crit'"
+    ],
+    "api_jws.PyJWS.encode#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_exp#2": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_iat#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_iat#2": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_iss#2": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_iss#3": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_iss#4": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_jti#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#2": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_sub#1": [
+     "match 'b64.*crit'"
+    ],
+    "api_jwt.PyJWT._validate_sub#2": [
+     "match 'b64.*crit'"
+    ]
+   },
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_b64_false_without_crit_b64_is_rejected#0",
+   "name_tokens": [
+    "b64",
+    "crit",
+    "decode",
+    "false",
+    "without"
+   ],
+   "positive": {
+    "api_jws.PyJWS.decode_complete#3": [
+     "match 'b64.*crit'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS.decode_complete#3",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS.decode_complete#4"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_detached_content_without_proper_argument#0",
+   "name_tokens": [
+    "argument",
+    "content",
+    "decode",
+    "detached",
+    "proper",
+    "without"
+   ],
+   "positive": {
+    "api_jws.PyJWS.decode_complete#4": [
+     "'It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.' in str"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS.decode_complete#4",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._validate_crit#1",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._validate_kid#1",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#3",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jws.PyJWS.encode#1",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_exp#2",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4",
+    "api_jwt.PyJWT._validate_jti#1",
+    "api_jwt.PyJWT._validate_nbf#1",
+    "api_jwt.PyJWT._validate_nbf#2",
+    "api_jwt.PyJWT._validate_required_claims#1",
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._validate_crit#3"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._validate_crit#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._validate_crit#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._validate_kid#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._verify_signature#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._verify_signature#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._verify_signature#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.decode_complete#3": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.encode#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_exp#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iat#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iat#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iss#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iss#3": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iss#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_jti#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_sub#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_sub#2": [
+     "match 'Unsupported critical extension'"
+    ]
+   },
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_unknown_crit_extension#0",
+   "name_tokens": [
+    "crit",
+    "decode",
+    "extension",
+    "unknown"
+   ],
+   "positive": {
+    "api_jws.PyJWS._validate_crit#3": [
+     "match 'Unsupported critical extension'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._validate_crit#3",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._validate_crit#1",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._validate_crit#1",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._validate_kid#1",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#3",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jws.PyJWS.encode#1",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_exp#2",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4",
+    "api_jwt.PyJWT._validate_jti#1",
+    "api_jwt.PyJWT._validate_nbf#1",
+    "api_jwt.PyJWT._validate_nbf#2",
+    "api_jwt.PyJWT._validate_required_claims#1",
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._validate_crit#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._validate_crit#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._validate_kid#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._verify_signature#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._verify_signature#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._verify_signature#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.decode_complete#3": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.encode#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_exp#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iat#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iat#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iss#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iss#3": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iss#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_jti#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_sub#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_sub#2": [
+     "match 'must be a non-empty list'"
+    ]
+   },
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_empty_crit#0",
+   "name_tokens": [
+    "crit",
+    "decode",
+    "empty"
+   ],
+   "positive": {
+    "api_jws.PyJWS._validate_crit#1": [
+     "match 'must be a non-empty list'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._validate_crit#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._validate_crit#1",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._validate_crit#1",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._validate_kid#1",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#3",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jws.PyJWS.encode#1",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_exp#2",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4",
+    "api_jwt.PyJWT._validate_jti#1",
+    "api_jwt.PyJWT._validate_nbf#1",
+    "api_jwt.PyJWT._validate_nbf#2",
+    "api_jwt.PyJWT._validate_required_claims#1",
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._validate_crit#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._validate_crit#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._validate_kid#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._verify_signature#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._verify_signature#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._verify_signature#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.decode_complete#3": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jws.PyJWS.encode#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_exp#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iat#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iat#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iss#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iss#3": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_iss#4": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_jti#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#2": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_sub#1": [
+     "match 'must be a non-empty list'"
+    ],
+    "api_jwt.PyJWT._validate_sub#2": [
+     "match 'must be a non-empty list'"
+    ]
+   },
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_non_list_crit#0",
+   "name_tokens": [
+    "crit",
+    "decode",
+    "list",
+    "non"
+   ],
+   "positive": {
+    "api_jws.PyJWS._validate_crit#1": [
+     "match 'must be a non-empty list'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._validate_crit#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._validate_crit#1",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._validate_kid#1",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#3",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jws.PyJWS.encode#1",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_exp#2",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4",
+    "api_jwt.PyJWT._validate_jti#1",
+    "api_jwt.PyJWT._validate_nbf#1",
+    "api_jwt.PyJWT._validate_nbf#2",
+    "api_jwt.PyJWT._validate_required_claims#1",
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._validate_crit#2"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS._validate_crit#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS._validate_kid#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS._verify_signature#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS._verify_signature#2": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS._verify_signature#4": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS.decode_complete#3": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'values must be strings'"
+    ],
+    "api_jws.PyJWS.encode#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_exp#2": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_iat#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_iat#2": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_iss#2": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_iss#3": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_iss#4": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_jti#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#2": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_sub#1": [
+     "match 'values must be strings'"
+    ],
+    "api_jwt.PyJWT._validate_sub#2": [
+     "match 'values must be strings'"
+    ]
+   },
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_crit_with_non_string_values#0",
+   "name_tokens": [
+    "crit",
+    "decode",
+    "non",
+    "string",
+    "value"
+   ],
+   "positive": {
+    "api_jws.PyJWS._validate_crit#2": [
+     "match 'values must be strings'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._validate_crit#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._validate_crit#1",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._validate_kid#1",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#3",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jws.PyJWS.encode#1",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_exp#2",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4",
+    "api_jwt.PyJWT._validate_jti#1",
+    "api_jwt.PyJWT._validate_nbf#1",
+    "api_jwt.PyJWT._validate_nbf#2",
+    "api_jwt.PyJWT._validate_required_claims#1",
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._validate_crit#4"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS._validate_crit#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS._validate_crit#2": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS._validate_kid#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS._verify_signature#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS._verify_signature#2": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS._verify_signature#4": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS.decode_complete#3": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'missing from headers'"
+    ],
+    "api_jws.PyJWS.encode#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_exp#2": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_iat#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_iat#2": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_iss#2": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_iss#3": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_iss#4": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_jti#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#2": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_sub#1": [
+     "match 'missing from headers'"
+    ],
+    "api_jwt.PyJWT._validate_sub#2": [
+     "match 'missing from headers'"
+    ]
+   },
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_crit_extension_missing_from_header#0",
+   "name_tokens": [
+    "crit",
+    "decode",
+    "extension",
+    "from",
+    "header",
+    "missing"
+   ],
+   "positive": {
+    "api_jws.PyJWS._validate_crit#4": [
+     "match 'missing from headers'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._validate_crit#4",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_reused_options_do_not_disable_claim_verification#0",
+   "name_tokens": [
+    "claim",
+    "disable",
+    "do",
+    "not",
+    "option",
+    "reused",
+    "verification"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_exp#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2"
+   ],
+   "basis": null,
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'Invalid payload string' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'Invalid payload string' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'Invalid payload string' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'Invalid payload string' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "'Invalid payload string' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'Invalid payload string' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'Invalid payload string' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'Invalid payload string' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'Invalid payload string' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_invalid_payload_string#0",
+   "name_tokens": [
+    "decode",
+    "invalid",
+    "payload",
+    "string"
+   ],
+   "pool": "C_pos",
+   "positive": {
+    "api_jwt.PyJWT._decode_payload#1": [
+     "'Invalid payload string' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'Invalid payload string' in str"
+    ]
+   },
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._decode_payload#1",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "invalid",
+      "payload",
+      "string"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._decode_payload#2",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "invalid",
+      "payload",
+      "string"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2"
+   ],
+   "basis": "assert+name",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'Invalid payload'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'Invalid payload'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'Invalid payload'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'Invalid payload'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'Invalid payload'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'Invalid payload'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'Invalid payload'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'Invalid payload'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'Invalid payload'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_payload_recursion_error_throws_decode_error#0",
+   "name_tokens": [
+    "decode",
+    "payload",
+    "recursion"
+   ],
+   "pool": "C_pos",
+   "positive": {
+    "api_jwt.PyJWT._decode_payload#1": [
+     "match 'Invalid payload'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'Invalid payload'"
+    ]
+   },
+   "reason": null,
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._decode_payload#1",
+     "score": 0.693147,
+     "tokens": [
+      "decode",
+      "payload",
+      "recursion"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._decode_payload#2",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "payload"
+     ]
+    }
+   ],
+   "target": "api_jwt.PyJWT._decode_payload#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2"
+   ],
+   "basis": null,
+   "excluded": {
+    "api_jws.PyJWS._decode_base64url_segment#1": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jws.PyJWS._load#1": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jws.PyJWS._load#2": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jws.PyJWS._load#3": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "str == 'Invalid payload string: must be a json object'"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_non_mapping_payload_throws_exception#0",
+   "name_tokens": [
+    "decode",
+    "mapping",
+    "non",
+    "payload"
+   ],
+   "pool": "C_pos",
+   "positive": {
+    "api_jwt.PyJWT._decode_payload#1": [
+     "str == 'Invalid payload string: must be a json object'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "str == 'Invalid payload string: must be a json object'"
+    ]
+   },
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._decode_payload#1",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "payload"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._decode_payload#2",
+     "score": 0.0,
+     "tokens": [
+      "decode",
+      "payload"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#6"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_aud#6"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jwt.PyJWT._validate_aud#1": [
+     "str == 'Invalid claim format in token'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "str == 'Invalid claim format in token'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "str == 'Invalid claim format in token'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "str == 'Invalid claim format in token'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "str == 'Invalid claim format in token'"
+    ]
+   },
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_nonlist_aud_claim_throws_exception#0",
+   "name_tokens": [
+    "aud",
+    "claim",
+    "decode",
+    "nonlist"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_aud#6": [
+     "str == 'Invalid claim format in token'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_aud#6",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#6"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_aud#6"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jwt.PyJWT._validate_aud#1": [
+     "str == 'Invalid claim format in token'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "str == 'Invalid claim format in token'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "str == 'Invalid claim format in token'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "str == 'Invalid claim format in token'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "str == 'Invalid claim format in token'"
+    ]
+   },
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_invalid_aud_list_member_throws_exception#0",
+   "name_tokens": [
+    "aud",
+    "decode",
+    "invalid",
+    "list",
+    "member"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_aud#6": [
+     "str == 'Invalid claim format in token'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_aud#6",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._validate_exp#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_exp#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'exp' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'exp' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'exp' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'exp' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "'exp' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'exp' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'exp' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'exp' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'exp' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_exception_if_exp_is_not_int#0",
+   "name_tokens": [
+    "decode",
+    "exp",
+    "int",
+    "not"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'exp' in str"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_exp#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_iat#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_iat#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidIssuedAtError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_exception_if_iat_is_not_int#0",
+   "name_tokens": [
+    "decode",
+    "iat",
+    "int",
+    "not"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_iat#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_nbf#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_nbf#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ImmatureSignatureError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_exception_if_iat_is_greater_than_now#0",
+   "name_tokens": [
+    "decode",
+    "greater",
+    "iat",
+    "now",
+    "than"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_iat#2",
+     "score": 0.693147,
+     "tokens": [
+      "iat",
+      "now"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_nbf#2",
+     "score": 0.0,
+     "tokens": [
+      "now"
+     ]
+    }
+   ],
+   "target": "api_jwt.PyJWT._validate_iat#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_exception_if_nbf_is_not_int#0",
+   "name_tokens": [
+    "decode",
+    "int",
+    "nbf",
+    "not"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_nbf#1",
+     "score": 4.659075,
+     "tokens": [
+      "decode",
+      "nbf",
+      "not"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._load#2",
+     "score": 2.020018,
+     "tokens": [
+      "decode",
+      "not"
+     ]
+    },
+    {
+     "check": "api_jws.PyJWS._decode_base64url_segment#1",
+     "score": 0.074108,
+     "tokens": [
+      "decode"
+     ]
+    }
+   ],
+   "target": "api_jwt.PyJWT._validate_nbf#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError",
+    "InvalidIssuedAtError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_clean_error_if_claim_is_non_numeric_type#0",
+   "name_tokens": [
+    "claim",
+    "clean",
+    "decode",
+    "non",
+    "numeric",
+    "type"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_exp#1",
+     "score": 2.851151,
+     "tokens": [
+      "claim",
+      "decode",
+      "type"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_nbf#1",
+     "score": 2.851151,
+     "tokens": [
+      "claim",
+      "decode",
+      "type"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_iat#1",
+     "score": 2.70805,
+     "tokens": [
+      "claim",
+      "type"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_expiration#0",
+   "name_tokens": [
+    "decode",
+    "expiration"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_exp#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_nbf#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_nbf#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ImmatureSignatureError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_notbefore#0",
+   "name_tokens": [
+    "decode",
+    "notbefore"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_iat#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_nbf#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_expiration_with_leeway#0",
+   "name_tokens": [
+    "decode",
+    "expiration",
+    "leeway"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_exp#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_nbf#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_nbf#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ImmatureSignatureError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_notbefore_with_leeway#0",
+   "name_tokens": [
+    "decode",
+    "leeway",
+    "notbefore"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_iat#2",
+     "score": 0.0,
+     "tokens": [
+      "leeway"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_nbf#2",
+     "score": 0.0,
+     "tokens": [
+      "leeway"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_check_audience_none_specified#0",
+   "name_tokens": [
+    "audience",
+    "check",
+    "none",
+    "specified"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_aud#1",
+     "score": 0.0,
+     "tokens": [
+      "audience"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#3",
+     "score": 0.0,
+     "tokens": [
+      "audience"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#4",
+     "score": 0.0,
+     "tokens": [
+      "audience"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_list#0",
+   "name_tokens": [
+    "audience",
+    "invalid",
+    "list"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_aud#6",
+     "score": 1.791759,
+     "tokens": [
+      "audience",
+      "invalid",
+      "list"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#1",
+     "score": 0.0,
+     "tokens": [
+      "audience",
+      "invalid"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#3",
+     "score": 0.0,
+     "tokens": [
+      "audience",
+      "invalid"
+     ]
+    }
+   ],
+   "target": "api_jwt.PyJWT._validate_aud#6",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience#0",
+   "name_tokens": [
+    "audience",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_aud#1",
+     "score": 0.0,
+     "tokens": [
+      "audience",
+      "invalid"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#3",
+     "score": 0.0,
+     "tokens": [
+      "audience",
+      "invalid"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#4",
+     "score": 0.0,
+     "tokens": [
+      "audience",
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_audience_as_bytes#0",
+   "name_tokens": [
+    "audience",
+    "byte"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_aud#1",
+     "score": 0.0,
+     "tokens": [
+      "audience"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#3",
+     "score": 0.0,
+     "tokens": [
+      "audience"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#4",
+     "score": 0.0,
+     "tokens": [
+      "audience"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_in_array#0",
+   "name_tokens": [
+    "array",
+    "audience",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_aud#1",
+     "score": 0.0,
+     "tokens": [
+      "audience",
+      "invalid"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#3",
+     "score": 0.0,
+     "tokens": [
+      "audience",
+      "invalid"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_aud#4",
+     "score": 0.0,
+     "tokens": [
+      "audience",
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_iss#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jwt.PyJWT._validate_aud#2": [
+     ".claim == 'iss'"
+    ]
+   },
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_token_without_issuer#0",
+   "name_tokens": [
+    "issuer",
+    "token",
+    "without"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_iss#1": [
+     ".claim == 'iss'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_iss#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidIssuerError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_rasise_exception_on_partial_issuer_match#0",
+   "name_tokens": [
+    "issuer",
+    "match",
+    "partial",
+    "rasise"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_iss#2",
+     "score": 0.0,
+     "tokens": [
+      "issuer"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_iss#3",
+     "score": 0.0,
+     "tokens": [
+      "issuer"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_iss#4",
+     "score": 0.0,
+     "tokens": [
+      "issuer"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_aud#2"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jwt.PyJWT._validate_iss#1": [
+     ".claim == 'aud'"
+    ]
+   },
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_token_without_audience#0",
+   "name_tokens": [
+    "audience",
+    "token",
+    "without"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_aud#2": [
+     ".claim == 'aud'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_aud#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_aud#2"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jwt.PyJWT._validate_iss#1": [
+     ".claim == 'aud'"
+    ]
+   },
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_token_with_aud_none_and_without_audience#0",
+   "name_tokens": [
+    "aud",
+    "audience",
+    "none",
+    "token",
+    "without"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_aud#2": [
+     ".claim == 'aud'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_aud#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidIssuerError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_issuer#0",
+   "name_tokens": [
+    "invalid",
+    "issuer"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_iss#2",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "issuer"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_iss#3",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "issuer"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_iss#4",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "issuer"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidIssuerError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_issuer_list#0",
+   "name_tokens": [
+    "invalid",
+    "issuer",
+    "list"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_iss#2",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "issuer"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_iss#3",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "issuer"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_iss#4",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "issuer"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_pos": [],
+   "basis": "assert",
+   "excluded": {
+    "api_jwt.PyJWT._validate_aud#2": [
+     ".claim == 'exp'"
+    ],
+    "api_jwt.PyJWT._validate_iss#1": [
+     ".claim == 'exp'"
+    ]
+   },
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_should_raise_error_if_exp_required_but_not_present#0",
+   "name_tokens": [
+    "but",
+    "decode",
+    "exp",
+    "not",
+    "present",
+    "required"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_required_claims#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_pos": [],
+   "basis": "assert",
+   "excluded": {
+    "api_jwt.PyJWT._validate_aud#2": [
+     ".claim == 'iat'"
+    ],
+    "api_jwt.PyJWT._validate_iss#1": [
+     ".claim == 'iat'"
+    ]
+   },
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_should_raise_error_if_iat_required_but_not_present#0",
+   "name_tokens": [
+    "but",
+    "decode",
+    "iat",
+    "not",
+    "present",
+    "required"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_required_claims#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_pos": [],
+   "basis": "assert",
+   "excluded": {
+    "api_jwt.PyJWT._validate_aud#2": [
+     ".claim == 'nbf'"
+    ],
+    "api_jwt.PyJWT._validate_iss#1": [
+     ".claim == 'nbf'"
+    ]
+   },
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_should_raise_error_if_nbf_required_but_not_present#0",
+   "name_tokens": [
+    "but",
+    "decode",
+    "nbf",
+    "not",
+    "present",
+    "required"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_required_claims#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_verify_exp_option#0",
+   "name_tokens": [
+    "decode",
+    "exp",
+    "option",
+    "verify"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_exp#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_verify_exp_option_and_signature_off#0",
+   "name_tokens": [
+    "decode",
+    "exp",
+    "off",
+    "option",
+    "signature",
+    "verify"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_exp#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jwt.PyJWT._decode_payload#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS.decode_complete#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ]
+   },
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_optional_algorithms#0",
+   "name_tokens": [
+    "algorithm",
+    "decode",
+    "optional"
+   ],
+   "positive": {
+    "api_jws.PyJWS.decode_complete#1": [
+     "'It is required that you pass in a value for the \"algorithms\" argument when calling decode().' in str"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS.decode_complete#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#3"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_aud#3"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match 'Invalid audience \\\\(strict\\\\)'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match 'Invalid audience \\\\(strict\\\\)'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match 'Invalid audience \\\\(strict\\\\)'"
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match 'Invalid audience \\\\(strict\\\\)'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match 'Invalid audience \\\\(strict\\\\)'"
+    ]
+   },
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_strict_aud_forbids_list_audience#0",
+   "name_tokens": [
+    "aud",
+    "audience",
+    "decode",
+    "forbid",
+    "list",
+    "strict"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match 'Invalid audience \\\\(strict\\\\)'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_aud#3",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#4"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_aud#4"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match 'Invalid claim format in token \\\\(strict\\\\)'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match 'Invalid claim format in token \\\\(strict\\\\)'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match 'Invalid claim format in token \\\\(strict\\\\)'"
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match 'Invalid claim format in token \\\\(strict\\\\)'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match 'Invalid claim format in token \\\\(strict\\\\)'"
+    ]
+   },
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_strict_aud_forbids_list_claim#0",
+   "name_tokens": [
+    "aud",
+    "claim",
+    "decode",
+    "forbid",
+    "list",
+    "strict"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match 'Invalid claim format in token \\\\(strict\\\\)'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_aud#4",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#5"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_aud#5"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match \"Audience doesn't match \\\\(strict\\\\)\""
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match \"Audience doesn't match \\\\(strict\\\\)\""
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match \"Audience doesn't match \\\\(strict\\\\)\""
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match \"Audience doesn't match \\\\(strict\\\\)\""
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match \"Audience doesn't match \\\\(strict\\\\)\""
+    ]
+   },
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_strict_aud_does_not_match#0",
+   "name_tokens": [
+    "aud",
+    "decode",
+    "doe",
+    "match",
+    "not",
+    "strict"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match \"Audience doesn't match \\\\(strict\\\\)\""
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_aud#5",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_missing_sub_but_required_claim#0",
+   "name_tokens": [
+    "but",
+    "claim",
+    "decode",
+    "missing",
+    "required",
+    "sub"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_aud#2",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "missing",
+      "required"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_iss#1",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "missing",
+      "required"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_required_claims#1",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "missing",
+      "required"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidSubjectError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_invalid_int_sub_claim#0",
+   "name_tokens": [
+    "claim",
+    "decode",
+    "int",
+    "invalid",
+    "sub"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_sub#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "sub"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_sub#2",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "sub"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_pos": [
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "basis": "assert",
+   "excluded": {
+    "api_jwt.PyJWT._validate_sub#1": [
+     "'Invalid subject' in str"
+    ]
+   },
+   "expected": [
+    "InvalidSubjectError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_invalid_sub_claim#0",
+   "name_tokens": [
+    "claim",
+    "decode",
+    "invalid",
+    "sub"
+   ],
+   "positive": {
+    "api_jwt.PyJWT._validate_sub#2": [
+     "'Invalid subject' in str"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_sub#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_missing_jti_when_required_claim#0",
+   "name_tokens": [
+    "claim",
+    "decode",
+    "jti",
+    "missing",
+    "required"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "api_jwt.PyJWT._validate_aud#2",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "missing",
+      "required"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_iss#1",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "missing",
+      "required"
+     ]
+    },
+    {
+     "check": "api_jwt.PyJWT._validate_required_claims#1",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "missing",
+      "required"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "api_jwt.PyJWT._validate_jti#1"
+   ],
+   "C_class": [
+    "api_jwt.PyJWT._validate_jti#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidJTIError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_jti_claim_with_invalid_int_value#0",
+   "name_tokens": [
+    "claim",
+    "int",
+    "invalid",
+    "jti",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "api_jwt.PyJWT._validate_jti#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_required_claims#1"
+   ],
+   "C_class": [
+    "api_jws.PyJWS._decode_base64url_segment#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._load#5",
+    "api_jws.PyJWS._validate_crit#1",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._validate_crit#3",
+    "api_jws.PyJWS._validate_crit#4",
+    "api_jws.PyJWS._validate_kid#1",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4",
+    "api_jws.PyJWS._verify_signature#6",
+    "api_jws.PyJWS.decode_complete#1",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jws.PyJWS.decode_complete#3",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jws.PyJWS.encode#1",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#5",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_aud#7",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_exp#2",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_iat#2",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_iss#2",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_iss#4",
+    "api_jwt.PyJWT._validate_jti#1",
+    "api_jwt.PyJWT._validate_nbf#1",
+    "api_jwt.PyJWT._validate_nbf#2",
+    "api_jwt.PyJWT._validate_required_claims#1",
+    "api_jwt.PyJWT._validate_sub#1",
+    "api_jwt.PyJWT._validate_sub#2"
+   ],
+   "C_pos": [
+    "api_jws.PyJWS._validate_crit#3"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "api_jws.PyJWS._load#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._load#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._load#5": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._validate_crit#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._validate_crit#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._validate_kid#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._verify_signature#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._verify_signature#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._verify_signature#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS._verify_signature#6": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.decode_complete#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.decode_complete#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.decode_complete#3": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.decode_complete#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jws.PyJWS.encode#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._decode_payload#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#3": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#5": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#6": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_aud#7": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_exp#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_exp#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iat#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iat#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iss#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iss#3": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_iss#4": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_jti#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_nbf#2": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_sub#1": [
+     "match 'Unsupported critical extension'"
+    ],
+    "api_jwt.PyJWT._validate_sub#2": [
+     "match 'Unsupported critical extension'"
+    ]
+   },
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_rejects_token_with_unknown_crit_extension#0",
+   "name_tokens": [
+    "crit",
+    "decode",
+    "extension",
+    "token",
+    "unknown"
+   ],
+   "positive": {
+    "api_jws.PyJWS._validate_crit#3": [
+     "match 'Unsupported critical extension'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "api_jws.PyJWS._validate_crit#3",
+   "tier": "assertion"
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "assert": 14,
+  "assert+name": 4,
+  "assert-literal": 19,
+  "class": 8,
+  "name": 3,
+  "none: no name token matches": 22,
+  "none: tie": 9
+ },
+ "rule_version": "reach-target-rule/3",
+ "variant": {
+  "name": "reach-target-rule/3",
+  "reach_json_sha256": "ee85c570ca9e4384d64cf7a753a447bb583366a93643395a119fab62814cd9c5",
+  "reachability": {
+   "checks": 80,
+   "reachable_by_both": 52,
+   "reachable_by_execution": 52,
+   "reachable_by_execution_only": 0,
+   "reachable_by_name": 54,
+   "reachable_by_name_only": 2,
+   "reachable_by_neither": 26,
+   "reachable_under_rule_3": 54
+  },
+  "reachable": "reachable by name (checks.json) or the function started under an entry point in the traced whole-suite run (reach.json)",
+  "rule_code": "reach-target-rule/2",
+  "sentinels": [
+   {
+    "name": "T1: with an empty execution set the rule gives targets.json of the toolkit byte for byte",
+    "pass": true
+   },
+   {
+    "detail": [],
+    "name": "every function of reach.json is a function of checks.json",
+    "pass": true
+   }
+  ]
+ }
+}

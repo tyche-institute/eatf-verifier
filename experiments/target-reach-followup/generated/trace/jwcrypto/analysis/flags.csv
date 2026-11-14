@@ -1,0 +1,5 @@
+block,index,test,basis,tier,target,target_template,deciding_check,deciding_template,target_fired,own_test_without_target
+jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#0,0,test_jwe_decompression_max,name,name,jwe.JWE._decrypt#4,Compressed data exceeds maximum allowedsize ({*}),jwe.JWE.decrypt#3,No recipient matched the provided key{*},yes,fails
+jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#1,0,test_jwe_decompression_max,name,name,jwe.JWE._decrypt#4,Compressed data exceeds maximum allowedsize ({*}),jwe.JWE.decrypt#3,No recipient matched the provided key{*},no,fails
+jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#2,0,test_jwe_decompression_max,name,name,jwe.JWE._decrypt#4,Compressed data exceeds maximum allowedsize ({*}),jwe.JWE.decrypt#3,No recipient matched the provided key{*},yes,fails
+jwcrypto/tests.py::TestJWE.test_bare_ecdh_with_ek_fails#0,0,test_bare_ecdh_with_ek_fails,name,name,jwa._EcdhEs.unwrap#1,"Non empty ""ek"" parameter",jwe.JWE.decrypt#3,No recipient matched the provided key{*},yes,fails

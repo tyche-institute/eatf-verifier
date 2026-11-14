@@ -1,0 +1,1805 @@
+{
+ "counts": {
+  "functions_in_checks_json": 88,
+  "functions_started": 73,
+  "functions_started_at_least_once_under_no_entry_point": 58,
+  "functions_started_in_another_thread": 6,
+  "functions_started_only_under_no_entry_point": 34,
+  "functions_started_under_an_entry_point": 39,
+  "unmapped_codes": 4
+ },
+ "definition": "a function started under an entry point when, at 1 of its PY_START events in the traced whole-suite run, a frame of the same thread whose code is a function code of a subject file named like an entry point was on the frame chain from the new frame outward, the new frame included",
+ "entry_points": [
+  "decode",
+  "decode_complete"
+ ],
+ "files": [
+  "jwt/algorithms.py",
+  "jwt/api_jws.py",
+  "jwt/api_jwt.py"
+ ],
+ "functions": [
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "Algorithm.check_crypto_key_type",
+   "starts": 60,
+   "starts_other_threads": 0,
+   "starts_under_none": 50,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_check_crypto_key_type_should_fail_when_not_using_crypto",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_parse_pem_public_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_pem_private_key_bytes",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_unicode_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_verify_should_return_false_if_signature_invalid"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "Algorithm.check_key_length",
+   "starts": 24,
+   "starts_other_threads": 0,
+   "starts_under_none": 10,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_es256",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_alg_hs256_and_headers_alg_es256",
+    "tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_should_fail"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "Algorithm.compute_hash_digest",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_rsa_can_compute_digest",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_hmac_can_compute_digest"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "ECAlgorithm.__init__",
+   "starts": 1534,
+   "starts_other_threads": 10,
+   "starts_under_none": 1534,
+   "tests_under_none": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_fails_on_invalid_json",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_public_key_to_jwk_works_with_from_jwk"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "ECAlgorithm._validate_curve",
+   "starts": 47,
+   "starts_other_threads": 0,
+   "starts_under_none": 35,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_public_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_public_key[False]",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_public_key[True]",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_private_key[False]"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "ECAlgorithm.from_jwk",
+   "starts": 70,
+   "starts_other_threads": 0,
+   "starts_under_none": 70,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_fails_on_invalid_json",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_public_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_with_valid_curves[False]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "ECAlgorithm.prepare_key",
+   "starts": 50,
+   "starts_other_threads": 0,
+   "starts_under_none": 38,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_public_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_public_key[False]",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_public_key[True]",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_private_key[False]"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "ECAlgorithm.sign",
+   "starts": 11,
+   "starts_other_threads": 0,
+   "starts_under_none": 11,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_es256",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_alg_hs256_and_headers_alg_es256",
+    "tests/test_api_jws.py::TestJWS::test_encode_decode_ecdsa_related_algorithms[ES256-jwk_ec_key_P-256.json-jwk_ec_pub_P-256.json]"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "ECAlgorithm.to_jwk~3",
+   "starts": 24,
+   "starts_other_threads": 0,
+   "starts_under_none": 24,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_public_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_public_key[False]",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_public_key[True]",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_private_key[False]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "ECAlgorithm.verify",
+   "starts": 19,
+   "starts_other_threads": 0,
+   "starts_under_none": 8,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_verify_should_return_false_if_signature_invalid",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_verify_should_return_false_if_signature_wrong_length",
+    "tests/test_algorithms.py::TestAlgorithmsRFC7520::test_ec_verify_should_return_true_for_test_vector"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "HMACAlgorithm.__init__",
+   "starts": 963,
+   "starts_other_threads": 6,
+   "starts_under_none": 963,
+   "tests_under_none": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_reject_nonstring_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_accept_unicode_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey2_rsa.pub.pem0]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey2_rsa.pub.pem1]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "decode_complete": "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key"
+   },
+   "function": "HMACAlgorithm._is_der_key",
+   "starts": 287,
+   "starts_other_threads": 0,
+   "starts_under_none": 173,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_accept_unicode_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_accept_incomplete_pem_marker",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_prepare_key_rejects_jwk_json[jwk_rsa_pub.json]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_prepare_key_rejects_jwk_json[jwk_ec_pub_P-256.json]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_prepare_key_rejects_jwk_json[jwk_okp_pub_Ed25519.json]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "decode_complete": "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key"
+   },
+   "function": "HMACAlgorithm.check_key_length",
+   "starts": 249,
+   "starts_other_threads": 0,
+   "starts_under_none": 135,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_hmac_short_key_warns_by_default_hs256",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_hmac_short_key_warns_by_default_hs384",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_hmac_short_key_warns_by_default_hs512",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_hmac_exact_minimum_no_warning",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_hmac_above_minimum_no_warning"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "HMACAlgorithm.from_jwk",
+   "starts": 14,
+   "starts_other_threads": 0,
+   "starts_under_none": 14,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_jwk_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_from_jwk_should_raise_exception_if_not_hmac_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_from_jwk_should_raise_exception_if_empty_json",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_from_jwk_should_reject_empty_key",
+    "tests/test_api_jwk.py::TestPyJWK::test_should_load_key_hmac_from_dict"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "HMACAlgorithm.prepare_key",
+   "starts": 305,
+   "starts_other_threads": 0,
+   "starts_under_none": 187,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_reject_nonstring_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_accept_unicode_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey2_rsa.pub.pem0]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey2_rsa.pub.pem1]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey_pkcs1.pub.pem]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "decode_complete": "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key"
+   },
+   "function": "HMACAlgorithm.sign",
+   "starts": 240,
+   "starts_other_threads": 0,
+   "starts_under_none": 129,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_jwk_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithmsRFC7520::test_hmac_verify_should_return_true_for_test_vector",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_warns_short_hmac_key"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "HMACAlgorithm.to_jwk~3",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_to_jwk_returns_correct_values[False]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_to_jwk_returns_correct_values[True]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "decode_complete": "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key"
+   },
+   "function": "HMACAlgorithm.verify",
+   "starts": 113,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_jwk_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithmsRFC7520::test_hmac_verify_should_return_true_for_test_vector"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "NoneAlgorithm.from_jwk",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_none_algorithm_should_throw_exception_on_from_jwk"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none",
+    "decode_complete": "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none"
+   },
+   "function": "NoneAlgorithm.prepare_key",
+   "starts": 6,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_none_algorithm_should_throw_exception_if_key_is_not_none",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none",
+    "tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_should_fail",
+    "tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_and_verify_false_should_pass"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "NoneAlgorithm.sign",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none",
+    "tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_should_fail",
+    "tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_and_verify_false_should_pass"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "NoneAlgorithm.to_jwk",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_none_algorithm_should_throw_exception_on_to_jwk"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none",
+    "decode_complete": "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none"
+   },
+   "function": "NoneAlgorithm.verify",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "OKPAlgorithm.__init__",
+   "starts": 322,
+   "starts_other_threads": 2,
+   "starts_under_none": 322,
+   "tests_under_none": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_should_reject_non_string_key",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519-testkey_ed25519.pub-hello_world_sig]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519.pem-testkey_ed25519.pub.pem-hello_world_sig_pem]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_verify_should_return_false_if_signature_invalid[testkey_ed25519.pub-hello_world_sig]"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "OKPAlgorithm.from_jwk",
+   "starts": 53,
+   "starts_other_threads": 0,
+   "starts_under_none": 53,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_inconsistent_private_key[False-Ed25519]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_inconsistent_private_key[False-Ed448]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_inconsistent_private_key[True-Ed25519]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_inconsistent_private_key[True-Ed448]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_private_key_with_invalid_public_length[0-Ed25519]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "OKPAlgorithm.prepare_key",
+   "starts": 17,
+   "starts_other_threads": 0,
+   "starts_under_none": 16,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_should_reject_non_string_key",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519-testkey_ed25519.pub-hello_world_sig]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519.pem-testkey_ed25519.pub.pem-hello_world_sig_pem]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_verify_should_return_false_if_signature_invalid[testkey_ed25519.pub-hello_world_sig]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_verify_should_return_false_if_signature_invalid[testkey_ed25519.pub.pem-hello_world_sig_pem]"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "OKPAlgorithm.sign",
+   "starts": 16,
+   "starts_other_threads": 0,
+   "starts_under_none": 16,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519-testkey_ed25519.pub-hello_world_sig]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519.pem-testkey_ed25519.pub.pem-hello_world_sig_pem]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_private_key_should_parse_and_verify",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_private_key_should_parse_and_verify_with_private_key_as_is",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_public_key_should_parse_and_verify"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "OKPAlgorithm.to_jwk~3",
+   "starts": 9,
+   "starts_other_threads": 0,
+   "starts_under_none": 9,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_to_jwk_works_with_from_jwk[False]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_to_jwk_works_with_from_jwk[True]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_to_jwk_raises_exception_on_invalid_key",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed448_to_jwk_works_with_from_jwk[False]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed448_to_jwk_works_with_from_jwk[True]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "OKPAlgorithm.verify",
+   "starts": 21,
+   "starts_other_threads": 0,
+   "starts_under_none": 20,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519-testkey_ed25519.pub-hello_world_sig]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519.pem-testkey_ed25519.pub.pem-hello_world_sig_pem]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_verify_should_return_false_if_signature_invalid[testkey_ed25519.pub-hello_world_sig]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_verify_should_return_false_if_signature_invalid[testkey_ed25519.pub.pem-hello_world_sig_pem]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_verify_should_return_true_if_signature_valid[testkey_ed25519.pub-hello_world_sig]"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "RSAAlgorithm.__init__",
+   "starts": 1831,
+   "starts_other_threads": 12,
+   "starts_under_none": 1831,
+   "tests_under_none": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_parse_pem_public_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_pem_private_key_bytes",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_unicode_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_reject_non_string_key"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jws.py::TestJWS::test_decodes_valid_rs384_jws",
+    "decode_complete": "tests/test_api_jws.py::TestJWS::test_decodes_valid_rs384_jws"
+   },
+   "function": "RSAAlgorithm.check_key_length",
+   "starts": 20,
+   "starts_other_threads": 0,
+   "starts_under_none": 11,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_rsa_small_key_returns_warning_message",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_rsa_small_public_key_returns_warning_message",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_rsa_2048_key_no_warning",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_rsa_pss_inherits_validation",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_rsa_pem_weak_key_validated"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "RSAAlgorithm.from_jwk",
+   "starts": 98,
+   "starts_other_threads": 2,
+   "starts_under_none": 98,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_prepare_key_rejects_der_public_key[SubjectPublicKeyInfo]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_prepare_key_rejects_der_public_key[PKCS1]",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_public_key_to_jwk_works_with_from_jwk"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jws.py::TestJWS::test_decodes_valid_rs384_jws",
+    "decode_complete": "tests/test_api_jws.py::TestJWS::test_decodes_valid_rs384_jws"
+   },
+   "function": "RSAAlgorithm.prepare_key",
+   "starts": 34,
+   "starts_other_threads": 0,
+   "starts_under_none": 25,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_parse_pem_public_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_pem_private_key_bytes",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_unicode_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_reject_non_string_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_verify_should_return_false_if_signature_invalid"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "RSAAlgorithm.sign",
+   "starts": 7,
+   "starts_other_threads": 0,
+   "starts_under_none": 7,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_api_jws.py::TestJWS::test_encode_decode_rsa_related_algorithms[RS256]",
+    "tests/test_api_jws.py::TestJWS::test_encode_decode_rsa_related_algorithms[RS384]",
+    "tests/test_api_jws.py::TestJWS::test_encode_decode_rsa_related_algorithms[RS512]"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "RSAAlgorithm.to_jwk~3",
+   "starts": 14,
+   "starts_other_threads": 0,
+   "starts_under_none": 14,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_public_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_to_jwk_returns_correct_values_for_public_key[False]",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_to_jwk_returns_correct_values_for_public_key[True]",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_to_jwk_returns_correct_values_for_private_key[False]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jws.py::TestJWS::test_decodes_valid_rs384_jws",
+    "decode_complete": "tests/test_api_jws.py::TestJWS::test_decodes_valid_rs384_jws"
+   },
+   "function": "RSAAlgorithm.verify",
+   "starts": 12,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_verify_should_return_false_if_signature_invalid",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithmsRFC7520::test_rsa_verify_should_return_true_for_test_vector"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "RSAPSSAlgorithm.sign",
+   "starts": 1,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_pss_sign_then_verify_should_return_true"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "RSAPSSAlgorithm.verify",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_pss_sign_then_verify_should_return_true",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_pss_verify_should_return_false_if_signature_invalid",
+    "tests/test_algorithms.py::TestAlgorithmsRFC7520::test_rsapss_verify_should_return_true_for_test_vector"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_test_per_entry_point": {},
+   "function": "get_default_algorithms",
+   "starts": 299,
+   "starts_other_threads": 2,
+   "starts_under_none": 299,
+   "tests_under_none": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestECCurveValidation::test_default_algorithms_have_correct_expected_curve",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWS.__init__",
+   "starts": 203,
+   "starts_other_threads": 0,
+   "starts_under_none": 203,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWS._decode_base64url_segment",
+   "starts": 553,
+   "starts_other_threads": 0,
+   "starts_under_none": 21,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_encode_with_jwk_uses_key_algorithm",
+    "tests/test_api_jws.py::TestJWS::test_decode_accepts_canonical_base64url_padding[Zg-f]",
+    "tests/test_api_jws.py::TestJWS::test_decode_accepts_canonical_base64url_padding[Zg==-f]",
+    "tests/test_api_jws.py::TestJWS::test_decode_accepts_canonical_base64url_padding[Zm8=-fo]",
+    "tests/test_api_jws.py::TestJWS::test_decode_rejects_invalid_base64url_padding[Zg===]"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWS._get_default_options",
+   "starts": 203,
+   "starts_other_threads": 0,
+   "starts_under_none": 203,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWS._load",
+   "starts": 190,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_encode_with_jwk_uses_key_algorithm",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_returns_header_values",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_fails_on_bad_header_types",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_rejects_unknown_crit"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jws.py::TestJWS::test_encode_decode_with_detached_content",
+    "decode_complete": "tests/test_api_jws.py::TestJWS::test_encode_decode_with_detached_content"
+   },
+   "function": "PyJWS._validate_crit",
+   "starts": 12,
+   "starts_other_threads": 0,
+   "starts_under_none": 1,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_rejects_unknown_crit"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWS._validate_headers",
+   "starts": 205,
+   "starts_other_threads": 0,
+   "starts_under_none": 31,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_es256",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_alg_hs256_and_headers_alg_es256",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_jwk_uses_key_algorithm",
+    "tests/test_api_jws.py::TestJWS::test_sorting_of_headers[False]"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_jwks_client.py::TestPyJWKClient::test_get_signing_key_from_jwt",
+    "decode_complete": "tests/test_jwks_client.py::TestPyJWKClient::test_get_signing_key_from_jwt"
+   },
+   "function": "PyJWS._validate_kid",
+   "starts": 9,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_returns_header_values",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_fails_on_bad_header_types",
+    "tests/test_api_jws.py::TestJWS::test_encode_fails_on_invalid_kid_types"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWS._verify_signature",
+   "starts": 147,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jws.py::TestJWS::test_non_object_options_dont_persist"
+   },
+   "function": "PyJWS.decode",
+   "starts": 69,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWS.decode_complete",
+   "starts": 190,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWS.encode",
+   "starts": 150,
+   "starts_other_threads": 0,
+   "starts_under_none": 150,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_warns_short_hmac_key"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWS.get_algorithm_by_name",
+   "starts": 285,
+   "starts_other_threads": 0,
+   "starts_under_none": 147,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_warns_short_hmac_key"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWS.get_algorithms",
+   "starts": 8,
+   "starts_other_threads": 0,
+   "starts_under_none": 8,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_unregister_algo_removes_algorithm",
+    "tests/test_api_jws.py::TestJWS::test_algo_parameter_removes_alg_from_algorithms_list",
+    "tests/test_api_jws.py::TestJWS::test_rsa_related_algorithms",
+    "tests/test_api_jws.py::TestJWS::test_ecdsa_related_algorithms"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWS.get_unverified_header",
+   "starts": 4,
+   "starts_other_threads": 0,
+   "starts_under_none": 4,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_encode_with_jwk_uses_key_algorithm",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_returns_header_values",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_fails_on_bad_header_types",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_rejects_unknown_crit"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWS.register_algorithm",
+   "starts": 3,
+   "starts_other_threads": 0,
+   "starts_under_none": 3,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_register_algo_does_not_allow_duplicate_registration",
+    "tests/test_api_jws.py::TestJWS::test_register_algo_rejects_non_algorithm_obj"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jws.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWS.unregister_algorithm",
+   "starts": 2,
+   "starts_other_threads": 0,
+   "starts_under_none": 2,
+   "tests_under_none": [
+    "tests/test_api_jws.py::TestJWS::test_unregister_algo_removes_algorithm",
+    "tests/test_api_jws.py::TestJWS::test_unregister_algo_throws_error_if_not_registered"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWT.__init__",
+   "starts": 103,
+   "starts_other_threads": 0,
+   "starts_under_none": 103,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+    "tests/test_api_jwt.py::TestJWT::test_decode_does_not_mutate_options_when_signature_verification_is_disabled",
+    "tests/test_api_jwt.py::TestJWT::test_reused_options_do_not_disable_claim_verification"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT._decode_payload",
+   "starts": 108,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWT._encode_payload",
+   "starts": 84,
+   "starts_other_threads": 0,
+   "starts_under_none": 84,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWT._get_default_options",
+   "starts": 103,
+   "starts_other_threads": 0,
+   "starts_under_none": 103,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+    "tests/test_api_jwt.py::TestJWT::test_decode_does_not_mutate_options_when_signature_verification_is_disabled",
+    "tests/test_api_jwt.py::TestJWT::test_reused_options_do_not_disable_claim_verification"
+   ]
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWT._get_sig_options",
+   "starts": 103,
+   "starts_other_threads": 0,
+   "starts_under_none": 103,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+    "tests/test_api_jwt.py::TestJWT::test_decode_does_not_mutate_options_when_signature_verification_is_disabled",
+    "tests/test_api_jwt.py::TestJWT::test_reused_options_do_not_disable_claim_verification"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT._merge_options",
+   "starts": 122,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_api_jwt.py::TestJWT::test_constructor_does_not_mutate_options_input",
+    "tests/test_api_jwt.py::TestJWT::test_jwt_with_options"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT._validate_aud",
+   "starts": 61,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT._validate_claims",
+   "starts": 105,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jwt.py::TestJWT::test_reused_options_do_not_disable_claim_verification",
+    "decode_complete": "tests/test_api_jwt.py::TestJWT::test_reused_options_do_not_disable_claim_verification"
+   },
+   "function": "PyJWT._validate_exp",
+   "starts": 28,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jwt.py::TestJWT::test_decode_raises_exception_if_iat_is_not_int",
+    "decode_complete": "tests/test_api_jwt.py::TestJWT::test_decode_raises_exception_if_iat_is_not_int"
+   },
+   "function": "PyJWT._validate_iat",
+   "starts": 9,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT._validate_iss",
+   "starts": 71,
+   "starts_other_threads": 0,
+   "starts_under_none": 5,
+   "tests_under_none": [
+    "tests/test_api_jwt.py::TestJWT::test_validate_iss_with_container_of_str",
+    "tests/test_api_jwt.py::TestJWT::test_validate_iss_with_non_str",
+    "tests/test_api_jwt.py::TestJWT::test_validate_iss_with_non_str_issuer"
+   ]
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT._validate_jti",
+   "starts": 48,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_api_jwt.py::TestJWT::test_decode_raises_exception_if_nbf_is_not_int",
+    "decode_complete": "tests/test_api_jwt.py::TestJWT::test_decode_raises_exception_if_nbf_is_not_int"
+   },
+   "function": "PyJWT._validate_nbf",
+   "starts": 9,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT._validate_required_claims",
+   "starts": 104,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT._validate_sub",
+   "starts": 50,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT.decode",
+   "starts": 109,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {
+    "decode": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "decode_complete": "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24"
+   },
+   "function": "PyJWT.decode_complete",
+   "starts": 117,
+   "starts_other_threads": 0,
+   "starts_under_none": 0,
+   "tests_under_none": []
+  },
+  {
+   "entry_points": [],
+   "file": "jwt/api_jwt.py",
+   "first_test_per_entry_point": {},
+   "function": "PyJWT.encode",
+   "starts": 90,
+   "starts_other_threads": 0,
+   "starts_under_none": 90,
+   "tests_under_none": [
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length"
+   ]
+  }
+ ],
+ "functions_started_only_under_no_entry_point": [
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.compute_hash_digest",
+   "starts": 2,
+   "tests": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_rsa_can_compute_digest",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_hmac_can_compute_digest"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.__init__",
+   "starts": 1534,
+   "tests": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_fails_on_invalid_json",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_public_key_to_jwk_works_with_from_jwk"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "starts": 70,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_fails_on_invalid_json",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_public_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_with_valid_curves[False]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.sign",
+   "starts": 11,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_es256",
+    "tests/test_api_jws.py::TestJWS::test_encode_with_alg_hs256_and_headers_alg_es256",
+    "tests/test_api_jws.py::TestJWS::test_encode_decode_ecdsa_related_algorithms[ES256-jwk_ec_key_P-256.json-jwk_ec_pub_P-256.json]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.to_jwk~3",
+   "starts": 24,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_public_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_public_key[False]",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_public_key[True]",
+    "tests/test_algorithms.py::TestAlgorithms::test_ec_to_jwk_returns_correct_values_for_private_key[False]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.__init__",
+   "starts": 963,
+   "tests": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_reject_nonstring_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_accept_unicode_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey2_rsa.pub.pem0]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_should_throw_exception[testkey2_rsa.pub.pem1]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.from_jwk",
+   "starts": 14,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_jwk_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_from_jwk_should_raise_exception_if_not_hmac_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_from_jwk_should_raise_exception_if_empty_json",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_from_jwk_should_reject_empty_key",
+    "tests/test_api_jwk.py::TestPyJWK::test_should_load_key_hmac_from_dict"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.to_jwk~3",
+   "starts": 2,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_to_jwk_returns_correct_values[False]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_to_jwk_returns_correct_values[True]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.from_jwk",
+   "starts": 1,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_none_algorithm_should_throw_exception_on_from_jwk"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.sign",
+   "starts": 3,
+   "tests": [
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none",
+    "tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_should_fail",
+    "tests/test_api_jws.py::TestJWS::test_decode_with_algo_none_and_verify_false_should_pass"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.to_jwk",
+   "starts": 1,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_none_algorithm_should_throw_exception_on_to_jwk"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.__init__",
+   "starts": 322,
+   "tests": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_should_reject_non_string_key",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519-testkey_ed25519.pub-hello_world_sig]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519.pem-testkey_ed25519.pub.pem-hello_world_sig_pem]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_verify_should_return_false_if_signature_invalid[testkey_ed25519.pub-hello_world_sig]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.from_jwk",
+   "starts": 53,
+   "tests": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_inconsistent_private_key[False-Ed25519]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_inconsistent_private_key[False-Ed448]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_inconsistent_private_key[True-Ed25519]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_inconsistent_private_key[True-Ed448]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_jwk_should_reject_private_key_with_invalid_public_length[0-Ed25519]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.sign",
+   "starts": 16,
+   "tests": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519-testkey_ed25519.pub-hello_world_sig]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_sign_should_generate_correct_signature_value[testkey_ed25519.pem-testkey_ed25519.pub.pem-hello_world_sig_pem]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_private_key_should_parse_and_verify",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_private_key_should_parse_and_verify_with_private_key_as_is",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_jwk_public_key_should_parse_and_verify"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.to_jwk~3",
+   "starts": 9,
+   "tests": [
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_to_jwk_works_with_from_jwk[False]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed25519_to_jwk_works_with_from_jwk[True]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_to_jwk_raises_exception_on_invalid_key",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed448_to_jwk_works_with_from_jwk[False]",
+    "tests/test_algorithms.py::TestOKPAlgorithms::test_okp_ed448_to_jwk_works_with_from_jwk[True]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.__init__",
+   "starts": 1831,
+   "tests": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_parse_pem_public_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_pem_private_key_bytes",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_accept_unicode_key",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_should_reject_non_string_key"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.from_jwk",
+   "starts": 98,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_prepare_key_rejects_der_public_key[SubjectPublicKeyInfo]",
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_prepare_key_rejects_der_public_key[PKCS1]",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_public_key_to_jwk_works_with_from_jwk"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.sign",
+   "starts": 7,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_jwk_public_and_private_keys_should_parse_and_verify",
+    "tests/test_api_jws.py::TestJWS::test_encode_decode_rsa_related_algorithms[RS256]",
+    "tests/test_api_jws.py::TestJWS::test_encode_decode_rsa_related_algorithms[RS384]",
+    "tests/test_api_jws.py::TestJWS::test_encode_decode_rsa_related_algorithms[RS512]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.to_jwk~3",
+   "starts": 14,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_private_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_public_key_to_jwk_works_with_from_jwk",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_to_jwk_returns_correct_values_for_public_key[False]",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_to_jwk_returns_correct_values_for_public_key[True]",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_to_jwk_returns_correct_values_for_private_key[False]"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAPSSAlgorithm.sign",
+   "starts": 1,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_pss_sign_then_verify_should_return_true"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAPSSAlgorithm.verify",
+   "starts": 3,
+   "tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_pss_sign_then_verify_should_return_true",
+    "tests/test_algorithms.py::TestAlgorithms::test_rsa_pss_verify_should_return_false_if_signature_invalid",
+    "tests/test_algorithms.py::TestAlgorithmsRFC7520::test_rsapss_verify_should_return_true_for_test_vector"
+   ]
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "get_default_algorithms",
+   "starts": 299,
+   "tests": [
+    "tests/test_advisory.py::TestAdvisory::test_ghsa_ffqj_6fqr_9h24",
+    "tests/test_algorithms.py::TestECCurveValidation::test_default_algorithms_have_correct_expected_curve",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key"
+   ]
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.__init__",
+   "starts": 203,
+   "tests": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key"
+   ]
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._get_default_options",
+   "starts": 203,
+   "tests": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key"
+   ]
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.encode",
+   "starts": 150,
+   "tests": [
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjws_encode_no_warning_adequate_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_warns_short_hmac_key"
+   ]
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.get_algorithms",
+   "starts": 8,
+   "tests": [
+    "tests/test_api_jws.py::TestJWS::test_unregister_algo_removes_algorithm",
+    "tests/test_api_jws.py::TestJWS::test_algo_parameter_removes_alg_from_algorithms_list",
+    "tests/test_api_jws.py::TestJWS::test_rsa_related_algorithms",
+    "tests/test_api_jws.py::TestJWS::test_ecdsa_related_algorithms"
+   ]
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.get_unverified_header",
+   "starts": 4,
+   "tests": [
+    "tests/test_api_jws.py::TestJWS::test_encode_with_jwk_uses_key_algorithm",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_returns_header_values",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_fails_on_bad_header_types",
+    "tests/test_api_jws.py::TestJWS::test_get_unverified_header_rejects_unknown_crit"
+   ]
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.register_algorithm",
+   "starts": 3,
+   "tests": [
+    "tests/test_api_jws.py::TestJWS::test_register_algo_does_not_allow_duplicate_registration",
+    "tests/test_api_jws.py::TestJWS::test_register_algo_rejects_non_algorithm_obj"
+   ]
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.unregister_algorithm",
+   "starts": 2,
+   "tests": [
+    "tests/test_api_jws.py::TestJWS::test_unregister_algo_removes_algorithm",
+    "tests/test_api_jws.py::TestJWS::test_unregister_algo_throws_error_if_not_registered"
+   ]
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT.__init__",
+   "starts": 103,
+   "tests": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+    "tests/test_api_jwt.py::TestJWT::test_decode_does_not_mutate_options_when_signature_verification_is_disabled",
+    "tests/test_api_jwt.py::TestJWT::test_reused_options_do_not_disable_claim_verification"
+   ]
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._encode_payload",
+   "starts": 84,
+   "tests": [
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length"
+   ]
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._get_default_options",
+   "starts": 103,
+   "tests": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+    "tests/test_api_jwt.py::TestJWT::test_decode_does_not_mutate_options_when_signature_verification_is_disabled",
+    "tests/test_api_jwt.py::TestJWT::test_reused_options_do_not_disable_claim_verification"
+   ]
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._get_sig_options",
+   "starts": 103,
+   "tests": [
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+    "tests/test_api_jwt.py::TestJWT::test_decode_does_not_mutate_options_when_signature_verification_is_disabled",
+    "tests/test_api_jwt.py::TestJWT::test_reused_options_do_not_disable_claim_verification"
+   ]
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT.encode",
+   "starts": 90,
+   "tests": [
+    "tests/test_algorithms.py::TestECCurveValidation::test_jwt_encode_decode_rejects_wrong_curve",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_warns_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_encode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_enforces_short_hmac_key",
+    "tests/test_algorithms.py::TestKeyLengthValidation::test_pyjwt_decode_honors_per_call_enforce_minimum_key_length"
+   ]
+  }
+ ],
+ "interpreter": "CPython 3.12.3",
+ "outcomes": {
+  "deposited_whole_baseline": {
+   "passing in both": 471,
+   "run 1": {
+    "passed": 471,
+    "skipped": 4
+   },
+   "run 2": {
+    "passed": 471,
+    "skipped": 4
+   },
+   "unstable": 0
+  },
+  "refused_connection_attempts_traced": 0,
+  "traced": {
+   "passed": 471,
+   "skipped": 4
+  }
+ },
+ "packages": [
+  "PyYAML==6.0.3",
+  "Pygments==2.21.0",
+  "cffi==2.1.1",
+  "click==8.5.1",
+  "coverage==7.17.2",
+  "cryptography==49.0.0",
+  "iniconfig==2.3.1",
+  "libcst==1.9.0",
+  "linkify-it-py==2.2.0",
+  "markdown-it-py==4.3.0",
+  "mdit-py-plugins==0.7.0",
+  "mdurl==0.1.2",
+  "mutmut==3.8.1",
+  "packaging==26.3",
+  "pip==24.0",
+  "platformdirs==4.14.5",
+  "pluggy==1.7.0",
+  "pycparser==3.12",
+  "pytest==9.1.1",
+  "rich==15.0.0",
+  "setproctitle==1.3.8",
+  "textual==8.2.8",
+  "typing_extensions==4.16.0"
+ ],
+ "plugin_sha256": "ed4993c30d90e1d45e1bd2d022d45f4e7fb19e89cb7c63ff1e4769f49ab594d0",
+ "seconds": {
+  "with_plugin": [
+   6.034,
+   6.092,
+   6.016
+  ],
+  "without_plugin": [
+   5.743,
+   5.765,
+   5.74
+  ]
+ },
+ "sentinels": [
+  {
+   "detail": {
+    "extra": [],
+    "missing": [],
+    "no_result": [],
+    "passing_deposited": 471,
+    "passing_traced": 471,
+    "trace_files_written": true
+   },
+   "name": "T3: the tests that pass in the traced run are the tests that pass in both deposited whole-baseline runs, and every traced pytest call left its result file",
+   "pass": true
+  },
+  {
+   "name": "T-map: every started code of a subject file is a function of checks.json or is listed under unmapped with its reason",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "T3-repeat: every traced run gives the same entry-point sets and the same passing tests",
+   "pass": true
+  },
+  {
+   "name": "T3-repeat-reach: every traced run gives the same set of codes that started under at least 1 entry point (the input of rule 3)",
+   "pass": true
+  }
+ ],
+ "subject": "pyjwt",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "tool_id": 5,
+ "unmapped": [
+  {
+   "entry_points": [],
+   "file": "jwt/algorithms.py",
+   "first_line": 370,
+   "name": "<lambda>",
+   "qualname": "HMACAlgorithm.prepare_key.<locals>.<lambda>",
+   "reason": "a lambda; it holds no raise statement",
+   "starts": 11
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jws.py",
+   "first_line": 341,
+   "name": "<genexpr>",
+   "qualname": "PyJWS._decode_base64url_segment.<locals>.<genexpr>",
+   "reason": "a generator expression; it holds no raise statement",
+   "starts": 547
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_line": 556,
+   "name": "<genexpr>",
+   "qualname": "PyJWT._validate_aud.<locals>.<genexpr>",
+   "reason": "a generator expression; it holds no raise statement",
+   "starts": 11
+  },
+  {
+   "entry_points": [
+    "decode",
+    "decode_complete"
+   ],
+   "file": "jwt/api_jwt.py",
+   "first_line": 562,
+   "name": "<genexpr>",
+   "qualname": "PyJWT._validate_aud.<locals>.<genexpr>",
+   "reason": "a generator expression; it holds no raise statement",
+   "starts": 10
+  }
+ ],
+ "version": "2.15.1"
+}

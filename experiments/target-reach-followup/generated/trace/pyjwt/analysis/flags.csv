@@ -1,0 +1,2 @@
+block,index,test,basis,tier,target,target_template,deciding_check,deciding_template,target_fired,own_test_without_target
+tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_list#0,0,test_raise_exception_invalid_audience_list,name,name,api_jwt.PyJWT._validate_aud#6,Invalid claim format in token,api_jwt.PyJWT._validate_aud#7,Audience doesn't match,no,passes

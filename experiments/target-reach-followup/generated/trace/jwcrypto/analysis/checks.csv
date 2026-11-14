@@ -1,0 +1,147 @@
+check,file,role,function,class,template,in_handler,reachable,decides,cases_decided,blocks_targeting,cases_fired
+common.JWSEHeaderRegistry.__init__#1,jwcrypto/common.py,subject,JWSEHeaderRegistry.__init__,InvalidJWSERegOperation,Unknown input type,no,no,no,0,0,0
+common.JWSEHeaderRegistry.check_header#1,jwcrypto/common.py,subject,JWSEHeaderRegistry.check_header,InvalidJWSERegOperation,"No header ""{*}"" found in registry",no,yes,no,0,0,0
+common.JWSEHeaderRegistry.__delitem__#1,jwcrypto/common.py,subject,JWSEHeaderRegistry.__delitem__,InvalidJWSERegOperation,Unable to delete protected or supported field,no,no,no,0,0,0
+common.JWSEHeaderRegistry.__setitem__#1,jwcrypto/common.py,subject,JWSEHeaderRegistry.__setitem__,InvalidJWSERegOperation,Supported header already exists in registry,no,yes,no,0,0,0
+common.JWSEHeaderRegistry.__setitem__#2,jwcrypto/common.py,subject,JWSEHeaderRegistry.__setitem__,InvalidJWSERegOperation,Header specified should bea protected header,no,yes,no,0,0,0
+jwa._RawHMAC._hmac_setup#1,jwcrypto/jwa.py,subject,_RawHMAC._hmac_setup,InvalidJWEKeyLength,{*},no,yes,no,0,0,0
+jwa._RSA._check_key#1,jwcrypto/jwa.py,subject,_RSA._check_key,InvalidJWEKeyType,RSA,no,yes,no,0,0,3
+jwa._RSA.unwrap#1,jwcrypto/jwa.py,subject,_RSA.unwrap,InvalidJWEKeyLength,{*},no,yes,no,0,0,1
+jwa._AesKw._get_key#1,jwcrypto/jwa.py,subject,_AesKw._get_key,InvalidJWEKeyType,oct,no,yes,no,0,0,0
+jwa._AesKw._get_key#2,jwcrypto/jwa.py,subject,_AesKw._get_key,InvalidJWEKeyLength,{*},no,yes,no,0,0,2
+jwa._AesKw.unwrap#1,jwcrypto/jwa.py,subject,_AesKw.unwrap,InvalidJWEKeyLength,{*},no,yes,no,0,0,0
+jwa._AesGcmKw._get_key#1,jwcrypto/jwa.py,subject,_AesGcmKw._get_key,InvalidJWEKeyType,oct,no,yes,no,0,0,0
+jwa._AesGcmKw._get_key#2,jwcrypto/jwa.py,subject,_AesGcmKw._get_key,InvalidJWEKeyLength,{*},no,yes,no,0,0,0
+jwa._AesGcmKw.unwrap#1,jwcrypto/jwa.py,subject,_AesGcmKw.unwrap,InvalidJWEKeyLength,{*},no,yes,no,0,0,0
+jwa._Pbes2HsAesKw._get_key#1,jwcrypto/jwa.py,subject,_Pbes2HsAesKw._get_key,InvalidJWEKeyLength,{*},no,yes,no,0,0,0
+jwa._Direct._check_key#1,jwcrypto/jwa.py,subject,_Direct._check_key,InvalidJWEKeyType,oct,no,yes,no,0,0,0
+jwa._Direct.wrap#1,jwcrypto/jwa.py,subject,_Direct.wrap,InvalidCEKeyLength,{*},no,no,no,0,0,0
+jwa._Direct.unwrap#1,jwcrypto/jwa.py,subject,_Direct.unwrap,InvalidJWEKeyLength,{*},no,yes,no,0,0,0
+jwa._EcdhEs._check_key#1,jwcrypto/jwa.py,subject,_EcdhEs._check_key,InvalidJWEKeyType,EC or OKP,no,yes,no,0,0,0
+jwa._EcdhEs._check_key#2,jwcrypto/jwa.py,subject,_EcdhEs._check_key,InvalidJWEKeyType,X25519 or X448,no,yes,no,0,0,0
+jwa._EcdhEs.wrap#1,jwcrypto/jwa.py,subject,_EcdhEs.wrap,InvalidJWEOperation,ECDH-ES cannot use an existing CEK,no,no,no,0,0,0
+jwa._EcdhEs.unwrap#1,jwcrypto/jwa.py,subject,_EcdhEs.unwrap,InvalidJWEData,"Non empty ""ek"" parameter",no,yes,no,0,1,1
+jwa._Ed25519.sign#1,jwcrypto/jwa.py,subject,_Ed25519.sign,InvalidJWEKeyType,Ed25519,no,no,no,0,0,0
+jwa._Ed25519.verify#1,jwcrypto/jwa.py,subject,_Ed25519.verify,InvalidJWEKeyType,Ed25519,no,yes,no,0,0,0
+jwa._Ed448.sign#1,jwcrypto/jwa.py,subject,_Ed448.sign,InvalidJWEKeyType,Ed448,no,no,no,0,0,0
+jwa._Ed448.verify#1,jwcrypto/jwa.py,subject,_Ed448.verify,InvalidJWEKeyType,Ed448,no,yes,no,0,0,0
+jwa._RawMLDSA._check_key#1,jwcrypto/jwa.py,subject,_RawMLDSA._check_key,InvalidJWEKeyType,AKP,no,yes,no,0,0,0
+jwa._RawMLDSA._check_key#2,jwcrypto/jwa.py,subject,_RawMLDSA._check_key,InvalidJWEKeyType,{*},no,yes,no,0,0,0
+jwa.JWA.instantiate_alg#1,jwcrypto/jwa.py,subject,JWA.instantiate_alg,InvalidJWAAlgorithm,{*} is prohibited and must not be used,no,yes,no,0,0,0
+jwa.JWA.signing_alg#1,jwcrypto/jwa.py,subject,JWA.signing_alg,InvalidJWAAlgorithm,{*} is not a valid Signing algorithm name,yes,no,no,0,0,0
+jwa.JWA.keymgmt_alg#1,jwcrypto/jwa.py,subject,JWA.keymgmt_alg,InvalidJWAAlgorithm,{*} is not a valid Key Management algorithm name,yes,yes,no,0,0,0
+jwa.JWA.encryption_alg#1,jwcrypto/jwa.py,subject,JWA.encryption_alg,InvalidJWAAlgorithm,{*} is not a valid Encryption algorithm name,yes,yes,no,0,0,0
+jwe.JWE._jwa_keymgmt#1,jwcrypto/jwe.py,subject,JWE._jwa_keymgmt,InvalidJWEOperation,Algorithm not allowed,no,yes,no,0,0,1
+jwe.JWE._jwa_enc#1,jwcrypto/jwe.py,subject,JWE._jwa_enc,InvalidJWEOperation,Algorithm not allowed,no,yes,no,0,0,1
+jwe.JWE._merge_headers#1,jwcrypto/jwe.py,subject,JWE._merge_headers,InvalidJWEData,"Duplicate header: ""{*}""",no,yes,no,0,0,0
+jwe.JWE._get_alg_enc_from_headers#1,jwcrypto/jwe.py,subject,JWE._get_alg_enc_from_headers,InvalidJWEData,"Missing ""alg"" from headers",no,no,no,0,0,0
+jwe.JWE._get_alg_enc_from_headers#2,jwcrypto/jwe.py,subject,JWE._get_alg_enc_from_headers,InvalidJWEData,"Missing ""enc"" from headers",no,no,no,0,0,0
+jwe.JWE.serialize#1,jwcrypto/jwe.py,subject,JWE.serialize,InvalidJWEOperation,No available ciphertext,no,no,no,0,0,0
+jwe.JWE.serialize#2,jwcrypto/jwe.py,subject,JWE.serialize,InvalidJWEOperation,Can't use compact encoding when the '{*}' parameter is set,no,no,no,0,0,0
+jwe.JWE.serialize#3,jwcrypto/jwe.py,subject,JWE.serialize,InvalidJWEOperation,Can't use compact encoding without protected headers,no,no,no,0,0,0
+jwe.JWE.serialize#4,jwcrypto/jwe.py,subject,JWE.serialize,InvalidJWEOperation,"Can't use compact encoding, '{*}' must be in the protected header",no,no,no,0,0,0
+jwe.JWE.serialize#5,jwcrypto/jwe.py,subject,JWE.serialize,InvalidJWEOperation,Invalid number of recipients,no,no,no,0,0,0
+jwe.JWE._check_crit#1,jwcrypto/jwe.py,subject,JWE._check_crit,InvalidJWEData,"Unknown critical header: ""{*}""",no,yes,no,0,0,0
+jwe.JWE._check_crit#2,jwcrypto/jwe.py,subject,JWE._check_crit,InvalidJWEData,"Unsupported critical header: ""{*}""",no,yes,no,0,0,0
+jwe.JWE._decrypt#1,jwcrypto/jwe.py,subject,JWE._decrypt,InvalidJWEData,Failed header check,no,yes,no,0,0,1
+jwe.JWE._decrypt#2,jwcrypto/jwe.py,subject,JWE._decrypt,JWKeyNotFound,Key ID {*} not in key set,no,yes,no,0,0,1
+jwe.JWE._decrypt#3,jwcrypto/jwe.py,subject,JWE._decrypt,JWKeyNotFound,No working key found in key set,no,yes,no,0,0,5
+jwe.JWE._decrypt#4,jwcrypto/jwe.py,subject,JWE._decrypt,InvalidJWEData,Compressed data exceeds maximum allowedsize ({*}),no,yes,no,0,3,2
+jwe.JWE._decrypt#5,jwcrypto/jwe.py,subject,JWE._decrypt,InvalidJWEData,Compressed data exceeds maximum allowedoutput size ({*}),no,yes,no,0,0,1
+jwe.JWE.decrypt#1,jwcrypto/jwe.py,subject,JWE.decrypt,InvalidJWEOperation,No available ciphertext,no,yes,no,0,0,0
+jwe.JWE.decrypt#2,jwcrypto/jwe.py,subject,JWE.decrypt,JWKeyNotFound,Key Not found in JWKSet,no,yes,yes,2,0,6
+jwe.JWE.decrypt#3,jwcrypto/jwe.py,subject,JWE.decrypt,InvalidJWEData,No recipient matched the provided key{*},no,yes,yes,7,0,7
+jwe.JWE.deserialize#1,jwcrypto/jwe.py,subject,JWE.deserialize,InvalidJWEData,,no,yes,no,0,0,2
+jwe.JWE.deserialize#2,jwcrypto/jwe.py,subject,JWE.deserialize,InvalidJWEData,Invalid format,yes,yes,yes,2,0,2
+jwe.JWE.payload#1,jwcrypto/jwe.py,subject,JWE.payload,InvalidJWEOperation,Plaintext not available,no,yes,no,0,0,0
+jwe.JWE.jose_header#1,jwcrypto/jwe.py,subject,JWE.jose_header,InvalidJWEOperation,JOSE Header not available,no,yes,no,0,0,0
+jwk.JWK.generate#1,jwcrypto/jwk.py,subject,JWK.generate,InvalidJWKType,{*},yes,no,no,0,0,0
+jwk.JWK.generate_key#1,jwcrypto/jwk.py,subject,JWK.generate_key,InvalidJWKType,{*},yes,no,no,0,0,0
+jwk.JWK._get_curve_by_name#1,jwcrypto/jwk.py,subject,JWK._get_curve_by_name,InvalidJWKValue,"Curve requested is ""{*}"", but key curve is ""{*}""",no,yes,no,0,0,0
+jwk.JWK._get_curve_by_name#2,jwcrypto/jwk.py,subject,JWK._get_curve_by_name,InvalidJWKType,"Curve Requested is of type ""{*}"", but key curve is of type ""{*}""",no,yes,no,0,0,0
+jwk.JWK._get_curve_by_name#3,jwcrypto/jwk.py,subject,JWK._get_curve_by_name,InvalidJWKValue,Unknown Curve Name [{*}],no,yes,no,0,0,0
+jwk.JWK._generate_OKP#1,jwcrypto/jwk.py,subject,JWK._generate_OKP,InvalidJWKValue,"Must specify ""crv"" for OKP key generation",no,no,no,0,0,0
+jwk.JWK._okp_curve_from_pyca_key#1,jwcrypto/jwk.py,subject,JWK._okp_curve_from_pyca_key,InvalidJWKValue,Invalid OKP Key object {*},no,no,no,0,0,0
+jwk.JWK._generate_AKP#1,jwcrypto/jwk.py,subject,JWK._generate_AKP,InvalidJWKValue,"Must specify a valid ""alg"" for AKP key generation. Valid values: {*}",no,no,no,0,0,0
+jwk.JWK._akp_alg_from_pyca_key#1,jwcrypto/jwk.py,subject,JWK._akp_alg_from_pyca_key,InvalidJWKValue,Invalid AKP Key object {*},no,no,no,0,0,0
+jwk.JWK.import_key#1,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKType,{*},no,no,no,0,0,0
+jwk.JWK.import_key#2,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,Missing required value {*},no,no,no,0,0,0
+jwk.JWK.import_key#3,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,Unsupported parameter {*},no,no,no,0,0,0
+jwk.JWK.import_key#4,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,"""{*}"" is not base64url encoded",yes,no,no,0,0,0
+jwk.JWK.import_key#5,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,"""{*}"" is not Base64urlUInt encoded",yes,no,no,0,0,0
+jwk.JWK.import_key#6,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,"""alg"" is required for AKP key type",no,no,no,0,0,0
+jwk.JWK.import_key#7,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,"Invalid ""alg"" for AKP key type: ""{*}"". Valid values: {*}",no,no,no,0,0,0
+jwk.JWK.import_key#8,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,No Key Values found,no,no,no,0,0,0
+jwk.JWK.import_key#9,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,"Unknown or duplicate ""key_ops"" values",no,no,no,0,0,0
+jwk.JWK.import_key#10,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,"Duplicate values in ""key_ops""",no,no,no,0,0,0
+jwk.JWK.import_key#11,jwcrypto/jwk.py,subject,JWK.import_key,InvalidJWKValue,"Incompatible ""use"" and ""key_ops"" values specified at the same time",no,no,no,0,0,0
+jwk.JWK.from_json#1,jwcrypto/jwk.py,subject,JWK.from_json,InvalidJWKValue,,yes,no,no,0,0,0
+jwk.JWK._public_params#1,jwcrypto/jwk.py,subject,JWK._public_params,InvalidJWKType,No public key available,no,no,no,0,0,0
+jwk.JWK.export_private#1,jwcrypto/jwk.py,subject,JWK.export_private,InvalidJWKType,No private key available,no,no,no,0,0,0
+jwk.JWK.export_symmetric#1,jwcrypto/jwk.py,subject,JWK.export_symmetric,InvalidJWKType,Not a symmetric key,no,no,no,0,0,0
+jwk.JWK.key_curve#1,jwcrypto/jwk.py,subject,JWK.key_curve,InvalidJWKType,Not an EC or OKP key,no,no,no,0,0,0
+jwk.JWK._check_constraints#1,jwcrypto/jwk.py,subject,JWK._check_constraints,InvalidJWKUsage,{*},no,yes,no,0,0,0
+jwk.JWK._check_constraints#2,jwcrypto/jwk.py,subject,JWK._check_constraints,InvalidJWKOperation,{*},no,yes,no,0,0,0
+jwk.JWK._okp_pub#1,jwcrypto/jwk.py,subject,JWK._okp_pub,InvalidJWKValue,"Unknown curve ""{*}""",yes,yes,no,0,0,0
+jwk.JWK._okp_pri#1,jwcrypto/jwk.py,subject,JWK._okp_pri,InvalidJWKValue,"Unknown curve ""{*}""",yes,yes,no,0,0,0
+jwk.JWK._akp_pub#1,jwcrypto/jwk.py,subject,JWK._akp_pub,InvalidJWKValue,"Unknown algorithm ""{*}""",no,yes,no,0,0,0
+jwk.JWK._akp_pri#1,jwcrypto/jwk.py,subject,JWK._akp_pri,InvalidJWKValue,"Unknown algorithm ""{*}""",no,yes,no,0,0,0
+jwk.JWK.get_op_key#1,jwcrypto/jwk.py,subject,JWK.get_op_key,InvalidJWKOperation,{*},no,yes,no,0,0,0
+jwk.JWK.import_from_pyca#1,jwcrypto/jwk.py,subject,JWK.import_from_pyca,InvalidJWKValue,Unknown key object {*},no,no,no,0,0,0
+jwk.JWK.export_to_pem#1,jwcrypto/jwk.py,subject,JWK.export_to_pem,InvalidJWKType,No private key available,no,no,no,0,0,0
+jwk.JWK.export_to_pem#2,jwcrypto/jwk.py,subject,JWK.export_to_pem,InvalidJWKType,No public key available,no,no,no,0,0,0
+jwk.JWK.thumbprint_uri#1,jwcrypto/jwk.py,subject,JWK.thumbprint_uri,InvalidJWKValue,"Unknown hash ""{*}""",yes,no,no,0,0,0
+jwk.JWK.thumbprint_uri#2,jwcrypto/jwk.py,subject,JWK.thumbprint_uri,InvalidJWKValue,"Unsupported hash ""{*}""",no,no,no,0,0,0
+jwk.JWK.__setitem__#1,jwcrypto/jwk.py,subject,JWK.__setitem__,InvalidJWKType,{*},no,yes,no,0,0,0
+jwk.JWK.__setitem__#2,jwcrypto/jwk.py,subject,JWK.__setitem__,InvalidJWKValue,"""{*}"" is not base64url encoded",yes,yes,no,0,0,0
+jwk.JWK.__setitem__#3,jwcrypto/jwk.py,subject,JWK.__setitem__,InvalidJWKValue,"""{*}"" is not Base64urlUInt encoded",yes,yes,no,0,0,0
+jwk.JWK.from_password#1,jwcrypto/jwk.py,subject,JWK.from_password,InvalidJWKValue,,yes,no,no,0,0,0
+jwk.JWKSet.import_keyset#1,jwcrypto/jwk.py,subject,JWKSet.import_keyset,InvalidJWKValue,,yes,no,no,0,0,0
+jwk.JWKSet.get_key#1,jwcrypto/jwk.py,subject,JWKSet.get_key,InvalidJWKValue,Duplicate keys found with requested kid: 1 expected,no,no,no,0,0,0
+jws.JWSCore._jwa#1,jwcrypto/jws.py,subject,JWSCore._jwa,InvalidJWSOperation,Algorithm not allowed,no,no,no,0,0,0
+jws.JWSCore.verify#1,jwcrypto/jws.py,subject,JWSCore.verify,InvalidJWSSignature,Verification failed,yes,yes,no,0,0,5
+jws.JWS._merge_check_headers#1,jwcrypto/jws.py,subject,JWS._merge_check_headers,InvalidJWSObject,"Unknown critical header: ""{*}""",no,yes,no,0,0,1
+jws.JWS._merge_check_headers#2,jwcrypto/jws.py,subject,JWS._merge_check_headers,InvalidJWSObject,"Unsupported critical header: ""{*}""",no,yes,no,0,0,0
+jws.JWS._merge_check_headers#3,jwcrypto/jws.py,subject,JWS._merge_check_headers,InvalidJWSObject,b64 header must be a boolean,no,yes,no,0,0,0
+jws.JWS._merge_check_headers#4,jwcrypto/jws.py,subject,JWS._merge_check_headers,InvalidJWSObject,"""{*}"" must be protected",no,yes,no,0,0,0
+jws.JWS._merge_check_headers#5,jwcrypto/jws.py,subject,JWS._merge_check_headers,InvalidJWSObject,"Duplicate header: ""{*}""",no,yes,no,0,0,0
+jws.JWS._merge_check_headers#6,jwcrypto/jws.py,subject,JWS._merge_check_headers,InvalidJWSObject,"Missing critical header ""{*}""",no,yes,no,0,0,0
+jws.JWS._verify#1,jwcrypto/jws.py,subject,JWS._verify,InvalidJWSSignature,Invalid Protected header,no,yes,no,0,0,0
+jws.JWS._verify#2,jwcrypto/jws.py,subject,JWS._verify,InvalidJWSSignature,Invalid Unprotected header,no,yes,no,0,0,0
+jws.JWS._verify#3,jwcrypto/jws.py,subject,JWS._verify,InvalidJWSSignature,Failed header check,no,yes,no,0,0,1
+jws.JWS._verify#4,jwcrypto/jws.py,subject,JWS._verify,InvalidJWSSignature,"No ""alg"" in headers",no,yes,no,0,0,0
+jws.JWS._verify#5,jwcrypto/jws.py,subject,JWS._verify,InvalidJWSSignature,"""alg"" mismatch, requested ""{*}"", found ""{*}""",no,yes,no,0,0,0
+jws.JWS._verify#6,jwcrypto/jws.py,subject,JWS._verify,JWKeyNotFound,Key ID {*} not in key set,no,yes,no,0,0,0
+jws.JWS._verify#7,jwcrypto/jws.py,subject,JWS._verify,JWKeyNotFound,No working key found in key set,no,yes,no,0,0,2
+jws.JWS._get_obj_payload#1,jwcrypto/jws.py,subject,JWS._get_obj_payload,InvalidJWSOperation,Object Payload present but Detached Payload provided,no,yes,no,0,0,0
+jws.JWS.verify#1,jwcrypto/jws.py,subject,JWS.verify,InvalidJWSSignature,No signatures available,no,yes,no,0,0,0
+jws.JWS.verify#2,jwcrypto/jws.py,subject,JWS.verify,JWKeyNotFound,No working key found in key set,no,yes,yes,2,0,2
+jws.JWS.verify#3,jwcrypto/jws.py,subject,JWS.verify,InvalidJWSSignature,Verification failed for all signatures{*},no,yes,yes,5,0,5
+jws.JWS._deserialize_b64#1,jwcrypto/jws.py,subject,JWS._deserialize_b64,InvalidJWSObject,b64 header must be boolean,no,yes,no,0,0,0
+jws.JWS._deserialize_b64#2,jwcrypto/jws.py,subject,JWS._deserialize_b64,InvalidJWSObject,conflicting b64 values,no,yes,no,0,0,0
+jws.JWS.deserialize#1,jwcrypto/jws.py,subject,JWS.deserialize,InvalidJWSObject,Unrecognized representation,no,yes,no,0,0,2
+jws.JWS.deserialize#2,jwcrypto/jws.py,subject,JWS.deserialize,InvalidJWSObject,Invalid format,yes,yes,yes,2,0,2
+jws.JWS.add_signature#1,jwcrypto/jws.py,subject,JWS.add_signature,InvalidJWSObject,b64 header must always be critical,no,no,no,0,0,0
+jws.JWS.add_signature#2,jwcrypto/jws.py,subject,JWS.add_signature,InvalidJWSObject,Mixed b64 headers on signatures,no,no,no,0,0,0
+jws.JWS.serialize#1,jwcrypto/jws.py,subject,JWS.serialize,InvalidJWSOperation,Can't use compact encoding with multiple signatures,no,no,no,0,0,0
+jws.JWS.serialize#2,jwcrypto/jws.py,subject,JWS.serialize,InvalidJWSSignature,No available signature,no,no,no,0,0,0
+jws.JWS.serialize#3,jwcrypto/jws.py,subject,JWS.serialize,InvalidJWSSignature,No valid signature found,no,no,no,0,0,0
+jws.JWS.serialize#4,jwcrypto/jws.py,subject,JWS.serialize,InvalidJWSOperation,Compact encoding must carry 'alg' in protected header,no,no,no,0,0,0
+jws.JWS.serialize#5,jwcrypto/jws.py,subject,JWS.serialize,InvalidJWSOperation,Can't use compact encoding without protected header,no,no,no,0,0,0
+jws.JWS.serialize#6,jwcrypto/jws.py,subject,JWS.serialize,InvalidJWSOperation,Can't use compact encoding with unencoded payload that uses the . character,no,no,no,0,0,0
+jws.JWS.payload#1,jwcrypto/jws.py,subject,JWS.payload,InvalidJWSOperation,Payload not verified,no,yes,no,0,0,0
+jws.JWS.jose_header#1,jwcrypto/jws.py,subject,JWS.jose_header,InvalidJWSOperation,JOSE Header(s) not available,no,yes,no,0,0,0
+jwt.JWT._check_string_claim#1,jwcrypto/jwt.py,subject,JWT._check_string_claim,JWTInvalidClaimFormat,Claim {*} is not a StringOrURI type,no,yes,yes,2,0,2
+jwt.JWT._check_array_or_string_claim#1,jwcrypto/jwt.py,subject,JWT._check_array_or_string_claim,JWTInvalidClaimFormat,Claim {*} contains non StringOrURI types,no,yes,yes,1,0,1
+jwt.JWT._check_array_or_string_claim#2,jwcrypto/jwt.py,subject,JWT._check_array_or_string_claim,JWTInvalidClaimFormat,Claim {*} is not a StringOrURI type,no,yes,no,0,0,0
+jwt.JWT._check_integer_claim#1,jwcrypto/jwt.py,subject,JWT._check_integer_claim,JWTInvalidClaimFormat,Claim {*} is not an integer,yes,yes,no,0,0,0
+jwt.JWT._check_exp#1,jwcrypto/jwt.py,subject,JWT._check_exp,JWTExpired,"Expired at {*}, time: {*}(leeway: {*})",no,yes,yes,1,1,1
+jwt.JWT._check_nbf#1,jwcrypto/jwt.py,subject,JWT._check_nbf,JWTNotYetValid,"Valid from {*}, time: {*}(leeway: {*})",no,yes,no,0,0,0
+jwt.JWT._check_provided_claims#1,jwcrypto/jwt.py,subject,JWT._check_provided_claims,JWTInvalidClaimFormat,Claims check requested but claims is not a json dict,no,yes,no,0,0,0
+jwt.JWT._check_provided_claims#2,jwcrypto/jwt.py,subject,JWT._check_provided_claims,JWTMissingClaim,Claim {*} is missing,no,yes,yes,1,1,1
+jwt.JWT._check_provided_claims#3,jwcrypto/jwt.py,subject,JWT._check_provided_claims,JWTInvalidClaimValue,Invalid '{*}' value. Expected '{*}' got '{*}',no,yes,yes,2,0,2
+jwt.JWT._check_provided_claims#4,jwcrypto/jwt.py,subject,JWT._check_provided_claims,JWTInvalidClaimValue,Invalid '{*}' value. Expected '{*}' in '{*}',no,yes,yes,3,0,3
+jwt.JWT._check_provided_claims#5,jwcrypto/jwt.py,subject,JWT._check_provided_claims,JWTInvalidClaimValue,Invalid '{*}' value. '{*}' does not normalize to '{*}',no,yes,yes,4,4,4
+jwt.JWT._check_provided_claims#6,jwcrypto/jwt.py,subject,JWT._check_provided_claims,JWTInvalidClaimValue,"Invalid '{*}' value. Scope list has to be a string, got a {*} instead: {*}",no,yes,yes,1,0,1
+jwt.JWT._check_provided_claims#7,jwcrypto/jwt.py,subject,JWT._check_provided_claims,JWTInvalidClaimValue,Invalid '{*}' value. Scope list '{*}' does not contain the required scope '{*}',no,yes,yes,3,0,3
+jwt.JWT.validate#1,jwcrypto/jwt.py,subject,JWT.validate,JWTMissingKey,,no,yes,yes,4,4,4

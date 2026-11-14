@@ -1,0 +1,15 @@
+{
+ "name": "toytrace",
+ "version": "0",
+ "package": "tracepkg",
+ "source_root": ".",
+ "entry_points": ["decode"],
+ "rejection_bases": ["TraceError"],
+ "tests": ["tests/test_toytrace.py"],
+ "subject_files": ["tracepkg/__init__.py", "tracepkg/core.py", "tracepkg/errors.py", "tracepkg/helpers.py"],
+ "observed_files": [],
+ "pytest_args": ["-p", "no:cacheprovider"],
+ "copy": ["tracepkg", "tests"],
+ "python": "3.12.3",
+ "suite_runs": [{"name": "all", "paths": ["tests"]}]
+}

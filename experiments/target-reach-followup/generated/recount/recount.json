@@ -1,0 +1,6090 @@
+{
+ "held_out": [
+  "google-auth",
+  "oauthlib",
+  "authlib",
+  "joserfc"
+ ],
+ "held_out_totals": {
+  "item1": {
+   "cases_decided_by_their_target": 145,
+   "deciding_checks": 137,
+   "deciding_checks_deleted": 137,
+   "deletions_of_deciding_checks_not_detected": {
+    "O_C": 6,
+    "O_S": 5,
+    "O_T": 82,
+    "O_V": 24,
+    "O_Vfc": 57,
+    "suite": 5,
+    "whole suite": 5
+   },
+   "target_of_no_case": {
+    "checks": 80,
+    "deleted": 80,
+    "not_detected": {
+     "O_C": 6,
+     "O_S": 5,
+     "O_T": 80,
+     "O_V": 15,
+     "O_Vfc": 36,
+     "suite": 5,
+     "whole suite": 5
+    }
+   },
+   "target_only_of_cases_not_decided": {
+    "checks": 2,
+    "deleted": 2,
+    "not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 2,
+     "O_V": 0,
+     "O_Vfc": 0,
+     "suite": 0,
+     "whole suite": 0
+    }
+   },
+   "targeted_deciding": {
+    "checks": 55,
+    "deleted": 55,
+    "not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 0,
+     "O_V": 9,
+     "O_Vfc": 21,
+     "suite": 0,
+     "whole suite": 0
+    }
+   }
+  },
+  "item2": {
+   "checks": 2,
+   "deleted": 2,
+   "not_detected": {
+    "O_C": 0,
+    "O_S": 0,
+    "O_T": 2,
+    "O_V": 0,
+    "O_Vfc": 2,
+    "suite": 0,
+    "whole suite": 0
+   }
+  },
+  "item3": {
+   "count": 6
+  },
+  "item4": {
+   "assertion": {
+    "cases_with_target": 129,
+    "decided_by_target": 76,
+    "flags": 53,
+    "flags_by_class": {
+     "A": 0,
+     "B": 0,
+     "C": 53,
+     "D": 0
+    }
+   },
+   "name": {
+    "cases_with_target": 100,
+    "decided_by_target": 69,
+    "flags": 31,
+    "flags_by_class": {
+     "A": 3,
+     "B": 0,
+     "C": 28,
+     "D": 0
+    }
+   }
+  },
+  "item6": {
+   "cases_decided": 47,
+   "checks": 29,
+   "deciding": 20,
+   "deleted": 20
+  },
+  "reproduced": {
+   "cases": 402,
+   "cases_decided_by_target": 145,
+   "cases_with_target": 229,
+   "checks_deciding": 137,
+   "flags": 84,
+   "not_detected": {
+    "O_C": 6,
+    "O_T": 82,
+    "O_V": 24,
+    "O_Vfc": 57,
+    "whole suite": 5
+   }
+  }
+ },
+ "sentinels": [
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "deletions.csv: every oracle column holds yes or no",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 91,
+   "found": 91,
+   "holds": true,
+   "sentinel": "cases.csv: no row repeats its key (block, index, test)",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": "91 items, equal",
+   "found": "91 items, equal",
+   "holds": true,
+   "sentinel": "cases.csv rows are the cases of the study in records/base-1.json",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "raise site of every case agrees between cases.csv and records/base-1.json",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "target and tier of every case agree with targets.json",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": [
+    [
+     "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_list#0",
+     0
+    ]
+   ],
+   "found": [
+    [
+     "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_list#0",
+     0
+    ]
+   ],
+   "holds": true,
+   "sentinel": "flags.csv rows are the cases with a target that the target does not decide",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": "44 items, equal",
+   "found": "44 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv decides=yes are the deciding checks",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": "80 items, equal",
+   "found": "80 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv cases_decided agrees with cases.csv",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": "41 items, equal",
+   "found": "41 items, equal",
+   "holds": true,
+   "sentinel": "deletions.csv rows are the subject-file checks that fire in a case (records/base-1.json)",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 91,
+   "found": 91,
+   "holds": true,
+   "sentinel": "summary.json: cases",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 49,
+   "found": 49,
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 48,
+   "found": 48,
+   "holds": true,
+   "sentinel": "summary.json: cases_decided_by_target",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 1,
+   "found": 1,
+   "holds": true,
+   "sentinel": "summary.json: flags",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 44,
+   "found": 44,
+   "holds": true,
+   "sentinel": "summary.json: checks_deciding",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 5,
+   "found": 5,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_V",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 21,
+   "found": 21,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_Vfc",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_C",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 12,
+   "found": 12,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_T",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by whole suite",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 41,
+   "found": 41,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 44,
+   "found": 44,
+   "holds": true,
+   "sentinel": "item 1: the 3 groups partition the deciding checks",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 30,
+   "found": 30,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets_deletion_not_detected_O_T",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: checks_firing_and_never_deciding",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions_of_checks_that_fire_and_never_decide",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 5,
+   "found": 5,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_V, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 21,
+   "found": 21,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_Vfc, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_C, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 12,
+   "found": 12,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_T, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_S, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by whole suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": {
+    "check": 91
+   },
+   "found": {
+    "check": 91
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_by_site_kind",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, no deciding check",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 5,
+   "found": 5,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, deciding check not deleted",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": "86 items, equal",
+   "found": "86 items, equal",
+   "holds": true,
+   "sentinel": "pinning.csv rows are the cases whose deciding check was deleted",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 86,
+   "found": 86,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 1,
+   "found": 1,
+   "holds": true,
+   "sentinel": "summary.json: pinning test passes",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": {
+    "assertion": 42,
+    "name": 7
+   },
+   "found": {
+    "assertion": 42,
+    "name": 7
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target_by_tier",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": {
+    "name": 1
+   },
+   "found": {
+    "name": 1
+   },
+   "holds": true,
+   "sentinel": "summary.json: flags_by_tier",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": 9,
+   "found": 9,
+   "holds": true,
+   "sentinel": "summary.json: deletions_in_handler",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "in_handler agrees between deletions.csv and checks.csv",
+   "subject": "pyjwt"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "deletions.csv: every oracle column holds yes or no",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 91,
+   "found": 91,
+   "holds": true,
+   "sentinel": "cases.csv: no row repeats its key (block, index, test)",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": "91 items, equal",
+   "found": "91 items, equal",
+   "holds": true,
+   "sentinel": "cases.csv rows are the cases of the study in records/base-1.json",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "raise site of every case agrees between cases.csv and records/base-1.json",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "target and tier of every case agree with targets.json",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": [
+    [
+     "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_list#0",
+     0
+    ]
+   ],
+   "found": [
+    [
+     "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_list#0",
+     0
+    ]
+   ],
+   "holds": true,
+   "sentinel": "flags.csv rows are the cases with a target that the target does not decide",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": "44 items, equal",
+   "found": "44 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv decides=yes are the deciding checks",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": "99 items, equal",
+   "found": "99 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv cases_decided agrees with cases.csv",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": "44 items, equal",
+   "found": "44 items, equal",
+   "holds": true,
+   "sentinel": "deletions.csv rows are the subject-file checks that fire in a case (records/base-1.json)",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 91,
+   "found": 91,
+   "holds": true,
+   "sentinel": "summary.json: cases",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 49,
+   "found": 49,
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 48,
+   "found": 48,
+   "holds": true,
+   "sentinel": "summary.json: cases_decided_by_target",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 1,
+   "found": 1,
+   "holds": true,
+   "sentinel": "summary.json: flags",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 44,
+   "found": 44,
+   "holds": true,
+   "sentinel": "summary.json: checks_deciding",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 7,
+   "found": 7,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_V",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 23,
+   "found": 23,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_Vfc",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_C",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 14,
+   "found": 14,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_T",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by whole suite",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 44,
+   "found": 44,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 44,
+   "found": 44,
+   "holds": true,
+   "sentinel": "item 1: the 3 groups partition the deciding checks",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 30,
+   "found": 30,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets_deletion_not_detected_O_T",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: checks_firing_and_never_deciding",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions_of_checks_that_fire_and_never_decide",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 7,
+   "found": 7,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_V, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 23,
+   "found": 23,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_Vfc, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_C, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 14,
+   "found": 14,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_T, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_S, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by whole suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": {
+    "check": 91
+   },
+   "found": {
+    "check": 91
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_by_site_kind",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, no deciding check",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, deciding check not deleted",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": "91 items, equal",
+   "found": "91 items, equal",
+   "holds": true,
+   "sentinel": "pinning.csv rows are the cases whose deciding check was deleted",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 91,
+   "found": 91,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 1,
+   "found": 1,
+   "holds": true,
+   "sentinel": "summary.json: pinning test passes",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": {
+    "assertion": 42,
+    "name": 7
+   },
+   "found": {
+    "assertion": 42,
+    "name": 7
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target_by_tier",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": {
+    "name": 1
+   },
+   "found": {
+    "name": 1
+   },
+   "holds": true,
+   "sentinel": "summary.json: flags_by_tier",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": 9,
+   "found": 9,
+   "holds": true,
+   "sentinel": "summary.json: deletions_in_handler",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "in_handler agrees between deletions.csv and checks.csv",
+   "subject": "pyjwt-package"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "deletions.csv: every oracle column holds yes or no",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 42,
+   "found": 42,
+   "holds": true,
+   "sentinel": "cases.csv: no row repeats its key (block, index, test)",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": "42 items, equal",
+   "found": "42 items, equal",
+   "holds": true,
+   "sentinel": "cases.csv rows are the cases of the study in records/base-1.json",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "raise site of every case agrees between cases.csv and records/base-1.json",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "target and tier of every case agree with targets.json",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": [
+    [
+     "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#0",
+     0
+    ],
+    [
+     "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#1",
+     0
+    ],
+    [
+     "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#2",
+     0
+    ],
+    [
+     "jwcrypto/tests.py::TestJWE.test_bare_ecdh_with_ek_fails#0",
+     0
+    ]
+   ],
+   "found": [
+    [
+     "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#0",
+     0
+    ],
+    [
+     "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#1",
+     0
+    ],
+    [
+     "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#2",
+     0
+    ],
+    [
+     "jwcrypto/tests.py::TestJWE.test_bare_ecdh_with_ek_fails#0",
+     0
+    ]
+   ],
+   "holds": true,
+   "sentinel": "flags.csv rows are the cases with a target that the target does not decide",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": "16 items, equal",
+   "found": "16 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv decides=yes are the deciding checks",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": "146 items, equal",
+   "found": "146 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv cases_decided agrees with cases.csv",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": "33 items, equal",
+   "found": "33 items, equal",
+   "holds": true,
+   "sentinel": "deletions.csv rows are the subject-file checks that fire in a case (records/base-1.json)",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 42,
+   "found": 42,
+   "holds": true,
+   "sentinel": "summary.json: cases",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 14,
+   "found": 14,
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 10,
+   "found": 10,
+   "holds": true,
+   "sentinel": "summary.json: cases_decided_by_target",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 4,
+   "found": 4,
+   "holds": true,
+   "sentinel": "summary.json: flags",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 16,
+   "found": 16,
+   "holds": true,
+   "sentinel": "summary.json: checks_deciding",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 4,
+   "found": 4,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_V",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 6,
+   "found": 6,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_Vfc",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_C",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 11,
+   "found": 11,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_T",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by whole suite",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 16,
+   "found": 16,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 16,
+   "found": 16,
+   "holds": true,
+   "sentinel": "item 1: the 3 groups partition the deciding checks",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 4,
+   "found": 4,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets_deletion_not_detected_O_T",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 17,
+   "found": 17,
+   "holds": true,
+   "sentinel": "summary.json: checks_firing_and_never_deciding",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 17,
+   "found": 17,
+   "holds": true,
+   "sentinel": "summary.json: deletions_of_checks_that_fire_and_never_decide",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 12,
+   "found": 12,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_V, all deletions = deciding + fire-and-never-decide",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 14,
+   "found": 14,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_Vfc, all deletions = deciding + fire-and-never-decide",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 7,
+   "found": 7,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_C, all deletions = deciding + fire-and-never-decide",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 27,
+   "found": 27,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_T, all deletions = deciding + fire-and-never-decide",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 7,
+   "found": 7,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_S, all deletions = deciding + fire-and-never-decide",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 7,
+   "found": 7,
+   "holds": true,
+   "sentinel": "summary.json: not detected by suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 7,
+   "found": 7,
+   "holds": true,
+   "sentinel": "summary.json: not detected by whole suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": {
+    "check": 42
+   },
+   "found": {
+    "check": 42
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_by_site_kind",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, no deciding check",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, deciding check not deleted",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": "42 items, equal",
+   "found": "42 items, equal",
+   "holds": true,
+   "sentinel": "pinning.csv rows are the cases whose deciding check was deleted",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 42,
+   "found": 42,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning test passes",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/jwcrypto/FLAGS.md: every row names exactly 1 flag",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": "4 items, equal",
+   "found": "4 items, equal",
+   "holds": true,
+   "sentinel": "readings/jwcrypto/FLAGS.md: every flag has exactly 1 row",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": {
+    "B": 3,
+    "C": 1
+   },
+   "found": {
+    "B": 3,
+    "C": 1
+   },
+   "holds": true,
+   "sentinel": "readings/jwcrypto/FLAGS.md: classes agree with its line 'Counts:'",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/jwcrypto/FLAGS.md: columns 'Target fires' and 'Own test without the target' agree with the outputs",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": {
+    "assertion": 6,
+    "name": 8
+   },
+   "found": {
+    "assertion": 6,
+    "name": 8
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target_by_tier",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": {
+    "name": 4
+   },
+   "found": {
+    "name": 4
+   },
+   "holds": true,
+   "sentinel": "summary.json: flags_by_tier",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: deletions_in_handler",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "in_handler agrees between deletions.csv and checks.csv",
+   "subject": "jwcrypto"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "deletions.csv: every oracle column holds yes or no",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 22,
+   "found": 22,
+   "holds": true,
+   "sentinel": "cases.csv: no row repeats its key (block, index, test)",
+   "subject": "google-auth"
+  },
+  {
+   "expected": "22 items, equal",
+   "found": "22 items, equal",
+   "holds": true,
+   "sentinel": "cases.csv rows are the cases of the study in records/base-1.json",
+   "subject": "google-auth"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "raise site of every case agrees between cases.csv and records/base-1.json",
+   "subject": "google-auth"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "target and tier of every case agree with targets.json",
+   "subject": "google-auth"
+  },
+  {
+   "expected": [
+    [
+     "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+     0
+    ],
+    [
+     "tests/test_jwt.py::test_decode_no_cert#0",
+     0
+    ]
+   ],
+   "found": [
+    [
+     "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+     0
+    ],
+    [
+     "tests/test_jwt.py::test_decode_no_cert#0",
+     0
+    ]
+   ],
+   "holds": true,
+   "sentinel": "flags.csv rows are the cases with a target that the target does not decide",
+   "subject": "google-auth"
+  },
+  {
+   "expected": "13 items, equal",
+   "found": "13 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv decides=yes are the deciding checks",
+   "subject": "google-auth"
+  },
+  {
+   "expected": "100 items, equal",
+   "found": "100 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv cases_decided agrees with cases.csv",
+   "subject": "google-auth"
+  },
+  {
+   "expected": "13 items, equal",
+   "found": "13 items, equal",
+   "holds": true,
+   "sentinel": "deletions.csv rows are the subject-file checks that fire in a case (records/base-1.json)",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 22,
+   "found": 22,
+   "holds": true,
+   "sentinel": "summary.json: cases",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 15,
+   "found": 15,
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 13,
+   "found": 13,
+   "holds": true,
+   "sentinel": "summary.json: cases_decided_by_target",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: flags",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 13,
+   "found": 13,
+   "holds": true,
+   "sentinel": "summary.json: checks_deciding",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_V",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 9,
+   "found": 9,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_Vfc",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 1,
+   "found": 1,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_C",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 6,
+   "found": 6,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_T",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by whole suite",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 13,
+   "found": 13,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 13,
+   "found": 13,
+   "holds": true,
+   "sentinel": "item 1: the 3 groups partition the deciding checks",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 7,
+   "found": 7,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets_deletion_not_detected_O_T",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: checks_firing_and_never_deciding",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions_of_checks_that_fire_and_never_decide",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_V, all deletions = deciding + fire-and-never-decide",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 9,
+   "found": 9,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_Vfc, all deletions = deciding + fire-and-never-decide",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 1,
+   "found": 1,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_C, all deletions = deciding + fire-and-never-decide",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 6,
+   "found": 6,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_T, all deletions = deciding + fire-and-never-decide",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_S, all deletions = deciding + fire-and-never-decide",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by whole suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "google-auth"
+  },
+  {
+   "expected": {
+    "check": 22
+   },
+   "found": {
+    "check": 22
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_by_site_kind",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, no deciding check",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, deciding check not deleted",
+   "subject": "google-auth"
+  },
+  {
+   "expected": "22 items, equal",
+   "found": "22 items, equal",
+   "holds": true,
+   "sentinel": "pinning.csv rows are the cases whose deciding check was deleted",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 22,
+   "found": 22,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning test passes",
+   "subject": "google-auth"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/google-auth/FLAGS.md: every row names exactly 1 flag",
+   "subject": "google-auth"
+  },
+  {
+   "expected": [
+    [
+     "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+     0,
+     "tests/test_jwt.py::test_decode_bad_token_not_json"
+    ],
+    [
+     "tests/test_jwt.py::test_decode_no_cert#0",
+     0,
+     "tests/test_jwt.py::test_decode_no_cert"
+    ]
+   ],
+   "found": [
+    [
+     "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+     0,
+     "tests/test_jwt.py::test_decode_bad_token_not_json"
+    ],
+    [
+     "tests/test_jwt.py::test_decode_no_cert#0",
+     0,
+     "tests/test_jwt.py::test_decode_no_cert"
+    ]
+   ],
+   "holds": true,
+   "sentinel": "readings/google-auth/FLAGS.md: every flag has exactly 1 row",
+   "subject": "google-auth"
+  },
+  {
+   "expected": {
+    "C": 2
+   },
+   "found": {
+    "C": 2
+   },
+   "holds": true,
+   "sentinel": "readings/google-auth/FLAGS.md: classes agree with its line 'Counts:'",
+   "subject": "google-auth"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/google-auth/FLAGS.md: columns 'Target fires' and 'Own test without the target' agree with the outputs",
+   "subject": "google-auth"
+  },
+  {
+   "expected": {
+    "name": 15
+   },
+   "found": {
+    "name": 15
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target_by_tier",
+   "subject": "google-auth"
+  },
+  {
+   "expected": {
+    "name": 2
+   },
+   "found": {
+    "name": 2
+   },
+   "holds": true,
+   "sentinel": "summary.json: flags_by_tier",
+   "subject": "google-auth"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: deletions_in_handler",
+   "subject": "google-auth"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "in_handler agrees between deletions.csv and checks.csv",
+   "subject": "google-auth"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "deletions.csv: every oracle column holds yes or no",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 142,
+   "found": 142,
+   "holds": true,
+   "sentinel": "cases.csv: no row repeats its key (block, index, test)",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": "142 items, equal",
+   "found": "142 items, equal",
+   "holds": true,
+   "sentinel": "cases.csv rows are the cases of the study in records/base-1.json",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "raise site of every case agrees between cases.csv and records/base-1.json",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "target and tier of every case agree with targets.json",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": "10 items, equal",
+   "found": "10 items, equal",
+   "holds": true,
+   "sentinel": "flags.csv rows are the cases with a target that the target does not decide",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": "47 items, equal",
+   "found": "47 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv decides=yes are the deciding checks",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": "88 items, equal",
+   "found": "88 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv cases_decided agrees with cases.csv",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": "47 items, equal",
+   "found": "47 items, equal",
+   "holds": true,
+   "sentinel": "deletions.csv rows are the subject-file checks that fire in a case (records/base-1.json)",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 142,
+   "found": 142,
+   "holds": true,
+   "sentinel": "summary.json: cases",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 53,
+   "found": 53,
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 43,
+   "found": 43,
+   "holds": true,
+   "sentinel": "summary.json: cases_decided_by_target",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 10,
+   "found": 10,
+   "holds": true,
+   "sentinel": "summary.json: flags",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 47,
+   "found": 47,
+   "holds": true,
+   "sentinel": "summary.json: checks_deciding",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 7,
+   "found": 7,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_V",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 11,
+   "found": 11,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_Vfc",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_C",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 34,
+   "found": 34,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_T",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by whole suite",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 47,
+   "found": 47,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 47,
+   "found": 47,
+   "holds": true,
+   "sentinel": "item 1: the 3 groups partition the deciding checks",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 13,
+   "found": 13,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets_deletion_not_detected_O_T",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: checks_firing_and_never_deciding",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions_of_checks_that_fire_and_never_decide",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 7,
+   "found": 7,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_V, all deletions = deciding + fire-and-never-decide",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 11,
+   "found": 11,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_Vfc, all deletions = deciding + fire-and-never-decide",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_C, all deletions = deciding + fire-and-never-decide",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 34,
+   "found": 34,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_T, all deletions = deciding + fire-and-never-decide",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_S, all deletions = deciding + fire-and-never-decide",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: not detected by whole suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": {
+    "check": 142
+   },
+   "found": {
+    "check": 142
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_by_site_kind",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, no deciding check",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, deciding check not deleted",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": "142 items, equal",
+   "found": "142 items, equal",
+   "holds": true,
+   "sentinel": "pinning.csv rows are the cases whose deciding check was deleted",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 142,
+   "found": 142,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning test passes",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/oauthlib/FLAGS.md: every row names exactly 1 flag",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": "10 items, equal",
+   "found": "10 items, equal",
+   "holds": true,
+   "sentinel": "readings/oauthlib/FLAGS.md: every flag has exactly 1 row",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": {
+    "C": 10
+   },
+   "found": {
+    "C": 10
+   },
+   "holds": true,
+   "sentinel": "readings/oauthlib/FLAGS.md: classes agree with its line 'Counts:'",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/oauthlib/FLAGS.md: columns 'Target fires' and 'Own test without the target' agree with the outputs",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": {
+    "assertion": 25,
+    "name": 28
+   },
+   "found": {
+    "assertion": 25,
+    "name": 28
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target_by_tier",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": {
+    "name": 10
+   },
+   "found": {
+    "name": 10
+   },
+   "holds": true,
+   "sentinel": "summary.json: flags_by_tier",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: deletions_in_handler",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "in_handler agrees between deletions.csv and checks.csv",
+   "subject": "oauthlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "deletions.csv: every oracle column holds yes or no",
+   "subject": "authlib"
+  },
+  {
+   "expected": 48,
+   "found": 48,
+   "holds": true,
+   "sentinel": "cases.csv: no row repeats its key (block, index, test)",
+   "subject": "authlib"
+  },
+  {
+   "expected": "48 items, equal",
+   "found": "48 items, equal",
+   "holds": true,
+   "sentinel": "cases.csv rows are the cases of the study in records/base-1.json",
+   "subject": "authlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "raise site of every case agrees between cases.csv and records/base-1.json",
+   "subject": "authlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "target and tier of every case agree with targets.json",
+   "subject": "authlib"
+  },
+  {
+   "expected": "12 items, equal",
+   "found": "12 items, equal",
+   "holds": true,
+   "sentinel": "flags.csv rows are the cases with a target that the target does not decide",
+   "subject": "authlib"
+  },
+  {
+   "expected": "24 items, equal",
+   "found": "24 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv decides=yes are the deciding checks",
+   "subject": "authlib"
+  },
+  {
+   "expected": "39 items, equal",
+   "found": "39 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv cases_decided agrees with cases.csv",
+   "subject": "authlib"
+  },
+  {
+   "expected": "24 items, equal",
+   "found": "24 items, equal",
+   "holds": true,
+   "sentinel": "deletions.csv rows are the subject-file checks that fire in a case (records/base-1.json)",
+   "subject": "authlib"
+  },
+  {
+   "expected": 48,
+   "found": 48,
+   "holds": true,
+   "sentinel": "summary.json: cases",
+   "subject": "authlib"
+  },
+  {
+   "expected": 30,
+   "found": 30,
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target",
+   "subject": "authlib"
+  },
+  {
+   "expected": 18,
+   "found": 18,
+   "holds": true,
+   "sentinel": "summary.json: cases_decided_by_target",
+   "subject": "authlib"
+  },
+  {
+   "expected": 12,
+   "found": 12,
+   "holds": true,
+   "sentinel": "summary.json: flags",
+   "subject": "authlib"
+  },
+  {
+   "expected": 24,
+   "found": 24,
+   "holds": true,
+   "sentinel": "summary.json: checks_deciding",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_V",
+   "subject": "authlib"
+  },
+  {
+   "expected": 8,
+   "found": 8,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_Vfc",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_C",
+   "subject": "authlib"
+  },
+  {
+   "expected": 10,
+   "found": 10,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_T",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by whole suite",
+   "subject": "authlib"
+  },
+  {
+   "expected": 24,
+   "found": 24,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks",
+   "subject": "authlib"
+  },
+  {
+   "expected": 24,
+   "found": 24,
+   "holds": true,
+   "sentinel": "item 1: the 3 groups partition the deciding checks",
+   "subject": "authlib"
+  },
+  {
+   "expected": 14,
+   "found": 14,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets",
+   "subject": "authlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets_deletion_not_detected_O_T",
+   "subject": "authlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: checks_firing_and_never_deciding",
+   "subject": "authlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: deletions_of_checks_that_fire_and_never_decide",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_V, all deletions = deciding + fire-and-never-decide",
+   "subject": "authlib"
+  },
+  {
+   "expected": 8,
+   "found": 8,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_Vfc, all deletions = deciding + fire-and-never-decide",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_C, all deletions = deciding + fire-and-never-decide",
+   "subject": "authlib"
+  },
+  {
+   "expected": 10,
+   "found": 10,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_T, all deletions = deciding + fire-and-never-decide",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_S, all deletions = deciding + fire-and-never-decide",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: not detected by suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: not detected by whole suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "authlib"
+  },
+  {
+   "expected": {
+    "check": 42,
+    "other raise": 6
+   },
+   "found": {
+    "check": 42,
+    "other raise": 6
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_by_site_kind",
+   "subject": "authlib"
+  },
+  {
+   "expected": 6,
+   "found": 6,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, no deciding check",
+   "subject": "authlib"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, deciding check not deleted",
+   "subject": "authlib"
+  },
+  {
+   "expected": "42 items, equal",
+   "found": "42 items, equal",
+   "holds": true,
+   "sentinel": "pinning.csv rows are the cases whose deciding check was deleted",
+   "subject": "authlib"
+  },
+  {
+   "expected": 42,
+   "found": 42,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: pinning test passes",
+   "subject": "authlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/authlib/FLAGS.md: every row names exactly 1 flag",
+   "subject": "authlib"
+  },
+  {
+   "expected": "12 items, equal",
+   "found": "12 items, equal",
+   "holds": true,
+   "sentinel": "readings/authlib/FLAGS.md: every flag has exactly 1 row",
+   "subject": "authlib"
+  },
+  {
+   "expected": {
+    "C": 12
+   },
+   "found": {
+    "C": 12
+   },
+   "holds": true,
+   "sentinel": "readings/authlib/FLAGS.md: classes agree with its line 'Counts:'",
+   "subject": "authlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/authlib/FLAGS.md: columns 'Target fires' and 'Own test without the target' agree with the outputs",
+   "subject": "authlib"
+  },
+  {
+   "expected": {
+    "assertion": 5,
+    "name": 25
+   },
+   "found": {
+    "assertion": 5,
+    "name": 25
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target_by_tier",
+   "subject": "authlib"
+  },
+  {
+   "expected": {
+    "name": 12
+   },
+   "found": {
+    "name": 12
+   },
+   "holds": true,
+   "sentinel": "summary.json: flags_by_tier",
+   "subject": "authlib"
+  },
+  {
+   "expected": 3,
+   "found": 3,
+   "holds": true,
+   "sentinel": "summary.json: deletions_in_handler",
+   "subject": "authlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "in_handler agrees between deletions.csv and checks.csv",
+   "subject": "authlib"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "deletions.csv: every oracle column holds yes or no",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 190,
+   "found": 190,
+   "holds": true,
+   "sentinel": "cases.csv: no row repeats its key (block, index, test)",
+   "subject": "joserfc"
+  },
+  {
+   "expected": "190 items, equal",
+   "found": "190 items, equal",
+   "holds": true,
+   "sentinel": "cases.csv rows are the cases of the study in records/base-1.json",
+   "subject": "joserfc"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "raise site of every case agrees between cases.csv and records/base-1.json",
+   "subject": "joserfc"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "target and tier of every case agree with targets.json",
+   "subject": "joserfc"
+  },
+  {
+   "expected": "60 items, equal",
+   "found": "60 items, equal",
+   "holds": true,
+   "sentinel": "flags.csv rows are the cases with a target that the target does not decide",
+   "subject": "joserfc"
+  },
+  {
+   "expected": "53 items, equal",
+   "found": "53 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv decides=yes are the deciding checks",
+   "subject": "joserfc"
+  },
+  {
+   "expected": "97 items, equal",
+   "found": "97 items, equal",
+   "holds": true,
+   "sentinel": "checks.csv cases_decided agrees with cases.csv",
+   "subject": "joserfc"
+  },
+  {
+   "expected": "55 items, equal",
+   "found": "55 items, equal",
+   "holds": true,
+   "sentinel": "deletions.csv rows are the subject-file checks that fire in a case (records/base-1.json)",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 190,
+   "found": 190,
+   "holds": true,
+   "sentinel": "summary.json: cases",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 131,
+   "found": 131,
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 71,
+   "found": 71,
+   "holds": true,
+   "sentinel": "summary.json: cases_decided_by_target",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 60,
+   "found": 60,
+   "holds": true,
+   "sentinel": "summary.json: flags",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 53,
+   "found": 53,
+   "holds": true,
+   "sentinel": "summary.json: checks_deciding",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 12,
+   "found": 12,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_V",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 29,
+   "found": 29,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_Vfc",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_C",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 32,
+   "found": 32,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by O_T",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks not detected by whole suite",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 53,
+   "found": 53,
+   "holds": true,
+   "sentinel": "summary.json: deletions of deciding checks",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 53,
+   "found": 53,
+   "holds": true,
+   "sentinel": "item 1: the 3 groups partition the deciding checks",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 21,
+   "found": 21,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: reached_targets_deletion_not_detected_O_T",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: checks_firing_and_never_deciding",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: deletions_of_checks_that_fire_and_never_decide",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 12,
+   "found": 12,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_V, all deletions = deciding + fire-and-never-decide",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 31,
+   "found": 31,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_Vfc, all deletions = deciding + fire-and-never-decide",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_C, all deletions = deciding + fire-and-never-decide",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 34,
+   "found": 34,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_T, all deletions = deciding + fire-and-never-decide",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: not detected by O_S, all deletions = deciding + fire-and-never-decide",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: not detected by suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 2,
+   "found": 2,
+   "holds": true,
+   "sentinel": "summary.json: not detected by whole suite, all deletions = deciding + fire-and-never-decide",
+   "subject": "joserfc"
+  },
+  {
+   "expected": {
+    "check": 190
+   },
+   "found": {
+    "check": 190
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_by_site_kind",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, no deciding check",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 0,
+   "found": 0,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases not counted, deciding check not deleted",
+   "subject": "joserfc"
+  },
+  {
+   "expected": "190 items, equal",
+   "found": "190 items, equal",
+   "holds": true,
+   "sentinel": "pinning.csv rows are the cases whose deciding check was deleted",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 190,
+   "found": 190,
+   "holds": true,
+   "sentinel": "summary.json: pinning cases",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 4,
+   "found": 4,
+   "holds": true,
+   "sentinel": "summary.json: pinning test passes",
+   "subject": "joserfc"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/joserfc/FLAGS.md: every row names exactly 1 flag",
+   "subject": "joserfc"
+  },
+  {
+   "expected": "60 items, equal",
+   "found": "60 items, equal",
+   "holds": true,
+   "sentinel": "readings/joserfc/FLAGS.md: every flag has exactly 1 row",
+   "subject": "joserfc"
+  },
+  {
+   "expected": {
+    "A": 3,
+    "C": 57
+   },
+   "found": {
+    "A": 3,
+    "C": 57
+   },
+   "holds": true,
+   "sentinel": "readings/joserfc/FLAGS.md: classes agree with its line 'Counts:'",
+   "subject": "joserfc"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "readings/joserfc/FLAGS.md: columns 'Target fires' and 'Own test without the target' agree with the outputs",
+   "subject": "joserfc"
+  },
+  {
+   "expected": {
+    "assertion": 99,
+    "name": 32
+   },
+   "found": {
+    "assertion": 99,
+    "name": 32
+   },
+   "holds": true,
+   "sentinel": "summary.json: cases_with_target_by_tier",
+   "subject": "joserfc"
+  },
+  {
+   "expected": {
+    "assertion": 53,
+    "name": 7
+   },
+   "found": {
+    "assertion": 53,
+    "name": 7
+   },
+   "holds": true,
+   "sentinel": "summary.json: flags_by_tier",
+   "subject": "joserfc"
+  },
+  {
+   "expected": 12,
+   "found": 12,
+   "holds": true,
+   "sentinel": "summary.json: deletions_in_handler",
+   "subject": "joserfc"
+  },
+  {
+   "expected": [],
+   "found": [],
+   "holds": true,
+   "sentinel": "in_handler agrees between deletions.csv and checks.csv",
+   "subject": "joserfc"
+  },
+  {
+   "expected": {
+    "cases": 402,
+    "cases_decided_by_target": 145,
+    "cases_with_target": 229,
+    "checks_deciding": 137,
+    "flags": 84,
+    "not_detected": {
+     "O_C": 6,
+     "O_T": 82,
+     "O_V": 24,
+     "O_Vfc": 57,
+     "whole suite": 5
+    }
+   },
+   "found": {
+    "cases": 402,
+    "cases_decided_by_target": 145,
+    "cases_with_target": 229,
+    "checks_deciding": 137,
+    "flags": 84,
+    "not_detected": {
+     "O_C": 6,
+     "O_T": 82,
+     "O_V": 24,
+     "O_Vfc": 57,
+     "whole suite": 5
+    }
+   },
+   "holds": true,
+   "sentinel": "totals over the held-out libraries",
+   "subject": "held out, total"
+  }
+ ],
+ "sentinels_failed": 0,
+ "subjects": {
+  "authlib": {
+   "deposited": {
+    "cases": 48,
+    "cases_decided_by_target": 18,
+    "cases_with_target": 30,
+    "checks_deciding": 24,
+    "flags": 12,
+    "not_detected": {
+     "O_C": 3,
+     "O_T": 10,
+     "O_V": 3,
+     "O_Vfc": 8,
+     "whole suite": 3
+    }
+   },
+   "item1_ot_denominator": {
+    "cases_decided_by_their_target": 18,
+    "deciding_checks": 24,
+    "deciding_checks_deleted": 24,
+    "deletions_of_deciding_checks_not_detected": {
+     "O_C": 3,
+     "O_S": 3,
+     "O_T": 10,
+     "O_V": 3,
+     "O_Vfc": 8,
+     "suite": 3,
+     "whole suite": 3
+    },
+    "target_of_no_case": {
+     "checks": 10,
+     "deleted": 10,
+     "list": [
+      "jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#2",
+      "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+      "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+      "jose.rfc7515.jws.JsonWebSignature.deserialize_compact#1",
+      "jose.rfc7516.jwe.JsonWebEncryption._validate_private_headers#1",
+      "jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact#1",
+      "jose.rfc7516.jwe.JsonWebEncryption.get_header_alg#2",
+      "jose.rfc7519.claims.BaseClaims._validate_claim_value#1",
+      "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2",
+      "jose.util.ensure_dict#1"
+     ],
+     "not_detected": {
+      "O_C": 3,
+      "O_S": 3,
+      "O_T": 10,
+      "O_V": 3,
+      "O_Vfc": 6,
+      "suite": 3,
+      "whole suite": 3
+     }
+    },
+    "target_only_of_cases_not_decided": {
+     "checks": 0,
+     "deleted": 0,
+     "list": [],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 0,
+      "O_Vfc": 0,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "targeted_deciding": {
+     "checks": 14,
+     "deleted": 14,
+     "list": [
+      "jose.rfc7515.jws.JsonWebSignature._reject_unprotected_crit#1",
+      "jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#2",
+      "jose.rfc7515.jws.JsonWebSignature.deserialize_compact#2",
+      "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+      "jose.rfc7515.jws.JsonWebSignature.deserialize_json#2",
+      "jose.rfc7516.jwe.JsonWebEncryption.get_header_enc#2",
+      "jose.rfc7519.claims.BaseClaims._validate_essential_claims#1",
+      "jose.rfc7519.claims.JWTClaims.validate_aud#1",
+      "jose.rfc7519.claims.JWTClaims.validate_exp#1",
+      "jose.rfc7519.claims.JWTClaims.validate_exp#2",
+      "jose.rfc7519.claims.JWTClaims.validate_iat#1",
+      "jose.rfc7519.claims.JWTClaims.validate_iat#2",
+      "jose.rfc7519.claims.JWTClaims.validate_nbf#1",
+      "jose.rfc7519.claims.JWTClaims.validate_nbf#2"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 0,
+      "O_Vfc": 2,
+      "suite": 0,
+      "whole suite": 0
+     }
+    }
+   },
+   "item2_fire_never_decide": {
+    "checks": 0,
+    "deleted": 0,
+    "list": [],
+    "not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0,
+     "suite": 0,
+     "whole suite": 0
+    }
+   },
+   "item3_non_check_sites": {
+    "by_site_kind": {
+     "other raise": 6
+    },
+    "cases": [
+     {
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#1",
+      "class": "authlib.jose.errors.DecodeError",
+      "file": "authlib/jose/util.py",
+      "index": 0,
+      "line": 33,
+      "listed_class": "?error_cls",
+      "listed_guard": "except (TypeError, binascii.Error) as exc",
+      "listed_reason": "not a rejection class",
+      "site_kind": "other raise",
+      "statement": "raise error_cls(msg) from exc",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input"
+     },
+     {
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#2",
+      "class": "authlib.jose.errors.DecodeError",
+      "file": "authlib/jose/util.py",
+      "index": 0,
+      "line": 18,
+      "listed_class": "?error_cls",
+      "listed_guard": "except ValueError as e",
+      "listed_reason": "not a rejection class",
+      "site_kind": "other raise",
+      "statement": "raise error_cls(f\"Invalid header string: {e}\") from e",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input"
+     },
+     {
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#3",
+      "class": "authlib.jose.errors.DecodeError",
+      "file": "authlib/jose/util.py",
+      "index": 0,
+      "line": 21,
+      "listed_class": "?error_cls",
+      "listed_guard": "not isinstance(header, dict)",
+      "listed_reason": "not a rejection class",
+      "site_kind": "other raise",
+      "statement": "raise error_cls(\"Header must be a json object\")",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input"
+     },
+     {
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#4",
+      "class": "authlib.jose.errors.DecodeError",
+      "file": "authlib/jose/util.py",
+      "index": 0,
+      "line": 33,
+      "listed_class": "?error_cls",
+      "listed_guard": "except (TypeError, binascii.Error) as exc",
+      "listed_reason": "not a rejection class",
+      "site_kind": "other raise",
+      "statement": "raise error_cls(msg) from exc",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input"
+     },
+     {
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#5",
+      "class": "authlib.jose.errors.DecodeError",
+      "file": "authlib/jose/util.py",
+      "index": 0,
+      "line": 33,
+      "listed_class": "?error_cls",
+      "listed_guard": "except (TypeError, binascii.Error) as exc",
+      "listed_reason": "not a rejection class",
+      "site_kind": "other raise",
+      "statement": "raise error_cls(msg) from exc",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input"
+     },
+     {
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#6",
+      "class": "authlib.jose.errors.DecodeError",
+      "file": "authlib/jose/util.py",
+      "index": 0,
+      "line": 33,
+      "listed_class": "?error_cls",
+      "listed_guard": "except (TypeError, binascii.Error) as exc",
+      "listed_reason": "not a rejection class",
+      "site_kind": "other raise",
+      "statement": "raise error_cls(msg) from exc",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input"
+     }
+    ],
+    "count": 6,
+    "pinning_denominators": {
+     "cases_of_the_study": 48,
+     "class_only_cases_of_the_study": 46,
+     "class_only_cases_without_deciding_check": 6,
+     "class_only_pinning_cases": 40,
+     "not_counted_deciding_check_not_deleted": 0,
+     "not_counted_no_deciding_check": 6,
+     "pinning_rows": 42,
+     "summary_pinning_cases": 42
+    }
+   },
+   "item4_flags": {
+    "class_C_own_test_passes_without_deciding_check": [
+     {
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#3",
+      "class_after_deletion": "authlib.jose.errors.DecodeError",
+      "deciding_check": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+      "index": 0,
+      "reading_class": "C",
+      "site_after_deletion": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+      "target": "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "tier": "name",
+      "what_the_case_does": "same class, another check"
+     },
+     {
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#4",
+      "class_after_deletion": "authlib.jose.errors.DecodeError",
+      "deciding_check": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+      "index": 0,
+      "reading_class": "C",
+      "site_after_deletion": "other raise (authlib/jose/util.py:18 raise error_cls(f\"Invalid header string: {e}\") from e)",
+      "target": "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "tier": "name",
+      "what_the_case_does": "same class, other raise"
+     }
+    ],
+    "flags_own_test_passes_without_deciding_check": [
+     {
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#3",
+      "class_after_deletion": "authlib.jose.errors.DecodeError",
+      "deciding_check": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+      "index": 0,
+      "reading_class": "C",
+      "site_after_deletion": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+      "target": "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "tier": "name",
+      "what_the_case_does": "same class, another check"
+     },
+     {
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#4",
+      "class_after_deletion": "authlib.jose.errors.DecodeError",
+      "deciding_check": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+      "index": 0,
+      "reading_class": "C",
+      "site_after_deletion": "other raise (authlib/jose/util.py:18 raise error_cls(f\"Invalid header string: {e}\") from e)",
+      "target": "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "tier": "name",
+      "what_the_case_does": "same class, other raise"
+     }
+    ],
+    "reading": "readings/authlib/FLAGS.md",
+    "tiers": {
+     "assertion": {
+      "cases_with_target": 5,
+      "decided_by_target": 5,
+      "flags": 0,
+      "flags_by_class": {
+       "A": 0,
+       "B": 0,
+       "C": 0,
+       "D": 0
+      }
+     },
+     "name": {
+      "cases_with_target": 25,
+      "decided_by_target": 13,
+      "flags": 12,
+      "flags_by_class": {
+       "A": 0,
+       "B": 0,
+       "C": 12,
+       "D": 0
+      }
+     }
+    }
+   },
+   "item5_flags_and_pinning_passes": {
+    "flags": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jwe.py::test_deserialize_json_fails_if_unprotected_header_contains_unknown_field_while_private_fields_restricted#0",
+      "deciding_check": "jose.rfc7516.jwe.JsonWebEncryption._validate_private_headers#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "jose.rfc7515.jws.JsonWebSignature._reject_unprotected_crit#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jwe.py::test_deserialize_json_fails_if_unprotected_header_contains_unknown_field_while_private_fields_restricted",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#0",
+      "deciding_check": "jose.util.ensure_dict#1",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#1",
+      "deciding_check": "jose.util.ensure_dict#1",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#3",
+      "deciding_check": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#4",
+      "deciding_check": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#0",
+      "deciding_check": "jose.rfc7515.jws.JsonWebSignature.deserialize_compact#1",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#1",
+      "deciding_check": "other raise (authlib/jose/util.py:33 raise error_cls(msg) from exc)",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#2",
+      "deciding_check": "other raise (authlib/jose/util.py:18 raise error_cls(f\"Invalid header string: {e}\") from e)",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#3",
+      "deciding_check": "other raise (authlib/jose/util.py:21 raise error_cls(\"Header must be a json object\"))",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#4",
+      "deciding_check": "other raise (authlib/jose/util.py:33 raise error_cls(msg) from exc)",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#5",
+      "deciding_check": "other raise (authlib/jose/util.py:33 raise error_cls(msg) from exc)",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_invalid_input#6",
+      "deciding_check": "other raise (authlib/jose/util.py:33 raise error_cls(msg) from exc)",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "jose.rfc7519.jwt.JsonWebToken.decode#1",
+      "target_fired": "no",
+      "test_node": "tests/jose/test_jws.py::test_invalid_input",
+      "tier": "name"
+     }
+    ],
+    "pinning_passes": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#3",
+      "class_after_deletion": "authlib.jose.errors.DecodeError",
+      "deleted_check": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+      "index": 0,
+      "site_after_deletion": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "what_the_case_does": "same class, another check"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jws.py::test_fail_deserialize_json#4",
+      "class_after_deletion": "authlib.jose.errors.DecodeError",
+      "deleted_check": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+      "index": 0,
+      "site_after_deletion": "other raise (authlib/jose/util.py:18 raise error_cls(f\"Invalid header string: {e}\") from e)",
+      "test_node": "tests/jose/test_jws.py::test_fail_deserialize_json",
+      "what_the_case_does": "same class, other raise"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jose/test_jwt.py::test_validate_expected_issuer_received_None#0",
+      "class_after_deletion": "authlib.jose.errors.InvalidClaimError",
+      "deleted_check": "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2",
+      "index": 0,
+      "site_after_deletion": "jose.rfc7519.claims.BaseClaims._validate_claim_value#1",
+      "test_node": "tests/jose/test_jwt.py::test_validate_expected_issuer_received_None",
+      "what_the_case_does": "same class, another check"
+     }
+    ]
+   },
+   "item6_in_handler": {
+    "cases_decided": 4,
+    "checks": 4,
+    "deciding": 3,
+    "deciding_list": [
+     {
+      "cases_decided": 1,
+      "check": "jose.rfc7515.jws.JsonWebSignature.deserialize_compact#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact#1"
+     },
+     {
+      "cases_decided": 2,
+      "check": "jose.util.ensure_dict#1"
+     }
+    ],
+    "deleted": 3
+   },
+   "reproduced": {
+    "cases": 48,
+    "cases_decided_by_target": 18,
+    "cases_with_target": 30,
+    "checks_deciding": 24,
+    "flags": 12,
+    "not_detected": {
+     "O_C": 3,
+     "O_T": 10,
+     "O_V": 3,
+     "O_Vfc": 8,
+     "whole suite": 3
+    }
+   }
+  },
+  "google-auth": {
+   "deposited": {
+    "cases": 22,
+    "cases_decided_by_target": 13,
+    "cases_with_target": 15,
+    "checks_deciding": 13,
+    "flags": 2,
+    "not_detected": {
+     "O_C": 1,
+     "O_T": 6,
+     "O_V": 2,
+     "O_Vfc": 9,
+     "whole suite": 0
+    }
+   },
+   "item1_ot_denominator": {
+    "cases_decided_by_their_target": 13,
+    "deciding_checks": 13,
+    "deciding_checks_deleted": 13,
+    "deletions_of_deciding_checks_not_detected": {
+     "O_C": 1,
+     "O_S": 0,
+     "O_T": 6,
+     "O_V": 2,
+     "O_Vfc": 9,
+     "suite": 0,
+     "whole suite": 0
+    },
+    "target_of_no_case": {
+     "checks": 5,
+     "deleted": 5,
+     "list": [
+      "auth.jwt._decode_jwt_segment#1",
+      "auth.jwt._verify_iat_and_exp#1",
+      "auth.jwt.decode#1",
+      "auth.jwt.decode#2",
+      "auth.jwt.decode#3"
+     ],
+     "not_detected": {
+      "O_C": 1,
+      "O_S": 0,
+      "O_T": 5,
+      "O_V": 1,
+      "O_Vfc": 5,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "target_only_of_cases_not_decided": {
+     "checks": 1,
+     "deleted": 1,
+     "list": [
+      "auth.jwt.decode#5"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 1,
+      "O_V": 0,
+      "O_Vfc": 0,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "targeted_deciding": {
+     "checks": 7,
+     "deleted": 7,
+     "list": [
+      "auth.jwt._unverified_decode#1",
+      "auth.jwt._unverified_decode#2",
+      "auth.jwt._unverified_decode#3",
+      "auth.jwt._verify_iat_and_exp#2",
+      "auth.jwt._verify_iat_and_exp#3",
+      "auth.jwt.decode#4",
+      "auth.jwt.decode#6"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 1,
+      "O_Vfc": 4,
+      "suite": 0,
+      "whole suite": 0
+     }
+    }
+   },
+   "item2_fire_never_decide": {
+    "checks": 0,
+    "deleted": 0,
+    "list": [],
+    "not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0,
+     "suite": 0,
+     "whole suite": 0
+    }
+   },
+   "item3_non_check_sites": {
+    "by_site_kind": {},
+    "cases": [],
+    "count": 0,
+    "pinning_denominators": {
+     "cases_of_the_study": 22,
+     "class_only_cases_of_the_study": 0,
+     "class_only_cases_without_deciding_check": 0,
+     "class_only_pinning_cases": 0,
+     "not_counted_deciding_check_not_deleted": 0,
+     "not_counted_no_deciding_check": 0,
+     "pinning_rows": 22,
+     "summary_pinning_cases": 22
+    }
+   },
+   "item4_flags": {
+    "class_C_own_test_passes_without_deciding_check": [],
+    "flags_own_test_passes_without_deciding_check": [],
+    "reading": "readings/google-auth/FLAGS.md",
+    "tiers": {
+     "assertion": {
+      "cases_with_target": 0,
+      "decided_by_target": 0,
+      "flags": 0,
+      "flags_by_class": {
+       "A": 0,
+       "B": 0,
+       "C": 0,
+       "D": 0
+      }
+     },
+     "name": {
+      "cases_with_target": 15,
+      "decided_by_target": 13,
+      "flags": 2,
+      "flags_by_class": {
+       "A": 0,
+       "B": 0,
+       "C": 2,
+       "D": 0
+      }
+     }
+    }
+   },
+   "item5_flags_and_pinning_passes": {
+    "flags": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "match",
+         "Can\\'t parse segment"
+        ]
+       ],
+       "post_unparsed": []
+      },
+      "asserts": "message",
+      "block": "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+      "deciding_check": "auth.jwt._decode_jwt_segment#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "auth.jwt.decode#5",
+      "target_fired": "no",
+      "test_node": "tests/test_jwt.py::test_decode_bad_token_not_json",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "match",
+         "Certificate for key id 1 not found"
+        ]
+       ],
+       "post_unparsed": []
+      },
+      "asserts": "message",
+      "block": "tests/test_jwt.py::test_decode_no_cert#0",
+      "deciding_check": "auth.jwt.decode#3",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "auth.crypt._python_rsa.RSASigner.from_string#2",
+      "target_fired": "no",
+      "test_node": "tests/test_jwt.py::test_decode_no_cert",
+      "tier": "name"
+     }
+    ],
+    "pinning_passes": []
+   },
+   "item6_in_handler": {
+    "cases_decided": 9,
+    "checks": 6,
+    "deciding": 3,
+    "deciding_list": [
+     {
+      "cases_decided": 1,
+      "check": "auth.jwt._decode_jwt_segment#1"
+     },
+     {
+      "cases_decided": 2,
+      "check": "auth.jwt.decode#3"
+     },
+     {
+      "cases_decided": 6,
+      "check": "auth.jwt.decode#4"
+     }
+    ],
+    "deleted": 3
+   },
+   "reproduced": {
+    "cases": 22,
+    "cases_decided_by_target": 13,
+    "cases_with_target": 15,
+    "checks_deciding": 13,
+    "flags": 2,
+    "not_detected": {
+     "O_C": 1,
+     "O_T": 6,
+     "O_V": 2,
+     "O_Vfc": 9,
+     "whole suite": 0
+    }
+   }
+  },
+  "joserfc": {
+   "deposited": {
+    "cases": 190,
+    "cases_decided_by_target": 71,
+    "cases_with_target": 131,
+    "checks_deciding": 53,
+    "flags": 60,
+    "not_detected": {
+     "O_C": 2,
+     "O_T": 32,
+     "O_V": 12,
+     "O_Vfc": 29,
+     "whole suite": 2
+    }
+   },
+   "item1_ot_denominator": {
+    "cases_decided_by_their_target": 71,
+    "deciding_checks": 53,
+    "deciding_checks_deleted": 53,
+    "deletions_of_deciding_checks_not_detected": {
+     "O_C": 2,
+     "O_S": 2,
+     "O_T": 32,
+     "O_V": 12,
+     "O_Vfc": 29,
+     "suite": 2,
+     "whole suite": 2
+    },
+    "target_of_no_case": {
+     "checks": 32,
+     "deleted": 32,
+     "list": [
+      "_rfc7515.compact.decode_header#1",
+      "_rfc7515.compact.decode_header#2",
+      "_rfc7515.registry.JWSRegistry.get_alg#2",
+      "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+      "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+      "_rfc7516.message._perform_decrypt#1",
+      "_rfc7516.message.perform_decrypt#1",
+      "_rfc7516.models.KeyManagement.check_key_type#1",
+      "_rfc7516.registry.JWERegistry._check_algorithm#3",
+      "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+      "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+      "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+      "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+      "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+      "_rfc7519.claims.JWTClaimsRegistry.validate_aud#1",
+      "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+      "_rfc7519.claims.JWTClaimsRegistry.validate_exp#2",
+      "_rfc7519.claims.JWTClaimsRegistry.validate_iat#1",
+      "_rfc7519.claims.JWTClaimsRegistry.validate_iss#1",
+      "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+      "_rfc7519.claims.JWTClaimsRegistry.validate_sub#1",
+      "_rfc7797.compact.extract_rfc7515_compact#1",
+      "_rfc7797.compact.extract_rfc7515_compact#2",
+      "_rfc7797.json.extract_general_json#1",
+      "_rfc7797.json.extract_rfc7797_json#1",
+      "_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1",
+      "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1",
+      "jws.validate_compact#1",
+      "registry.check_registry_header#2",
+      "registry.reject_unprotected_crit_header#1",
+      "registry.reject_unprotected_crit_header#2"
+     ],
+     "not_detected": {
+      "O_C": 2,
+      "O_S": 2,
+      "O_T": 32,
+      "O_V": 7,
+      "O_Vfc": 18,
+      "suite": 2,
+      "whole suite": 2
+     }
+    },
+    "target_only_of_cases_not_decided": {
+     "checks": 0,
+     "deleted": 0,
+     "list": [],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 0,
+      "O_Vfc": 0,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "targeted_deciding": {
+     "checks": 21,
+     "deleted": 21,
+     "list": [
+      "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+      "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+      "_rfc7516.compact.extract_compact#1",
+      "_rfc7516.compact.extract_compact#2",
+      "_rfc7516.compact.extract_compact#3",
+      "_rfc7516.json.__extract_segments#1",
+      "_rfc7516.message.decrypt_recipient#2",
+      "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+      "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+      "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+      "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+      "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+      "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+      "_rfc7518.jwe_zips.DeflateZipModel.decompress#1",
+      "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+      "_rfc7797.json._is_payload_base64_encoded#1",
+      "_rfc7797.json._validate_general_members#1",
+      "jws.deserialize_compact#1",
+      "jws.deserialize_json~3#1",
+      "jwt.decode#1"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 5,
+      "O_Vfc": 11,
+      "suite": 0,
+      "whole suite": 0
+     }
+    }
+   },
+   "item2_fire_never_decide": {
+    "checks": 2,
+    "deleted": 2,
+    "list": [
+     "_rfc7518.ec_key.ECKey.exchange_derive_key#1",
+     "_rfc8037.okp_key.OKPKey.exchange_derive_key#1"
+    ],
+    "not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 2,
+     "O_V": 0,
+     "O_Vfc": 2,
+     "suite": 0,
+     "whole suite": 0
+    }
+   },
+   "item3_non_check_sites": {
+    "by_site_kind": {},
+    "cases": [],
+    "count": 0,
+    "pinning_denominators": {
+     "cases_of_the_study": 190,
+     "class_only_cases_of_the_study": 168,
+     "class_only_cases_without_deciding_check": 0,
+     "class_only_pinning_cases": 168,
+     "not_counted_deciding_check_not_deleted": 0,
+     "not_counted_no_deciding_check": 0,
+     "pinning_rows": 190,
+     "summary_pinning_cases": 190
+    }
+   },
+   "item4_flags": {
+    "class_C_own_test_passes_without_deciding_check": [],
+    "flags_own_test_passes_without_deciding_check": [
+     {
+      "block": "tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0",
+      "class_after_deletion": "joserfc.errors.ExceededSizeError",
+      "deciding_check": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+      "index": 0,
+      "reading_class": "A",
+      "site_after_deletion": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+      "target": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+      "test_node": "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size",
+      "tier": "name",
+      "what_the_case_does": "same class, another check"
+     },
+     {
+      "block": "tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0",
+      "class_after_deletion": "joserfc.errors.ExceededSizeError",
+      "deciding_check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+      "index": 0,
+      "reading_class": "A",
+      "site_after_deletion": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+      "target": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+      "test_node": "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error",
+      "tier": "name",
+      "what_the_case_does": "same class, another check"
+     },
+     {
+      "block": "tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1",
+      "class_after_deletion": "joserfc.errors.UnsupportedHeaderError",
+      "deciding_check": "registry.reject_unprotected_crit_header#2",
+      "index": 0,
+      "reading_class": "A",
+      "site_after_deletion": "_rfc7797.json._is_payload_base64_encoded#1",
+      "target": "_rfc7797.json._is_payload_base64_encoded#1",
+      "test_node": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected",
+      "tier": "name",
+      "what_the_case_does": "same class, another check"
+     }
+    ],
+    "reading": "readings/joserfc/FLAGS.md",
+    "tiers": {
+     "assertion": {
+      "cases_with_target": 99,
+      "decided_by_target": 46,
+      "flags": 53,
+      "flags_by_class": {
+       "A": 0,
+       "B": 0,
+       "C": 53,
+       "D": 0
+      }
+     },
+     "name": {
+      "cases_with_target": 32,
+      "decided_by_target": 25,
+      "flags": 7,
+      "flags_by_class": {
+       "A": 3,
+       "B": 0,
+       "C": 4,
+       "D": 0
+      }
+     }
+    }
+   },
+   "item5_flags_and_pinning_passes": {
+    "flags": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0",
+      "deciding_check": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+      "target_fired": "no",
+      "test_node": "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwe/test_json.py::TestJWEJSON.test_decode_multiple_recipients#1",
+      "deciding_check": "_rfc7516.message._perform_decrypt#1",
+      "index": 0,
+      "own_test_without_target": "target not deleted",
+      "target": "_rfc7516.message._perform_decrypt#2",
+      "target_fired": "no",
+      "test_node": "tests/jwe/test_json.py::TestJWEJSON::test_decode_multiple_recipients",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jws/test_compact.py::TestCompact.test_no_invalid_header#0",
+      "deciding_check": "_rfc7515.compact.decode_header#2",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7516.compact.extract_compact#3",
+      "target_fired": "no",
+      "test_node": "tests/jws/test_compact.py::TestCompact::test_no_invalid_header",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jws/test_compact.py::TestCompact.test_no_invalid_header#1",
+      "deciding_check": "_rfc7515.compact.decode_header#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7516.compact.extract_compact#1",
+      "target_fired": "no",
+      "test_node": "tests/jws/test_compact.py::TestCompact::test_no_invalid_header",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0",
+      "deciding_check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+      "target_fired": "no",
+      "test_node": "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1",
+      "deciding_check": "registry.reject_unprotected_crit_header#2",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "_rfc7797.json._is_payload_base64_encoded#1",
+      "target_fired": "no",
+      "test_node": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jws/test_rfc7797.py::TestRFC7797.test_compact_invalid_value_length#0",
+      "deciding_check": "_rfc7797.compact.extract_rfc7515_compact#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7516.compact.extract_compact#3",
+      "target_fired": "no",
+      "test_node": "tests/jws/test_rfc7797.py::TestRFC7797::test_compact_invalid_value_length",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jws/test_rfc7797.py::TestRFC7797.test_compact_missing_alg#0",
+      "deciding_check": "_rfc7515.compact.decode_header#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7516.compact.extract_compact#1",
+      "target_fired": "no",
+      "test_node": "tests/jws/test_rfc7797.py::TestRFC7797::test_compact_missing_alg",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jws/test_rfc7797.py::TestRFC7797.test_invalid_header#0",
+      "deciding_check": "_rfc7515.compact.decode_header#2",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7516.compact.extract_compact#3",
+      "target_fired": "no",
+      "test_node": "tests/jws/test_rfc7797.py::TestRFC7797::test_invalid_header",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_aud#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_aud",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#1",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_aud#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_aud",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_aud#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_aud",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iss#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_iss",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#1",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iss#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_iss",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iss#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_iss",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "iss"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'iss'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#3",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iss#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_iss",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#1",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 1,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 10,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 11,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 12,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 13,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 14,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 2,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 3,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 4,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 5,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 6,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 7,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 8,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [
+        [
+         "attr_eq",
+         "claim",
+         "jti"
+        ]
+       ],
+       "post_unparsed": [
+        "self.assertIn(\"'jti'\", cm.exception.description)"
+       ]
+      },
+      "asserts": "message",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 9,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#6",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_jti#1",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_jti",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_sub#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_sub",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#1",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_sub#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_sub",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_sub#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_sub",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#3",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_sub#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_claim_sub",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_decode_then_validate_a_token_that_never_expires#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_decode_then_validate_a_token_that_never_expires",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_int_claims",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#1",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_int_claims",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#2",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iat#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_int_claims",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#4",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_int_claims",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_iat#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iat#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_iat",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_nbf#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_nbf",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+      "index": 1,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iat#1",
+      "index": 10,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iat#1",
+      "index": 11,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iat#1",
+      "index": 12,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iat#1",
+      "index": 13,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_iat#1",
+      "index": 14,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+      "index": 2,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+      "index": 3,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_exp#1",
+      "index": 4,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+      "index": 5,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+      "index": 6,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+      "index": 7,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+      "index": 8,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+      "deciding_check": "_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1",
+      "index": 9,
+      "own_test_without_target": "passes",
+      "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+      "target_fired": "no",
+      "test_node": "tests/jwt/test_claims.py::TestJWTClaims::test_validate_time_claims_must_be_finite",
+      "tier": "assertion"
+     }
+    ],
+    "pinning_passes": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0",
+      "class_after_deletion": "joserfc.errors.ExceededSizeError",
+      "deleted_check": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+      "index": 0,
+      "site_after_deletion": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+      "test_node": "tests/jwe/test_compact.py::TestJWECompact::test_ciphertext_exceeds_size",
+      "what_the_case_does": "same class, another check"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0",
+      "class_after_deletion": "joserfc.errors.ExceededSizeError",
+      "deleted_check": "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+      "index": 0,
+      "site_after_deletion": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+      "test_node": "tests/jwe/test_compact.py::TestJWECompact::test_header_exceeds_size",
+      "what_the_case_does": "same class, another check"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0",
+      "class_after_deletion": "joserfc.errors.ExceededSizeError",
+      "deleted_check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+      "index": 0,
+      "site_after_deletion": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+      "test_node": "tests/jws/test_compact.py::TestCompact::test_payload_exceeded_size_error",
+      "what_the_case_does": "same class, another check"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1",
+      "class_after_deletion": "joserfc.errors.UnsupportedHeaderError",
+      "deleted_check": "registry.reject_unprotected_crit_header#2",
+      "index": 0,
+      "site_after_deletion": "_rfc7797.json._is_payload_base64_encoded#1",
+      "test_node": "tests/jws/test_json.py::TestJSON::test_b64_must_be_protected",
+      "what_the_case_does": "same class, another check"
+     }
+    ]
+   },
+   "item6_in_handler": {
+    "cases_decided": 32,
+    "checks": 15,
+    "deciding": 12,
+    "deciding_list": [
+     {
+      "cases_decided": 2,
+      "check": "_rfc7515.compact.decode_header#2"
+     },
+     {
+      "cases_decided": 1,
+      "check": "_rfc7516.compact.extract_compact#3"
+     },
+     {
+      "cases_decided": 12,
+      "check": "_rfc7516.message.perform_decrypt#1"
+     },
+     {
+      "cases_decided": 4,
+      "check": "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "_rfc7518.jwe_encs.GCMEncModel.decrypt#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "_rfc7797.compact.extract_rfc7515_compact#2"
+     },
+     {
+      "cases_decided": 1,
+      "check": "_rfc7797.json.extract_general_json#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "_rfc7797.json.extract_rfc7797_json#1"
+     },
+     {
+      "cases_decided": 6,
+      "check": "jwt.decode#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "registry.check_registry_header#2"
+     }
+    ],
+    "deleted": 12
+   },
+   "reproduced": {
+    "cases": 190,
+    "cases_decided_by_target": 71,
+    "cases_with_target": 131,
+    "checks_deciding": 53,
+    "flags": 60,
+    "not_detected": {
+     "O_C": 2,
+     "O_T": 32,
+     "O_V": 12,
+     "O_Vfc": 29,
+     "whole suite": 2
+    }
+   }
+  },
+  "jwcrypto": {
+   "deposited": {
+    "cases": 42,
+    "cases_decided_by_target": 10,
+    "cases_with_target": 14,
+    "checks_deciding": 16,
+    "flags": 4,
+    "not_detected": {
+     "O_C": 0,
+     "O_T": 11,
+     "O_V": 4,
+     "O_Vfc": 6,
+     "whole suite": 0
+    }
+   },
+   "item1_ot_denominator": {
+    "cases_decided_by_their_target": 10,
+    "deciding_checks": 16,
+    "deciding_checks_deleted": 16,
+    "deletions_of_deciding_checks_not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 11,
+     "O_V": 4,
+     "O_Vfc": 6,
+     "suite": 0,
+     "whole suite": 0
+    },
+    "target_of_no_case": {
+     "checks": 12,
+     "deleted": 12,
+     "list": [
+      "jwe.JWE.decrypt#2",
+      "jwe.JWE.decrypt#3",
+      "jwe.JWE.deserialize#2",
+      "jws.JWS.deserialize#2",
+      "jws.JWS.verify#2",
+      "jws.JWS.verify#3",
+      "jwt.JWT._check_array_or_string_claim#1",
+      "jwt.JWT._check_provided_claims#3",
+      "jwt.JWT._check_provided_claims#4",
+      "jwt.JWT._check_provided_claims#6",
+      "jwt.JWT._check_provided_claims#7",
+      "jwt.JWT._check_string_claim#1"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 11,
+      "O_V": 3,
+      "O_Vfc": 4,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "target_only_of_cases_not_decided": {
+     "checks": 0,
+     "deleted": 0,
+     "list": [],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 0,
+      "O_Vfc": 0,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "targeted_deciding": {
+     "checks": 4,
+     "deleted": 4,
+     "list": [
+      "jwt.JWT._check_exp#1",
+      "jwt.JWT._check_provided_claims#2",
+      "jwt.JWT._check_provided_claims#5",
+      "jwt.JWT.validate#1"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 1,
+      "O_Vfc": 2,
+      "suite": 0,
+      "whole suite": 0
+     }
+    }
+   },
+   "item2_fire_never_decide": {
+    "checks": 17,
+    "deleted": 17,
+    "list": [
+     "jwa._AesKw._get_key#2",
+     "jwa._EcdhEs.unwrap#1",
+     "jwa._RSA._check_key#1",
+     "jwa._RSA.unwrap#1",
+     "jwe.JWE._decrypt#1",
+     "jwe.JWE._decrypt#2",
+     "jwe.JWE._decrypt#3",
+     "jwe.JWE._decrypt#4",
+     "jwe.JWE._decrypt#5",
+     "jwe.JWE._jwa_enc#1",
+     "jwe.JWE._jwa_keymgmt#1",
+     "jwe.JWE.deserialize#1",
+     "jws.JWS._merge_check_headers#1",
+     "jws.JWS._verify#3",
+     "jws.JWS._verify#7",
+     "jws.JWS.deserialize#1",
+     "jws.JWSCore.verify#1"
+    ],
+    "not_detected": {
+     "O_C": 7,
+     "O_S": 7,
+     "O_T": 16,
+     "O_V": 8,
+     "O_Vfc": 8,
+     "suite": 7,
+     "whole suite": 7
+    }
+   },
+   "item3_non_check_sites": {
+    "by_site_kind": {},
+    "cases": [],
+    "count": 0,
+    "pinning_denominators": {
+     "cases_of_the_study": 42,
+     "class_only_cases_of_the_study": 42,
+     "class_only_cases_without_deciding_check": 0,
+     "class_only_pinning_cases": 42,
+     "not_counted_deciding_check_not_deleted": 0,
+     "not_counted_no_deciding_check": 0,
+     "pinning_rows": 42,
+     "summary_pinning_cases": 42
+    }
+   },
+   "item4_flags": {
+    "class_C_own_test_passes_without_deciding_check": [],
+    "flags_own_test_passes_without_deciding_check": [],
+    "reading": "readings/jwcrypto/FLAGS.md",
+    "tiers": {
+     "assertion": {
+      "cases_with_target": 6,
+      "decided_by_target": 6,
+      "flags": 0,
+      "flags_by_class": {
+       "A": 0,
+       "B": 0,
+       "C": 0,
+       "D": 0
+      }
+     },
+     "name": {
+      "cases_with_target": 8,
+      "decided_by_target": 4,
+      "flags": 4,
+      "flags_by_class": {
+       "A": 0,
+       "B": 3,
+       "C": 1,
+       "D": 0
+      }
+     }
+    }
+   },
+   "item5_flags_and_pinning_passes": {
+    "flags": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#0",
+      "deciding_check": "jwe.JWE.decrypt#3",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "jwe.JWE._decrypt#4",
+      "target_fired": "yes",
+      "test_node": "jwcrypto/tests.py::ConformanceTests::test_jwe_decompression_max",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#1",
+      "deciding_check": "jwe.JWE.decrypt#3",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "jwe.JWE._decrypt#4",
+      "target_fired": "no",
+      "test_node": "jwcrypto/tests.py::ConformanceTests::test_jwe_decompression_max",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#2",
+      "deciding_check": "jwe.JWE.decrypt#3",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "jwe.JWE._decrypt#4",
+      "target_fired": "yes",
+      "test_node": "jwcrypto/tests.py::ConformanceTests::test_jwe_decompression_max",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "jwcrypto/tests.py::TestJWE.test_bare_ecdh_with_ek_fails#0",
+      "deciding_check": "jwe.JWE.decrypt#3",
+      "index": 0,
+      "own_test_without_target": "fails",
+      "target": "jwa._EcdhEs.unwrap#1",
+      "target_fired": "yes",
+      "test_node": "jwcrypto/tests.py::TestJWE::test_bare_ecdh_with_ek_fails",
+      "tier": "name"
+     }
+    ],
+    "pinning_passes": []
+   },
+   "item6_in_handler": {
+    "cases_decided": 4,
+    "checks": 19,
+    "deciding": 2,
+    "deciding_list": [
+     {
+      "cases_decided": 2,
+      "check": "jwe.JWE.deserialize#2"
+     },
+     {
+      "cases_decided": 2,
+      "check": "jws.JWS.deserialize#2"
+     }
+    ],
+    "deleted": 3
+   },
+   "reproduced": {
+    "cases": 42,
+    "cases_decided_by_target": 10,
+    "cases_with_target": 14,
+    "checks_deciding": 16,
+    "flags": 4,
+    "not_detected": {
+     "O_C": 0,
+     "O_T": 11,
+     "O_V": 4,
+     "O_Vfc": 6,
+     "whole suite": 0
+    }
+   }
+  },
+  "oauthlib": {
+   "deposited": {
+    "cases": 142,
+    "cases_decided_by_target": 43,
+    "cases_with_target": 53,
+    "checks_deciding": 47,
+    "flags": 10,
+    "not_detected": {
+     "O_C": 0,
+     "O_T": 34,
+     "O_V": 7,
+     "O_Vfc": 11,
+     "whole suite": 0
+    }
+   },
+   "item1_ot_denominator": {
+    "cases_decided_by_their_target": 43,
+    "deciding_checks": 47,
+    "deciding_checks_deleted": 47,
+    "deletions_of_deciding_checks_not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 34,
+     "O_V": 7,
+     "O_Vfc": 11,
+     "suite": 0,
+     "whole suite": 0
+    },
+    "target_of_no_case": {
+     "checks": 33,
+     "deleted": 33,
+     "list": [
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#6",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#7",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+      "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+      "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+      "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+      "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+      "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+      "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+      "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+      "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+      "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4",
+      "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+      "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#6",
+      "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#7",
+      "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+      "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+      "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#3",
+      "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#1",
+      "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#2",
+      "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#3",
+      "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#4",
+      "openid.connect.core.grant_types.hybrid.HybridGrant.openid_authorization_validator#1",
+      "openid.connect.core.grant_types.implicit.ImplicitGrant.openid_authorization_validator#1"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 33,
+      "O_V": 4,
+      "O_Vfc": 7,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "target_only_of_cases_not_decided": {
+     "checks": 1,
+     "deleted": 1,
+     "list": [
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 1,
+      "O_V": 0,
+      "O_Vfc": 0,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "targeted_deciding": {
+     "checks": 13,
+     "deleted": 13,
+     "list": [
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+      "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+      "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+      "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1",
+      "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+      "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+      "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+      "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4",
+      "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+      "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 3,
+      "O_Vfc": 4,
+      "suite": 0,
+      "whole suite": 0
+     }
+    }
+   },
+   "item2_fire_never_decide": {
+    "checks": 0,
+    "deleted": 0,
+    "list": [],
+    "not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0,
+     "suite": 0,
+     "whole suite": 0
+    }
+   },
+   "item3_non_check_sites": {
+    "by_site_kind": {},
+    "cases": [],
+    "count": 0,
+    "pinning_denominators": {
+     "cases_of_the_study": 142,
+     "class_only_cases_of_the_study": 140,
+     "class_only_cases_without_deciding_check": 0,
+     "class_only_pinning_cases": 140,
+     "not_counted_deciding_check_not_deleted": 0,
+     "not_counted_no_deciding_check": 0,
+     "pinning_rows": 142,
+     "summary_pinning_cases": 142
+    }
+   },
+   "item4_flags": {
+    "class_C_own_test_passes_without_deciding_check": [],
+    "flags_own_test_passes_without_deciding_check": [],
+    "reading": "readings/oauthlib/FLAGS.md",
+    "tiers": {
+     "assertion": {
+      "cases_with_target": 25,
+      "decided_by_target": 25,
+      "flags": 0,
+      "flags_by_class": {
+       "A": 0,
+       "B": 0,
+       "C": 0,
+       "D": 0
+      }
+     },
+     "name": {
+      "cases_with_target": 28,
+      "decided_by_target": 18,
+      "flags": 10,
+      "flags_by_class": {
+       "A": 0,
+       "B": 0,
+       "C": 10,
+       "D": 0
+      }
+     }
+    }
+   },
+   "item5_flags_and_pinning_passes": {
+    "flags": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_invalid_challenge_valid_method_valid#0",
+      "deciding_check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+      "target_fired": "no",
+      "test_node": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_invalid_challenge_valid_method_valid",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_verifier_valid_challenge_valid_method_missing#0",
+      "deciding_check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+      "target_fired": "no",
+      "test_node": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_verifier_valid_challenge_valid_method_missing",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_invalid_challenge_valid_method_valid#0",
+      "deciding_check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+      "target_fired": "no",
+      "test_node": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeInterferenceTest::test_pkce_required_verifier_invalid_challenge_valid_method_valid",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_verifier_valid_challenge_valid_method_missing#0",
+      "deciding_check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+      "target_fired": "no",
+      "test_node": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeInterferenceTest::test_pkce_verifier_valid_challenge_valid_method_missing",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridCodeIdTokenTest.test_required_nonce#0",
+      "deciding_check": "openid.connect.core.grant_types.hybrid.HybridGrant.openid_authorization_validator#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+      "target_fired": "no",
+      "test_node": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridCodeIdTokenTest::test_required_nonce",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridCodeIdTokenTokenTest.test_required_nonce#0",
+      "deciding_check": "openid.connect.core.grant_types.hybrid.HybridGrant.openid_authorization_validator#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+      "target_fired": "no",
+      "test_node": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridCodeIdTokenTokenTest::test_required_nonce",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_invalid_challenge_valid_method_valid#0",
+      "deciding_check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+      "target_fired": "no",
+      "test_node": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridInterferenceTest::test_pkce_required_verifier_invalid_challenge_valid_method_valid",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_verifier_valid_challenge_valid_method_missing#0",
+      "deciding_check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+      "target_fired": "no",
+      "test_node": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridInterferenceTest::test_pkce_verifier_valid_challenge_valid_method_missing",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitNoAccessTokenTest.test_required_nonce#0",
+      "deciding_check": "openid.connect.core.grant_types.implicit.ImplicitGrant.openid_authorization_validator#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+      "target_fired": "no",
+      "test_node": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitNoAccessTokenTest::test_required_nonce",
+      "tier": "name"
+     },
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_required_nonce#0",
+      "deciding_check": "openid.connect.core.grant_types.implicit.ImplicitGrant.openid_authorization_validator#1",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+      "target_fired": "no",
+      "test_node": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest::test_required_nonce",
+      "tier": "name"
+     }
+    ],
+    "pinning_passes": []
+   },
+   "item6_in_handler": {
+    "cases_decided": 2,
+    "checks": 4,
+    "deciding": 2,
+    "deciding_list": [
+     {
+      "cases_decided": 1,
+      "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1"
+     }
+    ],
+    "deleted": 2
+   },
+   "reproduced": {
+    "cases": 142,
+    "cases_decided_by_target": 43,
+    "cases_with_target": 53,
+    "checks_deciding": 47,
+    "flags": 10,
+    "not_detected": {
+     "O_C": 0,
+     "O_T": 34,
+     "O_V": 7,
+     "O_Vfc": 11,
+     "whole suite": 0
+    }
+   }
+  },
+  "pyjwt": {
+   "deposited": {
+    "cases": 91,
+    "cases_decided_by_target": 48,
+    "cases_with_target": 49,
+    "checks_deciding": 44,
+    "flags": 1,
+    "not_detected": {
+     "O_C": 3,
+     "O_T": 12,
+     "O_V": 5,
+     "O_Vfc": 21,
+     "whole suite": 0
+    }
+   },
+   "item1_ot_denominator": {
+    "cases_decided_by_their_target": 48,
+    "deciding_checks": 44,
+    "deciding_checks_deleted": 41,
+    "deletions_of_deciding_checks_not_detected": {
+     "O_C": 3,
+     "O_S": 0,
+     "O_T": 12,
+     "O_V": 5,
+     "O_Vfc": 21,
+     "suite": 0,
+     "whole suite": 0
+    },
+    "target_of_no_case": {
+     "checks": 14,
+     "deleted": 12,
+     "list": [
+      "algorithms.ECAlgorithm._validate_curve#1",
+      "algorithms.HMACAlgorithm.prepare_key#2",
+      "api_jws.PyJWS._load#3",
+      "api_jws.PyJWS._load#4",
+      "api_jws.PyJWS._verify_signature#1",
+      "api_jws.PyJWS._verify_signature#2",
+      "api_jws.PyJWS._verify_signature#5",
+      "api_jws.PyJWS.decode_complete#2",
+      "api_jwt.PyJWT._decode_payload#2",
+      "api_jwt.PyJWT._validate_aud#1",
+      "api_jwt.PyJWT._validate_aud#7",
+      "api_jwt.PyJWT._validate_iss#3",
+      "api_jwt.PyJWT._validate_nbf#2",
+      "api_jwt.PyJWT._validate_sub#1"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 12,
+      "O_V": 1,
+      "O_Vfc": 6,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "target_only_of_cases_not_decided": {
+     "checks": 0,
+     "deleted": 0,
+     "list": [],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 0,
+      "O_Vfc": 0,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "targeted_deciding": {
+     "checks": 30,
+     "deleted": 29,
+     "list": [
+      "algorithms.HMACAlgorithm.prepare_key#1",
+      "api_jws.PyJWS._decode_base64url_segment#1",
+      "api_jws.PyJWS._load#1",
+      "api_jws.PyJWS._load#2",
+      "api_jws.PyJWS._load#5",
+      "api_jws.PyJWS._validate_crit#1",
+      "api_jws.PyJWS._validate_crit#2",
+      "api_jws.PyJWS._validate_crit#3",
+      "api_jws.PyJWS._validate_crit#4",
+      "api_jws.PyJWS._verify_signature#3",
+      "api_jws.PyJWS._verify_signature#4",
+      "api_jws.PyJWS._verify_signature#6",
+      "api_jws.PyJWS.decode_complete#1",
+      "api_jws.PyJWS.decode_complete#3",
+      "api_jws.PyJWS.decode_complete#4",
+      "api_jwt.PyJWT._decode_payload#1",
+      "api_jwt.PyJWT._validate_aud#2",
+      "api_jwt.PyJWT._validate_aud#3",
+      "api_jwt.PyJWT._validate_aud#4",
+      "api_jwt.PyJWT._validate_aud#5",
+      "api_jwt.PyJWT._validate_aud#6",
+      "api_jwt.PyJWT._validate_exp#1",
+      "api_jwt.PyJWT._validate_exp#2",
+      "api_jwt.PyJWT._validate_iat#1",
+      "api_jwt.PyJWT._validate_iat#2",
+      "api_jwt.PyJWT._validate_iss#1",
+      "api_jwt.PyJWT._validate_jti#1",
+      "api_jwt.PyJWT._validate_nbf#1",
+      "api_jwt.PyJWT._validate_required_claims#1",
+      "api_jwt.PyJWT._validate_sub#2"
+     ],
+     "not_detected": {
+      "O_C": 3,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 4,
+      "O_Vfc": 15,
+      "suite": 0,
+      "whole suite": 0
+     }
+    }
+   },
+   "item2_fire_never_decide": {
+    "checks": 0,
+    "deleted": 0,
+    "list": [],
+    "not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0,
+     "suite": 0,
+     "whole suite": 0
+    }
+   },
+   "item3_non_check_sites": {
+    "by_site_kind": {},
+    "cases": [],
+    "count": 0,
+    "pinning_denominators": {
+     "cases_of_the_study": 91,
+     "class_only_cases_of_the_study": 30,
+     "class_only_cases_without_deciding_check": 0,
+     "class_only_pinning_cases": 27,
+     "not_counted_deciding_check_not_deleted": 5,
+     "not_counted_no_deciding_check": 0,
+     "pinning_rows": 86,
+     "summary_pinning_cases": 86
+    }
+   },
+   "item4_flags": {
+    "class_C_own_test_passes_without_deciding_check": [],
+    "flags_own_test_passes_without_deciding_check": [],
+    "reading": null,
+    "tiers": {
+     "assertion": {
+      "cases_with_target": 42,
+      "decided_by_target": 42,
+      "flags": 0,
+      "flags_by_class": null
+     },
+     "name": {
+      "cases_with_target": 7,
+      "decided_by_target": 6,
+      "flags": 1,
+      "flags_by_class": null
+     }
+    }
+   },
+   "item5_flags_and_pinning_passes": {
+    "flags": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_list#0",
+      "deciding_check": "api_jwt.PyJWT._validate_aud#7",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "api_jwt.PyJWT._validate_aud#6",
+      "target_fired": "no",
+      "test_node": "tests/test_api_jwt.py::TestJWT::test_raise_exception_invalid_audience_list",
+      "tier": "name"
+     }
+    ],
+    "pinning_passes": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/test_api_jws.py::TestJWS.test_decodes_with_jwk_and_mismatched_algorithm#0",
+      "class_after_deletion": "jwt.exceptions.InvalidAlgorithmError",
+      "deleted_check": "api_jws.PyJWS._verify_signature#2",
+      "index": 0,
+      "site_after_deletion": "api_jws.PyJWS._verify_signature#3",
+      "test_node": "tests/test_api_jws.py::TestJWS::test_decodes_with_jwk_and_mismatched_algorithm",
+      "what_the_case_does": "same class, another check"
+     }
+    ]
+   },
+   "item6_in_handler": {
+    "cases_decided": 26,
+    "checks": 16,
+    "deciding": 9,
+    "deciding_list": [
+     {
+      "cases_decided": 5,
+      "check": "api_jws.PyJWS._decode_base64url_segment#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "api_jws.PyJWS._load#2"
+     },
+     {
+      "cases_decided": 1,
+      "check": "api_jws.PyJWS._load#3"
+     },
+     {
+      "cases_decided": 1,
+      "check": "api_jws.PyJWS._verify_signature#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "api_jws.PyJWS._verify_signature#4"
+     },
+     {
+      "cases_decided": 2,
+      "check": "api_jwt.PyJWT._decode_payload#1"
+     },
+     {
+      "cases_decided": 5,
+      "check": "api_jwt.PyJWT._validate_exp#1"
+     },
+     {
+      "cases_decided": 5,
+      "check": "api_jwt.PyJWT._validate_iat#1"
+     },
+     {
+      "cases_decided": 5,
+      "check": "api_jwt.PyJWT._validate_nbf#1"
+     }
+    ],
+    "deleted": 9
+   },
+   "reproduced": {
+    "cases": 91,
+    "cases_decided_by_target": 48,
+    "cases_with_target": 49,
+    "checks_deciding": 44,
+    "flags": 1,
+    "not_detected": {
+     "O_C": 3,
+     "O_T": 12,
+     "O_V": 5,
+     "O_Vfc": 21,
+     "whole suite": 0
+    }
+   }
+  },
+  "pyjwt-package": {
+   "deposited": {
+    "cases": 91,
+    "cases_decided_by_target": 48,
+    "cases_with_target": 49,
+    "checks_deciding": 44,
+    "flags": 1,
+    "not_detected": {
+     "O_C": 3,
+     "O_T": 14,
+     "O_V": 7,
+     "O_Vfc": 23,
+     "whole suite": 0
+    }
+   },
+   "item1_ot_denominator": {
+    "cases_decided_by_their_target": 48,
+    "deciding_checks": 44,
+    "deciding_checks_deleted": 44,
+    "deletions_of_deciding_checks_not_detected": {
+     "O_C": 3,
+     "O_S": 0,
+     "O_T": 14,
+     "O_V": 7,
+     "O_Vfc": 23,
+     "suite": 0,
+     "whole suite": 0
+    },
+    "target_of_no_case": {
+     "checks": 14,
+     "deleted": 14,
+     "list": [
+      "algorithms.ECAlgorithm._validate_curve#1",
+      "algorithms.HMACAlgorithm.prepare_key#2",
+      "api_jws.PyJWS._load#3",
+      "api_jws.PyJWS._load#4",
+      "api_jws.PyJWS._verify_signature#1",
+      "api_jws.PyJWS._verify_signature#2",
+      "api_jws.PyJWS._verify_signature#5",
+      "api_jws.PyJWS.decode_complete#2",
+      "api_jwt.PyJWT._decode_payload#2",
+      "api_jwt.PyJWT._validate_aud#1",
+      "api_jwt.PyJWT._validate_aud#7",
+      "api_jwt.PyJWT._validate_iss#3",
+      "api_jwt.PyJWT._validate_nbf#2",
+      "api_jwt.PyJWT._validate_sub#1"
+     ],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 14,
+      "O_V": 2,
+      "O_Vfc": 7,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "target_only_of_cases_not_decided": {
+     "checks": 0,
+     "deleted": 0,
+     "list": [],
+     "not_detected": {
+      "O_C": 0,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 0,
+      "O_Vfc": 0,
+      "suite": 0,
+      "whole suite": 0
+     }
+    },
+    "targeted_deciding": {
+     "checks": 30,
+     "deleted": 30,
+     "list": [
+      "algorithms.HMACAlgorithm.prepare_key#1",
+      "api_jws.PyJWS._decode_base64url_segment#1",
+      "api_jws.PyJWS._load#1",
+      "api_jws.PyJWS._load#2",
+      "api_jws.PyJWS._load#5",
+      "api_jws.PyJWS._validate_crit#1",
+      "api_jws.PyJWS._validate_crit#2",
+      "api_jws.PyJWS._validate_crit#3",
+      "api_jws.PyJWS._validate_crit#4",
+      "api_jws.PyJWS._verify_signature#3",
+      "api_jws.PyJWS._verify_signature#4",
+      "api_jws.PyJWS._verify_signature#6",
+      "api_jws.PyJWS.decode_complete#1",
+      "api_jws.PyJWS.decode_complete#3",
+      "api_jws.PyJWS.decode_complete#4",
+      "api_jwt.PyJWT._decode_payload#1",
+      "api_jwt.PyJWT._validate_aud#2",
+      "api_jwt.PyJWT._validate_aud#3",
+      "api_jwt.PyJWT._validate_aud#4",
+      "api_jwt.PyJWT._validate_aud#5",
+      "api_jwt.PyJWT._validate_aud#6",
+      "api_jwt.PyJWT._validate_exp#1",
+      "api_jwt.PyJWT._validate_exp#2",
+      "api_jwt.PyJWT._validate_iat#1",
+      "api_jwt.PyJWT._validate_iat#2",
+      "api_jwt.PyJWT._validate_iss#1",
+      "api_jwt.PyJWT._validate_jti#1",
+      "api_jwt.PyJWT._validate_nbf#1",
+      "api_jwt.PyJWT._validate_required_claims#1",
+      "api_jwt.PyJWT._validate_sub#2"
+     ],
+     "not_detected": {
+      "O_C": 3,
+      "O_S": 0,
+      "O_T": 0,
+      "O_V": 5,
+      "O_Vfc": 16,
+      "suite": 0,
+      "whole suite": 0
+     }
+    }
+   },
+   "item2_fire_never_decide": {
+    "checks": 0,
+    "deleted": 0,
+    "list": [],
+    "not_detected": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0,
+     "suite": 0,
+     "whole suite": 0
+    }
+   },
+   "item3_non_check_sites": {
+    "by_site_kind": {},
+    "cases": [],
+    "count": 0,
+    "pinning_denominators": {
+     "cases_of_the_study": 91,
+     "class_only_cases_of_the_study": 30,
+     "class_only_cases_without_deciding_check": 0,
+     "class_only_pinning_cases": 30,
+     "not_counted_deciding_check_not_deleted": 0,
+     "not_counted_no_deciding_check": 0,
+     "pinning_rows": 91,
+     "summary_pinning_cases": 91
+    }
+   },
+   "item4_flags": {
+    "class_C_own_test_passes_without_deciding_check": [],
+    "flags_own_test_passes_without_deciding_check": [],
+    "reading": null,
+    "tiers": {
+     "assertion": {
+      "cases_with_target": 42,
+      "decided_by_target": 42,
+      "flags": 0,
+      "flags_by_class": null
+     },
+     "name": {
+      "cases_with_target": 7,
+      "decided_by_target": 6,
+      "flags": 1,
+      "flags_by_class": null
+     }
+    }
+   },
+   "item5_flags_and_pinning_passes": {
+    "flags": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_list#0",
+      "deciding_check": "api_jwt.PyJWT._validate_aud#7",
+      "index": 0,
+      "own_test_without_target": "passes",
+      "target": "api_jwt.PyJWT._validate_aud#6",
+      "target_fired": "no",
+      "test_node": "tests/test_api_jwt.py::TestJWT::test_raise_exception_invalid_audience_list",
+      "tier": "name"
+     }
+    ],
+    "pinning_passes": [
+     {
+      "assertions": {
+       "match": null,
+       "match_unparsed": null,
+       "post": [],
+       "post_unparsed": []
+      },
+      "asserts": "class only",
+      "block": "tests/test_api_jws.py::TestJWS.test_decodes_with_jwk_and_mismatched_algorithm#0",
+      "class_after_deletion": "jwt.exceptions.InvalidAlgorithmError",
+      "deleted_check": "api_jws.PyJWS._verify_signature#2",
+      "index": 0,
+      "site_after_deletion": "api_jws.PyJWS._verify_signature#3",
+      "test_node": "tests/test_api_jws.py::TestJWS::test_decodes_with_jwk_and_mismatched_algorithm",
+      "what_the_case_does": "same class, another check"
+     }
+    ]
+   },
+   "item6_in_handler": {
+    "cases_decided": 26,
+    "checks": 19,
+    "deciding": 9,
+    "deciding_list": [
+     {
+      "cases_decided": 5,
+      "check": "api_jws.PyJWS._decode_base64url_segment#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "api_jws.PyJWS._load#2"
+     },
+     {
+      "cases_decided": 1,
+      "check": "api_jws.PyJWS._load#3"
+     },
+     {
+      "cases_decided": 1,
+      "check": "api_jws.PyJWS._verify_signature#1"
+     },
+     {
+      "cases_decided": 1,
+      "check": "api_jws.PyJWS._verify_signature#4"
+     },
+     {
+      "cases_decided": 2,
+      "check": "api_jwt.PyJWT._decode_payload#1"
+     },
+     {
+      "cases_decided": 5,
+      "check": "api_jwt.PyJWT._validate_exp#1"
+     },
+     {
+      "cases_decided": 5,
+      "check": "api_jwt.PyJWT._validate_iat#1"
+     },
+     {
+      "cases_decided": 5,
+      "check": "api_jwt.PyJWT._validate_nbf#1"
+     }
+    ],
+    "deleted": 9
+   },
+   "reproduced": {
+    "cases": 91,
+    "cases_decided_by_target": 48,
+    "cases_with_target": 49,
+    "checks_deciding": 44,
+    "flags": 1,
+    "not_detected": {
+     "O_C": 3,
+     "O_T": 14,
+     "O_V": 7,
+     "O_Vfc": 23,
+     "whole suite": 0
+    }
+   }
+  }
+ }
+}
