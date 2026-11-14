@@ -60,3 +60,28 @@ at that time. With the first pair they bound the time in which the targets
 were computed: after 09:22:14 UTC and before 09:25:10 UTC. What they do not
 show: that no recorder run preceded them; the records of the runs carry
 their own start times, which are later.
+
+## The commit of the results
+
+`results-commit.txt` names the commit that added the outputs of the run on
+the 4 held-out libraries, the readings, the witness tests, the second
+computation and `../DEVIATIONS.md`:
+
+    ced6adb1e2c35eb5193cddad723841ea71e9820f
+
+Its SHA-256 was sent to the same 2 authorities. The tokens carry the times
+2026-11-14 10:02:03 UTC (freetsa.org) and 2026-11-14 10:02:04 UTC
+(DigiCert).
+
+| File | Authority |
+|---|---|
+| `results-commit.freetsa.tsr` | freetsa.org |
+| `results-commit.digicert.tsr` | DigiCert |
+
+Verify as above, with `results-commit` in place of `protocol-commit`.
+
+What these tokens show: the outputs, the readings and the second
+computation existed, as committed, at that time. With the second pair they
+bound the run: after 09:25:09 UTC and before 10:02:04 UTC. What they do not
+show: the order of the steps inside that time; `../DEVIATIONS.md` gives it
+from the logs of the run, which are not deposited.
