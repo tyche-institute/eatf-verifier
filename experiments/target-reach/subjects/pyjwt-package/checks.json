@@ -1,0 +1,7016 @@
+{
+ "checks": [
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.check_crypto_key_type",
+   "function_name": "check_crypto_key_type",
+   "guard_words": [
+    "_crypto_key_types",
+    "isinstance",
+    "key",
+    "self"
+   ],
+   "guards": [
+    "not isinstance(key, self._crypto_key_types)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "algorithms.Algorithm.check_crypto_key_type#1",
+   "lines": [
+    [
+     225,
+     227
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "Algorithm",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Expected one of {*}, got: {*}. Invalid Key type for {*}",
+   "template_parts": [
+    "Expected one of ",
+    null,
+    ", got: ",
+    null,
+    ". Invalid Key type for ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.prepare_key",
+   "function_name": "prepare_key",
+   "guard_words": [
+    "key"
+   ],
+   "guards": [
+    "key is not None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.NoneAlgorithm.prepare_key#1",
+   "lines": [
+    [
+     295,
+     295
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "When alg = \"none\", key value must be None."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "NoneAlgorithm",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "When alg = \"none\", key value must be None.",
+   "template_parts": [
+    "When alg = \"none\", key value must be None."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.prepare_key",
+   "function_name": "prepare_key",
+   "guard_words": [
+    "key_bytes",
+    "len"
+   ],
+   "guards": [
+    "len(key_bytes) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.HMACAlgorithm.prepare_key#1",
+   "lines": [
+    [
+     350,
+     350
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "HMAC key must not be empty."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACAlgorithm",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "HMAC key must not be empty.",
+   "template_parts": [
+    "HMAC key must not be empty."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.prepare_key",
+   "function_name": "prepare_key",
+   "guard_words": [
+    "_is_der_key",
+    "is_pem_format",
+    "is_ssh_key",
+    "key_bytes",
+    "self"
+   ],
+   "guards": [
+    "is_pem_format(key_bytes) or is_ssh_key(key_bytes) or self._is_der_key(key_bytes)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.HMACAlgorithm.prepare_key#2",
+   "lines": [
+    [
+     357,
+     360
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACAlgorithm",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret.",
+   "template_parts": [
+    "The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.prepare_key",
+   "function_name": "prepare_key",
+   "guard_words": [
+    "[",
+    "contains_jwk_member",
+    "has_jwk_member",
+    "startswith",
+    "stripped_key",
+    "{"
+   ],
+   "guards": [
+    "stripped_key.startswith('{') or (stripped_key.startswith('[') and has_jwk_member)",
+    "contains_jwk_member"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.HMACAlgorithm.prepare_key#3",
+   "lines": [
+    [
+     414,
+     418
+    ],
+    [
+     434,
+     438
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The specified key looks like a JWK and should not be used directly as an HMAC secret. Load it via PyJWK / HMACAlgorithm.from_jwk first."
+     }
+    },
+    {
+     "kw": {},
+     "pos": {
+      "0": "The specified key looks like a JWK and should not be used directly as an HMAC secret. Load it via PyJWK / HMACAlgorithm.from_jwk first."
+     }
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACAlgorithm",
+   "raise_numbers": [
+    3,
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The specified key looks like a JWK and should not be used directly as an HMAC secret. Load it via PyJWK / HMACAlgorithm.from_jwk first.",
+   "template_parts": [
+    "The specified key looks like a JWK and should not be used directly as an HMAC secret. Load it via PyJWK / HMACAlgorithm.from_jwk first."
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.HMACAlgorithm.from_jwk#1",
+   "lines": [
+    [
+     472,
+     472
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Key is not valid JSON"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACAlgorithm",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Key is not valid JSON",
+   "template_parts": [
+    "Key is not valid JSON"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "get",
+    "kty",
+    "obj",
+    "oct"
+   ],
+   "guards": [
+    "obj.get('kty') != 'oct'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.HMACAlgorithm.from_jwk#2",
+   "lines": [
+    [
+     475,
+     475
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not an HMAC key"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACAlgorithm",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not an HMAC key",
+   "template_parts": [
+    "Not an HMAC key"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "key_bytes",
+    "len"
+   ],
+   "guards": [
+    "len(key_bytes) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.HMACAlgorithm.from_jwk#3",
+   "lines": [
+    [
+     479,
+     479
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "HMAC key must not be empty."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACAlgorithm",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "HMAC key must not be empty.",
+   "template_parts": [
+    "HMAC key must not be empty."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.prepare_key",
+   "function_name": "prepare_key",
+   "guard_words": [
+    "UnsupportedAlgorithm",
+    "ValueError"
+   ],
+   "guards": [
+    "except (ValueError, UnsupportedAlgorithm)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.RSAAlgorithm.prepare_key#1",
+   "lines": [
+    [
+     559,
+     561
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Could not parse the provided public key."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAAlgorithm",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Could not parse the provided public key.",
+   "template_parts": [
+    "Could not parse the provided public key."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.to_jwk~3",
+   "function_name": "to_jwk",
+   "guard_words": [
+    "hasattr",
+    "key_obj",
+    "verify"
+   ],
+   "guards": [
+    "hasattr(key_obj, 'verify')"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.RSAAlgorithm.to_jwk~3#1",
+   "lines": [
+    [
+     603,
+     603
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not a public or private key"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAAlgorithm",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not a public or private key",
+   "template_parts": [
+    "Not a public or private key"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.RSAAlgorithm.from_jwk#1",
+   "lines": [
+    [
+     620,
+     620
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Key is not valid JSON"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAAlgorithm",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Key is not valid JSON",
+   "template_parts": [
+    "Key is not valid JSON"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "RSA",
+    "get",
+    "kty",
+    "obj"
+   ],
+   "guards": [
+    "obj.get('kty') != 'RSA'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.RSAAlgorithm.from_jwk#2",
+   "lines": [
+    [
+     623,
+     623
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not an RSA key"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAAlgorithm",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not an RSA key",
+   "template_parts": [
+    "Not an RSA key"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "obj",
+    "oth"
+   ],
+   "guards": [
+    "'oth' in obj"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.RSAAlgorithm.from_jwk#3",
+   "lines": [
+    [
+     628,
+     630
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Unsupported RSA private key: > 2 primes not supported"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAAlgorithm",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unsupported RSA private key: > 2 primes not supported",
+   "template_parts": [
+    "Unsupported RSA private key: > 2 primes not supported"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "all",
+    "any_props_found",
+    "props_found"
+   ],
+   "guards": [
+    "any_props_found and (not all(props_found))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.RSAAlgorithm.from_jwk#4",
+   "lines": [
+    [
+     637,
+     639
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "RSA key must include all parameters if any are present besides d"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAAlgorithm",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "RSA key must include all parameters if any are present besides d",
+   "template_parts": [
+    "RSA key must include all parameters if any are present besides d"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "e",
+    "n",
+    "obj"
+   ],
+   "guards": [
+    "'n' in obj and 'e' in obj"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.RSAAlgorithm.from_jwk#5",
+   "lines": [
+    [
+     680,
+     680
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not a public or private key"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAAlgorithm",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not a public or private key",
+   "template_parts": [
+    "Not a public or private key"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm._validate_curve",
+   "function_name": "_validate_curve",
+   "guard_words": [
+    "curve",
+    "expected_curve",
+    "isinstance",
+    "key",
+    "self"
+   ],
+   "guards": [
+    "not isinstance(key.curve, self.expected_curve)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "algorithms.ECAlgorithm._validate_curve#1",
+   "lines": [
+    [
+     722,
+     725
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The key's curve '{*}' does not match the expected curve '{*}' for this algorithm",
+   "template_parts": [
+    "The key's curve '",
+    null,
+    "' does not match the expected curve '",
+    null,
+    "' for this algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.to_jwk~3",
+   "function_name": "to_jwk",
+   "guard_words": [
+    "EllipticCurvePublicKey",
+    "isinstance",
+    "key_obj"
+   ],
+   "guards": [
+    "isinstance(key_obj, EllipticCurvePublicKey)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.ECAlgorithm.to_jwk~3#1",
+   "lines": [
+    [
+     797,
+     797
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not a public or private key"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not a public or private key",
+   "template_parts": [
+    "Not a public or private key"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.to_jwk~3",
+   "function_name": "to_jwk",
+   "guard_words": [
+    "SECP256K1",
+    "curve",
+    "isinstance",
+    "key_obj"
+   ],
+   "guards": [
+    "isinstance(key_obj.curve, SECP256K1)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "algorithms.ECAlgorithm.to_jwk~3#2",
+   "lines": [
+    [
+     808,
+     808
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Invalid curve: {*}",
+   "template_parts": [
+    "Invalid curve: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.ECAlgorithm.from_jwk#1",
+   "lines": [
+    [
+     844,
+     844
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Key is not valid JSON"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Key is not valid JSON",
+   "template_parts": [
+    "Key is not valid JSON"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "EC",
+    "get",
+    "kty",
+    "obj",
+    "x",
+    "y"
+   ],
+   "guards": [
+    "obj.get('kty') != 'EC'",
+    "'x' not in obj or 'y' not in obj"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.ECAlgorithm.from_jwk#2",
+   "lines": [
+    [
+     847,
+     847
+    ],
+    [
+     850,
+     850
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not an Elliptic curve key"
+     }
+    },
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not an Elliptic curve key"
+     }
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    3,
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not an Elliptic curve key",
+   "template_parts": [
+    "Not an Elliptic curve key"
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "len",
+    "x",
+    "y"
+   ],
+   "guards": [
+    "len(x) == len(y) == 32"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.ECAlgorithm.from_jwk#3",
+   "lines": [
+    [
+     862,
+     864
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Coords should be 32 bytes for curve P-256"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Coords should be 32 bytes for curve P-256",
+   "template_parts": [
+    "Coords should be 32 bytes for curve P-256"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "len",
+    "x",
+    "y"
+   ],
+   "guards": [
+    "len(x) == len(y) == 48"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.ECAlgorithm.from_jwk#4",
+   "lines": [
+    [
+     869,
+     871
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Coords should be 48 bytes for curve P-384"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Coords should be 48 bytes for curve P-384",
+   "template_parts": [
+    "Coords should be 48 bytes for curve P-384"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "len",
+    "x",
+    "y"
+   ],
+   "guards": [
+    "len(x) == len(y) == 66"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.ECAlgorithm.from_jwk#5",
+   "lines": [
+    [
+     876,
+     878
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Coords should be 66 bytes for curve P-521"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    7
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Coords should be 66 bytes for curve P-521",
+   "template_parts": [
+    "Coords should be 66 bytes for curve P-521"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "len",
+    "x",
+    "y"
+   ],
+   "guards": [
+    "len(x) == len(y) == 32"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.ECAlgorithm.from_jwk#6",
+   "lines": [
+    [
+     883,
+     885
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Coords should be 32 bytes for curve secp256k1"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    8
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Coords should be 32 bytes for curve secp256k1",
+   "template_parts": [
+    "Coords should be 32 bytes for curve secp256k1"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "curve",
+    "secp256k1"
+   ],
+   "guards": [
+    "curve == 'secp256k1'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "algorithms.ECAlgorithm.from_jwk#7",
+   "lines": [
+    [
+     887,
+     887
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    9
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Invalid curve: {*}",
+   "template_parts": [
+    "Invalid curve: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "d",
+    "len",
+    "x"
+   ],
+   "guards": [
+    "len(d) != len(x)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.ECAlgorithm.from_jwk#8",
+   "lines": [
+    [
+     900,
+     902
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "D should be {} bytes for curve {}"
+     }
+    }
+   ],
+   "n_positional": [
+    3
+   ],
+   "other_literals": [],
+   "owner_class": "ECAlgorithm",
+   "raise_numbers": [
+    10
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "D should be {} bytes for curve {}",
+   "template_parts": [
+    "D should be {} bytes for curve {}"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.prepare_key",
+   "function_name": "prepare_key",
+   "guard_words": [
+    "key_str",
+    "ssh-"
+   ],
+   "guards": [
+    "key_str[0:4] == 'ssh-'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.OKPAlgorithm.prepare_key#1",
+   "lines": [
+    [
+     977,
+     977
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not a public or private key"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "OKPAlgorithm",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Not a public or private key",
+   "template_parts": [
+    "Not a public or private key"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.to_jwk~3",
+   "function_name": "to_jwk",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.OKPAlgorithm.to_jwk~3#1",
+   "lines": [
+    [
+     1076,
+     1076
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not a public or private key"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "OKPAlgorithm",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not a public or private key",
+   "template_parts": [
+    "Not a public or private key"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.OKPAlgorithm.from_jwk#1",
+   "lines": [
+    [
+     1088,
+     1088
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Key is not valid JSON"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "OKPAlgorithm",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Key is not valid JSON",
+   "template_parts": [
+    "Key is not valid JSON"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "OKP",
+    "get",
+    "kty",
+    "obj"
+   ],
+   "guards": [
+    "obj.get('kty') != 'OKP'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.OKPAlgorithm.from_jwk#2",
+   "lines": [
+    [
+     1091,
+     1091
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not an Octet Key Pair"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "OKPAlgorithm",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not an Octet Key Pair",
+   "template_parts": [
+    "Not an Octet Key Pair"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "Ed25519",
+    "Ed448",
+    "curve"
+   ],
+   "guards": [
+    "curve != 'Ed25519' and curve != 'Ed448'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "algorithms.OKPAlgorithm.from_jwk#3",
+   "lines": [
+    [
+     1095,
+     1095
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "OKPAlgorithm",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Invalid curve: {*}",
+   "template_parts": [
+    "Invalid curve: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "obj",
+    "x"
+   ],
+   "guards": [
+    "'x' not in obj"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.OKPAlgorithm.from_jwk#4",
+   "lines": [
+    [
+     1098,
+     1098
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "OKP should have \"x\" parameter"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "OKPAlgorithm",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "OKP should have \"x\" parameter",
+   "template_parts": [
+    "OKP should have \"x\" parameter"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "Encoding",
+    "PublicFormat",
+    "Raw",
+    "private_key",
+    "public_bytes",
+    "public_key",
+    "x"
+   ],
+   "guards": [
+    "private_key.public_key().public_bytes(encoding=Encoding.Raw, format=PublicFormat.Raw) != x"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.OKPAlgorithm.from_jwk#5",
+   "lines": [
+    [
+     1118,
+     1118
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Public key does not match private key"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "OKPAlgorithm",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Public key does not match private key",
+   "template_parts": [
+    "Public key does not match private key"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.from_jwk",
+   "function_name": "from_jwk",
+   "guard_words": [
+    "ValueError",
+    "err"
+   ],
+   "guards": [
+    "except ValueError as err"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "algorithms.OKPAlgorithm.from_jwk#6",
+   "lines": [
+    [
+     1121,
+     1121
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid key parameter"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "OKPAlgorithm",
+   "raise_numbers": [
+    7
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Invalid key parameter",
+   "template_parts": [
+    "Invalid key parameter"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "kty"
+   ],
+   "guards": [
+    "not kty"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jwk.PyJWK.__init__#1",
+   "lines": [
+    [
+     35,
+     35
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWK",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "kty is not found: {*}",
+   "template_parts": [
+    "kty is not found: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "Ed25519",
+    "crv",
+    "secp256k1"
+   ],
+   "guards": [
+    "crv == 'secp256k1'",
+    "crv == 'Ed25519'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jwk.PyJWK.__init__#2",
+   "lines": [
+    [
+     53,
+     53
+    ],
+    [
+     64,
+     64
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWK",
+   "raise_numbers": [
+    2,
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unsupported crv: {*}",
+   "template_parts": [
+    "Unsupported crv: ",
+    null
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "crv"
+   ],
+   "guards": [
+    "not crv"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jwk.PyJWK.__init__#3",
+   "lines": [
+    [
+     60,
+     60
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWK",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "crv is not found: {*}",
+   "template_parts": [
+    "crv is not found: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "OKP",
+    "kty"
+   ],
+   "guards": [
+    "kty == 'OKP'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jwk.PyJWK.__init__#4",
+   "lines": [
+    [
+     66,
+     66
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWK",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unsupported kty: {*}",
+   "template_parts": [
+    "Unsupported kty: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "MissingCryptographyError",
+   "class_name": "MissingCryptographyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "algorithm",
+    "has_crypto",
+    "requires_cryptography"
+   ],
+   "guards": [
+    "not has_crypto and algorithm in requires_cryptography"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jwk.PyJWK.__init__#5",
+   "lines": [
+    [
+     69,
+     71
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWK",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*} requires 'cryptography' to be installed.",
+   "template_parts": [
+    null,
+    " requires 'cryptography' to be installed."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKError",
+   "class_name": "PyJWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "KeyError"
+   ],
+   "guards": [
+    "except KeyError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jwk.PyJWK.__init__#6",
+   "lines": [
+    [
+     78,
+     80
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWK",
+   "raise_numbers": [
+    7
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unable to find an algorithm for key: {*}",
+   "template_parts": [
+    "Unable to find an algorithm for key: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "TypeError",
+    "ValueError",
+    "error"
+   ],
+   "guards": [
+    "except (TypeError, ValueError) as error"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jwk.PyJWK.__init__#7",
+   "lines": [
+    [
+     85,
+     87
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWK",
+   "raise_numbers": [
+    8
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unable to construct key from JWK: {*}",
+   "template_parts": [
+    "Unable to construct key from JWK: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKSetError",
+   "class_name": "PyJWKSetError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "keys"
+   ],
+   "guards": [
+    "not keys"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwk.PyJWKSet.__init__#1",
+   "lines": [
+    [
+     145,
+     145
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The JWK Set did not contain any keys"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKSet",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The JWK Set did not contain any keys",
+   "template_parts": [
+    "The JWK Set did not contain any keys"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKSetError",
+   "class_name": "PyJWKSetError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "isinstance",
+    "keys",
+    "list"
+   ],
+   "guards": [
+    "not isinstance(keys, list)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwk.PyJWKSet.__init__#2",
+   "lines": [
+    [
+     148,
+     148
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid JWK Set value"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKSet",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Invalid JWK Set value",
+   "template_parts": [
+    "Invalid JWK Set value"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKSetError",
+   "class_name": "PyJWKSetError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "keys",
+    "len",
+    "self"
+   ],
+   "guards": [
+    "len(self.keys) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwk.PyJWKSet.__init__#3",
+   "lines": [
+    [
+     163,
+     165
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The JWK Set did not contain any usable keys. Perhaps 'cryptography' is not installed?"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKSet",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The JWK Set did not contain any usable keys. Perhaps 'cryptography' is not installed?",
+   "template_parts": [
+    "The JWK Set did not contain any usable keys. Perhaps 'cryptography' is not installed?"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidTokenError",
+   "class_name": "InvalidTokenError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.encode",
+   "function_name": "encode",
+   "guard_words": [
+    "existing_crit",
+    "isinstance",
+    "list"
+   ],
+   "guards": [
+    "not isinstance(existing_crit, list)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS.encode#1",
+   "lines": [
+    [
+     177,
+     177
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid 'crit' header: must be a list"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid 'crit' header: must be a list",
+   "template_parts": [
+    "Invalid 'crit' header: must be a list"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.encode",
+   "function_name": "encode",
+   "guard_words": [
+    "enforce_minimum_key_length",
+    "get",
+    "options",
+    "self"
+   ],
+   "guards": [
+    "self.options.get('enforce_minimum_key_length', False)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jws.PyJWS.encode#2",
+   "lines": [
+    [
+     207,
+     207
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode_complete",
+   "function_name": "decode_complete",
+   "guard_words": [
+    "PyJWK",
+    "algorithms",
+    "isinstance",
+    "key",
+    "verify_signature"
+   ],
+   "guards": [
+    "verify_signature and (not algorithms) and (not isinstance(key, PyJWK))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS.decode_complete#1",
+   "lines": [
+    [
+     248,
+     250
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "It is required that you pass in a value for the \"algorithms\" argument when calling decode()."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "It is required that you pass in a value for the \"algorithms\" argument when calling decode().",
+   "template_parts": [
+    "It is required that you pass in a value for the \"algorithms\" argument when calling decode()."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode_complete",
+   "function_name": "decode_complete",
+   "guard_words": [
+    "b64",
+    "detached_payload",
+    "get",
+    "header"
+   ],
+   "guards": [
+    "detached_payload is not None and header.get('b64', True) is not False"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS.decode_complete#2",
+   "lines": [
+    [
+     257,
+     259
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "It is only valid to pass \"detached_payload\" when the protected header has \"b64\" set to false."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "It is only valid to pass \"detached_payload\" when the protected header has \"b64\" set to false.",
+   "template_parts": [
+    "It is only valid to pass \"detached_payload\" when the protected header has \"b64\" set to false."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidTokenError",
+   "class_name": "InvalidTokenError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode_complete",
+   "function_name": "decode_complete",
+   "guard_words": [
+    "b64",
+    "crit",
+    "isinstance",
+    "list"
+   ],
+   "guards": [
+    "not isinstance(crit, list) or 'b64' not in crit"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS.decode_complete#3",
+   "lines": [
+    [
+     267,
+     269
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The 'b64' header parameter requires 'b64' to be listed in 'crit'."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The 'b64' header parameter requires 'b64' to be listed in 'crit'.",
+   "template_parts": [
+    "The 'b64' header parameter requires 'b64' to be listed in 'crit'."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode_complete",
+   "function_name": "decode_complete",
+   "guard_words": [
+    "detached_payload"
+   ],
+   "guards": [
+    "detached_payload is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS.decode_complete#4",
+   "lines": [
+    [
+     271,
+     273
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false.",
+   "template_parts": [
+    "It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._decode_base64url_segment",
+   "function_name": "_decode_base64url_segment",
+   "guard_words": [
+    "Error",
+    "TypeError",
+    "_BASE64URL_ALPHABET",
+    "any",
+    "base64url_encode",
+    "binascii",
+    "character",
+    "decoded",
+    "err",
+    "len",
+    "padding",
+    "segment",
+    "stripped"
+   ],
+   "guards": [
+    "padding > 2",
+    "padding and len(segment) % 4 != 0",
+    "len(stripped) % 4 == 1 or any((character not in _BASE64URL_ALPHABET for character in stripped))",
+    "except (TypeError, binascii.Error) as err",
+    "base64url_encode(decoded) != stripped"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jws.PyJWS._decode_base64url_segment#1",
+   "lines": [
+    [
+     336,
+     336
+    ],
+    [
+     339,
+     339
+    ],
+    [
+     344,
+     344
+    ],
+    [
+     349,
+     349
+    ],
+    [
+     352,
+     352
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid {*} padding",
+   "template_parts": [
+    "Invalid ",
+    null,
+    " padding"
+   ],
+   "via_variable": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "function_name": "_load",
+   "guard_words": [
+    "bytes",
+    "isinstance",
+    "jwt"
+   ],
+   "guards": [
+    "not isinstance(jwt, bytes)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jws.PyJWS._load#1",
+   "lines": [
+    [
+     361,
+     361
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid token type. Token must be a {*}",
+   "template_parts": [
+    "Invalid token type. Token must be a ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "function_name": "_load",
+   "guard_words": [
+    "ValueError",
+    "err"
+   ],
+   "guards": [
+    "except ValueError as err"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._load#2",
+   "lines": [
+    [
+     367,
+     367
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not enough segments"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Not enough segments",
+   "template_parts": [
+    "Not enough segments"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "function_name": "_load",
+   "guard_words": [
+    "RecursionError",
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except (ValueError, RecursionError) as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jws.PyJWS._load#3",
+   "lines": [
+    [
+     374,
+     374
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid header string: {*}",
+   "template_parts": [
+    "Invalid header string: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "function_name": "_load",
+   "guard_words": [
+    "dict",
+    "header",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(header, dict)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._load#4",
+   "lines": [
+    [
+     377,
+     377
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid header string: must be a json object"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid header string: must be a json object",
+   "template_parts": [
+    "Invalid header string: must be a json object"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "function_name": "_load",
+   "guard_words": [
+    "payload_segment"
+   ],
+   "guards": [
+    "payload_segment"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._load#5",
+   "lines": [
+    [
+     388,
+     388
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Payload segment must be empty when 'b64' is false."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Payload segment must be empty when 'b64' is false.",
+   "template_parts": [
+    "Payload segment must be empty when 'b64' is false."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidAlgorithmError",
+   "class_name": "InvalidAlgorithmError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "KeyError"
+   ],
+   "guards": [
+    "except KeyError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._verify_signature#1",
+   "lines": [
+    [
+     413,
+     413
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Algorithm not specified"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Algorithm not specified",
+   "template_parts": [
+    "Algorithm not specified"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidAlgorithmError",
+   "class_name": "InvalidAlgorithmError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "alg",
+    "algorithms"
+   ],
+   "guards": [
+    "not alg or (algorithms is not None and alg not in algorithms)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._verify_signature#2",
+   "lines": [
+    [
+     416,
+     416
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The specified alg value is not allowed"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The specified alg value is not allowed",
+   "template_parts": [
+    "The specified alg value is not allowed"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidAlgorithmError",
+   "class_name": "InvalidAlgorithmError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "alg",
+    "algorithm_name",
+    "key"
+   ],
+   "guards": [
+    "alg != key.algorithm_name"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jws.PyJWS._verify_signature#3",
+   "lines": [
+    [
+     425,
+     428
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Token algorithm {*} does not match the key's algorithm {*}",
+   "template_parts": [
+    "Token algorithm ",
+    null,
+    " does not match the key's algorithm ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidAlgorithmError",
+   "class_name": "InvalidAlgorithmError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "NotImplementedError",
+    "e"
+   ],
+   "guards": [
+    "except NotImplementedError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._verify_signature#4",
+   "lines": [
+    [
+     435,
+     435
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Algorithm not supported"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Algorithm not supported",
+   "template_parts": [
+    "Algorithm not supported"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidKeyError",
+   "class_name": "InvalidKeyError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "effective_options",
+    "enforce_minimum_key_length",
+    "get"
+   ],
+   "guards": [
+    "effective_options.get('enforce_minimum_key_length', False)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jws.PyJWS._verify_signature#5",
+   "lines": [
+    [
+     441,
+     441
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidSignatureError",
+   "class_name": "InvalidSignatureError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "alg_obj",
+    "prepared_key",
+    "signature",
+    "signing_input",
+    "verify"
+   ],
+   "guards": [
+    "not alg_obj.verify(signing_input, prepared_key, signature)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._verify_signature#6",
+   "lines": [
+    [
+     446,
+     446
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Signature verification failed"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Signature verification failed",
+   "template_parts": [
+    "Signature verification failed"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidTokenError",
+   "class_name": "InvalidTokenError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_kid",
+   "function_name": "_validate_kid",
+   "guard_words": [
+    "isinstance",
+    "kid",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(kid, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._validate_kid#1",
+   "lines": [
+    [
+     461,
+     461
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Key ID header parameter must be a string"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Key ID header parameter must be a string",
+   "template_parts": [
+    "Key ID header parameter must be a string"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidTokenError",
+   "class_name": "InvalidTokenError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_crit",
+   "function_name": "_validate_crit",
+   "guard_words": [
+    "crit",
+    "isinstance",
+    "len",
+    "list"
+   ],
+   "guards": [
+    "not isinstance(crit, list) or len(crit) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._validate_crit#1",
+   "lines": [
+    [
+     466,
+     466
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid 'crit' header: must be a non-empty list"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid 'crit' header: must be a non-empty list",
+   "template_parts": [
+    "Invalid 'crit' header: must be a non-empty list"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidTokenError",
+   "class_name": "InvalidTokenError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_crit",
+   "function_name": "_validate_crit",
+   "guard_words": [
+    "ext",
+    "isinstance",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(ext, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jws.PyJWS._validate_crit#2",
+   "lines": [
+    [
+     469,
+     469
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid 'crit' header: values must be strings"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid 'crit' header: values must be strings",
+   "template_parts": [
+    "Invalid 'crit' header: values must be strings"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidTokenError",
+   "class_name": "InvalidTokenError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_crit",
+   "function_name": "_validate_crit",
+   "guard_words": [
+    "_supported_crit",
+    "ext",
+    "self"
+   ],
+   "guards": [
+    "ext not in self._supported_crit"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jws.PyJWS._validate_crit#3",
+   "lines": [
+    [
+     471,
+     471
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Unsupported critical extension: {*}",
+   "template_parts": [
+    "Unsupported critical extension: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidTokenError",
+   "class_name": "InvalidTokenError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_crit",
+   "function_name": "_validate_crit",
+   "guard_words": [
+    "ext",
+    "headers"
+   ],
+   "guards": [
+    "ext not in headers"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jws.PyJWS._validate_crit#4",
+   "lines": [
+    [
+     473,
+     475
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWS",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Critical extension '{*}' is missing from headers",
+   "template_parts": [
+    "Critical extension '",
+    null,
+    "' is missing from headers"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._decode_payload",
+   "function_name": "_decode_payload",
+   "guard_words": [
+    "RecursionError",
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except (ValueError, RecursionError) as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jwt.PyJWT._decode_payload#1",
+   "lines": [
+    [
+     300,
+     300
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid payload string: {*}",
+   "template_parts": [
+    "Invalid payload string: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._decode_payload",
+   "function_name": "_decode_payload",
+   "guard_words": [
+    "dict",
+    "isinstance",
+    "payload"
+   ],
+   "guards": [
+    "not isinstance(payload, dict)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._decode_payload#2",
+   "lines": [
+    [
+     302,
+     302
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid payload string: must be a json object"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid payload string: must be a json object",
+   "template_parts": [
+    "Invalid payload string: must be a json object"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "MissingRequiredClaimError",
+   "class_name": "MissingRequiredClaimError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_required_claims",
+   "function_name": "_validate_required_claims",
+   "guard_words": [
+    "claim",
+    "get",
+    "payload"
+   ],
+   "guards": [
+    "payload.get(claim) is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "api_jwt.PyJWT._validate_required_claims#1",
+   "lines": [
+    [
+     433,
+     433
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidSubjectError",
+   "class_name": "InvalidSubjectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_sub",
+   "function_name": "_validate_sub",
+   "guard_words": [
+    "isinstance",
+    "payload",
+    "str",
+    "sub"
+   ],
+   "guards": [
+    "not isinstance(payload['sub'], str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_sub#1",
+   "lines": [
+    [
+     450,
+     450
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Subject must be a string"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Subject must be a string",
+   "template_parts": [
+    "Subject must be a string"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidSubjectError",
+   "class_name": "InvalidSubjectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_sub",
+   "function_name": "_validate_sub",
+   "guard_words": [
+    "get",
+    "payload",
+    "sub",
+    "subject"
+   ],
+   "guards": [
+    "payload.get('sub') != subject"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_sub#2",
+   "lines": [
+    [
+     454,
+     454
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid subject"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid subject",
+   "template_parts": [
+    "Invalid subject"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidJTIError",
+   "class_name": "InvalidJTIError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_jti",
+   "function_name": "_validate_jti",
+   "guard_words": [
+    "get",
+    "isinstance",
+    "jti",
+    "payload",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(payload.get('jti'), str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_jti#1",
+   "lines": [
+    [
+     468,
+     468
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "JWT ID must be a string"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "JWT ID must be a string",
+   "template_parts": [
+    "JWT ID must be a string"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidIssuedAtError",
+   "class_name": "InvalidIssuedAtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iat",
+   "function_name": "_validate_iat",
+   "guard_words": [
+    "OverflowError",
+    "TypeError",
+    "ValueError"
+   ],
+   "guards": [
+    "except (ValueError, TypeError, OverflowError)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_iat#1",
+   "lines": [
+    [
+     479,
+     481
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Issued At claim (iat) must be an integer."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Issued At claim (iat) must be an integer.",
+   "template_parts": [
+    "Issued At claim (iat) must be an integer."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ImmatureSignatureError",
+   "class_name": "ImmatureSignatureError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iat",
+   "function_name": "_validate_iat",
+   "guard_words": [
+    "iat",
+    "leeway",
+    "now"
+   ],
+   "guards": [
+    "iat > now + leeway"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_iat#2",
+   "lines": [
+    [
+     483,
+     483
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The token is not yet valid (iat)"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The token is not yet valid (iat)",
+   "template_parts": [
+    "The token is not yet valid (iat)"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_nbf",
+   "function_name": "_validate_nbf",
+   "guard_words": [
+    "OverflowError",
+    "TypeError",
+    "ValueError"
+   ],
+   "guards": [
+    "except (ValueError, TypeError, OverflowError)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_nbf#1",
+   "lines": [
+    [
+     494,
+     494
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not Before claim (nbf) must be an integer."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Not Before claim (nbf) must be an integer.",
+   "template_parts": [
+    "Not Before claim (nbf) must be an integer."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ImmatureSignatureError",
+   "class_name": "ImmatureSignatureError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_nbf",
+   "function_name": "_validate_nbf",
+   "guard_words": [
+    "leeway",
+    "nbf",
+    "now"
+   ],
+   "guards": [
+    "nbf > now + leeway"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_nbf#2",
+   "lines": [
+    [
+     497,
+     497
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The token is not yet valid (nbf)"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The token is not yet valid (nbf)",
+   "template_parts": [
+    "The token is not yet valid (nbf)"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "DecodeError",
+   "class_name": "DecodeError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_exp",
+   "function_name": "_validate_exp",
+   "guard_words": [
+    "OverflowError",
+    "TypeError",
+    "ValueError"
+   ],
+   "guards": [
+    "except (ValueError, TypeError, OverflowError)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_exp#1",
+   "lines": [
+    [
+     508,
+     510
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Expiration Time claim (exp) must be an integer."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Expiration Time claim (exp) must be an integer.",
+   "template_parts": [
+    "Expiration Time claim (exp) must be an integer."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ExpiredSignatureError",
+   "class_name": "ExpiredSignatureError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_exp",
+   "function_name": "_validate_exp",
+   "guard_words": [
+    "exp",
+    "leeway",
+    "now"
+   ],
+   "guards": [
+    "exp <= now - leeway"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_exp#2",
+   "lines": [
+    [
+     513,
+     513
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Signature has expired"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Signature has expired",
+   "template_parts": [
+    "Signature has expired"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidAudienceError",
+   "class_name": "InvalidAudienceError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "function_name": "_validate_aud",
+   "guard_words": [
+    "audience"
+   ],
+   "guards": [
+    "audience is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_aud#1",
+   "lines": [
+    [
+     527,
+     527
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid audience"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid audience",
+   "template_parts": [
+    "Invalid audience"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "MissingRequiredClaimError",
+   "class_name": "MissingRequiredClaimError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "function_name": "_validate_aud",
+   "guard_words": [
+    "aud",
+    "payload"
+   ],
+   "guards": [
+    "'aud' not in payload or not payload['aud']"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_aud#2",
+   "lines": [
+    [
+     532,
+     532
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "aud"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "aud",
+   "template_parts": [
+    "aud"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidAudienceError",
+   "class_name": "InvalidAudienceError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "function_name": "_validate_aud",
+   "guard_words": [
+    "audience",
+    "isinstance",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(audience, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_aud#3",
+   "lines": [
+    [
+     541,
+     541
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid audience (strict)"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid audience (strict)",
+   "template_parts": [
+    "Invalid audience (strict)"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidAudienceError",
+   "class_name": "InvalidAudienceError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "function_name": "_validate_aud",
+   "guard_words": [
+    "audience_claims",
+    "isinstance",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(audience_claims, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_aud#4",
+   "lines": [
+    [
+     545,
+     545
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid claim format in token (strict)"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid claim format in token (strict)",
+   "template_parts": [
+    "Invalid claim format in token (strict)"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidAudienceError",
+   "class_name": "InvalidAudienceError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "function_name": "_validate_aud",
+   "guard_words": [
+    "audience",
+    "audience_claims"
+   ],
+   "guards": [
+    "audience != audience_claims"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_aud#5",
+   "lines": [
+    [
+     548,
+     548
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Audience doesn't match (strict)"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Audience doesn't match (strict)",
+   "template_parts": [
+    "Audience doesn't match (strict)"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidAudienceError",
+   "class_name": "InvalidAudienceError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "function_name": "_validate_aud",
+   "guard_words": [
+    "any",
+    "audience_claims",
+    "c",
+    "isinstance",
+    "list",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(audience_claims, list)",
+    "any((not isinstance(c, str) for c in audience_claims))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_aud#6",
+   "lines": [
+    [
+     555,
+     555
+    ],
+    [
+     557,
+     557
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid claim format in token"
+     }
+    },
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid claim format in token"
+     }
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    6,
+    7
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid claim format in token",
+   "template_parts": [
+    "Invalid claim format in token"
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "InvalidAudienceError",
+   "class_name": "InvalidAudienceError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "function_name": "_validate_aud",
+   "guard_words": [
+    "all",
+    "aud",
+    "audience",
+    "audience_claims"
+   ],
+   "guards": [
+    "all((aud not in audience_claims for aud in audience))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_aud#7",
+   "lines": [
+    [
+     563,
+     563
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Audience doesn't match"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    8
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Audience doesn't match",
+   "template_parts": [
+    "Audience doesn't match"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "MissingRequiredClaimError",
+   "class_name": "MissingRequiredClaimError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iss",
+   "function_name": "_validate_iss",
+   "guard_words": [
+    "iss",
+    "payload"
+   ],
+   "guards": [
+    "'iss' not in payload"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_iss#1",
+   "lines": [
+    [
+     572,
+     572
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "iss"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "iss",
+   "template_parts": [
+    "iss"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidIssuerError",
+   "class_name": "InvalidIssuerError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iss",
+   "function_name": "_validate_iss",
+   "guard_words": [
+    "isinstance",
+    "iss",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(iss, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_iss#2",
+   "lines": [
+    [
+     576,
+     576
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Payload Issuer (iss) must be a string"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Payload Issuer (iss) must be a string",
+   "template_parts": [
+    "Payload Issuer (iss) must be a string"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "InvalidIssuerError",
+   "class_name": "InvalidIssuerError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iss",
+   "function_name": "_validate_iss",
+   "guard_words": [
+    "iss",
+    "issuer"
+   ],
+   "guards": [
+    "iss != issuer",
+    "iss not in issuer"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_iss#3",
+   "lines": [
+    [
+     580,
+     580
+    ],
+    [
+     584,
+     584
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid issuer"
+     }
+    },
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid issuer"
+     }
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    3,
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid issuer",
+   "template_parts": [
+    "Invalid issuer"
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "InvalidIssuerError",
+   "class_name": "InvalidIssuerError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iss",
+   "function_name": "_validate_iss",
+   "guard_words": [
+    "TypeError"
+   ],
+   "guards": [
+    "except TypeError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "api_jwt.PyJWT._validate_iss#4",
+   "lines": [
+    [
+     586,
+     588
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Issuer param must be \"str\" or \"Container[str]\""
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWT",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Issuer param must be \"str\" or \"Container[str]\"",
+   "template_parts": [
+    "Issuer param must be \"str\" or \"Container[str]\""
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKSetError",
+   "class_name": "PyJWKSetError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/jwk_set_cache.py",
+   "function": "JWKSetCache.put",
+   "function_name": "put",
+   "guard_words": [
+    "dict",
+    "isinstance",
+    "jwk_set"
+   ],
+   "guards": [
+    "not isinstance(jwk_set, dict)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwk_set_cache.JWKSetCache.put#1",
+   "lines": [
+    [
+     30,
+     30
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid JWK Set value"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "JWKSetCache",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid JWK Set value",
+   "template_parts": [
+    "Invalid JWK Set value"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKClientError",
+   "class_name": "PyJWKClientError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "http",
+    "https",
+    "scheme"
+   ],
+   "guards": [
+    "scheme not in ('http', 'https')"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwks_client.PyJWKClient.__init__#1",
+   "lines": [
+    [
+     108,
+     111
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Invalid JWKS URI scheme {*}: only 'http' and 'https' are supported.",
+   "template_parts": [
+    "Invalid JWKS URI scheme ",
+    null,
+    ": only 'http' and 'https' are supported."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKClientError",
+   "class_name": "PyJWKClientError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "cooldown_duration"
+   ],
+   "guards": [
+    "cooldown_duration < 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwks_client.PyJWKClient.__init__#2",
+   "lines": [
+    [
+     118,
+     121
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKClient",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Cooldown duration must be greater than or equal to 0, the input is \"{*}\"",
+   "template_parts": [
+    "Cooldown duration must be greater than or equal to 0, the input is \"",
+    null,
+    "\""
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKClientError",
+   "class_name": "PyJWKClientError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "cooldown_duration",
+    "isfinite",
+    "math"
+   ],
+   "guards": [
+    "not math.isfinite(cooldown_duration)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwks_client.PyJWKClient.__init__#3",
+   "lines": [
+    [
+     123,
+     125
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKClient",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Cooldown duration must be finite, the input is \"{*}\"",
+   "template_parts": [
+    "Cooldown duration must be finite, the input is \"",
+    null,
+    "\""
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKClientError",
+   "class_name": "PyJWKClientError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "lifespan"
+   ],
+   "guards": [
+    "lifespan <= 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwks_client.PyJWKClient.__init__#4",
+   "lines": [
+    [
+     134,
+     136
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKClient",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Lifespan must be greater than 0, the input is \"{*}\"",
+   "template_parts": [
+    "Lifespan must be greater than 0, the input is \"",
+    null,
+    "\""
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKClientConnectionError",
+   "class_name": "PyJWKClientConnectionError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.fetch_data",
+   "function_name": "fetch_data",
+   "guard_words": [
+    "HTTPException",
+    "TimeoutError",
+    "URLError",
+    "client",
+    "e",
+    "http"
+   ],
+   "guards": [
+    "except (URLError, TimeoutError, http.client.HTTPException) as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwks_client.PyJWKClient.fetch_data#1",
+   "lines": [
+    [
+     172,
+     174
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Fail to fetch data from the url, err: \"{*}\"",
+   "template_parts": [
+    "Fail to fetch data from the url, err: \"",
+    null,
+    "\""
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKClientError",
+   "class_name": "PyJWKClientError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient._as_jwk_set_payload",
+   "function_name": "_as_jwk_set_payload",
+   "guard_words": [
+    "data",
+    "dict",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(data, dict)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwks_client.PyJWKClient._as_jwk_set_payload#1",
+   "lines": [
+    [
+     230,
+     230
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The JWKS endpoint did not return a JSON object"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The JWKS endpoint did not return a JSON object",
+   "template_parts": [
+    "The JWKS endpoint did not return a JSON object"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKClientError",
+   "class_name": "PyJWKClientError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient._get_signing_keys_from_jwk_set",
+   "function_name": "_get_signing_keys_from_jwk_set",
+   "guard_words": [
+    "signing_keys"
+   ],
+   "guards": [
+    "not signing_keys"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwks_client.PyJWKClient._get_signing_keys_from_jwk_set#1",
+   "lines": [
+    [
+     259,
+     259
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The JWKS endpoint did not contain any signing keys"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The JWKS endpoint did not contain any signing keys",
+   "template_parts": [
+    "The JWKS endpoint did not contain any signing keys"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "PyJWKClientError",
+   "class_name": "PyJWKClientError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.get_signing_key",
+   "function_name": "get_signing_key",
+   "guard_words": [
+    "signing_key"
+   ],
+   "guards": [
+    "not signing_key"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwks_client.PyJWKClient.get_signing_key#1",
+   "lines": [
+    [
+     294,
+     296
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "PyJWKClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unable to find a signing key that matches: \"{*}\"",
+   "template_parts": [
+    "Unable to find a signing key that matches: \"",
+    null,
+    "\""
+   ],
+   "via_variable": [
+    null
+   ]
+  }
+ ],
+ "classes": {
+  "Algorithm": {
+   "bases": [
+    "abc.ABC"
+   ],
+   "bases_declared": [
+    "abc.ABC"
+   ],
+   "defines": [
+    "check_crypto_key_type",
+    "check_key_length",
+    "compute_hash_digest",
+    "from_jwk",
+    "prepare_key",
+    "sign",
+    "to_jwk",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.algorithms",
+   "name": "Algorithm",
+   "qualname": "Algorithm"
+  },
+  "DecodeError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "DecodeError",
+   "qualname": "DecodeError"
+  },
+  "ECAlgorithm": {
+   "bases": [
+    "Algorithm"
+   ],
+   "bases_declared": [
+    "Algorithm"
+   ],
+   "defines": [
+    "__init__",
+    "_validate_curve",
+    "from_jwk",
+    "prepare_key",
+    "sign",
+    "to_jwk",
+    "verify"
+   ],
+   "init_attrs": {
+    "expected_curve": 1,
+    "hash_alg": 0
+   },
+   "init_params": [
+    "hash_alg",
+    "expected_curve"
+   ],
+   "module": "jwt.algorithms",
+   "name": "ECAlgorithm",
+   "qualname": "ECAlgorithm"
+  },
+  "ExpiredSignatureError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "ExpiredSignatureError",
+   "qualname": "ExpiredSignatureError"
+  },
+  "FullOptions": {
+   "bases": [
+    "typing.TypedDict"
+   ],
+   "bases_declared": [
+    "typing.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.types",
+   "name": "FullOptions",
+   "qualname": "FullOptions"
+  },
+  "HMACAlgorithm": {
+   "bases": [
+    "Algorithm"
+   ],
+   "bases_declared": [
+    "Algorithm"
+   ],
+   "defines": [
+    "__init__",
+    "_is_der_key",
+    "check_key_length",
+    "from_jwk",
+    "prepare_key",
+    "sign",
+    "to_jwk",
+    "verify"
+   ],
+   "init_attrs": {
+    "hash_alg": 0
+   },
+   "init_params": [
+    "hash_alg"
+   ],
+   "module": "jwt.algorithms",
+   "name": "HMACAlgorithm",
+   "qualname": "HMACAlgorithm"
+  },
+  "ImmatureSignatureError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "ImmatureSignatureError",
+   "qualname": "ImmatureSignatureError"
+  },
+  "InsecureKeyLengthWarning": {
+   "bases": [
+    "UserWarning"
+   ],
+   "bases_declared": [
+    "UserWarning"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.warnings",
+   "name": "InsecureKeyLengthWarning",
+   "qualname": "InsecureKeyLengthWarning"
+  },
+  "InvalidAlgorithmError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "InvalidAlgorithmError",
+   "qualname": "InvalidAlgorithmError"
+  },
+  "InvalidAudienceError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "InvalidAudienceError",
+   "qualname": "InvalidAudienceError"
+  },
+  "InvalidIssuedAtError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "InvalidIssuedAtError",
+   "qualname": "InvalidIssuedAtError"
+  },
+  "InvalidIssuerError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "InvalidIssuerError",
+   "qualname": "InvalidIssuerError"
+  },
+  "InvalidJTIError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "InvalidJTIError",
+   "qualname": "InvalidJTIError"
+  },
+  "InvalidKeyError": {
+   "bases": [
+    "PyJWTError"
+   ],
+   "bases_declared": [
+    "PyJWTError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "InvalidKeyError",
+   "qualname": "InvalidKeyError"
+  },
+  "InvalidSignatureError": {
+   "bases": [
+    "DecodeError"
+   ],
+   "bases_declared": [
+    "DecodeError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "InvalidSignatureError",
+   "qualname": "InvalidSignatureError"
+  },
+  "InvalidSubjectError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "InvalidSubjectError",
+   "qualname": "InvalidSubjectError"
+  },
+  "InvalidTokenError": {
+   "bases": [
+    "PyJWTError"
+   ],
+   "bases_declared": [
+    "PyJWTError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "InvalidTokenError",
+   "qualname": "InvalidTokenError"
+  },
+  "JWKSetCache": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "get",
+    "is_expired",
+    "put"
+   ],
+   "init_attrs": {
+    "lifespan": 0
+   },
+   "init_params": [
+    "lifespan"
+   ],
+   "module": "jwt.jwk_set_cache",
+   "name": "JWKSetCache",
+   "qualname": "JWKSetCache"
+  },
+  "MissingCryptographyError": {
+   "bases": [
+    "PyJWKError"
+   ],
+   "bases_declared": [
+    "PyJWKError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "MissingCryptographyError",
+   "qualname": "MissingCryptographyError"
+  },
+  "MissingRequiredClaimError": {
+   "bases": [
+    "InvalidTokenError"
+   ],
+   "bases_declared": [
+    "InvalidTokenError"
+   ],
+   "defines": [
+    "__init__",
+    "__str__"
+   ],
+   "init_attrs": {
+    "claim": 0
+   },
+   "init_params": [
+    "claim"
+   ],
+   "module": "jwt.exceptions",
+   "name": "MissingRequiredClaimError",
+   "qualname": "MissingRequiredClaimError"
+  },
+  "NoneAlgorithm": {
+   "bases": [
+    "Algorithm"
+   ],
+   "bases_declared": [
+    "Algorithm"
+   ],
+   "defines": [
+    "from_jwk",
+    "prepare_key",
+    "sign",
+    "to_jwk",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.algorithms",
+   "name": "NoneAlgorithm",
+   "qualname": "NoneAlgorithm"
+  },
+  "OKPAlgorithm": {
+   "bases": [
+    "Algorithm"
+   ],
+   "bases_declared": [
+    "Algorithm"
+   ],
+   "defines": [
+    "__init__",
+    "from_jwk",
+    "prepare_key",
+    "sign",
+    "to_jwk",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "jwt.algorithms",
+   "name": "OKPAlgorithm",
+   "qualname": "OKPAlgorithm"
+  },
+  "Options": {
+   "bases": [
+    "typing.TypedDict"
+   ],
+   "bases_declared": [
+    "typing.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.types",
+   "name": "Options",
+   "qualname": "Options"
+  },
+  "PyJWK": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "from_dict",
+    "from_json",
+    "key_id",
+    "key_type",
+    "public_key_use"
+   ],
+   "init_attrs": {
+    "_jwk_data": 0,
+    "algorithm_name": 1
+   },
+   "init_params": [
+    "jwk_data",
+    "algorithm"
+   ],
+   "module": "jwt.api_jwk",
+   "name": "PyJWK",
+   "qualname": "PyJWK"
+  },
+  "PyJWKClient": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "_as_jwk_set_payload",
+    "_get_signing_keys_from_jwk_set",
+    "fetch_data",
+    "get_jwk_set",
+    "get_signing_key",
+    "get_signing_key_from_jwt",
+    "get_signing_keys",
+    "match_kid"
+   ],
+   "init_attrs": {
+    "cooldown_duration": 8,
+    "headers": 5,
+    "ssl_context": 7,
+    "timeout": 6,
+    "uri": 0
+   },
+   "init_params": [
+    "uri",
+    "cache_keys",
+    "max_cached_keys",
+    "cache_jwk_set",
+    "lifespan",
+    "headers",
+    "timeout",
+    "ssl_context",
+    "cooldown_duration"
+   ],
+   "module": "jwt.jwks_client",
+   "name": "PyJWKClient",
+   "qualname": "PyJWKClient"
+  },
+  "PyJWKClientConnectionError": {
+   "bases": [
+    "PyJWKClientError"
+   ],
+   "bases_declared": [
+    "PyJWKClientError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "PyJWKClientConnectionError",
+   "qualname": "PyJWKClientConnectionError"
+  },
+  "PyJWKClientError": {
+   "bases": [
+    "PyJWTError"
+   ],
+   "bases_declared": [
+    "PyJWTError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "PyJWKClientError",
+   "qualname": "PyJWKClientError"
+  },
+  "PyJWKError": {
+   "bases": [
+    "PyJWTError"
+   ],
+   "bases_declared": [
+    "PyJWTError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "PyJWKError",
+   "qualname": "PyJWKError"
+  },
+  "PyJWKSet": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__getitem__",
+    "__init__",
+    "__iter__",
+    "from_dict",
+    "from_json"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "keys"
+   ],
+   "module": "jwt.api_jwk",
+   "name": "PyJWKSet",
+   "qualname": "PyJWKSet"
+  },
+  "PyJWKSetError": {
+   "bases": [
+    "PyJWTError"
+   ],
+   "bases_declared": [
+    "PyJWTError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "PyJWKSetError",
+   "qualname": "PyJWKSetError"
+  },
+  "PyJWS": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "_decode_base64url_segment",
+    "_get_default_options",
+    "_load",
+    "_validate_crit",
+    "_validate_headers",
+    "_validate_kid",
+    "_verify_signature",
+    "decode",
+    "decode_complete",
+    "encode",
+    "get_algorithm_by_name",
+    "get_algorithms",
+    "get_unverified_header",
+    "register_algorithm",
+    "unregister_algorithm"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "algorithms",
+    "options"
+   ],
+   "module": "jwt.api_jws",
+   "name": "PyJWS",
+   "qualname": "PyJWS"
+  },
+  "PyJWT": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "_decode_payload",
+    "_encode_payload",
+    "_get_default_options",
+    "_get_sig_options",
+    "_merge_options",
+    "_validate_aud",
+    "_validate_claims",
+    "_validate_exp",
+    "_validate_iat",
+    "_validate_iss",
+    "_validate_jti",
+    "_validate_nbf",
+    "_validate_required_claims",
+    "_validate_sub",
+    "decode",
+    "decode_complete",
+    "encode"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "options"
+   ],
+   "module": "jwt.api_jwt",
+   "name": "PyJWT",
+   "qualname": "PyJWT"
+  },
+  "PyJWTError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.exceptions",
+   "name": "PyJWTError",
+   "qualname": "PyJWTError"
+  },
+  "PyJWTSetWithTimestamp": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "get_jwk_set",
+    "get_timestamp"
+   ],
+   "init_attrs": {
+    "jwk_set": 0
+   },
+   "init_params": [
+    "jwk_set"
+   ],
+   "module": "jwt.api_jwk",
+   "name": "PyJWTSetWithTimestamp",
+   "qualname": "PyJWTSetWithTimestamp"
+  },
+  "RSAAlgorithm": {
+   "bases": [
+    "Algorithm"
+   ],
+   "bases_declared": [
+    "Algorithm"
+   ],
+   "defines": [
+    "__init__",
+    "check_key_length",
+    "from_jwk",
+    "prepare_key",
+    "sign",
+    "to_jwk",
+    "verify"
+   ],
+   "init_attrs": {
+    "hash_alg": 0
+   },
+   "init_params": [
+    "hash_alg"
+   ],
+   "module": "jwt.algorithms",
+   "name": "RSAAlgorithm",
+   "qualname": "RSAAlgorithm"
+  },
+  "RSAPSSAlgorithm": {
+   "bases": [
+    "RSAAlgorithm"
+   ],
+   "bases_declared": [
+    "RSAAlgorithm"
+   ],
+   "defines": [
+    "sign",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.algorithms",
+   "name": "RSAPSSAlgorithm",
+   "qualname": "RSAPSSAlgorithm"
+  },
+  "RemovedInPyjwt3Warning": {
+   "bases": [
+    "DeprecationWarning"
+   ],
+   "bases_declared": [
+    "DeprecationWarning"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.warnings",
+   "name": "RemovedInPyjwt3Warning",
+   "qualname": "RemovedInPyjwt3Warning"
+  },
+  "SigOptions": {
+   "bases": [
+    "typing.TypedDict"
+   ],
+   "bases_declared": [
+    "typing.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.types",
+   "name": "SigOptions",
+   "qualname": "SigOptions"
+  },
+  "_NoRedirectHandler": {
+   "bases": [
+    "urllib.request.HTTPRedirectHandler"
+   ],
+   "bases_declared": [
+    "urllib.request.HTTPRedirectHandler"
+   ],
+   "defines": [
+    "redirect_request"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jwt.jwks_client",
+   "name": "_NoRedirectHandler",
+   "qualname": "_NoRedirectHandler"
+  }
+ },
+ "functions": [
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.check_crypto_key_type",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.check_key_length",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.compute_hash_digest",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.from_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.prepare_key",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.sign",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.to_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.to_jwk~2",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.to_jwk~3",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.verify",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm._validate_curve",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.prepare_key",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.sign",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.to_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.to_jwk~2",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.to_jwk~3",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.verify",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm._is_der_key",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.check_key_length",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.from_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.prepare_key",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.sign",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.to_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.to_jwk~2",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.to_jwk~3",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.verify",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.from_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.prepare_key",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.sign",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.to_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.verify",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.from_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.prepare_key",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.sign",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.to_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.to_jwk~2",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.to_jwk~3",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.verify",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.check_key_length",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.from_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.prepare_key",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.sign",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.to_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.to_jwk~2",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.to_jwk~3",
+   "reachable": false
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.verify",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAPSSAlgorithm.sign",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "RSAPSSAlgorithm.verify",
+   "reachable": true
+  },
+  {
+   "file": "jwt/algorithms.py",
+   "function": "get_default_algorithms",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.from_dict",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.from_json",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.key_id",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.key_type",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWK.public_key_use",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.__getitem__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.__iter__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.from_dict",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.from_json",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWTSetWithTimestamp.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWTSetWithTimestamp.get_jwk_set",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWTSetWithTimestamp.get_timestamp",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._decode_base64url_segment",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._get_default_options",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._load",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_crit",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_headers",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._validate_kid",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS._verify_signature",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.decode_complete",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.encode",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.get_algorithm_by_name",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.get_algorithms",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.get_unverified_header",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.register_algorithm",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.unregister_algorithm",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._decode_payload",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._encode_payload",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._get_default_options",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._get_sig_options",
+   "reachable": false
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._merge_options",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_aud",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_claims",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_exp",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iat",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_iss",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_jti",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_nbf",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_required_claims",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_sub",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT.decode",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT.decode_complete",
+   "reachable": true
+  },
+  {
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT.encode",
+   "reachable": true
+  },
+  {
+   "file": "jwt/exceptions.py",
+   "function": "MissingRequiredClaimError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/exceptions.py",
+   "function": "MissingRequiredClaimError.__str__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/help.py",
+   "function": "info",
+   "reachable": false
+  },
+  {
+   "file": "jwt/help.py",
+   "function": "main",
+   "reachable": false
+  },
+  {
+   "file": "jwt/jwk_set_cache.py",
+   "function": "JWKSetCache.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/jwk_set_cache.py",
+   "function": "JWKSetCache.get",
+   "reachable": true
+  },
+  {
+   "file": "jwt/jwk_set_cache.py",
+   "function": "JWKSetCache.is_expired",
+   "reachable": true
+  },
+  {
+   "file": "jwt/jwk_set_cache.py",
+   "function": "JWKSetCache.put",
+   "reachable": true
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient._as_jwk_set_payload",
+   "reachable": true
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient._get_signing_keys_from_jwk_set",
+   "reachable": false
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.fetch_data",
+   "reachable": true
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.get_jwk_set",
+   "reachable": true
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.get_signing_key",
+   "reachable": false
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.get_signing_key_from_jwt",
+   "reachable": false
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.get_signing_keys",
+   "reachable": false
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "PyJWKClient.match_kid",
+   "reachable": false
+  },
+  {
+   "file": "jwt/jwks_client.py",
+   "function": "_NoRedirectHandler.redirect_request",
+   "reachable": false
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "base64url_decode",
+   "reachable": true
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "base64url_encode",
+   "reachable": true
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "bytes_from_int",
+   "reachable": false
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "bytes_to_number",
+   "reachable": true
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "der_to_raw_signature",
+   "reachable": true
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "force_bytes",
+   "reachable": true
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "from_base64url_uint",
+   "reachable": false
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "is_pem_format",
+   "reachable": true
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "is_ssh_key",
+   "reachable": true
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "number_to_bytes",
+   "reachable": true
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "raw_to_der_signature",
+   "reachable": true
+  },
+  {
+   "file": "jwt/utils.py",
+   "function": "to_base64url_uint",
+   "reachable": false
+  }
+ ],
+ "other_raises": [
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 193,
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.compute_hash_digest",
+   "guard": "hash_alg is None",
+   "line": 193,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 219,
+   "file": "jwt/algorithms.py",
+   "function": "Algorithm.check_crypto_key_type",
+   "guard": "not has_crypto or self._crypto_key_types is None",
+   "line": 217,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('This method requires the cryptography library, and should only be used by cryptography-based algorithms.')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 307,
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.to_jwk",
+   "guard": null,
+   "line": 307,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 311,
+   "file": "jwt/algorithms.py",
+   "function": "NoneAlgorithm.from_jwk",
+   "guard": null,
+   "line": 311,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 470,
+   "file": "jwt/algorithms.py",
+   "function": "HMACAlgorithm.from_jwk",
+   "guard": "isinstance(jwk, dict)",
+   "line": 470,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 538,
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.prepare_key",
+   "guard": "not isinstance(key, (bytes, str))",
+   "line": 538,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('Expecting a PEM-formatted key.')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 618,
+   "file": "jwt/algorithms.py",
+   "function": "RSAAlgorithm.from_jwk",
+   "guard": "isinstance(jwk, dict)",
+   "line": 618,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 735,
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.prepare_key",
+   "guard": "not isinstance(key, (bytes, str))",
+   "line": 735,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('Expecting a PEM-formatted key.')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 842,
+   "file": "jwt/algorithms.py",
+   "function": "ECAlgorithm.from_jwk",
+   "guard": "isinstance(jwk, dict)",
+   "line": 842,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 1086,
+   "file": "jwt/algorithms.py",
+   "function": "OKPAlgorithm.from_jwk",
+   "guard": "isinstance(jwk, dict)",
+   "line": 1086,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError",
+   "via": null
+  },
+  {
+   "class": "error",
+   "class_resolved": "?error",
+   "end_line": 158,
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.__init__",
+   "guard": "isinstance(error, MissingCryptographyError)",
+   "line": 158,
+   "raise_number": 3,
+   "reason": "re-raise of a bound exception",
+   "source": "raise error",
+   "via": null
+  },
+  {
+   "class": "KeyError",
+   "class_resolved": "KeyError",
+   "end_line": 181,
+   "file": "jwt/api_jwk.py",
+   "function": "PyJWKSet.__getitem__",
+   "guard": null,
+   "line": 181,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise KeyError(f'keyset has no key for kid: {kid}')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 71,
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.register_algorithm",
+   "guard": "alg_id in self._algorithms",
+   "line": 71,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Algorithm already has a handler.')",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 74,
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.register_algorithm",
+   "guard": "not isinstance(alg_obj, Algorithm)",
+   "line": 74,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('Object is not of type `Algorithm`')",
+   "via": null
+  },
+  {
+   "class": "KeyError",
+   "class_resolved": "KeyError",
+   "end_line": 89,
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.unregister_algorithm",
+   "guard": "alg_id not in self._algorithms",
+   "line": 86,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise KeyError('The specified algorithm could not be removed because it is not registered.')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 120,
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.get_algorithm_by_name",
+   "guard": "not has_crypto and alg_name in requires_cryptography",
+   "line": 118,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError(f\"Algorithm '{alg_name}' could not be found. Do you have cryptography installed?\") from e",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 121,
+   "file": "jwt/api_jws.py",
+   "function": "PyJWS.get_algorithm_by_name",
+   "guard": "except KeyError as e",
+   "line": 121,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError('Algorithm not supported') from e",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 130,
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT.encode",
+   "guard": "not isinstance(payload, dict)",
+   "line": 127,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('Expecting a dict object, as JWT only supports JSON objects as payloads.')",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 141,
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT.encode",
+   "guard": "'iss' in payload and (not isinstance(payload['iss'], str))",
+   "line": 141,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('Issuer (iss) must be a string.')",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 397,
+   "file": "jwt/api_jwt.py",
+   "function": "PyJWT._validate_claims",
+   "guard": "audience is not None and (not isinstance(audience, (str, Iterable)))",
+   "line": 397,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('audience must be a string, iterable or None')",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 22,
+   "file": "jwt/utils.py",
+   "function": "force_bytes",
+   "guard": "isinstance(value, bytes)",
+   "line": 22,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('Expected a string or bytes value')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 42,
+   "file": "jwt/utils.py",
+   "function": "to_base64url_uint",
+   "guard": "val < 0",
+   "line": 42,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Must be a positive integer')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 88,
+   "file": "jwt/utils.py",
+   "function": "raw_to_der_signature",
+   "guard": "len(raw_sig) != 2 * num_bytes",
+   "line": 88,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid signature')",
+   "via": null
+  }
+ ],
+ "rejection_bases": [
+  {
+   "kind": "package",
+   "module": "jwt.exceptions",
+   "name": "PyJWTError",
+   "qualname": "PyJWTError"
+  }
+ ],
+ "rejection_classes": [
+  "DecodeError",
+  "ExpiredSignatureError",
+  "ImmatureSignatureError",
+  "InvalidAlgorithmError",
+  "InvalidAudienceError",
+  "InvalidIssuedAtError",
+  "InvalidIssuerError",
+  "InvalidJTIError",
+  "InvalidKeyError",
+  "InvalidSignatureError",
+  "InvalidSubjectError",
+  "InvalidTokenError",
+  "MissingCryptographyError",
+  "MissingRequiredClaimError",
+  "PyJWKClientConnectionError",
+  "PyJWKClientError",
+  "PyJWKError",
+  "PyJWKSetError",
+  "PyJWTError"
+ ],
+ "sha256": {
+  "jwt/__init__.py": "d3a4446591308befe70cbc989428dbfa0dfe7ec7eee5d35a57a22043451c253c",
+  "jwt/algorithms.py": "31e174916a77d17f4ed9dbcd3b869e9264a146aaf8d97f02d9b43bf828fe0441",
+  "jwt/api_jwk.py": "ed5a1f0f48e3a56b92fc94707af7772bc932fb90181440cea1c6c6c4d51e6c47",
+  "jwt/api_jws.py": "80e83b3a4089f6a19692bb5b2f56784edc3bd65bf74043bad7a230f9c5bdcf12",
+  "jwt/api_jwt.py": "a2af9f3593c8cf9133163cb0b5b08223281b8292d5db5665309bc23c212cac76",
+  "jwt/exceptions.py": "3540f48760343221d5e94f933edfc0af4a6b9c01f1c892748ba2c7216cddf154",
+  "jwt/help.py": "1c1dd9b2b2557254745d8fac0c7f8bbe5e4aeda7b9422746894e96c93027621b",
+  "jwt/jwk_set_cache.py": "64868576dc64be9b4411f9b9d485c123b4f9f68f136ea4a6055d935fec2a18f4",
+  "jwt/jwks_client.py": "f67fdc9d770d0686d807fddff7da0ac8ca18ca4446a12053ce4e164881b12a57",
+  "jwt/types.py": "478e81927a35574f1faaec6756bef502f5bab843e2947265aa4817e8e6d9167c",
+  "jwt/utils.py": "b9d89ca2f37984f3779d6a85029b9acd535fa2a776444ffc32d2211b83853aaf",
+  "jwt/warnings.py": "8904ef3fe34f0d003eb6e84f86389f124611a8c520b5ef7d88e3cc25cfc32c99"
+ },
+ "subject": {
+  "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+  "copy": [
+   "jwt",
+   "tests",
+   "pyproject.toml"
+  ],
+  "distribution": "PyJWT",
+  "entry_points": [
+   "decode",
+   "decode_complete"
+  ],
+  "entry_points_source": "docs/api.rst: jwt.decode and jwt.decode_complete verify a token; PyJWS.decode and PyJWS.decode_complete, which they call, have the same names",
+  "name": "pyjwt-package",
+  "observed_files": [],
+  "package": "jwt",
+  "pytest_args": [
+   "-p",
+   "no:cacheprovider",
+   "-p",
+   "no:randomly"
+  ],
+  "python": "3.12.3",
+  "rejection_bases": [
+   "PyJWTError"
+  ],
+  "rejection_bases_source": "jwt/exceptions.py: PyJWTError, 'Base class for all exceptions'",
+  "repository": "https://github.com/jpadilla/pyjwt",
+  "scope_counts": {
+   "blocks_in_test_directories": 215,
+   "test_files_in_test_directories": 10,
+   "test_files_with_an_included_block": 4
+  },
+  "source_root": ".",
+  "subject_files": [
+   "jwt/__init__.py",
+   "jwt/algorithms.py",
+   "jwt/api_jwk.py",
+   "jwt/api_jws.py",
+   "jwt/api_jwt.py",
+   "jwt/exceptions.py",
+   "jwt/help.py",
+   "jwt/jwk_set_cache.py",
+   "jwt/jwks_client.py",
+   "jwt/types.py",
+   "jwt/utils.py",
+   "jwt/warnings.py"
+  ],
+  "suite_runs": [
+   {
+    "name": "all",
+    "paths": [
+     "tests"
+    ]
+   }
+  ],
+  "suite_runs_source": "tox.ini: pytest",
+  "tag": "2.15.1",
+  "test_directories_source": "pyproject.toml, [tool.pytest.ini_options] and tox.ini: pytest on tests",
+  "tests": [
+   "tests/test_advisory.py",
+   "tests/test_algorithms.py",
+   "tests/test_api_jws.py",
+   "tests/test_api_jwt.py"
+  ],
+  "version": "2.15.1"
+ }
+}

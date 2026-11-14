@@ -1,0 +1,67 @@
+{
+ "name": "pyjwt-package",
+ "distribution": "PyJWT",
+ "version": "2.15.1",
+ "repository": "https://github.com/jpadilla/pyjwt",
+ "tag": "2.15.1",
+ "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+ "package": "jwt",
+ "source_root": ".",
+ "entry_points": [
+  "decode",
+  "decode_complete"
+ ],
+ "entry_points_source": "docs/api.rst: jwt.decode and jwt.decode_complete verify a token; PyJWS.decode and PyJWS.decode_complete, which they call, have the same names",
+ "rejection_bases": [
+  "PyJWTError"
+ ],
+ "rejection_bases_source": "jwt/exceptions.py: PyJWTError, 'Base class for all exceptions'",
+ "test_directories_source": "pyproject.toml, [tool.pytest.ini_options] and tox.ini: pytest on tests",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "suite_runs_source": "tox.ini: pytest",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider",
+  "-p",
+  "no:randomly"
+ ],
+ "copy": [
+  "jwt",
+  "tests",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3",
+ "subject_files": [
+  "jwt/__init__.py",
+  "jwt/algorithms.py",
+  "jwt/api_jwk.py",
+  "jwt/api_jws.py",
+  "jwt/api_jwt.py",
+  "jwt/exceptions.py",
+  "jwt/help.py",
+  "jwt/jwk_set_cache.py",
+  "jwt/jwks_client.py",
+  "jwt/types.py",
+  "jwt/utils.py",
+  "jwt/warnings.py"
+ ],
+ "observed_files": [],
+ "tests": [
+  "tests/test_advisory.py",
+  "tests/test_algorithms.py",
+  "tests/test_api_jws.py",
+  "tests/test_api_jwt.py"
+ ],
+ "scope_counts": {
+  "test_files_in_test_directories": 10,
+  "blocks_in_test_directories": 215,
+  "test_files_with_an_included_block": 4
+ }
+}

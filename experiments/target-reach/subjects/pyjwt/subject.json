@@ -1,0 +1,46 @@
+{
+ "name": "pyjwt",
+ "version": "2.15.1",
+ "repository": "https://github.com/jpadilla/pyjwt",
+ "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+ "distribution": "PyJWT",
+ "package": "jwt",
+ "source_root": ".",
+ "subject_files": [
+  "jwt/api_jws.py",
+  "jwt/api_jwt.py"
+ ],
+ "observed_files": [
+  "jwt/algorithms.py"
+ ],
+ "entry_points": [
+  "decode",
+  "decode_complete"
+ ],
+ "rejection_bases": [
+  "PyJWTError"
+ ],
+ "tests": [
+  "tests"
+ ],
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider",
+  "-p",
+  "no:randomly"
+ ],
+ "copy": [
+  "jwt",
+  "tests",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ]
+}

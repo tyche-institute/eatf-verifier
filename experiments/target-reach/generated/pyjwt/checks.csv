@@ -1,0 +1,81 @@
+check,file,role,function,class,template,in_handler,reachable,decides,cases_decided,blocks_targeting,cases_fired
+algorithms.Algorithm.check_crypto_key_type#1,jwt/algorithms.py,observed,Algorithm.check_crypto_key_type,InvalidKeyError,"Expected one of {*}, got: {*}. Invalid Key type for {*}",no,yes,no,0,0,0
+algorithms.NoneAlgorithm.prepare_key#1,jwt/algorithms.py,observed,NoneAlgorithm.prepare_key,InvalidKeyError,"When alg = ""none"", key value must be None.",no,yes,no,0,0,0
+algorithms.HMACAlgorithm.prepare_key#1,jwt/algorithms.py,observed,HMACAlgorithm.prepare_key,InvalidKeyError,HMAC key must not be empty.,no,yes,yes,2,2,2
+algorithms.HMACAlgorithm.prepare_key#2,jwt/algorithms.py,observed,HMACAlgorithm.prepare_key,InvalidKeyError,The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret.,no,yes,yes,2,0,2
+algorithms.HMACAlgorithm.prepare_key#3,jwt/algorithms.py,observed,HMACAlgorithm.prepare_key,InvalidKeyError,The specified key looks like a JWK and should not be used directly as an HMAC secret. Load it via PyJWK / HMACAlgorithm.from_jwk first.,no,yes,no,0,0,0
+algorithms.HMACAlgorithm.from_jwk#1,jwt/algorithms.py,observed,HMACAlgorithm.from_jwk,InvalidKeyError,Key is not valid JSON,yes,no,no,0,0,0
+algorithms.HMACAlgorithm.from_jwk#2,jwt/algorithms.py,observed,HMACAlgorithm.from_jwk,InvalidKeyError,Not an HMAC key,no,no,no,0,0,0
+algorithms.HMACAlgorithm.from_jwk#3,jwt/algorithms.py,observed,HMACAlgorithm.from_jwk,InvalidKeyError,HMAC key must not be empty.,no,no,no,0,0,0
+algorithms.RSAAlgorithm.prepare_key#1,jwt/algorithms.py,observed,RSAAlgorithm.prepare_key,InvalidKeyError,Could not parse the provided public key.,yes,yes,no,0,0,0
+algorithms.RSAAlgorithm.to_jwk~3#1,jwt/algorithms.py,observed,RSAAlgorithm.to_jwk~3,InvalidKeyError,Not a public or private key,no,no,no,0,0,0
+algorithms.RSAAlgorithm.from_jwk#1,jwt/algorithms.py,observed,RSAAlgorithm.from_jwk,InvalidKeyError,Key is not valid JSON,yes,no,no,0,0,0
+algorithms.RSAAlgorithm.from_jwk#2,jwt/algorithms.py,observed,RSAAlgorithm.from_jwk,InvalidKeyError,Not an RSA key,no,no,no,0,0,0
+algorithms.RSAAlgorithm.from_jwk#3,jwt/algorithms.py,observed,RSAAlgorithm.from_jwk,InvalidKeyError,Unsupported RSA private key: > 2 primes not supported,no,no,no,0,0,0
+algorithms.RSAAlgorithm.from_jwk#4,jwt/algorithms.py,observed,RSAAlgorithm.from_jwk,InvalidKeyError,RSA key must include all parameters if any are present besides d,no,no,no,0,0,0
+algorithms.RSAAlgorithm.from_jwk#5,jwt/algorithms.py,observed,RSAAlgorithm.from_jwk,InvalidKeyError,Not a public or private key,no,no,no,0,0,0
+algorithms.ECAlgorithm._validate_curve#1,jwt/algorithms.py,observed,ECAlgorithm._validate_curve,InvalidKeyError,The key's curve '{*}' does not match the expected curve '{*}' for this algorithm,no,yes,yes,1,0,1
+algorithms.ECAlgorithm.to_jwk~3#1,jwt/algorithms.py,observed,ECAlgorithm.to_jwk~3,InvalidKeyError,Not a public or private key,no,no,no,0,0,0
+algorithms.ECAlgorithm.to_jwk~3#2,jwt/algorithms.py,observed,ECAlgorithm.to_jwk~3,InvalidKeyError,Invalid curve: {*},no,no,no,0,0,0
+algorithms.ECAlgorithm.from_jwk#1,jwt/algorithms.py,observed,ECAlgorithm.from_jwk,InvalidKeyError,Key is not valid JSON,yes,no,no,0,0,0
+algorithms.ECAlgorithm.from_jwk#2,jwt/algorithms.py,observed,ECAlgorithm.from_jwk,InvalidKeyError,Not an Elliptic curve key,no,no,no,0,0,0
+algorithms.ECAlgorithm.from_jwk#3,jwt/algorithms.py,observed,ECAlgorithm.from_jwk,InvalidKeyError,Coords should be 32 bytes for curve P-256,no,no,no,0,0,0
+algorithms.ECAlgorithm.from_jwk#4,jwt/algorithms.py,observed,ECAlgorithm.from_jwk,InvalidKeyError,Coords should be 48 bytes for curve P-384,no,no,no,0,0,0
+algorithms.ECAlgorithm.from_jwk#5,jwt/algorithms.py,observed,ECAlgorithm.from_jwk,InvalidKeyError,Coords should be 66 bytes for curve P-521,no,no,no,0,0,0
+algorithms.ECAlgorithm.from_jwk#6,jwt/algorithms.py,observed,ECAlgorithm.from_jwk,InvalidKeyError,Coords should be 32 bytes for curve secp256k1,no,no,no,0,0,0
+algorithms.ECAlgorithm.from_jwk#7,jwt/algorithms.py,observed,ECAlgorithm.from_jwk,InvalidKeyError,Invalid curve: {*},no,no,no,0,0,0
+algorithms.ECAlgorithm.from_jwk#8,jwt/algorithms.py,observed,ECAlgorithm.from_jwk,InvalidKeyError,D should be {} bytes for curve {},no,no,no,0,0,0
+algorithms.OKPAlgorithm.prepare_key#1,jwt/algorithms.py,observed,OKPAlgorithm.prepare_key,InvalidKeyError,Not a public or private key,no,yes,no,0,0,0
+algorithms.OKPAlgorithm.to_jwk~3#1,jwt/algorithms.py,observed,OKPAlgorithm.to_jwk~3,InvalidKeyError,Not a public or private key,no,no,no,0,0,0
+algorithms.OKPAlgorithm.from_jwk#1,jwt/algorithms.py,observed,OKPAlgorithm.from_jwk,InvalidKeyError,Key is not valid JSON,yes,no,no,0,0,0
+algorithms.OKPAlgorithm.from_jwk#2,jwt/algorithms.py,observed,OKPAlgorithm.from_jwk,InvalidKeyError,Not an Octet Key Pair,no,no,no,0,0,0
+algorithms.OKPAlgorithm.from_jwk#3,jwt/algorithms.py,observed,OKPAlgorithm.from_jwk,InvalidKeyError,Invalid curve: {*},no,no,no,0,0,0
+algorithms.OKPAlgorithm.from_jwk#4,jwt/algorithms.py,observed,OKPAlgorithm.from_jwk,InvalidKeyError,"OKP should have ""x"" parameter",no,no,no,0,0,0
+algorithms.OKPAlgorithm.from_jwk#5,jwt/algorithms.py,observed,OKPAlgorithm.from_jwk,InvalidKeyError,Public key does not match private key,no,no,no,0,0,0
+algorithms.OKPAlgorithm.from_jwk#6,jwt/algorithms.py,observed,OKPAlgorithm.from_jwk,InvalidKeyError,Invalid key parameter,yes,no,no,0,0,0
+api_jws.PyJWS.encode#1,jwt/api_jws.py,subject,PyJWS.encode,InvalidTokenError,Invalid 'crit' header: must be a list,no,yes,no,0,0,0
+api_jws.PyJWS.encode#2,jwt/api_jws.py,subject,PyJWS.encode,InvalidKeyError,{*},no,yes,no,0,0,0
+api_jws.PyJWS.decode_complete#1,jwt/api_jws.py,subject,PyJWS.decode_complete,DecodeError,"It is required that you pass in a value for the ""algorithms"" argument when calling decode().",no,yes,yes,2,2,2
+api_jws.PyJWS.decode_complete#2,jwt/api_jws.py,subject,PyJWS.decode_complete,DecodeError,"It is only valid to pass ""detached_payload"" when the protected header has ""b64"" set to false.",no,yes,yes,1,0,1
+api_jws.PyJWS.decode_complete#3,jwt/api_jws.py,subject,PyJWS.decode_complete,InvalidTokenError,The 'b64' header parameter requires 'b64' to be listed in 'crit'.,no,yes,yes,1,1,1
+api_jws.PyJWS.decode_complete#4,jwt/api_jws.py,subject,PyJWS.decode_complete,DecodeError,"It is required that you pass in a value for the ""detached_payload"" argument to decode a message having the b64 header set to false.",no,yes,yes,1,1,1
+api_jws.PyJWS._decode_base64url_segment#1,jwt/api_jws.py,subject,PyJWS._decode_base64url_segment,DecodeError,Invalid {*} padding,yes,yes,yes,5,3,5
+api_jws.PyJWS._load#1,jwt/api_jws.py,subject,PyJWS._load,DecodeError,Invalid token type. Token must be a {*},no,yes,yes,2,2,2
+api_jws.PyJWS._load#2,jwt/api_jws.py,subject,PyJWS._load,DecodeError,Not enough segments,yes,yes,yes,1,1,1
+api_jws.PyJWS._load#3,jwt/api_jws.py,subject,PyJWS._load,DecodeError,Invalid header string: {*},yes,yes,yes,1,0,1
+api_jws.PyJWS._load#4,jwt/api_jws.py,subject,PyJWS._load,DecodeError,Invalid header string: must be a json object,no,yes,yes,2,0,2
+api_jws.PyJWS._load#5,jwt/api_jws.py,subject,PyJWS._load,DecodeError,Payload segment must be empty when 'b64' is false.,no,yes,yes,1,1,1
+api_jws.PyJWS._verify_signature#1,jwt/api_jws.py,subject,PyJWS._verify_signature,InvalidAlgorithmError,Algorithm not specified,yes,yes,yes,1,0,1
+api_jws.PyJWS._verify_signature#2,jwt/api_jws.py,subject,PyJWS._verify_signature,InvalidAlgorithmError,The specified alg value is not allowed,no,yes,yes,2,0,2
+api_jws.PyJWS._verify_signature#3,jwt/api_jws.py,subject,PyJWS._verify_signature,InvalidAlgorithmError,Token algorithm {*} does not match the key's algorithm {*},no,yes,yes,1,1,1
+api_jws.PyJWS._verify_signature#4,jwt/api_jws.py,subject,PyJWS._verify_signature,InvalidAlgorithmError,Algorithm not supported,yes,yes,yes,1,1,1
+api_jws.PyJWS._verify_signature#5,jwt/api_jws.py,subject,PyJWS._verify_signature,InvalidKeyError,{*},no,yes,yes,3,0,3
+api_jws.PyJWS._verify_signature#6,jwt/api_jws.py,subject,PyJWS._verify_signature,InvalidSignatureError,Signature verification failed,no,yes,yes,4,3,4
+api_jws.PyJWS._validate_kid#1,jwt/api_jws.py,subject,PyJWS._validate_kid,InvalidTokenError,Key ID header parameter must be a string,no,yes,no,0,0,0
+api_jws.PyJWS._validate_crit#1,jwt/api_jws.py,subject,PyJWS._validate_crit,InvalidTokenError,Invalid 'crit' header: must be a non-empty list,no,yes,yes,2,2,2
+api_jws.PyJWS._validate_crit#2,jwt/api_jws.py,subject,PyJWS._validate_crit,InvalidTokenError,Invalid 'crit' header: values must be strings,no,yes,yes,1,1,1
+api_jws.PyJWS._validate_crit#3,jwt/api_jws.py,subject,PyJWS._validate_crit,InvalidTokenError,Unsupported critical extension: {*},no,yes,yes,2,2,2
+api_jws.PyJWS._validate_crit#4,jwt/api_jws.py,subject,PyJWS._validate_crit,InvalidTokenError,Critical extension '{*}' is missing from headers,no,yes,yes,1,1,1
+api_jwt.PyJWT._decode_payload#1,jwt/api_jwt.py,subject,PyJWT._decode_payload,DecodeError,Invalid payload string: {*},yes,yes,yes,2,1,2
+api_jwt.PyJWT._decode_payload#2,jwt/api_jwt.py,subject,PyJWT._decode_payload,DecodeError,Invalid payload string: must be a json object,no,yes,yes,1,0,1
+api_jwt.PyJWT._validate_required_claims#1,jwt/api_jwt.py,subject,PyJWT._validate_required_claims,MissingRequiredClaimError,{*},no,yes,yes,5,3,5
+api_jwt.PyJWT._validate_sub#1,jwt/api_jwt.py,subject,PyJWT._validate_sub,InvalidSubjectError,Subject must be a string,no,yes,yes,1,0,1
+api_jwt.PyJWT._validate_sub#2,jwt/api_jwt.py,subject,PyJWT._validate_sub,InvalidSubjectError,Invalid subject,no,yes,yes,1,1,1
+api_jwt.PyJWT._validate_jti#1,jwt/api_jwt.py,subject,PyJWT._validate_jti,InvalidJTIError,JWT ID must be a string,no,yes,yes,1,1,1
+api_jwt.PyJWT._validate_iat#1,jwt/api_jwt.py,subject,PyJWT._validate_iat,InvalidIssuedAtError,Issued At claim (iat) must be an integer.,yes,yes,yes,5,1,5
+api_jwt.PyJWT._validate_iat#2,jwt/api_jwt.py,subject,PyJWT._validate_iat,ImmatureSignatureError,The token is not yet valid (iat),no,yes,yes,1,1,1
+api_jwt.PyJWT._validate_nbf#1,jwt/api_jwt.py,subject,PyJWT._validate_nbf,DecodeError,Not Before claim (nbf) must be an integer.,yes,yes,yes,5,1,5
+api_jwt.PyJWT._validate_nbf#2,jwt/api_jwt.py,subject,PyJWT._validate_nbf,ImmatureSignatureError,The token is not yet valid (nbf),no,yes,yes,2,0,2
+api_jwt.PyJWT._validate_exp#1,jwt/api_jwt.py,subject,PyJWT._validate_exp,DecodeError,Expiration Time claim (exp) must be an integer.,yes,yes,yes,5,1,5
+api_jwt.PyJWT._validate_exp#2,jwt/api_jwt.py,subject,PyJWT._validate_exp,ExpiredSignatureError,Signature has expired,no,yes,yes,6,5,6
+api_jwt.PyJWT._validate_aud#1,jwt/api_jwt.py,subject,PyJWT._validate_aud,InvalidAudienceError,Invalid audience,no,yes,yes,1,0,1
+api_jwt.PyJWT._validate_aud#2,jwt/api_jwt.py,subject,PyJWT._validate_aud,MissingRequiredClaimError,aud,no,yes,yes,2,2,2
+api_jwt.PyJWT._validate_aud#3,jwt/api_jwt.py,subject,PyJWT._validate_aud,InvalidAudienceError,Invalid audience (strict),no,yes,yes,1,1,1
+api_jwt.PyJWT._validate_aud#4,jwt/api_jwt.py,subject,PyJWT._validate_aud,InvalidAudienceError,Invalid claim format in token (strict),no,yes,yes,1,1,1
+api_jwt.PyJWT._validate_aud#5,jwt/api_jwt.py,subject,PyJWT._validate_aud,InvalidAudienceError,Audience doesn't match (strict),no,yes,yes,1,1,1
+api_jwt.PyJWT._validate_aud#6,jwt/api_jwt.py,subject,PyJWT._validate_aud,InvalidAudienceError,Invalid claim format in token,no,yes,yes,2,3,2
+api_jwt.PyJWT._validate_aud#7,jwt/api_jwt.py,subject,PyJWT._validate_aud,InvalidAudienceError,Audience doesn't match,no,yes,yes,4,0,4
+api_jwt.PyJWT._validate_iss#1,jwt/api_jwt.py,subject,PyJWT._validate_iss,MissingRequiredClaimError,iss,no,yes,yes,1,1,1
+api_jwt.PyJWT._validate_iss#2,jwt/api_jwt.py,subject,PyJWT._validate_iss,InvalidIssuerError,Payload Issuer (iss) must be a string,no,yes,no,0,0,0
+api_jwt.PyJWT._validate_iss#3,jwt/api_jwt.py,subject,PyJWT._validate_iss,InvalidIssuerError,Invalid issuer,no,yes,yes,3,0,3
+api_jwt.PyJWT._validate_iss#4,jwt/api_jwt.py,subject,PyJWT._validate_iss,InvalidIssuerError,"Issuer param must be ""str"" or ""Container[str]""",yes,yes,no,0,0,0

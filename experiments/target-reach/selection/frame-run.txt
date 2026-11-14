@@ -1,0 +1,51 @@
+1000 projects; 0 metadata errors; 50 candidates
+6 urllib3 | HTTP library with thread-safe connection pooling, file post, and more. | ssl
+9 cryptography | cryptography is a package which provides cryptographic recipes and primitives to Python de | crypt
+36 pyjwt | JSON Web Token implementation in Python | jwt,signing,token
+77 google-auth | Google Authentication Library | auth,oauth
+94 truststore | Verify certificates using native system trust stores | certificate,verif
+123 requests-oauthlib | OAuthlib authentication support for Requests. | auth,oauth
+131 oauthlib | A generic, spec-compliant, thorough implementation of the OAuth request-signing logic | oauth,signing
+154 tiktoken | tiktoken is a fast BPE tokeniser for use with OpenAI's models | token
+156 tokenizers |  | token
+166 pyopenssl | Python wrapper module around the OpenSSL library | ssl
+184 pynacl | Python binding to the Networking and Cryptography (NaCl) library | crypt
+189 bcrypt | Modern password hashing for your software and your servers | crypt
+194 msal | The Microsoft Authentication Library (MSAL) for Python library enables your app to access  | auth,oauth,openid
+229 asn1crypto | Fast ASN.1 parser and serializer with definitions for private keys, public keys, certifica | certificate,crypt,pki,x.509,x509
+242 google-auth-httplib2 | Google Authentication Library: httplib2 transport | auth,oauth
+247 msal-extensions | Microsoft Authentication Library extensions (MSAL EX) provides a persistence API that can  | auth,crypt
+248 authlib | The ultimate Python library in building OAuth and OpenID Connect servers and clients. | auth,oauth,openid
+255 google-auth-oauthlib | Google Authentication Library | auth,oauth
+267 joserfc | The ultimate Python library for JOSE RFCs, including JWS, JWE, JWK, JWA, JWT | jose,jwk,jws,jwt
+271 paramiko | SSH2 protocol library | ssh
+278 asttokens | Annotate AST trees with source code positions | token
+298 griffelib | Signatures for entire Python programs. Extract the structure, the frame, the skeleton of y | signature
+325 pytokens | A Fast, spec compliant Python 3.14+ tokenizer that runs on older Pythons. | token
+330 pycryptodome | Cryptographic library for Python | crypt
+383 scramp | An implementation of the SCRAM protocol. | auth
+434 requests-aws4auth | AWS4 authentication for Requests | auth
+442 pycryptodomex | Cryptographic library for Python | crypt
+497 nltk | Natural Language Toolkit | token
+508 ecdsa | ECDSA cryptographic signature library (pure python) | crypt,signature
+528 dateparser | Date parsing library designed to parse dates from HTML pages | signed
+561 pyotp | Python One Time Password Library | otp
+598 passlib | comprehensive password hashing framework supporting over 30 schemes | ssl
+621 python-jose | JOSE implementation in Python | jose,jws,jwt,signing,token
+659 sentencepiece | Unsupervised text tokenizer and detokenizer. | token
+677 supabase-auth | Python Client Library for Supabase Auth | auth
+700 oauth2client | OAuth 2.0 client library | oauth
+704 sqlmodel | SQLModel, SQL databases in Python, designed for simplicity, compatibility, and robustness. | signed
+730 griffe | Signatures for entire Python programs. Extract the structure, the frame, the skeleton of y | signature
+748 adal | Note: This library is already replaced by MSAL Python, available here: https://pypi.org/pr | auth
+849 id | A tool for generating OIDC identities | oidc
+867 oscrypto | TLS (SSL) sockets, key generation, encryption, decryption, signing, verification and KDFs  | certificate,crypt,pki,signing,ssl,tls,verif,x509
+869 service-identity | Service identity verification for pyOpenSSL & cryptography. | crypt,ssl,verif
+875 jwcrypto | Implementation of JOSE Web standards | crypt,jose
+884 aws-requests-auth | AWS signature version 4 signing process for the python requests module | auth,signature,signing
+891 pydata-google-auth | PyData helpers for authenticating to Google APIs | auth
+894 flask-login | User authentication and session management for Flask. | auth
+912 msoffcrypto-tool | Python tool and library for decrypting and encrypting MS Office files using a password or  | crypt
+955 prek | A fast Git hook manager written in Rust, designed as a drop-in alternative to pre-commit,  | signed
+957 cmake | CMake is an open-source, cross-platform family of tools designed to build, test and packag | signed
+997 types-pyopenssl | Typing stubs for pyOpenSSL | ssl

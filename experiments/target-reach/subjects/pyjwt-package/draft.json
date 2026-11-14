@@ -1,0 +1,44 @@
+{
+ "name": "pyjwt-package",
+ "distribution": "PyJWT",
+ "version": "2.15.1",
+ "repository": "https://github.com/jpadilla/pyjwt",
+ "tag": "2.15.1",
+ "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+ "package": "jwt",
+ "source_root": ".",
+ "entry_points": [
+  "decode",
+  "decode_complete"
+ ],
+ "entry_points_source": "docs/api.rst: jwt.decode and jwt.decode_complete verify a token; PyJWS.decode and PyJWS.decode_complete, which they call, have the same names",
+ "rejection_bases": [
+  "PyJWTError"
+ ],
+ "rejection_bases_source": "jwt/exceptions.py: PyJWTError, 'Base class for all exceptions'",
+ "test_directories": [
+  "tests"
+ ],
+ "test_directories_source": "pyproject.toml, [tool.pytest.ini_options] and tox.ini: pytest on tests",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "suite_runs_source": "tox.ini: pytest",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider",
+  "-p",
+  "no:randomly"
+ ],
+ "copy": [
+  "jwt",
+  "tests",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3"
+}

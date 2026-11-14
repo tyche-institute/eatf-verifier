@@ -1,0 +1,44 @@
+{
+ "name": "google-auth",
+ "distribution": "google-auth",
+ "version": "2.62.2",
+ "repository": "https://github.com/googleapis/google-cloud-python",
+ "repository_directory": "packages/google-auth",
+ "tag": "google-auth-v2.62.2",
+ "commit": "50b1eb269f110a4b7ab09ffe5ae59c0151cd63c2",
+ "package": "google",
+ "source_root": ".",
+ "entry_points": [
+  "decode"
+ ],
+ "entry_points_source": "google/auth/jwt.py, decode(): 'Decode and verify a JWT.'",
+ "rejection_bases": [
+  "ValueError"
+ ],
+ "rejection_bases_source": "The docstring of decode() names google.auth.exceptions.InvalidValue and MalformedError. Both inherit from the built-in ValueError, which the negative tests of decode() expect.",
+ "test_directories": [
+  "tests",
+  "tests_async"
+ ],
+ "test_directories_source": "noxfile.py, session unit: pytest tests tests_async",
+ "suite_runs": [
+  {
+   "name": "unit",
+   "paths": [
+    "tests",
+    "tests_async"
+   ]
+  }
+ ],
+ "suite_runs_source": "noxfile.py, session unit: pytest on tests and tests_async",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "google",
+  "tests",
+  "tests_async"
+ ],
+ "python": "3.12.3"
+}

@@ -1,0 +1,120 @@
+{
+ "name": "joserfc",
+ "distribution": "joserfc",
+ "version": "1.8.0",
+ "repository": "https://github.com/authlib/joserfc",
+ "tag": "1.8.0",
+ "commit": "f345ff71cd6c36452a4e11e47b805ad450a95dd8",
+ "package": "joserfc",
+ "source_root": "src",
+ "entry_points": [
+  "decode",
+  "decrypt_compact",
+  "decrypt_json",
+  "deserialize_compact",
+  "deserialize_json",
+  "validate",
+  "validate_compact"
+ ],
+ "entry_points_source": "docs/guide/jwt.rst, jws.rst and jwe.rst show jwt.decode, the validate method of a claims registry, jws.deserialize_compact, jws.deserialize_json, jwe.decrypt_compact and jwe.decrypt_json; docs/api/jws.rst (automodule of joserfc.jws) also documents jws.validate_compact, 'Validate the JWS Compact Serialization with the given key'. Entry points are names, so the same names elsewhere in the package count too.",
+ "rejection_bases": [
+  "JoseError"
+ ],
+ "rejection_bases_source": "docs/api/errors.rst: 'All errors are based on joserfc.errors.JoseError.'",
+ "test_directories_source": "pyproject.toml, [tool.pytest.ini_options]: testpaths = [\"tests\"]",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "suite_runs_source": "pyproject.toml, [tool.tox.env_run_base]: pytest, with testpaths = [\"tests\"]",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "src",
+  "tests",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3",
+ "subject_files": [
+  "joserfc/__init__.py",
+  "joserfc/_keys.py",
+  "joserfc/_rfc7515/__init__.py",
+  "joserfc/_rfc7515/compact.py",
+  "joserfc/_rfc7515/json.py",
+  "joserfc/_rfc7515/model.py",
+  "joserfc/_rfc7515/registry.py",
+  "joserfc/_rfc7515/types.py",
+  "joserfc/_rfc7516/__init__.py",
+  "joserfc/_rfc7516/compact.py",
+  "joserfc/_rfc7516/json.py",
+  "joserfc/_rfc7516/message.py",
+  "joserfc/_rfc7516/models.py",
+  "joserfc/_rfc7516/registry.py",
+  "joserfc/_rfc7516/types.py",
+  "joserfc/_rfc7517/__init__.py",
+  "joserfc/_rfc7517/models.py",
+  "joserfc/_rfc7517/pem.py",
+  "joserfc/_rfc7517/types.py",
+  "joserfc/_rfc7518/__init__.py",
+  "joserfc/_rfc7518/derive_key.py",
+  "joserfc/_rfc7518/ec_key.py",
+  "joserfc/_rfc7518/jwe_algs.py",
+  "joserfc/_rfc7518/jwe_encs.py",
+  "joserfc/_rfc7518/jwe_zips.py",
+  "joserfc/_rfc7518/jws_algs.py",
+  "joserfc/_rfc7518/oct_key.py",
+  "joserfc/_rfc7518/rsa_key.py",
+  "joserfc/_rfc7518/util.py",
+  "joserfc/_rfc7519/__init__.py",
+  "joserfc/_rfc7519/claims.py",
+  "joserfc/_rfc7519/security.py",
+  "joserfc/_rfc7638/__init__.py",
+  "joserfc/_rfc7797/__init__.py",
+  "joserfc/_rfc7797/compact.py",
+  "joserfc/_rfc7797/json.py",
+  "joserfc/_rfc7797/util.py",
+  "joserfc/_rfc8037/__init__.py",
+  "joserfc/_rfc8037/jws_eddsa.py",
+  "joserfc/_rfc8037/okp_key.py",
+  "joserfc/_rfc8812/__init__.py",
+  "joserfc/_rfc9278/__init__.py",
+  "joserfc/_rfc9864/__init__.py",
+  "joserfc/_rfc9864/jws_eddsa.py",
+  "joserfc/drafts/__init__.py",
+  "joserfc/drafts/jwe_chacha20.py",
+  "joserfc/drafts/jwe_ecdh_1pu.py",
+  "joserfc/errors.py",
+  "joserfc/jwa.py",
+  "joserfc/jwe.py",
+  "joserfc/jwk.py",
+  "joserfc/jws.py",
+  "joserfc/jwt.py",
+  "joserfc/registry.py",
+  "joserfc/util.py"
+ ],
+ "observed_files": [],
+ "tests": [
+  "tests/jwe/test_compact.py",
+  "tests/jwe/test_errors.py",
+  "tests/jwe/test_example.py",
+  "tests/jwe/test_json.py",
+  "tests/jws/test_compact.py",
+  "tests/jws/test_eddsa.py",
+  "tests/jws/test_errors.py",
+  "tests/jws/test_json.py",
+  "tests/jws/test_rfc7797.py",
+  "tests/jwt/test_claims.py",
+  "tests/jwt/test_jwt.py"
+ ],
+ "scope_counts": {
+  "test_files_in_test_directories": 27,
+  "blocks_in_test_directories": 257,
+  "test_files_with_an_included_block": 11
+ }
+}

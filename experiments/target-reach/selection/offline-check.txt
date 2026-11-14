@@ -1,0 +1,40 @@
+# Output of selection/offline_check.py for PyJWT (package scope), the pilot and the 4 libraries,
+# 14 November 2026 (times in UTC). Each suite run was made 1 time plainly and 1 time with
+# guard/reach_offline.py; no recorder was loaded and nothing was deleted.
+# pyjwt-package: started 2026-11-14T06:55:13Z
+pyjwt-package 2.15.1 | run all | plain: 471 passed, 4 skipped | offline: 471 passed, 4 skipped | tests: 475 | tests with another outcome: 0 | refused attempts: 0
+pyjwt-package: offline check holds
+# exit 0
+# jwcrypto: started 2026-11-14T06:55:25Z
+jwcrypto 1.6.1 | run all | plain: 163 passed | offline: 163 passed | tests: 163 | tests with another outcome: 0 | refused attempts: 0
+jwcrypto: offline check holds
+# exit 0
+# google-auth: started 2026-11-14T06:55:36Z
+google-auth 2.62.2 | run unit | plain: 2349 passed, 126 warnings | offline: 2349 passed, 126 warnings | tests: 2349 | tests with another outcome: 0 | refused attempts: 9
+    1 refused in (no test running)
+    1 refused in tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success
+    1 refused in tests/transport/test__http_client.py::TestRequestResponse::test_connection_error
+    1 refused in tests/transport/test_requests.py::TestRequestResponse::test_connection_error
+    4 refused in tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error
+    1 refused in tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error
+    attempt: getaddrinfo 'iamcredentials.googleapis.com'
+    attempt: getaddrinfo 'test.invalid'
+google-auth: offline check holds
+# exit 0
+# oauthlib: started 2026-11-14T06:58:19Z
+oauthlib 4.0.1 | run all | plain: 717 passed, 2 skipped, 10 warnings, 21 subtests passed | offline: 717 passed, 2 skipped, 10 warnings, 21 subtests passed | tests: 719 | tests with another outcome: 0 | refused attempts: 0
+oauthlib: offline check holds
+# exit 0
+# authlib: started 2026-11-14T06:58:23Z
+authlib 1.9.5 | run core | plain: 249 passed, 41 warnings | offline: 249 passed, 41 warnings | tests: 249 | tests with another outcome: 0 | refused attempts: 0
+authlib 1.9.5 | run jose | plain: 215 passed, 1 warning | offline: 215 passed, 1 warning | tests: 215 | tests with another outcome: 0 | refused attempts: 0
+authlib 1.9.5 | run clients | plain: 231 passed, 41 warnings | offline: 231 passed, 41 warnings | tests: 231 | tests with another outcome: 0 | refused attempts: 0
+authlib 1.9.5 | run flask | plain: 465 passed, 2 skipped, 414 warnings | offline: 465 passed, 2 skipped, 414 warnings | tests: 467 | tests with another outcome: 0 | refused attempts: 0
+authlib 1.9.5 | run django | plain: 51 passed | offline: 51 passed | tests: 51 | tests with another outcome: 0 | refused attempts: 0
+authlib: offline check holds
+# exit 0
+# joserfc: started 2026-11-14T06:59:16Z
+joserfc 1.8.0 | run all | plain: 310 passed, 91 subtests passed | offline: 310 passed, 91 subtests passed | tests: 310 | tests with another outcome: 0 | refused attempts: 0
+joserfc: offline check holds
+# exit 0
+# finished 2026-11-14T06:59:29Z

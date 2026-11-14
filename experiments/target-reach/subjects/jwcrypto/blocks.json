@@ -1,0 +1,3261 @@
+{
+ "blocks": [
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    502,
+    503
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWK.test_import_pyca_keys#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_import_pyca_keys",
+   "test_class": "TestJWK"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    551,
+    551
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    550,
+    550
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWK.test_jwkset_get_keys#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwkset_get_keys",
+   "test_class": "TestJWK"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    578,
+    578
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    577,
+    577
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWK.test_import_keyset_invalid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_import_keyset_invalid",
+   "test_class": "TestJWK"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    686,
+    686
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    685,
+    685
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWK.test_invalid_value#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_value",
+   "test_class": "TestJWK"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    691,
+    691
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    690,
+    690
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWK.test_key_ops_duplicates#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_key_ops_duplicates",
+   "test_class": "TestJWK"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    757,
+    757
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects AttributeError"
+   ],
+   "expected": [
+    "AttributeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AttributeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    755,
+    755
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWK.test_jwk_as_dict#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwk_as_dict",
+   "test_class": "TestJWK"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    759,
+    759
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects AttributeError"
+   ],
+   "expected": [
+    "AttributeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AttributeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    758,
+    758
+   ],
+   "included": false,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWK.test_jwk_as_dict#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwk_as_dict",
+   "test_class": "TestJWK"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    761,
+    761
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    760,
+    760
+   ],
+   "included": false,
+   "k": 2,
+   "key": "jwcrypto/tests.py::TestJWK.test_jwk_as_dict#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwk_as_dict",
+   "test_class": "TestJWK"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    763,
+    763
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    762,
+    762
+   ],
+   "included": false,
+   "k": 3,
+   "key": "jwcrypto/tests.py::TestJWK.test_jwk_as_dict#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwk_as_dict",
+   "test_class": "TestJWK"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWSOperation"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSOperation",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1055,
+    1056
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWS.test_A5#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_A5",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1083,
+    1084
+   ],
+   "entry_calls": [
+    "deserialize",
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWSSignature"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSSignature",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1082,
+    1082
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWS.test_E#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_E",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1104,
+    1104
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWSSignature"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSSignature",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1103,
+    1103
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWS.test_customhdr_jws#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_customhdr_jws",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1110,
+    1110
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWSERegOperation"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidJWSERegOperation",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1109,
+    1109
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWS.test_customhdr_jws_exists#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_customhdr_jws_exists",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1208,
+    1208
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWSObject"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSObject",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1207,
+    1207
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWS.test_compact_invalid_dots#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_invalid_dots",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1211,
+    1211
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWSObject"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSObject",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1210,
+    1210
+   ],
+   "included": true,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWS.test_compact_invalid_dots#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_invalid_dots",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1230,
+    1230
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWKeyNotFound"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "JWKeyNotFound",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1229,
+    1229
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWS.test_decrypt_keyset#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decrypt_keyset",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1266,
+    1266
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWKeyNotFound"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "JWKeyNotFound",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1265,
+    1265
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWS.test_multiple_signatures_keyset#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_multiple_signatures_keyset",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1518,
+    1519
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1517,
+    1517
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWE.test_A5#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_A5",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1527,
+    1527
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWEOperation"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEOperation",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1526,
+    1526
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWE.test_compact_protected_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_protected_header",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1531,
+    1533
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWEOperation"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEOperation",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1530,
+    1530
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWE.test_compact_invalid_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_invalid_header",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1536,
+    1539
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWEOperation"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEOperation",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1535,
+    1535
+   ],
+   "included": false,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWE.test_compact_invalid_header#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_invalid_header",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1552,
+    1552
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1551,
+    1551
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWE.test_compact_invalid_dots#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_invalid_dots",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1555,
+    1555
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1554,
+    1554
+   ],
+   "included": true,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWE.test_compact_invalid_dots#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_invalid_dots",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1587,
+    1587
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1586,
+    1586
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWE.test_customhdr_jwe#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_customhdr_jwe",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1593,
+    1593
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWSERegOperation"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidJWSERegOperation",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1592,
+    1592
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWE.test_customhdr_jwe_exists#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_customhdr_jwe_exists",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1619,
+    1620
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1618,
+    1618
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWE.test_bare_ecdh_with_ek_fails#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_bare_ecdh_with_ek_fails",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1645,
+    1645
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWKeyNotFound"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "JWKeyNotFound",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1644,
+    1644
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWE.test_decrypt_keyset#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decrypt_keyset",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1687,
+    1687
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWKeyNotFound"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "JWKeyNotFound",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1686,
+    1686
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWE.test_multiple_recipients_keyset#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_multiple_recipients_keyset",
+   "test_class": "TestJWE"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1762,
+    1762
+   ],
+   "entry_calls": [
+    "decrypt"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1761,
+    1761
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestMMA.test_MMA#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_MMA",
+   "test_class": "TestMMA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1769,
+    1769
+   ],
+   "entry_calls": [
+    "decrypt"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1768,
+    1768
+   ],
+   "included": true,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestMMA.test_MMA#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_MMA",
+   "test_class": "TestMMA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTExpired"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTExpired",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1846,
+    1847
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_A1#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_A1",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1859,
+    1860
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1858,
+    1858
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_A2#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_A2",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTMissingKey"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTMissingKey",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1873,
+    1875
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_decrypt_keyset#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decrypt_keyset",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTMissingKey"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTMissingKey",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1887,
+    1888
+   ],
+   "included": true,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWT.test_decrypt_keyset#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decrypt_keyset",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTMissingKey"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTMissingKey",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1897,
+    1899
+   ],
+   "included": true,
+   "k": 2,
+   "key": "jwcrypto/tests.py::TestJWT.test_decrypt_keyset#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decrypt_keyset",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1921,
+    1922
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTMissingKey"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTMissingKey",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    1920,
+    1920
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_decrypt_keyset_dup_kid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decrypt_keyset_dup_kid",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1940,
+    1942
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_invalid_claim_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_claim_type",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1945,
+    1947
+   ],
+   "included": true,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWT.test_invalid_claim_type#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_claim_type",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1979,
+    1980
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_typ#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_typ",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1984,
+    1985
+   ],
+   "included": true,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_typ#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_typ",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1993,
+    1994
+   ],
+   "included": true,
+   "k": 2,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_typ#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_typ",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    1995,
+    1996
+   ],
+   "included": true,
+   "k": 3,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_typ#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_typ",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2057,
+    2058
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_Issue_277#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_Issue_277",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2059,
+    2060
+   ],
+   "included": true,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWT.test_Issue_277#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_Issue_277",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2061,
+    2063
+   ],
+   "included": true,
+   "k": 2,
+   "key": "jwcrypto/tests.py::TestJWT.test_Issue_277#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_Issue_277",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimFormat"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimFormat",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2072,
+    2073
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_claim_aud#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_aud",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2089,
+    2089
+   ],
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2088,
+    2088
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2094,
+    2094
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2093,
+    2093
+   ],
+   "included": false,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2102,
+    2102
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2101,
+    2101
+   ],
+   "included": false,
+   "k": 2,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2110,
+    2110
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2109,
+    2109
+   ],
+   "included": false,
+   "k": 3,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2113,
+    2113
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2112,
+    2112
+   ],
+   "included": false,
+   "k": 4,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2131,
+    2131
+   ],
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2130,
+    2130
+   ],
+   "included": false,
+   "k": 5,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#5",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2135,
+    2135
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2134,
+    2134
+   ],
+   "included": false,
+   "k": 6,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#6",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2137,
+    2137
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2136,
+    2136
+   ],
+   "included": false,
+   "k": 7,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#7",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2145,
+    2145
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2144,
+    2144
+   ],
+   "included": false,
+   "k": 8,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#8",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2149,
+    2149
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2148,
+    2148
+   ],
+   "included": false,
+   "k": 9,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#9",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2152,
+    2152
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2151,
+    2151
+   ],
+   "included": false,
+   "k": 10,
+   "key": "jwcrypto/tests.py::TestJWT.test_unexpected#10",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unexpected",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTMissingClaim"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTMissingClaim",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2169,
+    2170
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_scope",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2177,
+    2178
+   ],
+   "included": true,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_scope",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2185,
+    2186
+   ],
+   "included": true,
+   "k": 2,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_scope",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2194,
+    2195
+   ],
+   "included": true,
+   "k": 3,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_scope",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2205,
+    2206
+   ],
+   "included": true,
+   "k": 4,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_scope",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimFormat"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimFormat",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2213,
+    2214
+   ],
+   "included": true,
+   "k": 5,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#5",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_scope",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [],
+   "expected": [
+    "JWTInvalidClaimFormat"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.JWTInvalidClaimFormat",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2215,
+    2216
+   ],
+   "included": true,
+   "k": 6,
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#6",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_scope",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2229,
+    2230
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_key_ops_values#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_key_ops_values",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2231,
+    2232
+   ],
+   "included": false,
+   "k": 1,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_key_ops_values#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_key_ops_values",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2241,
+    2243
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_jwe_no_alg_in_jose_headers#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwe_no_alg_in_jose_headers",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2247,
+    2249
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_jwe_no_enc_in_jose_headers#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwe_no_enc_in_jose_headers",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2321,
+    2323
+   ],
+   "entry_calls": [
+    "JWT",
+    "deserialize"
+   ],
+   "exclusion": [
+    "expects KeyError"
+   ],
+   "expected": [
+    "KeyError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "KeyError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2320,
+    2320
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_none_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_key",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2329,
+    2329
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWSOperation"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSOperation",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2327,
+    2328
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_no_default_rsa_1_5#0",
+   "match": "Algorithm not allowed",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_default_rsa_1_5",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "jwcrypto/tests.py",
+   "form": "call",
+   "header_span": [
+    2363,
+    2363
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_pbes2_hs256_aeskw_custom_params#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pbes2_hs256_aeskw_custom_params",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2373,
+    2373
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2372,
+    2372
+   ],
+   "included": false,
+   "k": 1,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_pbes2_hs256_aeskw_custom_params#1",
+   "match": "too large",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pbes2_hs256_aeskw_custom_params",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2393,
+    2393
+   ],
+   "entry_calls": [
+    "decrypt"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2392,
+    2392
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwe_decompression_max",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2404,
+    2404
+   ],
+   "entry_calls": [
+    "decrypt"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2403,
+    2403
+   ],
+   "included": true,
+   "k": 1,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwe_decompression_max",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2416,
+    2416
+   ],
+   "entry_calls": [
+    "decrypt"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEData",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2415,
+    2415
+   ],
+   "included": true,
+   "k": 2,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwe_decompression_max",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2426,
+    2426
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWEKeyLength"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwe.InvalidJWEKeyLength",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2425,
+    2425
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::ConformanceTests.test_jws_small_hmac_key_rejected#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jws_small_hmac_key_rejected",
+   "test_class": "ConformanceTests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2462,
+    2462
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWAAlgorithm"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwa.InvalidJWAAlgorithm",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2461,
+    2461
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::JWATests.test_jwa_create#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwa_create",
+   "test_class": "JWATests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2464,
+    2464
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWAAlgorithm"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwa.InvalidJWAAlgorithm",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2463,
+    2463
+   ],
+   "included": false,
+   "k": 1,
+   "key": "jwcrypto/tests.py::JWATests.test_jwa_create#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwa_create",
+   "test_class": "JWATests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2470,
+    2470
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWAAlgorithm"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwa.InvalidJWAAlgorithm",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2469,
+    2469
+   ],
+   "included": false,
+   "k": 2,
+   "key": "jwcrypto/tests.py::JWATests.test_jwa_create#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwa_create",
+   "test_class": "JWATests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2472,
+    2472
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWAAlgorithm"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwa.InvalidJWAAlgorithm",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2471,
+    2471
+   ],
+   "included": false,
+   "k": 3,
+   "key": "jwcrypto/tests.py::JWATests.test_jwa_create#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwa_create",
+   "test_class": "JWATests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2478,
+    2478
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWAAlgorithm"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwa.InvalidJWAAlgorithm",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2477,
+    2477
+   ],
+   "included": false,
+   "k": 4,
+   "key": "jwcrypto/tests.py::JWATests.test_jwa_create#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwa_create",
+   "test_class": "JWATests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2480,
+    2480
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWAAlgorithm"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwa.InvalidJWAAlgorithm",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2479,
+    2479
+   ],
+   "included": false,
+   "k": 5,
+   "key": "jwcrypto/tests.py::JWATests.test_jwa_create#5",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwa_create",
+   "test_class": "JWATests"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2521,
+    2521
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWSOperation"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSOperation",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2520,
+    2520
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestUnencodedPayload.test_compat_unencoded#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compat_unencoded",
+   "test_class": "TestUnencodedPayload"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2541,
+    2542
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWSObject"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSObject",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2540,
+    2540
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestUnencodedPayload.test_misses_crit#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_misses_crit",
+   "test_class": "TestUnencodedPayload"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2549,
+    2550
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWSObject"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSObject",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2548,
+    2548
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestUnencodedPayload.test_mismatching_encoding#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_mismatching_encoding",
+   "test_class": "TestUnencodedPayload"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2721,
+    2721
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2720,
+    2720
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestOverloadedOperators.test_jwt_strict_serialization_jws#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwt_strict_serialization_jws",
+   "test_class": "TestOverloadedOperators"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2725,
+    2726
+   ],
+   "entry_calls": [
+    "JWT"
+   ],
+   "exclusion": [
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2724,
+    2724
+   ],
+   "included": false,
+   "k": 1,
+   "key": "jwcrypto/tests.py::TestOverloadedOperators.test_jwt_strict_serialization_jws#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwt_strict_serialization_jws",
+   "test_class": "TestOverloadedOperators"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    2759,
+    2759
+   ],
+   "entry_calls": [
+    "deserialize"
+   ],
+   "exclusion": [
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "jwcrypto/tests.py",
+   "form": "with",
+   "header_span": [
+    2758,
+    2758
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests.py::TestOverloadedOperators.test_jwt_strict_serialization_jwe#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwt_strict_serialization_jwe",
+   "test_class": "TestOverloadedOperators"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    479,
+    479
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests_mldsa.py",
+   "form": "with",
+   "header_span": [
+    478,
+    478
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests_mldsa.py::TestMLDSA.test_generate_AKP_missing_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_generate_AKP_missing_alg",
+   "test_class": "TestMLDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    483,
+    483
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests_mldsa.py",
+   "form": "with",
+   "header_span": [
+    482,
+    482
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests_mldsa.py::TestMLDSA.test_generate_AKP_invalid_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_generate_AKP_invalid_alg",
+   "test_class": "TestMLDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    487,
+    487
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests_mldsa.py",
+   "form": "with",
+   "header_span": [
+    486,
+    486
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests_mldsa.py::TestMLDSA.test_import_AKP_missing_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_import_AKP_missing_alg",
+   "test_class": "TestMLDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    491,
+    491
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidJWKValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwk.InvalidJWKValue",
+   "file": "jwcrypto/tests_mldsa.py",
+   "form": "with",
+   "header_span": [
+    490,
+    490
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests_mldsa.py::TestMLDSA.test_import_AKP_invalid_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_import_AKP_invalid_alg",
+   "test_class": "TestMLDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    599,
+    599
+   ],
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJWSSignature"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jws.InvalidJWSSignature",
+   "file": "jwcrypto/tests_mldsa.py",
+   "form": "with",
+   "header_span": [
+    598,
+    598
+   ],
+   "included": true,
+   "k": 0,
+   "key": "jwcrypto/tests_mldsa.py::TestMLDSA.test_mldsa_tampered_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_mldsa_tampered_signature",
+   "test_class": "TestMLDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    627,
+    627
+   ],
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [
+    "expects Exception"
+   ],
+   "expected": [
+    "Exception"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "Exception",
+   "file": "jwcrypto/tests_mldsa.py",
+   "form": "with",
+   "header_span": [
+    626,
+    626
+   ],
+   "included": false,
+   "k": 0,
+   "key": "jwcrypto/tests_mldsa.py::TestMLDSA.test_mldsa_wrong_key_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_mldsa_wrong_key_type",
+   "test_class": "TestMLDSA"
+  }
+ ],
+ "counts": {
+  "blocks": 94,
+  "entry_point_blocks": 58,
+  "included": 42
+ },
+ "test_files": [
+  "jwcrypto/tests.py",
+  "jwcrypto/tests_mldsa.py"
+ ],
+ "test_files_sha256": {
+  "jwcrypto/tests.py": "c5c44f73d683625c39c1f18969f59db891f07d965bd764122fb4ee7d55769c15",
+  "jwcrypto/tests_mldsa.py": "8b4200a6302b2a74231d6024a93fc97abebea9a72655bcdb2f21b8ef6b0323a8"
+ }
+}

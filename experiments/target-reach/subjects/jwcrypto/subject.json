@@ -1,0 +1,61 @@
+{
+ "name": "jwcrypto",
+ "distribution": "jwcrypto",
+ "version": "1.6.1",
+ "repository": "https://github.com/latchset/jwcrypto",
+ "tag": "v1.6.1",
+ "commit": "c10aa4343f9ce2e68caaf20aef9d2c5f6d0c4d71",
+ "package": "jwcrypto",
+ "source_root": ".",
+ "entry_points": [
+  "JWT",
+  "decrypt",
+  "deserialize",
+  "validate",
+  "verify"
+ ],
+ "entry_points_source": "docs/source/jws.rst, jwe.rst and jwt.rst (automodule of jwcrypto.jws, jwcrypto.jwe, jwcrypto.jwt): JWS.deserialize and JWS.verify, JWE.deserialize and JWE.decrypt, JWT.deserialize and JWT.validate; the constructor JWT(jwt=..., key=...) takes a serialized token and a key and validates the token",
+ "rejection_bases": [
+  "JWException"
+ ],
+ "rejection_bases_source": "jwcrypto/common.py: class JWException, the base class of the package's exceptions",
+ "test_directories_source": "tox.ini, [pytest] python_files = jwcrypto/test*.py",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "jwcrypto"
+   ]
+  }
+ ],
+ "suite_runs_source": "tox.ini, [testenv]: pytest, with [pytest] python_files = jwcrypto/test*.py",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "jwcrypto",
+  "tox.ini"
+ ],
+ "python": "3.12.3",
+ "subject_files": [
+  "jwcrypto/__init__.py",
+  "jwcrypto/common.py",
+  "jwcrypto/jwa.py",
+  "jwcrypto/jwe.py",
+  "jwcrypto/jwk.py",
+  "jwcrypto/jws.py",
+  "jwcrypto/jwt.py",
+  "jwcrypto/version.py"
+ ],
+ "observed_files": [],
+ "tests": [
+  "jwcrypto/tests.py",
+  "jwcrypto/tests_mldsa.py"
+ ],
+ "scope_counts": {
+  "test_files_in_test_directories": 3,
+  "blocks_in_test_directories": 94,
+  "test_files_with_an_included_block": 2
+ }
+}

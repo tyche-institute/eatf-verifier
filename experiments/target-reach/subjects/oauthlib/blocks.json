@@ -1,0 +1,3214 @@
+{
+ "blocks": [
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    36,
+    37
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_redirect_uri#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    38,
+    39
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_redirect_uri#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    42,
+    43
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_redirect_uri#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    44,
+    45
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_redirect_uri#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    52,
+    53
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_default_redirect_uri#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_default_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    54,
+    55
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_default_redirect_uri#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_default_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    58,
+    59
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_default_redirect_uri#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_default_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    60,
+    61
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_default_redirect_uri#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_default_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    67,
+    68
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_redirect_uri#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    69,
+    70
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_redirect_uri#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    73,
+    74
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_redirect_uri#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    75,
+    76
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_redirect_uri#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MismatchingRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MismatchingRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    83,
+    84
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_mismatching_redirect_uri#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_mismatching_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MismatchingRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MismatchingRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    85,
+    86
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_mismatching_redirect_uri#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_mismatching_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MismatchingRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MismatchingRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    89,
+    90
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_mismatching_redirect_uri#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_mismatching_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MismatchingRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MismatchingRedirectURIError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    91,
+    92
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_mismatching_redirect_uri#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_mismatching_redirect_uri",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClientIdError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingClientIdError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    99,
+    100
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_client_id#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_client_id",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingClientIdError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingClientIdError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    101,
+    102
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_client_id#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_client_id",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClientIdError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingClientIdError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    105,
+    106
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_client_id#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_client_id",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingClientIdError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingClientIdError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    107,
+    108
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_client_id#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_client_id",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClientIdError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidClientIdError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    115,
+    116
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_client_id#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_client_id",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidClientIdError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidClientIdError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    117,
+    118
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_client_id#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_client_id",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClientIdError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidClientIdError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    121,
+    122
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_client_id#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_client_id",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidClientIdError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidClientIdError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    123,
+    124
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_client_id#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_client_id",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestFatalError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    130,
+    131
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_empty_parameter#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_empty_parameter",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestFatalError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    134,
+    135
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_empty_parameter#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_empty_parameter",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestFatalError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    181,
+    184
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_duplicate_params#0",
+   "match": null,
+   "match_unparsed": "description",
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request_duplicate_params",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestFatalError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    185,
+    188
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_duplicate_params#1",
+   "match": null,
+   "match_unparsed": "description",
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request_duplicate_params",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestFatalError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    191,
+    194
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_duplicate_params#2",
+   "match": null,
+   "match_unparsed": "description",
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request_duplicate_params",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestFatalError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    195,
+    198
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_duplicate_params#3",
+   "match": null,
+   "match_unparsed": "description",
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request_duplicate_params",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingResponseTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingResponseTypeError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    207,
+    209
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_missing_response_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request_missing_response_type",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingResponseTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingResponseTypeError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    216,
+    218
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_missing_response_type#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request_missing_response_type",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnauthorizedClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.UnauthorizedClientError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    232,
+    234
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_unauthorized_client#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unauthorized_client",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnauthorizedClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.UnauthorizedClientError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    240,
+    242
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_unauthorized_client#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unauthorized_client",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedResponseTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.UnsupportedResponseTypeError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    277,
+    279
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_unsupported_response_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unsupported_response_type",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedResponseTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.UnsupportedResponseTypeError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    282,
+    284
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_unsupported_response_type#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unsupported_response_type",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidScopeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidScopeError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    292,
+    294
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_scope#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_scope",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidScopeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidScopeError",
+   "file": "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+   "form": "call",
+   "header_span": [
+    297,
+    299
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_scope#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_scope",
+   "test_class": "ErrorResponseTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    151,
+    152
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_request#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    158,
+    159
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_request_duplicates#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request_duplicates",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidClientError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    171,
+    172
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_authenticate_client#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_authenticate_client",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [
+    "expects NotImplementedError"
+   ],
+   "expected": [
+    "NotImplementedError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "NotImplementedError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    179,
+    180
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_client_id_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_client_id_missing",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidGrantError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    186,
+    187
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_grant#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_grant",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedGrantTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.UnsupportedGrantTypeError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    191,
+    192
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_grant_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_grant_type",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidClientError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    198,
+    199
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_authenticate_client_id#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_authenticate_client_id",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ServerError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.ServerError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    208,
+    209
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_client_id_discrepancy#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_client_id_discrepancy",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [
+    "expects NotImplementedError"
+   ],
+   "expected": [
+    "NotImplementedError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "NotImplementedError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    217,
+    218
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_public_client_id_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_public_client_id_missing",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ServerError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.ServerError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    228,
+    229
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_public_client_id_discrepancy#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_public_client_id_discrepancy",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MismatchingRedirectURIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MismatchingRedirectURIError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    233,
+    234
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_redirect_uri#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_redirect_uri",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingCodeChallengeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingCodeChallengeError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    239,
+    240
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_challenge_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_challenge_missing",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedCodeChallengeMethodError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.UnsupportedCodeChallengeMethodError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    257,
+    258
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_wrong_method#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_wrong_method",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingCodeVerifierError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingCodeVerifierError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    263,
+    264
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_verifier_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_verifier_missing",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingCodeVerifierError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingCodeVerifierError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    271,
+    272
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_missing_challenge_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_required_verifier_missing_challenge_missing",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingCodeVerifierError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingCodeVerifierError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    278,
+    279
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_missing_challenge_valid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_required_verifier_missing_challenge_valid",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidGrantError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    285,
+    286
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_valid_challenge_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_required_verifier_valid_challenge_missing",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidGrantError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    300,
+    301
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_invalid_challenge_valid_method_valid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_required_verifier_invalid_challenge_valid_method_valid",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ServerError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.ServerError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    308,
+    309
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_valid_challenge_valid_method_wrong#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_required_verifier_valid_challenge_valid_method_wrong",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidGrantError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    316,
+    317
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_verifier_valid_challenge_valid_method_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_verifier_valid_challenge_valid_method_missing",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingCodeVerifierError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.MissingCodeVerifierError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    329,
+    330
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_optional_verifier_missing_challenge_valid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pkce_optional_verifier_missing_challenge_valid",
+   "test_class": "AuthorizationCodeGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": "caught",
+   "body_span": [
+    46,
+    46
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "with",
+   "header_span": [
+    45,
+    45
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_custom_auth_validators_unsupported#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "self.assertEqual(caught.exception.args[0], expected)"
+   ],
+   "test": "test_custom_auth_validators_unsupported",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": "caught",
+   "body_span": [
+    49,
+    49
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "with",
+   "header_span": [
+    48,
+    48
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_custom_auth_validators_unsupported#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "self.assertEqual(caught.exception.args[0], expected)"
+   ],
+   "test": "test_custom_auth_validators_unsupported",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    52,
+    52
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects AttributeError"
+   ],
+   "expected": [
+    "AttributeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AttributeError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "with",
+   "header_span": [
+    51,
+    51
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_custom_auth_validators_unsupported#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_custom_auth_validators_unsupported",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    54,
+    54
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects AttributeError"
+   ],
+   "expected": [
+    "AttributeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AttributeError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "with",
+   "header_span": [
+    53,
+    53
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_custom_auth_validators_unsupported#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_custom_auth_validators_unsupported",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidClientError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "call",
+   "header_span": [
+    130,
+    131
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_authentication_required#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_authentication_required",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ServerError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.ServerError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "call",
+   "header_span": [
+    157,
+    158
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_client_id_discrepancy#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_client_id_discrepancy",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedGrantTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.UnsupportedGrantTypeError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "call",
+   "header_span": [
+    162,
+    163
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_invalid_grant_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_grant_type",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidClientError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "call",
+   "header_span": [
+    169,
+    170
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_authenticate_client_id#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_authenticate_client_id",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidGrantError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "call",
+   "header_span": [
+    176,
+    177
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_invalid_refresh_token#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_refresh_token",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "call",
+   "header_span": [
+    180,
+    181
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_invalid_refresh_token#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_refresh_token",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidScopeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidScopeError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+   "form": "call",
+   "header_span": [
+    186,
+    187
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_invalid_scope_original_scopes_empty#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_scope_original_scopes_empty",
+   "test_class": "RefreshTokenGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": "caught",
+   "body_span": [
+    100,
+    101
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+   "form": "with",
+   "header_span": [
+    99,
+    99
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_custom_auth_validators_unsupported#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "self.assertEqual(caught.exception.args[0], expected)"
+   ],
+   "test": "test_custom_auth_validators_unsupported",
+   "test_class": "ResourceOwnerPasswordCredentialsGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": "caught",
+   "body_span": [
+    104,
+    105
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+   "form": "with",
+   "header_span": [
+    103,
+    103
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_custom_auth_validators_unsupported#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "self.assertEqual(caught.exception.args[0], expected)"
+   ],
+   "test": "test_custom_auth_validators_unsupported",
+   "test_class": "ResourceOwnerPasswordCredentialsGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    108,
+    108
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects AttributeError"
+   ],
+   "expected": [
+    "AttributeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AttributeError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+   "form": "with",
+   "header_span": [
+    107,
+    107
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_custom_auth_validators_unsupported#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_custom_auth_validators_unsupported",
+   "test_class": "ResourceOwnerPasswordCredentialsGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    110,
+    110
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects AttributeError"
+   ],
+   "expected": [
+    "AttributeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AttributeError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+   "form": "with",
+   "header_span": [
+    109,
+    109
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_custom_auth_validators_unsupported#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_custom_auth_validators_unsupported",
+   "test_class": "ResourceOwnerPasswordCredentialsGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+   "form": "call",
+   "header_span": [
+    130,
+    131
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_invalid_request_missing_params#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request_missing_params",
+   "test_class": "ResourceOwnerPasswordCredentialsGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+   "form": "call",
+   "header_span": [
+    136,
+    137
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_invalid_request_duplicates#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_request_duplicates",
+   "test_class": "ResourceOwnerPasswordCredentialsGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedGrantTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.UnsupportedGrantTypeError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+   "form": "call",
+   "header_span": [
+    141,
+    142
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_invalid_grant_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_grant_type",
+   "test_class": "ResourceOwnerPasswordCredentialsGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidGrantError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+   "form": "call",
+   "header_span": [
+    146,
+    147
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_invalid_user#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_user",
+   "test_class": "ResourceOwnerPasswordCredentialsGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_token_request"
+   ],
+   "exclusion": [
+    "expects NotImplementedError"
+   ],
+   "expected": [
+    "NotImplementedError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "NotImplementedError",
+   "file": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+   "form": "call",
+   "header_span": [
+    151,
+    152
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_client_id_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_client_id_missing",
+   "test_class": "ResourceOwnerPasswordCredentialsGrantTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    69,
+    69
+   ],
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidRequestError",
+   "file": "tests/openid/connect/core/endpoints/test_openid_connect_params_handling.py",
+   "form": "with",
+   "header_span": [
+    68,
+    68
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/openid/connect/core/endpoints/test_openid_connect_params_handling.py::OpenIDConnectEndpointTest.test_prompt_none_exclusiveness#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_prompt_none_exclusiveness",
+   "test_class": "OpenIDConnectEndpointTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.LoginRequired"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "LoginRequired",
+   "file": "tests/openid/connect/core/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    101,
+    103
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_no_prompt_authorization#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_prompt_authorization",
+   "test_class": "OpenIDAuthCodeTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.ConsentRequired"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ConsentRequired",
+   "file": "tests/openid/connect/core/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    109,
+    111
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_no_prompt_authorization#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_prompt_authorization",
+   "test_class": "OpenIDAuthCodeTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.LoginRequired"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "LoginRequired",
+   "file": "tests/openid/connect/core/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    118,
+    120
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_no_prompt_authorization#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_prompt_authorization",
+   "test_class": "OpenIDAuthCodeTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    128,
+    130
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_none_multi_prompt#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_multi_prompt",
+   "test_class": "OpenIDAuthCodeTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    135,
+    137
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_none_multi_prompt#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_multi_prompt",
+   "test_class": "OpenIDAuthCodeTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    142,
+    144
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_none_multi_prompt#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_multi_prompt",
+   "test_class": "OpenIDAuthCodeTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_authorization_code.py",
+   "form": "call",
+   "header_span": [
+    149,
+    151
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_none_multi_prompt#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_multi_prompt",
+   "test_class": "OpenIDAuthCodeTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_hybrid.py",
+   "form": "call",
+   "header_span": [
+    62,
+    62
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridCodeIdTokenTest.test_required_nonce#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_required_nonce",
+   "test_class": "OpenIDHybridCodeIdTokenTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_hybrid.py",
+   "form": "call",
+   "header_span": [
+    96,
+    96
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridCodeIdTokenTokenTest.test_required_nonce#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_required_nonce",
+   "test_class": "OpenIDHybridCodeIdTokenTokenTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.LoginRequired"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.LoginRequired",
+   "file": "tests/openid/connect/core/grant_types/test_implicit.py",
+   "form": "call",
+   "header_span": [
+    85,
+    87
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_no_prompt_authorization#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_prompt_authorization",
+   "test_class": "OpenIDImplicitTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.ConsentRequired"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.ConsentRequired",
+   "file": "tests/openid/connect/core/grant_types/test_implicit.py",
+   "form": "call",
+   "header_span": [
+    93,
+    95
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_no_prompt_authorization#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_prompt_authorization",
+   "test_class": "OpenIDImplicitTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.LoginRequired"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.LoginRequired",
+   "file": "tests/openid/connect/core/grant_types/test_implicit.py",
+   "form": "call",
+   "header_span": [
+    102,
+    104
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_no_prompt_authorization#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_prompt_authorization",
+   "test_class": "OpenIDImplicitTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_implicit.py",
+   "form": "call",
+   "header_span": [
+    112,
+    114
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_none_multi_prompt#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_multi_prompt",
+   "test_class": "OpenIDImplicitTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_implicit.py",
+   "form": "call",
+   "header_span": [
+    119,
+    121
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_none_multi_prompt#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_multi_prompt",
+   "test_class": "OpenIDImplicitTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_implicit.py",
+   "form": "call",
+   "header_span": [
+    126,
+    128
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_none_multi_prompt#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_multi_prompt",
+   "test_class": "OpenIDImplicitTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_implicit.py",
+   "form": "call",
+   "header_span": [
+    133,
+    135
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_none_multi_prompt#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_multi_prompt",
+   "test_class": "OpenIDImplicitTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_implicit.py",
+   "form": "call",
+   "header_span": [
+    143,
+    143
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_required_nonce#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_required_nonce",
+   "test_class": "OpenIDImplicitTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate_authorization_request"
+   ],
+   "exclusion": [],
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "errors.InvalidRequestError",
+   "file": "tests/openid/connect/core/grant_types/test_implicit.py",
+   "form": "call",
+   "header_span": [
+    164,
+    164
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitNoAccessTokenTest.test_required_nonce#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_required_nonce",
+   "test_class": "OpenIDImplicitNoAccessTokenTest"
+  }
+ ],
+ "counts": {
+  "blocks": 98,
+  "entry_point_blocks": 76,
+  "included": 73
+ },
+ "test_files": [
+  "tests/oauth2/rfc6749/endpoints/test_error_responses.py",
+  "tests/oauth2/rfc6749/grant_types/test_authorization_code.py",
+  "tests/oauth2/rfc6749/grant_types/test_refresh_token.py",
+  "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py",
+  "tests/openid/connect/core/endpoints/test_openid_connect_params_handling.py",
+  "tests/openid/connect/core/grant_types/test_authorization_code.py",
+  "tests/openid/connect/core/grant_types/test_hybrid.py",
+  "tests/openid/connect/core/grant_types/test_implicit.py"
+ ],
+ "test_files_sha256": {
+  "tests/oauth2/rfc6749/endpoints/test_error_responses.py": "e60364a191e5e329a8062144e1f98723ee7ceaf7a58a950e789d6e86e8b12498",
+  "tests/oauth2/rfc6749/grant_types/test_authorization_code.py": "c87b5eae506290006dc4ebe9e4afea8da1f1680690347b6e9750f610171f4e73",
+  "tests/oauth2/rfc6749/grant_types/test_refresh_token.py": "69517c288f41ae1719a84f1ed62a006453d78e42e716efd6f45f087a2baa3172",
+  "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py": "ee122066894fe088722131f00307081249b5bd3bf0a763dc366d94c8fc006cc6",
+  "tests/openid/connect/core/endpoints/test_openid_connect_params_handling.py": "688a300a66aa846fba378f9add0e6476ba16656cb2638a15b99a1bce794238f6",
+  "tests/openid/connect/core/grant_types/test_authorization_code.py": "afd54c923bb7ebacd317c6133a47be418cdf2302da2179604d1efabeb11dddc3",
+  "tests/openid/connect/core/grant_types/test_hybrid.py": "ea00c28070e2f46c8cea2343f193f9af21d8302cf541134d581eb4e75c50d1bd",
+  "tests/openid/connect/core/grant_types/test_implicit.py": "698df04806f6a88a8bb58e378f1f48c16ab3ddc23280220e8025c5a053afad84"
+ }
+}

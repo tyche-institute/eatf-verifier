@@ -1,0 +1,371 @@
+{
+ "counts": {
+  "block_targets_by_basis": {
+   "assert": 14,
+   "assert+name": 4,
+   "assert-literal": 19,
+   "class": 8,
+   "name": 3,
+   "none: no name token matches": 22,
+   "none: tie": 9
+  },
+  "blocks": 179,
+  "cases": 91,
+  "cases_another_check_fires_too": 0,
+  "cases_by_site_kind": {
+   "check": 91
+  },
+  "cases_class_only": 30,
+  "cases_fired_in_other_threads": 0,
+  "cases_left_out": 0,
+  "cases_left_out_by_reason": {},
+  "cases_message_text_differs_between_unmodified_runs": 0,
+  "cases_nested": 0,
+  "cases_of_included_blocks": 91,
+  "cases_reaching_target": 48,
+  "cases_target_fires": 48,
+  "cases_with_target": 49,
+  "cases_with_target_by_basis": {
+   "assert": 14,
+   "assert+name": 4,
+   "assert-literal": 19,
+   "class": 9,
+   "name": 3
+  },
+  "cases_with_target_by_outcome": {
+   "decided by the target": 48,
+   "decided by the target; own test without the target: fails": 48,
+   "the target does not fire": 1,
+   "the target does not fire; own test without the target: passes": 1
+  },
+  "cases_with_target_by_tier": {
+   "assertion": 42,
+   "name": 7
+  },
+  "checks": 99,
+  "checks_deciding": 44,
+  "checks_deciding_in_subject_files": 44,
+  "checks_deciding_not_statically_reachable": 0,
+  "checks_firing": 44,
+  "checks_firing_and_never_deciding": 0,
+  "checks_in_subject_files": 99,
+  "checks_reachable": 57,
+  "deletion_runs_repeated": 0,
+  "deletions": 44,
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": 0,
+   "O_V within O_C": 0,
+   "O_V within O_S": 0,
+   "O_Vfc within O_V": 0,
+   "suite within whole suite": 0
+  },
+  "deletions_in_handler": 9,
+  "deletions_not_detected": {
+   "O_C": 3,
+   "O_S": 0,
+   "O_T": 14,
+   "O_V": 7,
+   "O_Vfc": 23,
+   "suite": 0,
+   "whole suite": 0
+  },
+  "deletions_not_detected_of_deciding_checks": {
+   "O_C": 3,
+   "O_S": 0,
+   "O_T": 14,
+   "O_V": 7,
+   "O_Vfc": 23,
+   "suite": 0,
+   "whole suite": 0
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": 3,
+   "O_T": 14,
+   "O_V": 7,
+   "O_Vfc": 23
+  },
+  "deletions_not_detected_withheld_as_failing_of_deciding_checks": {
+   "O_C": 3,
+   "O_T": 14,
+   "O_V": 7,
+   "O_Vfc": 23
+  },
+  "deletions_of_checks_that_fire_and_never_decide": 0,
+  "deletions_of_deciding_checks": 44,
+  "deletions_time_limit": 0,
+  "deletions_without_record": 0,
+  "fired_recorded": true,
+  "flags": 1,
+  "flags_by_tier": {
+   "name": 1
+  },
+  "flags_target_fires": 0,
+  "included_blocks": 79,
+  "included_blocks_class_only": 29,
+  "included_blocks_never_run": 0,
+  "included_blocks_with_target": 48,
+  "pinning": {
+   "cases": 91,
+   "cases_not_counted_deciding_check_not_deleted": 0,
+   "cases_not_counted_no_deciding_check": 0,
+   "cases_not_counted_no_record": 0,
+   "cases_not_counted_time_limit": 0,
+   "class_only": {
+    "cases": 30,
+    "test_passes": 1
+   },
+   "message": {
+    "cases": 61,
+    "test_passes": 0
+   },
+   "test_fails": 90,
+   "test_passes": 1,
+   "test_passes_by_what_the_case_does": {
+    "same class, another check": 1
+   }
+  },
+  "reached_targets": 30,
+  "reached_targets_deletion_not_detected_O_T": 0,
+  "test_files_not_collected": 0,
+  "tests_collected_again": 0,
+  "tests_expected_to_fail_at_baseline": 0,
+  "tests_imported_and_kept": 0,
+  "tests_run": 379,
+  "tests_with_cases": 87
+ },
+ "expected_baseline_failures": [],
+ "lists": {
+  "cases_left_out": [],
+  "checks_deciding_not_statically_reachable": [],
+  "deletion_runs_repeated": [],
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": [],
+   "O_V within O_C": [],
+   "O_V within O_S": [],
+   "O_Vfc within O_V": [],
+   "suite within whole suite": []
+  },
+  "deletions_not_detected": {
+   "O_C": [
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4"
+   ],
+   "O_S": [],
+   "O_T": [
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#7",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_nbf#2",
+    "api_jwt.PyJWT._validate_sub#1"
+   ],
+   "O_V": [
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4"
+   ],
+   "O_Vfc": [
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ],
+   "suite": [],
+   "whole suite": []
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": [
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4"
+   ],
+   "O_T": [
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#2",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.decode_complete#2",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#7",
+    "api_jwt.PyJWT._validate_iss#3",
+    "api_jwt.PyJWT._validate_nbf#2",
+    "api_jwt.PyJWT._validate_sub#1"
+   ],
+   "O_V": [
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4"
+   ],
+   "O_Vfc": [
+    "algorithms.ECAlgorithm._validate_curve#1",
+    "algorithms.HMACAlgorithm.prepare_key#1",
+    "api_jws.PyJWS._load#1",
+    "api_jws.PyJWS._load#2",
+    "api_jws.PyJWS._load#3",
+    "api_jws.PyJWS._load#4",
+    "api_jws.PyJWS._validate_crit#2",
+    "api_jws.PyJWS._verify_signature#1",
+    "api_jws.PyJWS._verify_signature#3",
+    "api_jws.PyJWS._verify_signature#4",
+    "api_jws.PyJWS._verify_signature#5",
+    "api_jws.PyJWS.decode_complete#4",
+    "api_jwt.PyJWT._decode_payload#1",
+    "api_jwt.PyJWT._decode_payload#2",
+    "api_jwt.PyJWT._validate_aud#1",
+    "api_jwt.PyJWT._validate_aud#2",
+    "api_jwt.PyJWT._validate_aud#3",
+    "api_jwt.PyJWT._validate_aud#4",
+    "api_jwt.PyJWT._validate_aud#6",
+    "api_jwt.PyJWT._validate_exp#1",
+    "api_jwt.PyJWT._validate_iat#1",
+    "api_jwt.PyJWT._validate_iss#1",
+    "api_jwt.PyJWT._validate_nbf#1"
+   ]
+  },
+  "deletions_of_checks_that_fire_and_never_decide": [],
+  "deletions_time_limit": [],
+  "deletions_without_record": [],
+  "included_blocks_never_run": []
+ },
+ "refused_connection_attempts": {
+  "baseline_recorder_runs": [
+   0,
+   0
+  ],
+  "deletion_recorder_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 45,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "suite_run": 0,
+  "tests": [],
+  "whole_suite_baseline_runs": [
+   0,
+   0
+  ],
+  "whole_suite_deletion_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 45,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "witness_runs": 0
+ },
+ "rule_version": "reach-target-rule/2",
+ "sentinels": [
+  {
+   "detail": "",
+   "name": "2 baseline runs and the control copy give identical records, message texts aside",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "in the baseline recorder run every test passes or is skipped, every test file is collected, and the tests deselected are the expected baseline failures",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "under the deletion of a check, that check fires in no case",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "every deletion run gave a record or exceeded the time limit 2 times",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the check that decides a case is among the checks that fire in it",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the whole suite ran on every deletion copy, and on the control copy it ends with its results and loses no test that passes in both unmodified runs",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the deleted checks are the checks of the subject files that fire in at least 1 case of the study",
+   "pass": true
+  }
+ ],
+ "subject": {
+  "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+  "name": "pyjwt-package",
+  "version": "2.15.1"
+ },
+ "suite_without_recorder": "378 passed, 1 skipped",
+ "test_files_not_collected": [],
+ "tests_collected_again": [],
+ "tests_imported_and_kept": [],
+ "whole_suite": {
+  "counts": {
+   "passing in both": 471,
+   "run 1": {
+    "passed": 471,
+    "skipped": 4
+   },
+   "run 2": {
+    "passed": 471,
+    "skipped": 4
+   },
+   "unstable": 0
+  },
+  "deletions_no_result": [],
+  "deletions_run": true,
+  "deletions_time_limit": [],
+  "runs_repeated": [],
+  "suite_runs": [
+   {
+    "name": "all",
+    "paths": [
+     "tests"
+    ]
+   }
+  ]
+ },
+ "witnesses": {}
+}

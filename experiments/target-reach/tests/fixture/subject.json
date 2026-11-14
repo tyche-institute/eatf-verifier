@@ -1,0 +1,43 @@
+{
+ "name": "toy",
+ "version": "0",
+ "repository": null,
+ "commit": null,
+ "distribution": "toyverify",
+ "package": "toyverify",
+ "source_root": ".",
+ "subject_files": [
+  "toyverify/core.py"
+ ],
+ "observed_files": [
+  "toyverify/keys.py"
+ ],
+ "entry_points": [
+  "decode"
+ ],
+ "rejection_bases": [
+  "ToyError"
+ ],
+ "tests": [
+  "tests"
+ ],
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "toyverify",
+  "tests",
+  "toyext.py",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ]
+}

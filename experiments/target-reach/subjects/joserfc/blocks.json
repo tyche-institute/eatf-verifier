@@ -1,0 +1,6250 @@
+{
+ "blocks": [
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    57,
+    57
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_RSA_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_RSA_alg",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    73,
+    78
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_EC_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ECDH_ES_with_EC_key",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    79,
+    84
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_EC_key#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ECDH_ES_with_EC_key",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    95,
+    100
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_OKP_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ECDH_ES_with_OKP_key",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    105,
+    110
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_OKP_key#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ECDH_ES_with_OKP_key",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyLengthError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyLengthError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    114,
+    114
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_dir_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_dir_alg",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    129,
+    135
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_AESGCM_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_AESGCM_alg",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    152,
+    158
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_PBES2HS_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_PBES2HS_alg",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    176,
+    183
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_PBES2HS_with_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_PBES2HS_with_header",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    212,
+    219
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_PBES2HS_with_large_p2c#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_PBES2HS_with_large_p2c",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    221,
+    227
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_PBES2HS_with_large_p2c#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_PBES2HS_with_large_p2c",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    251,
+    251
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_decompress_zip_exceeds_size#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decompress_zip_exceeds_size",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    256,
+    256
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_header_exceeds_size",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    263,
+    263
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_encrypted_key_exceeds_size#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_encrypted_key_exceeds_size",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    270,
+    270
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_initialization_vector_size#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_initialization_vector_size",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    276,
+    276
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ciphertext_exceeds_size",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    282,
+    282
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_auth_tag_exceeds_size#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_auth_tag_exceeds_size",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    287,
+    287
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_compact_data",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    289,
+    289
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_compact_data",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingAlgorithmError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    292,
+    292
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_compact_data",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingEncryptionError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingEncryptionError",
+   "file": "tests/jwe/test_compact.py",
+   "form": "call",
+   "header_span": [
+    295,
+    295
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_compact_data",
+   "test_class": "TestJWECompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyTypeError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    20,
+    26
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_dir_with_invalid_key_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_dir_with_invalid_key_type",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyTypeError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    29,
+    35
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_dir_with_invalid_key_type#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_dir_with_invalid_key_type",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyTypeError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    39,
+    45
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_dir_with_invalid_key_type#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_dir_with_invalid_key_type",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyTypeError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    48,
+    55
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_dir_with_invalid_key_type#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_dir_with_invalid_key_type",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyTypeError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    60,
+    66
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_rsa_with_invalid_key_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_with_invalid_key_type",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    73,
+    73
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_A128KW_unwrap_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_A128KW_unwrap_error",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedAlgorithmError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    78,
+    78
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_unsupported_algorithm#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unsupported_algorithm",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedAlgorithmError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    81,
+    81
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_unsupported_algorithm#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unsupported_algorithm",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyLengthError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyLengthError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    86,
+    86
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_invalid_key_length#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_key_length",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyLengthError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyLengthError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    88,
+    88
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_invalid_key_length#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_key_length",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyLengthError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyLengthError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    91,
+    91
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_invalid_key_length#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_key_length",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    96,
+    96
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_extra_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_extra_header",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jwe/test_errors.py",
+   "form": "call",
+   "header_span": [
+    107,
+    107
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_strict_check_header_with_more_header_registry#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_strict_check_header_with_more_header_registry",
+   "test_class": "TestJWEErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedAlgorithmError",
+   "file": "tests/jwe/test_example.py",
+   "form": "call",
+   "header_span": [
+    927,
+    927
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_example.py::TestCompactExamples.test_A2#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_A2",
+   "test_class": "TestCompactExamples"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ConflictAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ConflictAlgorithmError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    80,
+    85
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_multiple_recipients_with_direct_mode#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_multiple_recipients_with_direct_mode",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    102,
+    102
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_critical_headers_must_be_protected#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_critical_headers_must_be_protected",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    106,
+    106
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_critical_headers_must_be_protected#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_critical_headers_must_be_protected",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    110,
+    110
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_critical_headers_must_be_protected#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_critical_headers_must_be_protected",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    118,
+    118
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_recipient_critical_header_rejected_on_decrypt#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_recipient_critical_header_rejected_on_decrypt",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    124,
+    124
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_recipient_critical_header_rejected_on_decrypt#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_recipient_critical_header_rejected_on_decrypt",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    147,
+    147
+   ],
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jwe/test_json.py",
+   "form": "with",
+   "header_span": [
+    146,
+    146
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_aad_size_limit#0",
+   "match": "AAD size exceeds",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_aad_size_limit",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    162,
+    162
+   ],
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_json.py",
+   "form": "with",
+   "header_span": [
+    161,
+    161
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_empty_aad_member_rejected#0",
+   "match": "AAD must be omitted when empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_empty_aad_member_rejected",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    174,
+    174
+   ],
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jwe/test_json.py",
+   "form": "with",
+   "header_span": [
+    173,
+    173
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_oversized_aad_rejected_before_decoding#0",
+   "match": "AAD size exceeds 4 bytes",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_oversized_aad_rejected_before_decoding",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyTypeError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    181,
+    186
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_decode_multiple_recipients#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_multiple_recipients",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    192,
+    198
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_decode_multiple_recipients#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_multiple_recipients",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    205,
+    205
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_general_json_without_recipients#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_general_json_without_recipients",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    212,
+    212
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_general_json_without_encrypted_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_general_json_without_encrypted_key",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    222,
+    222
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_general_json_recipients_exceeded_size_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_general_json_recipients_exceeded_size_error",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decrypt_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwe/test_json.py",
+   "form": "call",
+   "header_span": [
+    271,
+    271
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_flattened_json_without_encrypted_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_flattened_json_without_encrypted_key",
+   "test_class": "TestJWEJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    35,
+    35
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_bad_signature_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_bad_signature_error",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    39,
+    39
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_reject_padded_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_reject_padded_signature",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedAlgorithmError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    42,
+    42
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_raise_unsupported_algorithm_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_raise_unsupported_algorithm_error",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedAlgorithmError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    43,
+    43
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jws/test_compact.py::TestCompact.test_raise_unsupported_algorithm_error#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_raise_unsupported_algorithm_error",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    46,
+    46
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_invalid_length#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_length",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    51,
+    51
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_no_invalid_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_invalid_header",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingAlgorithmError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    55,
+    55
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_compact.py::TestCompact.test_no_invalid_header#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_invalid_header",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    59,
+    59
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_invalid_payload#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_payload",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    65,
+    65
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_header_exceeded_size_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_header_exceeded_size_error",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    71,
+    71
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_payload_exceeded_size_error",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    77,
+    77
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_signature_exceeded_size_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_signature_exceeded_size_error",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    98,
+    98
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_strict_check_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_strict_check_header",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    105,
+    105
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_non_canonical_signature_encoding#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_non_canonical_signature_encoding",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    119,
+    119
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_compact.py::TestCompact.test_hmac_rejects_empty_key#0",
+   "match": "must not be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_rejects_empty_key",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    128,
+    128
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jws/test_compact.py::TestCompact.test_hmac_rejects_empty_key#1",
+   "match": "must not be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_rejects_empty_key",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/jws/test_compact.py",
+   "form": "call",
+   "header_span": [
+    129,
+    129
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/jws/test_compact.py::TestCompact.test_hmac_rejects_empty_key#2",
+   "match": "must not be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_rejects_empty_key",
+   "test_class": "TestCompact"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyTypeError",
+   "file": "tests/jws/test_eddsa.py",
+   "form": "call",
+   "header_span": [
+    19,
+    19
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_EdDSA#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_EdDSA",
+   "test_class": "TestEdDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyTypeError",
+   "file": "tests/jws/test_eddsa.py",
+   "form": "call",
+   "header_span": [
+    20,
+    20
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_EdDSA#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_EdDSA",
+   "test_class": "TestEdDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyCurveError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyCurveError",
+   "file": "tests/jws/test_eddsa.py",
+   "form": "call",
+   "header_span": [
+    26,
+    28
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed25519#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_Ed25519",
+   "test_class": "TestEdDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyCurveError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyCurveError",
+   "file": "tests/jws/test_eddsa.py",
+   "form": "call",
+   "header_span": [
+    29,
+    29
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed25519#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_Ed25519",
+   "test_class": "TestEdDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_eddsa.py",
+   "form": "call",
+   "header_span": [
+    31,
+    31
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed25519#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_Ed25519",
+   "test_class": "TestEdDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyCurveError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyCurveError",
+   "file": "tests/jws/test_eddsa.py",
+   "form": "call",
+   "header_span": [
+    37,
+    39
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed448#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_Ed448",
+   "test_class": "TestEdDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyCurveError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyCurveError",
+   "file": "tests/jws/test_eddsa.py",
+   "form": "call",
+   "header_span": [
+    40,
+    40
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed448#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_Ed448",
+   "test_class": "TestEdDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_eddsa.py",
+   "form": "call",
+   "header_span": [
+    42,
+    42
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed448#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_Ed448",
+   "test_class": "TestEdDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingHeaderError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    28,
+    28
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_without_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_without_alg",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedAlgorithmError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    36,
+    36
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_raise_unsupported_algorithm_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_raise_unsupported_algorithm_error",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingKeyError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    39,
+    39
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_without_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_without_key",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingKeyError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    43,
+    43
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_without_key#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_without_key",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    52,
+    52
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_none_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_alg",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    57,
+    63
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_header_invalid_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_header_invalid_type",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    67,
+    73
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_header_invalid_type#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_header_invalid_type",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    77,
+    83
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_header_invalid_type#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_header_invalid_type",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    87,
+    93
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_header_invalid_type#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_header_invalid_type",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    95,
+    101
+   ],
+   "included": false,
+   "k": 4,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_header_invalid_type#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_header_invalid_type",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingCritHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingCritHeaderError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    106,
+    112
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_crit_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_crit_header",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    119,
+    125
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_unsupported_crit_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unsupported_crit_header",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    137,
+    143
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_extra_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_extra_header",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    158,
+    158
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_rsa_invalid_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_invalid_signature",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    162,
+    162
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_rsa_invalid_signature#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_invalid_signature",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyCurveError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyCurveError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    167,
+    167
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_ec_incorrect_curve#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_incorrect_curve",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    174,
+    174
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_ec_invalid_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_invalid_signature",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    178,
+    178
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_ec_invalid_signature#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_invalid_signature",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    186,
+    192
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_okp_bad_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_bad_signature",
+   "test_class": "TestJWSErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedKeyUseError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedKeyUseError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    199,
+    199
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSWithKeyErrors.test_invalid_key_use#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_key_use",
+   "test_class": "TestJWSWithKeyErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedKeyAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedKeyAlgorithmError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    204,
+    204
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSWithKeyErrors.test_invalid_key_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_key_alg",
+   "test_class": "TestJWSWithKeyErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedKeyOperationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedKeyOperationError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    209,
+    209
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSWithKeyErrors.test_invalid_key_ops#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_key_ops",
+   "test_class": "TestJWSWithKeyErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyTypeError",
+   "file": "tests/jws/test_errors.py",
+   "form": "call",
+   "header_span": [
+    214,
+    214
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_errors.py::TestJWSWithKeyErrors.test_invalid_key_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_key_type",
+   "test_class": "TestJWSWithKeyErrors"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    97,
+    97
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_invalid_payload#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_payload",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    100,
+    100
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_json.py::TestJSON.test_invalid_payload#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_payload",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    107,
+    107
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_bad_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_bad_signature",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    109,
+    109
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_json.py::TestJSON.test_bad_signature#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_bad_signature",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    116,
+    116
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_general_json_with_empty_signatures#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_general_json_with_empty_signatures",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    129,
+    129
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_strict_check_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_strict_check_header",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedAlgorithmError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    137,
+    137
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_unsupported_algorithm#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unsupported_algorithm",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    151,
+    151
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_critical_header_parameters_must_be_protected#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_critical_header_parameters_must_be_protected",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    156,
+    156
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_json.py::TestJSON.test_critical_header_parameters_must_be_protected#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_critical_header_parameters_must_be_protected",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    161,
+    161
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_b64_must_be_protected",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    166,
+    166
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_b64_must_be_protected",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    173,
+    173
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_general_json_b64_must_match_across_signatures#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_general_json_b64_must_match_across_signatures",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    186,
+    186
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_json.py::TestJSON.test_general_json_b64_must_match_across_signatures#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_general_json_b64_must_match_across_signatures",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    194,
+    194
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_header_exceeded_size_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_header_exceeded_size_error",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    205,
+    205
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_json.py::TestJSON.test_header_exceeded_size_error#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_header_exceeded_size_error",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    213,
+    213
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_payload_exceeded_size_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_payload_exceeded_size_error",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    224,
+    224
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_json.py::TestJSON.test_payload_exceeded_size_error#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_payload_exceeded_size_error",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    232,
+    232
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_json.py::TestJSON.test_signature_exceeded_size_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_signature_exceeded_size_error",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExceededSizeError",
+   "file": "tests/jws/test_json.py",
+   "form": "call",
+   "header_span": [
+    242,
+    242
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jws/test_json.py::TestJSON.test_signature_exceeded_size_error#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_signature_exceeded_size_error",
+   "test_class": "TestJSON"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingCritHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingCritHeaderError",
+   "file": "tests/jws/test_rfc7797.py",
+   "form": "call",
+   "header_span": [
+    38,
+    38
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_b64_without_crit#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_b64_without_crit",
+   "test_class": "TestRFC7797"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidHeaderValueError",
+   "file": "tests/jws/test_rfc7797.py",
+   "form": "call",
+   "header_span": [
+    42,
+    42
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_invalid_b64_value#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_b64_value",
+   "test_class": "TestRFC7797"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jws/test_rfc7797.py",
+   "form": "call",
+   "header_span": [
+    45,
+    45
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_compact_invalid_value_length#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_invalid_value_length",
+   "test_class": "TestRFC7797"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jws/test_rfc7797.py",
+   "form": "call",
+   "header_span": [
+    48,
+    48
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_invalid_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_header",
+   "test_class": "TestRFC7797"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingAlgorithmError",
+   "file": "tests/jws/test_rfc7797.py",
+   "form": "call",
+   "header_span": [
+    51,
+    51
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_compact_missing_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_missing_alg",
+   "test_class": "TestRFC7797"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_compact"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_rfc7797.py",
+   "form": "call",
+   "header_span": [
+    57,
+    57
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_compact_bad_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_compact_bad_signature",
+   "test_class": "TestRFC7797"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jws/test_rfc7797.py",
+   "form": "call",
+   "header_span": [
+    73,
+    73
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_json_without_protected_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_json_without_protected_header",
+   "test_class": "TestRFC7797"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "deserialize_json"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "tests/jws/test_rfc7797.py",
+   "form": "call",
+   "header_span": [
+    85,
+    85
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_json_bad_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_json_bad_signature",
+   "test_class": "TestRFC7797"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InsecureClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InsecureClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    31,
+    31
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_check_sensitive_data#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_check_sensitive_data",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InsecureClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InsecureClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    34,
+    34
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_check_sensitive_data#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_check_sensitive_data",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    45,
+    45
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_claims#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_essential_claims",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    48,
+    48
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_claims#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_essential_claims",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    55,
+    55
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_iss",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    56,
+    56
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_iss",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    57,
+    57
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_iss",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": "cm",
+   "body_span": [
+    60,
+    60
+   ],
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "with",
+   "header_span": [
+    59,
+    59
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "iss"
+    ]
+   ],
+   "post_unparsed": [
+    "self.assertIn(\"'iss'\", cm.exception.description)"
+   ],
+   "test": "test_claim_iss",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    67,
+    67
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_sub",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    68,
+    68
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_sub",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    69,
+    69
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_sub",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    70,
+    70
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_sub",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    75,
+    75
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_jti",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    76,
+    76
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_jti",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": "cm",
+   "body_span": [
+    85,
+    85
+   ],
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "with",
+   "header_span": [
+    84,
+    84
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "jti"
+    ]
+   ],
+   "post_unparsed": [
+    "self.assertIn(\"'jti'\", cm.exception.description)"
+   ],
+   "test": "test_claim_jti",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    91,
+    91
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_jti",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    94,
+    94
+   ],
+   "included": true,
+   "k": 4,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_jti",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    95,
+    95
+   ],
+   "included": true,
+   "k": 5,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#5",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_jti",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    98,
+    98
+   ],
+   "included": true,
+   "k": 6,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#6",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_jti",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    104,
+    104
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_aud",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    105,
+    105
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_aud",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    106,
+    106
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claim_aud",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    110,
+    110
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_empty_value#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_essential_empty_value",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    111,
+    111
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_empty_value#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_essential_empty_value",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    113,
+    113
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_empty_value#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_essential_empty_value",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    123,
+    123
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_option_value",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    127,
+    127
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_option_value",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    130,
+    130
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_option_value",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    136,
+    136
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_option_value_with_list",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    140,
+    140
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_option_value_with_list",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    141,
+    141
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_option_value_with_list",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    146,
+    146
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_option_value_with_list",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    150,
+    150
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_values#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_option_values",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    159,
+    159
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_int_claims",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    160,
+    160
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_int_claims",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    161,
+    161
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_int_claims",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExpiredTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExpiredTokenError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    164,
+    164
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_int_claims",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    165,
+    165
+   ],
+   "included": true,
+   "k": 4,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_int_claims",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    171,
+    171
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_aud",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    174,
+    174
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_aud",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    175,
+    175
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_aud",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    183,
+    183
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_aud",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    184,
+    184
+   ],
+   "included": true,
+   "k": 4,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_aud",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExpiredTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExpiredTokenError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    204,
+    204
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_exp#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_exp",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExpiredTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExpiredTokenError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    208,
+    208
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_exp#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_exp",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    214,
+    214
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_iat#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_iat",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    220,
+    220
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_nbf#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_nbf",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    229,
+    229
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_time_claims_must_be_finite",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExpiredTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExpiredTokenError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    235,
+    235
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_accept_large_integers#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_time_claims_accept_large_integers",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    241,
+    241
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_decode_then_validate_a_token_that_never_expires#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_then_validate_a_token_that_never_expires",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    254,
+    254
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_list_inclusion",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    255,
+    255
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_list_inclusion",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    256,
+    256
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_list_inclusion",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    262,
+    262
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_list_inclusion",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    263,
+    263
+   ],
+   "included": true,
+   "k": 4,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_list_inclusion",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    264,
+    264
+   ],
+   "included": true,
+   "k": 5,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#5",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_list_inclusion",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    285,
+    285
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_allow_blank",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    297,
+    297
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_allow_blank",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    299,
+    299
+   ],
+   "included": true,
+   "k": 2,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_allow_blank",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    303,
+    303
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_allow_blank",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidClaimError",
+   "file": "tests/jwt/test_claims.py",
+   "form": "call",
+   "header_span": [
+    305,
+    305
+   ],
+   "included": true,
+   "k": 4,
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_allow_blank",
+   "test_class": "TestJWTClaims"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidPayloadError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidPayloadError",
+   "file": "tests/jwt/test_jwt.py",
+   "form": "call",
+   "header_span": [
+    37,
+    37
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_invalid_payload#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_payload",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidPayloadError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidPayloadError",
+   "file": "tests/jwt/test_jwt.py",
+   "form": "call",
+   "header_span": [
+    43,
+    43
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_payload_must_be_a_json_object#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_payload_must_be_a_json_object",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "validate"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingClaimError",
+   "file": "tests/jwt/test_jwt.py",
+   "form": "call",
+   "header_span": [
+    50,
+    50
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_claims_registry#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_claims_registry",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects KeyError"
+   ],
+   "expected": [
+    "KeyError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "KeyError",
+   "file": "tests/jwt/test_jwt.py",
+   "form": "call",
+   "header_span": [
+    74,
+    81
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_using_registry#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_using_registry",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedHeaderError",
+   "file": "tests/jwt/test_jwt.py",
+   "form": "call",
+   "header_span": [
+    82,
+    89
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_using_registry#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_using_registry",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/jwt/test_jwt.py",
+   "form": "call",
+   "header_span": [
+    90,
+    96
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_using_registry#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_using_registry",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/jwt/test_jwt.py",
+   "form": "call",
+   "header_span": [
+    97,
+    103
+   ],
+   "included": true,
+   "k": 3,
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_using_registry#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_using_registry",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnsupportedAlgorithmError",
+   "file": "tests/jwt/test_jwt.py",
+   "form": "call",
+   "header_span": [
+    116,
+    122
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_algorithms_collection_rejects_disallowed#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_algorithms_collection_rejects_disallowed",
+   "test_class": "TestJWT"
+  }
+ ],
+ "counts": {
+  "blocks": 193,
+  "entry_point_blocks": 140,
+  "included": 138
+ },
+ "test_files": [
+  "tests/jwe/test_compact.py",
+  "tests/jwe/test_errors.py",
+  "tests/jwe/test_example.py",
+  "tests/jwe/test_json.py",
+  "tests/jws/test_compact.py",
+  "tests/jws/test_eddsa.py",
+  "tests/jws/test_errors.py",
+  "tests/jws/test_json.py",
+  "tests/jws/test_rfc7797.py",
+  "tests/jwt/test_claims.py",
+  "tests/jwt/test_jwt.py"
+ ],
+ "test_files_sha256": {
+  "tests/jwe/test_compact.py": "edc65991bfd1fd8803a0f1dbc39fdb835c9c3ae4753fb68b83d2d483b7e600d3",
+  "tests/jwe/test_errors.py": "fd960453bea53a62f9e0a662c399ecb50a7927abfb7ce9e8523a627e0a16d2f2",
+  "tests/jwe/test_example.py": "cd8eb41ca938e9686b33b9f663dcc8f92c3c2383337579b94faec2b4dea420a9",
+  "tests/jwe/test_json.py": "1bff70b46abc0341bafd147c352f9286244f7d321dcb93c87ea90f081cac5b91",
+  "tests/jws/test_compact.py": "bcf78460b168c939dc86aecf9c6ec9cb0fd494cf4bf6818ec052d75bf5bae977",
+  "tests/jws/test_eddsa.py": "5eb9b0ed72c96f47982fd9f2d1c2f31659208548530f1e0c4be2e0009229fe2d",
+  "tests/jws/test_errors.py": "e7dbd19b4ab95aee529c2bc72097bb06f2cda889104b78bb99edd08f01520b99",
+  "tests/jws/test_json.py": "99bf62299fbedc1c573fe51269fed6856487089f75c1ddb5e145673a1469b8cb",
+  "tests/jws/test_rfc7797.py": "a410763f07499520de704a4371120640f3459118c6aabfc8a43626110d1f5b69",
+  "tests/jwt/test_claims.py": "087159706b706b14a069d65106140c3a888414085857561ac534029a3cbb1c55",
+  "tests/jwt/test_jwt.py": "f3af05a7714bbc02639edeb2a7de039b4892e0c60fc402907e91285148187917"
+ }
+}

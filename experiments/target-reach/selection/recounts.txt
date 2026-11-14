@@ -1,0 +1,138 @@
+
+##### urllib3, tag 2.8.0, commit b1d30ab61fe0db8f11092805e8c5ac43e091064a
+package files 35; checks 12; reachable 9; rejection classes 2
+reachable checks by class: {'SSLError': 5, 'CertificateError': 4}
+blocks {'blocks': 338, 'included': 5, 'entry_point_blocks': 7} in 30 test files
+included by file: {'../test/test_connection.py': 3, '../test/test_ssl.py': 2}
+included by expected: {'CertificateError': 3, 'SSLError': 2}
+included asserting more than the class: 3 of 5
+entry-point blocks not included: {'expects ValueError': 2}
+   block ../test/test_connection.py::TestConnection.test_match_hostname_more_than_one_dnsname_error#0 ['CertificateError'] ['_match_hostname']
+   block ../test/test_connection.py::TestConnection.test_match_hostname_ignore_common_name#0 ['CertificateError'] ['match_hostname']
+   block ../test/test_connection.py::TestConnection.test_match_hostname_dns_with_brackets_doesnt_match#0 ['CertificateError'] ['_match_hostname']
+   block ../test/test_ssl.py::TestSSL.test_assert_fingerprint_raises_exception_on_none_cert#0 ['SSLError'] ['assert_fingerprint']
+   block ../test/test_ssl.py::TestSSL.test_assert_fingerprint_raises_sslerror_on_non_hexadecimal#0 ['SSLError'] ['assert_fingerprint']
+
+##### cryptography, tag 50.0.2, commit 4dda5c7fe4ae71b8925f2551910a0ef959df9c7a
+package files 78; checks 9; reachable 8; rejection classes 2
+reachable checks by class: {'cryptography.fernet.InvalidToken': 6, 'cryptography.hazmat.primitives.twofactor.InvalidToken': 2}
+blocks {'blocks': 1789, 'included': 19, 'entry_point_blocks': 99} in 96 test files
+included by file: {'../tests/test_fernet.py': 19}
+included by expected: {'cryptography.fernet.InvalidToken': 19}
+included asserting more than the class: 0 of 19
+entry-point blocks not included: {'expects InvalidTag': 37, 'expects TypeError': 23, 'expects ValueError': 18, 'expects OverflowError': 2}
+   check fernet.Fernet._get_unverified_token_data#1 cryptography.fernet.InvalidToken '' raise statements: 3
+   check fernet.Fernet._verify_signature#1 cryptography.fernet.InvalidToken '' raise statements: 1
+   check fernet.Fernet._decrypt_data#1 cryptography.fernet.InvalidToken '' raise statements: 4
+   check fernet.MultiFernet.decrypt#1 cryptography.fernet.InvalidToken '' raise statements: 1
+   check fernet.MultiFernet.decrypt_at_time#1 cryptography.fernet.InvalidToken '' raise statements: 1
+   check fernet.MultiFernet.extract_timestamp#1 cryptography.fernet.InvalidToken '' raise statements: 1
+   check hazmat.primitives.twofactor.hotp.HOTP.verify#1 cryptography.hazmat.primitives.twofactor.InvalidToken 'Supplied HOTP value does not match.' raise statements: 1
+   check hazmat.primitives.twofactor.totp.TOTP.verify#1 cryptography.hazmat.primitives.twofactor.InvalidToken 'Supplied TOTP value does not match.' raise statements: 1
+
+##### truststore, tag v0.10.5, commit ddb380b919e4589c188e2fbc4f615fed49a37626
+package files 6; stopped: rejection base 'SSLError' is neither the label of exactly 1 package class nor a built-in class
+
+##### pyopenssl, tag 26.4.0, commit 07b1ef7cc2ed71c77ebc113d0c10fc045e40861a
+package files 7; checks 9; reachable 0; rejection classes 8
+reachable checks by class: {}
+blocks {'blocks': 175, 'included': 11, 'entry_point_blocks': 11} in 5 test files
+included by file: {'../tests/test_crypto.py': 11}
+included by expected: {'X509StoreContextError': 11}
+included asserting more than the class: 9 of 11
+entry-point blocks not included: {}
+
+##### pynacl, tag 1.6.2, commit ecf41f55a3d8f1e10ce89c61c4b4d67f3f4467cf
+package files 30; checks 78; reachable 14; rejection classes 9
+reachable checks by class: {'nacl.exceptions.ValueError': 10, 'nacl.exceptions.TypeError': 2, 'BadSignatureError': 1, 'CryptPrefixError': 1}
+blocks {'blocks': 166, 'included': 25, 'entry_point_blocks': 32} in 17 test files
+included by file: {'../tests/test_aead.py': 2, '../tests/test_box.py': 1, '../tests/test_pwhash.py': 8, '../tests/test_sealed_box.py': 1, '../tests/test_secret.py': 11, '../tests/test_signing.py': 2}
+included by expected: {'CryptoError': 15, 'InvalidkeyError': 4, 'nacl.exceptions.ValueError': 2, 'BadSignatureError': 2, 'CryptPrefixError': 1, 'UnavailableError': 1}
+included asserting more than the class: 0 of 25
+entry-point blocks not included: {'expects ValueError': 6, 'expects TypeError': 1}
+   check bindings.crypto_box.crypto_box_open_easy_afternm#1 nacl.exceptions.ValueError 'Invalid nonce' raise statements: 1
+   check bindings.crypto_box.crypto_box_open_easy_afternm#2 nacl.exceptions.ValueError 'Invalid shared key' raise statements: 1
+   check bindings.crypto_box.crypto_box_seal_open#1 nacl.exceptions.ValueError 'Invalid public key' raise statements: 1
+   check bindings.crypto_box.crypto_box_seal_open#2 nacl.exceptions.ValueError 'Invalid secret key' raise statements: 1
+   check bindings.crypto_secretbox.crypto_secretbox_open_easy#1 nacl.exceptions.ValueError 'Invalid key' raise statements: 1
+   check bindings.crypto_secretbox.crypto_secretbox_open_easy#2 nacl.exceptions.ValueError 'Invalid nonce' raise statements: 1
+   check bindings.crypto_sign.crypto_sign_open#1 BadSignatureError 'Signature was forged or corrupt' raise statements: 1
+   check exceptions.ensure#1 nacl.exceptions.TypeError '{*}' raise statements: 1
+   check public.Box.decrypt#1 nacl.exceptions.ValueError 'The nonce must be exactly {*} bytes long' raise statements: 1
+   check pwhash.__init__.verify#1 CryptPrefixError 'given password_hash is not in a supported format' raise statements: 1
+   check secret.SecretBox.decrypt#1 nacl.exceptions.ValueError 'The nonce must be exactly {*} bytes long' raise statements: 1
+   check secret.Aead.decrypt#1 nacl.exceptions.ValueError 'The nonce must be exactly {*} bytes long' raise statements: 1
+   check signing.VerifyKey.verify#1 nacl.exceptions.TypeError 'Verification signature must be created from {*} bytes' raise statements: 1
+   check signing.VerifyKey.verify#2 nacl.exceptions.ValueError 'The signature must be exactly {*} bytes long' raise statements: 1
+
+##### msal, tag 1.39.0, commit 20fd4d9f541bcdf21f5d371648004b1548b15e63
+package files 24; checks 85; reachable 28; rejection classes 10
+reachable checks by class: {'ValueError': 13, 'ManagedIdentityError': 7, 'RuntimeError': 3, 'ArcPlatformNotSupportedError': 1, 'NotImplementedError': 1, 'IdTokenIssuerError': 1, 'IdTokenAudienceError': 1, 'IdTokenNonceError': 1}
+blocks {'blocks': 62, 'included': 4, 'entry_point_blocks': 4} in 28 test files
+included by file: {'tests/test_client.py': 3, 'tests/test_oidc.py': 1}
+included by expected: {'ValueError': 3, 'IdTokenError': 1}
+included asserting more than the class: 3 of 4
+entry-point blocks not included: {}
+   block tests/test_client.py::TestClient.test_auth_code_flow_error_response#0 ['ValueError'] ['obtain_token_by_auth_code_flow']
+   block tests/test_client.py::TestClient.test_auth_code_flow_error_response#1 ['ValueError'] ['obtain_token_by_auth_code_flow']
+   block tests/test_client.py::TestClient.test_auth_code_flow_error_response#2 ['ValueError'] ['obtain_token_by_auth_code_flow']
+   block tests/test_oidc.py::TestIdToken.test_deprecated_decode_id_token_should_error_out_on_client_id_error#0 ['IdTokenError'] ['decode_id_token']
+
+##### pyjwt, tag 2.15.1, commit 7d5ef55e42ce42221f58dc49943e92ccad1fa66a
+package files 12; checks 99; reachable 57; rejection classes 19
+reachable checks by class: {'DecodeError': 13, 'InvalidKeyError': 10, 'InvalidTokenError': 7, 'InvalidAudienceError': 6, 'InvalidAlgorithmError': 4, 'MissingRequiredClaimError': 3, 'InvalidIssuerError': 3, 'InvalidSubjectError': 2, 'ImmatureSignatureError': 2, 'InvalidSignatureError': 1, 'InvalidJTIError': 1, 'InvalidIssuedAtError': 1}
+blocks {'blocks': 215, 'included': 79, 'entry_point_blocks': 82} in 10 test files
+included by file: {'tests/test_advisory.py': 2, 'tests/test_algorithms.py': 4, 'tests/test_api_jws.py': 32, 'tests/test_api_jwt.py': 41}
+included by expected: {'DecodeError': 24, 'InvalidAudienceError': 10, 'InvalidKeyError': 8, 'MissingRequiredClaimError': 8, 'InvalidTokenError': 7, 'InvalidAlgorithmError': 5, 'ExpiredSignatureError': 5, 'ImmatureSignatureError': 3, 'InvalidIssuerError': 3, 'InvalidSubjectError': 2, 'InvalidSignatureError': 1, 'InvalidIssuedAtError': 1, 'DecodeError | InvalidIssuedAtError': 1, 'InvalidJTIError': 1}
+included asserting more than the class: 50 of 79
+entry-point blocks not included: {'expects TypeError': 2, 'expects TypeError; expects ValueError': 1}
+
+##### google-auth, tag google-auth-v2.62.2, commit 50b1eb269f110a4b7ab09ffe5ae59c0151cd63c2
+package files 78; checks 100; reachable 52; rejection classes 4
+reachable checks by class: {'InvalidValue': 22, 'MalformedError': 19, 'ValueError': 5, 'InvalidOperation': 4, 'InvalidResource': 2}
+blocks {'blocks': 470, 'included': 17, 'entry_point_blocks': 20} in 70 test files
+included by file: {'tests/test_jwt.py': 17}
+included by expected: {'ValueError': 14, 'InvalidValue': 2, 'MalformedError': 1}
+included asserting more than the class: 17 of 17
+entry-point blocks not included: {'expects TypeError': 3}
+package files 78; checks 271; reachable 169; rejection classes 18
+reachable checks by class: {'RefreshError': 56, 'InvalidValue': 22, 'MalformedError': 19, 'ClientCertError': 15, 'ReauthFailError': 12, 'TransportError': 11, 'MutualTLSChannelError': 9, 'InvalidType': 7, 'InvalidOperation': 4, 'google.auth.exceptions.TimeoutError': 4, 'ResponseError': 2, 'InvalidResource': 2}
+blocks {'blocks': 470, 'included': 3, 'entry_point_blocks': 20} in 70 test files
+included by file: {'tests/test_jwt.py': 3}
+included by expected: {'InvalidValue': 2, 'MalformedError': 1}
+included asserting more than the class: 3 of 3
+entry-point blocks not included: {'expects ValueError': 14, 'expects TypeError': 2, 'expects ValueError; expects TypeError': 1}
+package files 78; checks 284; reachable 174; rejection classes 18
+reachable checks by class: {'RefreshError': 56, 'InvalidValue': 22, 'MalformedError': 19, 'ClientCertError': 15, 'ReauthFailError': 12, 'TransportError': 11, 'MutualTLSChannelError': 9, 'InvalidType': 7, 'ValueError': 5, 'InvalidOperation': 4, 'google.auth.exceptions.TimeoutError': 4, 'ResponseError': 2}
+blocks {'blocks': 470, 'included': 17, 'entry_point_blocks': 20} in 70 test files
+included by file: {'tests/test_jwt.py': 17}
+included by expected: {'ValueError': 14, 'InvalidValue': 2, 'MalformedError': 1}
+included asserting more than the class: 17 of 17
+entry-point blocks not included: {'expects TypeError': 3}
+
+##### oauthlib, tag v4.0.1, commit 6e3aa05af92978755939a18cb4dd655ced156c1e
+package files 75; checks 88; reachable 54; rejection classes 51
+reachable checks by class: {'oauthlib.oauth2.rfc6749.errors.InvalidRequestError': 12, 'InvalidGrantError': 6, 'UnsupportedGrantTypeError': 5, 'InvalidRequestFatalError': 4, 'ServerError': 4, 'UnauthorizedClientError': 3, 'MissingClientIdError': 2, 'InvalidClientIdError': 2, 'MissingResponseTypeError': 2, 'UnsupportedResponseTypeError': 2, 'MissingRedirectURIError': 2, 'MismatchingRedirectURIError': 2}
+blocks {'blocks': 281, 'included': 73, 'entry_point_blocks': 76} in 58 test files
+included by file: {'tests/oauth2/rfc6749/endpoints/test_error_responses.py': 24, 'tests/oauth2/rfc6749/grant_types/test_authorization_code.py': 19, 'tests/oauth2/rfc6749/grant_types/test_refresh_token.py': 7, 'tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py': 4, 'tests/openid/connect/core/endpoints/test_openid_connect_params_handling.py': 1, 'tests/openid/connect/core/grant_types/test_authorization_code.py': 7, 'tests/openid/connect/core/grant_types/test_hybrid.py': 2, 'tests/openid/connect/core/grant_types/test_implicit.py': 9}
+included by expected: {'oauthlib.oauth2.rfc6749.errors.InvalidRequestError': 18, 'InvalidGrantError': 6, 'InvalidRedirectURIError': 4, 'InvalidRequestFatalError': 4, 'oauthlib.oauth2.rfc6749.errors.InvalidClientError': 4, 'ServerError': 4, 'MissingCodeVerifierError': 4, 'oauthlib.oauth2.rfc6749.errors.LoginRequired': 4, 'MismatchingRedirectURIError': 3, 'InvalidScopeError': 3, 'UnsupportedGrantTypeError': 3, 'MissingRedirectURIError': 2, 'MissingClientIdError': 2, 'InvalidClientIdError': 2, 'MissingResponseTypeError': 2, 'UnauthorizedClientError': 2, 'UnsupportedResponseTypeError': 2, 'oauthlib.oauth2.rfc6749.errors.ConsentRequired': 2, 'MissingCodeChallengeError': 1, 'UnsupportedCodeChallengeMethodError': 1}
+included asserting more than the class: 2 of 73
+entry-point blocks not included: {'expects NotImplementedError': 3}
+
+##### authlib, tag v1.9.5, commit 42607cbc2135252a641a845e4ed7f94e3a922c47
+package files 215; checks 39; reachable 36; rejection classes 19
+reachable checks by class: {'DecodeError': 8, 'InvalidClaimError': 6, 'InvalidHeaderParameterNameError': 4, 'BadSignatureError': 2, 'MissingAlgorithmError': 2, 'UnsupportedAlgorithmError': 2, 'authlib.jose.errors.InvalidTokenError': 2, 'InvalidEncryptionAlgorithmForECDH1PUWithKeyWrappingError': 1, 'InvalidCritHeaderParameterNameError': 1, 'KeyMismatchError': 1, 'MissingEncryptionAlgorithmError': 1, 'UnsupportedEncryptionAlgorithmError': 1}
+blocks {'blocks': 322, 'included': 43, 'entry_point_blocks': 92} in 83 test files
+included by file: {'tests/jose/test_jwe.py': 6, 'tests/jose/test_jws.py': 22, 'tests/jose/test_jwt.py': 15}
+included by expected: {'DecodeError': 13, 'InvalidClaimError': 10, 'BadSignatureError': 5, 'InvalidHeaderParameterNameError': 4, 'UnsupportedAlgorithmError': 3, 'authlib.jose.errors.InvalidTokenError': 3, 'InvalidCritHeaderParameterNameError': 2, 'UnsupportedEncryptionAlgorithmError': 1, 'MissingClaimError': 1, 'authlib.jose.errors.ExpiredTokenError': 1}
+included asserting more than the class: 2 of 43
+entry-point blocks not included: {'expects joserfc.errors.InvalidClaimError': 21, 'expects ValueError': 16, 'expects joserfc.errors.MissingClaimError': 6, 'expects cryptography.exceptions.InvalidTag': 3, 'expects cryptography.hazmat.primitives.keywrap.InvalidUnwrap': 3}
+
+##### joserfc, tag 1.8.0, commit f345ff71cd6c36452a4e11e47b805ad450a95dd8
+package files 55; checks 97; reachable 81; rejection classes 31
+reachable checks by class: {'DecodeError': 13, 'ExceededSizeError': 13, 'InvalidKeyTypeError': 8, 'UnsupportedAlgorithmError': 6, 'UnsupportedHeaderError': 5, 'KeyParameterError': 4, 'InvalidKeyCurveError': 4, 'InvalidKeyLengthError': 3, 'UnsupportedKeyOperationError': 2, 'InvalidExchangeKeyError': 2, 'InvalidHeaderValueError': 2, 'MissingCritHeaderError': 2}
+blocks {'blocks': 257, 'included': 138, 'entry_point_blocks': 143} in 27 test files
+included by file: {'../tests/jwe/test_compact.py': 17, '../tests/jwe/test_errors.py': 1, '../tests/jwe/test_example.py': 1, '../tests/jwe/test_json.py': 11, '../tests/jws/test_compact.py': 10, '../tests/jws/test_eddsa.py': 5, '../tests/jws/test_errors.py': 7, '../tests/jws/test_json.py': 17, '../tests/jws/test_rfc7797.py': 5, '../tests/jwt/test_claims.py': 59, '../tests/jwt/test_jwt.py': 5}
+included by expected: {'InvalidClaimError': 45, 'DecodeError': 22, 'ExceededSizeError': 18, 'BadSignatureError': 16, 'MissingClaimError': 11, 'UnsupportedHeaderError': 6, 'ExpiredTokenError': 4, 'MissingAlgorithmError': 3, 'UnsupportedAlgorithmError': 3, 'InvalidHeaderValueError': 2, 'InvalidKeyTypeError': 2, 'InvalidKeyCurveError': 2, 'InvalidPayloadError': 2, 'MissingEncryptionError': 1, 'MissingKeyError': 1}
+included asserting more than the class: 5 of 138
+entry-point blocks not included: {'expects ValueError': 5}

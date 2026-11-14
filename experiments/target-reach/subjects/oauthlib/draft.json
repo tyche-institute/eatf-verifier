@@ -1,0 +1,41 @@
+{
+ "name": "oauthlib",
+ "distribution": "oauthlib",
+ "version": "4.0.1",
+ "repository": "https://github.com/oauthlib/oauthlib",
+ "tag": "v4.0.1",
+ "commit": "6e3aa05af92978755939a18cb4dd655ced156c1e",
+ "package": "oauthlib",
+ "source_root": ".",
+ "entry_points": [
+  "validate_authorization_request",
+  "validate_token_request"
+ ],
+ "entry_points_source": "oauthlib/oauth2/rfc6749/grant_types/: the 2 methods by which a grant type validates a request received from a client; docs/oauth2/endpoints/authorization.rst shows validate_authorization_request.",
+ "rejection_bases": [
+  "OAuth2Error"
+ ],
+ "rejection_bases_source": "oauthlib/oauth2/rfc6749/errors.py: OAuth2Error is the base class of the errors that the grant types raise.",
+ "test_directories": [
+  "tests"
+ ],
+ "test_directories_source": "tox.ini: pytest --cov=oauthlib tests/",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "suite_runs_source": "tox.ini: pytest --cov=oauthlib tests/",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "oauthlib",
+  "tests"
+ ],
+ "python": "3.12.3"
+}

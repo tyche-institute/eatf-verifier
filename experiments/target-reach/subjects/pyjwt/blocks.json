@@ -1,0 +1,7835 @@
+{
+ "blocks": [
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    64,
+    68
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_advisory.py",
+   "form": "with",
+   "header_span": [
+    63,
+    63
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_advisory.py::TestAdvisory.test_ghsa_ffqj_6fqr_9h24#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ghsa_ffqj_6fqr_9h24",
+   "test_class": "TestAdvisory"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    115,
+    119
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_advisory.py",
+   "form": "with",
+   "header_span": [
+    114,
+    114
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/test_advisory.py::TestAdvisory.test_ghsa_ffqj_6fqr_9h24#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ghsa_ffqj_6fqr_9h24",
+   "test_class": "TestAdvisory"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    46,
+    46
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    45,
+    45
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_check_crypto_key_type_should_fail_when_not_using_crypto#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_check_crypto_key_type_should_fail_when_not_using_crypto",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    52,
+    52
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    51,
+    51
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_none_algorithm_should_throw_exception_if_key_is_not_none#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_algorithm_should_throw_exception_if_key_is_not_none",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    58,
+    58
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects NotImplementedError"
+   ],
+   "expected": [
+    "NotImplementedError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "NotImplementedError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    57,
+    57
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_none_algorithm_should_throw_exception_on_to_jwk#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_algorithm_should_throw_exception_on_to_jwk",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    64,
+    64
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects NotImplementedError"
+   ],
+   "expected": [
+    "NotImplementedError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "NotImplementedError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    63,
+    63
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_none_algorithm_should_throw_exception_on_from_jwk#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_none_algorithm_should_throw_exception_on_from_jwk",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    70,
+    70
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    69,
+    69
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_should_reject_nonstring_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Expected a string or bytes value"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_hmac_should_reject_nonstring_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    94,
+    95
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    93,
+    93
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_should_throw_exception#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_should_throw_exception",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    113,
+    113
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    112,
+    112
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_should_reject_loader_accepted_pem_mutations#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_should_reject_loader_accepted_pem_mutations",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    127,
+    127
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    126,
+    126
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_should_reject_a_later_pem_block#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_should_reject_a_later_pem_block",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    137,
+    137
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    136,
+    136
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_should_reject_a_pem_block_after_an_overlapping_end_marker#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_should_reject_a_pem_block_after_an_overlapping_end_marker",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    163,
+    163
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    162,
+    162
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_from_jwk_should_raise_exception_if_not_hmac_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_from_jwk_should_raise_exception_if_not_hmac_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    170,
+    170
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    169,
+    169
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_from_jwk_should_raise_exception_if_empty_json#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_from_jwk_should_raise_exception_if_empty_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    176,
+    176
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    175,
+    175
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_from_jwk_should_reject_empty_key#0",
+   "match": "must not be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_from_jwk_should_reject_empty_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    185,
+    185
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    184,
+    184
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_empty_key#0",
+   "match": "must not be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_empty_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    201,
+    201
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    200,
+    200
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_jwk_json#0",
+   "match": "looks like a JWK",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_jwk_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    222,
+    222
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    221,
+    221
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_public_jwk_containers#0",
+   "match": "looks like a JWK",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_public_jwk_containers",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    230,
+    230
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    229,
+    229
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_deep_public_jwk_array#0",
+   "match": "looks like a JWK",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_deep_public_jwk_array",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    240,
+    240
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    239,
+    239
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_deep_public_jwk_array_with_escaped_kty#0",
+   "match": "looks like a JWK",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_deep_public_jwk_array_with_escaped_kty",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    259,
+    259
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    258,
+    258
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_jwks_with_oversized_integer#0",
+   "match": "looks like a JWK",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_jwks_with_oversized_integer",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    281,
+    281
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    280,
+    280
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_bom_prefixed_jwk_json#0",
+   "match": "looks like a JWK",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_bom_prefixed_jwk_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    301,
+    301
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    300,
+    300
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_deep_jwk_object#0",
+   "match": "looks like a JWK",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_deep_jwk_object",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    329,
+    329
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    328,
+    328
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_deep_jwk_with_surrogate#0",
+   "match": "looks like a JWK",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_deep_jwk_with_surrogate",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    346,
+    346
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    345,
+    345
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_der_public_key#0",
+   "match": "asymmetric key",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_der_public_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    356,
+    356
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    355,
+    355
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_hmac_prepare_key_rejects_der_certificate#0",
+   "match": "x509 certificate",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_prepare_key_rejects_der_certificate",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    391,
+    391
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    390,
+    390
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_rsa_should_reject_non_string_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_should_reject_non_string_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    461,
+    461
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    460,
+    460
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_jwk_fails_on_invalid_json#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    465,
+    465
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    464,
+    464
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_jwk_fails_on_invalid_json#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    469,
+    469
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    468,
+    468
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_jwk_fails_on_invalid_json#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    471,
+    471
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    470,
+    470
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_jwk_fails_on_invalid_json#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    473,
+    473
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    472,
+    472
+   ],
+   "included": false,
+   "k": 4,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_jwk_fails_on_invalid_json#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    477,
+    477
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    476,
+    476
+   ],
+   "included": false,
+   "k": 5,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_jwk_fails_on_invalid_json#5",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    481,
+    481
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    480,
+    480
+   ],
+   "included": false,
+   "k": 6,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_jwk_fails_on_invalid_json#6",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    486,
+    488
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    485,
+    485
+   ],
+   "included": false,
+   "k": 7,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_jwk_fails_on_invalid_json#7",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    493,
+    495
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    492,
+    492
+   ],
+   "included": false,
+   "k": 8,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_jwk_fails_on_invalid_json#8",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_jwk_fails_on_invalid_json",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    577,
+    577
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    574,
+    574
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_to_jwk_raises_exception_on_invalid_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_to_jwk_raises_exception_on_invalid_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    617,
+    617
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    616,
+    616
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_to_jwk_with_invalid_curve#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_to_jwk_with_invalid_curve",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    662,
+    665
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    661,
+    661
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_rsa_jwk_private_key_with_other_primes_is_invalid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_jwk_private_key_with_other_primes_is_invalid",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    673,
+    676
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    672,
+    672
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_rsa_jwk_private_key_with_missing_values_is_invalid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_jwk_private_key_with_missing_values_is_invalid",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    708,
+    711
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    707,
+    707
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_rsa_jwk_private_key_with_missing_required_values_is_invalid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_jwk_private_key_with_missing_required_values_is_invalid",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    719,
+    719
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    718,
+    718
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_rsa_jwk_raises_exception_if_not_a_valid_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_jwk_raises_exception_if_not_a_valid_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    723,
+    723
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    722,
+    722
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_rsa_jwk_raises_exception_if_not_a_valid_key#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_jwk_raises_exception_if_not_a_valid_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    825,
+    825
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    822,
+    822
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_rsa_to_jwk_raises_exception_on_invalid_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_to_jwk_raises_exception_on_invalid_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    833,
+    833
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    832,
+    832
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_rsa_from_jwk_raises_exception_on_invalid_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rsa_from_jwk_raises_exception_on_invalid_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    840,
+    840
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    839,
+    839
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_should_reject_non_string_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_should_reject_non_string_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    896,
+    897
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    895,
+    895
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_should_throw_exception_on_wrong_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_should_throw_exception_on_wrong_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    900,
+    901
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    899,
+    899
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_algorithms.py::TestAlgorithms.test_ec_should_throw_exception_on_wrong_key#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_should_throw_exception_on_wrong_key",
+   "test_class": "TestAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1086,
+    1086
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1085,
+    1085
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_jwk_should_reject_inconsistent_private_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_jwk_should_reject_inconsistent_private_key",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1099,
+    1099
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1098,
+    1098
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_jwk_should_reject_private_key_with_invalid_public_length#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_jwk_should_reject_private_key_with_invalid_public_length",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1109,
+    1109
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1108,
+    1108
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_should_reject_non_string_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_should_reject_non_string_key",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1205,
+    1205
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1204,
+    1204
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_prepare_key_should_reject_invalid_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_prepare_key_should_reject_invalid_key",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1249,
+    1249
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1248,
+    1248
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_jwk_fails_on_invalid_json#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1253,
+    1253
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1252,
+    1252
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_jwk_fails_on_invalid_json#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1259,
+    1259
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1258,
+    1258
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_jwk_fails_on_invalid_json#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1265,
+    1265
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1264,
+    1264
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_jwk_fails_on_invalid_json#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1271,
+    1271
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1270,
+    1270
+   ],
+   "included": false,
+   "k": 4,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_jwk_fails_on_invalid_json#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1277,
+    1277
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1276,
+    1276
+   ],
+   "included": false,
+   "k": 5,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_jwk_fails_on_invalid_json#5",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1283,
+    1283
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1282,
+    1282
+   ],
+   "included": false,
+   "k": 6,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_jwk_fails_on_invalid_json#6",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1289,
+    1289
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1288,
+    1288
+   ],
+   "included": false,
+   "k": 7,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed25519_jwk_fails_on_invalid_json#7",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed25519_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1323,
+    1323
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1320,
+    1320
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_to_jwk_raises_exception_on_invalid_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_to_jwk_raises_exception_on_invalid_key",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1367,
+    1367
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1366,
+    1366
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed448_jwk_fails_on_invalid_json#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1371,
+    1371
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1370,
+    1370
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed448_jwk_fails_on_invalid_json#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1377,
+    1377
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1376,
+    1376
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed448_jwk_fails_on_invalid_json#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1383,
+    1383
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1382,
+    1382
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed448_jwk_fails_on_invalid_json#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1389,
+    1389
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1388,
+    1388
+   ],
+   "included": false,
+   "k": 4,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed448_jwk_fails_on_invalid_json#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1395,
+    1395
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1394,
+    1394
+   ],
+   "included": false,
+   "k": 5,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed448_jwk_fails_on_invalid_json#5",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1401,
+    1401
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1400,
+    1400
+   ],
+   "included": false,
+   "k": 6,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed448_jwk_fails_on_invalid_json#6",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1407,
+    1407
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1406,
+    1406
+   ],
+   "included": false,
+   "k": 7,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_okp_ed448_jwk_fails_on_invalid_json#7",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_okp_ed448_jwk_fails_on_invalid_json",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    1458,
+    1458
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1457,
+    1457
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestOKPAlgorithms.test_rsa_prepare_key_raises_invalid_key_error_on_invalid_pem#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Could not parse the provided public key."
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_rsa_prepare_key_raises_invalid_key_error_on_invalid_pem",
+   "test_class": "TestOKPAlgorithms"
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    1479,
+    1479
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1478,
+    1478
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestECCurveValidation.test_ec_curve_validation_rejects_wrong_curve_for_es256#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "secp384r1"
+    ],
+    [
+     "str_in",
+     "secp256r1"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ec_curve_validation_rejects_wrong_curve_for_es256",
+   "test_class": "TestECCurveValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    1494,
+    1494
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1493,
+    1493
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestECCurveValidation.test_ec_curve_validation_rejects_wrong_curve_for_es384#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "secp256r1"
+    ],
+    [
+     "str_in",
+     "secp384r1"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ec_curve_validation_rejects_wrong_curve_for_es384",
+   "test_class": "TestECCurveValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    1509,
+    1509
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1508,
+    1508
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestECCurveValidation.test_ec_curve_validation_rejects_wrong_curve_for_es512#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "secp256r1"
+    ],
+    [
+     "str_in",
+     "secp521r1"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ec_curve_validation_rejects_wrong_curve_for_es512",
+   "test_class": "TestECCurveValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    1524,
+    1524
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1523,
+    1523
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestECCurveValidation.test_ec_curve_validation_rejects_wrong_curve_for_es256k#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "secp256r1"
+    ],
+    [
+     "str_in",
+     "secp256k1"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ec_curve_validation_rejects_wrong_curve_for_es256k",
+   "test_class": "TestECCurveValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    1580,
+    1580
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1579,
+    1579
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestECCurveValidation.test_ec_curve_validation_rejects_p192_for_es256#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "secp192r1"
+    ],
+    [
+     "str_in",
+     "secp256r1"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ec_curve_validation_rejects_p192_for_es256",
+   "test_class": "TestECCurveValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1654,
+    1654
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1653,
+    1653
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestECCurveValidation.test_ec_curve_validation_with_pem_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ec_curve_validation_with_pem_key",
+   "test_class": "TestECCurveValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1668,
+    1668
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1667,
+    1667
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestECCurveValidation.test_jwt_encode_decode_rejects_wrong_curve#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwt_encode_decode_rejects_wrong_curve",
+   "test_class": "TestECCurveValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1685,
+    1685
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1684,
+    1684
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/test_algorithms.py::TestECCurveValidation.test_jwt_encode_decode_rejects_wrong_curve#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwt_encode_decode_rejects_wrong_curve",
+   "test_class": "TestECCurveValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1727,
+    1727
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1726,
+    1726
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestKeyLengthValidation.test_hmac_empty_key_rejected_outright#0",
+   "match": "must not be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_hmac_empty_key_rejected_outright",
+   "test_class": "TestKeyLengthValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1831,
+    1831
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1830,
+    1830
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestKeyLengthValidation.test_pyjws_encode_enforces_short_hmac_key#0",
+   "match": "below",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pyjws_encode_enforces_short_hmac_key",
+   "test_class": "TestKeyLengthValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1856,
+    1856
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1855,
+    1855
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestKeyLengthValidation.test_pyjwt_encode_enforces_short_hmac_key#0",
+   "match": "below",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pyjwt_encode_enforces_short_hmac_key",
+   "test_class": "TestKeyLengthValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1872,
+    1872
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1871,
+    1871
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestKeyLengthValidation.test_pyjwt_decode_enforces_short_hmac_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pyjwt_decode_enforces_short_hmac_key",
+   "test_class": "TestKeyLengthValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1886,
+    1891
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1885,
+    1885
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_algorithms.py::TestKeyLengthValidation.test_pyjwt_decode_honors_per_call_enforce_minimum_key_length#0",
+   "match": "below",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+   "test_class": "TestKeyLengthValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1896,
+    1901
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_algorithms.py",
+   "form": "with",
+   "header_span": [
+    1895,
+    1895
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/test_algorithms.py::TestKeyLengthValidation.test_pyjwt_decode_honors_per_call_enforce_minimum_key_length#1",
+   "match": "below",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pyjwt_decode_honors_per_call_enforce_minimum_key_length",
+   "test_class": "TestKeyLengthValidation"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    182,
+    182
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    181,
+    181
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWK.test_from_dict_should_throw_exception_if_arg_is_invalid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "test_class": "TestPyJWK"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    188,
+    188
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    187,
+    187
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_api_jwk.py::TestPyJWK.test_from_dict_should_throw_exception_if_arg_is_invalid#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "test_class": "TestPyJWK"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    194,
+    194
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    193,
+    193
+   ],
+   "included": false,
+   "k": 2,
+   "key": "tests/test_api_jwk.py::TestPyJWK.test_from_dict_should_throw_exception_if_arg_is_invalid#2",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "test_class": "TestPyJWK"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    200,
+    200
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    199,
+    199
+   ],
+   "included": false,
+   "k": 3,
+   "key": "tests/test_api_jwk.py::TestPyJWK.test_from_dict_should_throw_exception_if_arg_is_invalid#3",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "test_class": "TestPyJWK"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    206,
+    206
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    205,
+    205
+   ],
+   "included": false,
+   "k": 4,
+   "key": "tests/test_api_jwk.py::TestPyJWK.test_from_dict_should_throw_exception_if_arg_is_invalid#4",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "test_class": "TestPyJWK"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    212,
+    212
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    211,
+    211
+   ],
+   "included": false,
+   "k": 5,
+   "key": "tests/test_api_jwk.py::TestPyJWK.test_from_dict_should_throw_exception_if_arg_is_invalid#5",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_from_dict_should_throw_exception_if_arg_is_invalid",
+   "test_class": "TestPyJWK"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    217,
+    218
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    216,
+    216
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWK.test_missing_crypto_library_good_error_message#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_crypto_library_good_error_message",
+   "test_class": "TestPyJWK"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    223,
+    223
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingCryptographyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingCryptographyError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    222,
+    222
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWK.test_missing_crypto_library_raises_missing_cryptography_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_crypto_library_raises_missing_cryptography_error",
+   "test_class": "TestPyJWK"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    309,
+    309
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects KeyError"
+   ],
+   "expected": [
+    "KeyError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "KeyError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    308,
+    308
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWKSet.test_keyset_should_index_by_kid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_keyset_should_index_by_kid",
+   "test_class": "TestPyJWKSet"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    344,
+    344
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKSetError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKSetError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    343,
+    343
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWKSet.test_keyset_of_only_non_object_members_raises_set_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_keyset_of_only_non_object_members_raises_set_error",
+   "test_class": "TestPyJWKSet"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    351,
+    351
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKSetError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKSetError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    350,
+    350
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWKSet.test_keyset_skips_members_with_invalid_component_types#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_keyset_skips_members_with_invalid_component_types",
+   "test_class": "TestPyJWKSet"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    356,
+    356
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    355,
+    355
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWKSet.test_jwk_with_invalid_component_type_raises_invalid_key_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jwk_with_invalid_component_type_raises_invalid_key_error",
+   "test_class": "TestPyJWKSet"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    374,
+    374
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKSetError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKSetError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    373,
+    373
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWKSet.test_keyset_with_unknown_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_keyset_with_unknown_alg",
+   "test_class": "TestPyJWKSet"
+  },
+  {
+   "api": "pytest",
+   "binding": "err",
+   "body_span": [
+    379,
+    379
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKSetError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKSetError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    378,
+    378
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWKSet.test_invalid_keys_list#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid JWK Set value"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_invalid_keys_list",
+   "test_class": "TestPyJWKSet"
+  },
+  {
+   "api": "pytest",
+   "binding": "err",
+   "body_span": [
+    385,
+    385
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKSetError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKSetError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    384,
+    384
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWKSet.test_empty_keys_list#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "The JWK Set did not contain any keys"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_empty_keys_list",
+   "test_class": "TestPyJWKSet"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    391,
+    391
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "MissingCryptographyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingCryptographyError",
+   "file": "tests/test_api_jwk.py",
+   "form": "with",
+   "header_span": [
+    390,
+    390
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwk.py::TestPyJWKSet.test_missing_crypto_library_raises_when_required#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_crypto_library_raises_when_required",
+   "test_class": "TestPyJWKSet"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    57,
+    57
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    56,
+    56
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_register_algo_does_not_allow_duplicate_registration#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_register_algo_does_not_allow_duplicate_registration",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    61,
+    64
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    60,
+    60
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_register_algo_rejects_non_algorithm_obj#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_register_algo_rejects_non_algorithm_obj",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    78,
+    78
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects KeyError"
+   ],
+   "expected": [
+    "KeyError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "KeyError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    77,
+    77
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_unregister_algo_throws_error_if_not_registered#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unregister_algo_throws_error_if_not_registered",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_api_jws.py",
+   "form": "call",
+   "header_span": [
+    101,
+    101
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_options_must_be_dict#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_options_must_be_dict",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError",
+    "expects ValueError"
+   ],
+   "expected": [
+    "TypeError",
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin",
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "(TypeError, ValueError)",
+   "file": "tests/test_api_jws.py",
+   "form": "call",
+   "header_span": [
+    102,
+    102
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_api_jws.py::TestJWS.test_options_must_be_dict#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_options_must_be_dict",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    119,
+    119
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAlgorithmError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    118,
+    118
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_fails_when_alg_is_not_on_method_algorithms_param#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_fails_when_alg_is_not_on_method_algorithms_param",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    136,
+    136
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    135,
+    135
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_missing_segments_throws_exception#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Not enough segments"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_missing_segments_throws_exception",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    146,
+    150
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    145,
+    145
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_token_type_is_none#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid token type"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_invalid_token_type_is_none",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    160,
+    164
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    159,
+    159
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_token_type_is_int#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid token type"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_invalid_token_type_is_int",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    178,
+    178
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    177,
+    177
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_with_non_mapping_header_throws_exception#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid header string: must be a json object"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_with_non_mapping_header_throws_exception",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    201,
+    201
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects NotImplementedError"
+   ],
+   "expected": [
+    "NotImplementedError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "NotImplementedError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    200,
+    200
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_encode_algorithm_param_should_be_case_sensitive#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Algorithm not supported"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_encode_algorithm_param_should_be_case_sensitive",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    215,
+    215
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    214,
+    214
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_encode_with_headers_alg_none#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Signature verification failed"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_encode_with_headers_alg_none",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    294,
+    294
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAlgorithmError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    293,
+    293
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_algorithm_param_should_be_case_sensitive#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Algorithm not supported"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_algorithm_param_should_be_case_sensitive",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    306,
+    306
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    304,
+    304
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_bad_secret#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Signature verification failed"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_bad_secret",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    310,
+    310
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidSignatureError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    309,
+    309
+   ],
+   "included": true,
+   "k": 1,
+   "key": "tests/test_api_jws.py::TestJWS.test_bad_secret#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Signature verification failed"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_bad_secret",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    399,
+    399
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAlgorithmError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    398,
+    398
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decodes_with_jwk_and_mismatched_algorithm#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decodes_with_jwk_and_mismatched_algorithm",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    426,
+    426
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAlgorithmError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    423,
+    425
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decodes_with_jwk_rejects_header_alg_outside_jwk_alg#0",
+   "match": "does not match the key's algorithm",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decodes_with_jwk_rejects_header_alg_outside_jwk_alg",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    502,
+    502
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    501,
+    501
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_with_optional_algorithms#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "It is required that you pass in a value for the \"algorithms\" argument when calling decode()."
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_with_optional_algorithms",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    543,
+    543
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    542,
+    542
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_no_secret#0",
+   "match": "must not be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_secret",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    550,
+    550
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidKeyError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    549,
+    549
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_verify_signature_with_no_secret#0",
+   "match": "must not be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_verify_signature_with_no_secret",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    558,
+    558
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAlgorithmError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAlgorithmError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    557,
+    557
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_verify_signature_with_no_algo_header_throws_exception#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_verify_signature_with_no_algo_header_throws_exception",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    562,
+    562
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects NotImplementedError"
+   ],
+   "expected": [
+    "NotImplementedError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "NotImplementedError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    561,
+    561
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_invalid_crypto_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_crypto_alg",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    569,
+    570
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects NotImplementedError"
+   ],
+   "expected": [
+    "NotImplementedError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "NotImplementedError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    568,
+    568
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_missing_crypto_library_better_error_messages#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_missing_crypto_library_better_error_messages",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    617,
+    617
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    616,
+    616
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_header_padding#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "header padding"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_invalid_header_padding",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    630,
+    630
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    629,
+    629
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_header_string#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid header"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_invalid_header_string",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    645,
+    645
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    644,
+    644
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_deeply_nested_header_throws_decode_error#0",
+   "match": "Invalid header",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_deeply_nested_header_throws_decode_error",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    656,
+    656
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    655,
+    655
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_payload_padding#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid payload padding"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_invalid_payload_padding",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    669,
+    669
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    668,
+    668
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_invalid_crypto_padding#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid crypto padding"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_invalid_crypto_padding",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    682,
+    682
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    681,
+    681
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_non_canonical_crypto_segment#0",
+   "match": "Invalid crypto padding",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_non_canonical_crypto_segment",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    709,
+    709
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    708,
+    708
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_embedded_padding_in_crypto_segment#0",
+   "match": "Invalid crypto padding",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_embedded_padding_in_crypto_segment",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    726,
+    726
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    725,
+    725
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_invalid_base64url_padding#0",
+   "match": "Invalid crypto padding",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_invalid_base64url_padding",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    740,
+    740
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    739,
+    739
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_with_algo_none_should_fail#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_with_algo_none_should_fail",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    780,
+    780
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    779,
+    779
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_get_unverified_header_fails_on_bad_header_types#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Key ID header parameter must be a string"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_get_unverified_header_fails_on_bad_header_types",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    902,
+    902
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    901,
+    901
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_options_must_be_dict#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_options_must_be_dict",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    905,
+    905
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [
+    "expects TypeError",
+    "expects ValueError"
+   ],
+   "expected": [
+    "TypeError",
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin",
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "(TypeError, ValueError)",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    904,
+    904
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_options_must_be_dict#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_options_must_be_dict",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    916,
+    916
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    915,
+    915
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_custom_json_encoder#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_custom_json_encoder",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    1006,
+    1006
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1005,
+    1005
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_encode_fails_on_invalid_kid_types#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Key ID header parameter must be a string"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_encode_fails_on_invalid_kid_types",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    1011,
+    1011
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1010,
+    1010
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_api_jws.py::TestJWS.test_encode_fails_on_invalid_kid_types#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Key ID header parameter must be a string"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_encode_fails_on_invalid_kid_types",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1032,
+    1037
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1031,
+    1031
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_detached_payload_for_attached_content#0",
+   "match": "detached_payload.*b64.*false",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_detached_payload_for_attached_content",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1129,
+    1129
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1128,
+    1128
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_b64_false_rejects_non_empty_payload_segment#0",
+   "match": "Payload segment must be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_b64_false_rejects_non_empty_payload_segment",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1150,
+    1150
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1149,
+    1149
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_b64_false_without_crit_b64_is_rejected#0",
+   "match": "b64.*crit",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_b64_false_without_crit_b64_is_rejected",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    1161,
+    1161
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1160,
+    1160
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_detached_content_without_proper_argument#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "It is required that you pass in a value for the \"detached_payload\" argument to decode a message having the b64 header set to false."
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_detached_content_without_proper_argument",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1224,
+    1224
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1223,
+    1223
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_unknown_crit_extension#0",
+   "match": "Unsupported critical extension",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_unknown_crit_extension",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1236,
+    1236
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1235,
+    1235
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_empty_crit#0",
+   "match": "must be a non-empty list",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_empty_crit",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1248,
+    1248
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1247,
+    1247
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_non_list_crit#0",
+   "match": "must be a non-empty list",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_non_list_crit",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1262,
+    1262
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1261,
+    1261
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_crit_with_non_string_values#0",
+   "match": "values must be strings",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_crit_with_non_string_values",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1276,
+    1276
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1275,
+    1275
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_decode_rejects_crit_extension_missing_from_header#0",
+   "match": "missing from headers",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_crit_extension_missing_from_header",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1310,
+    1310
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1309,
+    1309
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_get_unverified_header_rejects_unknown_crit#0",
+   "match": "Unsupported critical extension",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_unverified_header_rejects_unknown_crit",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1316,
+    1318
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidKeyError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "jwt.InvalidKeyError",
+   "file": "tests/test_api_jws.py",
+   "form": "with",
+   "header_span": [
+    1315,
+    1315
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jws.py::TestJWS.test_pyjwk_rejects_empty_hmac_key#0",
+   "match": "must not be empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pyjwk_rejects_empty_hmac_key",
+   "test_class": "TestJWS"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    63,
+    63
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExpiredSignatureError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    62,
+    62
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_reused_options_do_not_disable_claim_verification#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_reused_options_do_not_disable_claim_verification",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    178,
+    178
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    177,
+    177
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_invalid_payload_string#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid payload string"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_invalid_payload_string",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    190,
+    190
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    189,
+    189
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_payload_recursion_error_throws_decode_error#0",
+   "match": "Invalid payload",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert isinstance(exc.value.__cause__, RecursionError)"
+   ],
+   "test": "test_decode_payload_recursion_error_throws_decode_error",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    203,
+    203
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    202,
+    202
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_non_mapping_payload_throws_exception#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid payload string: must be a json object"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_with_non_mapping_payload_throws_exception",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    219,
+    224
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    218,
+    218
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_invalid_audience_param_throws_exception#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "audience must be a string, iterable or None"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_with_invalid_audience_param_throws_exception",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    238,
+    243
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    237,
+    237
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_nonlist_aud_claim_throws_exception#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid claim format in token"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_with_nonlist_aud_claim_throws_exception",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "context",
+   "body_span": [
+    259,
+    264
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    258,
+    258
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_invalid_aud_list_member_throws_exception#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Invalid claim format in token"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_with_invalid_aud_list_member_throws_exception",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "call",
+   "header_span": [
+    273,
+    276
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_encode_bad_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_encode_bad_type",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    281,
+    286
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    280,
+    280
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_encode_with_non_str_iss#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_encode_with_non_str_iss",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    323,
+    323
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    322,
+    322
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_exception_if_exp_is_not_int#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "exp"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_raises_exception_if_exp_is_not_int",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    336,
+    336
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidIssuedAtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidIssuedAtError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    335,
+    335
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_exception_if_iat_is_not_int#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_raises_exception_if_iat_is_not_int",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    346,
+    346
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ImmatureSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ImmatureSignatureError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    345,
+    345
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_exception_if_iat_is_greater_than_now#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_raises_exception_if_iat_is_greater_than_now",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    366,
+    366
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    365,
+    365
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_exception_if_nbf_is_not_int#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_raises_exception_if_nbf_is_not_int",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    380,
+    380
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError",
+    "InvalidIssuedAtError"
+   ],
+   "expected_kinds": [
+    "import",
+    "import"
+   ],
+   "expected_resolution": "local assignment",
+   "expected_source": "expected",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    379,
+    379
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_raises_clean_error_if_claim_is_non_numeric_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert claim in str(exc.value)"
+   ],
+   "test": "test_decode_raises_clean_error_if_claim_is_non_numeric_type",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    475,
+    475
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExpiredSignatureError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    474,
+    474
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_expiration#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_with_expiration",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    485,
+    485
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ImmatureSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ImmatureSignatureError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    484,
+    484
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_notbefore#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_with_notbefore",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    532,
+    532
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExpiredSignatureError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    531,
+    531
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_expiration_with_leeway#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_with_expiration_with_leeway",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    545,
+    545
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ImmatureSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ImmatureSignatureError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    544,
+    544
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_notbefore_with_leeway#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_with_notbefore_with_leeway",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    566,
+    566
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    565,
+    565
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_check_audience_none_specified#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_check_audience_none_specified",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    572,
+    577
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    571,
+    571
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_list#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_raise_exception_invalid_audience_list",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    590,
+    590
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    589,
+    589
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_raise_exception_invalid_audience",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    596,
+    601
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    595,
+    595
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_audience_as_bytes#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_raise_exception_audience_as_bytes",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    612,
+    612
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    611,
+    611
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_audience_in_array#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_raise_exception_invalid_audience_in_array",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    622,
+    622
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingRequiredClaimError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    621,
+    621
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_token_without_issuer#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "iss"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_raise_exception_token_without_issuer",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    634,
+    634
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidIssuerError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidIssuerError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    633,
+    633
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_rasise_exception_on_partial_issuer_match#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rasise_exception_on_partial_issuer_match",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    641,
+    641
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingRequiredClaimError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    640,
+    640
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_token_without_audience#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "aud"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_raise_exception_token_without_audience",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    652,
+    652
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingRequiredClaimError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    651,
+    651
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_token_with_aud_none_and_without_audience#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "aud"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_raise_exception_token_with_aud_none_and_without_audience",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    676,
+    676
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidIssuerError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidIssuerError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    675,
+    675
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_issuer#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_raise_exception_invalid_issuer",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    686,
+    686
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidIssuerError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidIssuerError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    685,
+    685
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_raise_exception_invalid_issuer_list#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_raise_exception_invalid_issuer_list",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    721,
+    726
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingRequiredClaimError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    720,
+    720
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_should_raise_error_if_exp_required_but_not_present#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "exp"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_should_raise_error_if_exp_required_but_not_present",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    740,
+    745
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingRequiredClaimError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    739,
+    739
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_should_raise_error_if_iat_required_but_not_present#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "iat"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_should_raise_error_if_iat_required_but_not_present",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    759,
+    764
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingRequiredClaimError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    758,
+    758
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_should_raise_error_if_nbf_required_but_not_present#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "claim",
+     "nbf"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_should_raise_error_if_nbf_required_but_not_present",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    816,
+    816
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    815,
+    815
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_custom_json_encoder#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_custom_json_encoder",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    838,
+    843
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExpiredSignatureError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    837,
+    837
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_verify_exp_option#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_with_verify_exp_option",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    858,
+    861
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ExpiredSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ExpiredSignatureError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    857,
+    857
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_verify_exp_option_and_signature_off#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_with_verify_exp_option_and_signature_off",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    870,
+    870
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    869,
+    869
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_optional_algorithms#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "It is required that you pass in a value for the \"algorithms\" argument when calling decode()."
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_with_optional_algorithms",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    964,
+    970
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    963,
+    963
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_strict_aud_forbids_list_audience#0",
+   "match": "Invalid audience \\(strict\\)",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_strict_aud_forbids_list_audience",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    992,
+    998
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    989,
+    991
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_strict_aud_forbids_list_claim#0",
+   "match": "Invalid claim format in token \\(strict\\)",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_strict_aud_forbids_list_claim",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1010,
+    1016
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidAudienceError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidAudienceError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    1007,
+    1009
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_strict_aud_does_not_match#0",
+   "match": "Audience doesn't match \\(strict\\)",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_strict_aud_does_not_match",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1056,
+    1058
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingRequiredClaimError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    1055,
+    1055
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_missing_sub_but_required_claim#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_missing_sub_but_required_claim",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1068,
+    1068
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidSubjectError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidSubjectError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    1067,
+    1067
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_invalid_int_sub_claim#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_invalid_int_sub_claim",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1089,
+    1089
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidSubjectError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidSubjectError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    1088,
+    1088
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_with_invalid_sub_claim#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid subject"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_with_invalid_sub_claim",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1121,
+    1123
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MissingRequiredClaimError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MissingRequiredClaimError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    1120,
+    1120
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_missing_jti_when_required_claim#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "jti"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_missing_jti_when_required_claim",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1144,
+    1144
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidJTIError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidJTIError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    1143,
+    1143
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_jti_claim_with_invalid_int_value#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_jti_claim_with_invalid_int_value",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1166,
+    1166
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidIssuerError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidIssuerError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    1165,
+    1165
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_validate_iss_with_non_str#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_iss_with_non_str",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1174,
+    1177
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "InvalidIssuerError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidIssuerError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    1173,
+    1173
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_validate_iss_with_non_str_issuer#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_validate_iss_with_non_str_issuer",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1195,
+    1195
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidTokenError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "InvalidTokenError",
+   "file": "tests/test_api_jwt.py",
+   "form": "with",
+   "header_span": [
+    1194,
+    1194
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_api_jwt.py::TestJWT.test_decode_rejects_token_with_unknown_crit_extension#0",
+   "match": "Unsupported critical extension",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_rejects_token_with_unknown_crit_extension",
+   "test_class": "TestJWT"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    181,
+    181
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientConnectionError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientConnectionError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    180,
+    180
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_fetch_data_rejects_redirect_without_contacting_destination#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_fetch_data_rejects_redirect_without_contacting_destination",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    254,
+    254
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    253,
+    253
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_get_signing_keys_raises_if_none_found#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "The JWKS endpoint did not contain any signing keys"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_get_signing_keys_raises_if_none_found",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    342,
+    342
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "DecodeError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "DecodeError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    341,
+    341
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_get_signing_key_from_jwt_rejects_payload_recursion_error#0",
+   "match": "Invalid payload",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert isinstance(exc.value.__cause__, RecursionError)"
+   ],
+   "test": "test_get_signing_key_from_jwt_rejects_payload_recursion_error",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    459,
+    459
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKSetError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKSetError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    458,
+    458
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_cache_put_rejects_a_value_that_is_not_a_jwk_set#0",
+   "match": "Invalid JWK Set value",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_cache_put_rejects_a_value_that_is_not_a_jwk_set",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    476,
+    476
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    475,
+    475
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_get_jwk_set_raises_when_endpoint_does_not_return_an_object#0",
+   "match": "did not return a JSON object",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_jwk_set_raises_when_endpoint_does_not_return_an_object",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    529,
+    530
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    528,
+    528
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_get_jwt_set_failed_refresh_preserves_cached_jwks#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_jwt_set_failed_refresh_preserves_cached_jwks",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    545,
+    546
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientConnectionError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientConnectionError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    544,
+    544
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_failed_request_should_raise_connection_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_failed_request_should_raise_connection_error",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    553,
+    554
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientConnectionError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientConnectionError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    552,
+    552
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_incomplete_read_should_raise_connection_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_incomplete_read_should_raise_connection_error",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    578,
+    581
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    577,
+    577
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_get_jwt_set_no_matching_kid_after_second_attempt#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_jwt_set_no_matching_kid_after_second_attempt",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    599,
+    599
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    598,
+    598
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_unknown_kid_refresh_is_cooled_down#0",
+   "match": "matches",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unknown_kid_refresh_is_cooled_down",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    622,
+    622
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    621,
+    621
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_unknown_kid_refresh_runs_again_after_cooldown#0",
+   "match": "matches",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unknown_kid_refresh_runs_again_after_cooldown",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    625,
+    625
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    624,
+    624
+   ],
+   "included": false,
+   "k": 1,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_unknown_kid_refresh_runs_again_after_cooldown#1",
+   "match": "matches",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unknown_kid_refresh_runs_again_after_cooldown",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    707,
+    707
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    706,
+    706
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_unknown_kid_refresh_ignores_cooldown_when_cache_disabled#0",
+   "match": "matches",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unknown_kid_refresh_ignores_cooldown_when_cache_disabled",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    720,
+    720
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    719,
+    719
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_unknown_kid_refresh_rejects_non_finite_cooldown#0",
+   "match": "Cooldown duration",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_unknown_kid_refresh_rejects_non_finite_cooldown",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    726,
+    727
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    725,
+    725
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_get_jwt_set_invalid_lifespan#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_jwt_set_invalid_lifespan",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    745,
+    745
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    744,
+    744
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_pyjwkclient_rejects_non_http_schemes#0",
+   "match": "Invalid JWKS URI scheme",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pyjwkclient_rejects_non_http_schemes",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": "exc",
+   "body_span": [
+    764,
+    765
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    763,
+    763
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_get_jwt_set_timeout#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Fail to fetch data from the url, err: \"timed out\""
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_get_jwt_set_timeout",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    801,
+    801
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    800,
+    800
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_get_jwt_set_sslcontext_no_ca#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_jwt_set_sslcontext_no_ca",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    809,
+    809
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "PyJWKClientConnectionError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "PyJWKClientConnectionError",
+   "file": "tests/test_jwks_client.py",
+   "form": "with",
+   "header_span": [
+    808,
+    808
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwks_client.py::TestPyJWKClient.test_http_error_is_closed_on_connection_failure#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_http_error_is_closed_on_connection_failure",
+   "test_class": "TestPyJWKClient"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    46,
+    46
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_utils.py",
+   "form": "with",
+   "header_span": [
+    45,
+    45
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_utils.py::test_force_bytes_raises_error_on_invalid_object#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_force_bytes_raises_error_on_invalid_object",
+   "test_class": null
+  }
+ ],
+ "counts": {
+  "blocks": 215,
+  "entry_point_blocks": 82,
+  "included": 79
+ },
+ "test_files": [
+  "tests/test_advisory.py",
+  "tests/test_algorithms.py",
+  "tests/test_api_jwk.py",
+  "tests/test_api_jws.py",
+  "tests/test_api_jwt.py",
+  "tests/test_compressed_jwt.py",
+  "tests/test_exceptions.py",
+  "tests/test_jwks_client.py",
+  "tests/test_jwt.py",
+  "tests/test_utils.py"
+ ],
+ "test_files_sha256": {
+  "tests/test_advisory.py": "91721b6168ce2852be2ef1a6fc09140ecf48221c4d7437e6b29b76002f40cf1f",
+  "tests/test_algorithms.py": "8c9dea6b4ac93e8a6353b1d6906703e212cb3110f9b14c0bcb69c4a4b59cb11a",
+  "tests/test_api_jwk.py": "2d2449d3da91980b6e41da5b0308deb8065ba7322f341eaf2a4b8f8a022f44db",
+  "tests/test_api_jws.py": "e9ac7fc9ffe880368126b85fe18166a3c19f959507c84370404f4dfb304d91bc",
+  "tests/test_api_jwt.py": "07dd363c882e3ce91a8d5fbab5239aa197f611d1a648565f5613c99fe1454ade",
+  "tests/test_compressed_jwt.py": "aa97e1eabecfd5f28cdc82dd7f01c62cbc53c59380c3893e5d51c61b7495916f",
+  "tests/test_exceptions.py": "9a1f053e127878519df7a55d12cd9831ca4770442cd0c38504214e86a2c8f656",
+  "tests/test_jwks_client.py": "f1f5e0076061c3931ecce432f7fa74986bc2febd820c8e1fb6a3035a3703d708",
+  "tests/test_jwt.py": "53a2afb5046c6908bc9edc0a4e97c3895bddd4419b5a54c3b2366763bc5c0cbc",
+  "tests/test_utils.py": "b962398f45934daa15e8620baf56b7daf9683c36202ab8c5daac04bf65df4eed"
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "name": "authlib",
+ "distribution": "Authlib",
+ "version": "1.9.5",
+ "repository": "https://github.com/authlib/authlib",
+ "tag": "v1.9.5",
+ "commit": "42607cbc2135252a641a845e4ed7f94e3a922c47",
+ "package": "authlib",
+ "source_root": ".",
+ "entry_points": [
+  "decode",
+  "deserialize",
+  "deserialize_compact",
+  "deserialize_json",
+  "validate"
+ ],
+ "entry_points_source": "authlib/jose: JsonWebToken.decode, the validate method of the claims it returns, and the deserialize methods of JsonWebSignature. Entry points are names, so the same names elsewhere in the package count too.",
+ "rejection_bases": [
+  "JoseError"
+ ],
+ "rejection_bases_source": "authlib/jose/errors.py: JoseError is the base class of the errors of authlib.jose.",
+ "test_directories": [
+  "tests"
+ ],
+ "test_directories_source": "tox.ini: pytest on tests/core, tests/jose, tests/clients, tests/flask and tests/django, one environment each",
+ "suite_runs": [
+  {
+   "name": "core",
+   "paths": [
+    "tests/core"
+   ]
+  },
+  {
+   "name": "jose",
+   "paths": [
+    "tests/jose"
+   ]
+  },
+  {
+   "name": "clients",
+   "paths": [
+    "tests/clients"
+   ]
+  },
+  {
+   "name": "flask",
+   "paths": [
+    "tests/flask"
+   ]
+  },
+  {
+   "name": "django",
+   "paths": [
+    "tests/django"
+   ]
+  }
+ ],
+ "suite_runs_source": "tox.ini: 1 environment and 1 pytest call for each of tests/core, tests/jose, tests/clients, tests/flask and tests/django",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "authlib",
+  "tests",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3"
+}

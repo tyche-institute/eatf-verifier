@@ -1,0 +1,2320 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "jws.JWS._verify#1",
+    "jws.JWS._verify#2",
+    "jws.JWS._verify#3",
+    "jws.JWS._verify#4",
+    "jws.JWS._verify#5",
+    "jws.JWS.verify#1",
+    "jws.JWS.verify#3",
+    "jws.JWSCore.verify#1"
+   ],
+   "C_class": [
+    "jws.JWS._verify#1",
+    "jws.JWS._verify#2",
+    "jws.JWS._verify#3",
+    "jws.JWS._verify#4",
+    "jws.JWS._verify#5",
+    "jws.JWS.verify#1",
+    "jws.JWS.verify#3",
+    "jws.JWSCore.verify#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWSSignature"
+   ],
+   "key": "jwcrypto/tests.py::TestJWS.test_E#0",
+   "name_tokens": [],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.JWS._verify#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws.JWS._verify#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws.JWS._verify#3",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.JWS._verify#1",
+    "jws.JWS._verify#2",
+    "jws.JWS._verify#3",
+    "jws.JWS._verify#4",
+    "jws.JWS._verify#5",
+    "jws.JWS.verify#1",
+    "jws.JWS.verify#3",
+    "jws.JWSCore.verify#1"
+   ],
+   "C_class": [
+    "jws.JWS._verify#1",
+    "jws.JWS._verify#2",
+    "jws.JWS._verify#3",
+    "jws.JWS._verify#4",
+    "jws.JWS._verify#5",
+    "jws.JWS.verify#1",
+    "jws.JWS.verify#3",
+    "jws.JWSCore.verify#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWSSignature"
+   ],
+   "key": "jwcrypto/tests.py::TestJWS.test_customhdr_jws#0",
+   "name_tokens": [
+    "customhdr",
+    "jws"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.JWS._verify#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws.JWS._verify#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws.JWS._verify#3",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.JWS._deserialize_b64#1",
+    "jws.JWS._deserialize_b64#2",
+    "jws.JWS._merge_check_headers#1",
+    "jws.JWS._merge_check_headers#2",
+    "jws.JWS._merge_check_headers#3",
+    "jws.JWS._merge_check_headers#4",
+    "jws.JWS._merge_check_headers#5",
+    "jws.JWS._merge_check_headers#6",
+    "jws.JWS.deserialize#1",
+    "jws.JWS.deserialize#2"
+   ],
+   "C_class": [
+    "jws.JWS._deserialize_b64#1",
+    "jws.JWS._deserialize_b64#2",
+    "jws.JWS._merge_check_headers#1",
+    "jws.JWS._merge_check_headers#2",
+    "jws.JWS._merge_check_headers#3",
+    "jws.JWS._merge_check_headers#4",
+    "jws.JWS._merge_check_headers#5",
+    "jws.JWS._merge_check_headers#6",
+    "jws.JWS.deserialize#1",
+    "jws.JWS.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWSObject"
+   ],
+   "key": "jwcrypto/tests.py::TestJWS.test_compact_invalid_dots#0",
+   "name_tokens": [
+    "compact",
+    "dot",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.JWS._deserialize_b64#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jws.JWS._deserialize_b64#2",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jws.JWS._merge_check_headers#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.JWS._deserialize_b64#1",
+    "jws.JWS._deserialize_b64#2",
+    "jws.JWS._merge_check_headers#1",
+    "jws.JWS._merge_check_headers#2",
+    "jws.JWS._merge_check_headers#3",
+    "jws.JWS._merge_check_headers#4",
+    "jws.JWS._merge_check_headers#5",
+    "jws.JWS._merge_check_headers#6",
+    "jws.JWS.deserialize#1",
+    "jws.JWS.deserialize#2"
+   ],
+   "C_class": [
+    "jws.JWS._deserialize_b64#1",
+    "jws.JWS._deserialize_b64#2",
+    "jws.JWS._merge_check_headers#1",
+    "jws.JWS._merge_check_headers#2",
+    "jws.JWS._merge_check_headers#3",
+    "jws.JWS._merge_check_headers#4",
+    "jws.JWS._merge_check_headers#5",
+    "jws.JWS._merge_check_headers#6",
+    "jws.JWS.deserialize#1",
+    "jws.JWS.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWSObject"
+   ],
+   "key": "jwcrypto/tests.py::TestJWS.test_compact_invalid_dots#1",
+   "name_tokens": [
+    "compact",
+    "dot",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.JWS._deserialize_b64#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jws.JWS._deserialize_b64#2",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jws.JWS._merge_check_headers#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2",
+    "jws.JWS._verify#6",
+    "jws.JWS._verify#7",
+    "jws.JWS.verify#2",
+    "jwt.JWT.validate#1"
+   ],
+   "C_class": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2",
+    "jws.JWS._verify#6",
+    "jws.JWS._verify#7",
+    "jws.JWS.verify#2",
+    "jwt.JWT.validate#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWKeyNotFound"
+   ],
+   "key": "jwcrypto/tests.py::TestJWS.test_decrypt_keyset#0",
+   "name_tokens": [
+    "decrypt",
+    "keyset"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwe.JWE._decrypt#2",
+     "score": 0.847298,
+     "tokens": [
+      "decrypt"
+     ]
+    },
+    {
+     "check": "jwe.JWE._decrypt#3",
+     "score": 0.847298,
+     "tokens": [
+      "decrypt"
+     ]
+    },
+    {
+     "check": "jwe.JWE.decrypt#2",
+     "score": 0.847298,
+     "tokens": [
+      "decrypt"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2",
+    "jws.JWS._verify#6",
+    "jws.JWS._verify#7",
+    "jws.JWS.verify#2",
+    "jwt.JWT.validate#1"
+   ],
+   "C_class": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2",
+    "jws.JWS._verify#6",
+    "jws.JWS._verify#7",
+    "jws.JWS.verify#2",
+    "jwt.JWT.validate#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWKeyNotFound"
+   ],
+   "key": "jwcrypto/tests.py::TestJWS.test_multiple_signatures_keyset#0",
+   "name_tokens": [
+    "keyset",
+    "multiple",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwe.JWE._decrypt#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._decrypt#3",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE.decrypt#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::TestJWE.test_A5#0",
+   "name_tokens": [
+    "a5"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::TestJWE.test_compact_invalid_dots#0",
+   "name_tokens": [
+    "compact",
+    "dot",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwe.JWE._check_crit#2",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::TestJWE.test_compact_invalid_dots#1",
+   "name_tokens": [
+    "compact",
+    "dot",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwe.JWE._check_crit#2",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::TestJWE.test_customhdr_jwe#0",
+   "name_tokens": [
+    "customhdr",
+    "jwe"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::TestJWE.test_bare_ecdh_with_ek_fails#0",
+   "name_tokens": [
+    "bare",
+    "ecdh",
+    "ek"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 2.302585,
+     "tokens": [
+      "ek"
+     ]
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "jwa._EcdhEs.unwrap#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2",
+    "jws.JWS._verify#6",
+    "jws.JWS._verify#7",
+    "jws.JWS.verify#2",
+    "jwt.JWT.validate#1"
+   ],
+   "C_class": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2",
+    "jws.JWS._verify#6",
+    "jws.JWS._verify#7",
+    "jws.JWS.verify#2",
+    "jwt.JWT.validate#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWKeyNotFound"
+   ],
+   "key": "jwcrypto/tests.py::TestJWE.test_decrypt_keyset#0",
+   "name_tokens": [
+    "decrypt",
+    "keyset"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwe.JWE._decrypt#2",
+     "score": 0.847298,
+     "tokens": [
+      "decrypt"
+     ]
+    },
+    {
+     "check": "jwe.JWE._decrypt#3",
+     "score": 0.847298,
+     "tokens": [
+      "decrypt"
+     ]
+    },
+    {
+     "check": "jwe.JWE.decrypt#2",
+     "score": 0.847298,
+     "tokens": [
+      "decrypt"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2",
+    "jws.JWS._verify#6",
+    "jws.JWS._verify#7",
+    "jws.JWS.verify#2",
+    "jwt.JWT.validate#1"
+   ],
+   "C_class": [
+    "jwe.JWE._decrypt#2",
+    "jwe.JWE._decrypt#3",
+    "jwe.JWE.decrypt#2",
+    "jws.JWS._verify#6",
+    "jws.JWS._verify#7",
+    "jws.JWS.verify#2",
+    "jwt.JWT.validate#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWKeyNotFound"
+   ],
+   "key": "jwcrypto/tests.py::TestJWE.test_multiple_recipients_keyset#0",
+   "name_tokens": [
+    "keyset",
+    "multiple",
+    "recipient"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwe.JWE._decrypt#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._decrypt#3",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE.decrypt#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::TestMMA.test_MMA#0",
+   "name_tokens": [
+    "mma"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::TestMMA.test_MMA#1",
+   "name_tokens": [
+    "mma"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_exp#1"
+   ],
+   "C_class": [
+    "jwt.JWT._check_exp#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "JWTExpired"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_A1#0",
+   "name_tokens": [
+    "a1"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "jwt.JWT._check_exp#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_A2#0",
+   "name_tokens": [
+    "a2"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT.validate#1"
+   ],
+   "C_class": [
+    "jwt.JWT.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "JWTMissingKey"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_decrypt_keyset#0",
+   "name_tokens": [
+    "decrypt",
+    "keyset"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "jwt.JWT.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jwt.JWT.validate#1"
+   ],
+   "C_class": [
+    "jwt.JWT.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "JWTMissingKey"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_decrypt_keyset#1",
+   "name_tokens": [
+    "decrypt",
+    "keyset"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "jwt.JWT.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jwt.JWT.validate#1"
+   ],
+   "C_class": [
+    "jwt.JWT.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "JWTMissingKey"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_decrypt_keyset#2",
+   "name_tokens": [
+    "decrypt",
+    "keyset"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "jwt.JWT.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jwt.JWT.validate#1"
+   ],
+   "C_class": [
+    "jwt.JWT.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "JWTMissingKey"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_decrypt_keyset_dup_kid#0",
+   "name_tokens": [
+    "decrypt",
+    "dup",
+    "keyset",
+    "kid"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "jwt.JWT.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_invalid_claim_type#0",
+   "name_tokens": [
+    "claim",
+    "invalid",
+    "type"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#4",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#5",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_invalid_claim_type#1",
+   "name_tokens": [
+    "claim",
+    "invalid",
+    "type"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#4",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#5",
+     "score": 0.0,
+     "tokens": [
+      "claim",
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_typ#0",
+   "name_tokens": [
+    "claim",
+    "typ"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#5",
+     "score": 1.609438,
+     "tokens": [
+      "claim",
+      "typ"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#4",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": "jwt.JWT._check_provided_claims#5",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_typ#1",
+   "name_tokens": [
+    "claim",
+    "typ"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#5",
+     "score": 1.609438,
+     "tokens": [
+      "claim",
+      "typ"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#4",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": "jwt.JWT._check_provided_claims#5",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_typ#2",
+   "name_tokens": [
+    "claim",
+    "typ"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#5",
+     "score": 1.609438,
+     "tokens": [
+      "claim",
+      "typ"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#4",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": "jwt.JWT._check_provided_claims#5",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_typ#3",
+   "name_tokens": [
+    "claim",
+    "typ"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#5",
+     "score": 1.609438,
+     "tokens": [
+      "claim",
+      "typ"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#4",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": "jwt.JWT._check_provided_claims#5",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_Issue_277#0",
+   "name_tokens": [
+    "277",
+    "issue"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#4",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_Issue_277#1",
+   "name_tokens": [
+    "277",
+    "issue"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#4",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_Issue_277#2",
+   "name_tokens": [
+    "277",
+    "issue"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#4",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_array_or_string_claim#1",
+    "jwt.JWT._check_array_or_string_claim#2",
+    "jwt.JWT._check_integer_claim#1",
+    "jwt.JWT._check_provided_claims#1",
+    "jwt.JWT._check_string_claim#1"
+   ],
+   "C_class": [
+    "jwt.JWT._check_array_or_string_claim#1",
+    "jwt.JWT._check_array_or_string_claim#2",
+    "jwt.JWT._check_integer_claim#1",
+    "jwt.JWT._check_provided_claims#1",
+    "jwt.JWT._check_string_claim#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimFormat"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claim_aud#0",
+   "name_tokens": [
+    "aud",
+    "claim"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_array_or_string_claim#1",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_array_or_string_claim#2",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_integer_claim#1",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#2"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "JWTMissingClaim"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#0",
+   "name_tokens": [
+    "claim",
+    "scope"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "jwt.JWT._check_provided_claims#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#1",
+   "name_tokens": [
+    "claim",
+    "scope"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#6",
+     "score": 0.916291,
+     "tokens": [
+      "claim",
+      "scope"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#7",
+     "score": 0.916291,
+     "tokens": [
+      "claim",
+      "scope"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#2",
+   "name_tokens": [
+    "claim",
+    "scope"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#6",
+     "score": 0.916291,
+     "tokens": [
+      "claim",
+      "scope"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#7",
+     "score": 0.916291,
+     "tokens": [
+      "claim",
+      "scope"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#3",
+   "name_tokens": [
+    "claim",
+    "scope"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#6",
+     "score": 0.916291,
+     "tokens": [
+      "claim",
+      "scope"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#7",
+     "score": 0.916291,
+     "tokens": [
+      "claim",
+      "scope"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_class": [
+    "jwt.JWT._check_provided_claims#3",
+    "jwt.JWT._check_provided_claims#4",
+    "jwt.JWT._check_provided_claims#5",
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimValue"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#4",
+   "name_tokens": [
+    "claim",
+    "scope"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_provided_claims#6",
+     "score": 0.916291,
+     "tokens": [
+      "claim",
+      "scope"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#7",
+     "score": 0.916291,
+     "tokens": [
+      "claim",
+      "scope"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_provided_claims#3",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt.JWT._check_provided_claims#6",
+    "jwt.JWT._check_provided_claims#7"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_array_or_string_claim#1",
+    "jwt.JWT._check_array_or_string_claim#2",
+    "jwt.JWT._check_integer_claim#1",
+    "jwt.JWT._check_provided_claims#1",
+    "jwt.JWT._check_string_claim#1"
+   ],
+   "C_class": [
+    "jwt.JWT._check_array_or_string_claim#1",
+    "jwt.JWT._check_array_or_string_claim#2",
+    "jwt.JWT._check_integer_claim#1",
+    "jwt.JWT._check_provided_claims#1",
+    "jwt.JWT._check_string_claim#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimFormat"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#5",
+   "name_tokens": [
+    "claim",
+    "scope"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_array_or_string_claim#1",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_array_or_string_claim#2",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_integer_claim#1",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt.JWT._check_array_or_string_claim#1",
+    "jwt.JWT._check_array_or_string_claim#2",
+    "jwt.JWT._check_integer_claim#1",
+    "jwt.JWT._check_provided_claims#1",
+    "jwt.JWT._check_string_claim#1"
+   ],
+   "C_class": [
+    "jwt.JWT._check_array_or_string_claim#1",
+    "jwt.JWT._check_array_or_string_claim#2",
+    "jwt.JWT._check_integer_claim#1",
+    "jwt.JWT._check_provided_claims#1",
+    "jwt.JWT._check_string_claim#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTInvalidClaimFormat"
+   ],
+   "key": "jwcrypto/tests.py::TestJWT.test_claims_scope#6",
+   "name_tokens": [
+    "claim",
+    "scope"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwt.JWT._check_array_or_string_claim#1",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_array_or_string_claim#2",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jwt.JWT._check_integer_claim#1",
+     "score": 0.0,
+     "tokens": [
+      "claim"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#0",
+   "name_tokens": [
+    "decompression",
+    "jwe",
+    "max"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwe.JWE._decrypt#4",
+     "score": 2.302585,
+     "tokens": [
+      "max"
+     ]
+    },
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "jwe.JWE._decrypt#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#1",
+   "name_tokens": [
+    "decompression",
+    "jwe",
+    "max"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwe.JWE._decrypt#4",
+     "score": 2.302585,
+     "tokens": [
+      "max"
+     ]
+    },
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "jwe.JWE._decrypt#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_class": [
+    "jwa._EcdhEs.unwrap#1",
+    "jwe.JWE._check_crit#1",
+    "jwe.JWE._check_crit#2",
+    "jwe.JWE._decrypt#1",
+    "jwe.JWE._decrypt#4",
+    "jwe.JWE._decrypt#5",
+    "jwe.JWE._merge_headers#1",
+    "jwe.JWE.decrypt#3",
+    "jwe.JWE.deserialize#1",
+    "jwe.JWE.deserialize#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidJWEData"
+   ],
+   "key": "jwcrypto/tests.py::ConformanceTests.test_jwe_decompression_max#2",
+   "name_tokens": [
+    "decompression",
+    "jwe",
+    "max"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwe.JWE._decrypt#4",
+     "score": 2.302585,
+     "tokens": [
+      "max"
+     ]
+    },
+    {
+     "check": "jwa._EcdhEs.unwrap#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwe.JWE._check_crit#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "jwe.JWE._decrypt#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws.JWS._verify#1",
+    "jws.JWS._verify#2",
+    "jws.JWS._verify#3",
+    "jws.JWS._verify#4",
+    "jws.JWS._verify#5",
+    "jws.JWS.verify#1",
+    "jws.JWS.verify#3",
+    "jws.JWSCore.verify#1"
+   ],
+   "C_class": [
+    "jws.JWS._verify#1",
+    "jws.JWS._verify#2",
+    "jws.JWS._verify#3",
+    "jws.JWS._verify#4",
+    "jws.JWS._verify#5",
+    "jws.JWS.verify#1",
+    "jws.JWS.verify#3",
+    "jws.JWSCore.verify#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidJWSSignature"
+   ],
+   "key": "jwcrypto/tests_mldsa.py::TestMLDSA.test_mldsa_tampered_signature#0",
+   "name_tokens": [
+    "mldsa",
+    "signature",
+    "tampered"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jws.JWS.verify#1",
+     "score": 1.386294,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.JWS.verify#3",
+     "score": 1.386294,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.JWS._verify#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jws.JWS.verify#1",
+    "jws.JWS.verify#3"
+   ],
+   "tier": null
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "class": 6,
+  "name": 8,
+  "none: no name token matches": 21,
+  "none: tie": 7
+ },
+ "rule_version": "reach-target-rule/2"
+}

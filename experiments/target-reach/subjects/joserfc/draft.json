@@ -1,0 +1,47 @@
+{
+ "name": "joserfc",
+ "distribution": "joserfc",
+ "version": "1.8.0",
+ "repository": "https://github.com/authlib/joserfc",
+ "tag": "1.8.0",
+ "commit": "f345ff71cd6c36452a4e11e47b805ad450a95dd8",
+ "package": "joserfc",
+ "source_root": "src",
+ "entry_points": [
+  "decode",
+  "decrypt_compact",
+  "decrypt_json",
+  "deserialize_compact",
+  "deserialize_json",
+  "validate",
+  "validate_compact"
+ ],
+ "entry_points_source": "docs/guide/jwt.rst, jws.rst and jwe.rst show jwt.decode, the validate method of a claims registry, jws.deserialize_compact, jws.deserialize_json, jwe.decrypt_compact and jwe.decrypt_json; docs/api/jws.rst (automodule of joserfc.jws) also documents jws.validate_compact, 'Validate the JWS Compact Serialization with the given key'. Entry points are names, so the same names elsewhere in the package count too.",
+ "rejection_bases": [
+  "JoseError"
+ ],
+ "rejection_bases_source": "docs/api/errors.rst: 'All errors are based on joserfc.errors.JoseError.'",
+ "test_directories": [
+  "tests"
+ ],
+ "test_directories_source": "pyproject.toml, [tool.pytest.ini_options]: testpaths = [\"tests\"]",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "suite_runs_source": "pyproject.toml, [tool.tox.env_run_base]: pytest, with testpaths = [\"tests\"]",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "src",
+  "tests",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3"
+}

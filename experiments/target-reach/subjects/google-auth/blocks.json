@@ -1,0 +1,840 @@
+{
+ "blocks": [
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    155,
+    155
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    154,
+    154
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_header_object#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert excinfo.match('Header segment should be a JSON object: ' + str(b'M7'))"
+   ],
+   "test": "test_decode_header_object",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    165,
+    165
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    164,
+    164
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_payload_object#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert excinfo.match('Payload segment should be a JSON object: ' + str(b'ImlhdGV4cCI'))"
+   ],
+   "test": "test_decode_payload_object",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    218,
+    218
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    217,
+    217
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Wrong number of segments"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_bad_token_wrong_number_of_segments",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    224,
+    224
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "ValueError",
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin",
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "(ValueError, TypeError)",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    223,
+    223
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_bad_token_not_base64#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Incorrect padding|more than a multiple of 4"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_bad_token_not_base64",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    231,
+    231
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    230,
+    230
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_bad_token_not_json#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Can\\'t parse segment"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_bad_token_not_json",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    238,
+    238
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    237,
+    237
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Token does not contain required claim"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_bad_token_no_iat_or_exp",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    251,
+    251
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    250,
+    250
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_bad_token_too_early#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Token used too early"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_bad_token_too_early",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    264,
+    264
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    263,
+    263
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_bad_token_expired#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Token expired"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_bad_token_expired",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    302,
+    302
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    301,
+    301
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_bad_token_wrong_audience#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Token has wrong audience"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_bad_token_wrong_audience",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    310,
+    310
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    309,
+    309
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Token has wrong audience"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_bad_token_wrong_audience_list",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    316,
+    316
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    315,
+    315
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_wrong_cert#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Could not verify token signature"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_wrong_cert",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    323,
+    323
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    322,
+    322
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_multicert_bad_cert#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Could not verify token signature"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_multicert_bad_cert",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    330,
+    330
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    329,
+    329
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_no_cert#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Certificate for key id 1 not found"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_no_cert",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    348,
+    348
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    347,
+    347
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_unknown_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "fakealg"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_unknown_alg",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    360,
+    360
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    359,
+    359
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_missing_crytography_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "cryptography"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_missing_crytography_alg",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    381,
+    381
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "exceptions.InvalidValue",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    380,
+    380
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_mismatched_cert_key_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert excinfo.match('Certificate key type does not match signature algorithm {}'.format(expected_alg))"
+   ],
+   "test": "test_decode_mismatched_cert_key_type",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    391,
+    391
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    390,
+    390
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_missing_certs#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_missing_certs",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    397,
+    397
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    396,
+    396
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_non_iterable_certs#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decode_non_iterable_certs",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    407,
+    407
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "InvalidValue"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "exceptions.InvalidValue",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    406,
+    406
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_unhashable_alg#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Unsupported signature algorithm"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_unhashable_alg",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "excinfo",
+   "body_span": [
+    418,
+    418
+   ],
+   "entry_calls": [
+    "decode"
+   ],
+   "exclusion": [],
+   "expected": [
+    "MalformedError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "exceptions.MalformedError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    417,
+    417
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_jwt.py::test_decode_unhashable_kid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "match",
+     "Certificate for key id .* not found"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decode_unhashable_kid",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    801,
+    801
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects RefreshError"
+   ],
+   "expected": [
+    "RefreshError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "exceptions.RefreshError",
+   "file": "tests/test_jwt.py",
+   "form": "with",
+   "header_span": [
+    800,
+    800
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_jwt.py::TestOnDemandCredentials.test_refresh#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_refresh",
+   "test_class": "TestOnDemandCredentials"
+  }
+ ],
+ "counts": {
+  "blocks": 21,
+  "entry_point_blocks": 20,
+  "included": 17
+ },
+ "test_files": [
+  "tests/test_jwt.py"
+ ],
+ "test_files_sha256": {
+  "tests/test_jwt.py": "128172a22842ba7ceef19cdf4d64414d848e6e3210162b7c04f8bf7ff18c8b7e"
+ }
+}

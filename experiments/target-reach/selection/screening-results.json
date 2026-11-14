@@ -1,0 +1,1202 @@
+[
+ {
+  "rank": 6,
+  "project": "urllib3",
+  "version_examined": "2.8.0",
+  "repository": "https://github.com/urllib3/urllib3",
+  "tag_or_commit": "2.8.0 (b1d30ab61fe0db8f11092805e8c5ac43e091064a)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "src/urllib3/util/ssl_match_hostname.py: match_hostname(cert, hostname) checks the peer certificate's subjectAltName/commonName against the hostname (RFC 6125) and returns None on success or raises CertificateError (a ValueError subclass). It is called from connection._match_hostname during HTTPS connect. util/ssl_.py assert_fingerprint(cert, fingerprint) raises SSLError when the pin does not match.",
+  "entry_points": [
+   "urllib3.util.ssl_match_hostname.match_hostname",
+   "urllib3.connection._match_hostname",
+   "(helper) _dnsname_match"
+  ],
+  "verification_path_files": [
+   "src/urllib3/util/ssl_match_hostname.py",
+   "src/urllib3/connection.py (_match_hostname only)"
+  ],
+  "rejection_classes": [
+   "CertificateError",
+   "ValueError"
+  ],
+  "n_checks": 5,
+  "n_checks_sharing_most_common_class": 4,
+  "n_negative_blocks": 6,
+  "n_blocks_class_only": 2,
+  "n_blocks_asserting_message": 4,
+  "test_framework": "pytest",
+  "tests_offline": "yes for the counted blocks: test/test_connection.py passes plain cert dicts and says it makes no network requests. Not executed.",
+  "excluded_by": "I4",
+  "how_counted": "checks: screening-scripts/scripts-0/checks.py (AST; one check per distinct function, raised class and message template, with f-string values turned into {}) run on ssl_match_hostname.py. Result: _dnsname_match 1 CertificateError; match_hostname 3 CertificateError and 1 ValueError ('empty or no certificate'). Total 5, 4 of them CertificateError. _match_hostname adds no check: it only logs and re-raises with a bare raise. Blocks: screening-scripts/scripts-0/negblocks.py (AST; matches pytest.raises/assertRaises/assertRaisesRegex blocks whose body or callable arguments call a name fully matching '_?match_hostname|_dnsname_match|_ipaddress_match') run on test/. It found 6 blocks, all in test/test_connection.py at lines 42, 48, 108, 112, 118 and 188. Lines 42 and 48 expect ValueError and check the class only. Lines 108, 112 and 118 use match=. Line 188 asserts on str(e.value) after the block. The try/except tests at lines 56 and 72 are not blocks of the defined forms and were not counted.",
+  "notes": "I1 holds and I2 holds. I3 holds exactly at the threshold of 5. I4 fails: 6 blocks, fewer than 10. The other family, assert_fingerprint (util/ssl_.py), also has 5 SSLError checks by the same script logic (hand-read), but 3 of them concern the locally configured fingerprint rather than the received certificate. Its tests have 2 blocks (test/test_ssl.py lines 254 and 272, class only). The two families together give 8 blocks, still under 10. The dummyserver tests in test/with_dummyserver/test_https.py reach hostname verification only through request()/urlopen, raising MaxRetryError/SSLError, and were not counted as entry-point calls. Certificate chain validation itself is done by the ssl module (C), not by urllib3."
+ },
+ {
+  "rank": 9,
+  "project": "cryptography",
+  "version_examined": "50.0.2",
+  "repository": "https://github.com/pyca/cryptography",
+  "tag_or_commit": "50.0.2 (4dda5c7fe4ae71b8925f2551910a0ef959df9c7a)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "src/cryptography/fernet.py: Fernet.decrypt / decrypt_at_time / extract_timestamp and MultiFernet.decrypt take a token from another party, check the version byte, length, TTL and clock skew, HMAC and padding, and raise InvalidToken. hazmat/primitives/twofactor/hotp.py and totp.py HOTP.verify/TOTP.verify raise InvalidToken. X.509 path validation, signature verification, AEAD tag checks and HMAC.verify are in Rust (cryptography.hazmat.bindings._rust), not Python.",
+  "excluded_by": "I3",
+  "entry_points": [
+   "Fernet.decrypt",
+   "Fernet.decrypt_at_time",
+   "Fernet.extract_timestamp",
+   "MultiFernet.decrypt",
+   "MultiFernet.decrypt_at_time",
+   "MultiFernet.rotate"
+  ],
+  "verification_path_files": [
+   "src/cryptography/fernet.py",
+   "src/cryptography/hazmat/primitives/ciphers/base.py",
+   "src/cryptography/hazmat/primitives/padding.py (unpadder is Rust)",
+   "src/cryptography/hazmat/primitives/hmac.py (HMAC is Rust)"
+  ],
+  "rejection_classes": [
+   "cryptography.fernet.InvalidToken"
+  ],
+  "n_checks": 4,
+  "n_checks_sharing_most_common_class": 4,
+  "how_counted": "screening-scripts/scripts-1/checks.py (ast) groups raise statements by (enclosing function, exception class, message template). fernet.py InvalidToken groups: _get_unverified_token_data (3 raises, 1 check), _verify_signature (1), _decrypt_data (4 raises, 1 check), plus 1 in each MultiFernet method. Most a single call can run: MultiFernet.decrypt reaches 4 InvalidToken checks (_get_unverified_token_data, _verify_signature, _decrypt_data, MultiFernet.decrypt); Fernet.decrypt reaches 3. Under the literal rule, adding non-rejection misuse raises gives 5-6: TypeError 'token must be bytes or str', ValueError for a None ttl in decrypt_at_time, TypeError in Cipher.__init__. Those signal caller misuse, not rejection of the token, so they were not counted. HOTP.verify plus TOTP.verify = 2 checks. I4 not needed, but screening-scripts/scripts-1/negblocks.py (pytest.raises/assertRaises blocks expecting InvalidToken whose body references decrypt|decrypt_at_time|extract_timestamp|rotate) found 20 blocks in tests/test_fernet.py, all class-only, and 2 class-only blocks for the OTP verify functions.",
+  "n_negative_blocks": 20,
+  "n_blocks_class_only": 20,
+  "n_blocks_asserting_message": 0,
+  "test_framework": "pytest",
+  "tests_offline": "not checked in detail; the Fernet tests use local JSON vectors",
+  "notes": "Fails I3: at most 4 rejection-class checks in the Python Fernet path. The substantial verifiers (x509 verification, signatures, AEAD) are Rust. Borderline: whether TypeError/ValueError input-type misuse counts as a rejection class decides 4 vs 5-6."
+ },
+ {
+  "rank": 36,
+  "project": "pyjwt",
+  "repository": "https://github.com/jpadilla/pyjwt",
+  "version_examined": "2.15.1",
+  "tag_or_commit": "2.15.1",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "jwt/api_jws.py PyJWS._verify_signature raises InvalidSignatureError('Signature verification failed') when alg_obj.verify() returns False; jwt/api_jwt.py PyJWT._validate_exp/_validate_aud/_validate_iss etc. raise ExpiredSignatureError, InvalidAudienceError, InvalidIssuerError on the decoded token's claims. Pure Python.",
+  "excluded_by": "",
+  "entry_points": [
+   "jwt.decode / PyJWT.decode",
+   "PyJWT.decode_complete",
+   "PyJWS.decode / PyJWS.decode_complete",
+   "PyJWS._load",
+   "PyJWS._verify_signature",
+   "PyJWS._validate_kid",
+   "PyJWS._validate_crit",
+   "PyJWT._decode_payload",
+   "PyJWT._validate_claims",
+   "PyJWT._validate_required_claims / _validate_iat / _validate_nbf / _validate_exp / _validate_aud / _validate_iss / _validate_sub / _validate_jti"
+  ],
+  "verification_path_files": [
+   "jwt/api_jwt.py",
+   "jwt/api_jws.py",
+   "jwt/exceptions.py",
+   "jwt/algorithms.py (verify returns bool; prepare_key/check_key_length called)",
+   "jwt/utils.py"
+  ],
+  "rejection_classes": [
+   "InvalidTokenError (base)",
+   "DecodeError",
+   "InvalidSignatureError",
+   "ExpiredSignatureError",
+   "InvalidAudienceError",
+   "InvalidIssuerError",
+   "InvalidIssuedAtError",
+   "ImmatureSignatureError",
+   "InvalidAlgorithmError",
+   "MissingRequiredClaimError",
+   "InvalidSubjectError",
+   "InvalidJTIError",
+   "InvalidKeyError (key-side, PyJWTError not InvalidTokenError)"
+  ],
+  "n_checks": 45,
+  "n_checks_sharing_most_common_class": 13,
+  "n_negative_blocks": 72,
+  "n_blocks_class_only": 27,
+  "n_blocks_asserting_message": 45,
+  "test_framework": "pytest",
+  "tests_offline": "Yes, likely: tests use local key files in tests/keys and unittest.mock; no network in test_api_jwt.py/test_api_jws.py; asymmetric-algorithm tests need the 'cryptography' package (pure wheel, skipped via crypto_required marker if absent). Not run.",
+  "how_counted": "I3: screening-scripts/scripts-2/raises.py (ast walk over jwt/api_jwt.py, jwt/api_jws.py, jwt/utils.py) lists every raise as unique (file, enclosing function, exception class, message template; f-strings normalized to {}). 57 total; kept only functions on the decode path (PyJWS.decode_complete 4, _decode_base64url_segment 1, _load 5, _verify_signature 6, _validate_kid 1, _validate_crit 4; PyJWT._decode_payload 2, _validate_claims 1, _validate_required_claims 1, _validate_sub 2, _validate_jti 1, _validate_iat 2, _validate_nbf 2, _validate_exp 2, _validate_aud 7, _validate_iss 4) = 45; excluded encode/register/unregister/utils helpers and the 2 NotImplementedError raises in get_algorithm_by_name (caught and re-raised as InvalidAlgorithmError). Most common class DecodeError = 13 (9 in api_jws, 4 in api_jwt). Raises inside algorithms.py (prepare_key InvalidKeyError etc.) not counted. I4: screening-scripts/scripts-2/negblocks.py over tests/ matched with-pytest.raises / pytest.raises(E, callable) / assertRaises(Regex) blocks whose body calls one of decode, decode_complete, _validate_*, _verify_signature, _load, _decode_payload and whose class is a PyJWT rejection class: 80 blocks; minus 8 InvalidKeyError blocks (key-strength/empty-key errors, not token rejection) = 72 (test_api_jws.py 30, test_api_jwt.py 42). Each block was manually eyeballed (first 3 lines printed) and all call jws.decode/jwt.decode or jwt._validate_iss. Message-asserting = match= kwarg (19) or 'as var' with var referenced after the block (26; this heuristic also counts assertions on exc.value.claim, not only str(exc)); class-only = 27.",
+  "notes": "Other verification families not counted: PyJWK/PyJWKSet construction (api_jwk.py, raises PyJWKError/InvalidKeyError; tests/test_api_jwk.py has 16 raises blocks), PyJWKClient (jwks_client.py, network fetch, mocked in tests). Algorithm.verify methods return bool. Including the 8 InvalidKeyError decode blocks gives 80 blocks (49 with message, 31 class-only)."
+ },
+ {
+  "rank": 77,
+  "project": "google-auth",
+  "repository": "https://github.com/googleapis/google-cloud-python (packages/google-auth)",
+  "tag_or_commit": "google-auth-v2.62.2 (50b1eb269f110a4b7ab09ffe5ae59c0151cd63c2)",
+  "version_examined": "2.62.2",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "google/auth/jwt.py decode(token, certs, verify=True, audience) checks the signature algorithm, the kid-to-cert lookup, the signature (crypt.verify_signature), iat/exp and aud, and raises exceptions.InvalidValue / exceptions.MalformedError (both subclass ValueError). It does not return False.",
+  "excluded_by": "",
+  "entry_points": [
+   "google.auth.jwt.decode",
+   "google.auth.jwt._unverified_decode",
+   "google.auth.jwt._verify_iat_and_exp",
+   "google.auth.jwt._decode_jwt_segment"
+  ],
+  "verification_path_files": [
+   "packages/google-auth/google/auth/jwt.py",
+   "packages/google-auth/google/auth/_helpers.py",
+   "packages/google-auth/google/auth/crypt/__init__.py",
+   "packages/google-auth/google/auth/exceptions.py"
+  ],
+  "rejection_classes": [
+   "google.auth.exceptions.InvalidValue",
+   "google.auth.exceptions.MalformedError",
+   "ValueError (base class asserted by most tests)"
+  ],
+  "n_checks": 14,
+  "n_checks_sharing_most_common_class": 7,
+  "n_negative_blocks": 18,
+  "n_blocks_class_only": 0,
+  "n_blocks_asserting_message": 18,
+  "test_framework": "pytest",
+  "tests_offline": "yes, it looks that way: tests/test_jwt.py signs and verifies with local key and cert files in tests/data. No network calls in the decode tests. Needs the cryptography/rsa dependencies (wheels are available, no C toolchain). Not run.",
+  "how_counted": "Checks: screening-scripts/scripts-3/raises.py (AST) lists every raise per function and takes distinct (file, function, class, message template) tuples. It ran over jwt.py:{decode,_unverified_decode,_decode_jwt_segment,_verify_iat_and_exp}, _helpers.py:{padded_urlsafe_b64decode,to_bytes} and crypt/__init__.py:verify_signature. Result: 14 checks, bare re-raise excluded. By class: InvalidValue 7 (6 in jwt.py plus to_bytes); MalformedError 6 explicit plus 1 'Can't parse segment' raised through a variable (new_exc), so 7. The two classes tie at 7. padded_urlsafe_b64decode and crypt.verify_signature have no raise (verify_signature returns a bool that decode turns into a raise). Negative tests: screening-scripts/scripts-3/negtests.py (AST) finds pytest.raises/assertRaises/assertRaisesRegex with-blocks and call forms, keeps those whose body references an entry point, and treats match=, assertRaisesRegex or an assert on the excinfo variable after the block as asserting the message. On tests/test_jwt.py with entry point 'decode': 21 blocks, 20 selected. 2 pytest.raises(TypeError) blocks were dropped (lines 390 and 396: missing or non-iterable certs, which is caller misuse, not artifact rejection), leaving 18. All 18 use 'assert excinfo.match(...)' after the block.",
+  "notes": "Second family, not counted above: google/oauth2/id_token.py verify_token/verify_oauth2_token/verify_firebase_token. It wraps jwt.decode and adds issuer/aud/sub checks (GoogleAuthError, InvalidValue; 5 raises). It has 7 negative blocks in tests/oauth2/test_id_token.py (6 assert the message, 1 class only), but those tests mock verify_token and jwt.decode. An async twin (_jwt_async / aio) was not checked. Version 2.62.2 is released from the google-cloud-python monorepo; packages/google-auth was sparse-cloned at the release tag."
+ },
+ {
+  "rank": 94,
+  "project": "truststore",
+  "repository": "https://github.com/sethmlarson/truststore",
+  "version_examined": "0.10.5",
+  "tag_or_commit": "v0.10.5",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "src/truststore/_api.py _verify_peercerts(sock_or_sslobj, server_hostname) takes the peer's certificate chain and calls the platform _verify_peercerts_impl. On macOS (_macos.py, ctypes into Security.framework) and Windows (_windows.py, ctypes into CryptoAPI) the Python code raises ssl.SSLCertVerificationError when the OS reports the chain untrusted. On Linux _openssl._verify_peercerts_impl does nothing: OpenSSL in C does the verification.",
+  "excluded_by": "I3",
+  "entry_points": [
+   "truststore._api._verify_peercerts",
+   "_macos._verify_peercerts_impl",
+   "_windows._verify_peercerts_impl"
+  ],
+  "verification_path_files": [
+   "src/truststore/_api.py",
+   "src/truststore/_macos.py",
+   "src/truststore/_windows.py",
+   "src/truststore/_openssl.py"
+  ],
+  "rejection_classes": [
+   "ssl.SSLCertVerificationError",
+   "ssl.SSLError"
+  ],
+  "n_checks": 4,
+  "n_checks_sharing_most_common_class": 2,
+  "how_counted": "Ran screening-scripts/scripts-4/raises.py (AST; groups Raise nodes by enclosing function, exception expression and first-argument message template) over _api.py with _macos.py, then with _windows.py. macOS path, rejection-class checks only: _handle_osstatus SSLError(message) L273, _verify_peercerts_impl_macos_10_13 'raise err' (SSLCertVerificationError) L510, _verify_peercerts_impl_macos_10_14 SSLError('Unknown result...') L528 and 'raise err' (SSLCertVerificationError) L568, so 4 checks, 2 of them SSLCertVerificationError. Any one call runs either the 10_13 function or the 10_14 function, never both. Windows path: SSLCertVerificationError('Peer sent no certificates') L333 and 'raise err' L499, so 2 checks. Linux: 0. Left out as non-rejection: ValueError('check_hostname requires server_hostname') for caller misuse, OSError, MemoryError, NotImplementedError and bare re-raises. Counting every raise reachable on macOS, whatever its class, gives 9.",
+  "test_framework": "pytest",
+  "tests_offline": "not checked in detail; tests/test_api.py and test_threading.py appear to connect to real TLS hosts (badssl-style), so they look network-dependent",
+  "notes": "Trust decisions are made by OS APIs (Security.framework, CryptoAPI) or by OpenSSL in C. Python only turns the OS result into an exception, so the Python checks are few. I4 not evaluated. A grep of tests found 7 pytest.raises blocks with ssl.SSLCertVerificationError/SSLError across test_api.py, test_sslcontext.py and test_threading.py, plus some for urllib3/requests SSLError."
+ },
+ {
+  "rank": 123,
+  "project": "requests-oauthlib",
+  "version_examined": "2.0.0",
+  "repository": "https://github.com/requests/requests-oauthlib",
+  "tag_or_commit": "v2.0.0",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Read requests_oauthlib/oauth1_session.py and oauth2_session.py (grep for raise). The package is an OAuth client that builds and signs requests. Checking token responses and redirect URIs (state, error responses, token parsing) is handed off to the separate oauthlib package (self._client.parse_request_body_response / parse_request_uri_response). Its own raises cover transport or argument problems (InsecureTransportError, ValueError for a bad method kwarg, TokenRequestDenied on HTTP status >= 400, TokenMissing when the key is absent after urldecode). None of them verifies authenticity, validity or protocol rules.",
+  "excluded_by": "I2",
+  "notes": "Cloned to clones/requests-oauthlib. The verification logic is in oauthlib (a separate project), not in this package."
+ },
+ {
+  "rank": 131,
+  "project": "oauthlib",
+  "repository": "https://github.com/oauthlib/oauthlib",
+  "tag_or_commit": "v4.0.1",
+  "version_examined": "4.0.1",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py AuthorizationCodeGrant.validate_token_request(request) takes a received OAuth2 token request and returns None or raises OAuth2Error subclasses (InvalidRequestError, InvalidGrantError, InvalidClientError, UnsupportedGrantTypeError, MismatchingRedirectURIError, MissingCodeVerifierError, ...). It checks the grant type, client authentication, the authorization code, PKCE verifier and redirect_uri: protocol-rule checks, not parsing.",
+  "excluded_by": "",
+  "entry_points": [
+   "AuthorizationCodeGrant.validate_token_request",
+   "GrantTypeBase.validate_grant_type",
+   "GrantTypeBase.validate_client_confidential",
+   "GrantTypeBase.validate_client_public",
+   "AuthorizationCodeGrant.validate_code_challenge"
+  ],
+  "verification_path_files": [
+   "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py",
+   "oauthlib/oauth2/rfc6749/grant_types/base.py",
+   "oauthlib/oauth2/rfc6749/errors.py"
+  ],
+  "rejection_classes": [
+   "oauthlib.oauth2.rfc6749.errors.OAuth2Error subclasses: InvalidRequestError, InvalidGrantError, InvalidClientError, UnsupportedGrantTypeError, UnauthorizedClientError, MismatchingRedirectURIError, MissingRedirectURIError, MissingCodeVerifierError, ServerError"
+  ],
+  "n_checks": 16,
+  "n_checks_sharing_most_common_class": 3,
+  "n_negative_blocks": 17,
+  "n_blocks_class_only": 17,
+  "n_blocks_asserting_message": 0,
+  "test_framework": "unittest (run with pytest), unittest.mock",
+  "tests_offline": "Likely yes: pure Python with mocked RequestValidator, no network or C toolchain seen in the grant-type tests. Optional extras (cryptography, PyJWT, blinker) are needed by other test modules. Not run.",
+  "how_counted": "I3: screening-scripts/scripts-6/checks.py (AST only) with entry validate_token_request over authorization_code.py, grant_types/base.py, errors.py, rfc6749/utils.py and common.py. Calls are resolved by simple name; it lists distinct (function, exception class, message template) raise statements in the reachable functions. OAuth2 errors take no message string, so the template is the set of keyword names, e.g. kw:request. Result: 16 checks in 6 functions. 13 raise OAuth2Error subclasses and 3 raise NotImplementedError (a misconfigured validator, not a rejection). Most common class: errors.ServerError with 3 checks, tied with NotImplementedError at 3. I4: screening-scripts/scripts-6/negblocks.py with entry validate_token_request and every exception class defined in oauth2 errors.py, openid exceptions.py and oauth1 errors.py, over tests/oauth2/rfc6749/grant_types/test_authorization_code.py. Result: 17 blocks, all of the form self.assertRaises(E, self.auth.validate_token_request, ...). None asserts the message, so all 17 are class-only.",
+  "notes": "I3 for validate_authorization_request on the same grant: 12 checks, each with a distinct OAuth2Error subclass. Run over all test files, negblocks.py finds 28 blocks for validate_token_request (authorization_code 17, refresh_token 7, resource_owner_password 4) and 73 for validate_token_request plus validate_authorization_request (2 of them assertRaisesRegex). Other verification families not counted: client-side oauth2 parameters.parse_token_response/validate_token_parameters (13 raises in parameters.py; MismatchingStateError, MissingTokenError, ...) and oauth1 endpoints. oauth1 endpoint validate_request and oauth2 ResourceEndpoint.verify_request return (bool, request) tuples, so they do not qualify. The public create_token_response catches the errors and returns an HTTP response; the raising API is validate_*_request."
+ },
+ {
+  "rank": 154,
+  "project": "tiktoken",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "BPE tokenizer for language models (Rust core plus Python wrapper); it does not verify any artifact received from another party.",
+  "excluded_by": "I2",
+  "notes": "Obviously unrelated (LLM tokenizer). Not cloned."
+ },
+ {
+  "rank": 156,
+  "project": "tokenizers",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Hugging Face tokenizer library for language models (Rust core with Python bindings); it splits text into tokens and does not verify anything received from another party.",
+  "excluded_by": "I2",
+  "notes": "Obviously unrelated. Not cloned."
+ },
+ {
+  "rank": 166,
+  "project": "pyopenssl",
+  "version_examined": "26.4.0",
+  "repository": "https://github.com/pyca/pyopenssl",
+  "tag_or_commit": "26.4.0 (07b1ef7cc2ed71c77ebc113d0c10fc045e40861a)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "src/OpenSSL/crypto.py: X509StoreContext.verify_certificate / get_verified_chain -> _verify_certificate. This calls the cffi binding _lib.X509_verify_cert, and when ret <= 0 a single 'raise self._exception_from_context(store_ctx)' raises X509StoreContextError with OpenSSL's own error string. All validation logic (chain building, signature, validity period, purpose) runs in OpenSSL C code. The Python layer is only a binding that turns the C status code into an exception.",
+  "entry_points": [
+   "OpenSSL.crypto.X509StoreContext.verify_certificate",
+   "OpenSSL.crypto.X509StoreContext.get_verified_chain"
+  ],
+  "verification_path_files": [
+   "src/OpenSSL/crypto.py",
+   "src/OpenSSL/_util.py"
+  ],
+  "rejection_classes": [
+   "X509StoreContextError"
+  ],
+  "excluded_by": "I2",
+  "notes": "Excluded at I2 as 'only a C binding'. Even under a looser reading of I2, I3 would fail: the Python verification path has 1 rejection raise (X509StoreContextError in _verify_certificate), plus _openssl_assert/_raise_current_error internal-error raises that do not judge the artifact. crypto.verify() is not present in this version (grep found no 'def verify' in crypto.py). Tests were not counted."
+ },
+ {
+  "rank": 184,
+  "project": "pynacl",
+  "version_examined": "1.6.2",
+  "repository": "https://github.com/pyca/pynacl",
+  "tag_or_commit": "1.6.2 (ecf41f55a3d8f1e10ce89c61c4b4d67f3f4467cf)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "PyNaCl is a cffi binding to libsodium. VerifyKey.verify (src/nacl/signing.py) checks only the type and length of the signature, then calls nacl.bindings.crypto_sign_open. That function calls lib.crypto_sign_open (C) and turns a nonzero return code into BadSignatureError('Signature was forged or corrupt'). Box/SecretBox/Aead.decrypt work the same way: a nonce length check, then the C call, with ensure(rc == 0, ..., raising=CryptoError). Every authenticity decision is made in C.",
+  "excluded_by": "I2",
+  "entry_points": [
+   "VerifyKey.verify",
+   "Box.decrypt",
+   "SecretBox.decrypt",
+   "SealedBox.decrypt"
+  ],
+  "verification_path_files": [
+   "src/nacl/signing.py",
+   "src/nacl/bindings/crypto_sign.py",
+   "src/nacl/public.py",
+   "src/nacl/secret.py",
+   "src/nacl/bindings/crypto_box.py",
+   "src/nacl/bindings/crypto_secretbox.py"
+  ],
+  "rejection_classes": [
+   "nacl.exceptions.BadSignatureError",
+   "nacl.exceptions.CryptoError (via ensure())"
+  ],
+  "how_counted": "screening-scripts/scripts-1/checks.py on the listed files. VerifyKey.verify reaches 3 raise checks (TypeError, ValueError for the signature length, BadSignatureError in crypto_sign_open); Box.decrypt reaches about 4 (nonce ValueError, 2 size ValueErrors in crypto_box_open_afternm, CryptoError through ensure()). So I3 would also fail if I2 were granted.",
+  "notes": "Excluded at I2 as binding-only: the Python layer is cffi glue around libsodium. Tests not counted."
+ },
+ {
+  "rank": 189,
+  "project": "bcrypt",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "bcrypt 5.0.0 is a Rust (PyO3) extension binding; checkpw(password, hashed) returns True/False and the implementation is not Python code. Password hashing, not verification of an artifact by raising.",
+  "excluded_by": "I2",
+  "notes": "Decided from project knowledge/PyPI summary; no clone."
+ },
+ {
+  "rank": 194,
+  "project": "msal",
+  "repository": "https://github.com/AzureAD/microsoft-authentication-library-for-python",
+  "tag_or_commit": "1.39.0",
+  "version_examined": "1.39.0",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "msal/oauth2cli/oidc.py Client.obtain_token_by_auth_code_flow checks the auth response and token response from the identity provider. It raises ValueError on state mismatch or when the response has neither code nor error (inherited oauth2.Client.obtain_token_by_auth_code_flow), and RuntimeError on nonce hash mismatch, missing auth_time or an auth_time that is too old. The deprecated helper oidc.decode_id_token raises IdTokenIssuerError, IdTokenAudienceError and IdTokenNonceError (subclasses of IdTokenError/RuntimeError). Since 1.38 token acquisition no longer validates the ID token itself, and no signature check exists anywhere.",
+  "excluded_by": "I4",
+  "entry_points": [
+   "msal.oauth2cli.oidc.Client.obtain_token_by_auth_code_flow",
+   "msal.oauth2cli.oauth2.Client.obtain_token_by_auth_code_flow",
+   "msal.ClientApplication.acquire_token_by_auth_code_flow",
+   "msal.oauth2cli.oidc.decode_id_token"
+  ],
+  "verification_path_files": [
+   "msal/oauth2cli/oidc.py",
+   "msal/oauth2cli/oauth2.py",
+   "msal/application.py"
+  ],
+  "rejection_classes": [
+   "ValueError",
+   "RuntimeError",
+   "msal.oauth2cli.oidc.IdTokenError (IdTokenIssuerError, IdTokenAudienceError, IdTokenNonceError)"
+  ],
+  "n_checks": 8,
+  "n_checks_sharing_most_common_class": 5,
+  "n_negative_blocks": 4,
+  "n_blocks_class_only": 1,
+  "n_blocks_asserting_message": 3,
+  "test_framework": "unittest (run via pytest)",
+  "tests_offline": "The 3 auth-code-flow blocks are in tests/test_client.py class TestClient, which is skipped unless a local config file supplies client_id and openid_configuration, so they do not run offline by default. The decode_id_token block in tests/test_oidc.py is offline.",
+  "how_counted": "Checks: screening-scripts/scripts-3/raises.py over msal/oauth2cli/oauth2.py and oidc.py, keeping the auth-code-flow path. oauth2.Client.obtain_token_by_auth_code_flow has 4 ValueError templates (state missing, state mismatch, scope subset, code-or-error missing). BaseClient._obtain_token has 1 ValueError (token_endpoint missing) plus 1 bare re-raise, which is excluded. oidc.Client.obtain_token_by_auth_code_flow has 3 RuntimeError templates. Total 8; ValueError is the most common class with 5. Only 5 of the 8 concern the received response (state mismatch, code/error, nonce, auth_time missing, auth_time too old); the rest concern caller input or configuration. decode_id_token alone has 3 raise checks (the time checks are only logged). Negative tests: screening-scripts/scripts-3/negtests.py over tests/ with entry points obtain_token_by_auth_code_flow, acquire_token_by_auth_code_flow, decode_id_token, obtain_token_by_authorization_code, parse_auth_response. Result: 62 blocks in the suite, 4 selected: test_client.py lines 193, 195 and 197 (assertRaisesRegexp, message asserted) and test_oidc.py line 99 (assertRaises IdTokenError, class only).",
+  "notes": "I3 passes (8 checks on one call path), but I4 fails with 4 blocks, under 10. Other raising code not counted as the main family: authority.py tenant_discovery/issuer validation (ValueError, RuntimeError) and wstrust_response.parse_response (RuntimeError on an RSTR fault)."
+ },
+ {
+  "rank": 229,
+  "project": "asn1crypto",
+  "repository": "https://github.com/wbond/asn1crypto",
+  "version_examined": "1.5.1",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "From the PyPI summary and project docs: an ASN.1 parser and serializer (X.509, CRL, OCSP, CMS definitions). It does no signature, chain or validity verification; that is left to other packages such as certvalidator and oscrypto. Rejecting malformed DER is parsing only.",
+  "excluded_by": "I2",
+  "notes": "Not cloned; decided from the PyPI metadata and project description."
+ },
+ {
+  "rank": 242,
+  "project": "google-auth-httplib2",
+  "version_examined": "0.4.4 (PyPI metadata only)",
+  "repository": "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-auth-httplib2",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "The package is an httplib2 transport adapter for google-auth (AuthorizedHttp, Request). It attaches credentials to outgoing requests and verifies no received artifact. Token and ID-token verification is in google-auth, a separate package.",
+  "excluded_by": "I2",
+  "notes": "Not cloned: transport adapter. Decided from the project's description and role."
+ },
+ {
+  "rank": 247,
+  "project": "msal-extensions",
+  "repository": "https://github.com/AzureAD/microsoft-authentication-extensions-for-python",
+  "tag_or_commit": "1.3.1",
+  "version_examined": "1.3.1",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Cloned and grepped msal_extensions/*.py. The package persists the MSAL token cache on local disk with platform encryption (DPAPI, Keychain, libsecret) and a file lock. Its raises are LockError, PersistenceNotFound, PersistenceEncryptionError, PersistenceDecryptionError and RuntimeError for unsupported platforms. All concern local storage; nothing verifies an artifact received from another party.",
+  "excluded_by": "I2",
+  "notes": "Tests not counted because I2 fails."
+ },
+ {
+  "rank": 248,
+  "project": "authlib",
+  "excluded_by": "",
+  "repository": "https://github.com/authlib/authlib",
+  "version_examined": "1.9.5",
+  "tag_or_commit": "v1.9.5 (42607cbc2135252a641a845e4ed7f94e3a922c47)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "authlib/jose/rfc7519/jwt.py JsonWebToken.decode verifies the JWS signature through JsonWebSignature.deserialize_compact (raises BadSignatureError, DecodeError, UnsupportedAlgorithmError ...). authlib/jose/rfc7519/claims.py JWTClaims.validate checks exp/nbf/iat/aud/iss/essential claims and raises ExpiredTokenError, InvalidClaimError, InvalidTokenError, MissingClaimError. All in pure Python.",
+  "entry_points": [
+   "JsonWebToken.decode (authlib.jose.jwt.decode)",
+   "JWTClaims.validate (validate_exp/nbf/iat/aud/iss/sub/jti)",
+   "JsonWebSignature.deserialize / deserialize_compact / deserialize_json"
+  ],
+  "verification_path_files": [
+   "authlib/jose/rfc7519/jwt.py",
+   "authlib/jose/rfc7519/claims.py",
+   "authlib/jose/rfc7515/jws.py",
+   "authlib/jose/util.py"
+  ],
+  "rejection_classes": [
+   "DecodeError",
+   "BadSignatureError",
+   "InvalidClaimError",
+   "MissingClaimError",
+   "ExpiredTokenError",
+   "InvalidTokenError",
+   "UnsupportedAlgorithmError",
+   "MissingAlgorithmError",
+   "InvalidHeaderParameterNameError",
+   "InvalidCritHeaderParameterNameError",
+   "ValueError"
+  ],
+  "n_checks": 35,
+  "n_checks_sharing_most_common_class": 9,
+  "n_negative_blocks": 43,
+  "n_blocks_class_only": 38,
+  "n_blocks_asserting_message": 5,
+  "test_framework": "pytest (tests/jose use pytest.raises)",
+  "tests_offline": "Yes for tests/jose: pure unit tests with local keys from tests/files. Needs the cryptography wheel only. Other test dirs (flask, django, clients) need extra packages but no network was seen; not checked in detail.",
+  "how_counted": "Checks: screening-scripts/scripts-7/checks.py (AST; for every function, it groups raise statements by (unparsed exception class, first-argument template: string literal, f-string with {} placeholders, '%'/.format base, or the unparsed expression)). It ran with FUNCS limited to JsonWebToken.decode, decode_payload, create_load_key(.load_key), prepare_raw_key, BaseClaims.*/JWTClaims.*, _validate_numeric_time, JsonWebSignature.deserialize*/_prepare_algorithm_key/_validate*/_reject*, util extract_header/extract_segment/ensure_dict. Total 35 distinct (function, class, message) groups. DecodeError is the most common class with 9. The literal rule makes InvalidClaimError(k) and InvalidClaimError('aud') count as separate checks. Negative blocks: screening-scripts/scripts-7/negtests.py over tests/jose/test_jwt.py, test_jws.py and test_rfc8037.py. It counts with pytest.raises/assertRaises/assertRaisesRegex (context form) whose body calls a function named decode|validate|validate_*|deserialize|deserialize_compact|deserialize_json, plus the callable form whose first callable argument references such a name. Any exception class counts. Result: 43 blocks (test_jws 25, test_jwt 18). 5 assert the message (match= or an assert on the 'as' variable within the next 3 statements). Over all of tests/jose (this also covers JWE/JWK deserialize) the same matcher gives 60 blocks, 5 with message.",
+  "notes": "authlib.jose is deprecated in 1.9.5 (emits a deprecation in favour of joserfc, slated for removal in 2.0.0), but it is still shipped and tested. Other verification families not counted: JWE decrypt (rfc7516), the OIDC IDToken claims (authlib/oidc/core/claims.py, which extends JWTClaims), and OAuth2/OAuth1 server-side request validation (authlib/oauth2/rfc6749 grants raising OAuth2Error subclasses), which is probably larger but was not counted. The checks counted include deserialize_json, which JsonWebToken.decode does not reach (decode uses compact serialization)."
+ },
+ {
+  "rank": 255,
+  "project": "google-auth-oauthlib",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "The PyPI sdist 1.5.0 was unpacked and every raise in google_auth_oauthlib/*.py was grepped. The raises cover: client-secrets format (ValueError, a local config file, not a received artifact), a missing session token ('did you call fetch_token?'), WSGITimeoutError, OSError for an address in use, and ConnectionError for no open port. The package has no Python check of tokens, state or ID tokens. OAuth state and response checks are delegated to requests-oauthlib/oauthlib, and ID-token verification to google-auth; none of these is part of this package.",
+  "excluded_by": "I2",
+  "version_examined": "1.5.0 (PyPI sdist)",
+  "verification_path_files": [
+   "google_auth_oauthlib/flow.py",
+   "google_auth_oauthlib/helpers.py",
+   "google_auth_oauthlib/interactive.py"
+  ],
+  "notes": "Sdist unpacked at clones/gao. Tests not counted because I2 fails."
+ },
+ {
+  "rank": 267,
+  "project": "joserfc",
+  "version_examined": "1.8.0",
+  "repository": "https://github.com/authlib/joserfc",
+  "tag_or_commit": "1.8.0 (f345ff71cd6c36452a4e11e47b805ad450a95dd8)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "src/joserfc/jws.py deserialize_compact() runs extract_compact, then validate_compact (header checks, algorithm allow-list, key selection, signature verify). On failure it raises BadSignatureError and other joserfc.errors classes. jwt.decode() wraps it and raises InvalidPayloadError. All of this is pure Python; only the cryptographic primitives come from 'cryptography'.",
+  "entry_points": [
+   "joserfc.jwt.decode",
+   "joserfc.jws.deserialize_compact",
+   "joserfc.jws.validate_compact",
+   "joserfc.jws.deserialize_json",
+   "joserfc.jws.extract_compact"
+  ],
+  "verification_path_files": [
+   "src/joserfc/jwt.py",
+   "src/joserfc/jws.py",
+   "src/joserfc/_rfc7797/compact.py",
+   "src/joserfc/_rfc7515/compact.py",
+   "src/joserfc/_rfc7515/registry.py",
+   "src/joserfc/_rfc7515/model.py",
+   "src/joserfc/registry.py",
+   "src/joserfc/jwk.py",
+   "src/joserfc/_keys.py",
+   "src/joserfc/_rfc7517/models.py",
+   "src/joserfc/_rfc7518/jws_algs.py"
+  ],
+  "rejection_classes": [
+   "BadSignatureError",
+   "DecodeError",
+   "MissingAlgorithmError",
+   "ExceededSizeError",
+   "UnsupportedAlgorithmError",
+   "UnsupportedHeaderError",
+   "MissingCritHeaderError",
+   "MissingHeaderError",
+   "InvalidHeaderValueError",
+   "MissingKeyError",
+   "InvalidKeyIdError",
+   "InvalidKeyTypeError",
+   "InvalidKeyCurveError",
+   "UnsupportedKeyUseError",
+   "UnsupportedKeyAlgorithmError",
+   "InvalidPayloadError",
+   "ValueError"
+  ],
+  "n_checks": 35,
+  "n_checks_sharing_most_common_class": 10,
+  "n_negative_blocks": 49,
+  "n_blocks_class_only": 49,
+  "n_blocks_asserting_message": 0,
+  "test_framework": "unittest TestCase classes (run under pytest)",
+  "tests_offline": "yes, by reading: no network imports in tests (grep for requests/urlopen/httpx found none); keys come from tests/fixtures. Needs the 'cryptography' wheel only, no C toolchain. Not executed.",
+  "excluded_by": "",
+  "how_counted": "checks: screening-scripts/scripts-0/checks.py run on the 11 listed files gave 57 distinct (function, class, template) checks. By reading the call chain jwt.decode -> _decode_jws -> deserialize_compact -> extract_rfc7515_compact (size validators, decode_header) -> validate_compact (JWSRegistry.check_header -> check_crit_header/check_registry_header/check_supported_header plus registry.py value validators; get_alg; guess_key -> KeySet.get_by_kid; JWSAlgModel.check_key -> check_use/check_alg; ESAlgorithm.check_key; HMACAlgorithm.verify), only reachable functions were kept: decode 1, deserialize_compact 1, validate_compact 1, extract_rfc7515_compact 2, decode_header 2, size validators 4, get_alg 3, check_crit_header 2, check_registry_header 2, check_supported_header 1, header value validators in registry.py 8 (is_str, is_url, is_int, is_bool, is_list_str, is_jwk, in_choices._is_one_of, not_support), guess_key 1, get_by_kid 1, check_key 1, check_use 1, check_alg 1, ESAlgorithm.check_key 1, HMACAlgorithm.verify 1. Total 35. The most common class is ValueError with 10 (8 header validators, which check_registry_header wraps into InvalidHeaderValueError, plus guess_key and HMAC verify). Unused functions (serialize_*, generate_key, NotImplementedError stubs, import_key_set, etc.) were dropped. Whether all 8 header validators are registered for JWS headers was not checked one by one, so 35 is an upper estimate (at least 27 without them). Blocks: screening-scripts/scripts-0/negblocks.py on tests/ with the entry regex 'decode|deserialize_compact|deserialize_json|validate_compact|extract_compact|_decode_jws' gave 49 blocks: tests/jws/test_compact.py 10, test_json.py 17, test_errors.py 7, test_rfc7797.py 5, test_eddsa.py 5, tests/jwt/test_jwt.py 5. All are self.assertRaises(E, callable, ...) or 'with self.assertRaises(E)' with no 'as' variable, so all 49 are class-only. A grep for assertRaisesRegex/pytest.raises/cm.exception found no message assertions on these entry points. The assertRaisesRegex on alg.verify (test_compact.py:129) calls an internal method and was not counted. Many blocks sit inside loops, so runtime executions are higher than 49.",
+  "notes": "Passes I1 to I4. Other verification families: (a) JWTClaimsRegistry.validate in _rfc7519/claims.py: 12 checks (InvalidClaimError 10, ExpiredTokenError 1, MissingClaimError 1) and 61 blocks (negblocks regex 'validate|check_value|validate_.*'; InvalidClaimError 45, MissingClaimError 11, ExpiredTokenError 4, ValueError 1; tests/jwt/test_claims.py asserts cm.exception.claim/description in some blocks, sub-split not counted). (b) JWE jwe.decrypt_compact/decrypt_json: 33 blocks (negblocks regex 'decrypt_compact|decrypt_json'); checks not counted. requires-python >=3.11."
+ },
+ {
+  "rank": 271,
+  "project": "paramiko",
+  "version_examined": "5.1.0",
+  "repository": "https://github.com/paramiko/paramiko",
+  "tag_or_commit": "5.1.0 (0e9ccb91e0f9a68f2587233d523ad7fe46e730fe)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "The SSH client handshake is pure Python. Transport.start_client/connect run the transport thread, which handles messages from the peer: _check_banner, _parse_kex_init (algorithm negotiation, strict-kex ordering), _enforce_strict_kex, kex_*.parse_next/_parse_*_reply (range/order checks on f/Q_S), Packetizer.read_message ('Mismatched MAC', 'Invalid packet blocking') and Transport._verify_key ('Signature verification ({}) failed.'). Any error is saved and re-raised in start_client. SSHClient.connect raises BadHostKeyException for a mismatched known host, and RejectPolicy raises SSHException.",
+  "excluded_by": "",
+  "entry_points": [
+   "Transport.start_client",
+   "Transport.connect",
+   "SSHClient.connect",
+   "Kex*.parse_next (kex_group14, kex_gex, kex_ecdh_nist, kex_curve25519, kex_mlkem)",
+   "Packetizer.read_message"
+  ],
+  "verification_path_files": [
+   "paramiko/transport.py",
+   "paramiko/packet.py",
+   "paramiko/kex_group14.py",
+   "paramiko/kex_group16.py",
+   "paramiko/kex_gex.py",
+   "paramiko/kex_ecdh_nist.py",
+   "paramiko/kex_curve25519.py",
+   "paramiko/kex_mlkem.py",
+   "paramiko/client.py",
+   "paramiko/rsakey.py",
+   "paramiko/ecdsakey.py",
+   "paramiko/ed25519key.py",
+   "paramiko/pkey.py"
+  ],
+  "rejection_classes": [
+   "SSHException",
+   "IncompatiblePeer (SSHException subclass)",
+   "MessageOrderError (SSHException subclass)",
+   "BadHostKeyException",
+   "EOFError (packet layer)"
+  ],
+  "n_checks": 35,
+  "n_checks_sharing_most_common_class": 23,
+  "how_counted": "screening-scripts/scripts-1/checks.py on the listed files, then manual reachability from the client handshake (Transport.start_client/connect). transport.py: start_client 'Negotiation failed.' (1), connect 'Bad host key from server' (1), _verify_key (2), _enforce_strict_kex (1), run 'Expecting packet...' (1), _check_banner (4), _parse_kex_init (7, 6 of them IncompatiblePeer) = 17. packet.py read_message (4), read_all EOFError/NeedRekeyException (2) = 6. Client-side kex groups: curve25519 2, ecdh 1, gex 3, group14 2, mlkem 3 = 11. Plus the host-key _decode_key checks in rsakey/ecdsakey (about 3). Total about 35, an estimate because reachability was judged by hand. SSHException-class checks = 23 (transport 7, packet 4, kex 12; again an estimate).",
+  "n_negative_blocks": 10,
+  "n_blocks_class_only": 9,
+  "n_blocks_asserting_message": 1,
+  "test_framework": "pytest (mixed unittest-style TestCase and pytest-relaxed classes)",
+  "tests_offline": "Likely yes. Tests use in-process LoopSocket pairs and localhost sockets, with no external network. They need the binary wheels of cryptography, bcrypt and pynacl, plus invoke, pytest-relaxed and similar; some rely on thread timing.",
+  "notes": "I4 is borderline. screening-scripts/scripts-1/negblocks.py (blocks expecting SSHException|IncompatiblePeer|BadHostKey|MessageOrderError whose body or callable references connect|start_client|start_server|read_message|parse_next|_test_connection|server...) found 10: test_kex.py 565, 587 (parse_next with a bad hybrid init/reply); test_client.py 317 (_test_connection, key not accepted), 500 (connect, banner timeout), 568 (RejectPolicy), 584 (BadHostKeyException); test_transport.py 1334, 1365 (MessageOrderError), 1343 (asserts info.type only), 1418 (match='Sequence number rolled over...', the only message assertion). Taken literally, all 10 call an entry point and expect a rejection class. By hand, 2 (317 auth failure, 500 banner timeout) are not a rejection of a peer artifact, which leaves 8, and I4 would fail under that stricter reading. The @raises(SSHException) decorators (test_client.py 732) are not a counted block form. Server-side auth handling (auth_handler.py) and SFTP were not counted."
+ },
+ {
+  "rank": 278,
+  "project": "asttokens",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Annotates Python AST nodes with source positions (developer tooling); no verification of a received token/signature/protocol message.",
+  "excluded_by": "I2",
+  "notes": "Obviously unrelated; no clone."
+ },
+ {
+  "rank": 298,
+  "project": "griffelib",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Griffe (mkdocstrings) extracts Python API signatures for documentation and API-breakage checks. It is a static-analysis and documentation tool and does not verify tokens, signatures, certificates or protocol messages.",
+  "excluded_by": "I2",
+  "notes": "Judged from the PyPI summary and project description (mkdocstrings/griffe). Not cloned."
+ },
+ {
+  "rank": 325,
+  "project": "pytokens",
+  "repository": "https://github.com/tusharsadhwani/pytokens",
+  "version_examined": "0.4.1",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "A Python source-code tokenizer (PyPI summary). It does no verification of any artifact from another party.",
+  "excluded_by": "I2",
+  "notes": "Not cloned; obviously unrelated."
+ },
+ {
+  "rank": 330,
+  "project": "pycryptodome",
+  "version_examined": "4.4.0",
+  "repository": "https://github.com/Legrandin/pycryptodome",
+  "tag_or_commit": "v4.4.0 (3a016ab7269b9a43cd14016989011c5051487b77)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "lib/Crypto/Signature/DSS.py DssSigScheme.verify(msg_hash, signature) is Python. It checks signature length or DER structure, the r/s range, low-S, and finally the result of key._verify. Each failure raises ValueError('The signature is not authentic ...'). On success it returns False only to break PyCrypto-style callers. Only the low-level primitives are in C.",
+  "excluded_by": "",
+  "entry_points": [
+   "Crypto.Signature.DSS.DssSigScheme.verify (via DSS.new(key, mode).verify)",
+   "DeterministicDsaSigScheme / FipsDsaSigScheme / FipsEcDsaSigScheme (inherit verify)"
+  ],
+  "verification_path_files": [
+   "lib/Crypto/Signature/DSS.py",
+   "lib/Crypto/Util/asn1.py (DerSequence.decode, its errors re-raised as ValueError 'DER')",
+   "lib/Crypto/Math/_IntegerGMP.py / _IntegerNative.py",
+   "lib/Crypto/PublicKey/ECC.py, DSA.py (key._verify)"
+  ],
+  "rejection_classes": [
+   "ValueError"
+  ],
+  "n_checks": 7,
+  "n_checks_sharing_most_common_class": 7,
+  "n_negative_blocks": 11,
+  "n_blocks_class_only": 6,
+  "n_blocks_asserting_message": 5,
+  "test_framework": "pytest (lib/Crypto/SelfTest, 4.4.0 uses pytest.raises)",
+  "tests_offline": "Yes: no network or external services. Running from a source checkout needs the C extensions built (C toolchain), or the tests can run against an installed binary wheel. Test-vector loading (test_vectors/) not checked in detail.",
+  "how_counted": "I3: screening-scripts/scripts-5/checks.py (ast) groups the raise statements in each function by (exception call name, first-argument template: constant / f-string / '%' left side / .format base). On Signature/DSS.py, DssSigScheme.verify has 7 groups, all ValueError: 'Hash is not sufficiently strong', 'not authentic (length)', '(DER)', '(DER content)', '(d)', '(high s)', and plain 'not authentic'. The remaining DSS.py raises are in new/sign/__init__ and were not counted. I4: screening-scripts/scripts-5/negtests.py (ast) finds with-pytest.raises / assertRaises / assertRaisesRegex blocks, in both with-form and callable-form. It keeps blocks that expect ValueError and whose body calls something matching '(^|\\.)verify$'. On SelfTest/Signature/test_dss.py it found 11 blocks: 6 class-only, 5 asserting the message (4 with match=, 1 with an assert on str(cm.value) after the block). 13 more ValueError blocks in that file do not call verify and were not counted. Counts are static block counts; blocks inside loops or parametrized tests count once.",
+  "notes": "Other verification families in the package, by the same scripts: Signature/eddsa.py EdDSASigScheme.verify, where one call runs verify (3 checks) plus _verify_ed25519 or _verify_ed448 (4 ValueError checks each); test_eddsa.py has 1 qualifying block. Signature/pss.py has _EMSA_PSS_VERIFY 'Incorrect signature' (x5 raises = 1 check) plus verify (1 check); test_pss.py has 4 blocks. Signature/pkcs1_15.py verify has 'Invalid signature' (x3 raises = 1 check); 1 block. HMAC/CMAC verify and AEAD decrypt_and_verify (Cipher/_mode_gcm.py etc.) were not counted. Clone at clones/pycryptodome."
+ },
+ {
+  "rank": 383,
+  "project": "scramp",
+  "repository": "https://codeberg.org/tlocke/scramp (not contacted; source taken from the PyPI sdist)",
+  "tag_or_commit": "PyPI sdist scramp-1.5.0.tar.gz",
+  "version_examined": "1.5.0",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "src/scramp/core.py: ScramServer.set_client_final(client_final) verifies the received SCRAM client-final message: channel binding match, server nonce match, and client proof via _check_client_key ('The client keys don't match.'). It raises ScramException and otherwise returns None. ScramServer.set_client_first, ScramClient.set_server_first and ScramClient.set_server_final (server-signature check) behave the same way.",
+  "excluded_by": "",
+  "entry_points": [
+   "ScramServer.set_client_first",
+   "ScramServer.set_client_final",
+   "ScramClient.set_server_first",
+   "ScramClient.set_server_final",
+   "_set_client_first",
+   "_set_client_final",
+   "_set_server_first",
+   "_set_server_final",
+   "_check_client_key"
+  ],
+  "verification_path_files": [
+   "src/scramp/core.py",
+   "src/scramp/utils.py"
+  ],
+  "rejection_classes": [
+   "scramp.utils.ScramException"
+  ],
+  "n_checks": 46,
+  "n_checks_sharing_most_common_class": 45,
+  "n_negative_blocks": 10,
+  "n_blocks_class_only": 2,
+  "n_blocks_asserting_message": 8,
+  "test_framework": "pytest (+ pytest-mock)",
+  "tests_offline": "Yes, likely: pure Python. SSL sockets are mocked with mocker.create_autospec, and there is no network use. Needs asn1crypto and pytest-mock. Not run.",
+  "how_counted": "I3: screening-scripts/scripts-6/checks.py (AST only) with entries set_client_first,set_client_final over core.py and utils.py. Calls are resolved by simple name, class calls go to __init__, and super().__init__ goes to the base class __init__. It lists distinct (function, class, message template) raises; a message held in a variable is resolved to its preceding assignment. Result: 46 checks in 30 reachable functions; 45 raise ScramException and 1 raises TypeError. The name-based resolution over-approximates, e.g. 'from_str' also reaches IterationCount.from_str. set_client_final alone gives 37 checks (36 ScramException). I4: screening-scripts/scripts-6/negblocks.py over test/test_scramp.py and test/test_utils.py, expected class ScramException. The entry set is the message-validation family: the public set_client_first/set_client_final/set_server_first/set_server_final, the internal step functions _set_client_first/_set_client_final/_set_server_first/_set_server_final, _check_client_key, and the received-message parsers Message, ClientFirstBare, ClientFinal, ServerFirst, ServerFinal and Gs2Header. Result: 10 'with pytest.raises' blocks. 8 assert the message (match= or assert str(exc_info.value) == ... after the block) and 2 assert only the class.",
+  "notes": "I4 is borderline and depends on the scope of 'such a function'. Public entry points only: 3 blocks (set_server_first line 954, set_client_final line 1090, set_server_final with match= line 1538). Adding the internal step functions and _check_client_key: 9. Adding Message and Gs2Header protocol parsing (lines 142, 279): 10, the figure reported. Adding value-object validators also reached from the call (Nonce, IterationCount.from_str, Salt.from_str, CbName, Username, b64dec, saslprep, _check_stage): 20 blocks, 18 with message. Many blocks are inside @pytest.mark.parametrize tests and are counted once each as syntactic blocks. Total pytest.raises blocks in the suite: 31."
+ },
+ {
+  "rank": 434,
+  "project": "requests-aws4auth",
+  "repository": "https://github.com/tedder/requests-aws4auth",
+  "version_examined": "1.4.0",
+  "tag_or_commit": "v1.4.0",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Requests auth plugin that signs outgoing requests with AWS SigV4 (aws4auth.py, aws4signingkey.py). Every raise is client-side: TypeError/ValueError for constructor arguments, NoSecretKeyError, DateFormatError and DateMismatchError on the caller's own request date or signing key. Nothing verifies an artifact received from another party.",
+  "excluded_by": "I2",
+  "notes": "Cloned to inspect. grep of raise statements in requests_aws4auth/*.py shows only signing-side argument and date errors. Pure signing / client-side request construction, so it does not count."
+ },
+ {
+  "rank": 442,
+  "project": "pycryptodomex",
+  "excluded_by": "I4",
+  "i1_third_party_open_source": true,
+  "repository": "https://github.com/Legrandin/pycryptodome",
+  "tag_or_commit": "v3.24.2x (the 'x' tags are the pycryptodomex variant; there is no plain v3.24.2 tag)",
+  "version_examined": "3.24.2",
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "Crypto/Signature/DSS.py DssSigScheme.verify(msg_hash, signature) is Python code that checks a received (EC)DSA signature and raises ValueError('The signature is not authentic ...') on rejection. It returns no boolean for a valid signature: it returns False only as a deliberate PyCrypto trap, and a bad signature always raises. Other Python verifiers that raise: eddsa EdDSASigScheme.verify, pss/pkcs1_15 verify, the AEAD verify/decrypt_and_verify methods, and HMAC/CMAC/Poly1305 verify/hexverify.",
+  "entry_points": [
+   "Crypto.Signature.DSS.DssSigScheme.verify (DSA/ECDSA, FIPS 186-3 and deterministic RFC 6979 schemes)"
+  ],
+  "verification_path_files": [
+   "lib/Crypto/Signature/DSS.py",
+   "lib/Crypto/Util/asn1.py (DerSequence.decode, DER encoding only)",
+   "lib/Crypto/PublicKey/DSA.py (DsaKey._verify, returns bool)",
+   "lib/Crypto/PublicKey/ECC.py (EccKey._verify, returns bool)",
+   "lib/Crypto/Math/* (Integer, partly C-backed)"
+  ],
+  "rejection_classes": [
+   "ValueError"
+  ],
+  "n_checks": 6,
+  "n_checks_sharing_most_common_class": 6,
+  "test_framework": "unittest (Crypto.SelfTest suites)",
+  "n_negative_blocks": 6,
+  "n_blocks_class_only": 6,
+  "n_blocks_asserting_message": 0,
+  "tests_offline": "Likely yes: the vectors are bundled and there is no network use. They need the package's compiled C extensions, so a C toolchain or a built wheel; not run.",
+  "how_counted": "I3: screening-scripts/scripts-8/raises.py parses each file with ast. Per function it groups Raise nodes by (unparsed exception callable, unparsed first argument). Run on lib/Crypto/Signature/DSS.py, DssSigScheme.verify has 6 groups, all ValueError: 'Hash is not sufficiently strong', '...not authentic (length)', '(DER)', '(DER content)', '(d)', and 'The signature is not authentic'. DsaKey._verify and EccKey._verify return bool and raise nothing. Util/asn1.py has a further ~18 ValueError checks in the DER decode path. DSS.verify catches these and re-raises them as its own (DER) message, so they are not added to the 6. I4: screening-scripts/scripts-8/negblocks.py ENTRY files. It counts static `with assertRaises/pytest.raises` blocks whose body calls ENTRY, and call-form assertRaises/pytest.raises/assertRaisesRegex whose 2nd argument references ENTRY. It counts as message-asserting any assertRaisesRegex or match=. For verify on SelfTest/Signature/test_dss.py it found 6 blocks, all assertRaises(ValueError, ...verify, ...) and all class-only; some sit inside loops over test vectors and count once each. The Wycheproof tests in test_dss.py use try/except ValueError, which is not a block form and was not counted.",
+  "notes": "Excluded by I4: the only function family with ≥5 checks (DSS.verify) has 6 negative blocks, fewer than 10. Other families: EdDSA verify plus _verify_ed25519/_verify_ed448 have 7 checks per call (ValueError and TypeError) but 0 assertRaises blocks; test_eddsa.py uses try/except. pss.verify has 2 checks ('Incorrect signature' raised 5 times in _EMSA_PSS_VERIFY counts as 1), and pkcs1_15.verify has 1 check ('Invalid signature' x3). Static verify blocks across all of SelfTest/Signature total 11 (dss 6, pss 4, pkcs1_15 1), but pss and pkcs1_15 fail I3. AEAD modes: each verify/decrypt_and_verify path holds about 3-4 checks; CCM reaches about 8 counting decrypt/_digest length checks. Static decrypt_and_verify blocks in SelfTest/Cipher total 16 (SIV 6, GCM 3, CCM 2, EAX 2, ChaCha20_Poly1305 2, OCB 1) and verify blocks total 7 including Hash; no single mode reaches 10. MAC hexverify: 4 blocks. The count was made only from the shallow clone at clones/pycryptodomex; no candidate code was run."
+ },
+ {
+  "rank": 497,
+  "project": "nltk",
+  "version_examined": "3.10.4",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Natural Language Toolkit (tokenizers, corpora, parsers, classifiers). It does not verify tokens, signatures, certificates or protocol messages received from another party.",
+  "excluded_by": "I2",
+  "notes": "Obviously unrelated NLP library. Decided from the PyPI summary; no clone."
+ },
+ {
+  "rank": 508,
+  "project": "ecdsa",
+  "version_examined": "0.19.2",
+  "repository": "https://github.com/tlsfuzzer/python-ecdsa",
+  "tag_or_commit": "python-ecdsa-0.19.2 (bd66899550d7185939bf27b75713a2ac9325a9d3)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "Pure-Python ECDSA/EdDSA. VerifyingKey.verify/verify_digest (src/ecdsa/keys.py) decode the signature (util.sigdecode_string/strings/der, der.py), check it with ecdsa.Public_key.verifies, and raise BadSignatureError('Signature verification failed' / 'Malformed formatting of signature'). BadDigestError is raised for an oversized digest. The EdDSA path goes through eddsa.PublicKey.verify, which raises ValueError('Invalid signature'); VerifyingKey.verify re-raises it as BadSignatureError.",
+  "excluded_by": "",
+  "entry_points": [
+   "VerifyingKey.verify",
+   "VerifyingKey.verify_digest",
+   "eddsa.PublicKey.verify"
+  ],
+  "verification_path_files": [
+   "src/ecdsa/keys.py",
+   "src/ecdsa/util.py",
+   "src/ecdsa/der.py",
+   "src/ecdsa/ecdsa.py",
+   "src/ecdsa/eddsa.py",
+   "src/ecdsa/ellipticcurve.py"
+  ],
+  "rejection_classes": [
+   "BadSignatureError",
+   "BadDigestError",
+   "der.UnexpectedDER (internal, converted to BadSignatureError)",
+   "MalformedSignature (internal, converted)",
+   "ValueError (eddsa.PublicKey.verify)",
+   "MalformedPointError (Edwards point decoding)"
+  ],
+  "n_checks": 25,
+  "n_checks_sharing_most_common_class": 13,
+  "how_counted": "screening-scripts/scripts-1/checks.py on keys.py, util.py, der.py, ecdsa.py, eddsa.py, ellipticcurve.py, keeping the functions reachable from VerifyingKey.verify: keys.verify 1, verify_digest 2, _truncate_and_convert_digest 1; util.sigdecode_string 1, sigdecode_strings 3, sigdecode_der 2; der.remove_sequence 2, remove_integer 6, read_length 3; eddsa.PublicKey.verify 2; ellipticcurve AbstractPoint._from_edwards 2. Total 25. The most common class is UnexpectedDER with 13 checks (sigdecode_der 2 + remove_sequence 2 + remove_integer 6 + read_length 3), all caught and turned into BadSignatureError in verify_digest. Public_key.verifies returns a bool and has no raises.",
+  "n_negative_blocks": 12,
+  "n_blocks_class_only": 11,
+  "n_blocks_asserting_message": 1,
+  "test_framework": "pytest + hypothesis (plus unittest TestCase classes)",
+  "tests_offline": "Yes. Pure Python, needs pytest and hypothesis. Some test_pyecdsa.py interop tests run the openssl CLI through run_openssl and are skipped by curve-support checks, but none of the counted blocks need it.",
+  "notes": "Blocks counted by screening-scripts/scripts-1/negblocks.py: pytest.raises/assertRaises blocks (with or callable form) whose body/callable references verify|verify_digest, any exception class. Found 12: test_malformed_sigs.py 5 (BadSignatureError), test_pyecdsa.py 3 (1 BadSignatureError callable form at line 110, 2 BadDigestError), test_keys.py 1 (BadSignatureError), test_eddsa.py 3 (ValueError from eddsa PublicKey.verify; one, at line 620, asserts 'length' in str(e.exception)). Restricted to VerifyingKey.verify/verify_digest with BadSignatureError/BadDigestError there are 9, which is below 10. So I4 passes only if eddsa.PublicKey.verify counts in the same family (VerifyingKey.verify calls it). Many other tests (test_der.py about 49 raises blocks expecting UnexpectedDER) test parsing only and were not counted."
+ },
+ {
+  "rank": 528,
+  "project": "dateparser",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Natural-language date parsing library; parsing only, returns None on failure, no authenticity/validity verification.",
+  "excluded_by": "I2",
+  "notes": "Obviously unrelated; no clone."
+ },
+ {
+  "rank": 561,
+  "project": "pyotp",
+  "repository": "https://github.com/pyauth/pyotp",
+  "tag_or_commit": "v2.10.0",
+  "version_examined": "2.10.0",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "HOTP.verify(otp, counter) -> bool and TOTP.verify(otp, for_time, valid_window) -> bool return True/False through utils.strings_equal (hmac.compare_digest). The package's raises are ValueError on constructor parameters and in parse_uri (otpauth URI parsing), not rejections of a received OTP.",
+  "excluded_by": "I2",
+  "notes": "Cloned at v2.10.0 and read with grep over src/pyotp/*.py. parse_uri raises on a malformed or unsupported otpauth URI, which is parsing/configuration, not verification."
+ },
+ {
+  "rank": 598,
+  "project": "passlib",
+  "repository": "PyPI sdist passlib-1.7.4.tar.gz (upstream Mercurial on foss.heptapod.net, not contacted)",
+  "version_examined": "1.7.4",
+  "tag_or_commit": "sdist 1.7.4",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "passlib/totp.py TOTP.match(token, time, window, skew, last_counter), and TOTP.verify(token, source), which wraps from_source(source).match(token). It takes a one-time token sent by the client and returns a TotpMatch, or raises MalformedTokenError, InvalidTokenError or UsedTokenError (all subclasses of passlib.exc.TokenError, which is a ValueError). Password-hash verify() in handlers/context returns True/False, so it does not count.",
+  "excluded_by": "I3",
+  "entry_points": [
+   "passlib.totp.TOTP.match",
+   "passlib.totp.TOTP.verify"
+  ],
+  "verification_path_files": [
+   "passlib/totp.py",
+   "passlib/exc.py",
+   "passlib/utils/__init__.py"
+  ],
+  "rejection_classes": [
+   "passlib.exc.MalformedTokenError",
+   "passlib.exc.InvalidTokenError",
+   "passlib.exc.UsedTokenError"
+  ],
+  "n_checks": 4,
+  "n_checks_sharing_most_common_class": 2,
+  "how_counted": "Ran screening-scripts/scripts-4/raises.py over passlib/totp.py and passlib/utils/__init__.py and kept the functions match reaches: match, _find_match, normalize_token, normalize_time, _check_serial, to_unicode. TokenError-family checks: normalize_token MalformedTokenError 'Token must contain only the digits 0-9' (L1052) and 'Token must have exactly %d digits' (L1054); _find_match InvalidTokenError() at L1289 and L1303, which share class and empty message and so make 1 check; match UsedTokenError (L1253). That is 4 checks, the most common class (MalformedTokenError) having 2. Not counted as rejection checks: ExpectedTypeError/ValueError in normalize_time and _check_serial (caller arguments), ExpectedStringError in to_unicode (token type), and from_source parse errors (the server's own stored key, not the peer's artifact). Counting all of those would give 8. _generate uses assert, not raise.",
+  "test_framework": "unittest (passlib.tests.utils.TestCase; also runs under pytest)",
+  "tests_offline": "likely yes (pure-Python HMAC tests; no network seen in test_totp.py), not run",
+  "notes": "Borderline on I3: 4 under the rejection-class reading, 8 if every raise reachable from match is counted. I4 not formally evaluated. For reference, grep of passlib/tests/test_totp.py for assertRaises with a TokenError subclass found 18 lines: normalize_token 3, match/verify about 15, some through a local assertRaises helper. Many assert only the class; UsedTokenError blocks then check err attributes."
+ },
+ {
+  "rank": 621,
+  "project": "python-jose",
+  "version_examined": "3.5.0",
+  "repository": "https://github.com/mpdavis/python-jose",
+  "tag_or_commit": "3.5.0 (018b310ddb8b50dcfd09a0c152117835a21dd656)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "jose/jwt.py decode() calls jws.verify (_load parsing and _verify_signature: algorithm allow-list and signature), then _validate_claims (iat/nbf/exp/aud/iss/sub/jti/at_hash and required claims). It raises JWTError, JWTClaimsError or ExpiredSignatureError, all in pure Python.",
+  "excluded_by": "",
+  "entry_points": [
+   "jose.jwt.decode",
+   "jose.jws.verify"
+  ],
+  "verification_path_files": [
+   "jose/jwt.py",
+   "jose/jws.py",
+   "jose/jwk.py",
+   "jose/backends/*.py (key construction and verify)",
+   "jose/utils.py"
+  ],
+  "rejection_classes": [
+   "JWTError",
+   "JWTClaimsError",
+   "ExpiredSignatureError",
+   "JWSError",
+   "JWSSignatureError"
+  ],
+  "n_checks": 29,
+  "n_checks_sharing_most_common_class": 12,
+  "n_negative_blocks": 37,
+  "n_blocks_class_only": 35,
+  "n_blocks_asserting_message": 2,
+  "test_framework": "pytest",
+  "tests_offline": "Yes: fixed tokens and keys, no network found by grep (socket/requests/urlopen). Needs the pure-Python deps (ecdsa, rsa, pyasn1) or the cryptography wheel. No C toolchain needed.",
+  "how_counted": "I3: screening-scripts/scripts-5/checks.py on jose/jwt.py and jose/jws.py gave 35 (class, template) groups per function. The 6 groups a decode call cannot reach were removed: jwt.get_unverified_header (1), jwt.get_unverified_claims (3), jws.sign (1) and jws._sign_header_and_claims (1). That leaves 29: JWTClaimsError 12, JWSError 10, JWTError 5, ExpiredSignatureError 1, JWSSignatureError 1. Raises built from a variable (JWTError(e), JWTClaimsError(msg) x2) each count as one group. jwk.py and the backends were not counted. I4: screening-scripts/scripts-5/negtests.py with entry regex '(^|\\.)(jwt\\.decode|jws\\.verify|decode|verify)$' and classes JWTError, JWTClaimsError, ExpiredSignatureError, JWSError, JWSSignatureError, JOSEError, run on tests/test_jwt.py, test_jws.py, test_firebase.py and rfc/test_rfc7520.py. It found 37 blocks (test_jwt.py 22, test_jws.py 15): 35 class-only and 2 with match= (test_jwt.py lines 79 and 94). 6 more blocks expect these classes but do not call decode or verify. test_jws.py lines 44-72 and test_jwt.py lines 75-100 were spot-checked.",
+  "notes": "jwe.decrypt (JWEError family) also exists and was not counted. Clone at clones/python-jose."
+ },
+ {
+  "rank": 659,
+  "project": "sentencepiece",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Unsupervised text tokenizer for language models; the Python package is a binding to the C++ library. It verifies no artifact from another party.",
+  "excluded_by": "I2",
+  "notes": "Not cloned (obviously unrelated)."
+ },
+ {
+  "rank": 677,
+  "project": "supabase-auth",
+  "excluded_by": "",
+  "repository": "https://github.com/supabase/supabase-py (monorepo, package at src/auth)",
+  "version_examined": "2.34.1",
+  "tag_or_commit": "v2.34.1 (416bffd0d95662912b307a13f5956b91b61d0c74)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "src/auth/src/supabase_auth/_sync/gotrue_client.py SyncGoTrueClient.get_claims(jwt, jwks) decodes the JWT (helpers.decode_jwt) and checks expiry (helpers.validate_exp). It fetches a matching JWK (_fetch_jwks, helpers.parse_jwks) and verifies the signature with PyJWT's algorithm.verify, raising AuthInvalidJwtError('Invalid JWT signature') on failure. The async twin is in _async/gotrue_client.py.",
+  "entry_points": [
+   "SyncGoTrueClient.get_claims / AsyncGoTrueClient.get_claims",
+   "helpers.decode_jwt",
+   "helpers.validate_exp",
+   "SyncGoTrueClient._fetch_jwks",
+   "helpers.parse_jwks"
+  ],
+  "verification_path_files": [
+   "src/auth/src/supabase_auth/_sync/gotrue_client.py",
+   "src/auth/src/supabase_auth/_async/gotrue_client.py",
+   "src/auth/src/supabase_auth/helpers.py"
+  ],
+  "rejection_classes": [
+   "AuthInvalidJwtError"
+  ],
+  "n_checks": 7,
+  "n_checks_sharing_most_common_class": 7,
+  "n_negative_blocks": 19,
+  "n_blocks_class_only": 4,
+  "n_blocks_asserting_message": 15,
+  "test_framework": "pytest",
+  "tests_offline": "Mostly yes. The get_claims rejection tests in test_get_claims.py, test_jwks_and_refresh.py and test_client_flows.py use httpx MockTransport or in-process fakes. test_helpers.py is pure. The test_gotrue.py block raises in validate_exp before any request. Many other test_gotrue.py / test_gotrue_admin_api.py tests need local GoTrue servers on localhost (ports from clients.py, e.g. 9999), but those do not enter the counted blocks.",
+  "how_counted": "Checks: screening-scripts/scripts-7/checks.py with FUNCS='^(decode_jwt|validate_exp|parse_jwks|base64url_to_bytes|SyncGoTrueClient\\.(get_claims|_fetch_jwks))$' on helpers.py and _sync/gotrue_client.py. Result: 7 distinct (function, class, message) groups, all AuthInvalidJwtError: parse_jwks 'JWKS is empty'; decode_jwt 'Invalid JWT structure' (2 raises, 1 check); validate_exp 'JWT has no expiration time' and 'JWT has expired'; _fetch_jwks 'JWT has no valid kid' and 'No matching signing key found in JWKS'; get_claims 'Invalid JWT signature'. The async copy was not counted again. Negative blocks: screening-scripts/scripts-7/negtests.py with ENTRY='get_claims|decode_jwt|validate_exp|parse_jwks|_fetch_jwks', any exception class, over src/auth/tests. Result: 19 blocks, all expecting AuthInvalidJwtError. Per file: _async/test_client_flows 2, _async/test_get_claims 2, _async/test_gotrue 1, _async/test_jwks_and_refresh 3, the same 8 again in _sync, and test_helpers 3. 15 use match=; 4 (the test_get_claims.py blocks in _sync and _async) are class-only.",
+  "notes": "The _sync tests and code are generated from the _async ones (unasync), so 8 of the 19 blocks duplicate 8 others. Without the duplicates: 11 blocks (9 with match=, 2 class-only). The HS256 / no-kid path of get_claims delegates to the server (get_user) and does no local verification. set_session also calls decode_jwt, and it has extra AuthInvalidJwtError blocks (e.g. test_client_flows.py:690, test_gotrue.py:237) that are excluded because set_session is not in ENTRY. The signature check itself is done by PyJWT (an external dependency), not counted."
+ },
+ {
+  "rank": 700,
+  "project": "oauth2client",
+  "version_examined": "4.1.3",
+  "repository": "https://github.com/googleapis/oauth2client (archived, deprecated)",
+  "tag_or_commit": "v4.1.3 (50d20532a748f18e53f7d24ccbe6647132c979a9)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "oauth2client/crypt.py verify_signed_jwt_with_certs(jwt, certs, audience) checks segment count, parses the payload, verifies the signature against the PEM certs (_verify_signature), checks iat/exp/clock skew (_verify_time_range) and aud (_check_audience). It raises AppIdentityError on any failure and returns the payload dict on success. client.verify_id_token fetches the certs, then calls it.",
+  "entry_points": [
+   "oauth2client.crypt.verify_signed_jwt_with_certs",
+   "oauth2client.client.verify_id_token",
+   "(helpers) _verify_signature, _verify_time_range, _check_audience"
+  ],
+  "verification_path_files": [
+   "oauth2client/crypt.py",
+   "oauth2client/_helpers.py",
+   "oauth2client/_openssl_crypt.py / _pycrypto_crypt.py / _pure_python_crypt.py (Verifier.verify returns bool)"
+  ],
+  "rejection_classes": [
+   "AppIdentityError",
+   "VerifyJwtTokenError (verify_id_token, HTTP status only)"
+  ],
+  "n_checks": 10,
+  "n_checks_sharing_most_common_class": 10,
+  "n_negative_blocks": 5,
+  "n_blocks_class_only": 4,
+  "n_blocks_asserting_message": 1,
+  "test_framework": "unittest (run with pytest/nox)",
+  "tests_offline": "likely yes (HTTP is mocked with tests/http_mock.py), but the tests depend on pyOpenSSL/pycryptodome backends; compatibility of the 2018-era code with CPython 3.12 was not checked",
+  "excluded_by": "I4",
+  "how_counted": "checks: screening-scripts/scripts-0/checks.py on oauth2client/crypt.py gave 11 checks. 10 are AppIdentityError in verify_signed_jwt_with_certs (2), _verify_signature (1), _check_audience (2) and _verify_time_range (5). The 11th, NotImplementedError in _bad_pkcs12_key_as_pem, is not on the verify path. So 10 checks, all AppIdentityError. Blocks: screening-scripts/scripts-0/negblocks.py on tests/ with regex 'verify_signed_jwt_with_certs|_verify_signature|_check_audience|_verify_time_range|verify_id_token|...' gave 5 blocks: tests/test_crypt.py lines 138, 163 and 171 (class only), tests/test_jwt.py:159 verify_id_token expecting VerifyJwtTokenError (class only), and tests/test_jwt.py:88. That last one is a single 'with self.assertRaises(crypt.AppIdentityError) as exc_manager' block inside the helper _check_jwt_failure, followed by an assertion on str(exc_manager.exception), so it asserts the message. The helper is called from 8 test methods (grep count), and CryptTests is subclassed for 2 more backends, so more executions happen at runtime. By the literal block definition this is still 1 block.",
+  "notes": "I4 fails at 5 literal blocks. Counting each call to the _check_jwt_failure helper as a block would give 4 + 8 = 12, but the fixed block definition counts syntactic blocks. The project is deprecated and its repository archived; 4.1.3 is the last release."
+ },
+ {
+  "rank": 704,
+  "project": "sqlmodel",
+  "version_examined": "0.0.50",
+  "repository": "https://github.com/fastapi/sqlmodel",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "SQL database layer and ORM (SQLAlchemy + Pydantic models). It has no function that verifies an artifact from another party.",
+  "excluded_by": "I2",
+  "notes": "Not cloned; decided from the project description (database layer)."
+ },
+ {
+  "rank": 730,
+  "project": "griffe",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Extracts API signatures of Python packages for documentation and breaking-change detection; no verification of artifacts received from another party.",
+  "excluded_by": "I2",
+  "notes": "Obviously unrelated; no clone."
+ },
+ {
+  "rank": 748,
+  "project": "adal",
+  "repository": "https://github.com/AzureAD/azure-activedirectory-library-for-python",
+  "tag_or_commit": "1.2.7",
+  "version_examined": "1.2.7",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "ADAL (legacy, replaced by MSAL) does not check the authenticity, integrity, validity period, issuer or audience of anything it receives. oauth2_client._parse_id_token decodes the id_token without verifying it. The raises on received data are structural parsing and field presence: _validate_token_response 'wire_response is missing token_type/access_token'; WSTrustResponse.parse 'Received empty RSTR response body', 'Failed to parse RSTR in to DOM', 'No TokenType nodes found in RSTR', plus a raise on a SOAP fault; user_realm 'Cannot parse account_type'; authentication_parameters parse_challenge.",
+  "excluded_by": "I2",
+  "notes": "Borderline. If field presence in an OAuth2 token response were taken as a 'protocol rule', the largest family would be WSTrustResponse.parse: 7 AdalError checks by screening-scripts/scripts-3/raises.py, with 4 negative blocks in tests/test_wstrust_response.py, all assertRaisesRegex. In that case I4 would still fail. The whole adal test suite has 21 negative blocks by screening-scripts/scripts-3/negtests.py, 13 asserting the message, spread across authority, client-credentials, mex, wstrust and other families. Error class is mostly adal.AdalError."
+ },
+ {
+  "rank": 849,
+  "project": "id",
+  "repository": "https://github.com/di/id",
+  "version_examined": "1.6.1",
+  "tag_or_commit": "v1.6.1",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "id/__init__.py _validate_credential(credential, audience) decodes the OIDC JWT returned by the CI provider and raises AmbientCredentialError on a malformed token, a missing 'aud' or a wrong audience. It is called by detect_credential(audience). There is no signature check. The rest of the package fetches tokens client-side.",
+  "excluded_by": "I3",
+  "entry_points": [
+   "id._validate_credential (via id.detect_credential)"
+  ],
+  "verification_path_files": [
+   "id/__init__.py"
+  ],
+  "rejection_classes": [
+   "id.AmbientCredentialError"
+  ],
+  "n_checks": 4,
+  "n_checks_sharing_most_common_class": 4,
+  "how_counted": "Ran screening-scripts/scripts-4/raises.py on id/__init__.py. _validate_credential holds 4 AmbientCredentialError raises with distinct templates: 'Malformed token', 'Malformed token payload (JWT is not a JSON object)', '...(audience claim is missing)', and the f-string 'Token audience claim mismatch (expected {}, got {})'. That makes 4 checks, all of the same class.",
+  "test_framework": "pytest",
+  "tests_offline": "probably yes (test_ambient.py uses monkeypatch/mocks), not run",
+  "notes": "Marginal on I2: the only verification is the audience claim; there is no signature or expiry check. Under a broader reading where detect_credential is the verification call, id/_internal/oidc/ambient.py adds 17 checks (AmbientCredentialError 14, GitHubOidcPermissionCredentialError 2, ValueError 1). Those cover token retrieval failures (timeouts, HTTP errors, missing response fields), which are client-side acquisition, not verification. test_ambient.py has 21 pytest.raises blocks; 2 of them assert the _validate_credential messages (match= on audience mismatch and 'Malformed token')."
+ },
+ {
+  "rank": 867,
+  "project": "oscrypto",
+  "version_examined": "1.3.0",
+  "repository": "https://github.com/wbond/oscrypto",
+  "tag_or_commit": "1.3.0 (c91c8642e712e7801bf40403dd72165b607f4930)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "The package is pure Python over ctypes/cffi to the OS crypto libraries. oscrypto/_openssl/tls.py TLSSocket._handshake checks the server's handshake and certificate in Python: hostname via certificate.is_valid_domain_ip, weak signature hash, DH params, protocol detection, plus mapping of OpenSSL verify failures. It rejects by raising TLSVerificationError or TLSError through the raise_* helpers in oscrypto/_tls.py. asymmetric.*_verify raises SignatureError when OpenSSL's verify result is not 1.",
+  "excluded_by": "I4",
+  "entry_points": [
+   "oscrypto.tls.TLSSocket(...) / TLSSocket.wrap -> _handshake (largest family)",
+   "oscrypto.asymmetric.rsa_pkcs1v15_verify / rsa_pss_verify / dsa_verify / ecdsa_verify (-> _openssl.asymmetric._verify)"
+  ],
+  "verification_path_files": [
+   "oscrypto/_openssl/tls.py",
+   "oscrypto/_tls.py",
+   "oscrypto/errors.py",
+   "oscrypto/_openssl/asymmetric.py (asymmetric family)"
+  ],
+  "rejection_classes": [
+   "TLSVerificationError",
+   "TLSError",
+   "SignatureError"
+  ],
+  "n_checks": 14,
+  "n_checks_sharing_most_common_class": 8,
+  "n_negative_blocks": 0,
+  "n_blocks_class_only": 0,
+  "n_blocks_asserting_message": 0,
+  "test_framework": "unittest (run via tests/__init__ / run.py; also pytest-compatible)",
+  "tests_offline": "TLS tests: no. They connect to live hosts (www.google.com, badssl.com, badtls.io, digicert demo hosts, github.com). Asymmetric tests: offline, using fixture files and the system OpenSSL via ctypes (no C toolchain).",
+  "how_counted": "I3 (TLS family): screening-scripts/scripts-5/checks.py on oscrypto/_tls.py and oscrypto/_openssl/tls.py. Each raise_* helper holds one raise, so each is one check. Reachable from _handshake (grep of raise_*( calls in _openssl/tls.py): TLSVerificationError 8 (raise_hostname, raise_verification, raise_weak_signature, raise_revoked, raise_no_issuer, raise_self_signed, raise_lifetime_too_long, raise_expired_not_yet_valid) and TLSError 6 (raise_client_auth, raise_protocol_error x2 templates, raise_handshake, raise_protocol_version, raise_dh_params). TLSDisconnectError groups were left out as connection errors, not rejections. I4: screening-scripts/scripts-5/negtests.py with entry regex 'TLSSocket|wrap' and classes TLSError, TLSVerificationError on tests/test_tls.py found 0 blocks. All 24 TLS negative tests use the custom context manager tests/exception_context.assert_exception(self, cls, regex), which is not one of the allowed block forms (it does assert class and message internally).",
+  "notes": "Asymmetric family on the Linux/OpenSSL backend: screening-scripts/scripts-5/checks.py on _openssl/asymmetric.py shows _verify has 1 rejection check (SignatureError 'Signature is invalid', x4 raises). It also has argument-validation groups (TypeError x3, ValueError x3) plus 1 ValueError key-type group in each public wrapper. So I3 fails for it unless argument validation is counted as rejection. tests/test_asymmetric.py has exactly 10 'with self.assertRaises(errors.SignatureError)' blocks calling *_verify (negtests.py, regex '_verify$'), all class-only. The _win and _mac backends were not counted. Clone at clones/oscrypto."
+ },
+ {
+  "rank": 869,
+  "project": "service-identity",
+  "repository": "https://github.com/pyca/service-identity",
+  "tag_or_commit": "26.1.0",
+  "version_examined": "26.1.0",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "src/service_identity/cryptography.py verify_certificate_hostname(certificate, hostname) checks a peer X.509 certificate's subjectAltName identities against the expected hostname. It returns None or raises VerificationError (mismatch) or CertificateError (no SAN, invalid patterns, wildcard rules), through hazmat.verify_service_identity. The pyopenssl.verify_hostname/verify_ip_address and verify_certificate_ip_address variants work the same way.",
+  "excluded_by": "",
+  "entry_points": [
+   "service_identity.cryptography.verify_certificate_hostname",
+   "service_identity.cryptography.verify_certificate_ip_address",
+   "service_identity.pyopenssl.verify_hostname",
+   "service_identity.pyopenssl.verify_ip_address",
+   "service_identity.hazmat.verify_service_identity"
+  ],
+  "verification_path_files": [
+   "src/service_identity/cryptography.py",
+   "src/service_identity/hazmat.py",
+   "src/service_identity/exceptions.py"
+  ],
+  "rejection_classes": [
+   "service_identity.exceptions.VerificationError",
+   "service_identity.exceptions.CertificateError"
+  ],
+  "n_checks": 17,
+  "n_checks_sharing_most_common_class": 10,
+  "n_negative_blocks": 12,
+  "n_blocks_class_only": 9,
+  "n_blocks_asserting_message": 3,
+  "test_framework": "pytest",
+  "tests_offline": "Yes, likely: the test certificates are embedded in tests/certificates.py, with no network. Needs the cryptography, pyOpenSSL and idna wheels (no C toolchain with wheels on CPython 3.12). Not run.",
+  "how_counted": "I3: screening-scripts/scripts-6/checks.py with entry verify_certificate_hostname over hazmat.py, cryptography.py, pyopenssl.py and exceptions.py. Name-based resolution also pulls in pyopenssl.extract_patterns, which has no raises. 'msg = ...; raise E(msg)' is resolved to the assigned template. Result: 17 checks in 20 reachable functions: CertificateError 10, TypeError 4, VerificationError 1, ValueError 1, ImportError 1. Rejection checks (CertificateError plus VerificationError) number 11. The TypeError, ValueError and ImportError checks validate the caller's hostname/ID arguments (DNS_ID, pattern types), not the certificate. I4: screening-scripts/scripts-6/negblocks.py with entries verify_certificate_hostname, verify_certificate_ip_address, verify_hostname, verify_ip_address and verify_service_identity, classes VerificationError and CertificateError, over tests/test_hazmat.py, test_cryptography.py and test_pyopenssl.py. Result: 12 'with pytest.raises' blocks (hazmat 6, cryptography 4, pyopenssl 2). By manual reading of each block: 3 use match= on the message ('Certificate does not contain any `subjectAltName`s'). The other 9 (VerificationError) assert e.value.errors == [DNSMismatch(...)] after the block, i.e. structured exception content, not the message; they are counted as class-only. The script's automatic split (12 msg) treats any later assert on the as-name as a message assertion and was corrected by hand.",
+  "notes": "Counting blocks that call internal pattern validators on the same path (DNSPattern/URIPattern/SRVPattern.from_bytes, _validate_pattern, extract_patterns) as well gives 25 blocks. The 13 extra are 12 class-only plus 1 with match= (extract_patterns, 'Unexpected certificate content.'). The 11 TypeError/ValueError/ImportError blocks on DNS_ID/URI_ID/SRV_ID construction were excluded as argument validation."
+ },
+ {
+  "rank": 875,
+  "project": "jwcrypto",
+  "excluded_by": "",
+  "repository": "https://github.com/latchset/jwcrypto",
+  "version_examined": "1.6.1",
+  "tag_or_commit": "v1.6.1 (c10aa4343f9ce2e68caaf20aef9d2c5f6d0c4d71)",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "jwcrypto/jwt.py JWT(jwt=..., key=...) -> JWT.deserialize -> JWT.validate runs JWS.verify or JWE.decrypt and then _check_provided_claims/_check_default_claims. Failures raise JWTExpired, JWTNotYetValid, JWTMissingClaim, JWTInvalidClaimValue, JWTInvalidClaimFormat, JWTMissingKey, InvalidJWSSignature, InvalidJWSObject. Pure Python over the cryptography package.",
+  "entry_points": [
+   "JWT.__init__(jwt=, key=)",
+   "JWT.deserialize",
+   "JWT.validate",
+   "JWS.verify / JWS.deserialize (reached through JWT.validate)"
+  ],
+  "verification_path_files": [
+   "jwcrypto/jwt.py",
+   "jwcrypto/jws.py"
+  ],
+  "rejection_classes": [
+   "JWTExpired",
+   "JWTNotYetValid",
+   "JWTMissingClaim",
+   "JWTInvalidClaimValue",
+   "JWTInvalidClaimFormat",
+   "JWTMissingKey",
+   "InvalidJWSSignature",
+   "InvalidJWSObject",
+   "InvalidJWSOperation",
+   "JWKeyNotFound",
+   "ValueError",
+   "TypeError"
+  ],
+  "n_checks": 50,
+  "n_checks_sharing_most_common_class": 10,
+  "n_negative_blocks": 36,
+  "n_blocks_class_only": 36,
+  "n_blocks_asserting_message": 0,
+  "test_framework": "unittest (self.assertRaises), run with pytest",
+  "tests_offline": "Yes. jwcrypto/tests.py is self-contained with embedded keys and vectors and needs the cryptography wheel only. tests_mldsa.py needs ML-DSA support in the installed cryptography/OpenSSL (not checked).",
+  "how_counted": "Checks: screening-scripts/scripts-7/checks.py on jwt.py with FUNCS limited to JWT._expected_type_heuristics, JWT._check_*, validate, deserialize, norm_typ, expected_type, leeway, validity, token: 23 groups (ValueError 6, JWTInvalidClaimFormat 5, JWTInvalidClaimValue 5, TypeError 3, JWTExpired, JWTNotYetValid, JWTMissingClaim and JWTMissingKey 1 each). On jws.py with FUNCS limited to JWSCore.__init__/_jwa/_payload/verify and JWS._merge_check_headers/_verify/_get_obj_payload/verify/_deserialize_signature/_deserialize_b64/deserialize/allowed_algs/jose_header/payload: 27 groups (InvalidJWSObject 10, InvalidJWSSignature 8, InvalidJWSOperation 4, JWKeyNotFound 3, TypeError 1, ValueError 1). Total 50. InvalidJWSObject is the most common class with 10. Whole-file totals for reference: jws.py 38, jwe.py 30, jwa.py 56, jwk.py 67, common.py 6. Negative blocks: screening-scripts/scripts-7/negtests.py with ENTRY='JWT|validate', any exception class, over jwcrypto/tests.py, tests-cookbook.py and tests_mldsa.py. Result: 36 blocks, all in tests.py: JWTInvalidClaimValue 13, TypeError 11 (expected_type mismatches), JWTMissingKey 4, JWTInvalidClaimFormat 3, JWTExpired 1, JWTMissingClaim 1, InvalidJWEData 1, ValueError 1, KeyError 1. All are self.assertRaises with no message assertion. A separate JWS-only count (ENTRY='verify|deserialize', EXC matching JWS|JWKeyNotFound) gives 9 more class-only blocks.",
+  "notes": "Largest coherent family described: JWT deserialize/validate plus the JWS verify path. JWE.decrypt (jwe.py, InvalidJWEData; 11 InvalidJWEData blocks in tests.py by the broad matcher) and the JWK import/validation in jwk.py are further verification families, not included in the 50. Of the 36 JWT blocks, 11 expect TypeError for expected_type/key-usage mismatches, and a few expect ValueError/KeyError."
+ },
+ {
+  "rank": 884,
+  "project": "aws-requests-auth",
+  "version_examined": "0.4.3",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "PyPI summary: 'AWS signature version 4 signing process for the python requests module'. It is a requests auth plugin that builds SigV4 signatures for outgoing requests (client-side signing only) and verifies nothing received from another party.",
+  "excluded_by": "I2",
+  "notes": "Pure client-side request signing, which I2 excludes. Decided from documentation; no clone."
+ },
+ {
+  "rank": 891,
+  "project": "pydata-google-auth",
+  "version_examined": "1.9.1",
+  "repository": "https://github.com/pydata/pydata-google-auth",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "A helper that gets Google user credentials for pandas-gbq and similar tools (get_user_credentials, OAuth installed-app flow, credential caching). It is client-side credential acquisition built on google-auth / google-auth-oauthlib, and any token verification is in those dependencies, not in this package.",
+  "excluded_by": "I2",
+  "notes": "Not cloned; decided from the PyPI description and known package scope. The source was not read."
+ },
+ {
+  "rank": 894,
+  "project": "flask-login",
+  "repository": "https://github.com/maxcountryman/flask-login",
+  "version_examined": "0.6.3",
+  "tag_or_commit": "0.6.3",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "The only artifact verification is the remember-me cookie: utils.decode_cookie() checks an HMAC digest with hmac.compare_digest and returns the payload or None (docstring: 'If verification of the cookie fails, None will be implicitly returned'). LoginManager._load_user_from_remember_cookie/_load_user_from_header return None; _session_protection_failed returns True/False. The raise statements in src/flask_login (login_manager.py 347, 490; utils.py 198; mixins.py 27) are configuration/programming errors, and abort(401) in unauthorized() concerns a missing login, not rejection of a received artifact.",
+  "excluded_by": "I2",
+  "entry_points": [
+   "flask_login.utils.decode_cookie",
+   "LoginManager._load_user_from_remember_cookie"
+  ],
+  "verification_path_files": [
+   "src/flask_login/utils.py",
+   "src/flask_login/login_manager.py"
+  ],
+  "notes": "Cloned shallowly at tag 0.6.3 and grepped for raise/abort; rejection is signalled by return values, so I2 fails."
+ },
+ {
+  "rank": 912,
+  "project": "msoffcrypto-tool",
+  "repository": "https://github.com/nolze/msoffcrypto-tool",
+  "tag_or_commit": "v6.1.0",
+  "version_examined": "6.1.0",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": true,
+  "i2_evidence": "msoffcrypto/format/ooxml.py OOXMLFile.decrypt(outfile, verify_integrity=True) checks the HMAC data integrity of an agile-encrypted Office document (ECMA376Agile.verify_integrity returns a bool) and raises exceptions.InvalidKeyError('Payload integrity verification failed'). load_key raises InvalidKeyError('Key verification failed') when the password verifier does not match.",
+  "excluded_by": "I3",
+  "entry_points": [
+   "msoffcrypto.format.ooxml.OOXMLFile.decrypt",
+   "msoffcrypto.format.ooxml.OOXMLFile.load_key"
+  ],
+  "verification_path_files": [
+   "msoffcrypto/format/ooxml.py",
+   "msoffcrypto/method/ecma376_agile.py",
+   "msoffcrypto/method/ecma376_standard.py",
+   "msoffcrypto/exceptions/__init__.py"
+  ],
+  "rejection_classes": [
+   "msoffcrypto.exceptions.InvalidKeyError",
+   "msoffcrypto.exceptions.DecryptionError"
+  ],
+  "n_checks": 4,
+  "n_checks_sharing_most_common_class": 2,
+  "n_negative_blocks": 0,
+  "n_blocks_class_only": 0,
+  "n_blocks_asserting_message": 0,
+  "test_framework": "unittest/pytest",
+  "tests_offline": "not checked in detail (tests use local sample files)",
+  "how_counted": "screening-scripts/scripts-3/raises.py over format/ooxml.py, method/ecma376_agile.py, method/ecma376_standard.py and format/common.py. OOXMLFile.decrypt has 4 checks: InvalidKeyError 'Payload integrity verification failed', DecryptionError 'Document is not encrypted', DecryptionError 'Unsupported encryption method', InvalidKeyError 'The file could not be decrypted with this password'. The ECMA376Agile.verify_integrity/decrypt and ECMA376Standard.decrypt methods it calls contain no raise; the only raise in ecma376_agile.py is _get_salt, on the encryption side. OOXMLFile.load_key has 3 distinct checks: 2 identical 'Key verification failed' raises count as 1, plus 'Unsupported key type...' and 'No key specified'. Legacy formats have fewer each: doc97 load_key 3, xls97 load_key 3 including a ParseError from _BIFFStream.skip_to. Negative tests: screening-scripts/scripts-3/negtests.py over tests/ with entry points decrypt and load_key found 2 blocks in total, 0 selected. Rejection behaviour is exercised only in doctests (Traceback examples in docstrings), which are not pytest.raises/assertRaises blocks.",
+  "notes": "No single call path reaches 5 checks, so I3 fails. I4 would also fail: 0 qualifying blocks."
+ },
+ {
+  "rank": 955,
+  "project": "prek",
+  "repository": "https://github.com/j178/prek",
+  "version_examined": "0.5.10",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "A Git hook manager written in Rust (an alternative to pre-commit). It is a build/dev tool, not Python verification code.",
+  "excluded_by": "I2",
+  "notes": "Not cloned; obviously unrelated."
+ },
+ {
+  "rank": 957,
+  "project": "cmake",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "PyPI wrapper that ships the CMake build-tool binaries with a thin Python launcher; it contains no verification of received artifacts.",
+  "excluded_by": "I2",
+  "notes": "Obviously unrelated build tool. Not cloned."
+ },
+ {
+  "rank": 997,
+  "project": "types-pyopenssl",
+  "i1_third_party_open_source": true,
+  "i2_python_verifier_that_raises": false,
+  "i2_evidence": "Typeshed typing stubs (.pyi) for pyOpenSSL, version 24.1.0.20240722 from the PyPI JSON. They contain no runtime code and no function bodies.",
+  "excluded_by": "I2",
+  "version_examined": "24.1.0.20240722",
+  "notes": "Typing stubs only. Not cloned."
+ }
+]
