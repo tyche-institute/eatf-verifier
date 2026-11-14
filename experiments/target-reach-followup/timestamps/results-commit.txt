@@ -1,0 +1,1 @@
+eatf-verifier research/mutation-adequacy commit afc0522f9daf2cb768b5eddb09dac8cf8a2277dd (experiments/target-reach-followup: the results of the follow-up analyses, the readings of the flags, the second computation and the deviations)

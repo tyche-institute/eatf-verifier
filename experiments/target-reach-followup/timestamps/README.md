@@ -62,3 +62,30 @@ that time, and the analysis programs that compare them are those of the
 history of this commit, with the 1 correction that `../DEVIATIONS.md`
 describes. What they do not show: how a reading was made. `../PROTOCOL.md`,
 section 4.1, states what a reading is given and what it is not given.
+
+## The commit of the results
+
+`results-commit.txt` names the commit that holds the results of the 4
+analyses, the readings of the flags (`../readings/`), the second computation
+(`../recompute/`) and `../DEVIATIONS.md`, as step 9 of section 6 of
+`../PROTOCOL.md` asks:
+
+    afc0522f9daf2cb768b5eddb09dac8cf8a2277dd
+
+Its SHA-256 was sent to the same 2 authorities after the commit. The token
+of freetsa.org carries the time 2026-11-14 19:27:24 UTC, and the token of
+DigiCert the time 2026-11-14 19:27:25 UTC.
+
+| File | Authority |
+|---|---|
+| `results-commit.freetsa.tsr` | freetsa.org |
+| `results-commit.digicert.tsr` | DigiCert |
+
+Verify as above, with `results-commit` in place of `protocol-commit`.
+
+What the tokens show: the results, the second scripts with the digests that
+`../recompute/NOTES.md` lists, and the deviations existed in this form at that
+time. What they do not show: that the second scripts were fixed before the
+comparisons. The commit that holds them is later than the comparisons, and
+section 2 of `../recompute/NOTES.md` states on which records that statement
+rests.
