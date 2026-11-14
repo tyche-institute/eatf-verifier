@@ -103,6 +103,17 @@ with` or a `match` statement, as `reach/checks.py` reads them) is recorded
 under `unmapped` too, with that reason; `trace_run.py` checks the reason
 against the source of every unmapped code (sentinel T-map).
 
+**What the plugin leaves alone.** A suite may replace a function of the
+standard library during a test and count its calls. The callback of the
+plugin therefore calls nothing that a test can replace: it reads no
+environment variable and calls no function of `os`. The test id of a start is
+the node id that pytest passes to `pytest_runtest_logstart`. The paths of the
+subject files are spelled out when the plugin starts (as given, absolute and
+with links resolved), and a file name is looked up among them as it stands;
+a name that is no such spelling and resolves to a subject file is reported
+when pytest ends, and sentinel T-files then does not hold, since the starts
+of that file's codes were not recorded.
+
 **Reachable under rule 3.** `rule3.py` replaces, in a copy of `checks.json`,
 the field `reachable` of each check by `reachable by name or (file, function)
 started under an entry point`, and calls `compute_targets` of
@@ -168,6 +179,7 @@ sentinels does not hold.
 | T3-repeat | `trace_run.py` | with 2 or more repeats, every traced run gives the same entry-point sets and the same passing tests; the differences are listed |
 | T3-repeat-reach | `trace_run.py` | with 2 or more repeats, every traced run gives the same set of codes that started under at least 1 entry point, which is all that rule 3 reads |
 | T-map | `trace_run.py` | every started code of a subject file is a function of `checks.json`, or a lambda, a generator expression or an unlisted definition found at that line of the source |
+| T-files | `trace_run.py` | no code of a subject file ran under a file name that the plugin did not hold when it started |
 | T4 | `analyse3.py` | `reach/analyse.py` on the rule-3 targets passes its 7 sentinels |
 | R2 | `analyse3.py` | `reach/analyse.py` on the rule-2 targets, from the deposited records, writes files equal byte for byte to `../target-reach/generated/<name>/` (SHA256SUMS aside) |
 | (unnamed) | `rule3.py` | every function of `reach.json` is a function of `checks.json` |

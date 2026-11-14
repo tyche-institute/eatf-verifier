@@ -40,6 +40,9 @@ does not hold):
     T-map     every started code of a subject file whose name is not
               `<lambda>` or `<genexpr>` is a function of checks.json, or is
               listed under `unmapped` with its reason
+    T-files   no code of a subject file ran under a file name that the plugin
+              did not hold when it started (the starts of such a code are not
+              recorded)
 """
 
 from __future__ import annotations
@@ -305,6 +308,8 @@ def main(argv: list[str]) -> int:
                                         "first_test_per_entry_point": (mi.get(k) or {}).get("first_test", {}),
                                         "holds_a_check": (k[0], fn) in check_fns})
     anonymous_or_listed = all(u["reason"] for u in unmapped)
+    other_names = sorted({n for r in traced_runs for t in r["traces"] if t
+                          for n in t.get("subject_files_under_another_name", [])})
 
     sentinels = [
         {"name": "T3: the tests that pass in the traced run are the tests that pass in both deposited "
@@ -315,6 +320,8 @@ def main(argv: list[str]) -> int:
                     "trace_files_written": traces_ok}},
         {"name": "T-map: every started code of a subject file is a function of checks.json or is listed "
                  "under unmapped with its reason", "pass": anonymous_or_listed},
+        {"name": "T-files: no code of a subject file ran under a file name that the plugin did not "
+                 "hold when it started", "pass": not other_names, "detail": other_names[:20]},
     ]
     if repeat_ok is not None:
         sentinels.append({"name": "T3-repeat: every traced run gives the same entry-point sets and the "

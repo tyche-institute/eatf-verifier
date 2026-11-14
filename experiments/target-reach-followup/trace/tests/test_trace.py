@@ -34,7 +34,7 @@ FIXTURE = HERE / "fixture"
 CLONE = FIXTURE / "toytrace"
 TESTS = ["test_ok", "test_bad_signature", "test_expired_token", "test_empty_part", "test_too_deep",
          "test_negative_box", "test_async_rejected", "test_lazy_outside", "test_unwinding_then_direct_call",
-         "test_codec_own_name", "test_thread"]
+         "test_codec_own_name", "test_thread", "test_environment_replaced"]
 
 
 @pytest.fixture(scope="module")
@@ -116,9 +116,22 @@ def test_coroutines(traced):
 def test_unwinding(traced):
     u = fn(traced["reach"], "tracepkg/helpers.py", "util")
     assert u["entry_points"] == ["decode"]
-    # the direct call after an exception unwound through decode, and Codec.decode, which is
-    # itself an entry-point frame: exactly 1 start under no entry point
-    assert u["starts_under_none"] == 1
+    # the direct calls of 2 tests: after an exception unwound through decode, and inside a
+    # test that replaces os.environ.get; Codec.decode is itself an entry-point frame
+    assert u["starts_under_none"] == 2
+    assert u["tests_under_none"] == ["tests/test_toytrace.py::test_unwinding_then_direct_call",
+                                     "tests/test_toytrace.py::test_environment_replaced"]
+
+
+def test_plugin_leaves_replaced_functions_alone(traced):
+    """The fixture holds a test that replaces os.environ.get and counts its calls: it passes
+    under the plugin, and no recorded test id is the replaced value or empty inside a test."""
+    r = traced["reach"]
+    assert r["outcomes"]["traced"] == {"passed": len(TESTS)}
+    ids = {t for f in r["functions"] for t in f["tests_under_none"]}
+    ids |= {t for f in r["functions"] for t in f["first_test_per_entry_point"].values()}
+    assert ids and all(t.startswith("tests/test_toytrace.py::test_") for t in ids)
+    assert [s for s in r["sentinels"] if s["name"].startswith("T-files")][0]["pass"]
 
 
 def test_nested_lambda_property(traced):

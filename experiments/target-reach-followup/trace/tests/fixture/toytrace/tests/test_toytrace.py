@@ -1,3 +1,6 @@
+import os
+from unittest import mock
+
 import pytest
 
 from tracepkg import decode
@@ -58,3 +61,10 @@ def test_codec_own_name():
 
 def test_thread():
     assert decode("none.thread") == ["none", "thread"]
+
+
+def test_environment_replaced():
+    # a test may replace os.environ.get and count its calls
+    with mock.patch.object(os.environ, "get", return_value="replaced") as fake:
+        assert util("abcd") == 4
+    fake.assert_not_called()
