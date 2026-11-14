@@ -209,12 +209,14 @@ export async function verify(
     );
   }
   let rsaOk: boolean;
+  let rsaLegacyDigestInfo = false;
   let rsaKey: CryptoKey;
   try {
     rsaKey = await importRsaPublicKey(rsaPem);
     rsaOk = await verifyRsa(rsaKey, rsaSig, canonicalBytes);
     if (!rsaOk) {
       rsaOk = verifyRsaDigestInfo(rsaPem, rsaSig, actualHashBytes);
+      rsaLegacyDigestInfo = rsaOk;
     }
   } catch (e) {
     return fail(
@@ -233,6 +235,11 @@ export async function verify(
     );
   }
   report.push("RSA-4096 signature verified.");
+  if (rsaLegacyDigestInfo) {
+    report.push(
+      "RSA signature uses the legacy SHA-256 DigestInfo without NULL parameters (RFC 8017 Appendix B.1 requires NULL); accepted for read-only compatibility.",
+    );
+  }
 
   const overt = parseAndValidateOvertReceipt(entries, metadata, expectedHashHex);
   overtReceipt = overt.receipt;

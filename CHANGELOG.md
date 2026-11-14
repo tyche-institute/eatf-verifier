@@ -10,6 +10,31 @@
 
 ## Unreleased
 
+- **Both verifiers now compare the whole RSA encoded block in the legacy
+  DigestInfo path.** After a strict RSASSA-PKCS1-v1_5 failure, v0.7.3 and
+  earlier stripped the padding and compared only the trailing 32 bytes with
+  the SHA-256 digest, so any bytes between the padding and the digest, any
+  padding length and any DigestInfo prefix were accepted. The fallback now
+  builds the one block the Java reference signer produces (full-length
+  padding, SHA-256 DigestInfo with absent parameters, digest) and requires
+  the recovered block to equal it; the report says when this legacy form was
+  used. RFC 8017 Appendix B.1 requires NULL parameters, so writers must not
+  produce it. No forgery is known against the e = 65537 keys used here; the
+  lenient comparison is the class of Bleichenbacher 2006 and BERserk 2014.
+  Found by an independent second verifier built from the documents.
+- Re-signed `valid/valid-overt-profile`, `valid/mcp-tools-call-valid`,
+  `valid/mcp-tools-call-denied-policy` and `invalid/tampered-overt-receipt`
+  in the RFC 8017 form with the same 2048-bit test key
+  (`scripts/resign-rsa-signature.py`); only `signature.sig` changed in each.
+  Their signatures had DigestInfo parameters absent, so strict
+  implementations (OpenSSL 3.0, pyca/cryptography, and Go `crypto/rsa` in
+  the second verifier) rejected three packages that the contract lists as
+  valid.
+  `invalid/tampered-overt-receipt` now fails at the receipt check it is
+  meant to exercise for those implementations too.
+- `docs/aep-format.md` states the signature encoding in step 6 and that a
+  trailing LF in `hash.sha256` is accepted.
+
 - Corrected `docs/authority-record-v1-scope.md`, the README and the
   cross-check table. The v0.7.3 text said the RFC 3161 tokens of the frozen
   authority-record corpus bind none of its packages. Each parseable token's
