@@ -1,0 +1,4003 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_redirect_uri#0",
+   "name_tokens": [
+    "invalid",
+    "redirect",
+    "uri"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_redirect_uri#2",
+   "name_tokens": [
+    "invalid",
+    "redirect",
+    "uri"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_default_redirect_uri#0",
+   "name_tokens": [
+    "default",
+    "invalid",
+    "redirect",
+    "uri"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidRedirectURIError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_default_redirect_uri#2",
+   "name_tokens": [
+    "default",
+    "invalid",
+    "redirect",
+    "uri"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MissingRedirectURIError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_redirect_uri#0",
+   "name_tokens": [
+    "missing",
+    "redirect",
+    "uri"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+     "score": 0.0,
+     "tokens": [
+      "missing",
+      "redirect",
+      "uri"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+     "score": 0.0,
+     "tokens": [
+      "missing",
+      "redirect",
+      "uri"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MissingRedirectURIError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_redirect_uri#2",
+   "name_tokens": [
+    "missing",
+    "redirect",
+    "uri"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+     "score": 0.0,
+     "tokens": [
+      "missing",
+      "redirect",
+      "uri"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+     "score": 0.0,
+     "tokens": [
+      "missing",
+      "redirect",
+      "uri"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MismatchingRedirectURIError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_mismatching_redirect_uri#0",
+   "name_tokens": [
+    "mismatching",
+    "redirect",
+    "uri"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+     "score": 0.0,
+     "tokens": [
+      "mismatching",
+      "redirect",
+      "uri"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+     "score": 0.0,
+     "tokens": [
+      "mismatching",
+      "redirect",
+      "uri"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MismatchingRedirectURIError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_mismatching_redirect_uri#2",
+   "name_tokens": [
+    "mismatching",
+    "redirect",
+    "uri"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+     "score": 0.0,
+     "tokens": [
+      "mismatching",
+      "redirect",
+      "uri"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+     "score": 0.0,
+     "tokens": [
+      "mismatching",
+      "redirect",
+      "uri"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MissingClientIdError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_client_id#0",
+   "name_tokens": [
+    "client",
+    "id",
+    "missing"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "id",
+      "missing"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "id",
+      "missing"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MissingClientIdError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_missing_client_id#2",
+   "name_tokens": [
+    "client",
+    "id",
+    "missing"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "id",
+      "missing"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "id",
+      "missing"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidClientIdError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_client_id#0",
+   "name_tokens": [
+    "client",
+    "id",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "id",
+      "invalid"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "id",
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidClientIdError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_client_id#2",
+   "name_tokens": [
+    "client",
+    "id",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "id",
+      "invalid"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "id",
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_empty_parameter#0",
+   "name_tokens": [
+    "empty",
+    "parameter"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+     "score": 1.871802,
+     "tokens": [
+      "parameter"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+     "score": 1.871802,
+     "tokens": [
+      "parameter"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_empty_parameter#1",
+   "name_tokens": [
+    "empty",
+    "parameter"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+     "score": 1.871802,
+     "tokens": [
+      "parameter"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+     "score": 1.871802,
+     "tokens": [
+      "parameter"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_duplicate_params#0",
+   "name_tokens": [
+    "duplicate",
+    "invalid",
+    "param",
+    "request"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+     "score": 4.362644,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "param",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+     "score": 4.362644,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "param",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+     "score": 0.619039,
+     "tokens": [
+      "invalid",
+      "request"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidRequestFatalError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_duplicate_params#2",
+   "name_tokens": [
+    "duplicate",
+    "invalid",
+    "param",
+    "request"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+     "score": 4.362644,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "param",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+     "score": 4.362644,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "param",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+     "score": 0.619039,
+     "tokens": [
+      "invalid",
+      "request"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MissingResponseTypeError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_missing_response_type#0",
+   "name_tokens": [
+    "invalid",
+    "missing",
+    "request",
+    "response",
+    "type"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": [
+      "missing",
+      "request",
+      "response",
+      "type"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+     "score": 0.0,
+     "tokens": [
+      "missing",
+      "request",
+      "response",
+      "type"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MissingResponseTypeError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_request_missing_response_type#1",
+   "name_tokens": [
+    "invalid",
+    "missing",
+    "request",
+    "response",
+    "type"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": [
+      "missing",
+      "request",
+      "response",
+      "type"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+     "score": 0.0,
+     "tokens": [
+      "missing",
+      "request",
+      "response",
+      "type"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#7"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnauthorizedClientError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_unauthorized_client#0",
+   "name_tokens": [
+    "client",
+    "unauthorized"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#7",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "unauthorized"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "unauthorized"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#7",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "unauthorized"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#7"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#7"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnauthorizedClientError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_unauthorized_client#1",
+   "name_tokens": [
+    "client",
+    "unauthorized"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#7",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "unauthorized"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "unauthorized"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#7",
+     "score": 0.0,
+     "tokens": [
+      "client",
+      "unauthorized"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#6",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#6"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#6",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#6"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedResponseTypeError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_unsupported_response_type#0",
+   "name_tokens": [
+    "response",
+    "type",
+    "unsupported"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#6",
+     "score": 0.0,
+     "tokens": [
+      "response",
+      "type",
+      "unsupported"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#6",
+     "score": 0.0,
+     "tokens": [
+      "response",
+      "type",
+      "unsupported"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#6",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#6"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#6",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#6"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedResponseTypeError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_unsupported_response_type#1",
+   "name_tokens": [
+    "response",
+    "type",
+    "unsupported"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#6",
+     "score": 0.0,
+     "tokens": [
+      "response",
+      "type",
+      "unsupported"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#6",
+     "score": 0.0,
+     "tokens": [
+      "response",
+      "type",
+      "unsupported"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidScopeError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_scope#0",
+   "name_tokens": [
+    "invalid",
+    "scope"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "scope"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "scope"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidScopeError"
+   ],
+   "key": "tests/oauth2/rfc6749/endpoints/test_error_responses.py::ErrorResponseTest.test_invalid_scope#1",
+   "name_tokens": [
+    "invalid",
+    "scope"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "scope"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "scope"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_request#0",
+   "name_tokens": [
+    "invalid",
+    "request"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.348307,
+     "tokens": [
+      "invalid",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.348307,
+     "tokens": [
+      "invalid",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+     "score": 0.348307,
+     "tokens": [
+      "invalid",
+      "request"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_request_duplicates#0",
+   "name_tokens": [
+    "duplicate",
+    "invalid",
+    "request"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+     "score": 1.795226,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+     "score": 1.795226,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+     "score": 1.795226,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "request"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidClientError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_authenticate_client#0",
+   "name_tokens": [
+    "authenticate",
+    "client"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+     "score": 0.0,
+     "tokens": [
+      "authenticate",
+      "client"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1",
+     "score": 0.0,
+     "tokens": [
+      "authenticate",
+      "client"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_grant#0",
+   "name_tokens": [
+    "grant",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "invalid"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "invalid"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedGrantTypeError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_grant_type#0",
+   "name_tokens": [
+    "grant",
+    "invalid",
+    "type"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "type"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "type"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "type"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidClientError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_authenticate_client_id#0",
+   "name_tokens": [
+    "authenticate",
+    "client",
+    "id"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1",
+     "score": 0.693147,
+     "tokens": [
+      "authenticate",
+      "client",
+      "id"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+     "score": 0.0,
+     "tokens": [
+      "authenticate",
+      "client"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ServerError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_client_id_discrepancy#0",
+   "name_tokens": [
+    "client",
+    "discrepancy",
+    "id"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+     "score": 1.386294,
+     "tokens": [
+      "client",
+      "id"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+     "score": 1.386294,
+     "tokens": [
+      "client",
+      "id"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ServerError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_public_client_id_discrepancy#0",
+   "name_tokens": [
+    "client",
+    "discrepancy",
+    "id",
+    "public"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+     "score": 2.772589,
+     "tokens": [
+      "client",
+      "id",
+      "public"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+     "score": 1.386294,
+     "tokens": [
+      "client",
+      "id"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MismatchingRedirectURIError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_invalid_redirect_uri#0",
+   "name_tokens": [
+    "invalid",
+    "redirect",
+    "uri"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+     "score": 0.0,
+     "tokens": [
+      "redirect",
+      "uri"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+     "score": 0.0,
+     "tokens": [
+      "redirect",
+      "uri"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingCodeChallengeError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_challenge_missing#0",
+   "name_tokens": [
+    "challenge",
+    "missing",
+    "pkce"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "UnsupportedCodeChallengeMethodError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_wrong_method#0",
+   "name_tokens": [
+    "method",
+    "pkce",
+    "wrong"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingCodeVerifierError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_verifier_missing#0",
+   "name_tokens": [
+    "missing",
+    "pkce",
+    "verifier"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingCodeVerifierError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_missing_challenge_missing#0",
+   "name_tokens": [
+    "challenge",
+    "missing",
+    "pkce",
+    "required",
+    "verifier"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingCodeVerifierError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_missing_challenge_valid#0",
+   "name_tokens": [
+    "challenge",
+    "missing",
+    "pkce",
+    "required",
+    "valid",
+    "verifier"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_valid_challenge_missing#0",
+   "name_tokens": [
+    "challenge",
+    "missing",
+    "pkce",
+    "required",
+    "valid",
+    "verifier"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+     "score": 4.276666,
+     "tokens": [
+      "challenge",
+      "pkce",
+      "required"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+     "score": 2.484907,
+     "tokens": [
+      "challenge",
+      "verifier"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+     "score": 0.693147,
+     "tokens": [
+      "challenge"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_invalid_challenge_valid_method_valid#0",
+   "name_tokens": [
+    "challenge",
+    "invalid",
+    "method",
+    "pkce",
+    "required",
+    "valid",
+    "verifier"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+     "score": 4.276666,
+     "tokens": [
+      "challenge",
+      "invalid",
+      "pkce",
+      "required"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+     "score": 3.583519,
+     "tokens": [
+      "challenge",
+      "invalid",
+      "method",
+      "verifier"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+     "score": 1.791759,
+     "tokens": [
+      "challenge",
+      "invalid",
+      "method"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ServerError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_required_verifier_valid_challenge_valid_method_wrong#0",
+   "name_tokens": [
+    "challenge",
+    "method",
+    "pkce",
+    "required",
+    "valid",
+    "verifier",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+     "score": 2.772589,
+     "tokens": [
+      "challenge",
+      "method"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_verifier_valid_challenge_valid_method_missing#0",
+   "name_tokens": [
+    "challenge",
+    "method",
+    "missing",
+    "pkce",
+    "valid",
+    "verifier"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+     "score": 3.583519,
+     "tokens": [
+      "challenge",
+      "method",
+      "verifier"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+     "score": 2.484907,
+     "tokens": [
+      "challenge",
+      "pkce"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+     "score": 1.791759,
+     "tokens": [
+      "challenge",
+      "method"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingCodeVerifierError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest.test_pkce_optional_verifier_missing_challenge_valid#0",
+   "name_tokens": [
+    "challenge",
+    "missing",
+    "optional",
+    "pkce",
+    "valid",
+    "verifier"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidClientError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_authentication_required#0",
+   "name_tokens": [
+    "authentication",
+    "required"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ServerError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_client_id_discrepancy#0",
+   "name_tokens": [
+    "client",
+    "discrepancy",
+    "id"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+     "score": 1.386294,
+     "tokens": [
+      "client",
+      "id"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2",
+     "score": 1.386294,
+     "tokens": [
+      "client",
+      "id"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedGrantTypeError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_invalid_grant_type#0",
+   "name_tokens": [
+    "grant",
+    "invalid",
+    "type"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "type"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "type"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "type"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidClientError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_authenticate_client_id#0",
+   "name_tokens": [
+    "authenticate",
+    "client",
+    "id"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1",
+     "score": 0.693147,
+     "tokens": [
+      "authenticate",
+      "client",
+      "id"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+     "score": 0.0,
+     "tokens": [
+      "authenticate",
+      "client"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_public#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_invalid_refresh_token#0",
+   "name_tokens": [
+    "invalid",
+    "refresh",
+    "token"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+     "score": 1.974081,
+     "tokens": [
+      "invalid",
+      "refresh",
+      "token"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+     "score": 0.182322,
+     "tokens": [
+      "invalid",
+      "token"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+     "score": 0.182322,
+     "tokens": [
+      "invalid",
+      "token"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_invalid_refresh_token#1",
+   "name_tokens": [
+    "invalid",
+    "refresh",
+    "token"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+     "score": 3.616838,
+     "tokens": [
+      "invalid",
+      "refresh",
+      "token"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+     "score": 0.783625,
+     "tokens": [
+      "invalid",
+      "token"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+     "score": 0.783625,
+     "tokens": [
+      "invalid",
+      "token"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidScopeError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_refresh_token.py::RefreshTokenGrantTest.test_invalid_scope_original_scopes_empty#0",
+   "name_tokens": [
+    "empty",
+    "invalid",
+    "original",
+    "scope"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4",
+     "score": 0.693147,
+     "tokens": [
+      "invalid",
+      "original",
+      "scope"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid",
+      "scope"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_invalid_request_missing_params#0",
+   "name_tokens": [
+    "invalid",
+    "missing",
+    "param",
+    "request"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+     "score": 1.920389,
+     "tokens": [
+      "invalid",
+      "missing",
+      "param",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 1.389761,
+     "tokens": [
+      "invalid",
+      "param",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+     "score": 1.389761,
+     "tokens": [
+      "invalid",
+      "param",
+      "request"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_invalid_request_duplicates#0",
+   "name_tokens": [
+    "duplicate",
+    "invalid",
+    "request"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+     "score": 1.795226,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+     "score": 1.795226,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "request"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+     "score": 1.795226,
+     "tokens": [
+      "duplicate",
+      "invalid",
+      "request"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#2"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedGrantTypeError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_invalid_grant_type#0",
+   "name_tokens": [
+    "grant",
+    "invalid",
+    "type"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "type"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "type"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+     "score": 0.0,
+     "tokens": [
+      "grant",
+      "type"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#8",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidGrantError"
+   ],
+   "key": "tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py::ResourceOwnerPasswordCredentialsGrantTest.test_invalid_user#0",
+   "name_tokens": [
+    "invalid",
+    "user"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+     "score": 1.791759,
+     "tokens": [
+      "invalid",
+      "user"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/endpoints/test_openid_connect_params_handling.py::OpenIDConnectEndpointTest.test_prompt_none_exclusiveness#0",
+   "name_tokens": [
+    "exclusivenes",
+    "none",
+    "prompt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.LoginRequired"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_no_prompt_authorization#0",
+   "name_tokens": [
+    "authorization",
+    "no",
+    "prompt"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.ConsentRequired"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_no_prompt_authorization#1",
+   "name_tokens": [
+    "authorization",
+    "no",
+    "prompt"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.LoginRequired"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_no_prompt_authorization#2",
+   "name_tokens": [
+    "authorization",
+    "no",
+    "prompt"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_none_multi_prompt#0",
+   "name_tokens": [
+    "multi",
+    "none",
+    "prompt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_none_multi_prompt#1",
+   "name_tokens": [
+    "multi",
+    "none",
+    "prompt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_none_multi_prompt#2",
+   "name_tokens": [
+    "multi",
+    "none",
+    "prompt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_authorization_code.py::OpenIDAuthCodeTest.test_none_multi_prompt#3",
+   "name_tokens": [
+    "multi",
+    "none",
+    "prompt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridCodeIdTokenTest.test_required_nonce#0",
+   "name_tokens": [
+    "nonce",
+    "required"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+     "score": 2.833213,
+     "tokens": [
+      "required"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDHybridCodeIdTokenTokenTest.test_required_nonce#0",
+   "name_tokens": [
+    "nonce",
+    "required"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+     "score": 2.833213,
+     "tokens": [
+      "required"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+   "tier": "name"
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.LoginRequired"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_no_prompt_authorization#0",
+   "name_tokens": [
+    "authorization",
+    "no",
+    "prompt"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.ConsentRequired"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_no_prompt_authorization#1",
+   "name_tokens": [
+    "authorization",
+    "no",
+    "prompt"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.LoginRequired"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_no_prompt_authorization#2",
+   "name_tokens": [
+    "authorization",
+    "no",
+    "prompt"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_none_multi_prompt#0",
+   "name_tokens": [
+    "multi",
+    "none",
+    "prompt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_none_multi_prompt#1",
+   "name_tokens": [
+    "multi",
+    "none",
+    "prompt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_none_multi_prompt#2",
+   "name_tokens": [
+    "multi",
+    "none",
+    "prompt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_none_multi_prompt#3",
+   "name_tokens": [
+    "multi",
+    "none",
+    "prompt"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitTest.test_required_nonce#0",
+   "name_tokens": [
+    "nonce",
+    "required"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+     "score": 2.833213,
+     "tokens": [
+      "required"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_class": [
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+    "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#9",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "oauthlib.oauth2.rfc6749.errors.InvalidRequestError"
+   ],
+   "key": "tests/openid/connect/core/grant_types/test_implicit.py::OpenIDImplicitNoAccessTokenTest.test_required_nonce#0",
+   "name_tokens": [
+    "nonce",
+    "required"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+     "score": 2.833213,
+     "tokens": [
+      "required"
+     ]
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#8",
+   "tier": "name"
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "class": 10,
+  "name": 16,
+  "none: no name token matches": 32,
+  "none: no reachable check of the expected class": 6,
+  "none: tie": 9
+ },
+ "rule_version": "reach-target-rule/2"
+}

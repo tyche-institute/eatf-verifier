@@ -1,0 +1,6233 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_RSA_alg#0",
+   "name_tokens": [
+    "alg",
+    "rsa"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.json.__extract_segments#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_EC_key#0",
+   "name_tokens": [
+    "ec",
+    "ecdh",
+    "es",
+    "key"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7516.message.decrypt_recipient#2",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7516.message.perform_decrypt#1",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_EC_key#1",
+   "name_tokens": [
+    "ec",
+    "ecdh",
+    "es",
+    "key"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7516.message.decrypt_recipient#2",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7516.message.perform_decrypt#1",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_OKP_key#0",
+   "name_tokens": [
+    "ecdh",
+    "es",
+    "key",
+    "okp"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7516.message.decrypt_recipient#2",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7516.message.perform_decrypt#1",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_OKP_key#1",
+   "name_tokens": [
+    "ecdh",
+    "es",
+    "key",
+    "okp"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7516.message.decrypt_recipient#2",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7516.message.perform_decrypt#1",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+     "score": 1.466337,
+     "tokens": [
+      "key"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_AESGCM_alg#0",
+   "name_tokens": [
+    "aesgcm",
+    "alg"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.json.__extract_segments#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_PBES2HS_alg#0",
+   "name_tokens": [
+    "alg",
+    "pbes2h"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.json.__extract_segments#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7797.json._validate_general_members#1",
+    "registry.check_registry_header#2"
+   ],
+   "C_class": [
+    "_rfc7797.json._validate_general_members#1",
+    "registry.check_registry_header#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_PBES2HS_with_large_p2c#1",
+   "name_tokens": [
+    "large",
+    "p2c",
+    "pbes2h"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7797.json._validate_general_members#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "registry.check_registry_header#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_decompress_zip_exceeds_size#0",
+   "name_tokens": [
+    "decompres",
+    "exceed",
+    "size",
+    "zip"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7518.jwe_zips.DeflateZipModel.decompress#1",
+     "score": 2.564949,
+     "tokens": [
+      "decompres",
+      "exceed",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceed",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceed",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7518.jwe_zips.DeflateZipModel.decompress#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0",
+   "name_tokens": [
+    "exceed",
+    "header",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 1.871802,
+     "tokens": [
+      "exceed",
+      "header",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+     "score": 1.871802,
+     "tokens": [
+      "exceed",
+      "header",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceed",
+      "size"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_encrypted_key_exceeds_size#0",
+   "name_tokens": [
+    "encrypted",
+    "exceed",
+    "key",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+     "score": 5.129899,
+     "tokens": [
+      "encrypted",
+      "exceed",
+      "key",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceed",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceed",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_initialization_vector_size#0",
+   "name_tokens": [
+    "initialization",
+    "size",
+    "vector"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+     "score": 5.129899,
+     "tokens": [
+      "initialization",
+      "size",
+      "vector"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0",
+   "name_tokens": [
+    "ciphertext",
+    "exceed",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+     "score": 2.564949,
+     "tokens": [
+      "ciphertext",
+      "exceed",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceed",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceed",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_auth_tag_exceeds_size#0",
+   "name_tokens": [
+    "auth",
+    "exceed",
+    "size",
+    "tag"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+     "score": 5.129899,
+     "tokens": [
+      "auth",
+      "exceed",
+      "size",
+      "tag"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceed",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceed",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#1",
+   "name_tokens": [
+    "compact",
+    "data",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 2.932674,
+     "tokens": [
+      "compact",
+      "invalid"
+     ]
+    },
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "_rfc7516.message._perform_decrypt#1",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": "_rfc7516.compact.extract_compact#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7516.compact.extract_compact#1"
+   ],
+   "C_class": [
+    "_rfc7516.compact.extract_compact#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingAlgorithmError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#2",
+   "name_tokens": [
+    "compact",
+    "data",
+    "invalid"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7516.compact.extract_compact#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7516.compact.extract_compact#2"
+   ],
+   "C_class": [
+    "_rfc7516.compact.extract_compact#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingEncryptionError"
+   ],
+   "key": "tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#3",
+   "name_tokens": [
+    "compact",
+    "data",
+    "invalid"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7516.compact.extract_compact#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_errors.py::TestJWEErrors.test_A128KW_unwrap_error#0",
+   "name_tokens": [
+    "a128kw",
+    "unwrap"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+     "score": 2.564949,
+     "tokens": [
+      "unwrap"
+     ]
+    },
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.get_alg#1",
+    "_rfc7515.registry.JWSRegistry.get_alg#2",
+    "_rfc7515.registry.JWSRegistry.get_alg#3",
+    "_rfc7516.registry.JWERegistry._check_algorithm#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#2",
+    "_rfc7516.registry.JWERegistry._check_algorithm#3"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.get_alg#1",
+    "_rfc7515.registry.JWSRegistry.get_alg#2",
+    "_rfc7515.registry.JWSRegistry.get_alg#3",
+    "_rfc7516.registry.JWERegistry._check_algorithm#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#2",
+    "_rfc7516.registry.JWERegistry._check_algorithm#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "key": "tests/jwe/test_example.py::TestCompactExamples.test_A2#0",
+   "name_tokens": [
+    "a2"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.get_alg#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.get_alg#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.get_alg#3",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_class": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_recipient_critical_header_rejected_on_decrypt#0",
+   "name_tokens": [
+    "critical",
+    "decrypt",
+    "header",
+    "recipient"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7797.json._is_payload_base64_encoded#1",
+     "score": 0.0,
+     "tokens": [
+      "header"
+     ]
+    },
+    {
+     "check": "registry.check_crit_header#2",
+     "score": 0.0,
+     "tokens": [
+      "header"
+     ]
+    },
+    {
+     "check": "registry.check_supported_header#1",
+     "score": 0.0,
+     "tokens": [
+      "header"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_class": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_recipient_critical_header_rejected_on_decrypt#1",
+   "name_tokens": [
+    "critical",
+    "decrypt",
+    "header",
+    "recipient"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7797.json._is_payload_base64_encoded#1",
+     "score": 0.0,
+     "tokens": [
+      "header"
+     ]
+    },
+    {
+     "check": "registry.check_crit_header#2",
+     "score": 0.0,
+     "tokens": [
+      "header"
+     ]
+    },
+    {
+     "check": "registry.check_supported_header#1",
+     "score": 0.0,
+     "tokens": [
+      "header"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_aad_size_limit#0",
+   "name_tokens": [
+    "aad",
+    "limit",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+     "score": 2.564949,
+     "tokens": [
+      "aad",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_empty_aad_member_rejected#0",
+   "name_tokens": [
+    "aad",
+    "empty",
+    "member"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.json.__extract_segments#1",
+     "score": 5.129899,
+     "tokens": [
+      "aad",
+      "empty"
+     ]
+    },
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "_rfc7516.json.__extract_segments#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_oversized_aad_rejected_before_decoding#0",
+   "name_tokens": [
+    "aad",
+    "before",
+    "decoding",
+    "oversized"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+     "score": 2.564949,
+     "tokens": [
+      "aad"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_keys.JWKRegistry.generate_key#1",
+    "_keys.JWKRegistry.import_key#2",
+    "_rfc7515.model.JWSAlgModel.check_key#1",
+    "_rfc7516.models.KeyManagement.check_key_type#1",
+    "_rfc7517.pem.CryptographyBinding.import_from_bytes#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.sign#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1",
+    "jwk.import_key~6#1"
+   ],
+   "C_class": [
+    "_keys.JWKRegistry.generate_key#1",
+    "_keys.JWKRegistry.import_key#2",
+    "_rfc7515.model.JWSAlgModel.check_key#1",
+    "_rfc7516.models.KeyManagement.check_key_type#1",
+    "_rfc7517.pem.CryptographyBinding.import_from_bytes#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.sign#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1",
+    "jwk.import_key~6#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_decode_multiple_recipients#0",
+   "name_tokens": [
+    "decode",
+    "multiple",
+    "recipient"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_keys.JWKRegistry.generate_key#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_keys.JWKRegistry.import_key#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7515.model.JWSAlgModel.check_key#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_decode_multiple_recipients#1",
+   "name_tokens": [
+    "decode",
+    "multiple",
+    "recipient"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.message._perform_decrypt#2",
+     "score": 2.564949,
+     "tokens": [
+      "decode",
+      "multiple"
+     ]
+    },
+    {
+     "check": "_rfc7516.message._perform_decrypt#1",
+     "score": 1.871802,
+     "tokens": [
+      "decode",
+      "recipient"
+     ]
+    },
+    {
+     "check": "_rfc7516.message.decrypt_recipient#2",
+     "score": 1.871802,
+     "tokens": [
+      "decode",
+      "recipient"
+     ]
+    }
+   ],
+   "target": "_rfc7516.message._perform_decrypt#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_general_json_without_recipients#0",
+   "name_tokens": [
+    "general",
+    "json",
+    "recipient",
+    "without"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 3.743604,
+     "tokens": [
+      "general",
+      "json"
+     ]
+    },
+    {
+     "check": "_rfc7797.json.extract_general_json#1",
+     "score": 3.743604,
+     "tokens": [
+      "general",
+      "json"
+     ]
+    },
+    {
+     "check": "_rfc7516.message._perform_decrypt#1",
+     "score": 1.871802,
+     "tokens": [
+      "recipient"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_general_json_without_encrypted_key#0",
+   "name_tokens": [
+    "encrypted",
+    "general",
+    "json",
+    "key",
+    "without"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.message.decrypt_recipient#2",
+     "score": 4.031286,
+     "tokens": [
+      "encrypted",
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 3.743604,
+     "tokens": [
+      "general",
+      "json"
+     ]
+    },
+    {
+     "check": "_rfc7797.json.extract_general_json#1",
+     "score": 3.743604,
+     "tokens": [
+      "general",
+      "json"
+     ]
+    }
+   ],
+   "target": "_rfc7516.message.decrypt_recipient#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_general_json_recipients_exceeded_size_error#0",
+   "name_tokens": [
+    "exceeded",
+    "general",
+    "json",
+    "recipient",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+     "score": 2.564949,
+     "tokens": [
+      "exceeded",
+      "recipient",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwe/test_json.py::TestJWEJSON.test_flattened_json_without_encrypted_key#0",
+   "name_tokens": [
+    "encrypted",
+    "flattened",
+    "json",
+    "key",
+    "without"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.message.decrypt_recipient#2",
+     "score": 4.031286,
+     "tokens": [
+      "encrypted",
+      "key"
+     ]
+    },
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 1.871802,
+     "tokens": [
+      "json"
+     ]
+    },
+    {
+     "check": "_rfc7797.json.extract_general_json#1",
+     "score": 1.871802,
+     "tokens": [
+      "json"
+     ]
+    }
+   ],
+   "target": "_rfc7516.message.decrypt_recipient#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_bad_signature_error#0",
+   "name_tokens": [
+    "bad",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_reject_padded_signature#0",
+   "name_tokens": [
+    "padded",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_invalid_length#0",
+   "name_tokens": [
+    "invalid",
+    "length"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "_rfc7516.message._perform_decrypt#1",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_no_invalid_header#0",
+   "name_tokens": [
+    "header",
+    "invalid",
+    "no"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 2.932674,
+     "tokens": [
+      "header",
+      "invalid"
+     ]
+    },
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "_rfc7516.message._perform_decrypt#1",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": "_rfc7516.compact.extract_compact#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7516.compact.extract_compact#1"
+   ],
+   "C_class": [
+    "_rfc7516.compact.extract_compact#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingAlgorithmError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_no_invalid_header#1",
+   "name_tokens": [
+    "header",
+    "invalid",
+    "no"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7516.compact.extract_compact#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_invalid_payload#0",
+   "name_tokens": [
+    "invalid",
+    "payload"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "payload"
+     ]
+    },
+    {
+     "check": "_rfc7797.json.extract_general_json#1",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "payload"
+     ]
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_header_exceeded_size_error#0",
+   "name_tokens": [
+    "exceeded",
+    "header",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 1.871802,
+     "tokens": [
+      "exceeded",
+      "header",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+     "score": 1.871802,
+     "tokens": [
+      "exceeded",
+      "header",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0",
+   "name_tokens": [
+    "exceeded",
+    "payload",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+     "score": 2.564949,
+     "tokens": [
+      "exceeded",
+      "payload",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_signature_exceeded_size_error#0",
+   "name_tokens": [
+    "exceeded",
+    "signature",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+     "score": 2.564949,
+     "tokens": [
+      "exceeded",
+      "signature",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_compact.py::TestCompact.test_non_canonical_signature_encoding#0",
+   "name_tokens": [
+    "canonical",
+    "encoding",
+    "non",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_keys.JWKRegistry.generate_key#1",
+    "_keys.JWKRegistry.import_key#2",
+    "_rfc7515.model.JWSAlgModel.check_key#1",
+    "_rfc7516.models.KeyManagement.check_key_type#1",
+    "_rfc7517.pem.CryptographyBinding.import_from_bytes#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.sign#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1",
+    "jwk.import_key~6#1"
+   ],
+   "C_class": [
+    "_keys.JWKRegistry.generate_key#1",
+    "_keys.JWKRegistry.import_key#2",
+    "_rfc7515.model.JWSAlgModel.check_key#1",
+    "_rfc7516.models.KeyManagement.check_key_type#1",
+    "_rfc7517.pem.CryptographyBinding.import_from_bytes#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.sign#1",
+    "_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1",
+    "jwk.import_key~6#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidKeyTypeError"
+   ],
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_EdDSA#0",
+   "name_tokens": [
+    "dsa",
+    "ed"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_keys.JWKRegistry.generate_key#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_keys.JWKRegistry.import_key#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7515.model.JWSAlgModel.check_key#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7518.ec_key.ECBinding.generate_private_key#1",
+    "_rfc7518.jws_algs.ESAlgorithm.check_key#1",
+    "_rfc8037.okp_key.OKPBinding.generate_private_key#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1"
+   ],
+   "C_class": [
+    "_rfc7518.ec_key.ECBinding.generate_private_key#1",
+    "_rfc7518.jws_algs.ESAlgorithm.check_key#1",
+    "_rfc8037.okp_key.OKPBinding.generate_private_key#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidKeyCurveError"
+   ],
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed25519#1",
+   "name_tokens": [
+    "ed25519"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7518.ec_key.ECBinding.generate_private_key#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7518.jws_algs.ESAlgorithm.check_key#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc8037.okp_key.OKPBinding.generate_private_key#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed25519#2",
+   "name_tokens": [
+    "ed25519"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7518.ec_key.ECBinding.generate_private_key#1",
+    "_rfc7518.jws_algs.ESAlgorithm.check_key#1",
+    "_rfc8037.okp_key.OKPBinding.generate_private_key#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1"
+   ],
+   "C_class": [
+    "_rfc7518.ec_key.ECBinding.generate_private_key#1",
+    "_rfc7518.jws_algs.ESAlgorithm.check_key#1",
+    "_rfc8037.okp_key.OKPBinding.generate_private_key#1",
+    "_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "InvalidKeyCurveError"
+   ],
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed448#1",
+   "name_tokens": [
+    "ed448"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7518.ec_key.ECBinding.generate_private_key#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7518.jws_algs.ESAlgorithm.check_key#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc8037.okp_key.OKPBinding.generate_private_key#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_eddsa.py::TestEdDSA.test_Ed448#2",
+   "name_tokens": [
+    "ed448"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.serialize_compact#1",
+    "jws.validate_compact#1"
+   ],
+   "C_class": [
+    "jws.serialize_compact#1",
+    "jws.validate_compact#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "MissingKeyError"
+   ],
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_without_key#1",
+   "name_tokens": [
+    "key",
+    "without"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.serialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "jws.validate_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "key"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_none_alg#0",
+   "name_tokens": [
+    "alg",
+    "none"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_rsa_invalid_signature#0",
+   "name_tokens": [
+    "invalid",
+    "rsa",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_rsa_invalid_signature#1",
+   "name_tokens": [
+    "invalid",
+    "rsa",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_ec_invalid_signature#0",
+   "name_tokens": [
+    "ec",
+    "invalid",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_ec_invalid_signature#1",
+   "name_tokens": [
+    "ec",
+    "invalid",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_errors.py::TestJWSErrors.test_okp_bad_signature#0",
+   "name_tokens": [
+    "bad",
+    "okp",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_invalid_payload#0",
+   "name_tokens": [
+    "invalid",
+    "payload"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "payload"
+     ]
+    },
+    {
+     "check": "_rfc7797.json.extract_general_json#1",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "payload"
+     ]
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_invalid_payload#1",
+   "name_tokens": [
+    "invalid",
+    "payload"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "payload"
+     ]
+    },
+    {
+     "check": "_rfc7797.json.extract_general_json#1",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "payload"
+     ]
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_bad_signature#0",
+   "name_tokens": [
+    "bad",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_bad_signature#1",
+   "name_tokens": [
+    "bad",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_general_json_with_empty_signatures#0",
+   "name_tokens": [
+    "empty",
+    "general",
+    "json",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 1.386294,
+     "tokens": [
+      "general",
+      "json",
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": "jws.deserialize_json~3#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.get_alg#1",
+    "_rfc7515.registry.JWSRegistry.get_alg#2",
+    "_rfc7515.registry.JWSRegistry.get_alg#3",
+    "_rfc7516.registry.JWERegistry._check_algorithm#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#2",
+    "_rfc7516.registry.JWERegistry._check_algorithm#3"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.get_alg#1",
+    "_rfc7515.registry.JWSRegistry.get_alg#2",
+    "_rfc7515.registry.JWSRegistry.get_alg#3",
+    "_rfc7516.registry.JWERegistry._check_algorithm#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#2",
+    "_rfc7516.registry.JWERegistry._check_algorithm#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_unsupported_algorithm#0",
+   "name_tokens": [
+    "algorithm",
+    "unsupported"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.get_alg#1",
+     "score": 0.0,
+     "tokens": [
+      "algorithm",
+      "unsupported"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.get_alg#2",
+     "score": 0.0,
+     "tokens": [
+      "algorithm",
+      "unsupported"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.get_alg#3",
+     "score": 0.0,
+     "tokens": [
+      "algorithm",
+      "unsupported"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_class": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_critical_header_parameters_must_be_protected#0",
+   "name_tokens": [
+    "critical",
+    "header",
+    "must",
+    "parameter",
+    "protected"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7797.json._is_payload_base64_encoded#1",
+     "score": 1.021651,
+     "tokens": [
+      "header",
+      "must",
+      "protected"
+     ]
+    },
+    {
+     "check": "registry.reject_unprotected_crit_header#1",
+     "score": 1.021651,
+     "tokens": [
+      "header",
+      "must",
+      "protected"
+     ]
+    },
+    {
+     "check": "registry.reject_unprotected_crit_header#2",
+     "score": 1.021651,
+     "tokens": [
+      "header",
+      "must",
+      "protected"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_class": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_critical_header_parameters_must_be_protected#1",
+   "name_tokens": [
+    "critical",
+    "header",
+    "must",
+    "parameter",
+    "protected"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7797.json._is_payload_base64_encoded#1",
+     "score": 1.021651,
+     "tokens": [
+      "header",
+      "must",
+      "protected"
+     ]
+    },
+    {
+     "check": "registry.reject_unprotected_crit_header#1",
+     "score": 1.021651,
+     "tokens": [
+      "header",
+      "must",
+      "protected"
+     ]
+    },
+    {
+     "check": "registry.reject_unprotected_crit_header#2",
+     "score": 1.021651,
+     "tokens": [
+      "header",
+      "must",
+      "protected"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_class": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#0",
+   "name_tokens": [
+    "b64",
+    "must",
+    "protected"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7797.json._is_payload_base64_encoded#1",
+     "score": 2.631089,
+     "tokens": [
+      "b64",
+      "must",
+      "protected"
+     ]
+    },
+    {
+     "check": "registry.reject_unprotected_crit_header#1",
+     "score": 1.021651,
+     "tokens": [
+      "must",
+      "protected"
+     ]
+    },
+    {
+     "check": "registry.reject_unprotected_crit_header#2",
+     "score": 1.021651,
+     "tokens": [
+      "must",
+      "protected"
+     ]
+    }
+   ],
+   "target": "_rfc7797.json._is_payload_base64_encoded#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_class": [
+    "_rfc7797.json._is_payload_base64_encoded#1",
+    "registry.check_crit_header#2",
+    "registry.check_supported_header#1",
+    "registry.reject_unprotected_crit_header#1",
+    "registry.reject_unprotected_crit_header#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "UnsupportedHeaderError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1",
+   "name_tokens": [
+    "b64",
+    "must",
+    "protected"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7797.json._is_payload_base64_encoded#1",
+     "score": 2.631089,
+     "tokens": [
+      "b64",
+      "must",
+      "protected"
+     ]
+    },
+    {
+     "check": "registry.reject_unprotected_crit_header#1",
+     "score": 1.021651,
+     "tokens": [
+      "must",
+      "protected"
+     ]
+    },
+    {
+     "check": "registry.reject_unprotected_crit_header#2",
+     "score": 1.021651,
+     "tokens": [
+      "must",
+      "protected"
+     ]
+    }
+   ],
+   "target": "_rfc7797.json._is_payload_base64_encoded#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7797.json._validate_general_members#1",
+    "registry.check_registry_header#2"
+   ],
+   "C_class": [
+    "_rfc7797.json._validate_general_members#1",
+    "registry.check_registry_header#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "InvalidHeaderValueError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_general_json_b64_must_match_across_signatures#1",
+   "name_tokens": [
+    "acros",
+    "b64",
+    "general",
+    "json",
+    "match",
+    "must",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7797.json._validate_general_members#1",
+     "score": 2.772589,
+     "tokens": [
+      "b64",
+      "general",
+      "must",
+      "signature"
+     ]
+    },
+    {
+     "check": "registry.check_registry_header#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "_rfc7797.json._validate_general_members#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_header_exceeded_size_error#0",
+   "name_tokens": [
+    "exceeded",
+    "header",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 1.871802,
+     "tokens": [
+      "exceeded",
+      "header",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+     "score": 1.871802,
+     "tokens": [
+      "exceeded",
+      "header",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_header_exceeded_size_error#1",
+   "name_tokens": [
+    "exceeded",
+    "header",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 1.871802,
+     "tokens": [
+      "exceeded",
+      "header",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+     "score": 1.871802,
+     "tokens": [
+      "exceeded",
+      "header",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_payload_exceeded_size_error#0",
+   "name_tokens": [
+    "exceeded",
+    "payload",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+     "score": 2.564949,
+     "tokens": [
+      "exceeded",
+      "payload",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_payload_exceeded_size_error#1",
+   "name_tokens": [
+    "exceeded",
+    "payload",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+     "score": 2.564949,
+     "tokens": [
+      "exceeded",
+      "payload",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_signature_exceeded_size_error#0",
+   "name_tokens": [
+    "exceeded",
+    "signature",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+     "score": 2.564949,
+     "tokens": [
+      "exceeded",
+      "signature",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_payload_size#1",
+    "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+    "_rfc7516.registry.JWERegistry.validate_aad_size#1",
+    "_rfc7516.registry.JWERegistry.validate_auth_tag_size#1",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_compact_value_size#1",
+    "_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1",
+    "_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "_rfc7516.registry.JWERegistry.validate_recipient_count#1",
+    "_rfc7518.jwe_zips.DeflateZipModel.decompress#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ExceededSizeError"
+   ],
+   "key": "tests/jws/test_json.py::TestJSON.test_signature_exceeded_size_error#1",
+   "name_tokens": [
+    "exceeded",
+    "signature",
+    "size"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+     "score": 2.564949,
+     "tokens": [
+      "exceeded",
+      "signature",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_compact_value_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.validate_header_size#1",
+     "score": 0.0,
+     "tokens": [
+      "exceeded",
+      "size"
+     ]
+    }
+   ],
+   "target": "_rfc7515.registry.JWSRegistry.validate_signature_size#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_compact_invalid_value_length#0",
+   "name_tokens": [
+    "compact",
+    "invalid",
+    "length",
+    "value"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 4.111329,
+     "tokens": [
+      "compact",
+      "invalid",
+      "value"
+     ]
+    },
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 1.54638,
+     "tokens": [
+      "invalid",
+      "value"
+     ]
+    },
+    {
+     "check": "_rfc7797.json.extract_general_json#1",
+     "score": 1.54638,
+     "tokens": [
+      "invalid",
+      "value"
+     ]
+    }
+   ],
+   "target": "_rfc7516.compact.extract_compact#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_invalid_header#0",
+   "name_tokens": [
+    "header",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 2.932674,
+     "tokens": [
+      "header",
+      "invalid"
+     ]
+    },
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "_rfc7516.message._perform_decrypt#1",
+     "score": 0.367725,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": "_rfc7516.compact.extract_compact#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7516.compact.extract_compact#1"
+   ],
+   "C_class": [
+    "_rfc7516.compact.extract_compact#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingAlgorithmError"
+   ],
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_compact_missing_alg#0",
+   "name_tokens": [
+    "alg",
+    "compact",
+    "missing"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7516.compact.extract_compact#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_compact_bad_signature#0",
+   "name_tokens": [
+    "bad",
+    "compact",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.693147,
+     "tokens": [
+      "bad",
+      "compact",
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    }
+   ],
+   "target": "jws.deserialize_compact#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_class": [
+    "jws.deserialize_compact#1",
+    "jws.deserialize_json~3#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "tests/jws/test_rfc7797.py::TestRFC7797.test_json_bad_signature#0",
+   "name_tokens": [
+    "bad",
+    "json",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws.deserialize_json~3#1",
+     "score": 0.693147,
+     "tokens": [
+      "bad",
+      "json",
+      "signature"
+     ]
+    },
+    {
+     "check": "jws.deserialize_compact#1",
+     "score": 0.0,
+     "tokens": [
+      "bad",
+      "signature"
+     ]
+    }
+   ],
+   "target": "jws.deserialize_json~3#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_claims#0",
+   "name_tokens": [
+    "claim",
+    "essential"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_claims#1",
+   "name_tokens": [
+    "claim",
+    "essential"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#0",
+   "name_tokens": [
+    "claim",
+    "iss"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#1",
+   "name_tokens": [
+    "claim",
+    "iss"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#2",
+   "name_tokens": [
+    "claim",
+    "iss"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#3",
+   "name_tokens": [
+    "claim",
+    "iss"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#0",
+   "name_tokens": [
+    "claim",
+    "sub"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#1",
+   "name_tokens": [
+    "claim",
+    "sub"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#2",
+   "name_tokens": [
+    "claim",
+    "sub"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#3",
+   "name_tokens": [
+    "claim",
+    "sub"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#0",
+   "name_tokens": [
+    "claim",
+    "jti"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#1",
+   "name_tokens": [
+    "claim",
+    "jti"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2",
+   "name_tokens": [
+    "claim",
+    "jti"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#3",
+   "name_tokens": [
+    "claim",
+    "jti"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#4",
+   "name_tokens": [
+    "claim",
+    "jti"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#5",
+   "name_tokens": [
+    "claim",
+    "jti"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#6",
+   "name_tokens": [
+    "claim",
+    "jti"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#0",
+   "name_tokens": [
+    "aud",
+    "claim"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#1",
+   "name_tokens": [
+    "aud",
+    "claim"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#2",
+   "name_tokens": [
+    "aud",
+    "claim"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_empty_value#0",
+   "name_tokens": [
+    "empty",
+    "essential",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_empty_value#1",
+   "name_tokens": [
+    "empty",
+    "essential",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_essential_empty_value#2",
+   "name_tokens": [
+    "empty",
+    "essential",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value#0",
+   "name_tokens": [
+    "option",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value#1",
+   "name_tokens": [
+    "option",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value#2",
+   "name_tokens": [
+    "option",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#0",
+   "name_tokens": [
+    "list",
+    "option",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#1",
+   "name_tokens": [
+    "list",
+    "option",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#2",
+   "name_tokens": [
+    "list",
+    "option",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#3",
+   "name_tokens": [
+    "list",
+    "option",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_option_values#0",
+   "name_tokens": [
+    "option",
+    "value"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#0",
+   "name_tokens": [
+    "claim",
+    "int"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#1",
+   "name_tokens": [
+    "claim",
+    "int"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#2",
+   "name_tokens": [
+    "claim",
+    "int"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ExpiredTokenError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#3",
+   "name_tokens": [
+    "claim",
+    "int"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#4",
+   "name_tokens": [
+    "claim",
+    "int"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#0",
+   "name_tokens": [
+    "aud",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#1",
+   "name_tokens": [
+    "aud",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#2",
+   "name_tokens": [
+    "aud",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#3",
+   "name_tokens": [
+    "aud",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#4",
+   "name_tokens": [
+    "aud",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ExpiredTokenError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_exp#0",
+   "name_tokens": [
+    "exp",
+    "validate"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ExpiredTokenError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_exp#1",
+   "name_tokens": [
+    "exp",
+    "validate"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_iat#0",
+   "name_tokens": [
+    "iat",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_nbf#0",
+   "name_tokens": [
+    "nbf",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0",
+   "name_tokens": [
+    "claim",
+    "finite",
+    "must",
+    "time",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [],
+   "C_class": [],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ExpiredTokenError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_accept_large_integers#0",
+   "name_tokens": [
+    "accept",
+    "claim",
+    "integer",
+    "large",
+    "time",
+    "validate"
+   ],
+   "positive": {},
+   "reason": "no reachable check of the expected class",
+   "scores": [],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_decode_then_validate_a_token_that_never_expires#0",
+   "name_tokens": [
+    "decode",
+    "expire",
+    "never",
+    "then",
+    "token",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#0",
+   "name_tokens": [
+    "inclusion",
+    "list",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#1",
+   "name_tokens": [
+    "inclusion",
+    "list",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#2",
+   "name_tokens": [
+    "inclusion",
+    "list",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#3",
+   "name_tokens": [
+    "inclusion",
+    "list",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#4",
+   "name_tokens": [
+    "inclusion",
+    "list",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#5",
+   "name_tokens": [
+    "inclusion",
+    "list",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#0",
+   "name_tokens": [
+    "allow",
+    "blank",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#1",
+   "name_tokens": [
+    "allow",
+    "blank",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#2",
+   "name_tokens": [
+    "allow",
+    "blank",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#3",
+   "name_tokens": [
+    "allow",
+    "blank",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.check_value#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidClaimError"
+   ],
+   "key": "tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#4",
+   "name_tokens": [
+    "allow",
+    "blank",
+    "validate"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.check_value#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jwt.decode#1"
+   ],
+   "C_class": [
+    "jwt.decode#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidPayloadError"
+   ],
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_invalid_payload#0",
+   "name_tokens": [
+    "invalid",
+    "payload"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "jwt.decode#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jwt.decode#1"
+   ],
+   "C_class": [
+    "jwt.decode#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "InvalidPayloadError"
+   ],
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_payload_must_be_a_json_object#0",
+   "name_tokens": [
+    "json",
+    "must",
+    "object",
+    "payload"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "jwt.decode#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_class": [
+    "_rfc7519.claims.BaseClaimsRegistry.validate#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "MissingClaimError"
+   ],
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_claims_registry#0",
+   "name_tokens": [
+    "claim",
+    "registry"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "_rfc7519.claims.BaseClaimsRegistry.validate#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_class": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7516.compact.extract_compact#3",
+    "_rfc7516.json.__extract_segments#1",
+    "_rfc7516.message._perform_decrypt#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#2",
+    "_rfc7516.message.perform_decrypt#1",
+    "_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1",
+    "_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1",
+    "_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1",
+    "_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1",
+    "_rfc7518.jwe_encs.GCMEncModel.decrypt#1",
+    "_rfc7797.json.extract_general_json#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "DecodeError"
+   ],
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_using_registry#3",
+   "name_tokens": [
+    "registry",
+    "using"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7515.json.extract_general_json#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.compact.extract_compact#3",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "_rfc7516.json.__extract_segments#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_rfc7515.registry.JWSRegistry.get_alg#1",
+    "_rfc7515.registry.JWSRegistry.get_alg#2",
+    "_rfc7515.registry.JWSRegistry.get_alg#3",
+    "_rfc7516.registry.JWERegistry._check_algorithm#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#2",
+    "_rfc7516.registry.JWERegistry._check_algorithm#3"
+   ],
+   "C_class": [
+    "_rfc7515.registry.JWSRegistry.get_alg#1",
+    "_rfc7515.registry.JWSRegistry.get_alg#2",
+    "_rfc7515.registry.JWSRegistry.get_alg#3",
+    "_rfc7516.registry.JWERegistry._check_algorithm#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#2",
+    "_rfc7516.registry.JWERegistry._check_algorithm#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "UnsupportedAlgorithmError"
+   ],
+   "key": "tests/jwt/test_jwt.py::TestJWT.test_algorithms_collection_rejects_disallowed#0",
+   "name_tokens": [
+    "algorithm",
+    "collection",
+    "disallowed"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "_rfc7515.registry.JWSRegistry.get_alg#1",
+     "score": 0.0,
+     "tokens": [
+      "algorithm"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.get_alg#2",
+     "score": 0.0,
+     "tokens": [
+      "algorithm"
+     ]
+    },
+    {
+     "check": "_rfc7515.registry.JWSRegistry.get_alg#3",
+     "score": 0.0,
+     "tokens": [
+      "algorithm"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "class": 62,
+  "name": 29,
+  "none: no name token matches": 28,
+  "none: no reachable check of the expected class": 4,
+  "none: tie": 15
+ },
+ "rule_version": "reach-target-rule/2"
+}
