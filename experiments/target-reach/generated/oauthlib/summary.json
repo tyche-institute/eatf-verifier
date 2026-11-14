@@ -1,0 +1,757 @@
+{
+ "counts": {
+  "block_targets_by_basis": {
+   "class": 10,
+   "name": 16,
+   "none: no name token matches": 32,
+   "none: no reachable check of the expected class": 6,
+   "none: tie": 9
+  },
+  "blocks": 98,
+  "cases": 142,
+  "cases_another_check_fires_too": 0,
+  "cases_by_site_kind": {
+   "check": 142
+  },
+  "cases_class_only": 140,
+  "cases_fired_in_other_threads": 0,
+  "cases_left_out": 0,
+  "cases_left_out_by_reason": {},
+  "cases_message_text_differs_between_unmodified_runs": 4,
+  "cases_nested": 0,
+  "cases_of_included_blocks": 142,
+  "cases_reaching_target": 43,
+  "cases_target_fires": 43,
+  "cases_with_target": 53,
+  "cases_with_target_by_basis": {
+   "class": 25,
+   "name": 28
+  },
+  "cases_with_target_by_outcome": {
+   "decided by the target": 43,
+   "decided by the target; own test without the target: fails": 43,
+   "the target does not fire": 10,
+   "the target does not fire; own test without the target: passes": 10
+  },
+  "cases_with_target_by_tier": {
+   "assertion": 25,
+   "name": 28
+  },
+  "checks": 88,
+  "checks_deciding": 47,
+  "checks_deciding_in_subject_files": 47,
+  "checks_deciding_not_statically_reachable": 6,
+  "checks_firing": 47,
+  "checks_firing_and_never_deciding": 0,
+  "checks_in_subject_files": 88,
+  "checks_reachable": 54,
+  "deletion_runs_repeated": 0,
+  "deletions": 47,
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": 0,
+   "O_V within O_C": 0,
+   "O_V within O_S": 0,
+   "O_Vfc within O_V": 0,
+   "suite within whole suite": 0
+  },
+  "deletions_in_handler": 2,
+  "deletions_not_detected": {
+   "O_C": 0,
+   "O_S": 0,
+   "O_T": 34,
+   "O_V": 7,
+   "O_Vfc": 11,
+   "suite": 0,
+   "whole suite": 0
+  },
+  "deletions_not_detected_of_deciding_checks": {
+   "O_C": 0,
+   "O_S": 0,
+   "O_T": 34,
+   "O_V": 7,
+   "O_Vfc": 11,
+   "suite": 0,
+   "whole suite": 0
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": 0,
+   "O_T": 34,
+   "O_V": 7,
+   "O_Vfc": 11
+  },
+  "deletions_not_detected_withheld_as_failing_of_deciding_checks": {
+   "O_C": 0,
+   "O_T": 34,
+   "O_V": 7,
+   "O_Vfc": 11
+  },
+  "deletions_of_checks_that_fire_and_never_decide": 0,
+  "deletions_of_deciding_checks": 47,
+  "deletions_time_limit": 0,
+  "deletions_without_record": 0,
+  "fired_recorded": true,
+  "flags": 10,
+  "flags_by_tier": {
+   "name": 10
+  },
+  "flags_target_fires": 0,
+  "included_blocks": 73,
+  "included_blocks_class_only": 71,
+  "included_blocks_never_run": 0,
+  "included_blocks_with_target": 26,
+  "pinning": {
+   "cases": 142,
+   "cases_not_counted_deciding_check_not_deleted": 0,
+   "cases_not_counted_no_deciding_check": 0,
+   "cases_not_counted_no_record": 0,
+   "cases_not_counted_time_limit": 0,
+   "class_only": {
+    "cases": 140,
+    "test_passes": 0
+   },
+   "message": {
+    "cases": 2,
+    "test_passes": 0
+   },
+   "test_fails": 142,
+   "test_passes": 0,
+   "test_passes_by_what_the_case_does": {}
+  },
+  "reached_targets": 13,
+  "reached_targets_deletion_not_detected_O_T": 0,
+  "test_files_not_collected": 0,
+  "tests_collected_again": 91,
+  "tests_expected_to_fail_at_baseline": 0,
+  "tests_imported_and_kept": 3,
+  "tests_run": 223,
+  "tests_with_cases": 96
+ },
+ "expected_baseline_failures": [],
+ "lists": {
+  "cases_left_out": [],
+  "checks_deciding_not_statically_reachable": [
+   "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#1",
+   "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#2",
+   "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#3",
+   "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#4",
+   "openid.connect.core.grant_types.hybrid.HybridGrant.openid_authorization_validator#1",
+   "openid.connect.core.grant_types.implicit.ImplicitGrant.openid_authorization_validator#1"
+  ],
+  "deletion_runs_repeated": [],
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": [],
+   "O_V within O_C": [],
+   "O_V within O_S": [],
+   "O_Vfc within O_V": [],
+   "suite within whole suite": []
+  },
+  "deletions_not_detected": {
+   "O_C": [],
+   "O_S": [],
+   "O_T": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#7",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#3",
+    "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#1",
+    "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#2",
+    "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#3",
+    "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#4",
+    "openid.connect.core.grant_types.hybrid.HybridGrant.openid_authorization_validator#1",
+    "openid.connect.core.grant_types.implicit.ImplicitGrant.openid_authorization_validator#1"
+   ],
+   "O_V": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2"
+   ],
+   "O_Vfc": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2"
+   ],
+   "suite": [],
+   "whole suite": []
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": [],
+   "O_T": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#7",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#10",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#1",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_client_confidential#2",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_scopes#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#4",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#3",
+    "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#1",
+    "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#2",
+    "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#3",
+    "openid.connect.core.grant_types.base.GrantTypeBase.openid_authorization_validator#4",
+    "openid.connect.core.grant_types.hybrid.HybridGrant.openid_authorization_validator#1",
+    "openid.connect.core.grant_types.implicit.ImplicitGrant.openid_authorization_validator#1"
+   ],
+   "O_V": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2"
+   ],
+   "O_Vfc": [
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#1",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_authorization_request#3",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#5",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#6",
+    "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#7",
+    "oauth2.rfc6749.grant_types.base.GrantTypeBase._handle_redirects#3",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.implicit.ImplicitGrant.validate_token_request#3",
+    "oauth2.rfc6749.grant_types.refresh_token.RefreshTokenGrant.validate_token_request#2",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc6749.grant_types.resource_owner_password_credentials.ResourceOwnerPasswordCredentialsGrant.validate_token_request#2"
+   ]
+  },
+  "deletions_of_checks_that_fire_and_never_decide": [],
+  "deletions_time_limit": [],
+  "deletions_without_record": [],
+  "included_blocks_never_run": []
+ },
+ "refused_connection_attempts": {
+  "baseline_recorder_runs": [
+   0,
+   0
+  ],
+  "deletion_recorder_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 48,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "suite_run": 0,
+  "tests": [],
+  "whole_suite_baseline_runs": [
+   0,
+   0
+  ],
+  "whole_suite_deletion_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 48,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "witness_runs": 0
+ },
+ "rule_version": "reach-target-rule/2",
+ "sentinels": [
+  {
+   "detail": "",
+   "name": "2 baseline runs and the control copy give identical records, message texts aside",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "in the baseline recorder run every test passes or is skipped, every test file is collected, and the tests deselected are the expected baseline failures",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "under the deletion of a check, that check fires in no case",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "every deletion run gave a record or exceeded the time limit 2 times",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the check that decides a case is among the checks that fire in it",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the whole suite ran on every deletion copy, and on the control copy it ends with its results and loses no test that passes in both unmodified runs",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the deleted checks are the checks of the subject files that fire in at least 1 case of the study",
+   "pass": true
+  }
+ ],
+ "subject": {
+  "commit": "6e3aa05af92978755939a18cb4dd655ced156c1e",
+  "name": "oauthlib",
+  "version": "4.0.1"
+ },
+ "suite_without_recorder": "314 passed",
+ "test_files_not_collected": [],
+ "tests_collected_again": [
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_authenticate_client"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_authenticate_client_id"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_authentication_required"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_client_id_discrepancy"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_client_id_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_code_modifier_called"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_correct_code_challenge_method_plain"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_correct_code_challenge_method_s256"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_authorization_grant"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_authorization_grant_no_scopes"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_authorization_grant_state"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_authorization_response"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_cors_headers"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_cors_headers_insecure_origin"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_cors_headers_invalid_origin"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_cors_headers_no_origin"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_token_response"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_create_token_response_without_refresh_token"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_custom_auth_validators"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_custom_token_validators"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_hybrid_token_save"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_invalid_grant"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_invalid_grant_type"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_invalid_redirect_uri"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_invalid_request"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_invalid_request_duplicates"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_challenge_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_default_method"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_optional_verifier_missing_challenge_valid"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_optional_verifier_valid_challenge_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_invalid_challenge_valid_method_valid"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_missing_challenge_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_missing_challenge_valid"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_valid_challenge_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_valid_challenge_valid_method_valid"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_valid_challenge_valid_method_wrong"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_verifier_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_verifier_valid_challenge_valid_method_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_pkce_wrong_method"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_public_client_id_discrepancy"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_public_client_id_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_wrong_code_challenge_method_plain"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_authorization_code.py::AuthorizationCodeGrantTest::test_wrong_code_challenge_method_s256"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_authenticate_client"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_authenticate_client_id"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_authentication_required"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_client_id_discrepancy"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_client_id_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_code_modifier_called"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_correct_code_challenge_method_plain"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_correct_code_challenge_method_s256"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_authorization_grant"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_authorization_grant_no_scopes"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_authorization_grant_state"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_authorization_response"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_cors_headers"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_cors_headers_insecure_origin"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_cors_headers_invalid_origin"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_cors_headers_no_origin"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_token_response"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_create_token_response_without_refresh_token"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_custom_auth_validators"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_custom_token_validators"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_hybrid_token_save"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_invalid_grant"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_invalid_grant_type"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_invalid_redirect_uri"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_invalid_request"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_invalid_request_duplicates"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_challenge_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_default_method"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_optional_verifier_missing_challenge_valid"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_optional_verifier_valid_challenge_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_invalid_challenge_valid_method_valid"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_missing_challenge_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_missing_challenge_valid"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_valid_challenge_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_valid_challenge_valid_method_valid"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_required_verifier_valid_challenge_valid_method_wrong"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_verifier_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_verifier_valid_challenge_valid_method_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_pkce_wrong_method"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_public_client_id_discrepancy"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_public_client_id_missing"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_wrong_code_challenge_method_plain"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::AuthorizationCodeGrantTest::test_wrong_code_challenge_method_s256"
+  },
+  {
+   "defined_in": "tests.openid.connect.core.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDAuthCodeTest::test_authorization"
+  },
+  {
+   "defined_in": "tests.openid.connect.core.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDAuthCodeTest::test_create_token_response"
+  },
+  {
+   "defined_in": "tests.openid.connect.core.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDAuthCodeTest::test_no_prompt_authorization"
+  },
+  {
+   "defined_in": "tests.openid.connect.core.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDAuthCodeTest::test_none_multi_prompt"
+  },
+  {
+   "defined_in": "tests.openid.connect.core.grant_types.test_authorization_code",
+   "nodeid": "tests/openid/connect/core/grant_types/test_hybrid.py::OpenIDAuthCodeTest::test_optional_nonce"
+  }
+ ],
+ "tests_imported_and_kept": [
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_implicit",
+   "nodeid": "tests/openid/connect/core/grant_types/test_implicit.py::ImplicitGrantTest::test_create_token_response"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_implicit",
+   "nodeid": "tests/openid/connect/core/grant_types/test_implicit.py::ImplicitGrantTest::test_custom_validators"
+  },
+  {
+   "defined_in": "tests.oauth2.rfc6749.grant_types.test_implicit",
+   "nodeid": "tests/openid/connect/core/grant_types/test_implicit.py::ImplicitGrantTest::test_error_response"
+  }
+ ],
+ "whole_suite": {
+  "counts": {
+   "passing in both": 717,
+   "run 1": {
+    "passed": 717,
+    "skipped": 2
+   },
+   "run 2": {
+    "passed": 717,
+    "skipped": 2
+   },
+   "unstable": 0
+  },
+  "deletions_no_result": [],
+  "deletions_run": true,
+  "deletions_time_limit": [],
+  "runs_repeated": [],
+  "suite_runs": [
+   {
+    "name": "all",
+    "paths": [
+     "tests"
+    ]
+   }
+  ]
+ },
+ "witnesses": {}
+}

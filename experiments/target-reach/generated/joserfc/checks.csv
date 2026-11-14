@@ -1,0 +1,98 @@
+check,file,role,function,class,template,in_handler,reachable,decides,cases_decided,blocks_targeting,cases_fired
+_keys.JWKRegistry.import_key#1,joserfc/_keys.py,subject,JWKRegistry.import_key,MissingKeyTypeError,Missing key type,no,yes,no,0,0,0
+_keys.JWKRegistry.import_key#2,joserfc/_keys.py,subject,JWKRegistry.import_key,InvalidKeyTypeError,Invalid key type: '{*}',no,yes,no,0,0,0
+_keys.JWKRegistry.generate_key#1,joserfc/_keys.py,subject,JWKRegistry.generate_key,InvalidKeyTypeError,Invalid key type: '{*}',no,yes,no,0,0,0
+_keys.KeySet.get_by_kid#1,joserfc/_keys.py,subject,KeySet.get_by_kid,InvalidKeyIdError,No key for kid: '{*}',no,yes,no,0,0,0
+_keys.KeySet.import_key_set#1,joserfc/_keys.py,subject,KeySet.import_key_set,MissingKeyError,No keys to import,no,no,no,0,0,0
+_rfc7515.compact.decode_header#1,joserfc/_rfc7515/compact.py,subject,decode_header,MissingAlgorithmError,,no,no,yes,2,0,2
+_rfc7515.compact.decode_header#2,joserfc/_rfc7515/compact.py,subject,decode_header,DecodeError,Invalid header,yes,no,yes,2,0,2
+_rfc7515.json.extract_general_json#1,joserfc/_rfc7515/json.py,subject,extract_general_json,DecodeError,Invalid payload,yes,yes,no,0,0,0
+_rfc7515.model.JWSAlgModel.check_key#1,joserfc/_rfc7515/model.py,subject,JWSAlgModel.check_key,InvalidKeyTypeError,Algorithm '{*}' requires '{*}' key,no,yes,no,0,0,0
+_rfc7515.registry.JWSRegistry.get_alg#1,joserfc/_rfc7515/registry.py,subject,JWSRegistry.get_alg,UnsupportedAlgorithmError,Algorithm of '{*}' is not supported,no,yes,no,0,0,0
+_rfc7515.registry.JWSRegistry.get_alg#2,joserfc/_rfc7515/registry.py,subject,JWSRegistry.get_alg,UnsupportedAlgorithmError,Algorithm of '{*}' is not allowed,no,yes,yes,2,0,2
+_rfc7515.registry.JWSRegistry.get_alg#3,joserfc/_rfc7515/registry.py,subject,JWSRegistry.get_alg,UnsupportedAlgorithmError,Algorithm of '{*}' is not recommended,no,yes,no,0,0,0
+_rfc7515.registry.JWSRegistry.validate_compact_value_size#1,joserfc/_rfc7515/registry.py,subject,JWSRegistry.validate_compact_value_size,ExceededSizeError,Value size exceeds {*} bytes.,no,yes,yes,1,0,1
+_rfc7515.registry.JWSRegistry.validate_header_size#1,joserfc/_rfc7515/registry.py,subject,JWSRegistry.validate_header_size,ExceededSizeError,Header size exceeds {*} bytes.,no,yes,yes,3,0,3
+_rfc7515.registry.JWSRegistry.validate_payload_size#1,joserfc/_rfc7515/registry.py,subject,JWSRegistry.validate_payload_size,ExceededSizeError,Payload size exceeds {*} bytes.,no,yes,yes,2,3,2
+_rfc7515.registry.JWSRegistry.validate_signature_size#1,joserfc/_rfc7515/registry.py,subject,JWSRegistry.validate_signature_size,ExceededSizeError,Signature of exceeds {*} bytes.,no,yes,yes,3,3,3
+_rfc7516.compact.extract_compact#1,joserfc/_rfc7516/compact.py,subject,extract_compact,MissingAlgorithmError,,no,yes,yes,1,3,1
+_rfc7516.compact.extract_compact#2,joserfc/_rfc7516/compact.py,subject,extract_compact,MissingEncryptionError,,no,yes,yes,1,1,1
+_rfc7516.compact.extract_compact#3,joserfc/_rfc7516/compact.py,subject,extract_compact,DecodeError,Invalid header,yes,yes,yes,1,4,1
+_rfc7516.json.__extract_segments#1,joserfc/_rfc7516/json.py,subject,__extract_segments,DecodeError,AAD must be omitted when empty,no,yes,yes,2,1,2
+_rfc7516.message.perform_decrypt#1,joserfc/_rfc7516/message.py,subject,perform_decrypt,DecodeError,{*},yes,yes,yes,12,0,12
+_rfc7516.message._perform_decrypt#1,joserfc/_rfc7516/message.py,subject,_perform_decrypt,DecodeError,Invalid recipients,no,yes,yes,2,0,2
+_rfc7516.message._perform_decrypt#2,joserfc/_rfc7516/message.py,subject,_perform_decrypt,DecodeError,Multiple 'cek' found,no,yes,no,0,1,0
+_rfc7516.message.pre_encrypt_recipients#1,joserfc/_rfc7516/message.py,subject,pre_encrypt_recipients,ConflictAlgorithmError,Algorithm {*} SHOULD have 1 recipient only,no,yes,no,0,0,0
+_rfc7516.message.decrypt_recipient#1,joserfc/_rfc7516/message.py,subject,decrypt_recipient,InvalidEncryptedKeyError,,no,yes,no,0,0,0
+_rfc7516.message.decrypt_recipient#2,joserfc/_rfc7516/message.py,subject,decrypt_recipient,DecodeError,Invalid encrypted key,no,yes,yes,2,2,2
+_rfc7516.models.KeyManagement.check_key_type#1,joserfc/_rfc7516/models.py,subject,KeyManagement.check_key_type,InvalidKeyTypeError,,no,yes,yes,1,0,2
+_rfc7516.models.JWEKeyWrapping.check_op_key#1,joserfc/_rfc7516/models.py,subject,JWEKeyWrapping.check_op_key,InvalidKeyLengthError,A key of size {*} bits MUST be used,no,yes,no,0,0,0
+_rfc7516.registry.JWERegistry.validate_compact_value_size#1,joserfc/_rfc7516/registry.py,subject,JWERegistry.validate_compact_value_size,ExceededSizeError,Value size exceeds {*} bytes.,no,yes,yes,2,0,2
+_rfc7516.registry.JWERegistry.validate_protected_header_size#1,joserfc/_rfc7516/registry.py,subject,JWERegistry.validate_protected_header_size,ExceededSizeError,Header size exceeds {*} bytes.,no,yes,no,0,0,0
+_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1,joserfc/_rfc7516/registry.py,subject,JWERegistry.validate_encrypted_key_size,ExceededSizeError,Encrypted key size exceeds {*} bytes.,no,yes,yes,1,1,1
+_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1,joserfc/_rfc7516/registry.py,subject,JWERegistry.validate_initialization_vector_size,ExceededSizeError,Initialization vector size exceeds {*} bytes.,no,yes,yes,1,1,1
+_rfc7516.registry.JWERegistry.validate_ciphertext_size#1,joserfc/_rfc7516/registry.py,subject,JWERegistry.validate_ciphertext_size,ExceededSizeError,Ciphertext size exceeds {*} bytes.,no,yes,no,0,1,0
+_rfc7516.registry.JWERegistry.validate_auth_tag_size#1,joserfc/_rfc7516/registry.py,subject,JWERegistry.validate_auth_tag_size,ExceededSizeError,Auth tag size exceeds {*} bytes.,no,yes,yes,1,1,1
+_rfc7516.registry.JWERegistry.validate_aad_size#1,joserfc/_rfc7516/registry.py,subject,JWERegistry.validate_aad_size,ExceededSizeError,AAD size exceeds {*} bytes.,no,yes,yes,4,2,4
+_rfc7516.registry.JWERegistry.validate_recipient_count#1,joserfc/_rfc7516/registry.py,subject,JWERegistry.validate_recipient_count,ExceededSizeError,Recipient count exceeds {*}.,no,yes,yes,1,1,1
+_rfc7516.registry.JWERegistry._check_algorithm#1,joserfc/_rfc7516/registry.py,subject,JWERegistry._check_algorithm,UnsupportedAlgorithmError,Algorithm of '{*}' is not supported,no,yes,no,0,0,0
+_rfc7516.registry.JWERegistry._check_algorithm#2,joserfc/_rfc7516/registry.py,subject,JWERegistry._check_algorithm,UnsupportedAlgorithmError,Algorithm of '{*}' is not allowed,no,yes,no,0,0,0
+_rfc7516.registry.JWERegistry._check_algorithm#3,joserfc/_rfc7516/registry.py,subject,JWERegistry._check_algorithm,UnsupportedAlgorithmError,Algorithm of '{*}' is not recommended,no,yes,yes,1,0,1
+_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1,joserfc/_rfc7517/models.py,subject,NativeKeyBinding.validate_dict_key_registry,KeyParameterError,'{*}' is required,no,yes,no,0,0,0
+_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#2,joserfc/_rfc7517/models.py,subject,NativeKeyBinding.validate_dict_key_registry,KeyParameterError,'{*}' {*},yes,yes,no,0,0,0
+_rfc7517.models.NativeKeyBinding.validate_dict_key_use_operations#1,joserfc/_rfc7517/models.py,subject,NativeKeyBinding.validate_dict_key_use_operations,KeyParameterError,'use' and 'key_ops' does not match,no,yes,no,0,0,0
+_rfc7517.models.BaseKey.check_use#1,joserfc/_rfc7517/models.py,subject,BaseKey.check_use,UnsupportedKeyUseError,This key is designed to be used for '{*}',no,yes,no,0,0,0
+_rfc7517.models.BaseKey.check_alg#1,joserfc/_rfc7517/models.py,subject,BaseKey.check_alg,UnsupportedKeyAlgorithmError,This key is designed for algorithm '{*}',no,yes,no,0,0,0
+_rfc7517.models.BaseKey.check_key_op#1,joserfc/_rfc7517/models.py,subject,BaseKey.check_key_op,UnsupportedKeyOperationError,Unsupported key_op '{*}',no,yes,no,0,0,0
+_rfc7517.models.BaseKey.check_key_op#2,joserfc/_rfc7517/models.py,subject,BaseKey.check_key_op,UnsupportedKeyOperationError,Invalid key_op '{*}' for public key,no,yes,no,0,0,0
+_rfc7517.pem.CryptographyBinding.import_from_bytes#1,joserfc/_rfc7517/pem.py,subject,CryptographyBinding.import_from_bytes,InvalidKeyTypeError,Not a key of: '{*}',no,yes,no,0,0,0
+_rfc7518.ec_key.ECBinding.generate_private_key#1,joserfc/_rfc7518/ec_key.py,subject,ECBinding.generate_private_key,InvalidKeyCurveError,Invalid crv value: '{*}',no,yes,no,0,0,0
+_rfc7518.ec_key.ECKey.exchange_derive_key#1,joserfc/_rfc7518/ec_key.py,subject,ECKey.exchange_derive_key,InvalidExchangeKeyError,,no,yes,no,0,0,4
+_rfc7518.ec_key.ECKey.derive_key#1,joserfc/_rfc7518/ec_key.py,subject,ECKey.derive_key,InvalidKeyCurveError,Invalid crv value: '{*}',yes,no,no,0,0,0
+_rfc7518.jwe_algs.DirectAlgEncryption.compute_cek#1,joserfc/_rfc7518/jwe_algs.py,subject,DirectAlgEncryption.compute_cek,InvalidKeyLengthError,A key of size {*} bits MUST be used,no,yes,no,0,0,0
+_rfc7518.jwe_algs.RSAAlgKeyEncryption.encrypt_cek#1,joserfc/_rfc7518/jwe_algs.py,subject,RSAAlgKeyEncryption.encrypt_cek,InvalidKeyLengthError,A key of size {*} bits or larger MUST be used,no,yes,no,0,0,0
+_rfc7518.jwe_algs.RSAAlgKeyEncryption.decrypt_cek#1,joserfc/_rfc7518/jwe_algs.py,subject,RSAAlgKeyEncryption.decrypt_cek,DecodeError,{*},yes,yes,yes,1,0,1
+_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1,joserfc/_rfc7518/jwe_algs.py,subject,AESAlgKeyWrapping.unwrap_cek,DecodeError,Unwrap AES key failed,yes,yes,yes,4,1,4
+_rfc7518.jwe_algs.AESGCMAlgKeyWrapping.decrypt_cek#1,joserfc/_rfc7518/jwe_algs.py,subject,AESGCMAlgKeyWrapping.decrypt_cek,DecodeError,{*},yes,yes,yes,1,0,1
+_rfc7518.jwe_encs.CBCHS2EncModel.decrypt#1,joserfc/_rfc7518/jwe_encs.py,subject,CBCHS2EncModel.decrypt,DecodeError,tag does not match,no,yes,yes,1,0,1
+_rfc7518.jwe_encs.GCMEncModel.decrypt#1,joserfc/_rfc7518/jwe_encs.py,subject,GCMEncModel.decrypt,DecodeError,{*},yes,yes,yes,1,0,1
+_rfc7518.jwe_zips.DeflateZipModel.decompress#1,joserfc/_rfc7518/jwe_zips.py,subject,DeflateZipModel.decompress,ExceededSizeError,Decompressed string exceeds {*} bytes,no,yes,yes,1,1,1
+_rfc7518.jws_algs.ESAlgorithm.check_key#1,joserfc/_rfc7518/jws_algs.py,subject,ESAlgorithm.check_key,InvalidKeyCurveError,"Key for '{*}' not supported, only '{*}' allowed",no,yes,no,0,0,0
+_rfc7518.rsa_key.has_all_prime_factors#1,joserfc/_rfc7518/rsa_key.py,subject,has_all_prime_factors,KeyParameterError,RSA key must include all parameters if any are present besides d,no,yes,no,0,0,0
+_rfc7519.claims.BaseClaimsRegistry.check_value#1,joserfc/_rfc7519/claims.py,subject,BaseClaimsRegistry.check_value,InvalidClaimError,{*},no,yes,yes,27,45,27
+_rfc7519.claims.BaseClaimsRegistry.validate#1,joserfc/_rfc7519/claims.py,subject,BaseClaimsRegistry.validate,MissingClaimError,{*},no,yes,yes,11,11,11
+_rfc7519.claims.JWTClaimsRegistry.validate_iss#1,joserfc/_rfc7519/claims.py,subject,JWTClaimsRegistry.validate_iss,InvalidClaimError,iss,no,no,yes,4,0,4
+_rfc7519.claims.JWTClaimsRegistry.validate_sub#1,joserfc/_rfc7519/claims.py,subject,JWTClaimsRegistry.validate_sub,InvalidClaimError,sub,no,no,yes,4,0,4
+_rfc7519.claims.JWTClaimsRegistry.validate_jti#1,joserfc/_rfc7519/claims.py,subject,JWTClaimsRegistry.validate_jti,InvalidClaimError,jti,no,no,yes,18,0,18
+_rfc7519.claims.JWTClaimsRegistry.validate_aud#1,joserfc/_rfc7519/claims.py,subject,JWTClaimsRegistry.validate_aud,InvalidClaimError,aud,no,no,yes,3,0,3
+_rfc7519.claims.JWTClaimsRegistry.validate_exp#1,joserfc/_rfc7519/claims.py,subject,JWTClaimsRegistry.validate_exp,InvalidClaimError,exp,no,no,yes,7,0,7
+_rfc7519.claims.JWTClaimsRegistry.validate_exp#2,joserfc/_rfc7519/claims.py,subject,JWTClaimsRegistry.validate_exp,ExpiredTokenError,exp,no,no,yes,4,0,4
+_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1,joserfc/_rfc7519/claims.py,subject,JWTClaimsRegistry.validate_nbf,InvalidClaimError,nbf,no,no,yes,8,0,8
+_rfc7519.claims.JWTClaimsRegistry.validate_iat#1,joserfc/_rfc7519/claims.py,subject,JWTClaimsRegistry.validate_iat,InvalidClaimError,iat,no,no,yes,7,0,7
+_rfc7519.security.check_sensitive_data#1,joserfc/_rfc7519/security.py,subject,check_sensitive_data,InsecureClaimError,{*},no,no,no,0,0,0
+_rfc7797.compact.extract_rfc7515_compact#1,joserfc/_rfc7797/compact.py,subject,extract_rfc7515_compact,DecodeError,Invalid JSON Web Signature,no,no,yes,3,0,3
+_rfc7797.compact.extract_rfc7515_compact#2,joserfc/_rfc7797/compact.py,subject,extract_rfc7515_compact,DecodeError,Invalid payload,yes,no,yes,1,0,1
+_rfc7797.json.extract_general_json#1,joserfc/_rfc7797/json.py,subject,extract_general_json,DecodeError,Invalid payload,yes,yes,yes,1,0,1
+_rfc7797.json.extract_rfc7797_json#1,joserfc/_rfc7797/json.py,subject,extract_rfc7797_json,DecodeError,Invalid payload,yes,no,yes,1,0,1
+_rfc7797.json._validate_general_members#1,joserfc/_rfc7797/json.py,subject,_validate_general_members,InvalidHeaderValueError,'b64' MUST have the same value for all signatures,no,yes,yes,1,1,1
+_rfc7797.json._is_payload_base64_encoded#1,joserfc/_rfc7797/json.py,subject,_is_payload_base64_encoded,UnsupportedHeaderError,'b64' header MUST be protected,no,yes,yes,1,2,1
+_rfc7797.util.is_rfc7797_enabled#1,joserfc/_rfc7797/util.py,subject,is_rfc7797_enabled,MissingCritHeaderError,b64,no,yes,no,0,0,0
+_rfc8037.jws_eddsa.EdDSAAlgorithm.sign#1,joserfc/_rfc8037/jws_eddsa.py,subject,EdDSAAlgorithm.sign,InvalidKeyTypeError,Algorithm '{*}' requires 'Ed25519' or 'Ed448' OKP key,no,yes,no,0,0,0
+_rfc8037.jws_eddsa.EdDSAAlgorithm.verify#1,joserfc/_rfc8037/jws_eddsa.py,subject,EdDSAAlgorithm.verify,InvalidKeyTypeError,Algorithm '{*}' requires 'Ed25519' or 'Ed448' OKP key,no,yes,yes,1,0,1
+_rfc8037.okp_key.OKPBinding.generate_private_key#1,joserfc/_rfc8037/okp_key.py,subject,OKPBinding.generate_private_key,InvalidKeyCurveError,Invalid curve value: '{*}',no,yes,no,0,0,0
+_rfc8037.okp_key.OKPKey.exchange_derive_key#1,joserfc/_rfc8037/okp_key.py,subject,OKPKey.exchange_derive_key,InvalidExchangeKeyError,,no,yes,no,0,0,8
+_rfc9864.jws_eddsa.EdDSAAlgorithm.check_key#1,joserfc/_rfc9864/jws_eddsa.py,subject,EdDSAAlgorithm.check_key,InvalidKeyCurveError,"Key for '{*}' not supported, only '{*}' allowed",no,yes,yes,2,0,2
+drafts.jwe_ecdh_1pu.ECDH1PUAlgModel._check_enc#1,joserfc/drafts/jwe_ecdh_1pu.py,subject,ECDH1PUAlgModel._check_enc,InvalidEncryptionAlgorithmError,{*},no,yes,no,0,0,0
+jwk.import_key~6#1,joserfc/jwk.py,subject,import_key~6,InvalidKeyTypeError,Not a key of any supported type,no,yes,no,0,0,0
+jws.serialize_compact#1,joserfc/jws.py,subject,serialize_compact,MissingKeyError,,no,yes,no,0,0,0
+jws.validate_compact#1,joserfc/jws.py,subject,validate_compact,MissingKeyError,,no,yes,yes,1,0,1
+jws.deserialize_compact#1,joserfc/jws.py,subject,deserialize_compact,BadSignatureError,,no,yes,yes,11,1,11
+jws.deserialize_json~3#1,joserfc/jws.py,subject,deserialize_json~3,BadSignatureError,,no,yes,yes,5,2,5
+jwt.decode#1,joserfc/jwt.py,subject,decode,InvalidPayloadError,,yes,yes,yes,6,2,6
+registry.check_supported_header#1,joserfc/registry.py,subject,check_supported_header,UnsupportedHeaderError,Unsupported {*} in header,no,yes,no,0,0,0
+registry.check_registry_header#1,joserfc/registry.py,subject,check_registry_header,MissingHeaderError,{*},no,yes,no,0,0,0
+registry.check_registry_header#2,joserfc/registry.py,subject,check_registry_header,InvalidHeaderValueError,'{*}' in header {*},yes,yes,yes,1,0,1
+registry.check_crit_header#1,joserfc/registry.py,subject,check_crit_header,MissingCritHeaderError,{*},no,yes,no,0,0,0
+registry.check_crit_header#2,joserfc/registry.py,subject,check_crit_header,UnsupportedHeaderError,Unsupported {*} in header,no,yes,no,0,0,0
+registry.reject_unprotected_crit_header#1,joserfc/registry.py,subject,reject_unprotected_crit_header,UnsupportedHeaderError,'crit' header MUST be protected header,no,yes,yes,2,0,2
+registry.reject_unprotected_crit_header#2,joserfc/registry.py,subject,reject_unprotected_crit_header,UnsupportedHeaderError,'{*}' header MUST be protected,no,yes,yes,3,0,3

@@ -1,0 +1,382 @@
+{
+ "counts": {
+  "block_targets_by_basis": {
+   "class": 5,
+   "name": 25,
+   "none: no name token matches": 7,
+   "none: tie": 6
+  },
+  "blocks": 91,
+  "cases": 48,
+  "cases_another_check_fires_too": 0,
+  "cases_by_site_kind": {
+   "check": 42,
+   "other raise": 6
+  },
+  "cases_class_only": 46,
+  "cases_fired_in_other_threads": 0,
+  "cases_left_out": 0,
+  "cases_left_out_by_reason": {},
+  "cases_message_text_differs_between_unmodified_runs": 0,
+  "cases_nested": 0,
+  "cases_of_included_blocks": 48,
+  "cases_reaching_target": 18,
+  "cases_target_fires": 18,
+  "cases_with_target": 30,
+  "cases_with_target_by_basis": {
+   "class": 5,
+   "name": 25
+  },
+  "cases_with_target_by_outcome": {
+   "decided by the target": 18,
+   "decided by the target; own test without the target: fails": 18,
+   "the target does not fire": 12,
+   "the target does not fire; own test without the target: fails": 4,
+   "the target does not fire; own test without the target: passes": 1,
+   "the target does not fire; own test without the target: target not deleted": 7
+  },
+  "cases_with_target_by_tier": {
+   "assertion": 5,
+   "name": 25
+  },
+  "checks": 39,
+  "checks_deciding": 24,
+  "checks_deciding_in_subject_files": 24,
+  "checks_deciding_not_statically_reachable": 0,
+  "checks_firing": 24,
+  "checks_firing_and_never_deciding": 0,
+  "checks_in_subject_files": 39,
+  "checks_reachable": 36,
+  "deletion_runs_repeated": 0,
+  "deletions": 24,
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": 0,
+   "O_V within O_C": 0,
+   "O_V within O_S": 0,
+   "O_Vfc within O_V": 0,
+   "suite within whole suite": 0
+  },
+  "deletions_in_handler": 3,
+  "deletions_not_detected": {
+   "O_C": 3,
+   "O_S": 3,
+   "O_T": 10,
+   "O_V": 3,
+   "O_Vfc": 8,
+   "suite": 3,
+   "whole suite": 3
+  },
+  "deletions_not_detected_of_deciding_checks": {
+   "O_C": 3,
+   "O_S": 3,
+   "O_T": 10,
+   "O_V": 3,
+   "O_Vfc": 8,
+   "suite": 3,
+   "whole suite": 3
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": 3,
+   "O_T": 10,
+   "O_V": 3,
+   "O_Vfc": 8
+  },
+  "deletions_not_detected_withheld_as_failing_of_deciding_checks": {
+   "O_C": 3,
+   "O_T": 10,
+   "O_V": 3,
+   "O_Vfc": 8
+  },
+  "deletions_of_checks_that_fire_and_never_decide": 0,
+  "deletions_of_deciding_checks": 24,
+  "deletions_time_limit": 0,
+  "deletions_without_record": 0,
+  "fired_recorded": true,
+  "flags": 12,
+  "flags_by_tier": {
+   "name": 12
+  },
+  "flags_target_fires": 0,
+  "included_blocks": 43,
+  "included_blocks_class_only": 41,
+  "included_blocks_never_run": 0,
+  "included_blocks_with_target": 30,
+  "pinning": {
+   "cases": 42,
+   "cases_not_counted_deciding_check_not_deleted": 0,
+   "cases_not_counted_no_deciding_check": 6,
+   "cases_not_counted_no_record": 0,
+   "cases_not_counted_time_limit": 0,
+   "class_only": {
+    "cases": 40,
+    "test_passes": 3
+   },
+   "message": {
+    "cases": 2,
+    "test_passes": 0
+   },
+   "test_fails": 39,
+   "test_passes": 3,
+   "test_passes_by_what_the_case_does": {
+    "same class, another check": 2,
+    "same class, other raise": 1
+   }
+  },
+  "reached_targets": 14,
+  "reached_targets_deletion_not_detected_O_T": 0,
+  "test_files_not_collected": 0,
+  "tests_collected_again": 0,
+  "tests_expected_to_fail_at_baseline": 0,
+  "tests_imported_and_kept": 0,
+  "tests_run": 159,
+  "tests_with_cases": 28
+ },
+ "expected_baseline_failures": [],
+ "lists": {
+  "cases_left_out": [],
+  "checks_deciding_not_statically_reachable": [],
+  "deletion_runs_repeated": [],
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": [],
+   "O_V within O_C": [],
+   "O_V within O_S": [],
+   "O_Vfc within O_V": [],
+   "suite within whole suite": []
+  },
+  "deletions_not_detected": {
+   "O_C": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2"
+   ],
+   "O_S": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2"
+   ],
+   "O_T": [
+    "jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#2",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7515.jws.JsonWebSignature.deserialize_compact#1",
+    "jose.rfc7516.jwe.JsonWebEncryption._validate_private_headers#1",
+    "jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact#1",
+    "jose.rfc7516.jwe.JsonWebEncryption.get_header_alg#2",
+    "jose.rfc7519.claims.BaseClaims._validate_claim_value#1",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2",
+    "jose.util.ensure_dict#1"
+   ],
+   "O_V": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2"
+   ],
+   "O_Vfc": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7515.jws.JsonWebSignature.deserialize_compact#1",
+    "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+    "jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact#1",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2",
+    "jose.rfc7519.claims.JWTClaims.validate_exp#1",
+    "jose.util.ensure_dict#1"
+   ],
+   "suite": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2"
+   ],
+   "whole suite": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2"
+   ]
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2"
+   ],
+   "O_T": [
+    "jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#2",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7515.jws.JsonWebSignature.deserialize_compact#1",
+    "jose.rfc7516.jwe.JsonWebEncryption._validate_private_headers#1",
+    "jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact#1",
+    "jose.rfc7516.jwe.JsonWebEncryption.get_header_alg#2",
+    "jose.rfc7519.claims.BaseClaims._validate_claim_value#1",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2",
+    "jose.util.ensure_dict#1"
+   ],
+   "O_V": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2"
+   ],
+   "O_Vfc": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+    "jose.rfc7515.jws.JsonWebSignature.deserialize_compact#1",
+    "jose.rfc7515.jws.JsonWebSignature.deserialize_json#1",
+    "jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact#1",
+    "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2",
+    "jose.rfc7519.claims.JWTClaims.validate_exp#1",
+    "jose.util.ensure_dict#1"
+   ]
+  },
+  "deletions_of_checks_that_fire_and_never_decide": [],
+  "deletions_time_limit": [],
+  "deletions_without_record": [],
+  "included_blocks_never_run": []
+ },
+ "refused_connection_attempts": {
+  "baseline_recorder_runs": [
+   0,
+   0
+  ],
+  "deletion_recorder_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 25,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "suite_run": 0,
+  "tests": [],
+  "whole_suite_baseline_runs": [
+   0,
+   0
+  ],
+  "whole_suite_deletion_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 25,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "witness_runs": 0
+ },
+ "rule_version": "reach-target-rule/2",
+ "sentinels": [
+  {
+   "detail": "",
+   "name": "2 baseline runs and the control copy give identical records, message texts aside",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "in the baseline recorder run every test passes or is skipped, every test file is collected, and the tests deselected are the expected baseline failures",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "under the deletion of a check, that check fires in no case",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "every deletion run gave a record or exceeded the time limit 2 times",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the check that decides a case is among the checks that fire in it",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the whole suite ran on every deletion copy, and on the control copy it ends with its results and loses no test that passes in both unmodified runs",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the deleted checks are the checks of the subject files that fire in at least 1 case of the study",
+   "pass": true
+  }
+ ],
+ "subject": {
+  "commit": "42607cbc2135252a641a845e4ed7f94e3a922c47",
+  "name": "authlib",
+  "version": "1.9.5"
+ },
+ "suite_without_recorder": "159 passed, 1 warning",
+ "test_files_not_collected": [],
+ "tests_collected_again": [],
+ "tests_imported_and_kept": [],
+ "whole_suite": {
+  "counts": {
+   "passing in both": 1211,
+   "run 1": {
+    "passed": 1211,
+    "skipped": 2
+   },
+   "run 2": {
+    "passed": 1211,
+    "skipped": 2
+   },
+   "unstable": 0
+  },
+  "deletions_no_result": [],
+  "deletions_run": true,
+  "deletions_time_limit": [],
+  "runs_repeated": [],
+  "suite_runs": [
+   {
+    "name": "core",
+    "paths": [
+     "tests/core"
+    ]
+   },
+   {
+    "name": "jose",
+    "paths": [
+     "tests/jose"
+    ]
+   },
+   {
+    "name": "clients",
+    "paths": [
+     "tests/clients"
+    ]
+   },
+   {
+    "name": "flask",
+    "paths": [
+     "tests/flask"
+    ]
+   },
+   {
+    "name": "django",
+    "paths": [
+     "tests/django"
+    ]
+   }
+  ]
+ },
+ "witnesses": {
+  "test_essential_claim_empty_value.py": {
+   "check": "jose.rfc7519.claims.BaseClaims._validate_essential_claims#2",
+   "failure_messages_without_the_check": {
+    "witness|_witness.test_essential_claim_empty_value::test_essential_claim_with_empty_value": "Failed: DID NOT RAISE InvalidClaimError"
+   },
+   "holds": true,
+   "tests": 1,
+   "tests_failing_without_the_check": 1,
+   "tests_not_passing_without_the_check": 1,
+   "tests_passing_on_the_unmodified_copy": 1
+  },
+  "test_json_signature_empty.py": {
+   "check": "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2",
+   "failure_messages_without_the_check": {
+    "witness|_witness.test_json_signature_empty::test_json_serialization_with_empty_signature": "Failed: DID NOT RAISE DecodeError"
+   },
+   "holds": true,
+   "tests": 1,
+   "tests_failing_without_the_check": 1,
+   "tests_not_passing_without_the_check": 1,
+   "tests_passing_on_the_unmodified_copy": 1
+  }
+ }
+}
