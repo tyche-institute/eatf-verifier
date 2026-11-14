@@ -1,0 +1,9 @@
+file	part	blocks
+tests/oauth2/rfc6749/endpoints/test_error_responses.py	1	24
+tests/oauth2/rfc6749/grant_types/test_authorization_code.py	1	19
+tests/oauth2/rfc6749/grant_types/test_refresh_token.py	2	7
+tests/oauth2/rfc6749/grant_types/test_resource_owner_password.py	2	4
+tests/openid/connect/core/endpoints/test_openid_connect_params_handling.py	2	1
+tests/openid/connect/core/grant_types/test_authorization_code.py	2	7
+tests/openid/connect/core/grant_types/test_hybrid.py	2	2
+tests/openid/connect/core/grant_types/test_implicit.py	2	9

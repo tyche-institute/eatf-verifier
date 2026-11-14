@@ -1,0 +1,18 @@
+block	label	basis	quote	note
+tests/test_jwt.py::test_decode_bad_token_expired#0	auth.jwt._verify_iat_and_exp#3	assert+name	Token expired	Only template with Token expired; test name bad_token_expired agrees.
+tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0	auth.jwt._verify_iat_and_exp#1	assert+name	Token does not contain required claim	Missing iat or exp claim check in _verify_iat_and_exp.
+tests/test_jwt.py::test_decode_bad_token_not_json#0	auth.jwt._decode_jwt_segment#1	assert+name	Can\'t parse segment	Segment JSON parse failure in _decode_jwt_segment.
+tests/test_jwt.py::test_decode_bad_token_too_early#0	auth.jwt._verify_iat_and_exp#2	assert+name	Token used too early	iat in the future check.
+tests/test_jwt.py::test_decode_bad_token_wrong_audience#0	auth.jwt.decode#6	assert+name	Token has wrong audience	Audience check in decode.
+tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0	auth.jwt.decode#6	assert+name	Token has wrong audience	Audience list variant; same audience check in decode.
+tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0	auth.jwt._unverified_decode#1	assert+name	Wrong number of segments	Segment count check in _unverified_decode, reached from decode.
+tests/test_jwt.py::test_decode_header_object#0	auth.jwt._unverified_decode#2	assert+name	Header segment should be a JSON object	Comment: number as a header instead of a dictionary.
+tests/test_jwt.py::test_decode_mismatched_cert_key_type#0	auth.jwt.decode#4	class+assert+name	Certificate key type does not match signature algorithm	All parametrized runs described by the same check.
+tests/test_jwt.py::test_decode_missing_crytography_alg#0	auth.jwt.decode#1	assert+name	missing_crytography_alg; cryptography	Pattern cryptography fits the literal text of decode#1; name names the missing cryptography algorithm.
+tests/test_jwt.py::test_decode_multicert_bad_cert#0	auth.jwt.decode#5	assert+name	Could not verify token signature	Signature verification failure in decode.
+tests/test_jwt.py::test_decode_no_cert#0	auth.jwt.decode#3	assert+name	Certificate for key id 1 not found	Key id missing from certs mapping.
+tests/test_jwt.py::test_decode_payload_object#0	auth.jwt._unverified_decode#3	assert+name	Payload segment should be a JSON object	Comment: payload strings not as fields of a dictionary.
+tests/test_jwt.py::test_decode_unhashable_alg#0	auth.jwt.decode#2	class+assert+name	Unsupported signature algorithm	Unhashable alg leads to TypeError branch, unsupported algorithm message.
+tests/test_jwt.py::test_decode_unhashable_kid#0	auth.jwt.decode#3	class+assert+name	Certificate for key id .* not found	Unhashable kid caught as TypeError in cert lookup.
+tests/test_jwt.py::test_decode_unknown_alg#0	auth.jwt.decode#2	assert+name	unknown_alg; fakealg	fakealg could fill the computed part of decode#1 or decode#2; unknown alg names Unsupported signature algorithm.
+tests/test_jwt.py::test_decode_wrong_cert#0	auth.jwt.decode#5	assert+name	Could not verify token signature	Wrong cert means signature not valid.

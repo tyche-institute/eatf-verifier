@@ -1,0 +1,12 @@
+file	part	blocks
+tests/jwe/test_compact.py	1	17
+tests/jwe/test_errors.py	1	1
+tests/jwe/test_example.py	1	1
+tests/jwe/test_json.py	1	11
+tests/jws/test_compact.py	1	10
+tests/jws/test_eddsa.py	1	5
+tests/jws/test_errors.py	1	7
+tests/jws/test_json.py	2	17
+tests/jws/test_rfc7797.py	2	5
+tests/jwt/test_claims.py	2	59
+tests/jwt/test_jwt.py	3	5

@@ -1,0 +1,44 @@
+block	label	basis	quote	note
+tests/jose/test_jwe.py::test_deserialize_json_fails_if_protected_header_contains_unknown_field_while_private_fields_restricted#0	jose.rfc7516.jwe.JsonWebEncryption._validate_private_headers#1	class+name	unknown_field_while_private_fields_restricted	place: same private-header check also in JWS; entry point JsonWebEncryption.deserialize_json calls the JWE one.
+tests/jose/test_jwe.py::test_deserialize_json_fails_if_recipient_header_contains_unknown_field_while_private_fields_restricted#0	jose.rfc7516.jwe.JsonWebEncryption._validate_private_headers#1	class+name	unknown_field_while_private_fields_restricted	place: same private-header check also in JWS; entry point JsonWebEncryption.deserialize_json calls the JWE one.
+tests/jose/test_jwe.py::test_deserialize_json_fails_if_unprotected_header_contains_unknown_field_while_private_fields_restricted#0	jose.rfc7516.jwe.JsonWebEncryption._validate_private_headers#1	class+name	unknown_field_while_private_fields_restricted	place: same private-header check also in JWS; entry point JsonWebEncryption.deserialize_json calls the JWE one.
+tests/jose/test_jwe.py::test_not_enough_segments#0	jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact#1	class+name	test_not_enough_segments	place: same message in JWS deserialize_compact; entry point is the JWE jwe.deserialize_compact.
+tests/jose/test_jwe.py::test_not_supported_alg#2	jose.rfc7516.jwe.JsonWebEncryption.get_header_alg#2	class+name	test_not_supported_alg	place: JWS has same check; entry point is JWE deserialize_compact, which calls get_header_alg.
+tests/jose/test_jwe.py::test_not_supported_alg#5	jose.rfc7516.jwe.JsonWebEncryption.get_header_enc#2	class	test_not_supported_alg	Only one check raises UnsupportedEncryptionAlgorithmError.
+tests/jose/test_jws.py::test_bad_signature#0	jose.rfc7515.jws.JsonWebSignature.deserialize_compact#2	class+name	test_bad_signature	place: BadSignatureError also in deserialize_json; the block deserializes a compact string, so deserialize_compact.
+tests/jose/test_jws.py::test_compact_rsa#0	none	none	test_compact_rsa; # can deserialize with private key	generic: name gives the format and algorithm, no single defect; 2 BadSignatureError checks remain.
+tests/jose/test_jws.py::test_compact_rsa_pss#0	none	none	test_compact_rsa_pss	generic: name gives the format and algorithm, no single defect; 2 BadSignatureError checks remain.
+tests/jose/test_jws.py::test_deserialize_json_empty_signatures#0	jose.rfc7515.jws.JsonWebSignature.deserialize_json#2	class+name	test_deserialize_json_empty_signatures	place: json check covers the empty signatures list; compact check is another entry point.
+tests/jose/test_jws.py::test_fail_deserialize_json#0	none	none	test_fail_deserialize_json	generic: no comment names the defect; several DecodeError checks fit.
+tests/jose/test_jws.py::test_fail_deserialize_json#1	none	none	test_fail_deserialize_json	generic: no comment names the defect; several DecodeError checks fit.
+tests/jose/test_jws.py::test_fail_deserialize_json#2	none	none	test_fail_deserialize_json	generic: no comment names the defect; several DecodeError checks fit.
+tests/jose/test_jws.py::test_fail_deserialize_json#3	jose.rfc7515.jws.JsonWebSignature._validate_json_jws#1	class+name	# missing protected	Comment names the missing protected value.
+tests/jose/test_jws.py::test_fail_deserialize_json#4	jose.rfc7515.jws.JsonWebSignature._validate_json_jws#2	class+name	# missing signature	Comment names the missing signature value.
+tests/jose/test_jws.py::test_invalid_alg#0	jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#2	class+name	test_invalid_alg	place: JWE get_header_alg has the same message; entry point is JsonWebSignature.deserialize.
+tests/jose/test_jws.py::test_invalid_input#0	none	none	test_invalid_input	generic: name and short comments name no single defect; many DecodeError checks fit.
+tests/jose/test_jws.py::test_invalid_input#1	none	none	test_invalid_input	generic: name and short comments name no single defect; many DecodeError checks fit.
+tests/jose/test_jws.py::test_invalid_input#2	none	none	test_invalid_input	generic: name and short comments name no single defect; many DecodeError checks fit.
+tests/jose/test_jws.py::test_invalid_input#3	none	none	test_invalid_input	generic: name and short comments name no single defect; many DecodeError checks fit.
+tests/jose/test_jws.py::test_invalid_input#4	none	none	test_invalid_input	generic: name and short comments name no single defect; many DecodeError checks fit.
+tests/jose/test_jws.py::test_invalid_input#5	none	none	test_invalid_input	generic: name and short comments name no single defect; many DecodeError checks fit.
+tests/jose/test_jws.py::test_invalid_input#6	none	none	test_invalid_input	generic: name and short comments name no single defect; many DecodeError checks fit.
+tests/jose/test_jws.py::test_nested_json_jws#0	jose.rfc7515.jws.JsonWebSignature.deserialize_json#2	class+name	# test bad signature	place: block deserializes a JSON JWS with signatures, so the json check, not the compact one.
+tests/jose/test_jws.py::test_not_supported_alg#1	jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#2	class+name	test_not_supported_alg	place: JWE get_header_alg has the same message; entry point is JsonWebSignature.serialize.
+tests/jose/test_jws.py::test_unprotected_crit_rejected_in_json_deserialize#0	jose.rfc7515.jws.JsonWebSignature._reject_unprotected_crit#1	class+name	test_unprotected_crit_rejected_in_json_deserialize	Name states crit in the unprotected header.
+tests/jose/test_jws.py::test_validate_crit_header_with_deserialize#0	jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#2	class	test_validate_crit_header_with_deserialize	Only one check raises InvalidCritHeaderParameterNameError.
+tests/jose/test_jws.py::test_validate_crit_header_with_deserialize#1	jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#2	class	test_validate_crit_header_with_deserialize	Only one check raises InvalidCritHeaderParameterNameError.
+tests/jose/test_jwt.py::test_invalid_values#0	jose.rfc7519.claims.BaseClaims._validate_claim_value#1	class+name	test_invalid_values	values option mismatch.
+tests/jose/test_jwt.py::test_invalid_values#1	jose.rfc7519.claims.BaseClaims._validate_claim_value#1	class+name	test_invalid_values	value option mismatch.
+tests/jose/test_jwt.py::test_validate_aud#0	jose.rfc7519.claims.JWTClaims.validate_aud#1	class+name	test_validate_aud	
+tests/jose/test_jwt.py::test_validate_custom#0	jose.rfc7519.claims.BaseClaims._validate_claim_value#1	class+name	test_validate_custom	Custom claim with validate callable.
+tests/jose/test_jwt.py::test_validate_essential_claims#0	jose.rfc7519.claims.BaseClaims._validate_essential_claims#1	class	test_validate_essential_claims	Only one check raises MissingClaimError.
+tests/jose/test_jwt.py::test_validate_exp#0	jose.rfc7519.claims.JWTClaims.validate_exp#1	class+name	test_validate_exp	Invalid (non numeric) exp.
+tests/jose/test_jwt.py::test_validate_exp#1	jose.rfc7519.claims.JWTClaims.validate_exp#2	class	test_validate_exp	Only one check raises ExpiredTokenError.
+tests/jose/test_jwt.py::test_validate_expected_issuer_received_None#0	none	none	test_validate_expected_issuer_received_None	tie: expected issuer value mismatch (claim value check) and essential claim empty check both fit.
+tests/jose/test_jwt.py::test_validate_iat#0	jose.rfc7519.claims.JWTClaims.validate_iat#1	class+name	test_validate_iat	Invalid iat value.
+tests/jose/test_jwt.py::test_validate_iat_issued_in_future#0	jose.rfc7519.claims.JWTClaims.validate_iat#2	class+assert	"match=""The token is not valid as it was issued in the future"""	Message is only in the iat check.
+tests/jose/test_jwt.py::test_validate_iat_issued_in_future_with_insufficient_leeway#0	jose.rfc7519.claims.JWTClaims.validate_iat#2	class+assert	"match=""The token is not valid as it was issued in the future"""	Message is only in the iat check.
+tests/jose/test_jwt.py::test_validate_jti#0	jose.rfc7519.claims.BaseClaims._validate_claim_value#1	class+name	test_validate_jti	jti validate callable runs through the claim value check.
+tests/jose/test_jwt.py::test_validate_nbf#0	jose.rfc7519.claims.JWTClaims.validate_nbf#1	class+name	test_validate_nbf	Invalid nbf value.
+tests/jose/test_jwt.py::test_validate_nbf#1	jose.rfc7519.claims.JWTClaims.validate_nbf#2	class+name	test_validate_nbf	Token not yet valid; nbf check.
+tests/jose/test_jwt.py::test_validate_numeric_date_rejects_bool#0	none	none	"for name in (""exp"", ""nbf"", ""iat"")"	varies: loop over exp, nbf, iat gives different checks.

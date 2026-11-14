@@ -1,0 +1,4 @@
+file	part	blocks
+tests/jose/test_jwe.py	1	6
+tests/jose/test_jws.py	1	22
+tests/jose/test_jwt.py	1	15

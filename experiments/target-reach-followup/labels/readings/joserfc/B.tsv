@@ -1,0 +1,139 @@
+block	label	basis	quote	note
+tests/jwe/test_compact.py::TestJWECompact.test_AESGCM_alg#0	none	none	test_AESGCM_alg	generic The name names no single defect; several checks of the class remain. Wrong-key decryption; several DecodeError checks fit.
+tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_EC_key#0	none	none	test_ECDH_ES_with_EC_key	generic The name names no single defect; several checks of the class remain. Wrong-key decryption; several DecodeError checks fit.
+tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_EC_key#1	none	none	test_ECDH_ES_with_EC_key	generic The name names no single defect; several checks of the class remain. Wrong-key decryption; several DecodeError checks fit.
+tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_OKP_key#0	none	none	test_ECDH_ES_with_OKP_key	generic The name names no single defect; several checks of the class remain. Wrong-key decryption; several DecodeError checks fit.
+tests/jwe/test_compact.py::TestJWECompact.test_ECDH_ES_with_OKP_key#1	none	none	test_ECDH_ES_with_OKP_key	generic The name names no single defect; several checks of the class remain. Wrong-key decryption; several DecodeError checks fit.
+tests/jwe/test_compact.py::TestJWECompact.test_PBES2HS_alg#0	none	none	test_PBES2HS_alg	generic The name names no single defect; several checks of the class remain. Wrong-key decryption; several DecodeError checks fit.
+tests/jwe/test_compact.py::TestJWECompact.test_PBES2HS_with_large_p2c#1	registry.check_registry_header#2	class+name	test_PBES2HS_with_large_p2c	p2c header value too large is an invalid header value; the b64 same-value check names another header.
+tests/jwe/test_compact.py::TestJWECompact.test_RSA_alg#0	none	none	test_RSA_alg	generic The name names no single defect; several checks of the class remain. Wrong-key decryption; several DecodeError checks fit.
+tests/jwe/test_compact.py::TestJWECompact.test_auth_tag_exceeds_size#0	_rfc7516.registry.JWERegistry.validate_auth_tag_size#1	class+name	test_auth_tag_exceeds_size	Only the auth tag size check fits.
+tests/jwe/test_compact.py::TestJWECompact.test_ciphertext_exceeds_size#0	_rfc7516.registry.JWERegistry.validate_ciphertext_size#1	class+name	test_ciphertext_exceeds_size	Only the ciphertext size check fits.
+tests/jwe/test_compact.py::TestJWECompact.test_decompress_zip_exceeds_size#0	_rfc7518.jwe_zips.DeflateZipModel.decompress#1	class+name	test_decompress_zip_exceeds_size	Decompressed size is the only zip-related size check.
+tests/jwe/test_compact.py::TestJWECompact.test_encrypted_key_exceeds_size#0	_rfc7516.registry.JWERegistry.validate_encrypted_key_size#1	class+name	test_encrypted_key_exceeds_size	Only the encrypted key size check fits.
+tests/jwe/test_compact.py::TestJWECompact.test_header_exceeds_size#0	_rfc7516.registry.JWERegistry.validate_protected_header_size#1	class+name	test_header_exceeds_size	place: same message in JWSRegistry.validate_header_size; the entry decrypt_compact is JWE.
+tests/jwe/test_compact.py::TestJWECompact.test_initialization_vector_size#0	_rfc7516.registry.JWERegistry.validate_initialization_vector_size#1	class+name	test_initialization_vector_size	Only the initialization vector size check fits.
+tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#1	none	none	test_invalid_compact_data	generic The name names no single defect; several checks of the class remain. Several DecodeError checks fit.
+tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#2	none	none	test_invalid_compact_data	generic Name names no single defect; MissingAlgorithmError has 2 checks (JWS decode_header, JWE extract_compact).
+tests/jwe/test_compact.py::TestJWECompact.test_invalid_compact_data#3	_rfc7516.compact.extract_compact#2	class	test_invalid_compact_data	C_class holds exactly 1 check (MissingEncryptionError); no narrowing by name needed.
+tests/jwe/test_errors.py::TestJWEErrors.test_A128KW_unwrap_error#0	_rfc7518.jwe_algs.AESAlgKeyWrapping.unwrap_cek#1	class+name	test_A128KW_unwrap_error	Unwrap failure of an AES key wrap; other DecodeErrors name other defects.
+tests/jwe/test_example.py::TestCompactExamples.test_A2#0	_rfc7516.registry.JWERegistry._check_algorithm#2	class+name	# RSA1_5 is not allowed by default	place: same message in JWSRegistry.get_alg#2; the entry decrypt_compact is JWE.
+tests/jwe/test_json.py::TestJWEJSON.test_aad_size_limit#0	_rfc7516.registry.JWERegistry.validate_aad_size#1	class+assert	AAD size exceeds	The pattern leaves only the AAD size check.
+tests/jwe/test_json.py::TestJWEJSON.test_decode_multiple_recipients#0	none	none	test_decode_multiple_recipients	generic The name names no single defect; several checks of the class remain. Several InvalidKeyTypeError checks fit.
+tests/jwe/test_json.py::TestJWEJSON.test_decode_multiple_recipients#1	none	none	test_decode_multiple_recipients	generic The name names no single defect; several checks of the class remain. Several DecodeError checks fit.
+tests/jwe/test_json.py::TestJWEJSON.test_empty_aad_member_rejected#0	_rfc7516.json.__extract_segments#1	class+assert	AAD must be omitted when empty	The pattern leaves only this check.
+tests/jwe/test_json.py::TestJWEJSON.test_flattened_json_without_encrypted_key#0	_rfc7516.message.decrypt_recipient#2	class+name	test_flattened_json_without_encrypted_key	Missing encrypted key matches Invalid encrypted key; InvalidEncryptedKeyError is not a DecodeError.
+tests/jwe/test_json.py::TestJWEJSON.test_general_json_recipients_exceeded_size_error#0	_rfc7516.registry.JWERegistry.validate_recipient_count#1	class+name	test_general_json_recipients_exceeded_size_error	Only the recipient count check fits.
+tests/jwe/test_json.py::TestJWEJSON.test_general_json_without_encrypted_key#0	_rfc7516.message.decrypt_recipient#2	class+name	test_general_json_without_encrypted_key	Missing encrypted key matches Invalid encrypted key; InvalidEncryptedKeyError is not a DecodeError.
+tests/jwe/test_json.py::TestJWEJSON.test_general_json_without_recipients#0	_rfc7516.message._perform_decrypt#1	class+name	test_general_json_without_recipients	Invalid recipients is the check about recipients.
+tests/jwe/test_json.py::TestJWEJSON.test_oversized_aad_rejected_before_decoding#0	_rfc7516.registry.JWERegistry.validate_aad_size#1	class+assert	AAD size exceeds 4 bytes	The pattern leaves only the AAD size check.
+tests/jwe/test_json.py::TestJWEJSON.test_recipient_critical_header_rejected_on_decrypt#0	none	none	test_recipient_critical_header_rejected_on_decrypt	tie Several crit-related UnsupportedHeaderError checks fit (unsupported crit entry, crit must be protected).
+tests/jwe/test_json.py::TestJWEJSON.test_recipient_critical_header_rejected_on_decrypt#1	none	none	test_recipient_critical_header_rejected_on_decrypt	tie Several crit-related UnsupportedHeaderError checks fit (unsupported crit entry, crit must be protected).
+tests/jws/test_compact.py::TestCompact.test_bad_signature_error#0	jws.deserialize_compact#1	class+name	test_bad_signature_error	place: deserialize_json~3#1 is the same defect in JSON; the entry deserialize_compact is compact.
+tests/jws/test_compact.py::TestCompact.test_header_exceeded_size_error#0	_rfc7515.registry.JWSRegistry.validate_header_size#1	class+name	test_header_exceeded_size_error	place: same message in JWERegistry.validate_protected_header_size; the entry deserialize_compact is JWS.
+tests/jws/test_compact.py::TestCompact.test_invalid_length#0	_rfc7797.compact.extract_rfc7515_compact#1	class+name	test_invalid_length	Invalid JSON Web Signature guards on the number of parts.
+tests/jws/test_compact.py::TestCompact.test_invalid_payload#0	_rfc7797.compact.extract_rfc7515_compact#2	class+name	test_invalid_payload	place: Invalid payload also stands in JSON extractors; the entry deserialize_compact is compact.
+tests/jws/test_compact.py::TestCompact.test_no_invalid_header#0	_rfc7515.compact.decode_header#2	class+name	# invalid base64	place: same message in JWE extract_compact#3; the entry deserialize_compact is JWS.
+tests/jws/test_compact.py::TestCompact.test_no_invalid_header#1	_rfc7515.compact.decode_header#1	class+name	# no alg value	place: same check in JWE extract_compact#1; the entry deserialize_compact is JWS.
+tests/jws/test_compact.py::TestCompact.test_non_canonical_signature_encoding#0	jws.deserialize_compact#1	class+name	test_non_canonical_signature_encoding	place: deserialize_json~3#1 is the same defect in JSON; the entry deserialize_compact is compact.
+tests/jws/test_compact.py::TestCompact.test_payload_exceeded_size_error#0	_rfc7515.registry.JWSRegistry.validate_payload_size#1	class+name	test_payload_exceeded_size_error	Only the payload size check fits.
+tests/jws/test_compact.py::TestCompact.test_reject_padded_signature#0	jws.deserialize_compact#1	class+name	test_reject_padded_signature	place: deserialize_json~3#1 is the same defect in JSON; the entry deserialize_compact is compact.
+tests/jws/test_compact.py::TestCompact.test_signature_exceeded_size_error#0	_rfc7515.registry.JWSRegistry.validate_signature_size#1	class+name	test_signature_exceeded_size_error	Only the signature size check fits.
+tests/jws/test_eddsa.py::TestEdDSA.test_Ed25519#1	none	none	test_Ed25519	generic The name names no single defect; several checks of the class remain. Several InvalidKeyCurveError checks fit.
+tests/jws/test_eddsa.py::TestEdDSA.test_Ed25519#2	none	none	test_Ed25519	generic The name names no single defect; several checks of the class remain. 2 BadSignatureError checks fit.
+tests/jws/test_eddsa.py::TestEdDSA.test_Ed448#1	none	none	test_Ed448	generic The name names no single defect; several checks of the class remain. Several InvalidKeyCurveError checks fit.
+tests/jws/test_eddsa.py::TestEdDSA.test_Ed448#2	none	none	test_Ed448	generic The name names no single defect; several checks of the class remain. 2 BadSignatureError checks fit.
+tests/jws/test_eddsa.py::TestEdDSA.test_EdDSA#0	none	none	test_EdDSA	generic The name names no single defect; several checks of the class remain. Several InvalidKeyTypeError checks fit.
+tests/jws/test_errors.py::TestJWSErrors.test_ec_invalid_signature#0	jws.deserialize_compact#1	class+name	test_ec_invalid_signature	place: deserialize_json~3#1 is the same defect in JSON; the entry deserialize_compact is compact.
+tests/jws/test_errors.py::TestJWSErrors.test_ec_invalid_signature#1	jws.deserialize_compact#1	class+name	test_ec_invalid_signature	place: deserialize_json~3#1 is the same defect in JSON; the entry deserialize_compact is compact.
+tests/jws/test_errors.py::TestJWSErrors.test_none_alg#0	jws.deserialize_compact#1	class+name	# none alg has no signature	place: deserialize_json~3#1 is the same defect in JSON; the entry deserialize_compact is compact.
+tests/jws/test_errors.py::TestJWSErrors.test_okp_bad_signature#0	jws.deserialize_json~3#1	class+name	test_okp_bad_signature	place: jws.deserialize_compact#1 is the same defect in compact; the entry deserialize_json is JSON.
+tests/jws/test_errors.py::TestJWSErrors.test_rsa_invalid_signature#0	jws.deserialize_compact#1	class+name	test_rsa_invalid_signature	place: deserialize_json~3#1 is the same defect in JSON; the entry deserialize_compact is compact.
+tests/jws/test_errors.py::TestJWSErrors.test_rsa_invalid_signature#1	jws.deserialize_compact#1	class+name	test_rsa_invalid_signature	place: deserialize_json~3#1 is the same defect in JSON; the entry deserialize_compact is compact.
+tests/jws/test_errors.py::TestJWSErrors.test_without_key#1	jws.validate_compact#1	class+name	test_without_key	place: serialize_compact#1 is the private-key twin; the entry deserialize_compact calls validate_compact.
+tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#0	_rfc7797.json._is_payload_base64_encoded#1	class+name	test_b64_must_be_protected	"Message ""'b64' header MUST be protected"" names b64; the generic crit-name check has a generic message."
+tests/jws/test_json.py::TestJSON.test_b64_must_be_protected#1	_rfc7797.json._is_payload_base64_encoded#1	class+name	test_b64_must_be_protected	"Message ""'b64' header MUST be protected"" names b64; the generic crit-name check has a generic message."
+tests/jws/test_json.py::TestJSON.test_bad_signature#0	jws.deserialize_json~3#1	class	test_bad_signature	place: the entry point deserialize_json reaches the JSON check, not the compact one.
+tests/jws/test_json.py::TestJSON.test_bad_signature#1	jws.deserialize_json~3#1	class	test_bad_signature	place: the entry point deserialize_json reaches the JSON check, not the compact one.
+tests/jws/test_json.py::TestJSON.test_critical_header_parameters_must_be_protected#0	registry.reject_unprotected_crit_header#2	class+name	test_critical_header_parameters_must_be_protected	Critical header parameters listed in crit that sit in the unprotected header; not the 'crit' header itself.
+tests/jws/test_json.py::TestJSON.test_critical_header_parameters_must_be_protected#1	registry.reject_unprotected_crit_header#2	class+name	test_critical_header_parameters_must_be_protected	Critical header parameters listed in crit that sit in the unprotected header; not the 'crit' header itself.
+tests/jws/test_json.py::TestJSON.test_general_json_b64_must_match_across_signatures#1	_rfc7797.json._validate_general_members#1	class+name	test_general_json_b64_must_match_across_signatures	
+tests/jws/test_json.py::TestJSON.test_general_json_with_empty_signatures#0	jws.deserialize_json~3#1	class	test_general_json_with_empty_signatures	place: the entry point deserialize_json reaches the JSON check, not the compact one.
+tests/jws/test_json.py::TestJSON.test_header_exceeded_size_error#0	_rfc7515.registry.JWSRegistry.validate_header_size#1	class+name	test_header_exceeded_size_error	place: the JWE check has the same message; the JWS entry point deserialize_json decides.
+tests/jws/test_json.py::TestJSON.test_header_exceeded_size_error#1	_rfc7515.registry.JWSRegistry.validate_header_size#1	class+name	test_header_exceeded_size_error	place: the JWE check has the same message; the JWS entry point deserialize_json decides.
+tests/jws/test_json.py::TestJSON.test_invalid_payload#0	_rfc7797.json.extract_rfc7797_json#1	class+name	test_invalid_payload	place: flattened input; several Invalid payload checks exist, the flattened JWS path decides.
+tests/jws/test_json.py::TestJSON.test_invalid_payload#1	_rfc7797.json.extract_general_json#1	class+name	test_invalid_payload	place: general input with a list of members; several Invalid payload checks exist, the general JWS path decides.
+tests/jws/test_json.py::TestJSON.test_payload_exceeded_size_error#0	_rfc7515.registry.JWSRegistry.validate_payload_size#1	class+name	test_payload_exceeded_size_error	
+tests/jws/test_json.py::TestJSON.test_payload_exceeded_size_error#1	_rfc7515.registry.JWSRegistry.validate_payload_size#1	class+name	test_payload_exceeded_size_error	
+tests/jws/test_json.py::TestJSON.test_signature_exceeded_size_error#0	_rfc7515.registry.JWSRegistry.validate_signature_size#1	class+name	test_signature_exceeded_size_error	
+tests/jws/test_json.py::TestJSON.test_signature_exceeded_size_error#1	_rfc7515.registry.JWSRegistry.validate_signature_size#1	class+name	test_signature_exceeded_size_error	
+tests/jws/test_json.py::TestJSON.test_unsupported_algorithm#0	_rfc7515.registry.JWSRegistry.get_alg#1	class+name	test_unsupported_algorithm	place: JWS entry point; 'is not supported' fits the word unsupported, not 'not allowed'.
+tests/jws/test_rfc7797.py::TestRFC7797.test_compact_bad_signature#0	jws.deserialize_compact#1	class	test_compact_bad_signature	place: the entry point deserialize_compact reaches the compact check.
+tests/jws/test_rfc7797.py::TestRFC7797.test_compact_invalid_value_length#0	_rfc7797.compact.extract_rfc7515_compact#1	class+name	test_compact_invalid_value_length	Wrong number of dot-separated parts.
+tests/jws/test_rfc7797.py::TestRFC7797.test_compact_missing_alg#0	_rfc7515.compact.decode_header#1	class+name	test_compact_missing_alg	place: JWE compact has the same check; the JWS entry point decides.
+tests/jws/test_rfc7797.py::TestRFC7797.test_invalid_header#0	_rfc7515.compact.decode_header#2	class+name	test_invalid_header	place: JWE compact has the same message; the JWS entry point decides.
+tests/jws/test_rfc7797.py::TestRFC7797.test_json_bad_signature#0	jws.deserialize_json~3#1	class	test_json_bad_signature	place: the entry point deserialize_json reaches the JSON check, not the compact one.
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#0	_rfc7519.claims.JWTClaimsRegistry.validate_aud#1	class+name	test_claim_aud	
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#1	_rfc7519.claims.JWTClaimsRegistry.validate_aud#1	class+name	test_claim_aud	
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_aud#2	_rfc7519.claims.JWTClaimsRegistry.validate_aud#1	class+name	test_claim_aud	
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#0	_rfc7519.claims.JWTClaimsRegistry.validate_iss#1	class+name	test_claim_iss	
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#1	_rfc7519.claims.JWTClaimsRegistry.validate_iss#1	class+name	test_claim_iss	
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#2	_rfc7519.claims.JWTClaimsRegistry.validate_iss#1	class+name	test_claim_iss	
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_iss#3	_rfc7519.claims.JWTClaimsRegistry.validate_iss#1	class+assert+name	test_claim_iss	Asserts claim == 'iss' and 'iss' in description.
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#0	_rfc7519.claims.JWTClaimsRegistry.validate_jti#1	class+name	test_claim_jti	The test is named for the jti claim; the jti-specific check is chosen.
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#1	_rfc7519.claims.JWTClaimsRegistry.validate_jti#1	class+name	test_claim_jti	The test is named for the jti claim; the jti-specific check is chosen.
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#2	_rfc7519.claims.JWTClaimsRegistry.validate_jti#1	class+assert+name	test_claim_jti	Loop; every run is named by the jti claim; asserts claim == 'jti' and 'jti' in description.
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#3	_rfc7519.claims.JWTClaimsRegistry.validate_jti#1	class+name	test_claim_jti	The test is named for the jti claim; the jti-specific check is chosen.
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#4	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_claim_jti	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#5	_rfc7519.claims.JWTClaimsRegistry.validate_jti#1	class+name	test_claim_jti	The test is named for the jti claim; the jti-specific check is chosen.
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_jti#6	_rfc7519.claims.JWTClaimsRegistry.validate_jti#1	class+name	test_claim_jti	The test is named for the jti claim; the jti-specific check is chosen.
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#0	_rfc7519.claims.JWTClaimsRegistry.validate_sub#1	class+name	test_claim_sub	
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#1	_rfc7519.claims.JWTClaimsRegistry.validate_sub#1	class+name	test_claim_sub	
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#2	_rfc7519.claims.JWTClaimsRegistry.validate_sub#1	class+name	test_claim_sub	
+tests/jwt/test_claims.py::TestJWTClaims.test_claim_sub#3	_rfc7519.claims.JWTClaimsRegistry.validate_sub#1	class+name	test_claim_sub	
+tests/jwt/test_claims.py::TestJWTClaims.test_decode_then_validate_a_token_that_never_expires#0	_rfc7519.claims.JWTClaimsRegistry.validate_exp#1	class+name	json writes NaN as is, and reads it back as a float	never-expires token from exp NaN; exp must be a numeric date.
+tests/jwt/test_claims.py::TestJWTClaims.test_essential_claims#0	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_essential_claims	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_essential_claims#1	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_essential_claims	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_essential_empty_value#0	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_essential_empty_value	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_essential_empty_value#1	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	test_essential_empty_value	Blank value check.
+tests/jwt/test_claims.py::TestJWTClaims.test_essential_empty_value#2	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_essential_empty_value	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#0	none	none	test_int_claims	tie: the name covers exp, nbf and iat numeric checks equally.
+tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#1	none	none	test_int_claims	tie: the name covers exp, nbf and iat numeric checks equally.
+tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#2	none	none	test_int_claims	tie: the name covers exp, nbf and iat numeric checks equally.
+tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#3	_rfc7519.claims.JWTClaimsRegistry.validate_exp#2	class	test_int_claims	Only one ExpiredTokenError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_int_claims#4	none	none	test_int_claims	tie: the name covers exp, nbf and iat numeric checks equally.
+tests/jwt/test_claims.py::TestJWTClaims.test_option_value#0	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	test_option_value	
+tests/jwt/test_claims.py::TestJWTClaims.test_option_value#1	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	test_option_value	
+tests/jwt/test_claims.py::TestJWTClaims.test_option_value#2	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	test_option_value	
+tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#0	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	"a list ""value"" is the expected claim value itself"	
+tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#1	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	"a list ""value"" is the expected claim value itself"	
+tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#2	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	"a list ""value"" is the expected claim value itself"	
+tests/jwt/test_claims.py::TestJWTClaims.test_option_value_with_list#3	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	"a list ""value"" is the expected claim value itself"	
+tests/jwt/test_claims.py::TestJWTClaims.test_option_values#0	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	test_option_values	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#0	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_validate_allow_blank	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#1	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	test_validate_allow_blank	Case 3: do not allow blank value
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#2	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	Case 3: do not allow blank value	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#3	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_validate_allow_blank	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_allow_blank#4	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	Case 4: do not allow blank value on essential claim	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#0	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_validate_aud	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#1	none	none	# invalid value	tie: validate_aud#1 (aud type) and check_value#1 (value mismatch) both fit the name and comment.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#2	none	none	# invalid value	tie: validate_aud#1 (aud type) and check_value#1 (value mismatch) both fit the name and comment.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#3	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	# use option values	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_aud#4	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	# use option values	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_exp#0	_rfc7519.claims.JWTClaimsRegistry.validate_exp#2	class	test_validate_exp	Only one ExpiredTokenError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_exp#1	_rfc7519.claims.JWTClaimsRegistry.validate_exp#2	class	test_validate_exp	Only one ExpiredTokenError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_iat#0	_rfc7519.claims.JWTClaimsRegistry.validate_iat#1	class+name	test_validate_iat	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#0	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_validate_list_inclusion	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#1	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	# Case 1: use option value	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#2	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	# Case 1: use option value	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#3	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_validate_list_inclusion	Only one MissingClaimError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#4	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	# Case 2: use option values	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_list_inclusion#5	_rfc7519.claims.BaseClaimsRegistry.check_value#1	class+name	# Case 2: use option values	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_nbf#0	_rfc7519.claims.JWTClaimsRegistry.validate_nbf#1	class+name	test_validate_nbf	
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_accept_large_integers#0	_rfc7519.claims.JWTClaimsRegistry.validate_exp#2	class	test_validate_time_claims_accept_large_integers	Only one ExpiredTokenError check.
+tests/jwt/test_claims.py::TestJWTClaims.test_validate_time_claims_must_be_finite#0	none	none	NumericDate is a JSON number, and NaN and Infinity are not	varies: the loop runs over exp, nbf and iat, each with its own numeric check.
+tests/jwt/test_jwt.py::TestJWT.test_algorithms_collection_rejects_disallowed#0	_rfc7515.registry.JWSRegistry.get_alg#2	class+name	a disallowed algorithm is still rejected when given as a non-list	place: jwt.decode without a registry goes to the JWS path; JWE check with the same message is not on that path.
+tests/jwt/test_jwt.py::TestJWT.test_claims_registry#0	_rfc7519.claims.BaseClaimsRegistry.validate#1	class	test_claims_registry	Only 1 check raises MissingClaimError; test_claims_registry uses an essential iss claim that is absent.
+tests/jwt/test_jwt.py::TestJWT.test_invalid_payload#0	jwt.decode#1	class	test_invalid_payload	Only 1 check raises InvalidPayloadError.
+tests/jwt/test_jwt.py::TestJWT.test_payload_must_be_a_json_object#0	jwt.decode#1	class	test_payload_must_be_a_json_object	Only 1 check raises InvalidPayloadError.
+tests/jwt/test_jwt.py::TestJWT.test_using_registry#3	none	none	test_using_registry	generic: name names registry use, not one defect; many DecodeError checks remain.

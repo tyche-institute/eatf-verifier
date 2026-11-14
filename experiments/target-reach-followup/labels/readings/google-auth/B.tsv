@@ -1,0 +1,18 @@
+block	label	basis	quote	note
+tests/test_jwt.py::test_decode_bad_token_expired#0	auth.jwt._verify_iat_and_exp#3	class+assert	"excinfo.match(r""Token expired"")"	Message asserted matches only the expired-token check.
+tests/test_jwt.py::test_decode_bad_token_no_iat_or_exp#0	auth.jwt._verify_iat_and_exp#1	class+assert	Token does not contain required claim	Pattern matches the missing-claim check only.
+tests/test_jwt.py::test_decode_bad_token_not_json#0	auth.jwt._decode_jwt_segment#1	class+assert	Can\'t parse segment	Pattern matches the segment-parse check only.
+tests/test_jwt.py::test_decode_bad_token_too_early#0	auth.jwt._verify_iat_and_exp#2	class+assert	Token used too early	Pattern matches the too-early check only.
+tests/test_jwt.py::test_decode_bad_token_wrong_audience#0	auth.jwt.decode#6	class+assert	Token has wrong audience	Audience as string.
+tests/test_jwt.py::test_decode_bad_token_wrong_audience_list#0	auth.jwt.decode#6	class+assert	Token has wrong audience	Audience as list; same check.
+tests/test_jwt.py::test_decode_bad_token_wrong_number_of_segments#0	auth.jwt._unverified_decode#1	class+assert	Wrong number of segments	Pattern matches the segment-count check only.
+tests/test_jwt.py::test_decode_header_object#0	auth.jwt._unverified_decode#2	class+assert	Header segment should be a JSON object: 	Header message only.
+tests/test_jwt.py::test_decode_mismatched_cert_key_type#0	auth.jwt.decode#4	class+assert	Certificate key type does not match signature algorithm	Parametrized runs all describe the same check.
+tests/test_jwt.py::test_decode_missing_crytography_alg#0	auth.jwt.decode#1	class+assert+name	test_decode_missing_crytography_alg	Pattern cryptography and the name fit the requires-cryptography check, not the unsupported-algorithm one.
+tests/test_jwt.py::test_decode_multicert_bad_cert#0	auth.jwt.decode#5	class+assert	Could not verify token signature	Pattern matches the signature check only.
+tests/test_jwt.py::test_decode_no_cert#0	auth.jwt.decode#3	class+assert	Certificate for key id 1 not found	Pattern matches the missing-certificate check.
+tests/test_jwt.py::test_decode_payload_object#0	auth.jwt._unverified_decode#3	class+assert	Payload segment should be a JSON object: 	Payload message only.
+tests/test_jwt.py::test_decode_unhashable_alg#0	auth.jwt.decode#2	class+assert	Unsupported signature algorithm	Pattern matches the unsupported-algorithm check.
+tests/test_jwt.py::test_decode_unhashable_kid#0	auth.jwt.decode#3	class+assert	Certificate for key id .* not found	Pattern matches the missing-certificate check.
+tests/test_jwt.py::test_decode_unknown_alg#0	auth.jwt.decode#2	class+assert+name	test_decode_unknown_alg	Pattern fakealg fits both algorithm messages; unknown algorithm names the unsupported-algorithm check.
+tests/test_jwt.py::test_decode_wrong_cert#0	auth.jwt.decode#5	class+assert	Could not verify token signature	Pattern matches the signature check only.
