@@ -5,20 +5,22 @@ Mirrors lib/src/rsa.ts. The TypeScript reference has two paths:
 1. Primary: Web Crypto's RSASSA-PKCS1-v1_5. The Python port uses
    pyca/cryptography, which provides the same algorithm.
 
-2. Java-reference compatibility: the backend signs DigestInfo
-   (SHA-256, hash) with NONEwithRSA via BouncyCastle. BC emits the
-   SHA-256 AlgorithmIdentifier without the NULL parameters that
-   strict ASN.1 RSASSA-PKCS1-v1_5 implementations expect, so some
-   library combinations reject the wire signature even though the
-   underlying RSA operation succeeds.
+2. Legacy-encoding compatibility (read-only): the Java reference signer
+   (BouncyCastle NONEwithRSA) emits DigestInfo for SHA-256 with the
+   AlgorithmIdentifier parameters absent. RFC 8017 Appendix B.1 requires
+   NULL parameters inside EMSA-PKCS1-v1_5, so strict implementations reject
+   it and writers MUST NOT produce it.
 
-   The fallback performs the raw RSA public operation, strips the
-   PKCS#1 v1.5 padding, and compares the trailing 32-byte digest
-   to the expected SHA-256 hash. This is what `verifyRsaDigestInfo`
-   does in lib/src/rsa.ts.
+   The fallback builds the one full-length legacy block for the expected
+   digest and compares the whole recovered block with it. Any other
+   DigestInfo, a short padding string, or extra bytes are rejected. This is
+   what `verifyRsaDigestInfo` does in lib/src/rsa.ts. Versions up to v0.7.3
+   compared only the trailing 32 bytes.
 """
 
 from __future__ import annotations
+
+import hmac
 
 from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.primitives import hashes, serialization
@@ -51,14 +53,18 @@ def verify_rsa(key: rsa.RSAPublicKey, signature: bytes, signed_data: bytes) -> b
         return False
 
 
+# DER prefix of DigestInfo(SHA-256) with absent AlgorithmIdentifier parameters.
+SHA256_DIGEST_INFO_PREFIX_ABSENT_PARAMS = bytes.fromhex("302f300b06096086480165030402010420")
+
+
 def verify_rsa_digest_info(
     key: rsa.RSAPublicKey, signature: bytes, expected_digest: bytes
 ) -> bool:
-    """Java-reference compatibility path.
+    """Legacy-encoding compatibility path (read-only).
 
-    Performs the raw RSA public operation, strips PKCS#1 v1.5
-    padding, and compares the trailing 32-byte digest with the
-    given expected_digest. See module docstring.
+    Accepts exactly the full-length EMSA-PKCS1-v1_5 block
+    0x00 0x01 0xFF..0xFF 0x00 || DigestInfo(SHA-256, absent parameters) || H.
+    See module docstring.
 
     Returns False on any failure; never raises.
     """
@@ -71,34 +77,13 @@ def verify_rsa_digest_info(
     modulus_bytes = (modulus.bit_length() + 7) // 8
     if len(signature) != modulus_bytes:
         return False
-
     sig_int = int.from_bytes(signature, "big")
-    recovered_int = pow(sig_int, exponent, modulus)
-    encoded = recovered_int.to_bytes(modulus_bytes, "big")
+    if sig_int >= modulus:
+        return False
 
-    # PKCS#1 v1.5 encoded message: 0x00 || 0x01 || 0xFF...0xFF || 0x00 || DigestInfo
-    if len(encoded) < 11 or encoded[0] != 0x00 or encoded[1] != 0x01:
+    t = SHA256_DIGEST_INFO_PREFIX_ABSENT_PARAMS + expected_digest
+    if modulus_bytes < len(t) + 11:
         return False
-    sep = -1
-    for i in range(2, len(encoded)):
-        if encoded[i] == 0x00:
-            sep = i
-            break
-        if encoded[i] != 0xFF:
-            return False
-    if sep < 0:
-        return False
-    digest_info = encoded[sep + 1 :]
-    if len(digest_info) < len(expected_digest):
-        return False
-    recovered_digest = digest_info[-len(expected_digest) :]
-    return _ct_eq(recovered_digest, expected_digest)
-
-
-def _ct_eq(a: bytes, b: bytes) -> bool:
-    if len(a) != len(b):
-        return False
-    result = 0
-    for x, y in zip(a, b, strict=True):
-        result |= x ^ y
-    return result == 0
+    expected = b"\x00\x01" + b"\xff" * (modulus_bytes - len(t) - 3) + b"\x00" + t
+    encoded = pow(sig_int, exponent, modulus).to_bytes(modulus_bytes, "big")
+    return hmac.compare_digest(encoded, expected)

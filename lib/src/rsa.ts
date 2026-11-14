@@ -53,13 +53,31 @@ export async function verifyRsa(
 }
 
 /**
- * Java reference compatibility path.
+ * DER prefix of DigestInfo for SHA-256 with the AlgorithmIdentifier
+ * parameters absent (`302f300b06096086480165030402010420`).
  *
- * The backend signs DigestInfo(SHA-256, hash.sha256) with NONEwithRSA.
- * Some Web Crypto implementations expect the SHA-256 AlgorithmIdentifier to
- * include NULL parameters and reject the backend's BouncyCastle encoding. This
- * helper performs the public RSA operation directly, strips PKCS#1 v1.5
- * padding, and compares the trailing 32-byte digest.
+ * RFC 8017 Appendix B.1 requires NULL parameters inside EMSA-PKCS1-v1_5, so
+ * writers MUST NOT produce this form. Packages from the Java reference
+ * signer (BouncyCastle NONEwithRSA over this DigestInfo) carry it.
+ */
+const SHA256_DIGEST_INFO_PREFIX_ABSENT_PARAMS = Uint8Array.from([
+  0x30, 0x2f, 0x30, 0x0b, 0x06, 0x09, 0x60, 0x86, 0x48, 0x01, 0x65, 0x03,
+  0x04, 0x02, 0x01, 0x04, 0x20,
+]);
+
+/**
+ * Legacy-encoding compatibility path (read-only).
+ *
+ * Accepts exactly one encoding besides the RFC 8017 one that `verifyRsa`
+ * checks: the full-length block
+ * `0x00 0x01 0xFF..0xFF 0x00 || DigestInfo(SHA-256, absent parameters) || H`,
+ * with the padding filling the modulus. The function builds that block for
+ * the expected digest and compares the whole recovered block with it. Any
+ * other DigestInfo, a short padding string, or extra bytes are rejected.
+ *
+ * Versions up to v0.7.3 stripped the padding and compared only the trailing
+ * 32 bytes, which accepted arbitrary bytes between the padding and the digest
+ * (the class of Bleichenbacher 2006 and BERserk 2014).
  */
 export function verifyRsaDigestInfo(
   publicKeyPem: string,
@@ -70,27 +88,21 @@ export function verifyRsaDigestInfo(
   const { modulus, exponent } = parseRsaSpki(pemToDer(publicKeyPem));
   const modulusBytes = Math.ceil(bitLength(modulus) / 8);
   if (signature.length !== modulusBytes) return false;
+  const s = bytesToBigInt(signature);
+  if (s >= modulus) return false;
 
-  const recovered = modPow(bytesToBigInt(signature), exponent, modulus);
-  const encoded = bigIntToBytes(recovered, modulusBytes);
-  if (encoded.length < 11 || encoded[0] !== 0x00 || encoded[1] !== 0x01) {
-    return false;
-  }
-  let sep = -1;
-  for (let i = 2; i < encoded.length; i++) {
-    if (encoded[i] === 0x00) {
-      sep = i;
-      break;
-    }
-    if (encoded[i] !== 0xff) {
-      return false;
-    }
-  }
-  if (sep < 0) return false;
-  const digestInfo = encoded.slice(sep + 1);
-  if (digestInfo.length < expectedDigest.length) return false;
-  const recoveredDigest = digestInfo.slice(digestInfo.length - expectedDigest.length);
-  return constantTimeEqual(recoveredDigest, expectedDigest);
+  const tLen = SHA256_DIGEST_INFO_PREFIX_ABSENT_PARAMS.length + expectedDigest.length;
+  if (modulusBytes < tLen + 11) return false;
+  const expected = new Uint8Array(modulusBytes);
+  expected[0] = 0x00;
+  expected[1] = 0x01;
+  expected.fill(0xff, 2, modulusBytes - tLen - 1);
+  expected[modulusBytes - tLen - 1] = 0x00;
+  expected.set(SHA256_DIGEST_INFO_PREFIX_ABSENT_PARAMS, modulusBytes - tLen);
+  expected.set(expectedDigest, modulusBytes - expectedDigest.length);
+
+  const encoded = bigIntToBytes(modPow(s, exponent, modulus), modulusBytes);
+  return constantTimeEqual(encoded, expected);
 }
 
 /**

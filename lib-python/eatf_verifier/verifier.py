@@ -224,11 +224,12 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
     try:
         key = load_public_key_pem(pem)
         rsa_ok = verify_rsa(key, sig, canonical)
+        rsa_legacy_digest_info = False
         if not rsa_ok:
-            # Java-reference compatibility: BouncyCastle DigestInfo
-            # encoding without NULL parameters in the SHA-256
-            # AlgorithmIdentifier. Strip padding and compare digests.
+            # Read-only compatibility: the exact BouncyCastle encoding of
+            # DigestInfo(SHA-256) without NULL parameters, nothing else.
             rsa_ok = verify_rsa_digest_info(key, sig, actual_hash)
+            rsa_legacy_digest_info = rsa_ok
     except Exception as e:
         return _fail(
             report,
@@ -244,6 +245,11 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             metadata,
         )
     report.append("RSA-4096 signature verified.")
+    if rsa_legacy_digest_info:
+        report.append(
+            "RSA signature uses the legacy SHA-256 DigestInfo without NULL parameters "
+            "(RFC 8017 Appendix B.1 requires NULL); accepted for read-only compatibility."
+        )
 
     # 7. OVERT-inspired receipt.
     receipt, err = parse_and_validate_overt_receipt(entries, metadata, expected_hash_hex)

@@ -11,7 +11,7 @@ external standard.
 |---|---|---|
 | `response.txt` | required | Recorded payload bytes |
 | `canonical.bin` | required | Exact bytes hashed and signed |
-| `hash.sha256` | required | Lowercase SHA-256 hex of `canonical.bin` |
+| `hash.sha256` | required | Lowercase SHA-256 hex of `canonical.bin`; writers may end it with one LF, and both verifiers ignore surrounding whitespace and letter case |
 | `signature.sig` | required | Base64 RSA PKCS#1 v1.5/SHA-256 signature |
 | `public_key.pem` | required | Embedded RSA SPKI verification key |
 | `metadata.json` | required | Package metadata JSON object |
@@ -34,7 +34,15 @@ external standard.
 5. If the caller supplied trusted signer PEMs, require `public_key.pem` to
    match one exactly. Without this option, signer identity is explicitly
    reported as not evaluated.
-6. Verify `signature.sig` over `canonical.bin`.
+6. Verify `signature.sig` over `canonical.bin` as RSASSA-PKCS1-v1_5 with
+   SHA-256. Writers MUST encode DigestInfo as RFC 8017 Section 9.2 gives it,
+   with NULL `AlgorithmIdentifier` parameters (RFC 8017 Appendix B.1). For
+   read-only compatibility with packages from the Java reference signer,
+   both verifiers here also accept exactly one other encoded block:
+   full-length padding followed by DigestInfo with the parameters absent
+   (`302f300b06096086480165030402010420` || digest), and report that the
+   legacy form was used. Any other block is rejected. Other implementations
+   need not accept the legacy form; no shared vector uses it.
 7. If present, validate the receipt's profile, scope, content hash, and
    metadata-bound fields. When signed metadata contains
    `overt_receipt_signature: "overt_receipt.sig"`, require that entry and
