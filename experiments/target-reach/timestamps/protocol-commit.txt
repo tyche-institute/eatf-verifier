@@ -1,0 +1,1 @@
+eatf-verifier research/mutation-adequacy commit b93e078770feeebbb1e9b7824f0d4a42f515b4e6 (experiments/target-reach/PROTOCOL.md fixed before any target was computed, any test was run under the recorder or any check was deleted on google-auth, oauthlib, authlib and joserfc)
