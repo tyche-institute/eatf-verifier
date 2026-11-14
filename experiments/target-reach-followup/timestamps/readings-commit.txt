@@ -1,0 +1,1 @@
+eatf-verifier research/mutation-adequacy commit eab1ea1589a5d8acb0f418d6c7baaa3b0f2a0ef4 (labels of readings A and B of google-auth, oauthlib, authlib and joserfc, as returned, before a labels file is compared with a record, a target or another reading)

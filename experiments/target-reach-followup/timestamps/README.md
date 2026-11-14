@@ -37,3 +37,28 @@ programs and the history before them. What they do not show: that nothing
 was done on the 4 libraries before the protocol was fixed. Section 5 of the
 protocol states what had been done on each of them, and the results of
 `../../target-reach/` on them were known.
+
+## The commit of the labels
+
+`readings-commit.txt` names the commit that holds the labels files of
+readings A and B of the 4 libraries (`../labels/readings/<name>/A.tsv` and
+`B.tsv`), as returned and after the check of form alone:
+
+    eab1ea1589a5d8acb0f418d6c7baaa3b0f2a0ef4
+
+Its SHA-256 was sent to the same 2 authorities before a labels file was
+compared with a record, a target or the other reading. Both tokens carry the
+time 2026-11-14 14:24:47 UTC.
+
+| File | Authority |
+|---|---|
+| `readings-commit.freetsa.tsr` | freetsa.org |
+| `readings-commit.digicert.tsr` | DigiCert |
+
+Verify as above, with `readings-commit` in place of `protocol-commit`.
+
+What the tokens show: the labels of the 2 readings existed in this form at
+that time, and the analysis programs that compare them are those of the
+history of this commit, with the 1 correction that `../DEVIATIONS.md`
+describes. What they do not show: how a reading was made. `../PROTOCOL.md`,
+section 4.1, states what a reading is given and what it is not given.
