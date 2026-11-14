@@ -13,13 +13,13 @@ before the first script was written. Both tokens carry the time
 |---|---|
 | `protocol-commit.freetsa.tsr` | freetsa.org (`https://freetsa.org/tsr`) |
 | `protocol-commit.digicert.tsr` | DigiCert (`http://timestamp.digicert.com`) |
-| `freetsa-cacert.pem`, `freetsa-tsa.crt` | freetsa.org's root and signing certificates, as served on 2026-11-14 |
+| `freetsa-root.crt`, `freetsa-tsa.crt` | freetsa.org's root and signing certificates, as served on 2026-11-14 |
 
 Verify, from this directory:
 
 ```sh
 openssl ts -verify -data protocol-commit.txt -in protocol-commit.freetsa.tsr \
-    -CAfile freetsa-cacert.pem -untrusted freetsa-tsa.crt
+    -CAfile freetsa-root.crt -untrusted freetsa-tsa.crt
 openssl ts -verify -data protocol-commit.txt -in protocol-commit.digicert.tsr \
     -CAfile /etc/ssl/certs/ca-certificates.crt
 openssl ts -reply -in protocol-commit.digicert.tsr -text
