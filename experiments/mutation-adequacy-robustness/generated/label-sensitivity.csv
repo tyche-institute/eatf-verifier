@@ -1,0 +1,4 @@
+label_set,labelled_blocks,blocks_left_out,cases_with_target,P1_O_T_holds,P1_O_T_fails,reached_deletions,deletions_undetected_O_T,kills_O_T,kills_O_C,O_T_not_O_C,O_C_not_O_T,P5_cases,P5_holding,nested_header_labelled,nested_header_O_T_fails,P3_named_mutants_remaining,undetected_deletions
+all,69,0,81,80,1,41,2,451,446,7,2,77,76,yes,yes,7,jws.header-json jwt.aud-match
+without name-only,62,7,63,62,1,41,6,442,446,7,11,60,59,yes,yes,7,jws.alg-allowed jws.alg-present jws.header-json jwt.aud-match jwt.aud-unexpected jwt.nbf-type
+without any name,43,26,44,44,0,41,15,396,446,5,55,42,41,no,no,5,jws.alg-allowed jws.alg-present jws.header-json jws.key-length jwt.aud-match jwt.aud-present jwt.aud-unexpected jwt.exp-type jwt.iat-future jwt.iss-match jwt.iss-present jwt.nbf-future jwt.nbf-type jwt.required jwt.sub-type

@@ -1,0 +1,695 @@
+{
+ "analysis": "B. Operator classes that both tools have (PROTOCOL.md)",
+ "correspondence_table": {
+  "boolean literal and negation": {
+   "python": [
+    "name",
+    "remove_unary_ops"
+   ],
+   "typescript": [
+    "BooleanLiteral"
+   ]
+  },
+  "method swap": {
+   "python": [
+    "symmetric_string_methods_swap",
+    "unsymmetrical_string_methods_swap"
+   ],
+   "typescript": [
+    "MethodExpression"
+   ]
+  },
+  "operator replacement": {
+   "python": [
+    "swap_op"
+   ],
+   "typescript": [
+    "ArithmeticOperator",
+    "EqualityOperator",
+    "LogicalOperator",
+    "UnaryOperator",
+    "AssignmentOperator"
+   ]
+  },
+  "string literal": {
+   "python": [
+    "string"
+   ],
+   "typescript": [
+    "StringLiteral"
+   ]
+  }
+ },
+ "definitions": {
+  "direction": "as recorded in gap-directions.csv of the first study",
+  "gap": "subject mutants killed under O_C and not under O_V",
+  "later_guard_share": "gap mutants with direction 'later guard' / gap mutants",
+  "subject_mutants": "scored tool mutants of the first study (kill under O_C recorded)",
+  "variants": {
+   "all mutants": "as the protocol asks",
+   "without code-literal mutants": "supplement: the subset on which the first study compared directions"
+  }
+ },
+ "excluded_mutants": {
+  "python": 0,
+  "typescript": 0
+ },
+ "exploratory_post_hoc": true,
+ "headline": {
+  "all mutants": {
+   "python": {
+    "all operators": {
+     "gap": 85,
+     "later_guard": 5,
+     "later_guard_share": 0.0588
+    },
+    "shared classes": {
+     "gap": 39,
+     "later_guard": 2,
+     "later_guard_share": 0.0513
+    }
+   },
+   "typescript": {
+    "all operators": {
+     "gap": 82,
+     "later_guard": 39,
+     "later_guard_share": 0.4756
+    },
+    "shared classes": {
+     "gap": 36,
+     "later_guard": 8,
+     "later_guard_share": 0.2222
+    }
+   }
+  },
+  "without code-literal mutants": {
+   "python": {
+    "all operators": {
+     "gap": 40,
+     "later_guard": 5,
+     "later_guard_share": 0.125
+    },
+    "shared classes": {
+     "gap": 7,
+     "later_guard": 2,
+     "later_guard_share": 0.2857
+    }
+   },
+   "typescript": {
+    "all operators": {
+     "gap": 66,
+     "later_guard": 39,
+     "later_guard_share": 0.5909
+    },
+    "shared classes": {
+     "gap": 20,
+     "later_guard": 8,
+     "later_guard_share": 0.4
+    }
+   }
+  }
+ },
+ "inputs": {
+  "../mutation-adequacy/generated/gap-directions.csv": "4242194c7206a3a68da51d061069f40886fd73b6ded1d1ac57b866f3f159b158",
+  "../mutation-adequacy/generated/mutants.csv": "6004f12f4da8f0bc5ce74c049feadb3148a437836c9a5d5790ffba9f6f4fdfb2",
+  "../mutation-adequacy/generated/operators.csv": "c29a7905ff1ccbe8632f6af0aa92d577a47a568b11611624a5b36bc1dc98dff8"
+ },
+ "listed_operators_without_mutants": {
+  "python": [
+   "unsymmetrical_string_methods_swap"
+  ],
+  "typescript": []
+ },
+ "no_counterpart": {
+  "python": [
+   "arg_removal",
+   "assignment",
+   "augmented_assignment",
+   "number",
+   "keywords",
+   "if_exp"
+  ],
+  "typescript": [
+   "ConditionalExpression",
+   "BlockStatement",
+   "ArrayDeclaration",
+   "ObjectLiteral",
+   "ArrowFunction",
+   "OptionalChaining",
+   "Regex",
+   "UpdateOperator"
+  ]
+ },
+ "rows": [
+  {
+   "gap": 85,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 5,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 56,
+   "gap_same_guard": 23,
+   "group": "all operators",
+   "killed_O_C": 500,
+   "killed_O_V": 415,
+   "later_guard_share": 0.0588,
+   "mutants": 1149,
+   "operators": "arg_removal assignment augmented_assignment if_exp keywords name number remove_unary_ops string swap_op symmetric_string_methods_swap",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 39,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 2,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 32,
+   "gap_same_guard": 4,
+   "group": "shared classes",
+   "killed_O_C": 186,
+   "killed_O_V": 147,
+   "later_guard_share": 0.0513,
+   "mutants": 477,
+   "operators": "name remove_unary_ops string swap_op symmetric_string_methods_swap unsymmetrical_string_methods_swap",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 2,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 1,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 1,
+   "group": "operator replacement",
+   "killed_O_C": 25,
+   "killed_O_V": 23,
+   "later_guard_share": 0.5,
+   "mutants": 44,
+   "operators": "swap_op",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 5,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 1,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 3,
+   "group": "boolean literal and negation",
+   "killed_O_C": 31,
+   "killed_O_V": 26,
+   "later_guard_share": 0.2,
+   "mutants": 52,
+   "operators": "name remove_unary_ops",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 32,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 0,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 32,
+   "gap_same_guard": 0,
+   "group": "string literal",
+   "killed_O_C": 127,
+   "killed_O_V": 95,
+   "later_guard_share": 0.0,
+   "mutants": 378,
+   "operators": "string",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 0,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 0,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 0,
+   "group": "method swap",
+   "killed_O_C": 3,
+   "killed_O_V": 3,
+   "later_guard_share": null,
+   "mutants": 3,
+   "operators": "symmetric_string_methods_swap unsymmetrical_string_methods_swap",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 46,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 3,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 24,
+   "gap_same_guard": 19,
+   "group": "outside the table",
+   "killed_O_C": 314,
+   "killed_O_V": 268,
+   "later_guard_share": 0.0652,
+   "mutants": 672,
+   "operators": "arg_removal assignment augmented_assignment if_exp keywords number",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 82,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 39,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 16,
+   "gap_same_guard": 26,
+   "group": "all operators",
+   "killed_O_C": 373,
+   "killed_O_V": 291,
+   "later_guard_share": 0.4756,
+   "mutants": 854,
+   "operators": "ArithmeticOperator ArrayDeclaration ArrowFunction AssignmentOperator BlockStatement BooleanLiteral ConditionalExpression EqualityOperator LogicalOperator MethodExpression ObjectLiteral OptionalChaining Regex StringLiteral UnaryOperator UpdateOperator",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 36,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 8,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 16,
+   "gap_same_guard": 11,
+   "group": "shared classes",
+   "killed_O_C": 183,
+   "killed_O_V": 147,
+   "later_guard_share": 0.2222,
+   "mutants": 440,
+   "operators": "ArithmeticOperator AssignmentOperator BooleanLiteral EqualityOperator LogicalOperator MethodExpression StringLiteral UnaryOperator",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 11,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 4,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 7,
+   "group": "operator replacement",
+   "killed_O_C": 70,
+   "killed_O_V": 59,
+   "later_guard_share": 0.3636,
+   "mutants": 136,
+   "operators": "ArithmeticOperator AssignmentOperator EqualityOperator LogicalOperator UnaryOperator",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 6,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 1,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 4,
+   "group": "boolean literal and negation",
+   "killed_O_C": 35,
+   "killed_O_V": 29,
+   "later_guard_share": 0.1667,
+   "mutants": 54,
+   "operators": "BooleanLiteral",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 19,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 3,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 16,
+   "gap_same_guard": 0,
+   "group": "string literal",
+   "killed_O_C": 74,
+   "killed_O_V": 55,
+   "later_guard_share": 0.1579,
+   "mutants": 227,
+   "operators": "StringLiteral",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 0,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 0,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 0,
+   "group": "method swap",
+   "killed_O_C": 4,
+   "killed_O_V": 4,
+   "later_guard_share": null,
+   "mutants": 23,
+   "operators": "MethodExpression",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 46,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 31,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 15,
+   "group": "outside the table",
+   "killed_O_C": 190,
+   "killed_O_V": 144,
+   "later_guard_share": 0.6739,
+   "mutants": 414,
+   "operators": "ArrayDeclaration ArrowFunction BlockStatement ConditionalExpression ObjectLiteral OptionalChaining Regex UpdateOperator",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "all mutants"
+  },
+  {
+   "gap": 40,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 5,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 11,
+   "gap_same_guard": 23,
+   "group": "all operators",
+   "killed_O_C": 455,
+   "killed_O_V": 415,
+   "later_guard_share": 0.125,
+   "mutants": 1075,
+   "operators": "arg_removal assignment augmented_assignment if_exp keywords name number remove_unary_ops string swap_op symmetric_string_methods_swap",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 7,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 2,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 4,
+   "group": "shared classes",
+   "killed_O_C": 154,
+   "killed_O_V": 147,
+   "later_guard_share": 0.2857,
+   "mutants": 425,
+   "operators": "name remove_unary_ops string swap_op symmetric_string_methods_swap unsymmetrical_string_methods_swap",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 2,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 1,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 1,
+   "group": "operator replacement",
+   "killed_O_C": 25,
+   "killed_O_V": 23,
+   "later_guard_share": 0.5,
+   "mutants": 44,
+   "operators": "swap_op",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 5,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 1,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 3,
+   "group": "boolean literal and negation",
+   "killed_O_C": 31,
+   "killed_O_V": 26,
+   "later_guard_share": 0.2,
+   "mutants": 52,
+   "operators": "name remove_unary_ops",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 0,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 0,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 0,
+   "group": "string literal",
+   "killed_O_C": 95,
+   "killed_O_V": 95,
+   "later_guard_share": null,
+   "mutants": 326,
+   "operators": "string",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 0,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 0,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 0,
+   "group": "method swap",
+   "killed_O_C": 3,
+   "killed_O_V": 3,
+   "later_guard_share": null,
+   "mutants": 3,
+   "operators": "symmetric_string_methods_swap unsymmetrical_string_methods_swap",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 33,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 3,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 11,
+   "gap_same_guard": 19,
+   "group": "outside the table",
+   "killed_O_C": 301,
+   "killed_O_V": 268,
+   "later_guard_share": 0.0909,
+   "mutants": 650,
+   "operators": "arg_removal assignment augmented_assignment if_exp keywords number",
+   "port": "python",
+   "tool": "mutmut 3.8.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 66,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 39,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 26,
+   "group": "all operators",
+   "killed_O_C": 357,
+   "killed_O_V": 291,
+   "later_guard_share": 0.5909,
+   "mutants": 828,
+   "operators": "ArithmeticOperator ArrayDeclaration ArrowFunction AssignmentOperator BlockStatement BooleanLiteral ConditionalExpression EqualityOperator LogicalOperator MethodExpression ObjectLiteral OptionalChaining Regex StringLiteral UnaryOperator UpdateOperator",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 20,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 8,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 11,
+   "group": "shared classes",
+   "killed_O_C": 167,
+   "killed_O_V": 147,
+   "later_guard_share": 0.4,
+   "mutants": 414,
+   "operators": "ArithmeticOperator AssignmentOperator BooleanLiteral EqualityOperator LogicalOperator MethodExpression StringLiteral UnaryOperator",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 11,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 4,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 7,
+   "group": "operator replacement",
+   "killed_O_C": 70,
+   "killed_O_V": 59,
+   "later_guard_share": 0.3636,
+   "mutants": 136,
+   "operators": "ArithmeticOperator AssignmentOperator EqualityOperator LogicalOperator UnaryOperator",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 6,
+   "gap_earlier_guard": 1,
+   "gap_later_guard": 1,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 4,
+   "group": "boolean literal and negation",
+   "killed_O_C": 35,
+   "killed_O_V": 29,
+   "later_guard_share": 0.1667,
+   "mutants": 54,
+   "operators": "BooleanLiteral",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 3,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 3,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 0,
+   "group": "string literal",
+   "killed_O_C": 58,
+   "killed_O_V": 55,
+   "later_guard_share": 1.0,
+   "mutants": 201,
+   "operators": "StringLiteral",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 0,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 0,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 0,
+   "group": "method swap",
+   "killed_O_C": 4,
+   "killed_O_V": 4,
+   "later_guard_share": null,
+   "mutants": 23,
+   "operators": "MethodExpression",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "without code-literal mutants"
+  },
+  {
+   "gap": 46,
+   "gap_earlier_guard": 0,
+   "gap_later_guard": 31,
+   "gap_mixed": 0,
+   "gap_no_defined_code": 0,
+   "gap_same_guard": 15,
+   "group": "outside the table",
+   "killed_O_C": 190,
+   "killed_O_V": 144,
+   "later_guard_share": 0.6739,
+   "mutants": 414,
+   "operators": "ArrayDeclaration ArrowFunction BlockStatement ConditionalExpression ObjectLiteral OptionalChaining Regex UpdateOperator",
+   "port": "typescript",
+   "tool": "StrykerJS 9.6.1",
+   "variant": "without code-literal mutants"
+  }
+ ],
+ "sentinels": {
+  "1_totals_reproduce_operators_csv": {
+   "mismatches": [],
+   "passed": true,
+   "port_totals": {
+    "python": {
+     "computed": {
+      "killed_O_C": 500,
+      "killed_O_V": 415,
+      "mutants": 1149
+     },
+     "operators_csv": {
+      "killed_O_C": 500,
+      "killed_O_V": 415,
+      "mutants": 1149
+     }
+    },
+    "typescript": {
+     "computed": {
+      "killed_O_C": 373,
+      "killed_O_V": 291,
+      "mutants": 854
+     },
+     "operators_csv": {
+      "killed_O_C": 373,
+      "killed_O_V": 291,
+      "mutants": 854
+     }
+    }
+   }
+  },
+  "2_gap_reproduces_gap_directions_csv": {
+   "gap_counts": {
+    "python": {
+     "computed": {
+      "earlier guard": 1,
+      "gap": 85,
+      "later guard": 5,
+      "no defined code": 56,
+      "same guard": 23
+     },
+     "gap_directions_csv": {
+      "earlier guard": 1,
+      "gap": 85,
+      "later guard": 5,
+      "no defined code": 56,
+      "same guard": 23
+     }
+    },
+    "typescript": {
+     "computed": {
+      "earlier guard": 1,
+      "gap": 82,
+      "later guard": 39,
+      "no defined code": 16,
+      "same guard": 26
+     },
+     "gap_directions_csv": {
+      "earlier guard": 1,
+      "gap": 82,
+      "later guard": 39,
+      "no defined code": 16,
+      "same guard": 26
+     }
+    }
+   },
+   "mismatches": [],
+   "passed": true
+  },
+  "3_classes_add_up": {
+   "mismatches": [],
+   "passed": true
+  }
+ }
+}

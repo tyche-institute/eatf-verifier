@@ -155,3 +155,99 @@ per analysis, `SUMMARY.md` and `SHA256SUMS`. D writes its runs to an untracked
 ## Deviations
 
 None recorded at the time of fixing.
+
+### Recorded on 2026-11-14, after the runs
+
+The text above is unchanged. Each analysis was written once, run, and then
+recomputed by a second script written without sight of the first; the two agree
+on every reported number. What the scripts do beyond, or beside, the letter of
+the text above:
+
+**A. Subsuming mutants.**
+
+1. *PyJWT kill sets.* They are rebuilt from the deposited `outcomes.jsonl` with
+   the second study's own functions, imported from `analyse_s2.py` without
+   writing into its folder. The rebuilt kill flag, number of credited cases and
+   moves of every subject mutant equal `mutants.csv`.
+2. *One direction per PyJWT gap mutant.* The second study classified the moves
+   of cases, not mutants. Here a gap mutant takes the single kind of move among
+   its cases, or `mixed` when its cases moved in different directions (3
+   mutants). The study's own counts over case runs are reported beside it.
+3. *Directions of the verifier, twice.* As in the first study, the table is
+   given over all gap mutants and again without the mutants that only change a
+   failure-code literal.
+4. *Spread.* The unit for the verifier is a region of `guard-regions.json`,
+   and that file also names the unguarded region `shared`. In the Python port
+   `shared` holds 2 gap mutants, neither minimal: 12 regions hold a gap mutant
+   when `shared` is counted, 11 when only guards are, and 10 hold a minimal gap
+   mutant either way. The TypeScript counts (11 and 11) do not involve it.
+5. *More sentinels.* Beside the sentinel of the text, the script stops when the
+   verifier's kill sets differ from a recomputation from `outcomes.jsonl`, when
+   a gap set differs from `gap-directions.csv`, or when PyJWT's gap and moves
+   differ from that study's `summary.json`.
+
+**B. Operator classes that both tools have.**
+
+1. *A second reading.* The text does not say whether the mutants that only
+   change a failure-code literal are counted. Every count is given over all
+   subject mutants and, as a supplement, without those mutants, the subset on
+   which the first study compared the directions.
+2. *A complement row.* The operators that the text lists as having no
+   counterpart are reported as one more row per port, so that the rows add up;
+   a sentinel checks the sum.
+3. *An empty operator.* `unsymmetrical_string_methods_swap` produced no mutant
+   in the Python port, whose method-swap class holds 3 mutants.
+4. *How exact the table is.* The table was checked against the operator
+   definitions of both tools after the run and left as fixed. It matches
+   classes, not single rewrites. The 25 `keywords` mutants of the Python port
+   all negate `is` or `in` (14 and 11), which is what `EqualityOperator` does
+   to `===`, yet `keywords` stands among the operators without a counterpart.
+   18 of the 23 `MethodExpression` mutants remove a call, which mutmut does not
+   do. 11 of the 76 `EqualityOperator` mutants negate a relational operator,
+   where `swap_op` only moves its boundary. The shared-class rows therefore
+   compare similar, not identical, sets of rewrites.
+
+**C. Labels that rest on a test's name.**
+
+1. *The parametrized block.* `test_decode_raises_clean_error_if_claim_is_non_numeric_type`
+   has 1 recorded basis per value of its parameter, each of the form
+   `name: ...; message contains ...`. The text defines the name-only labels
+   both as "the basis is the name alone" and as "the basis text begins with
+   `name:`"; for this block the two differ. The script follows the second,
+   operational wording, value by value, so the block (12 cases) is left out of
+   both reduced sets: 7 blocks are left out of "without name-only" and 26 of
+   "without any name".
+2. *Scoring.* O_T and O_C are scored by the second study's own functions,
+   imported from `analyse_s2.py`, on observations rebuilt from `outcomes.jsonl`.
+   The kill rule is unchanged when labels are set aside: a crash of any case, a
+   load failure or a timeout still kills under O_T.
+3. *One more input.* `checks.json` of the second study is read for the function
+   of each target check, which P5 needs.
+
+**D. A second way to delete a check that sits in a handler.**
+
+1. *No write into the second study.* Its `verify` step is repeated check for
+   check inside `handler_variant.py` with git and the interpreter told not to
+   write (`--no-optional-locks`, `-B`); everything else is imported from
+   `run_s2.py` and `analyse_s2.py` unchanged.
+2. *The first sentinel.* The control copy is compared with the study's baseline
+   record through that study's `normalise()`, which sets aside the line numbers
+   of frames and the environment block as well as timing. For an unmodified
+   copy the line numbers are the same in any case.
+3. *Raise sites under variant R.* A bare `raise` re-raises the caught error, so
+   the innermost frame inside the package is the statement of the `try` body
+   and no check is the raise site of a changed case. The mapping by line agrees
+   with the recorder's own numbering at every raise site of every run.
+4. *Counting the runs.* 19 recorder runs: 1 control and, for each of the 9
+   handler checks, 1 copy per variant. `runs.states` in `handler-variant.json`
+   counts the 18 variant runs.
+
+**Files.**
+
+1. *A fifth script.* The text says that the 4 analysis scripts write
+   `SUMMARY.md` and `SHA256SUMS`. A fifth script, `summarise.py`, writes both.
+   It reads only the 4 JSON summaries, copies their headline numbers and adds
+   none of its own.
+2. *Added with the results.* `README.md`, and `timestamps/` with the RFC 3161
+   tokens of 2 time-stamping authorities for the commit that fixed the text
+   above (`708beec`, 2026-11-14 02:46:40 UTC).

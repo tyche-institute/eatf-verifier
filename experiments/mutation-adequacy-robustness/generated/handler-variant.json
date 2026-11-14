@@ -1,0 +1,566 @@
+{
+ "schema": "urn:eatf:experiment:mutation-adequacy-robustness-handler-variant:1",
+ "analysis": "D",
+ "verify": {
+  "commit": "7d5ef55e42ce42221f58dc49943e92ccad1fa66a",
+  "clean": true,
+  "subject_files_match": 4,
+  "test_files_match": 10,
+  "python": "3.12.3",
+  "pinned_packages_match": 22,
+  "jwt_not_installed": true
+ },
+ "runs": {
+  "recorder_runs": 19,
+  "timeout_seconds": 60.0,
+  "states": {
+   "ran": 18
+  }
+ },
+ "reached_checks": 41,
+ "handler_checks": {
+  "count": 9,
+  "checks": [
+   "jws.segment-encoding",
+   "jws.segments",
+   "jws.header-json",
+   "jws.alg-present",
+   "jws.alg-supported",
+   "jwt.payload-json",
+   "jwt.iat-type",
+   "jwt.nbf-type",
+   "jwt.exp-type"
+  ]
+ },
+ "fail_closed_only_deletions": {
+  "count": 16,
+  "of_which_handler_checks": 8,
+  "checks": [
+   "jws.alg-present",
+   "jws.alg-supported",
+   "jws.b64-requires-detached",
+   "jws.header-json",
+   "jws.header-object",
+   "jws.segments",
+   "jws.token-type",
+   "jwt.aud-claim-format",
+   "jwt.aud-present",
+   "jwt.aud-unexpected",
+   "jwt.exp-type",
+   "jwt.iat-type",
+   "jwt.iss-present",
+   "jwt.nbf-type",
+   "jwt.payload-json",
+   "jwt.payload-object"
+  ],
+  "handler_checks": [
+   "jws.alg-present",
+   "jws.alg-supported",
+   "jws.header-json",
+   "jws.segments",
+   "jwt.exp-type",
+   "jwt.iat-type",
+   "jwt.nbf-type",
+   "jwt.payload-json"
+  ]
+ },
+ "site_mapping": "variant R: the innermost frame's line mapped to the raise statement of the unmodified source whose lines hold it; every raise site checked against the recorder's ordinal translated through the raise statements the copy keeps; original variant: the study's renumbering, cross-checked against the line mapping",
+ "sentinels": {
+  "control_reproduces_baseline": true,
+  "original_variant_reproduces_deposited_oracles": {
+   "jws.alg-present": true,
+   "jws.alg-supported": true,
+   "jws.header-json": true,
+   "jws.segment-encoding": true,
+   "jws.segments": true,
+   "jwt.exp-type": true,
+   "jwt.iat-type": true,
+   "jwt.nbf-type": true,
+   "jwt.payload-json": true
+  }
+ },
+ "rerun_additional_comparison": {
+  "jws.alg-present": {
+   "cases_changed_same": true,
+   "changed_case_ids_same": true,
+   "changed_classes_same": true,
+   "sites_renumbered_same": true
+  },
+  "jws.alg-supported": {
+   "cases_changed_same": true,
+   "changed_case_ids_same": true,
+   "changed_classes_same": true,
+   "sites_renumbered_same": true
+  },
+  "jws.header-json": {
+   "cases_changed_same": true,
+   "changed_case_ids_same": true,
+   "changed_classes_same": true,
+   "sites_renumbered_same": true
+  },
+  "jws.segment-encoding": {
+   "cases_changed_same": true,
+   "changed_case_ids_same": true,
+   "changed_classes_same": true,
+   "sites_renumbered_same": true
+  },
+  "jws.segments": {
+   "cases_changed_same": true,
+   "changed_case_ids_same": true,
+   "changed_classes_same": true,
+   "sites_renumbered_same": true
+  },
+  "jwt.exp-type": {
+   "cases_changed_same": true,
+   "changed_case_ids_same": true,
+   "changed_classes_same": true,
+   "sites_renumbered_same": true
+  },
+  "jwt.iat-type": {
+   "cases_changed_same": true,
+   "changed_case_ids_same": true,
+   "changed_classes_same": true,
+   "sites_renumbered_same": true
+  },
+  "jwt.nbf-type": {
+   "cases_changed_same": true,
+   "changed_case_ids_same": true,
+   "changed_classes_same": true,
+   "sites_renumbered_same": true
+  },
+  "jwt.payload-json": {
+   "cases_changed_same": true,
+   "changed_case_ids_same": true,
+   "changed_classes_same": true,
+   "sites_renumbered_same": true
+  }
+ },
+ "checks": {
+  "jws.alg-present": {
+   "function": "PyJWS._verify_signature",
+   "class": "InvalidAlgorithmError",
+   "raises": [
+    0
+   ],
+   "raises_in_handler": [
+    0
+   ],
+   "baseline_cases_reaching": 1,
+   "original": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 1,
+    "changed_case_classes": {
+     "builtins.UnboundLocalError": 1
+    }
+   },
+   "R": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 1,
+    "changed_case_classes": {
+     "builtins.KeyError": 1
+    },
+    "run": "ran",
+    "line_mapping": {
+     "sites": 91,
+     "raise_sites": 90,
+     "recorder_numbering_same_check": 90
+    }
+   }
+  },
+  "jws.alg-supported": {
+   "function": "PyJWS._verify_signature",
+   "class": "InvalidAlgorithmError",
+   "raises": [
+    3
+   ],
+   "raises_in_handler": [
+    3
+   ],
+   "baseline_cases_reaching": 1,
+   "original": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 1,
+    "changed_case_classes": {
+     "builtins.UnboundLocalError": 1
+    }
+   },
+   "R": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 1,
+    "changed_case_classes": {
+     "builtins.NotImplementedError": 1
+    },
+    "run": "ran",
+    "line_mapping": {
+     "sites": 91,
+     "raise_sites": 91,
+     "recorder_numbering_same_check": 91
+    }
+   }
+  },
+  "jws.header-json": {
+   "function": "PyJWS._load",
+   "class": "DecodeError",
+   "raises": [
+    2
+   ],
+   "raises_in_handler": [
+    2
+   ],
+   "baseline_cases_reaching": 1,
+   "original": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "no",
+    "O_S": "yes",
+    "cases_changed": 1,
+    "changed_case_classes": {
+     "builtins.UnboundLocalError": 1
+    }
+   },
+   "R": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "no",
+    "O_S": "yes",
+    "cases_changed": 1,
+    "changed_case_classes": {
+     "builtins.UnicodeDecodeError": 1
+    },
+    "run": "ran",
+    "line_mapping": {
+     "sites": 91,
+     "raise_sites": 90,
+     "recorder_numbering_same_check": 90
+    }
+   }
+  },
+  "jws.segment-encoding": {
+   "function": "PyJWS._decode_base64url_segment",
+   "class": "DecodeError",
+   "raises": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "raises_in_handler": [
+    3
+   ],
+   "baseline_cases_reaching": 5,
+   "original": {
+    "O_V": "yes",
+    "O_V^fc": "yes",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 5,
+    "changed_case_classes": {
+     "builtins.UnboundLocalError": 4,
+     "no exception": 1
+    }
+   },
+   "R": {
+    "O_V": "yes",
+    "O_V^fc": "yes",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 5,
+    "changed_case_classes": {
+     "binascii.Error": 4,
+     "no exception": 1
+    },
+    "run": "ran",
+    "line_mapping": {
+     "sites": 90,
+     "raise_sites": 86,
+     "recorder_numbering_same_check": 86
+    }
+   }
+  },
+  "jws.segments": {
+   "function": "PyJWS._load",
+   "class": "DecodeError",
+   "raises": [
+    1
+   ],
+   "raises_in_handler": [
+    1
+   ],
+   "baseline_cases_reaching": 1,
+   "original": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 1,
+    "changed_case_classes": {
+     "builtins.UnboundLocalError": 1
+    }
+   },
+   "R": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 1,
+    "changed_case_classes": {
+     "builtins.ValueError": 1
+    },
+    "run": "ran",
+    "line_mapping": {
+     "sites": 91,
+     "raise_sites": 90,
+     "recorder_numbering_same_check": 90
+    }
+   }
+  },
+  "jwt.exp-type": {
+   "function": "PyJWT._validate_exp",
+   "class": "DecodeError",
+   "raises": [
+    0
+   ],
+   "raises_in_handler": [
+    0
+   ],
+   "baseline_cases_reaching": 5,
+   "original": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 5,
+    "changed_case_classes": {
+     "builtins.UnboundLocalError": 5
+    }
+   },
+   "R": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 5,
+    "changed_case_classes": {
+     "builtins.OverflowError": 1,
+     "builtins.TypeError": 3,
+     "builtins.ValueError": 1
+    },
+    "run": "ran",
+    "line_mapping": {
+     "sites": 91,
+     "raise_sites": 86,
+     "recorder_numbering_same_check": 86
+    }
+   }
+  },
+  "jwt.iat-type": {
+   "function": "PyJWT._validate_iat",
+   "class": "InvalidIssuedAtError",
+   "raises": [
+    0
+   ],
+   "raises_in_handler": [
+    0
+   ],
+   "baseline_cases_reaching": 5,
+   "original": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 5,
+    "changed_case_classes": {
+     "builtins.UnboundLocalError": 5
+    }
+   },
+   "R": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 5,
+    "changed_case_classes": {
+     "builtins.OverflowError": 1,
+     "builtins.TypeError": 3,
+     "builtins.ValueError": 1
+    },
+    "run": "ran",
+    "line_mapping": {
+     "sites": 91,
+     "raise_sites": 86,
+     "recorder_numbering_same_check": 86
+    }
+   }
+  },
+  "jwt.nbf-type": {
+   "function": "PyJWT._validate_nbf",
+   "class": "DecodeError",
+   "raises": [
+    0
+   ],
+   "raises_in_handler": [
+    0
+   ],
+   "baseline_cases_reaching": 5,
+   "original": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 5,
+    "changed_case_classes": {
+     "builtins.UnboundLocalError": 5
+    }
+   },
+   "R": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 5,
+    "changed_case_classes": {
+     "builtins.OverflowError": 1,
+     "builtins.TypeError": 3,
+     "builtins.ValueError": 1
+    },
+    "run": "ran",
+    "line_mapping": {
+     "sites": 91,
+     "raise_sites": 86,
+     "recorder_numbering_same_check": 86
+    }
+   }
+  },
+  "jwt.payload-json": {
+   "function": "PyJWT._decode_payload",
+   "class": "DecodeError",
+   "raises": [
+    0
+   ],
+   "raises_in_handler": [
+    0
+   ],
+   "baseline_cases_reaching": 2,
+   "original": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 2,
+    "changed_case_classes": {
+     "builtins.UnboundLocalError": 2
+    }
+   },
+   "R": {
+    "O_V": "yes",
+    "O_V^fc": "no",
+    "O_C": "yes",
+    "O_T": "yes",
+    "O_S": "yes",
+    "cases_changed": 2,
+    "changed_case_classes": {
+     "builtins.RecursionError": 1,
+     "json.decoder.JSONDecodeError": 1
+    },
+    "run": "ran",
+    "line_mapping": {
+     "sites": 91,
+     "raise_sites": 89,
+     "recorder_numbering_same_check": 89
+    }
+   }
+  }
+ },
+ "reached_checks_together": {
+  "O_V": {
+   "undetected_original": 5,
+   "undetected_with_R": 5,
+   "checks_with_R": [
+    "jws.crit-strings",
+    "jws.jwk-alg-match",
+    "jws.key-length",
+    "jwt.aud-strict-claim-format",
+    "jwt.aud-strict-param"
+   ]
+  },
+  "O_V^fc": {
+   "undetected_original": 21,
+   "undetected_with_R": 21,
+   "checks_with_R": [
+    "jws.alg-present",
+    "jws.alg-supported",
+    "jws.b64-requires-detached",
+    "jws.crit-strings",
+    "jws.header-json",
+    "jws.header-object",
+    "jws.jwk-alg-match",
+    "jws.key-length",
+    "jws.segments",
+    "jws.token-type",
+    "jwt.aud-claim-format",
+    "jwt.aud-present",
+    "jwt.aud-strict-claim-format",
+    "jwt.aud-strict-param",
+    "jwt.aud-unexpected",
+    "jwt.exp-type",
+    "jwt.iat-type",
+    "jwt.iss-present",
+    "jwt.nbf-type",
+    "jwt.payload-json",
+    "jwt.payload-object"
+   ]
+  },
+  "O_C": {
+   "undetected_original": 3,
+   "undetected_with_R": 3,
+   "checks_with_R": [
+    "jws.crit-strings",
+    "jwt.aud-strict-claim-format",
+    "jwt.aud-strict-param"
+   ]
+  },
+  "O_T": {
+   "undetected_original": 2,
+   "undetected_with_R": 2,
+   "checks_with_R": [
+    "jws.header-json",
+    "jwt.aud-match"
+   ]
+  },
+  "O_S": {
+   "undetected_original": 0,
+   "undetected_with_R": 0,
+   "checks_with_R": []
+  }
+ }
+}

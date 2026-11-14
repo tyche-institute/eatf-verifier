@@ -1,0 +1,29 @@
+variant,port,tool,group,operators,mutants,killed_O_V,killed_O_C,gap,gap_later_guard,gap_same_guard,gap_earlier_guard,gap_no_defined_code,gap_mixed,later_guard_share
+all mutants,python,mutmut 3.8.1,all operators,arg_removal assignment augmented_assignment if_exp keywords name number remove_unary_ops string swap_op symmetric_string_methods_swap,1149,415,500,85,5,23,1,56,0,0.0588
+all mutants,python,mutmut 3.8.1,shared classes,name remove_unary_ops string swap_op symmetric_string_methods_swap unsymmetrical_string_methods_swap,477,147,186,39,2,4,1,32,0,0.0513
+all mutants,python,mutmut 3.8.1,operator replacement,swap_op,44,23,25,2,1,1,0,0,0,0.5
+all mutants,python,mutmut 3.8.1,boolean literal and negation,name remove_unary_ops,52,26,31,5,1,3,1,0,0,0.2
+all mutants,python,mutmut 3.8.1,string literal,string,378,95,127,32,0,0,0,32,0,0.0
+all mutants,python,mutmut 3.8.1,method swap,symmetric_string_methods_swap unsymmetrical_string_methods_swap,3,3,3,0,0,0,0,0,0,
+all mutants,python,mutmut 3.8.1,outside the table,arg_removal assignment augmented_assignment if_exp keywords number,672,268,314,46,3,19,0,24,0,0.0652
+all mutants,typescript,StrykerJS 9.6.1,all operators,ArithmeticOperator ArrayDeclaration ArrowFunction AssignmentOperator BlockStatement BooleanLiteral ConditionalExpression EqualityOperator LogicalOperator MethodExpression ObjectLiteral OptionalChaining Regex StringLiteral UnaryOperator UpdateOperator,854,291,373,82,39,26,1,16,0,0.4756
+all mutants,typescript,StrykerJS 9.6.1,shared classes,ArithmeticOperator AssignmentOperator BooleanLiteral EqualityOperator LogicalOperator MethodExpression StringLiteral UnaryOperator,440,147,183,36,8,11,1,16,0,0.2222
+all mutants,typescript,StrykerJS 9.6.1,operator replacement,ArithmeticOperator AssignmentOperator EqualityOperator LogicalOperator UnaryOperator,136,59,70,11,4,7,0,0,0,0.3636
+all mutants,typescript,StrykerJS 9.6.1,boolean literal and negation,BooleanLiteral,54,29,35,6,1,4,1,0,0,0.1667
+all mutants,typescript,StrykerJS 9.6.1,string literal,StringLiteral,227,55,74,19,3,0,0,16,0,0.1579
+all mutants,typescript,StrykerJS 9.6.1,method swap,MethodExpression,23,4,4,0,0,0,0,0,0,
+all mutants,typescript,StrykerJS 9.6.1,outside the table,ArrayDeclaration ArrowFunction BlockStatement ConditionalExpression ObjectLiteral OptionalChaining Regex UpdateOperator,414,144,190,46,31,15,0,0,0,0.6739
+without code-literal mutants,python,mutmut 3.8.1,all operators,arg_removal assignment augmented_assignment if_exp keywords name number remove_unary_ops string swap_op symmetric_string_methods_swap,1075,415,455,40,5,23,1,11,0,0.125
+without code-literal mutants,python,mutmut 3.8.1,shared classes,name remove_unary_ops string swap_op symmetric_string_methods_swap unsymmetrical_string_methods_swap,425,147,154,7,2,4,1,0,0,0.2857
+without code-literal mutants,python,mutmut 3.8.1,operator replacement,swap_op,44,23,25,2,1,1,0,0,0,0.5
+without code-literal mutants,python,mutmut 3.8.1,boolean literal and negation,name remove_unary_ops,52,26,31,5,1,3,1,0,0,0.2
+without code-literal mutants,python,mutmut 3.8.1,string literal,string,326,95,95,0,0,0,0,0,0,
+without code-literal mutants,python,mutmut 3.8.1,method swap,symmetric_string_methods_swap unsymmetrical_string_methods_swap,3,3,3,0,0,0,0,0,0,
+without code-literal mutants,python,mutmut 3.8.1,outside the table,arg_removal assignment augmented_assignment if_exp keywords number,650,268,301,33,3,19,0,11,0,0.0909
+without code-literal mutants,typescript,StrykerJS 9.6.1,all operators,ArithmeticOperator ArrayDeclaration ArrowFunction AssignmentOperator BlockStatement BooleanLiteral ConditionalExpression EqualityOperator LogicalOperator MethodExpression ObjectLiteral OptionalChaining Regex StringLiteral UnaryOperator UpdateOperator,828,291,357,66,39,26,1,0,0,0.5909
+without code-literal mutants,typescript,StrykerJS 9.6.1,shared classes,ArithmeticOperator AssignmentOperator BooleanLiteral EqualityOperator LogicalOperator MethodExpression StringLiteral UnaryOperator,414,147,167,20,8,11,1,0,0,0.4
+without code-literal mutants,typescript,StrykerJS 9.6.1,operator replacement,ArithmeticOperator AssignmentOperator EqualityOperator LogicalOperator UnaryOperator,136,59,70,11,4,7,0,0,0,0.3636
+without code-literal mutants,typescript,StrykerJS 9.6.1,boolean literal and negation,BooleanLiteral,54,29,35,6,1,4,1,0,0,0.1667
+without code-literal mutants,typescript,StrykerJS 9.6.1,string literal,StringLiteral,201,55,58,3,3,0,0,0,0,1.0
+without code-literal mutants,typescript,StrykerJS 9.6.1,method swap,MethodExpression,23,4,4,0,0,0,0,0,0,
+without code-literal mutants,typescript,StrykerJS 9.6.1,outside the table,ArrayDeclaration ArrowFunction BlockStatement ConditionalExpression ObjectLiteral OptionalChaining Regex UpdateOperator,414,144,190,46,31,15,0,0,0,0.6739

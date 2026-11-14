@@ -1,0 +1,15 @@
+row,subject,oracle,mutants,killed,distinct_kill_sets,minimal,distinct_minimal_kill_sets,uncredited_kills,gap,gap_share_of_killed,minimal_gap,minimal_gap_share_of_minimal,minimal_kill_sets_with_gap,gap_units,minimal_gap_units
+oracle,python,O_V,1149,415,39,60,14,0,,,,,,,
+oracle,python,O_C,1149,500,47,131,18,0,,,,,,,
+oracle,python,O_T,1149,496,42,135,17,0,,,,,,,
+oracle,typescript,O_V,854,291,33,42,13,2,,,,,,,
+oracle,typescript,O_C,854,373,53,114,22,2,,,,,,,
+oracle,typescript,O_T,854,356,47,106,20,4,,,,,,,
+oracle,pyjwt,O_V,880,404,139,76,28,0,,,,,,,
+oracle,pyjwt,O_V^fc,880,378,85,86,24,0,,,,,,,
+oracle,pyjwt,O_C,880,446,158,88,27,0,,,,,,,
+oracle,pyjwt,O_T,880,451,149,84,26,0,,,,,,,
+oracle,pyjwt,O_S,880,538,192,163,45,0,,,,,,,
+gap,python,O_C not O_V,1149,500,47,131,18,0,85,0.17,73,0.5573,16,12,10
+gap,typescript,O_C not O_V,854,373,53,114,22,2,82,0.2198,73,0.6404,19,11,11
+gap,pyjwt,O_C not O_V,880,446,158,88,27,0,42,0.0942,27,0.3068,7,9,8

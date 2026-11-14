@@ -1,0 +1,19 @@
+check,variant,source,file,function,class,raise_statements,raises_in_handler,baseline_cases_reaching,O_V,O_V^fc,O_C,O_T,O_S,cases_changed,changed_case_classes,moves,sites_remapped
+jws.alg-present,original,deposited deletions.csv,jwt/api_jws.py,PyJWS._verify_signature,InvalidAlgorithmError,1,1,1,yes,no,yes,yes,yes,1,builtins.UnboundLocalError 1,no check 1,11
+jws.alg-present,R,this run,jwt/api_jws.py,PyJWS._verify_signature,InvalidAlgorithmError,1,1,1,yes,no,yes,yes,yes,1,builtins.KeyError 1,no check 1,0
+jws.alg-supported,original,deposited deletions.csv,jwt/api_jws.py,PyJWS._verify_signature,InvalidAlgorithmError,1,1,1,yes,no,yes,yes,yes,1,builtins.UnboundLocalError 1,no check 1,7
+jws.alg-supported,R,this run,jwt/api_jws.py,PyJWS._verify_signature,InvalidAlgorithmError,1,1,1,yes,no,yes,yes,yes,1,builtins.NotImplementedError 1,no check 1,0
+jws.header-json,original,deposited deletions.csv,jwt/api_jws.py,PyJWS._load,DecodeError,1,1,1,yes,no,yes,no,yes,1,builtins.UnboundLocalError 1,no check 1,3
+jws.header-json,R,this run,jwt/api_jws.py,PyJWS._load,DecodeError,1,1,1,yes,no,yes,no,yes,1,builtins.UnicodeDecodeError 1,no check 1,0
+jws.segment-encoding,original,deposited deletions.csv,jwt/api_jws.py,PyJWS._decode_base64url_segment,DecodeError,5,1,5,yes,yes,yes,yes,yes,5,builtins.UnboundLocalError 4; no exception 1,no check 4; no exception 1,0
+jws.segment-encoding,R,this run,jwt/api_jws.py,PyJWS._decode_base64url_segment,DecodeError,5,1,5,yes,yes,yes,yes,yes,5,binascii.Error 4; no exception 1,no check 4; no exception 1,0
+jws.segments,original,deposited deletions.csv,jwt/api_jws.py,PyJWS._load,DecodeError,1,1,1,yes,no,yes,yes,yes,1,builtins.UnboundLocalError 1,no check 1,4
+jws.segments,R,this run,jwt/api_jws.py,PyJWS._load,DecodeError,1,1,1,yes,no,yes,yes,yes,1,builtins.ValueError 1,no check 1,0
+jwt.exp-type,original,deposited deletions.csv,jwt/api_jwt.py,PyJWT._validate_exp,DecodeError,1,1,5,yes,no,yes,yes,yes,5,builtins.UnboundLocalError 5,no check 5,6
+jwt.exp-type,R,this run,jwt/api_jwt.py,PyJWT._validate_exp,DecodeError,1,1,5,yes,no,yes,yes,yes,5,builtins.OverflowError 1; builtins.TypeError 3; builtins.ValueError 1,no check 5,0
+jwt.iat-type,original,deposited deletions.csv,jwt/api_jwt.py,PyJWT._validate_iat,InvalidIssuedAtError,1,1,5,yes,no,yes,yes,yes,5,builtins.UnboundLocalError 5,no check 5,1
+jwt.iat-type,R,this run,jwt/api_jwt.py,PyJWT._validate_iat,InvalidIssuedAtError,1,1,5,yes,no,yes,yes,yes,5,builtins.OverflowError 1; builtins.TypeError 3; builtins.ValueError 1,no check 5,0
+jwt.nbf-type,original,deposited deletions.csv,jwt/api_jwt.py,PyJWT._validate_nbf,DecodeError,1,1,5,yes,no,yes,yes,yes,5,builtins.UnboundLocalError 5,no check 5,2
+jwt.nbf-type,R,this run,jwt/api_jwt.py,PyJWT._validate_nbf,DecodeError,1,1,5,yes,no,yes,yes,yes,5,builtins.OverflowError 1; builtins.TypeError 3; builtins.ValueError 1,no check 5,0
+jwt.payload-json,original,deposited deletions.csv,jwt/api_jwt.py,PyJWT._decode_payload,DecodeError,1,1,2,yes,no,yes,yes,yes,2,builtins.UnboundLocalError 2,no check 2,1
+jwt.payload-json,R,this run,jwt/api_jwt.py,PyJWT._decode_payload,DecodeError,1,1,2,yes,no,yes,yes,yes,2,builtins.RecursionError 1; json.decoder.JSONDecodeError 1,no check 2,0

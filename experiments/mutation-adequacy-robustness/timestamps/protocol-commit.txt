@@ -1,0 +1,1 @@
+eatf-verifier research/mutation-adequacy commit 708beeca2317261e5b653748b7990f36b42542ec (experiments/mutation-adequacy-robustness/PROTOCOL.md fixed before any script)
