@@ -35,7 +35,26 @@ end. Nothing here changes a file or a number of the two studies.
   `generated/SUMMARY.md` and writes `generated/SHA256SUMS`.
 
 Each analysis was written once, run, and then recomputed by a second script
-written without sight of the first; the two agree on every reported number.
+written without sight of the first. The second scripts are in `work/verify-A`
+to `work/verify-D`, the only part of `work/` that is tracked. Their files were
+last modified between 02:52 and 02:55 UTC on 14 November 2026, before the
+analyses were committed (`45437a5`); they were added to the repository on
+15 November 2026.
+
+- **A.** `recompute_a.py` rebuilds the kill sets from `outcomes.jsonl` of each
+  study and writes `recomputed-a.json`. Every number that it and
+  `generated/subsumption.json` both report is the same.
+- **B.** `recompute_b.py` writes `recompute-b.json`, and `compare_b.py` finds
+  no difference from `generated/shared-operators.json`.
+- **C.** `recompute_c.py` writes `recomputed.json`, and `compare.py` finds no
+  difference from `generated/label-sensitivity.json`.
+- **D.** `derive.py` lists the checks that sit in a handler and that the cases
+  reach: the 9 checks of `generated/handler-variant.csv`. For 3 of them,
+  `rerun.py` makes its own copy and its own edit (the 3 `.diff` files), runs
+  the copy under the recorder and finds no difference from
+  `generated/handler-variant.csv` and `generated/handler-variant-cases.csv`.
+  `derive-output.txt` and `rerun-report.json` hold the output of runs on
+  15 November 2026.
 
 ## Result
 
@@ -102,9 +121,29 @@ python3 -I summarise.py
 ```
 
 - Every script exits nonzero when a sentinel fails.
-- D writes its copies and records to `work/`, which is not tracked, and takes
+- D writes its copies and records to `work/`, which is not tracked apart from
+  the second scripts, and takes
   about 3 s. No script writes into the folder of either study.
 - Re-runs on 14 November 2026 reproduced `generated/` byte for byte.
+
+The second scripts run from any folder. `recompute_a.py` reads
+`../mutation-adequacy/work/cases.json`, which `cases.py` of the first study
+writes; `derive.py` and `rerun.py` need what D needs, and `rerun.py` also the
+copies that D writes to `work/copies/R`:
+
+```sh
+python3 -I ../mutation-adequacy/cases.py
+python3 -I work/verify-A/recompute_a.py
+python3 -I work/verify-B/recompute_b.py
+python3 -I work/verify-B/compare_b.py
+python3 -I work/verify-C/recompute_c.py
+python3 -I work/verify-C/compare.py
+python3 -I work/verify-D/derive.py
+python3 -I work/verify-D/rerun.py
+```
+
+In a clean checkout on 15 November 2026, the first 6 commands reproduced
+`recomputed-a.json`, `recompute-b.json` and `recomputed.json` byte for byte.
 
 ## Files
 
@@ -117,6 +156,7 @@ python3 -I summarise.py
 | `handler_variant.py` | D: variant R, with a control and a re-run of the original variant |
 | `summarise.py` | Writes `generated/SUMMARY.md` and `generated/SHA256SUMS` |
 | `generated/` | Results: `SUMMARY.md`, and a `.md`, `.csv` and `.json` per analysis |
+| `work/verify-A/` to `work/verify-D/` | The second scripts, their outputs and the 3 edits of D |
 | `timestamps/` | RFC 3161 tokens for the protocol commit, with the commands that verify them |
 
 ## Limits

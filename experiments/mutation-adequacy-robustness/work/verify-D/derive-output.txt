@@ -1,0 +1,12 @@
+reached 41
+('jws.segment-encoding', True, [(3, 349, 349)], [0, 1, 2, 3, 4], [[336, 336], [339, 339], [344, 344], [349, 349], [352, 352]])
+('jws.segments', True, [(1, 367, 367)], [1], [[367, 367]])
+('jws.header-json', True, [(2, 374, 374)], [2], [[374, 374]])
+('jws.alg-present', True, [(0, 413, 413)], [0], [[413, 413]])
+('jws.alg-supported', True, [(3, 435, 435)], [3], [[435, 435]])
+('jwt.payload-json', True, [(0, 300, 300)], [0], [[300, 300]])
+('jwt.iat-type', True, [(0, 479, 481)], [0], [[479, 481]])
+('jwt.nbf-type', True, [(0, 494, 494)], [0], [[494, 494]])
+('jwt.exp-type', True, [(0, 508, 510)], [0], [[508, 510]])
+('jwt.iss-param-type', False, [(4, 586, 588)], [4], [[586, 588]])
+handler & reached: ['jws.alg-present', 'jws.alg-supported', 'jws.header-json', 'jws.segment-encoding', 'jws.segments', 'jwt.exp-type', 'jwt.iat-type', 'jwt.nbf-type', 'jwt.payload-json']

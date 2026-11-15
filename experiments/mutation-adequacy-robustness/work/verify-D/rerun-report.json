@@ -1,0 +1,59 @@
+{
+ "jws.header-json": {
+  "case_diffs": [],
+  "cases_changed": 1,
+  "cases_changed_impl": "1",
+  "classes_impl": "builtins.UnicodeDecodeError 1",
+  "classes_mine": "builtins.UnicodeDecodeError 1",
+  "copy_identical_to_implementers": true,
+  "diff_hunks": 1,
+  "kills_mine": {
+   "O_C": "yes",
+   "O_S": "yes",
+   "O_T": "no",
+   "O_V": "yes",
+   "O_V^fc": "no"
+  },
+  "lines_changed": "--- jwt/api_jws.py\n+++ jwt/api_jws.py (R)\n@@ -374 +374 @@\n-            raise DecodeError(f\"Invalid header string: {e}\") from e\n+            raise\n",
+  "row_diffs": {},
+  "sites_remapped_by_line": 0
+ },
+ "jws.segment-encoding": {
+  "case_diffs": [],
+  "cases_changed": 5,
+  "cases_changed_impl": "5",
+  "classes_impl": "binascii.Error 4; no exception 1",
+  "classes_mine": "binascii.Error 4; no exception 1",
+  "copy_identical_to_implementers": true,
+  "diff_hunks": 5,
+  "kills_mine": {
+   "O_C": "yes",
+   "O_S": "yes",
+   "O_T": "yes",
+   "O_V": "yes",
+   "O_V^fc": "yes"
+  },
+  "lines_changed": "--- jwt/api_jws.py\n+++ jwt/api_jws.py (R)\n@@ -336 +336 @@\n-                raise DecodeError(f\"Invalid {name} padding\")\n+                pass\n@@ -339 +339 @@\n-            raise DecodeError(f\"Invalid {name} padding\")\n+            pass\n@@ -344 +344 @@\n-            raise DecodeError(f\"Invalid {name} padding\")\n+            pass\n@@ -349 +349 @@\n-            raise DecodeError(f\"Invalid {name} padding\") from err\n+            raise\n@@ -352 +352 @@\n-            raise DecodeError(f\"Invalid {name} padding\")\n+            pass\n",
+  "row_diffs": {},
+  "sites_remapped_by_line": 0
+ },
+ "jwt.iat-type": {
+  "case_diffs": [],
+  "cases_changed": 5,
+  "cases_changed_impl": "5",
+  "classes_impl": "builtins.OverflowError 1; builtins.TypeError 3; builtins.ValueError 1",
+  "classes_mine": "builtins.OverflowError 1; builtins.TypeError 3; builtins.ValueError 1",
+  "copy_identical_to_implementers": true,
+  "diff_hunks": 1,
+  "kills_mine": {
+   "O_C": "yes",
+   "O_S": "yes",
+   "O_T": "yes",
+   "O_V": "yes",
+   "O_V^fc": "no"
+  },
+  "lines_changed": "--- jwt/api_jwt.py\n+++ jwt/api_jwt.py (R)\n@@ -479,3 +479,3 @@\n-            raise InvalidIssuedAtError(\n-                \"Issued At claim (iat) must be an integer.\"\n-            ) from None\n+            raise\n+\n+\n",
+  "row_diffs": {},
+  "sites_remapped_by_line": 0
+ }
+}

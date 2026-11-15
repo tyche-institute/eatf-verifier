@@ -1,0 +1,468 @@
+{
+ "pyjwt": {
+  "_gmin": [
+   "jwt.api_jws.x\u01c1PyJWS\u01c1_validate_crit__mutmut_1",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1_validate_crit__mutmut_12",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1_validate_crit__mutmut_5",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1_verify_signature__mutmut_25",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1_verify_signature__mutmut_3",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1_verify_signature__mutmut_5",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode__mutmut_1",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_33",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_35",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_37",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_38",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_55",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_56",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_57",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_58",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_59",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_61",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_62",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_63",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_91",
+   "jwt.api_jws.x\u01c1PyJWS\u01c1decode_complete__mutmut_97",
+   "jwt.api_jwt.x\u01c1PyJWT\u01c1__init____mutmut_2",
+   "jwt.api_jwt.x\u01c1PyJWT\u01c1__init____mutmut_4",
+   "jwt.api_jwt.x\u01c1PyJWT\u01c1_validate_claims__mutmut_24",
+   "jwt.api_jwt.x\u01c1PyJWT\u01c1_validate_iat__mutmut_2",
+   "jwt.api_jwt.x\u01c1PyJWT\u01c1decode_complete__mutmut_50",
+   "jwt.api_jwt.x\u01c1PyJWT\u01c1decode_complete__mutmut_51"
+  ],
+  "case_runs_all_G": {
+   "earlier": 36,
+   "later": 54
+  },
+  "case_runs_minimal_G": {
+   "earlier": 30,
+   "later": 19
+  },
+  "directions_all_G": {
+   "earlier": 17,
+   "later": 22,
+   "mixed(earlier+later)": 3
+  },
+  "directions_minimal_G": {
+   "earlier": 15,
+   "later": 9,
+   "mixed(earlier+later)": 3
+  },
+  "gap": {
+   "G": 42,
+   "distinct_minimal_sets_O_C": 27,
+   "distinct_minimal_sets_with_G": 7,
+   "kills_O_C": 446,
+   "minimal_O_C": 88,
+   "minimal_in_G": 27,
+   "minimal_in_G_literal": 0
+  },
+  "mutants_with_all_G": {
+   "earlier": 20,
+   "later": 25
+  },
+  "mutants_with_minimal_G": {
+   "earlier": 18,
+   "later": 12
+  },
+  "per_oracle": {
+   "O_C": {
+    "distinct_kill_sets": 158,
+    "distinct_minimal_kill_sets": 27,
+    "kill_set_T_mutants": 0,
+    "killed": 446,
+    "minimal": 88,
+    "minimal_with_T": 0
+   },
+   "O_S": {
+    "distinct_kill_sets": 192,
+    "distinct_minimal_kill_sets": 45,
+    "kill_set_T_mutants": 0,
+    "killed": 538,
+    "minimal": 163,
+    "minimal_with_T": 0
+   },
+   "O_T": {
+    "distinct_kill_sets": 149,
+    "distinct_minimal_kill_sets": 26,
+    "kill_set_T_mutants": 0,
+    "killed": 451,
+    "minimal": 84,
+    "minimal_with_T": 0
+   },
+   "O_V": {
+    "distinct_kill_sets": 139,
+    "distinct_minimal_kill_sets": 28,
+    "kill_set_T_mutants": 0,
+    "killed": 404,
+    "minimal": 76,
+    "minimal_with_T": 0
+   },
+   "O_V^fc": {
+    "distinct_kill_sets": 85,
+    "distinct_minimal_kill_sets": 24,
+    "kill_set_T_mutants": 0,
+    "killed": 378,
+    "minimal": 86,
+    "minimal_with_T": 0
+   }
+  },
+  "spread": {
+   "unit": "function",
+   "units_gap": [
+    "PyJWS._validate_crit",
+    "PyJWS._verify_signature",
+    "PyJWS.decode",
+    "PyJWS.decode_complete",
+    "PyJWT.__init__",
+    "PyJWT._validate_claims",
+    "PyJWT._validate_iat",
+    "PyJWT._validate_iss",
+    "PyJWT.decode_complete"
+   ],
+   "units_minimal_gap": [
+    "PyJWS._validate_crit",
+    "PyJWS._verify_signature",
+    "PyJWS.decode",
+    "PyJWS.decode_complete",
+    "PyJWT.__init__",
+    "PyJWT._validate_claims",
+    "PyJWT._validate_iat",
+    "PyJWT.decode_complete"
+   ],
+   "with_gap": 9,
+   "with_minimal_gap": 8
+  }
+ },
+ "python": {
+  "_gmin": [
+   "eatf_verifier.overt.x_parse_and_validate_overt_receipt__mutmut_154",
+   "eatf_verifier.overt.x_parse_and_validate_overt_receipt__mutmut_169",
+   "eatf_verifier.overt.x_parse_and_validate_overt_receipt__mutmut_183",
+   "eatf_verifier.tsa.x__empty__mutmut_12",
+   "eatf_verifier.tsa.x_inspect_tsa__mutmut_102",
+   "eatf_verifier.verifier.x__ct_eq__mutmut_12",
+   "eatf_verifier.verifier.x__ct_eq__mutmut_13",
+   "eatf_verifier.verifier.x__ct_eq__mutmut_2",
+   "eatf_verifier.verifier.x_verify__mutmut_100",
+   "eatf_verifier.verifier.x_verify__mutmut_101",
+   "eatf_verifier.verifier.x_verify__mutmut_102",
+   "eatf_verifier.verifier.x_verify__mutmut_103",
+   "eatf_verifier.verifier.x_verify__mutmut_108",
+   "eatf_verifier.verifier.x_verify__mutmut_114",
+   "eatf_verifier.verifier.x_verify__mutmut_115",
+   "eatf_verifier.verifier.x_verify__mutmut_160",
+   "eatf_verifier.verifier.x_verify__mutmut_167",
+   "eatf_verifier.verifier.x_verify__mutmut_168",
+   "eatf_verifier.verifier.x_verify__mutmut_184",
+   "eatf_verifier.verifier.x_verify__mutmut_191",
+   "eatf_verifier.verifier.x_verify__mutmut_192",
+   "eatf_verifier.verifier.x_verify__mutmut_210",
+   "eatf_verifier.verifier.x_verify__mutmut_217",
+   "eatf_verifier.verifier.x_verify__mutmut_218",
+   "eatf_verifier.verifier.x_verify__mutmut_265",
+   "eatf_verifier.verifier.x_verify__mutmut_266",
+   "eatf_verifier.verifier.x_verify__mutmut_267",
+   "eatf_verifier.verifier.x_verify__mutmut_268",
+   "eatf_verifier.verifier.x_verify__mutmut_269",
+   "eatf_verifier.verifier.x_verify__mutmut_270",
+   "eatf_verifier.verifier.x_verify__mutmut_283",
+   "eatf_verifier.verifier.x_verify__mutmut_290",
+   "eatf_verifier.verifier.x_verify__mutmut_291",
+   "eatf_verifier.verifier.x_verify__mutmut_359",
+   "eatf_verifier.verifier.x_verify__mutmut_365",
+   "eatf_verifier.verifier.x_verify__mutmut_370",
+   "eatf_verifier.verifier.x_verify__mutmut_375",
+   "eatf_verifier.verifier.x_verify__mutmut_376",
+   "eatf_verifier.verifier.x_verify__mutmut_396",
+   "eatf_verifier.verifier.x_verify__mutmut_397",
+   "eatf_verifier.verifier.x_verify__mutmut_401",
+   "eatf_verifier.verifier.x_verify__mutmut_402",
+   "eatf_verifier.verifier.x_verify__mutmut_407",
+   "eatf_verifier.verifier.x_verify__mutmut_408",
+   "eatf_verifier.verifier.x_verify__mutmut_466",
+   "eatf_verifier.verifier.x_verify__mutmut_472",
+   "eatf_verifier.verifier.x_verify__mutmut_477",
+   "eatf_verifier.verifier.x_verify__mutmut_478",
+   "eatf_verifier.verifier.x_verify__mutmut_564",
+   "eatf_verifier.verifier.x_verify__mutmut_570",
+   "eatf_verifier.verifier.x_verify__mutmut_575",
+   "eatf_verifier.verifier.x_verify__mutmut_576",
+   "eatf_verifier.verifier.x_verify__mutmut_594",
+   "eatf_verifier.verifier.x_verify__mutmut_600",
+   "eatf_verifier.verifier.x_verify__mutmut_605",
+   "eatf_verifier.verifier.x_verify__mutmut_607",
+   "eatf_verifier.verifier.x_verify__mutmut_608",
+   "eatf_verifier.verifier.x_verify__mutmut_609",
+   "eatf_verifier.verifier.x_verify__mutmut_610",
+   "eatf_verifier.verifier.x_verify__mutmut_638",
+   "eatf_verifier.verifier.x_verify__mutmut_639",
+   "eatf_verifier.verifier.x_verify__mutmut_640",
+   "eatf_verifier.verifier.x_verify__mutmut_641",
+   "eatf_verifier.verifier.x_verify__mutmut_643",
+   "eatf_verifier.verifier.x_verify__mutmut_644",
+   "eatf_verifier.verifier.x_verify__mutmut_645",
+   "eatf_verifier.verifier.x_verify__mutmut_78",
+   "eatf_verifier.verifier.x_verify__mutmut_85",
+   "eatf_verifier.verifier.x_verify__mutmut_86",
+   "eatf_verifier.verifier.x_verify__mutmut_95",
+   "eatf_verifier.verifier.x_verify__mutmut_96",
+   "eatf_verifier.verifier.x_verify__mutmut_98",
+   "eatf_verifier.verifier.x_verify__mutmut_99"
+  ],
+  "directions_all_G": {
+   "earlier guard": 1,
+   "later guard": 5,
+   "no defined code": 56,
+   "same guard": 23
+  },
+  "directions_all_G_without_literal": {
+   "earlier guard": 1,
+   "later guard": 5,
+   "no defined code": 11,
+   "same guard": 23
+  },
+  "directions_minimal_G": {
+   "earlier guard": 1,
+   "later guard": 5,
+   "no defined code": 45,
+   "same guard": 22
+  },
+  "directions_minimal_G_without_literal": {
+   "earlier guard": 1,
+   "later guard": 5,
+   "no defined code": 6,
+   "same guard": 22
+  },
+  "gap": {
+   "G": 85,
+   "distinct_minimal_sets_O_C": 18,
+   "distinct_minimal_sets_with_G": 16,
+   "kills_O_C": 500,
+   "minimal_O_C": 131,
+   "minimal_in_G": 73,
+   "minimal_in_G_literal": 39
+  },
+  "per_oracle": {
+   "O_C": {
+    "distinct_kill_sets": 47,
+    "distinct_minimal_kill_sets": 18,
+    "kill_set_T_mutants": 0,
+    "killed": 500,
+    "minimal": 131,
+    "minimal_with_T": 0
+   },
+   "O_T": {
+    "distinct_kill_sets": 42,
+    "distinct_minimal_kill_sets": 17,
+    "kill_set_T_mutants": 0,
+    "killed": 496,
+    "minimal": 135,
+    "minimal_with_T": 0
+   },
+   "O_V": {
+    "distinct_kill_sets": 39,
+    "distinct_minimal_kill_sets": 14,
+    "kill_set_T_mutants": 0,
+    "killed": 415,
+    "minimal": 60,
+    "minimal_with_T": 0
+   }
+  },
+  "spread": {
+   "unit": "guard region",
+   "units_gap": [
+    "1-zip",
+    "10-12-timestamp",
+    "2-required-entries",
+    "3-metadata",
+    "4-canonical-form",
+    "5-digest",
+    "6-signer-pin",
+    "7-rsa",
+    "8a-overt-crosscheck",
+    "8b-receipt-signature",
+    "9-pqc",
+    "shared"
+   ],
+   "units_minimal_gap": [
+    "10-12-timestamp",
+    "2-required-entries",
+    "3-metadata",
+    "4-canonical-form",
+    "5-digest",
+    "6-signer-pin",
+    "7-rsa",
+    "8a-overt-crosscheck",
+    "8b-receipt-signature",
+    "9-pqc"
+   ],
+   "with_gap": 12,
+   "with_minimal_gap": 10
+  }
+ },
+ "typescript": {
+  "_gmin": [
+   "114",
+   "115",
+   "116",
+   "117",
+   "119",
+   "121",
+   "122",
+   "123",
+   "199",
+   "201",
+   "203",
+   "204",
+   "267",
+   "377",
+   "378",
+   "379",
+   "392",
+   "393",
+   "44",
+   "49",
+   "495",
+   "497",
+   "499",
+   "50",
+   "500",
+   "51",
+   "521",
+   "524",
+   "549",
+   "569",
+   "573",
+   "574",
+   "582",
+   "583",
+   "585",
+   "586",
+   "596",
+   "600",
+   "605",
+   "606",
+   "612",
+   "614",
+   "615",
+   "635",
+   "658",
+   "682",
+   "683",
+   "684",
+   "685",
+   "689",
+   "690",
+   "698",
+   "720",
+   "749",
+   "750",
+   "751",
+   "769",
+   "772",
+   "774",
+   "775",
+   "776",
+   "777",
+   "790",
+   "791",
+   "793",
+   "794",
+   "795",
+   "833",
+   "834",
+   "836",
+   "838",
+   "839",
+   "840"
+  ],
+  "directions_all_G": {
+   "earlier guard": 1,
+   "later guard": 39,
+   "no defined code": 16,
+   "same guard": 26
+  },
+  "directions_all_G_without_literal": {
+   "earlier guard": 1,
+   "later guard": 39,
+   "same guard": 26
+  },
+  "directions_minimal_G": {
+   "earlier guard": 1,
+   "later guard": 33,
+   "no defined code": 14,
+   "same guard": 25
+  },
+  "directions_minimal_G_without_literal": {
+   "earlier guard": 1,
+   "later guard": 33,
+   "same guard": 25
+  },
+  "gap": {
+   "G": 82,
+   "distinct_minimal_sets_O_C": 22,
+   "distinct_minimal_sets_with_G": 19,
+   "kills_O_C": 373,
+   "minimal_O_C": 114,
+   "minimal_in_G": 73,
+   "minimal_in_G_literal": 14
+  },
+  "per_oracle": {
+   "O_C": {
+    "distinct_kill_sets": 53,
+    "distinct_minimal_kill_sets": 22,
+    "kill_set_T_mutants": 2,
+    "killed": 373,
+    "minimal": 114,
+    "minimal_with_T": 1
+   },
+   "O_T": {
+    "distinct_kill_sets": 47,
+    "distinct_minimal_kill_sets": 20,
+    "kill_set_T_mutants": 4,
+    "killed": 356,
+    "minimal": 106,
+    "minimal_with_T": 1
+   },
+   "O_V": {
+    "distinct_kill_sets": 33,
+    "distinct_minimal_kill_sets": 13,
+    "kill_set_T_mutants": 2,
+    "killed": 291,
+    "minimal": 42,
+    "minimal_with_T": 1
+   }
+  },
+  "spread": {
+   "unit": "guard region",
+   "units_gap": [
+    "1-zip",
+    "10-12-timestamp",
+    "2-required-entries",
+    "3-metadata",
+    "4-canonical-form",
+    "5-digest",
+    "6-signer-pin",
+    "7-rsa",
+    "8a-overt-crosscheck",
+    "8b-receipt-signature",
+    "9-pqc"
+   ],
+   "units_minimal_gap": [
+    "1-zip",
+    "10-12-timestamp",
+    "2-required-entries",
+    "3-metadata",
+    "4-canonical-form",
+    "5-digest",
+    "6-signer-pin",
+    "7-rsa",
+    "8a-overt-crosscheck",
+    "8b-receipt-signature",
+    "9-pqc"
+   ],
+   "with_gap": 11,
+   "with_minimal_gap": 11
+  }
+ }
+}

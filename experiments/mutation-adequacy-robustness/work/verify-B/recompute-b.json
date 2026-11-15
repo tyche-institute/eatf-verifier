@@ -1,0 +1,408 @@
+{
+  "python": {
+    "all_operators": {
+      "all": {
+        "gap_by_direction": {
+          "earlier guard": 1,
+          "later guard": 5,
+          "no defined code": 56,
+          "same guard": 23
+        },
+        "gap_mutants": 85,
+        "killed_O_C": 500,
+        "killed_O_V": 415,
+        "later_guard_share_of_gap": 0.0588,
+        "subject_mutants": 1149
+      },
+      "without_code_literal": {
+        "gap_by_direction": {
+          "earlier guard": 1,
+          "later guard": 5,
+          "no defined code": 11,
+          "same guard": 23
+        },
+        "gap_mutants": 40,
+        "killed_O_C": 455,
+        "killed_O_V": 415,
+        "later_guard_share_of_gap": 0.125,
+        "subject_mutants": 1075
+      }
+    },
+    "excluded": 0,
+    "operators_with_no_mutant": [
+      "unsymmetrical_string_methods_swap"
+    ],
+    "outside_classes": {
+      "all": {
+        "gap_by_direction": {
+          "earlier guard": 0,
+          "later guard": 3,
+          "no defined code": 24,
+          "same guard": 19
+        },
+        "gap_mutants": 46,
+        "killed_O_C": 314,
+        "killed_O_V": 268,
+        "later_guard_share_of_gap": 0.0652,
+        "subject_mutants": 672
+      },
+      "without_code_literal": {
+        "gap_by_direction": {
+          "earlier guard": 0,
+          "later guard": 3,
+          "no defined code": 11,
+          "same guard": 19
+        },
+        "gap_mutants": 33,
+        "killed_O_C": 301,
+        "killed_O_V": 268,
+        "later_guard_share_of_gap": 0.0909,
+        "subject_mutants": 650
+      }
+    },
+    "per_class": {
+      "boolean literal and negation": {
+        "all": {
+          "gap_by_direction": {
+            "earlier guard": 1,
+            "later guard": 1,
+            "no defined code": 0,
+            "same guard": 3
+          },
+          "gap_mutants": 5,
+          "killed_O_C": 31,
+          "killed_O_V": 26,
+          "later_guard_share_of_gap": 0.2,
+          "subject_mutants": 52
+        },
+        "without_code_literal": {
+          "gap_by_direction": {
+            "earlier guard": 1,
+            "later guard": 1,
+            "no defined code": 0,
+            "same guard": 3
+          },
+          "gap_mutants": 5,
+          "killed_O_C": 31,
+          "killed_O_V": 26,
+          "later_guard_share_of_gap": 0.2,
+          "subject_mutants": 52
+        }
+      },
+      "method swap": {
+        "all": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 0,
+            "no defined code": 0,
+            "same guard": 0
+          },
+          "gap_mutants": 0,
+          "killed_O_C": 3,
+          "killed_O_V": 3,
+          "later_guard_share_of_gap": null,
+          "subject_mutants": 3
+        },
+        "without_code_literal": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 0,
+            "no defined code": 0,
+            "same guard": 0
+          },
+          "gap_mutants": 0,
+          "killed_O_C": 3,
+          "killed_O_V": 3,
+          "later_guard_share_of_gap": null,
+          "subject_mutants": 3
+        }
+      },
+      "operator replacement": {
+        "all": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 1,
+            "no defined code": 0,
+            "same guard": 1
+          },
+          "gap_mutants": 2,
+          "killed_O_C": 25,
+          "killed_O_V": 23,
+          "later_guard_share_of_gap": 0.5,
+          "subject_mutants": 44
+        },
+        "without_code_literal": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 1,
+            "no defined code": 0,
+            "same guard": 1
+          },
+          "gap_mutants": 2,
+          "killed_O_C": 25,
+          "killed_O_V": 23,
+          "later_guard_share_of_gap": 0.5,
+          "subject_mutants": 44
+        }
+      },
+      "string literal": {
+        "all": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 0,
+            "no defined code": 32,
+            "same guard": 0
+          },
+          "gap_mutants": 32,
+          "killed_O_C": 127,
+          "killed_O_V": 95,
+          "later_guard_share_of_gap": 0.0,
+          "subject_mutants": 378
+        },
+        "without_code_literal": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 0,
+            "no defined code": 0,
+            "same guard": 0
+          },
+          "gap_mutants": 0,
+          "killed_O_C": 95,
+          "killed_O_V": 95,
+          "later_guard_share_of_gap": null,
+          "subject_mutants": 326
+        }
+      }
+    },
+    "shared_classes": {
+      "all": {
+        "gap_by_direction": {
+          "earlier guard": 1,
+          "later guard": 2,
+          "no defined code": 32,
+          "same guard": 4
+        },
+        "gap_mutants": 39,
+        "killed_O_C": 186,
+        "killed_O_V": 147,
+        "later_guard_share_of_gap": 0.0513,
+        "subject_mutants": 477
+      },
+      "without_code_literal": {
+        "gap_by_direction": {
+          "earlier guard": 1,
+          "later guard": 2,
+          "no defined code": 0,
+          "same guard": 4
+        },
+        "gap_mutants": 7,
+        "killed_O_C": 154,
+        "killed_O_V": 147,
+        "later_guard_share_of_gap": 0.2857,
+        "subject_mutants": 425
+      }
+    }
+  },
+  "typescript": {
+    "all_operators": {
+      "all": {
+        "gap_by_direction": {
+          "earlier guard": 1,
+          "later guard": 39,
+          "no defined code": 16,
+          "same guard": 26
+        },
+        "gap_mutants": 82,
+        "killed_O_C": 373,
+        "killed_O_V": 291,
+        "later_guard_share_of_gap": 0.4756,
+        "subject_mutants": 854
+      },
+      "without_code_literal": {
+        "gap_by_direction": {
+          "earlier guard": 1,
+          "later guard": 39,
+          "no defined code": 0,
+          "same guard": 26
+        },
+        "gap_mutants": 66,
+        "killed_O_C": 357,
+        "killed_O_V": 291,
+        "later_guard_share_of_gap": 0.5909,
+        "subject_mutants": 828
+      }
+    },
+    "excluded": 0,
+    "operators_with_no_mutant": [],
+    "outside_classes": {
+      "all": {
+        "gap_by_direction": {
+          "earlier guard": 0,
+          "later guard": 31,
+          "no defined code": 0,
+          "same guard": 15
+        },
+        "gap_mutants": 46,
+        "killed_O_C": 190,
+        "killed_O_V": 144,
+        "later_guard_share_of_gap": 0.6739,
+        "subject_mutants": 414
+      },
+      "without_code_literal": {
+        "gap_by_direction": {
+          "earlier guard": 0,
+          "later guard": 31,
+          "no defined code": 0,
+          "same guard": 15
+        },
+        "gap_mutants": 46,
+        "killed_O_C": 190,
+        "killed_O_V": 144,
+        "later_guard_share_of_gap": 0.6739,
+        "subject_mutants": 414
+      }
+    },
+    "per_class": {
+      "boolean literal and negation": {
+        "all": {
+          "gap_by_direction": {
+            "earlier guard": 1,
+            "later guard": 1,
+            "no defined code": 0,
+            "same guard": 4
+          },
+          "gap_mutants": 6,
+          "killed_O_C": 35,
+          "killed_O_V": 29,
+          "later_guard_share_of_gap": 0.1667,
+          "subject_mutants": 54
+        },
+        "without_code_literal": {
+          "gap_by_direction": {
+            "earlier guard": 1,
+            "later guard": 1,
+            "no defined code": 0,
+            "same guard": 4
+          },
+          "gap_mutants": 6,
+          "killed_O_C": 35,
+          "killed_O_V": 29,
+          "later_guard_share_of_gap": 0.1667,
+          "subject_mutants": 54
+        }
+      },
+      "method swap": {
+        "all": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 0,
+            "no defined code": 0,
+            "same guard": 0
+          },
+          "gap_mutants": 0,
+          "killed_O_C": 4,
+          "killed_O_V": 4,
+          "later_guard_share_of_gap": null,
+          "subject_mutants": 23
+        },
+        "without_code_literal": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 0,
+            "no defined code": 0,
+            "same guard": 0
+          },
+          "gap_mutants": 0,
+          "killed_O_C": 4,
+          "killed_O_V": 4,
+          "later_guard_share_of_gap": null,
+          "subject_mutants": 23
+        }
+      },
+      "operator replacement": {
+        "all": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 4,
+            "no defined code": 0,
+            "same guard": 7
+          },
+          "gap_mutants": 11,
+          "killed_O_C": 70,
+          "killed_O_V": 59,
+          "later_guard_share_of_gap": 0.3636,
+          "subject_mutants": 136
+        },
+        "without_code_literal": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 4,
+            "no defined code": 0,
+            "same guard": 7
+          },
+          "gap_mutants": 11,
+          "killed_O_C": 70,
+          "killed_O_V": 59,
+          "later_guard_share_of_gap": 0.3636,
+          "subject_mutants": 136
+        }
+      },
+      "string literal": {
+        "all": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 3,
+            "no defined code": 16,
+            "same guard": 0
+          },
+          "gap_mutants": 19,
+          "killed_O_C": 74,
+          "killed_O_V": 55,
+          "later_guard_share_of_gap": 0.1579,
+          "subject_mutants": 227
+        },
+        "without_code_literal": {
+          "gap_by_direction": {
+            "earlier guard": 0,
+            "later guard": 3,
+            "no defined code": 0,
+            "same guard": 0
+          },
+          "gap_mutants": 3,
+          "killed_O_C": 58,
+          "killed_O_V": 55,
+          "later_guard_share_of_gap": 1.0,
+          "subject_mutants": 201
+        }
+      }
+    },
+    "shared_classes": {
+      "all": {
+        "gap_by_direction": {
+          "earlier guard": 1,
+          "later guard": 8,
+          "no defined code": 16,
+          "same guard": 11
+        },
+        "gap_mutants": 36,
+        "killed_O_C": 183,
+        "killed_O_V": 147,
+        "later_guard_share_of_gap": 0.2222,
+        "subject_mutants": 440
+      },
+      "without_code_literal": {
+        "gap_by_direction": {
+          "earlier guard": 1,
+          "later guard": 8,
+          "no defined code": 0,
+          "same guard": 11
+        },
+        "gap_mutants": 20,
+        "killed_O_C": 167,
+        "killed_O_V": 147,
+        "later_guard_share_of_gap": 0.4,
+        "subject_mutants": 414
+      }
+    }
+  }
+}

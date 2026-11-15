@@ -1,0 +1,5 @@
+--- jwt/api_jws.py
++++ jwt/api_jws.py (R)
+@@ -374 +374 @@
+-            raise DecodeError(f"Invalid header string: {e}") from e
++            raise

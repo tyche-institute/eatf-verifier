@@ -1,0 +1,17 @@
+--- jwt/api_jws.py
++++ jwt/api_jws.py (R)
+@@ -336 +336 @@
+-                raise DecodeError(f"Invalid {name} padding")
++                pass
+@@ -339 +339 @@
+-            raise DecodeError(f"Invalid {name} padding")
++            pass
+@@ -344 +344 @@
+-            raise DecodeError(f"Invalid {name} padding")
++            pass
+@@ -349 +349 @@
+-            raise DecodeError(f"Invalid {name} padding") from err
++            raise
+@@ -352 +352 @@
+-            raise DecodeError(f"Invalid {name} padding")
++            pass

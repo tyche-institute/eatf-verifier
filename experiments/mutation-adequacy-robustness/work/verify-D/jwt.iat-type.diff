@@ -1,0 +1,9 @@
+--- jwt/api_jwt.py
++++ jwt/api_jwt.py (R)
+@@ -479,3 +479,3 @@
+-            raise InvalidIssuedAtError(
+-                "Issued At claim (iat) must be an integer."
+-            ) from None
++            raise
++
++
