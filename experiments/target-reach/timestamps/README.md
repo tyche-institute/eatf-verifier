@@ -58,8 +58,9 @@ Verify as above, with `targets-commit` in place of `protocol-commit`.
 What these tokens show: the targets of the 4 libraries existed, as committed,
 at that time. With the first pair they bound the time in which the targets
 were computed: after 09:22:14 UTC and before 09:25:10 UTC. What they do not
-show: that no recorder run preceded them; the records of the runs carry
-their own start times, which are later.
+show: that no recorder run preceded them. The deposited records of the runs
+carry no times; `../DEVIATIONS.md` records the times of the runs, which are
+later.
 
 ## The commit of the results
 
