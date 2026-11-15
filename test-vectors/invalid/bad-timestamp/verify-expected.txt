@@ -1,2 +1,2 @@
 verify=false
-diagnostic=timestamp.tsr missing or empty.
+diagnostic=timestamp.tsr is empty or not a readable RFC 3161 TimeStampResp or token.

@@ -9,6 +9,7 @@ Public entrypoint:
 from __future__ import annotations
 
 import base64
+import hmac
 import io
 import json
 import zipfile
@@ -18,7 +19,7 @@ from typing import Any, Literal
 from .canonical import jcs
 from .hash import sha256, to_hex
 from .overt import parse_and_validate_overt_receipt
-from .rsa import load_public_key_pem, verify_rsa, verify_rsa_digest_info
+from .rsa import load_rsa_spki, rsa_spki_from_pem, verify_rsa, verify_rsa_digest_info
 from .tsa import inspect_tsa, verify_tsa_trust
 
 
@@ -140,9 +141,17 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
                 metadata,
             )
 
-    # 3. Parse metadata.
+    # 3. Parse metadata: UTF-8 without a byte order mark, no repeated member
+    # name (RFC 8785 Section 3.1), no NaN or Infinity literal, at most
+    # MAX_METADATA_DEPTH nested containers, as lib/src/verifier.ts reads it.
     try:
-        metadata = json.loads(entries["metadata.json"].decode("utf-8"))
+        metadata = json.loads(
+            entries["metadata.json"].decode("utf-8"),
+            object_pairs_hook=_object_without_repeated_names,
+            parse_constant=_reject_json_constant,
+        )
+        if _deeper_than(metadata, MAX_METADATA_DEPTH):
+            raise _MetadataStructureError(f"nests deeper than {MAX_METADATA_DEPTH} levels")
         if not isinstance(metadata, dict):
             return _fail(
                 report,
@@ -150,6 +159,8 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
                 "metadata.json is not a JSON object.",
                 None,
             )
+    except _MetadataStructureError as exc:
+        return _fail(report, "METADATA_INVALID_JSON", f"metadata.json {exc}.", None)
     except Exception:
         return _fail(
             report,
@@ -194,14 +205,22 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         return _fail(report, "HASH_MISMATCH", "Hash mismatch.", metadata)
     report.append("SHA-256 hash matches.")
 
-    # 6. RSA signature.
-    pem = entries["public_key.pem"]
+    # 6. RSA signature. public_key.pem is one PEM block holding the DER
+    # SubjectPublicKeyInfo of an RSA key; the trust check and the signature
+    # check use these bytes.
+    try:
+        spki = rsa_spki_from_pem(entries["public_key.pem"])
+        key = load_rsa_spki(spki)
+    except Exception as exc:
+        return _fail(
+            report,
+            "RSA_VERIFY_ERROR",
+            "public_key.pem is not one PEM block holding an RSA SubjectPublicKeyInfo: "
+            f"{exc}.",
+            metadata,
+        )
     if opts.trusted_signer_pems:
-        packaged_key = _normalized_pem_body(pem)
-        if not any(
-            _normalized_pem_body(trusted) == packaged_key
-            for trusted in opts.trusted_signer_pems
-        ):
+        if not any(_pin_matches(trusted, spki) for trusted in opts.trusted_signer_pems):
             return _fail(
                 report,
                 "SIGNER_NOT_TRUSTED",
@@ -211,18 +230,16 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         report.append("Signer public key matched the caller-supplied trust set.")
     else:
         report.append("Signer identity trust not evaluated (no trusted signer keys supplied).")
-    sig_b64 = entries["signature.sig"].decode("ascii").strip()
-    try:
-        sig = base64.b64decode(sig_b64, validate=False)
-    except Exception:
+    sig = _decode_strict_base64(entries["signature.sig"])
+    if sig is None:
         return _fail(
             report,
             "RSA_SIGNATURE_ENCODING",
-            "signature.sig is not valid base64.",
+            "signature.sig is not valid base64: TAB, LF, VT, FF, CR and space are "
+            "ignored, the rest must be padded base64.",
             metadata,
         )
     try:
-        key = load_public_key_pem(pem)
         rsa_ok = verify_rsa(key, sig, canonical)
         rsa_legacy_digest_info = False
         if not rsa_ok:
@@ -290,10 +307,9 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
                 receipt,
             )
         try:
-            receipt_signature = base64.b64decode(
-                receipt_signature_bytes.decode("ascii").strip(),
-                validate=False,
-            )
+            receipt_signature = _decode_strict_base64(receipt_signature_bytes)
+            if receipt_signature is None:
+                raise ValueError("overt_receipt.sig is not padded base64")
             if not verify_rsa(key, receipt_signature, receipt_bytes):
                 return _fail(
                     report,
@@ -391,7 +407,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
             report.append(
                 "ML-DSA-65 signer identity not evaluated (no trusted PQC signer keys supplied)."
             )
-        pqc_sig = _decode_pqc_signature(entries["signature_pqc.sig"])
+        pqc_sig = _decode_strict_base64(entries["signature_pqc.sig"])
         if pqc_sig is None:
             return _fail(
                 report,
@@ -456,7 +472,7 @@ def verify(data: bytes, options: VerifyOptions | None = None) -> VerifyResult:
         return _fail(
             report,
             "TSA_MISSING_OR_INVALID",
-            "timestamp.tsr missing or empty.",
+            "timestamp.tsr is empty or not a readable RFC 3161 TimeStampResp or token.",
             metadata,
             pqc_valid,
             receipt,
@@ -554,7 +570,8 @@ def _ct_eq(a: bytes, b: bytes) -> bool:
     return result == 0
 
 
-# Same byte-level rule as decodePqcSignature in lib/src/verifier.ts: bytes
+# signature.sig, overt_receipt.sig and signature_pqc.sig are read by one rule,
+# the byte-level rule of decodeStrictBase64 in lib/src/verifier.ts: bytes
 # 0x09-0x0D and 0x20 anywhere, otherwise base64 with at most two trailing "="
 # and a length that is a multiple of four. A bare b64decode(validate=False)
 # would skip stray bytes that atob rejects.
@@ -562,7 +579,7 @@ _PQC_SIGNATURE_WHITESPACE = bytes(range(0x09, 0x0E)) + b" "
 _BASE64_ALPHABET = b"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
 
-def _decode_pqc_signature(entry: bytes) -> bytes | None:
+def _decode_strict_base64(entry: bytes) -> bytes | None:
     compact = entry.translate(None, _PQC_SIGNATURE_WHITESPACE)
     body = compact.rstrip(b"=")
     if (
@@ -574,9 +591,51 @@ def _decode_pqc_signature(entry: bytes) -> bytes | None:
     return base64.b64decode(compact)
 
 
-def _normalized_pem_body(pem: bytes) -> bytes:
-    return b"".join(
-        line.strip()
-        for line in pem.splitlines()
-        if not line.startswith(b"-----")
-    )
+def _pin_matches(pin: bytes, spki: bytes) -> bool:
+    """A pin that is not one PUBLIC KEY block matches nothing, as in TS."""
+    try:
+        return hmac.compare_digest(rsa_spki_from_pem(pin), spki)
+    except ValueError:
+        return False
+
+
+MAX_METADATA_DEPTH = 64
+
+
+class _MetadataStructureError(ValueError):
+    """metadata.json parsed, but breaks a rule that jsonStructureProblem checks in TS."""
+
+
+def _object_without_repeated_names(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    # json.loads keeps the last of two equal names, as JSON.parse does; without
+    # this check metadata.json could show other readers a value that the
+    # canonical bytes do not hold.
+    obj: dict[str, Any] = {}
+    for name, value in pairs:
+        if name in obj:
+            raise _MetadataStructureError(
+                f"repeats the member name {json.dumps(name, ensure_ascii=False)}"
+            )
+        obj[name] = value
+    return obj
+
+
+def _reject_json_constant(name: str) -> Any:
+    raise ValueError(f"{name} is not a JSON value")
+
+
+def _deeper_than(value: Any, limit: int) -> bool:
+    """Whether ``value`` nests more than ``limit`` objects and arrays; no recursion."""
+    stack = [(value, 1)]
+    while stack:
+        item, depth = stack.pop()
+        if isinstance(item, dict):
+            children: Any = item.values()
+        elif isinstance(item, list):
+            children = item
+        else:
+            continue
+        if depth > limit:
+            return True
+        stack.extend((child, depth + 1) for child in children)
+    return False

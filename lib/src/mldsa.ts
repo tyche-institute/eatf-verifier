@@ -1,6 +1,6 @@
 /** ML-DSA-65 (NIST FIPS 204) signing, verification, and RFC 9881 SPKI encoding. */
 
-import { decodeBase64 } from "./rsa.js";
+import { parsePem } from "./rsa.js";
 
 const ML_DSA_65_PUBLIC_KEY_BYTES = 1952;
 const ML_DSA_SEED_BYTES = 32;
@@ -119,16 +119,6 @@ export async function signMlDsa65(
   return new Uint8Array(
     mod.ml_dsa65.sign(signedData, secretKey, { extraEntropy }),
   );
-}
-
-function parsePem(pem: string): { label: string; bytes: Uint8Array } {
-  // One body group that starts and ends with whitespace accepts the same text
-  // as \s+(...)\s+ but cannot backtrack cubically on a long whitespace run.
-  const match = pem.trim().match(
-    /^-----BEGIN ([A-Z0-9 -]+)-----(\s[A-Za-z0-9+/=\s]+\s)-----END \1-----$/,
-  );
-  if (!match) throw new Error("Malformed PEM block");
-  return { label: match[1]!, bytes: decodeBase64(match[2]!.replace(/\s+/g, "")) };
 }
 
 function encodePem(label: string, bytes: Uint8Array): string {

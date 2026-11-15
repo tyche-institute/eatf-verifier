@@ -12,30 +12,53 @@ external standard.
 | `response.txt` | required | Recorded payload bytes |
 | `canonical.bin` | required | Exact bytes hashed and signed |
 | `hash.sha256` | required | Lowercase SHA-256 hex of `canonical.bin`; writers may end it with one LF, and both verifiers ignore surrounding whitespace and letter case |
-| `signature.sig` | required | Base64 RSA PKCS#1 v1.5/SHA-256 signature |
-| `public_key.pem` | required | Embedded RSA SPKI verification key |
-| `metadata.json` | required | Package metadata JSON object |
+| `signature.sig` | required | Base64 RSA PKCS#1 v1.5/SHA-256 signature (base64 rule below) |
+| `public_key.pem` | required | Embedded RSA verification key: exactly one PEM block labelled `PUBLIC KEY` whose body is the DER SubjectPublicKeyInfo of an RSA key with nothing after it. Whitespace around the block and any line layout inside it are allowed; a PKCS#1 `RSA PUBLIC KEY` block is not |
+| `metadata.json` | required | Package metadata JSON object in UTF-8 without a byte order mark (step 2) |
 | `timestamp.tsr` | required | Base64 RFC 3161 `TimeStampResp` or bare token |
 | `overt_receipt.json` | optional | OVERT-inspired receipt bound to hash and metadata |
-| `overt_receipt.sig` | conditional | RSA/SHA-256 signature over exact receipt bytes; required when named by signed metadata |
-| `signature_pqc.sig` | paired optional | Base64 ML-DSA-65 signature; TAB, LF, VT, FF, CR and space are ignored, the rest must be padded base64 |
+| `overt_receipt.sig` | conditional | Base64 RSA/SHA-256 signature over exact receipt bytes (base64 rule below); required when named by signed metadata |
+| `signature_pqc.sig` | paired optional | Base64 ML-DSA-65 signature (base64 rule below) |
 | `pqc_public_key.pem` | paired optional | RFC 9881 ML-DSA-65 SubjectPublicKeyInfo; legacy raw-key PEM is read-only compatible. Not authenticated by anything else in the package |
+
+Entry names are compared exactly and case-sensitively, at the archive root.
+A package is rejected in step 1 if it repeats an entry name, if a name
+contains `/`, `\` or NUL, or if it exceeds the safety limits (64 MiB
+archive, 32 entries, 16 MiB for one entry, 32 MiB expanded). Entries the
+table does not list are ignored.
+
+Base64 rule for `signature.sig`, `overt_receipt.sig` and
+`signature_pqc.sig`: the bytes TAB, LF, VT, FF, CR and space are ignored
+wherever they occur; what remains must be RFC 4648 base64 in the standard
+alphabet, padded to a multiple of four characters.
 
 ## Ordered verification
 
 1. Parse ZIP and require all required entries.
-2. Parse `metadata.json` as an object.
+2. Parse `metadata.json` as an RFC 8259 JSON object. The bytes must be
+   UTF-8 without a byte order mark. Reject a member name repeated within one
+   object (RFC 8785 Section 3.1; names compare after escapes are decoded),
+   the literals `NaN` and `Infinity`, and nesting of more than 64 objects and
+   arrays. Each of these fails with `METADATA_INVALID_JSON`.
 3. Reconstruct the current profile form
-   `response.txt || LF || RFC8785-JCS(metadata)`. Current writers MUST use
+   `response.txt || LF || RFC8785-JCS(metadata)`: the bytes of
+   `response.txt` as stored, the single byte 0x0A, then the UTF-8 output of
+   RFC 8785 applied to the parsed object (`METADATA_NOT_CANONICALIZABLE` if
+   the object falls outside the domain below). Current writers MUST use
    this form. For read-only compatibility, verifiers also recognize the
    early response-only form and explicitly report that its metadata is not
    signature-bound. `canonical.bin` must equal one of these forms.
 4. Require SHA-256(`canonical.bin`) to equal `hash.sha256`.
-5. If the caller supplied trusted signer PEMs, require `public_key.pem` to
-   match one exactly. Without this option, signer identity is explicitly
-   reported as not evaluated.
-6. Verify `signature.sig` over `canonical.bin` as RSASSA-PKCS1-v1_5 with
-   SHA-256. Writers MUST encode DigestInfo as RFC 8017 Section 9.2 gives it,
+5. Read `public_key.pem` as the Entries table gives it (`RSA_VERIFY_ERROR`
+   otherwise): the DER must be the encoding of the RSA key it holds, so both
+   verifiers accept and reject the same key text. If the caller supplied
+   trusted signer PEMs, require this DER SubjectPublicKeyInfo to equal the
+   DER in one of them byte for byte; a pin that is not one `PUBLIC KEY`
+   block matches nothing. Without this option, signer identity is
+   explicitly reported as not evaluated.
+6. Verify `signature.sig` over the bytes of `canonical.bin` as
+   RSASSA-PKCS1-v1_5 with SHA-256 (RFC 8017 Section 8.2, with
+   `canonical.bin` as the message). Writers MUST encode DigestInfo as RFC 8017 Section 9.2 gives it,
    with NULL `AlgorithmIdentifier` parameters (RFC 8017 Appendix B.1). For
    read-only compatibility with packages from the Java reference signer,
    both verifiers here also accept exactly one other encoded block:
@@ -67,7 +90,9 @@ external standard.
    package and vice versa. Each pin must be exactly one PEM block; both
    verifiers parse PEM text by the same rules. Without this option, ML-DSA
    signer identity is explicitly reported as not evaluated.
-9. Decode the RFC 3161 object, require SHA-256 as the imprint algorithm,
+9. Decode the RFC 3161 object (`TSA_MISSING_OR_INVALID` if it is empty or
+   cannot be read as a `TimeStampResp` or bare token), require SHA-256 as the
+   imprint algorithm,
    require the imprint to equal `hash.sha256`, and verify the CMS SignerInfo
    against the embedded TSA signing certificate, including that its signed
    message-digest attribute equals the digest of the encapsulated TSTInfo.
@@ -111,6 +136,9 @@ formatting and UTF-16 member ordering. To keep parsed JSON behavior identical
 across the two languages, the AEP metadata profile rejects integer-valued
 numbers outside `[-9007199254740991, 9007199254740991]`, non-finite values,
 unsupported JSON types, circular values, and unpaired Unicode surrogates.
+"Integer-valued" means any number whose IEEE 754 double value is whole, so
+`1e300` is rejected; a literal that overflows a double, such as `1e400`, is
+non-finite. These checks belong to step 3.
 
 ## OVERT attribution
 

@@ -6,37 +6,66 @@
  * scheme. Web Crypto exposes it as `RSASSA-PKCS1-v1_5` with hash
  * SHA-256.
  *
- * Public key arrives as PEM. We strip the headers, base64-decode the
- * SubjectPublicKeyInfo (SPKI), and import.
+ * Public key arrives as PEM: exactly one block labelled PUBLIC KEY whose body
+ * is the DER SubjectPublicKeyInfo (SPKI) of an RSA key. The signer trust check
+ * and the signature check both use these DER bytes.
  */
 
-const PEM_HEADERS = [
-  /-----BEGIN PUBLIC KEY-----/,
-  /-----END PUBLIC KEY-----/,
-];
+/**
+ * Parse PEM text that holds exactly one block and nothing but whitespace
+ * around it. `public_key.pem`, `pqc_public_key.pem` and every key pin are
+ * read with this one rule; lib-python/eatf_verifier/pem.py ports it.
+ */
+export function parsePem(pem: string): { label: string; bytes: Uint8Array } {
+  // One body group that starts and ends with whitespace accepts the same text
+  // as \s+(...)\s+ but cannot backtrack cubically on a long whitespace run.
+  const match = pem.trim().match(
+    /^-----BEGIN ([A-Z0-9 -]+)-----(\s[A-Za-z0-9+/=\s]+\s)-----END \1-----$/,
+  );
+  if (!match) throw new Error("Malformed PEM block");
+  return { label: match[1]!, bytes: decodeBase64(match[2]!.replace(/\s+/g, "")) };
+}
 
-function pemToDer(pem: string): Uint8Array {
-  let body = pem;
-  for (const re of PEM_HEADERS) body = body.replace(re, "");
-  body = body.replace(/\s+/g, "");
-  if (!body) throw new Error("Empty PEM body.");
-  // atob is available in both browsers and Node 20+.
-  const raw = atob(body);
-  const out = new Uint8Array(raw.length);
-  for (let i = 0; i < raw.length; i++) out[i] = raw.charCodeAt(i);
-  return out;
+/**
+ * The DER SubjectPublicKeyInfo inside `public_key.pem` or an RSA signer pin:
+ * one PEM block labelled PUBLIC KEY whose DER is one SEQUENCE with nothing
+ * after it. `importRsaSpki` then requires the DER encoding of an RSA key.
+ */
+export function rsaSpkiFromPem(pem: string): Uint8Array {
+  const block = parsePem(pem);
+  if (block.label !== "PUBLIC KEY") {
+    throw new Error(`PEM label is ${block.label}, not PUBLIC KEY`);
+  }
+  const c: DerCursor = { bytes: block.bytes, offset: 0 };
+  const length = readSequence(c);
+  if (c.offset + length !== block.bytes.length) {
+    throw new Error("bytes follow the SubjectPublicKeyInfo");
+  }
+  return block.bytes;
+}
+
+/**
+ * Import an RSA SubjectPublicKeyInfo and require that Web Crypto encodes the
+ * imported key back to the same bytes, so that no other reading of `spki`
+ * than the key that verifies exists. lib-python applies the same rule.
+ */
+export async function importRsaSpki(spki: Uint8Array): Promise<CryptoKey> {
+  const key = await crypto.subtle.importKey(
+    "spki",
+    spki.slice().buffer,
+    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+    true,
+    ["verify"],
+  );
+  const encoded = new Uint8Array(await crypto.subtle.exportKey("spki", key));
+  if (!constantTimeEqual(encoded, spki)) {
+    throw new Error("SubjectPublicKeyInfo is not the DER encoding of an RSA key");
+  }
+  return key;
 }
 
 export async function importRsaPublicKey(pem: string): Promise<CryptoKey> {
-  const der = pemToDer(pem);
-  // crypto.subtle.importKey expects an ArrayBuffer; pass the underlying buffer.
-  return crypto.subtle.importKey(
-    "spki",
-    der.buffer as ArrayBuffer,
-    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
-    false,
-    ["verify"],
-  );
+  return importRsaSpki(rsaSpkiFromPem(pem));
 }
 
 export async function verifyRsa(
@@ -85,7 +114,17 @@ export function verifyRsaDigestInfo(
   expectedDigest: Uint8Array,
 ): boolean {
   if (expectedDigest.length !== 32 || signature.length === 0) return false;
-  const { modulus, exponent } = parseRsaSpki(pemToDer(publicKeyPem));
+  return verifyRsaDigestInfoSpki(rsaSpkiFromPem(publicKeyPem), signature, expectedDigest);
+}
+
+/** `verifyRsaDigestInfo` over a SubjectPublicKeyInfo that `rsaSpkiFromPem` returned. */
+export function verifyRsaDigestInfoSpki(
+  spki: Uint8Array,
+  signature: Uint8Array,
+  expectedDigest: Uint8Array,
+): boolean {
+  if (expectedDigest.length !== 32 || signature.length === 0) return false;
+  const { modulus, exponent } = parseRsaSpki(spki);
   const modulusBytes = Math.ceil(bitLength(modulus) / 8);
   if (signature.length !== modulusBytes) return false;
   const s = bytesToBigInt(signature);

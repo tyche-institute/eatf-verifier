@@ -1,7 +1,7 @@
 # `bad-timestamp/`
 
 **Expected:** `verify=false`, diagnostic
-`timestamp.tsr missing or empty.`
+`timestamp.tsr is empty or not a readable RFC 3161 TimeStampResp or token.`
 
 Derived by a scripted single-field mutation from
 `valid/minimal-roundtrip/package.aep` by flipping three bytes
@@ -10,9 +10,9 @@ mangling the ASN.1 structure enough that `pkijs.inspectTsa` can
 no longer extract a usable RFC 3161 `TimeStampToken`.
 
 The verifier's `inspectTsa` returns `tsaPresent: false` for the
-mangled input, and the verifier rejects the package with the
-"timestamp missing" diagnostic — semantically equivalent to
-deleting the entry, but exercising the parser-robustness path.
+mangled input, and the verifier rejects the package as an unreadable
+timestamp. The entry is present (992 bytes); versions up to v0.7.3
+reported it as "missing or empty".
 
 A v0.1-conformant verifier MUST reject this package. It MAY
 report a different diagnostic (e.g. "RFC 3161 SignerInfo signature
