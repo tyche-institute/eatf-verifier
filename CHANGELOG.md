@@ -8,27 +8,27 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
-## Unreleased
+## v0.7.4 — an exact legacy RSA check, and one reading of the key, metadata and signature entries (2026-11-15)
 
 - **Both verifiers read `public_key.pem`, `metadata.json` and the base64
   signature entries by one rule.** `public_key.pem` must be exactly one PEM
   block labelled `PUBLIC KEY` whose DER is the SubjectPublicKeyInfo of an RSA
-  key, with nothing after it; signer pins are compared on that DER, so a pin
-  matches whatever its line layout. `metadata.json` must be UTF-8 without a
-  byte order mark, with no member name repeated within one object (RFC 8785
-  Section 3.1), no `NaN` or `Infinity`, and at most 64 nested objects and
-  arrays. `signature.sig` and `overt_receipt.sig` now follow the
+  key, with nothing after it; signer pins are compared on that DER.
+  `metadata.json` must be UTF-8 without a byte order mark, with no member
+  name repeated within one object (RFC 8785 Section 3.1), no `NaN` or
+  `Infinity` literal, and at most 64 nested objects and arrays. `signature.sig` and `overt_receipt.sig` now follow the
   `signature_pqc.sig` base64 rule. Before, the two verifiers disagreed on
   some of these inputs: the TypeScript verifier accepted a byte order mark
   or invalid UTF-8 in `metadata.json` and unpadded base64; the Python
-  verifier accepted two PEM blocks, a PKCS#1 `RSA PUBLIC KEY` block, `NaN`,
-  and stray bytes inside base64; both kept the last of two equal member
+  verifier accepted two PEM blocks, a PKCS#1 `RSA PUBLIC KEY` block and
+  stray bytes inside base64, and rejected `NaN` with another code; both kept the last of two equal member
   names, which other JSON readers may not. Paired tests:
   `lib/test/strict-entries.test.ts` and
   `lib-python/tests/test_strict_entries.py`. Re-verifying 1,313 distinct
-  `.aep` files changed no verdict; the conformance corpus is unchanged.
-- An unreadable `timestamp.tsr` is reported as "empty or not a readable RFC
-  3161 TimeStampResp or token" instead of "missing or empty".
+  `.aep` files changed no verdict, and conformance verdicts are unchanged.
+- A `timestamp.tsr` that is present but empty or gives no usable token is
+  reported as "empty or not a readable RFC 3161 TimeStampResp or token"
+  instead of "missing or empty".
 - `docs/aep-format.md` now states how entry names are matched, that unlisted
   entries are ignored, the archive limits, the base64 rule, the bytes of the
   step 3 form, the DER comparison in step 5, and what "integer-valued"
@@ -59,7 +59,6 @@
   meant to exercise for those implementations too.
 - `docs/aep-format.md` states the signature encoding in step 6 and that a
   trailing LF in `hash.sha256` is accepted.
-
 - Corrected `docs/authority-record-v1-scope.md`, the README and the
   cross-check table. The v0.7.3 text said the RFC 3161 tokens of the frozen
   authority-record corpus bind none of its packages. Each parseable token's
@@ -69,6 +68,8 @@
   with, so every verdict, count and class in the table is unchanged. The
   table column is now "Imprint over `hash.sha256`", and
   `lib-python/tests/test_authority_record_scope.py` pins the 6/51 split.
+- All npm workspaces and the Python package are 0.7.4, and `eatf-verify`,
+  `eatf-sign` and `eatf-inspect --version` report 0.7.4.
 
 ## v0.7.3 — the Python verifier checks what the time-stamp signature covers (2026-10-22)
 
