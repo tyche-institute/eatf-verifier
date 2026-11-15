@@ -19,13 +19,23 @@ import { unzipSync } from "fflate";
 
 import { canonical, jcs } from "./canonical.js";
 import { sha256, toHex } from "./hash.js";
-import { decodeBase64, importRsaPublicKey, verifyRsa, verifyRsaDigestInfo } from "./rsa.js";
+import {
+  decodeBase64,
+  importRsaSpki,
+  rsaSpkiFromPem,
+  verifyRsa,
+  verifyRsaDigestInfoSpki,
+} from "./rsa.js";
 import { mlDsa65PublicKeyFromPem, verifyMlDsa65 } from "./mldsa.js";
 import { inspectTsa, verifyTsaTrust } from "./tsa.js";
 import { parseAndValidateOvertReceipt, type OvertReceipt } from "./overt.js";
 import type { FailureCode, VerifyOptions, VerifyResult } from "./index.js";
 
 const TEXT_DEC = new TextDecoder();
+// metadata.json: invalid UTF-8 throws and a byte order mark stays in the text,
+// where JSON.parse rejects it, as Python's json.loads does.
+const STRICT_UTF8 = new TextDecoder("utf-8", { fatal: true, ignoreBOM: true });
+const MAX_METADATA_DEPTH = 64;
 const MAX_ARCHIVE_BYTES = 64 * 1024 * 1024;
 const MAX_ENTRY_BYTES = 16 * 1024 * 1024;
 const MAX_EXPANDED_BYTES = 32 * 1024 * 1024;
@@ -112,9 +122,16 @@ export async function verify(
     }
   }
 
-  // Parse metadata.json for reporting + re-canonicalisation.
+  // Parse metadata.json for reporting + re-canonicalisation: UTF-8 without a
+  // byte order mark, no repeated member name (RFC 8785 Section 3.1), at most
+  // MAX_METADATA_DEPTH nested containers. lib-python applies the same rules.
   try {
-    const parsed = JSON.parse(TEXT_DEC.decode(entries["metadata.json"]!)) as unknown;
+    const text = STRICT_UTF8.decode(entries["metadata.json"]!);
+    const parsed = JSON.parse(text) as unknown;
+    const problem = jsonStructureProblem(text);
+    if (problem) {
+      return fail(report, "METADATA_INVALID_JSON", `metadata.json ${problem}.`, metadata);
+    }
     if (parsed === null || typeof parsed !== "object" || Array.isArray(parsed)) {
       return fail(
         report,
@@ -177,13 +194,30 @@ export async function verify(
   }
   report.push("SHA-256 hash matches.");
 
-  // RSA signature verification.
-  const rsaPem = TEXT_DEC.decode(entries["public_key.pem"]!);
-  if (opts.trustedSignerPems && opts.trustedSignerPems.length > 0) {
-    const packagedKey = normalizedPemBody(rsaPem);
-    const trusted = opts.trustedSignerPems.some(
-      (pem) => normalizedPemBody(pem) === packagedKey,
+  // RSA public key: one PEM block holding the DER SubjectPublicKeyInfo of an
+  // RSA key. The trust check below and the signature check use these bytes.
+  let rsaSpki: Uint8Array;
+  let rsaKey: CryptoKey;
+  try {
+    rsaSpki = rsaSpkiFromPem(TEXT_DEC.decode(entries["public_key.pem"]!));
+    rsaKey = await importRsaSpki(rsaSpki);
+  } catch (e) {
+    return fail(
+      report,
+      "RSA_VERIFY_ERROR",
+      `public_key.pem is not one PEM block holding an RSA SubjectPublicKeyInfo: ${(e as Error).message}.`,
+      metadata,
     );
+  }
+  if (opts.trustedSignerPems && opts.trustedSignerPems.length > 0) {
+    // A pin that is not one PUBLIC KEY block matches nothing.
+    const trusted = opts.trustedSignerPems.some((pem) => {
+      try {
+        return constantTimeEqual(rsaSpkiFromPem(pem), rsaSpki);
+      } catch {
+        return false;
+      }
+    });
     if (!trusted) {
       return fail(
         report,
@@ -196,26 +230,21 @@ export async function verify(
   } else {
     report.push("Signer identity trust not evaluated (no trustedSignerPems supplied).");
   }
-  const rsaSigB64 = TEXT_DEC.decode(entries["signature.sig"]!).trim();
-  let rsaSig: Uint8Array;
-  try {
-    rsaSig = decodeBase64(rsaSigB64);
-  } catch (e) {
+  const rsaSig = decodeStrictBase64(entries["signature.sig"]!);
+  if (!rsaSig) {
     return fail(
       report,
       "RSA_SIGNATURE_ENCODING",
-      `signature.sig is not valid base64: ${(e as Error).message}.`,
+      "signature.sig is not valid base64: TAB, LF, VT, FF, CR and space are ignored, the rest must be padded base64.",
       metadata,
     );
   }
   let rsaOk: boolean;
   let rsaLegacyDigestInfo = false;
-  let rsaKey: CryptoKey;
   try {
-    rsaKey = await importRsaPublicKey(rsaPem);
     rsaOk = await verifyRsa(rsaKey, rsaSig, canonicalBytes);
     if (!rsaOk) {
-      rsaOk = verifyRsaDigestInfo(rsaPem, rsaSig, actualHashBytes);
+      rsaOk = verifyRsaDigestInfoSpki(rsaSpki, rsaSig, actualHashBytes);
       rsaLegacyDigestInfo = rsaOk;
     }
   } catch (e) {
@@ -283,7 +312,8 @@ export async function verify(
       );
     }
     try {
-      const receiptSig = decodeBase64(TEXT_DEC.decode(receiptSignatureBytes).trim());
+      const receiptSig = decodeStrictBase64(receiptSignatureBytes);
+      if (!receiptSig) throw new Error("overt_receipt.sig is not padded base64");
       if (!(await verifyRsa(rsaKey, receiptSig, receiptBytes))) {
         return fail(
           report,
@@ -388,7 +418,7 @@ export async function verify(
         "ML-DSA-65 signer identity not evaluated (no trustedPqcSignerPems supplied).",
       );
     }
-    const pqcSig = decodePqcSignature(entries["signature_pqc.sig"]!);
+    const pqcSig = decodeStrictBase64(entries["signature_pqc.sig"]!);
     if (pqcSig === null) {
       pqcValid = false;
       return fail(
@@ -437,7 +467,7 @@ export async function verify(
     return fail(
       report,
       "TSA_MISSING_OR_INVALID",
-      "timestamp.tsr missing or empty.",
+      "timestamp.tsr is empty or not a readable RFC 3161 TimeStampResp or token.",
       metadata,
       pqcValid,
       overtReceipt,
@@ -545,14 +575,15 @@ function constantTimeEqual(a: Uint8Array, b: Uint8Array): boolean {
   return diff === 0;
 }
 
-// signature_pqc.sig is base64 text. Bytes 0x09-0x0D and 0x20 may appear
+// signature.sig, overt_receipt.sig and signature_pqc.sig are base64 text, read
+// by one rule. Bytes 0x09-0x0D and 0x20 may appear
 // anywhere; the rest must be base64 with at most two trailing "=" and a length
 // that is a multiple of four. lib-python applies the same byte-level rule, so
 // both verifiers reject the same entries with the same code (atob alone
 // accepts missing padding; Python's lenient decoder skips stray bytes). This is
 // a single pass with no regex: a backtracking pattern overflows V8's stack on
 // multi-megabyte entries.
-function decodePqcSignature(entry: Uint8Array): Uint8Array | null {
+function decodeStrictBase64(entry: Uint8Array): Uint8Array | null {
   const compact = new Uint8Array(entry.length);
   let length = 0;
   let padding = 0;
@@ -578,10 +609,39 @@ function isBase64AlphabetByte(byte: number): boolean {
     || byte === 0x2f; // /
 }
 
-function normalizedPemBody(pem: string): string {
-  return pem
-    .split(/\r?\n/)
-    .filter((line) => !line.startsWith("-----"))
-    .join("")
-    .replace(/\s+/g, "");
+// For text that JSON.parse accepted: the first member name repeated within one
+// object, or nesting deeper than MAX_METADATA_DEPTH, else null. JSON.parse
+// keeps the last of two equal names, so without this check metadata.json could
+// show other readers a value that the canonical bytes do not hold. One pass
+// with an explicit stack; lib-python checks the same two rules.
+function jsonStructureProblem(text: string): string | null {
+  const stack: Array<Set<string> | null> = [];
+  let expectName = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (ch === "{" || ch === "[") {
+      if (stack.length === MAX_METADATA_DEPTH) {
+        return `nests deeper than ${MAX_METADATA_DEPTH} levels`;
+      }
+      stack.push(ch === "{" ? new Set<string>() : null);
+      expectName = ch === "{";
+    } else if (ch === "}" || ch === "]") {
+      stack.pop();
+      expectName = false;
+    } else if (ch === ",") {
+      expectName = stack[stack.length - 1] instanceof Set;
+    } else if (ch === '"') {
+      let end = i + 1;
+      while (text[end] !== '"') end += text[end] === "\\" ? 2 : 1;
+      if (expectName) {
+        const name = JSON.parse(text.slice(i, end + 1)) as string;
+        const names = stack[stack.length - 1]!;
+        if (names.has(name)) return `repeats the member name ${JSON.stringify(name)}`;
+        names.add(name);
+        expectName = false;
+      }
+      i = end;
+    }
+  }
+  return null;
 }

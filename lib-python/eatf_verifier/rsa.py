@@ -26,12 +26,58 @@ from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
 
+from .pem import parse_pem
+
+
+def rsa_spki_from_pem(pem: bytes) -> bytes:
+    """Return the DER SubjectPublicKeyInfo in ``public_key.pem`` or an RSA pin.
+
+    Port of rsaSpkiFromPem in lib/src/rsa.ts: one PEM block labelled PUBLIC KEY
+    whose DER is one SEQUENCE with nothing after it. Raises ValueError otherwise.
+    """
+    label, der = parse_pem(pem)
+    if label != "PUBLIC KEY":
+        raise ValueError(f"PEM label is {label}, not PUBLIC KEY")
+    if _der_sequence_end(der) != len(der):
+        raise ValueError("bytes follow the SubjectPublicKeyInfo")
+    return der
+
+
+def load_rsa_spki(spki: bytes) -> rsa.RSAPublicKey:
+    """Load an RSA SubjectPublicKeyInfo that is the DER encoding of the key.
+
+    Port of importRsaSpki in lib/src/rsa.ts: the loaded key must encode back to
+    the same bytes, so the key that verifies is the only reading of ``spki``.
+    """
+    key = serialization.load_der_public_key(spki)
+    if not isinstance(key, rsa.RSAPublicKey):
+        raise TypeError("SubjectPublicKeyInfo does not hold an RSA key")
+    encoded = key.public_bytes(
+        serialization.Encoding.DER, serialization.PublicFormat.SubjectPublicKeyInfo
+    )
+    if not hmac.compare_digest(encoded, spki):
+        raise ValueError("SubjectPublicKeyInfo is not the DER encoding of an RSA key")
+    return key
+
 
 def load_public_key_pem(pem: bytes) -> rsa.RSAPublicKey:
-    key = serialization.load_pem_public_key(pem)
-    if not isinstance(key, rsa.RSAPublicKey):
-        raise TypeError("public_key.pem is not an RSA key")
-    return key
+    return load_rsa_spki(rsa_spki_from_pem(pem))
+
+
+def _der_sequence_end(der: bytes) -> int:
+    """Offset just past the outer DER SEQUENCE, as readSequence reads it in TS."""
+    if len(der) < 2 or der[0] != 0x30:
+        raise ValueError("Unexpected DER tag.")
+    first = der[1]
+    if first < 0x80:
+        return 2 + first
+    count = first & 0x7F
+    if count == 0 or count > 4 or len(der) < 2 + count:
+        raise ValueError("Unsupported DER length.")
+    length = int.from_bytes(der[2 : 2 + count], "big")
+    if 2 + count + length > len(der):
+        raise ValueError("DER length exceeds input.")
+    return 2 + count + length
 
 
 def verify_rsa(key: rsa.RSAPublicKey, signature: bytes, signed_data: bytes) -> bool:

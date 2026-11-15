@@ -10,6 +10,30 @@
 
 ## Unreleased
 
+- **Both verifiers read `public_key.pem`, `metadata.json` and the base64
+  signature entries by one rule.** `public_key.pem` must be exactly one PEM
+  block labelled `PUBLIC KEY` whose DER is the SubjectPublicKeyInfo of an RSA
+  key, with nothing after it; signer pins are compared on that DER, so a pin
+  matches whatever its line layout. `metadata.json` must be UTF-8 without a
+  byte order mark, with no member name repeated within one object (RFC 8785
+  Section 3.1), no `NaN` or `Infinity`, and at most 64 nested objects and
+  arrays. `signature.sig` and `overt_receipt.sig` now follow the
+  `signature_pqc.sig` base64 rule. Before, the two verifiers disagreed on
+  some of these inputs: the TypeScript verifier accepted a byte order mark
+  or invalid UTF-8 in `metadata.json` and unpadded base64; the Python
+  verifier accepted two PEM blocks, a PKCS#1 `RSA PUBLIC KEY` block, `NaN`,
+  and stray bytes inside base64; both kept the last of two equal member
+  names, which other JSON readers may not. Paired tests:
+  `lib/test/strict-entries.test.ts` and
+  `lib-python/tests/test_strict_entries.py`. Re-verifying 1,313 distinct
+  `.aep` files changed no verdict; the conformance corpus is unchanged.
+- An unreadable `timestamp.tsr` is reported as "empty or not a readable RFC
+  3161 TimeStampResp or token" instead of "missing or empty".
+- `docs/aep-format.md` now states how entry names are matched, that unlisted
+  entries are ignored, the archive limits, the base64 rule, the bytes of the
+  step 3 form, the DER comparison in step 5, and what "integer-valued"
+  means. These answer questions from Abdel Fane's (OpenA2A) table of places
+  where a verifier built from the documents had to guess.
 - **Both verifiers now compare the whole RSA encoded block in the legacy
   DigestInfo path.** After a strict RSASSA-PKCS1-v1_5 failure, v0.7.3 and
   earlier stripped the padding and compared only the trailing 32 bytes with
@@ -21,7 +45,8 @@
   used. RFC 8017 Appendix B.1 requires NULL parameters, so writers must not
   produce it. No forgery is known against the e = 65537 keys used here; the
   lenient comparison is the class of Bleichenbacher 2006 and BERserk 2014.
-  Found by an independent second verifier built from the documents.
+  Found by Abdel Fane (OpenA2A) with an independent second verifier built
+  from the documents.
 - Re-signed `valid/valid-overt-profile`, `valid/mcp-tools-call-valid`,
   `valid/mcp-tools-call-denied-policy` and `invalid/tampered-overt-receipt`
   in the RFC 8017 form with the same 2048-bit test key
