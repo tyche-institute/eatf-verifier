@@ -257,8 +257,9 @@ covers the TSTInfo, as TypeScript already did; it is archived at
 [doi:10.5281/zenodo.23552715](https://doi.org/10.5281/zenodo.23552715). The
 current v0.7.4 patch makes the legacy RSA signature check exact and has both
 verifiers read `public_key.pem`, `metadata.json` and the signature entries by
-one rule. It remains in the Zenodo
-version chain that began at v0.6.0, with concept DOI
+one rule. It is archived at
+[doi:10.5281/zenodo.24263970](https://doi.org/10.5281/zenodo.24263970) and
+remains in the Zenodo version chain that began at v0.6.0, with concept DOI
 [doi:10.5281/zenodo.21763055](https://doi.org/10.5281/zenodo.21763055).
 Releases through v0.5.0 remain under the earlier concept DOI
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).
