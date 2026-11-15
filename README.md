@@ -252,10 +252,13 @@ malformed ML-DSA entries; it is archived at
 v0.7.2 patch made the two verifiers parse a packaged ML-DSA-65 key by the same
 rules without a key pin; it is archived at
 [doi:10.5281/zenodo.23466228](https://doi.org/10.5281/zenodo.23466228). The
-current v0.7.3 patch makes the Python verifier check that the time-stamp
-signature covers the TSTInfo, as TypeScript already did. It is archived at
-[doi:10.5281/zenodo.23552715](https://doi.org/10.5281/zenodo.23552715) and
-remains in the Zenodo version chain that began at v0.6.0, with concept DOI
+v0.7.3 patch made the Python verifier check that the time-stamp signature
+covers the TSTInfo, as TypeScript already did; it is archived at
+[doi:10.5281/zenodo.23552715](https://doi.org/10.5281/zenodo.23552715). The
+current v0.7.4 patch makes the legacy RSA signature check exact and has both
+verifiers read `public_key.pem`, `metadata.json` and the signature entries by
+one rule. It remains in the Zenodo
+version chain that began at v0.6.0, with concept DOI
 [doi:10.5281/zenodo.21763055](https://doi.org/10.5281/zenodo.21763055).
 Releases through v0.5.0 remain under the earlier concept DOI
 [doi:10.5281/zenodo.21511608](https://doi.org/10.5281/zenodo.21511608).
