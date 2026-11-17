@@ -1,0 +1,15 @@
+{
+  "corpus": "vectors-a2a-jcs-v01",
+  "target": "rfc8785",
+  "docs": "https://github.com/tyche-institute/eatf-verifier/blob/main/docs/aep-format.md#canonicalization-domain",
+  "exclusions": [
+    {
+      "id": "A5-002",
+      "reason": "1e21: the AEP metadata profile rejects integer-valued numbers outside [-9007199254740991, 9007199254740991] by design (docs/aep-format.md, section Canonicalization domain)."
+    },
+    {
+      "id": "A5-012",
+      "reason": "1e20: the same guard, same section of docs/aep-format.md."
+    }
+  ]
+}
