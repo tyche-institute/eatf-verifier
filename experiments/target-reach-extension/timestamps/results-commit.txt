@@ -1,0 +1,1 @@
+eatf-verifier research/mutation-adequacy commit cc0d4c30f10ee0b559ebb81f7cb39a12078443b7 (experiments/target-reach-extension: the outputs of steps 3 to 6 of PROTOCOL.md, the reading of the 20 sampled checks, DEVIATIONS.md and the logs of the commands)

@@ -37,3 +37,24 @@ and the history before them. What they do not show: that nothing was run on
 the subjects before the protocol was fixed. Section 5 of the protocol states
 what had been done before the commit, and `../preparation/tools/` and the
 `PREPARATION.md` of each screened library record it.
+
+## The results commit
+
+`results-commit.txt` names the commit that holds the outputs of steps 3 to 6
+of section 6 of the protocol, the reading of the 20 sampled checks,
+`../DEVIATIONS.md` and the logs of the commands (step 7):
+
+    cc0d4c30f10ee0b559ebb81f7cb39a12078443b7
+
+Its SHA-256 was sent to the same 2 authorities after the commit was pushed.
+Both tokens carry the time 2026-11-17 16:24:27 UTC.
+
+| File | Authority |
+|---|---|
+| `results-commit.freetsa.tsr` | freetsa.org (`https://freetsa.org/tsr`) |
+| `results-commit.digicert.tsr` | DigiCert (`http://timestamp.digicert.com`) |
+
+Verify with the 3 commands above, with `results-commit` in place of
+`protocol-commit`. The tokens show that the results existed at that time, in
+the commit that they name; with the tokens of the protocol commit, they bound
+the time of the runs from both sides.
