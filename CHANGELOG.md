@@ -8,6 +8,20 @@
 > [README](README.md#overt-attribution-and-non-endorsement). Historical entries
 > are left unedited so that the release record stays accurate.
 
+## Unreleased
+
+- Add [`docs/hybrid-test-matrix.md`](docs/hybrid-test-matrix.md): seven tests
+  for a hybrid signature format. Each row names the vector or test that runs
+  it in this repository, with the command and the expected output, and the
+  page repeats the seven rows as instructions for another format.
+- Add paired ML-DSA-65 key-encoding tests,
+  `lib/test/mldsa-key-encoding.test.ts` and
+  `lib-python/tests/test_mldsa_key_encoding.py`. Both verifiers already
+  rejected an RFC 9881 SubjectPublicKeyInfo with the ML-DSA-44 or ML-DSA-87
+  object identifier, with explicit NULL parameters, or with a key one byte
+  short or long. Until now only a changed object identifier was tested, in
+  TypeScript. No verifier behaviour changes.
+
 ## v0.7.4 — an exact legacy RSA check, and one reading of the key, metadata and signature entries (2026-11-15)
 
 - **Both verifiers read `public_key.pem`, `metadata.json` and the base64

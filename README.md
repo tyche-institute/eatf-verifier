@@ -40,6 +40,7 @@ offline package and verification workflow for one recorded agent action.
 | `workshops/pqc-hybrid-lab/` | Seven prepared packages for ML-DSA tamper, downgrade and key-substitution exercises |
 | `experiments/decision-path/` | Model-based differential oracle, generated corpus, and results |
 | `docs/aep-format.md` | Implemented wire-format and verification contract |
+| `docs/hybrid-test-matrix.md` | Seven tests for a hybrid signature format, each with the vector and command that runs it here |
 | `docs/pqc-archive-migration-worksheet.md` | One-page inventory for long-lived signed records |
 | `docs/pqc-hybrid-lab-five-minute-fallback.md` | Timed no-network facilitator fallback for the workshop |
 
