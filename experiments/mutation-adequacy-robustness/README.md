@@ -144,6 +144,9 @@ python3 -I work/verify-D/rerun.py
 
 In a clean checkout on 15 November 2026, the first 6 commands reproduced
 `recomputed-a.json`, `recompute-b.json` and `recomputed.json` byte for byte.
+Copies of the files that `recompute_a.py`, `derive.py` and `rerun.py` read
+outside the tracked tree, and the SHA-256 of the files of the clone, were added
+to `second-script-inputs/` on 17 November 2026; its README lists them.
 
 ## Files
 
@@ -157,6 +160,7 @@ In a clean checkout on 15 November 2026, the first 6 commands reproduced
 | `summarise.py` | Writes `generated/SUMMARY.md` and `generated/SHA256SUMS` |
 | `generated/` | Results: `SUMMARY.md`, and a `.md`, `.csv` and `.json` per analysis |
 | `work/verify-A/` to `work/verify-D/` | The second scripts, their outputs and the 3 edits of D |
+| `second-script-inputs/` | Copies of the files that 3 second scripts read outside the tracked tree, with their SHA-256 |
 | `timestamps/` | RFC 3161 tokens for the protocol commit, with the commands that verify them |
 
 ## Limits

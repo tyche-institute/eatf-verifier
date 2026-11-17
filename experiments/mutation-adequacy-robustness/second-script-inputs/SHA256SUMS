@@ -1,0 +1,5 @@
+a0f3cfedc8865e325dcf53fa0f3a95e6f57f9ea1c0c46266c377ae4d6f4bc3b3  mutation-adequacy-pyjwt/records/baseline/base-1.json
+c353c5d3b622f5d92e02eb6f0c81e73c8ade1dd09cec68ba34ab4f0866f4cd3b  mutation-adequacy-robustness/copies/R/jws.header-json/jwt/api_jws.py
+71bb1c3d77bbc129e72fa856dc9025967bf5a922ea6f5ad316ae016472cbed15  mutation-adequacy-robustness/copies/R/jws.segment-encoding/jwt/api_jws.py
+ce40a3ab10b1c8475d13e20362529ebe4695e50969d3930d2405cf092ecf1d1e  mutation-adequacy-robustness/copies/R/jwt.iat-type/jwt/api_jwt.py
+37311530b7881cdac02d4866ceb02fefd8968d5ff26bdb16d4c8bab49253f4e2  mutation-adequacy/cases.json
