@@ -1,0 +1,45 @@
+{
+ "name": "python-jose",
+ "distribution": "python-jose",
+ "version": "3.5.0",
+ "repository": "https://github.com/mpdavis/python-jose",
+ "tag": "3.5.0",
+ "commit": "018b310ddb8b50dcfd09a0c152117835a21dd656",
+ "release_source": "https://pypi.org/pypi/python-jose/json, read 2026-11-17T13:51:52Z: 3.5.0, uploaded 2025-05-28T17:31:52Z, is the latest release, no release or pre-release is later, and project_urls names the source https://github.com/mpdavis/python-jose/. git ls-remote --tags https://github.com/mpdavis/python-jose, 2026-11-17T13:52:00Z: refs/tags/3.5.0 is 018b310ddb8b50dcfd09a0c152117835a21dd656, a commit (the tag is lightweight). At that commit, jose/__init__.py, line 1, sets __version__ = \"3.5.0\", which setup.cfg, line 3, makes the version of the distribution.",
+ "package": "jose",
+ "source_root": ".",
+ "package_source": "setup.cfg, [options] packages = find: (line 34) and [options.packages.find] exclude = tests* (lines 52-54): the package jose, with its subpackage jose.backends, at the root of the repository",
+ "entry_points": [
+  "decode",
+  "decrypt",
+  "verify"
+ ],
+ "entry_points_source": "docs/jwt/api.rst, docs/jws/api.rst and docs/jwe/api.rst (automodule of jose.jwt, jose.jws and jose.jwe): jwt.decode, 'Verifies a JWT string's signature and validates reserved claims.' (jose/jwt.py, line 67); jws.verify, 'Verifies a JWS string's signature.' (jose/jws.py, line 53); jwe.decrypt, 'Decrypts a JWE compact serialized string and returns the plaintext.', which raises JWEError 'If there is an exception verifying the token.' (jose/jwe.py, lines 61 and 71-72). docs/jwk/index.rst shows key.verify(message, decoded_sig) under 'Verifying token signatures'. Entry points are names, so the same names elsewhere in the package count too.",
+ "rejection_bases": [
+  "JOSEError"
+ ],
+ "rejection_bases_source": "The docstrings of the entry points name JWTError, ExpiredSignatureError and JWTClaimsError (jose/jwt.py, lines 120-123), JWSError (jose/jws.py, lines 64-65) and JWEError (jose/jwe.py, lines 71-72). In jose/exceptions.py, JWSError (line 5), JWTError (line 17) and JWEError (line 33) inherit from JOSEError (line 1), and JWTClaimsError and ExpiredSignatureError from JWTError (lines 21 and 25): JOSEError is the base class of all of them and of every other exception class of the module.",
+ "test_directories": [
+  "tests"
+ ],
+ "test_directories_source": "pytest.ini sets no testpaths, and pytest reads it ahead of the [tool:pytest] section of setup.cfg (pytest 9.2.0, _pytest/config/findpaths.py, lines 240-252: the configuration files in precedence order, pytest.ini before setup.cfg); tox.ini, [testenv:basecommand] (line 20), runs pytest without a path from the root of the repository, and every test file of the repository is under tests/ (git ls-files at the commit). setup.cfg, [tool:pytest], names the same directory: testpaths = tests (line 72).",
+ "suite_runs": [
+  {
+   "name": "compatibility",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "suite_runs_source": "tox.ini: for Python 3.12, the environments py312-base, py312-cryptography-only, py312-pycryptodome-norsa and py312-compatibility ([gh-actions], line 13; .github/workflows/ci.yml, line 44, runs tox), each with 1 pytest call from the root of the repository ([testenv:basecommand], line 20). compatibility installs the extras cryptography and pycryptodome (lines 29-32 and 56) and gives no marker expression (line 52), so its call runs every test that the other 3 select with -m (lines 46, 48 and 50); those 3 run in environments that lack backends, the extras (base), ecdsa and rsa (cryptography-only, line 41) or rsa (pycryptodome-norsa, line 43), which the 1 environment of a subject cannot be. The suite run is the call of compatibility, without its coverage options, on tests, the directory of every test file.",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "jose",
+  "tests",
+  "pytest.ini"
+ ],
+ "python": "3.12.3"
+}

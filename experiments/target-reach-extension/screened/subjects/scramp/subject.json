@@ -1,0 +1,57 @@
+{
+ "name": "scramp",
+ "distribution": "scramp",
+ "version": "1.5.0",
+ "repository": "https://codeberg.org/tlocke/scramp",
+ "tag": "1.5.0",
+ "commit": "58a281a2b0570834a39e78dcc9d52aa8245c0aea",
+ "release_source": "PyPI JSON https://pypi.org/pypi/scramp/json, read 2026-11-17T13:52:00Z: 28 versions, none a pre-release; the latest, 1.5.0, uploaded 2026-10-25T17:43:17Z (wheel) and 17:43:19Z (sdist), and no file of any version uploaded later; project_urls Homepage https://codeberg.org/tlocke/scramp. git ls-remote --tags of that repository, 2026-11-17T13:52:14Z: the annotated tag 1.5.0 (tag object afe02849b18a83af1a16f250efe326e6c5af2556) points to the commit. The files of the sdist scramp-1.5.0.tar.gz, PKG-INFO aside, are byte-identical to the 11 files of the commit.",
+ "package": "scramp",
+ "package_source": "pyproject.toml line 6: name = \"scramp\"; the commit holds 1 package, src/scramp (__init__.py, core.py, utils.py), and the wheel scramp-1.5.0-py3-none-any.whl at PyPI (read 2026-11-17T13:57:41Z) holds the same 3 files, byte-identical, as the package scramp.",
+ "source_root": "src",
+ "entry_points": [
+  "set_client_final",
+  "set_client_first",
+  "set_server_final",
+  "set_server_first"
+ ],
+ "entry_points_source": "README.md, API Docs: scramp.ScramClient has set_server_first(message), 'Set the first message from the server.', and set_server_final(message), 'Set the final message from the server.' (lines 658 and 660); scramp.ScramServer has set_client_first(message), 'Set the first message from the client.', and set_client_final(message), 'Set the final client message.' (lines 723 and 725). The examples end 'If it all runs through without raising an exception, the authentication has succeeded' (lines 128-129). Entry points are names, so the same names elsewhere in the package count too.",
+ "rejection_bases": [
+  "ScramException"
+ ],
+ "rejection_bases_source": "README.md, examples Server Error and Avoiding User Enumeration: set_client_first, set_client_final and set_server_final reject the message inside `except ScramException as e:` (lines 467-471, 538-541 and 549-552); release notes of 1.4.4: 'make sure that a `ScramException` is raised if a message is malformed' (lines 850-851). src/scramp/utils.py line 38: class ScramException(Exception), exported by src/scramp/__init__.py lines 4 and 6.",
+ "test_directories_source": "pyproject.toml, [tool.tox.env_run_base], commands: [\"pytest\", \"-v\", \"-x\", \"-W error\", \"test\"] (lines 78-84); README.md, Testing: run tox (lines 732-736)",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "test"
+   ]
+  }
+ ],
+ "suite_runs_source": "pyproject.toml, [tool.tox.env_run_base]: 1 pytest call, pytest -v -x \"-W error\" test (lines 78-84), in the 1 environment of envlist = [\"py\"] (line 46)",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "src",
+  "test",
+  "README.md"
+ ],
+ "python": "3.12.3",
+ "subject_files": [
+  "scramp/__init__.py",
+  "scramp/core.py",
+  "scramp/utils.py"
+ ],
+ "observed_files": [],
+ "tests": [
+  "test/test_scramp.py"
+ ],
+ "scope_counts": {
+  "test_files_in_test_directories": 4,
+  "blocks_in_test_directories": 31,
+  "test_files_with_an_included_block": 1
+ }
+}

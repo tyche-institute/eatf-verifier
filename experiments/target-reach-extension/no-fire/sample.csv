@@ -1,0 +1,21 @@
+library,check,file,line,function,class,template,reachable
+google-auth,auth.aws.RequestSigner.get_request_options#1,google/auth/aws.py,126,RequestSigner.get_request_options,InvalidResource,Invalid AWS service URL,yes
+google-auth,auth._agent_identity_utils.parse_certificate#1,google/auth/_agent_identity_utils.py,329,parse_certificate,ValueError,Certificate bytes cannot be empty or None.,yes
+google-auth,auth.crypt._python_rsa.RSASigner.from_string#1,google/auth/crypt/_python_rsa.py,190,RSASigner.from_string,InvalidValue,Unused bytes,yes
+google-auth,auth.credentials.AnonymousCredentials.apply#1,google/auth/credentials.py,606,AnonymousCredentials.apply,InvalidValue,Anonymous credentials don't support tokens.,yes
+google-auth,auth.credentials.AnonymousCredentials.refresh#1,google/auth/credentials.py,595,AnonymousCredentials.refresh,InvalidOperation,Anonymous credentials cannot be refreshed.,yes
+oauthlib,oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9,oauthlib/oauth2/rfc6749/grant_types/authorization_code.py,510,AuthorizationCodeGrant.validate_token_request,MissingRedirectURIError,,yes
+oauthlib,oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1,oauthlib/oauth2/rfc6749/endpoints/base.py,79,BaseEndpoint._raise_on_bad_method,oauthlib.oauth2.rfc6749.errors.InvalidRequestError,Unsupported request method {*},yes
+oauthlib,oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1,oauthlib/oauth2/rfc6749/grant_types/base.py,162,GrantTypeBase.validate_grant_type,UnauthorizedClientError,,yes
+oauthlib,oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1,oauthlib/oauth2/rfc8628/grant_types/device_code.py,125,DeviceCodeGrant.validate_token_request,oauthlib.oauth2.rfc6749.errors.InvalidRequestError,Request is missing grant type.,yes
+oauthlib,oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3,oauthlib/oauth2/rfc8628/grant_types/device_code.py,202,DeviceCodeGrant.validate_device_code,InvalidGrantError,,yes
+authlib,jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#1,authlib/jose/rfc7515/jws.py,303,JsonWebSignature._validate_crit_headers,InvalidHeaderParameterNameError,crit,yes
+authlib,jose.drafts._jwe_algorithms.ECDH1PUAlgorithm.generate_keys_and_prepare_headers#1,authlib/jose/drafts/_jwe_algorithms.py,127,ECDH1PUAlgorithm.generate_keys_and_prepare_headers,InvalidEncryptionAlgorithmForECDH1PUWithKeyWrappingError,,yes
+authlib,jose.rfc7515.jws.JsonWebSignature._validate_json_jws#3,authlib/jose/rfc7515/jws.py,326,JsonWebSignature._validate_json_jws,DecodeError,"Invalid ""header"" value",yes
+authlib,jose.rfc7517.base_key.Key.check_key_op#1,authlib/jose/rfc7517/base_key.py,85;88,Key.check_key_op,InvalidUseError,,yes
+authlib,jose.rfc7516.jwe.JsonWebEncryption.get_header_zip#1,authlib/jose/rfc7516/jwe.py,728;730,JsonWebEncryption.get_header_zip,UnsupportedCompressionAlgorithmError,,yes
+joserfc,_rfc7516.message.decrypt_recipient#1,joserfc/_rfc7516/message.py,249,decrypt_recipient,InvalidEncryptedKeyError,,yes
+joserfc,_keys.JWKRegistry.import_key#1,joserfc/_keys.py,70,JWKRegistry.import_key,MissingKeyTypeError,Missing key type,yes
+joserfc,_rfc7516.registry.JWERegistry.validate_ciphertext_size#1,joserfc/_rfc7516/registry.py,140,JWERegistry.validate_ciphertext_size,ExceededSizeError,Ciphertext size exceeds {*} bytes.,yes
+joserfc,_rfc7516.registry.JWERegistry._check_algorithm#1,joserfc/_rfc7516/registry.py,186,JWERegistry._check_algorithm,UnsupportedAlgorithmError,Algorithm of '{*}' is not supported,yes
+joserfc,_rfc7516.registry.JWERegistry._check_algorithm#2,joserfc/_rfc7516/registry.py,190,JWERegistry._check_algorithm,UnsupportedAlgorithmError,Algorithm of '{*}' is not allowed,yes

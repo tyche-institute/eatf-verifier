@@ -1,0 +1,61 @@
+{
+ "name": "service-identity",
+ "distribution": "service-identity",
+ "version": "26.1.0",
+ "repository": "https://github.com/pyca/service-identity",
+ "tag": "26.1.0",
+ "commit": "5025f92e3856e814bb5012ba4ed03b71320131d8",
+ "package": "service_identity",
+ "source_root": "src",
+ "entry_points": [
+  "verify_certificate_hostname",
+  "verify_certificate_ip_address",
+  "verify_hostname",
+  "verify_ip_address",
+  "verify_service_identity"
+ ],
+ "entry_points_source": "docs/api.rst documents service_identity.cryptography.verify_certificate_hostname and verify_certificate_ip_address (lines 15-18) and service_identity.pyopenssl.verify_hostname and verify_ip_address (lines 25-34), each 'Verify whether *certificate* is valid for ...' or 'Verify whether the certificate of *connection* is valid for ...' (src/service_identity/cryptography.py lines 43 and 79, pyopenssl.py lines 32 and 65); its note (lines 5-9) points to the verify_service_identity function of the hazmat module, which the 4 functions call with the patterns of the certificate (cryptography.py lines 68 and 108, pyopenssl.py lines 54 and 90) and which 'Verify whether *cert_patterns* are valid for *obligatory_ids* and *optional_ids*' (hazmat.py lines 41-48). extract_patterns (docs/api.rst lines 19 and 35) is documented as extracting the patterns of a certificate (cryptography.py line 120), not as a verification. Entry points are names, so the same names elsewhere in the package count too.",
+ "rejection_bases": [
+  "CertificateError",
+  "VerificationError"
+ ],
+ "rejection_bases_source": "The docstrings of the 4 functions of docs/api.rst name 2 exceptions, service_identity.VerificationError and service_identity.CertificateError (src/service_identity/cryptography.py lines 55-61 and 93-99, pyopenssl.py lines 39-47 and 74-81), which docs/api.rst lists under 'Universal Errors and Warnings' (lines 71-77). src/service_identity/exceptions.py declares each as a direct subclass of the built-in Exception (lines 62-63 and 74), so the 2 share no base below Exception, and each is taken as a rejection base. Exception is not taken: it would make every built-in exception class a rejection class.",
+ "test_directories_source": "pyproject.toml, [tool.pytest.ini_options]: testpaths = \"tests\" (line 99); norecursedirs = [\"tests/typing\"] (line 101) leaves out tests/typing, which holds no test file (tests/typing/api.py, which mypy reads, tox.ini line 60)",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "suite_runs_source": "tox.ini, [testenv]: coverage run -m pytest {posargs} (lines 27-28), the 1 pytest call of every test environment py3{8-15}{,-pyopenssl}{,-oldest}{,-idna} (line 7), with testpaths = \"tests\" (pyproject.toml line 99); CI runs those environments with tox run -f py<version> (.github/workflows/ci.yml lines 81-85). The doctest call of tox.ini line 29 is conditional on a factor latest that no environment of env_list (lines 3-8) has.",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "src",
+  "tests",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3",
+ "subject_files": [
+  "service_identity/__init__.py",
+  "service_identity/cryptography.py",
+  "service_identity/exceptions.py",
+  "service_identity/hazmat.py",
+  "service_identity/pyopenssl.py"
+ ],
+ "observed_files": [],
+ "tests": [
+  "tests/test_cryptography.py",
+  "tests/test_hazmat.py",
+  "tests/test_pyopenssl.py"
+ ],
+ "scope_counts": {
+  "test_files_in_test_directories": 4,
+  "blocks_in_test_directories": 38,
+  "test_files_with_an_included_block": 3
+ }
+}

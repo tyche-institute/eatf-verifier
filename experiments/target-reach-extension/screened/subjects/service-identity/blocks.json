@@ -1,0 +1,1346 @@
+{
+ "blocks": [
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    60,
+    60
+   ],
+   "entry_calls": [
+    "verify_certificate_hostname"
+   ],
+   "exclusion": [],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_cryptography.py",
+   "form": "with",
+   "header_span": [
+    56,
+    59
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_cryptography.py::TestPublicAPI.test_no_cert_patterns_hostname#0",
+   "match": "Certificate does not contain any `subjectAltName`s",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_cert_patterns_hostname",
+   "test_class": "TestPublicAPI"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    72,
+    72
+   ],
+   "entry_calls": [
+    "verify_certificate_ip_address"
+   ],
+   "exclusion": [],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_cryptography.py",
+   "form": "with",
+   "header_span": [
+    68,
+    71
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_cryptography.py::TestPublicAPI.test_no_cert_patterns_ip_address#0",
+   "match": "Certificate does not contain any `subjectAltName`s",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_cert_patterns_ip_address",
+   "test_class": "TestPublicAPI"
+  },
+  {
+   "api": "pytest",
+   "binding": "ei",
+   "body_span": [
+    86,
+    86
+   ],
+   "entry_calls": [
+    "verify_certificate_hostname"
+   ],
+   "exclusion": [],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_cryptography.py",
+   "form": "with",
+   "header_span": [
+    85,
+    85
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_cryptography.py::TestPublicAPI.test_certificate_verify_hostname_fail#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert [DNSMismatch(mismatched_id=DNS_ID('google.com'))] == ei.value.errors"
+   ],
+   "test": "test_certificate_verify_hostname_fail",
+   "test_class": "TestPublicAPI"
+  },
+  {
+   "api": "pytest",
+   "binding": "ei",
+   "body_span": [
+    107,
+    107
+   ],
+   "entry_calls": [
+    "verify_certificate_ip_address"
+   ],
+   "exclusion": [],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_cryptography.py",
+   "form": "with",
+   "header_span": [
+    106,
+    106
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_cryptography.py::TestPublicAPI.test_verify_ip_address_fail#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert [IPAddressMismatch(mismatched_id=IPAddress_ID(ip))] == ei.value.errors"
+   ],
+   "test": "test_verify_ip_address_fail",
+   "test_class": "TestPublicAPI"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    180,
+    180
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_cryptography.py",
+   "form": "with",
+   "header_span": [
+    177,
+    179
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_cryptography.py::TestExtractPatterns.test_malformed_srv_other_name#0",
+   "match": "Unexpected certificate content\\.",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_malformed_srv_other_name",
+   "test_class": "TestExtractPatterns"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    56,
+    58
+   ],
+   "entry_calls": [
+    "verify_service_identity"
+   ],
+   "exclusion": [],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    52,
+    55
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_no_cert_patterns#0",
+   "match": "Certificate does not contain any `subjectAltName`s",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_no_cert_patterns",
+   "test_class": "TestVerifyServiceIdentity"
+  },
+  {
+   "api": "pytest",
+   "binding": "e",
+   "body_span": [
+    81,
+    83
+   ],
+   "entry_calls": [
+    "verify_service_identity"
+   ],
+   "exclusion": [],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    80,
+    80
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_integration_dns_id_fail#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert [DNSMismatch(mismatched_id=i)] == e.value.errors"
+   ],
+   "test": "test_integration_dns_id_fail",
+   "test_class": "TestVerifyServiceIdentity"
+  },
+  {
+   "api": "pytest",
+   "binding": "e",
+   "body_span": [
+    94,
+    98
+   ],
+   "entry_calls": [
+    "verify_service_identity"
+   ],
+   "exclusion": [],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    93,
+    93
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_single_label_hostname_mismatch#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert [DNSMismatch(mismatched_id=i)] == e.value.errors"
+   ],
+   "test": "test_single_label_hostname_mismatch",
+   "test_class": "TestVerifyServiceIdentity"
+  },
+  {
+   "api": "pytest",
+   "binding": "e",
+   "body_span": [
+    125,
+    129
+   ],
+   "entry_calls": [
+    "verify_service_identity"
+   ],
+   "exclusion": [],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    124,
+    124
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_obligatory_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert [DNSMismatch(mismatched_id=i)] == e.value.errors"
+   ],
+   "test": "test_obligatory_missing",
+   "test_class": "TestVerifyServiceIdentity"
+  },
+  {
+   "api": "pytest",
+   "binding": "e",
+   "body_span": [
+    138,
+    145
+   ],
+   "entry_calls": [
+    "verify_service_identity"
+   ],
+   "exclusion": [],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    137,
+    137
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_obligatory_mismatch#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert [DNSMismatch(mismatched_id=i)] == e.value.errors"
+   ],
+   "test": "test_obligatory_mismatch",
+   "test_class": "TestVerifyServiceIdentity"
+  },
+  {
+   "api": "pytest",
+   "binding": "e",
+   "body_span": [
+    167,
+    174
+   ],
+   "entry_calls": [
+    "verify_service_identity"
+   ],
+   "exclusion": [],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    166,
+    166
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_optional_mismatch#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert [SRVMismatch(mismatched_id=i)] == e.value.errors"
+   ],
+   "test": "test_optional_mismatch",
+   "test_class": "TestVerifyServiceIdentity"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    212,
+    212
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    211,
+    211
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestDNS_ID.test_enforces_unicode#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_enforces_unicode",
+   "test_class": "TestDNS_ID"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    220,
+    220
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ImportError"
+   ],
+   "expected": [
+    "ImportError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ImportError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    219,
+    219
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestDNS_ID.test_handles_missing_idna#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_handles_missing_idna",
+   "test_class": "TestDNS_ID"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    255,
+    255
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    254,
+    254
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestDNS_ID.test_catches_invalid_dns_ids#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_invalid_dns_ids",
+   "test_class": "TestDNS_ID"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    317,
+    317
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    316,
+    316
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestURI_ID.test_enforces_unicode#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_enforces_unicode",
+   "test_class": "TestURI_ID"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    339,
+    339
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    338,
+    338
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestURI_ID.test_catches_missing_colon#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_missing_colon",
+   "test_class": "TestURI_ID"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    379,
+    379
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    378,
+    378
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestSRV_ID.test_enforces_unicode#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_enforces_unicode",
+   "test_class": "TestSRV_ID"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    401,
+    401
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    400,
+    400
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestSRV_ID.test_catches_missing_dot#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_missing_dot",
+   "test_class": "TestSRV_ID"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    408,
+    408
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    407,
+    407
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestSRV_ID.test_catches_missing_underscore#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_missing_underscore",
+   "test_class": "TestSRV_ID"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    460,
+    460
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    459,
+    459
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestDNSPattern.test_enforces_bytes#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_enforces_bytes",
+   "test_class": "TestDNSPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    467,
+    467
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    466,
+    466
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestDNSPattern.test_catches_empty#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_empty",
+   "test_class": "TestDNSPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    474,
+    474
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    473,
+    473
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestDNSPattern.test_catches_NULL_bytes#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_NULL_bytes",
+   "test_class": "TestDNSPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    481,
+    481
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    480,
+    480
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestDNSPattern.test_catches_ip_address#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_ip_address",
+   "test_class": "TestDNSPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    489,
+    489
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    488,
+    488
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestDNSPattern.test_invalid_wildcard#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_wildcard",
+   "test_class": "TestDNSPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    498,
+    498
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    497,
+    497
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestURIPattern.test_enforces_bytes#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_enforces_bytes",
+   "test_class": "TestURIPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    505,
+    505
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    504,
+    504
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestURIPattern.test_catches_missing_colon#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_missing_colon",
+   "test_class": "TestURIPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    512,
+    512
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    511,
+    511
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestURIPattern.test_catches_wildcards#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_wildcards",
+   "test_class": "TestURIPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    521,
+    521
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    520,
+    520
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestSRVPattern.test_enforces_bytes#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_enforces_bytes",
+   "test_class": "TestSRVPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    528,
+    528
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    527,
+    527
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestSRVPattern.test_catches_missing_underscore#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_missing_underscore",
+   "test_class": "TestSRVPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    535,
+    535
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    534,
+    534
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestSRVPattern.test_catches_wildcards#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_catches_wildcards",
+   "test_class": "TestSRVPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    544,
+    544
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    543,
+    543
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestValidateDNSWildcardPattern.test_allows_only_one_wildcard#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_allows_only_one_wildcard",
+   "test_class": "TestValidateDNSWildcardPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    552,
+    552
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    551,
+    551
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestValidateDNSWildcardPattern.test_wildcard_must_be_left_most#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_wildcard_must_be_left_most",
+   "test_class": "TestValidateDNSWildcardPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    568,
+    568
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    567,
+    567
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestValidateDNSWildcardPattern.test_must_have_at_least_three_parts#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_must_have_at_least_three_parts",
+   "test_class": "TestValidateDNSWildcardPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    589,
+    589
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "CertificateError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "CertificateError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    588,
+    588
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestIPAddressPattern.test_invalid_ip#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_invalid_ip",
+   "test_class": "TestIPAddressPattern"
+  },
+  {
+   "api": "pytest",
+   "binding": "ei",
+   "body_span": [
+    719,
+    719
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_hazmat.py",
+   "form": "with",
+   "header_span": [
+    718,
+    718
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_hazmat.py::TestVerificationError.test_repr_str#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert repr(ei.value) == str(ei.value)",
+    "assert str(ei.value) != ''"
+   ],
+   "test": "test_repr_str",
+   "test_class": "TestVerificationError"
+  },
+  {
+   "api": "pytest",
+   "binding": "ei",
+   "body_span": [
+    65,
+    65
+   ],
+   "entry_calls": [
+    "verify_hostname"
+   ],
+   "exclusion": [],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_pyopenssl.py",
+   "form": "with",
+   "header_span": [
+    64,
+    64
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_pyopenssl.py::TestPublicAPI.test_verify_hostname_fail#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert [DNSMismatch(mismatched_id=DNS_ID('google.com'))] == ei.value.errors"
+   ],
+   "test": "test_verify_hostname_fail",
+   "test_class": "TestPublicAPI"
+  },
+  {
+   "api": "pytest",
+   "binding": "ei",
+   "body_span": [
+    96,
+    96
+   ],
+   "entry_calls": [
+    "verify_ip_address"
+   ],
+   "exclusion": [],
+   "expected": [
+    "VerificationError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "VerificationError",
+   "file": "tests/test_pyopenssl.py",
+   "form": "with",
+   "header_span": [
+    95,
+    95
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_pyopenssl.py::TestPublicAPI.test_verify_ip_address_fail#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert [IPAddressMismatch(mismatched_id=IPAddress_ID(ip))] == ei.value.errors"
+   ],
+   "test": "test_verify_ip_address_fail",
+   "test_class": "TestPublicAPI"
+  }
+ ],
+ "counts": {
+  "blocks": 37,
+  "entry_point_blocks": 12,
+  "included": 12
+ },
+ "test_files": [
+  "tests/test_cryptography.py",
+  "tests/test_hazmat.py",
+  "tests/test_pyopenssl.py"
+ ],
+ "test_files_sha256": {
+  "tests/test_cryptography.py": "4622712544322b5a51e1f3fde6198676e59f6328d658d73b84af2d8195861611",
+  "tests/test_hazmat.py": "4dd98eb6bdb96b15a9dca2b84133f7344a7eefd66cf5c241c44b4196ecbba0e5",
+  "tests/test_pyopenssl.py": "31018e195aa036105315fdd5c79adb24b488576170873de4103c4a96fd3d02d9"
+ }
+}

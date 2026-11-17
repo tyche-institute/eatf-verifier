@@ -1,0 +1,2487 @@
+{
+ "blocks": [
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    132,
+    132
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    131,
+    131
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestVerifyingKeyFromString.test_ed25519_VerifyingKey_from_string_imported#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ed25519_VerifyingKey_from_string_imported",
+   "test_class": "TestVerifyingKeyFromString"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    210,
+    212
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnexpectedDER",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    209,
+    209
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_load_key_with_explicit_with_explicit_disabled#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_load_key_with_explicit_with_explicit_disabled",
+   "test_class": "TestVerifyingKeyFromDer"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    216,
+    216
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    215,
+    215
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_load_key_with_disabled_format#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "enabled (raw) encodings"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_load_key_with_disabled_format",
+   "test_class": "TestVerifyingKeyFromDer"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    303,
+    303
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    302,
+    302
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_edwards_from_public_point#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "incompatible with Edwards"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_edwards_from_public_point",
+   "test_class": "TestVerifyingKeyFromDer"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    323,
+    323
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnexpectedDER",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    322,
+    322
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_parse_malfomed_eddsa_der_pubkey#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "trailing junk after public key"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_parse_malfomed_eddsa_der_pubkey",
+   "test_class": "TestVerifyingKeyFromDer"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    329,
+    329
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    328,
+    328
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_edwards_from_public_key_recovery#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "unsupported for Edwards"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_edwards_from_public_key_recovery",
+   "test_class": "TestVerifyingKeyFromDer"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    335,
+    337
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    334,
+    334
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_edwards_from_public_key_recovery_with_digest#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "unsupported for Edwards"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_edwards_from_public_key_recovery_with_digest",
+   "test_class": "TestVerifyingKeyFromDer"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    439,
+    439
+   ],
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    438,
+    438
+   ],
+   "included": true,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_ed25519_sig_verify_malformed#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ed25519_sig_verify_malformed",
+   "test_class": "TestVerifyingKeyFromDer"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    604,
+    606
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnexpectedDER",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    603,
+    603
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestSigningKey.test_decoding_explicit_curve_parameters_with_explicit_disabled#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decoding_explicit_curve_parameters_with_explicit_disabled",
+   "test_class": "TestSigningKey"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    681,
+    681
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnexpectedDER",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    680,
+    680
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestSigningKey.test_ed25519_from_der_bad_alg_id_params#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Non NULL parameters"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ed25519_from_der_bad_alg_id_params",
+   "test_class": "TestSigningKey"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    695,
+    695
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnexpectedDER",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    694,
+    694
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestSigningKey.test_ed25519_from_der_junk_after_priv_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "trailing junk after the encoded private key"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ed25519_from_der_junk_after_priv_key",
+   "test_class": "TestSigningKey"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    726,
+    726
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    725,
+    725
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestSigningKey.test_ed25519_sign_digest_deterministic#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Method unsupported for Edwards"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ed25519_sign_digest_deterministic",
+   "test_class": "TestSigningKey"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    737,
+    737
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    736,
+    736
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestSigningKey.test_ed25519_sign_digest#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Method unsupported for Edwards"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ed25519_sign_digest",
+   "test_class": "TestSigningKey"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    748,
+    748
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    747,
+    747
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestSigningKey.test_ed25519_sign_number#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Method unsupported for Edwards"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ed25519_sign_number",
+   "test_class": "TestSigningKey"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    762,
+    762
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    761,
+    761
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestSigningKey.test_ed25519_to_der_ssleay#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Only PKCS#8 format"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ed25519_to_der_ssleay",
+   "test_class": "TestSigningKey"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    814,
+    814
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_keys.py",
+   "form": "with",
+   "header_span": [
+    813,
+    813
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_keys.py::TestSigningKey.test_ed25519_from_secret_exponent#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "don't support setting the secret"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_ed25519_from_secret_exponent",
+   "test_class": "TestSigningKey"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    177,
+    177
+   ],
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "src/ecdsa/test_malformed_sigs.py",
+   "form": "with",
+   "header_span": [
+    176,
+    176
+   ],
+   "included": true,
+   "k": 0,
+   "key": "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_fuzzed_der_signatures",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    224,
+    224
+   ],
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "src/ecdsa/test_malformed_sigs.py",
+   "form": "with",
+   "header_span": [
+    223,
+    223
+   ],
+   "included": true,
+   "k": 0,
+   "key": "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_random_der_ecdsa_sig_value",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    322,
+    322
+   ],
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "src/ecdsa/test_malformed_sigs.py",
+   "form": "with",
+   "header_span": [
+    321,
+    321
+   ],
+   "included": true,
+   "k": 0,
+   "key": "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_random_der_as_signature",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    340,
+    340
+   ],
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "src/ecdsa/test_malformed_sigs.py",
+   "form": "with",
+   "header_span": [
+    339,
+    339
+   ],
+   "included": true,
+   "k": 0,
+   "key": "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_random_bytes_as_signature",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    378,
+    378
+   ],
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "src/ecdsa/test_malformed_sigs.py",
+   "form": "with",
+   "header_span": [
+    377,
+    377
+   ],
+   "included": true,
+   "k": 0,
+   "key": "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_fuzzed_string_signatures",
+   "test_class": null
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadSignatureError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadSignatureError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "call",
+   "header_span": [
+    110,
+    110
+   ],
+   "included": true,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_basic#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_basic",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "call",
+   "header_span": [
+    145,
+    145
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_bad_usage#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_bad_usage",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "call",
+   "header_span": [
+    146,
+    146
+   ],
+   "included": false,
+   "k": 1,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_bad_usage#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_bad_usage",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "call",
+   "header_span": [
+    309,
+    311
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_pubkey_strings#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pubkey_strings",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnknownCurveError"
+   ],
+   "expected": [
+    "UnknownCurveError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "UnknownCurveError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "call",
+   "header_span": [
+    330,
+    330
+   ],
+   "included": false,
+   "k": 1,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_pubkey_strings#1",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_pubkey_strings",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    358,
+    358
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    357,
+    357
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_vk_to_der_with_invalid_point_encoding#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_vk_to_der_with_invalid_point_encoding",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    364,
+    364
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    363,
+    363
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_to_der_with_invalid_point_encoding#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_to_der_with_invalid_point_encoding",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    376,
+    376
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    375,
+    375
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_vk_from_der_garbage_after_curve_oid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_vk_from_der_garbage_after_curve_oid",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    386,
+    386
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    385,
+    385
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_vk_from_der_invalid_key_type#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_vk_from_der_invalid_key_type",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    396,
+    396
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    395,
+    395
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_vk_from_der_garbage_after_point_string#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_vk_from_der_garbage_after_point_string",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    406,
+    406
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    405,
+    405
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_vk_from_der_invalid_bitstring#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_vk_from_der_invalid_bitstring",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    416,
+    416
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    415,
+    415
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_vk_from_der_with_invalid_length_of_encoding#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_vk_from_der_with_invalid_length_of_encoding",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    426,
+    426
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    425,
+    425
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_vk_from_der_with_raw_encoding#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_vk_from_der_with_raw_encoding",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    542,
+    542
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedSignature"
+   ],
+   "expected": [
+    "MalformedSignature"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedSignature",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    541,
+    541
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sig_decode_strings_with_invalid_count#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sig_decode_strings_with_invalid_count",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    546,
+    546
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedSignature"
+   ],
+   "expected": [
+    "MalformedSignature"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedSignature",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    545,
+    545
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sig_decode_strings_with_wrong_r_len#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sig_decode_strings_with_wrong_r_len",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    550,
+    550
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedSignature"
+   ],
+   "expected": [
+    "MalformedSignature"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedSignature",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    549,
+    549
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sig_decode_strings_with_wrong_s_len#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sig_decode_strings_with_wrong_s_len",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    557,
+    557
+   ],
+   "entry_calls": [
+    "verify_digest"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadDigestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadDigestError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    556,
+    556
+   ],
+   "included": true,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_verify_with_too_long_input#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_verify_with_too_long_input",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    561,
+    561
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    560,
+    560
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_secret_exponent_with_wrong_sec_exponent#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_secret_exponent_with_wrong_sec_exponent",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    565,
+    565
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    564,
+    564
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_string_with_wrong_len_string#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_string_with_wrong_len_string",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    572,
+    572
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    571,
+    571
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_der_with_junk_after_sequence#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_der_with_junk_after_sequence",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    579,
+    579
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    578,
+    578
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_der_with_wrong_version#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_der_with_wrong_version",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    591,
+    591
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    590,
+    590
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_der_invalid_const_tag#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_der_invalid_const_tag",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    603,
+    603
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    602,
+    602
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_der_garbage_after_privkey_oid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_der_garbage_after_privkey_oid",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    631,
+    631
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    630,
+    630
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_p8_der_with_wrong_version#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_p8_der_with_wrong_version",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    646,
+    646
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    645,
+    645
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_p8_der_with_wrong_algorithm#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_p8_der_with_wrong_algorithm",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    663,
+    663
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    662,
+    662
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_p8_der_with_trailing_junk_after_algorithm#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_p8_der_with_trailing_junk_after_algorithm",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    685,
+    685
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects UnexpectedDER"
+   ],
+   "expected": [
+    "UnexpectedDER"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "der.UnexpectedDER",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    684,
+    684
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sk_from_p8_der_with_trailing_junk_after_key#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sk_from_p8_der_with_trailing_junk_after_key",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    691,
+    691
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "BadDigestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadDigestError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    690,
+    690
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_sign_with_too_long_hash#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_with_too_long_hash",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": "exp",
+   "body_span": [
+    842,
+    842
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    841,
+    841
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_raw_decoding_with_blocked_format#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "hybrid"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_raw_decoding_with_blocked_format",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": "e",
+   "body_span": [
+    848,
+    848
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ValueError"
+   ],
+   "expected": [
+    "ValueError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ValueError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    847,
+    847
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_decoding_with_unknown_format#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Only uncompressed, compressed"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_decoding_with_unknown_format",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": "exp",
+   "body_span": [
+    860,
+    860
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    859,
+    859
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_uncompressed_decoding_with_blocked_format#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid X9.62 encoding"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_uncompressed_decoding_with_blocked_format",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": "exp",
+   "body_span": [
+    872,
+    872
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    871,
+    871
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_hybrid_decoding_with_blocked_format#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "Invalid X9.62 encoding"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_hybrid_decoding_with_blocked_format",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": "exp",
+   "body_span": [
+    900,
+    900
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    899,
+    899
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_compressed_decoding_with_blocked_format#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_in",
+     "(hybrid, raw)"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_compressed_decoding_with_blocked_format",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    912,
+    912
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    911,
+    911
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_decoding_with_malformed_uncompressed#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decoding_with_malformed_uncompressed",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    922,
+    922
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    921,
+    921
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_decoding_with_malformed_compressed#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decoding_with_malformed_compressed",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    932,
+    932
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    931,
+    931
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_decoding_with_inconsistent_hybrid#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decoding_with_inconsistent_hybrid",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    943,
+    943
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    942,
+    942
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_decoding_with_inconsistent_hybrid_odd_point#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decoding_with_inconsistent_hybrid_odd_point",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    953,
+    953
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    952,
+    952
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_decoding_with_point_not_on_curve#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decoding_with_point_not_on_curve",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    958,
+    958
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    957,
+    957
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_decoding_with_point_at_infinity#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_decoding_with_point_at_infinity",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    964,
+    964
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    963,
+    963
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_not_lying_on_curve#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_not_lying_on_curve",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    975,
+    975
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    974,
+    974
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_from_string_with_invalid_curve_too_short_ver_key_len#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_from_string_with_invalid_curve_too_short_ver_key_len",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    986,
+    986
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects MalformedPointError"
+   ],
+   "expected": [
+    "MalformedPointError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "MalformedPointError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    985,
+    985
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_from_string_with_invalid_curve_too_long_ver_key_len#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_from_string_with_invalid_curve_too_long_ver_key_len",
+   "test_class": "ECDSA"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects SubprocessError"
+   ],
+   "expected": [
+    "SubprocessError"
+   ],
+   "expected_kinds": [
+    "definition"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "SubprocessError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "call",
+   "header_span": [
+    1596,
+    1601
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::OpenSSL.do_test_to_openssl#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "do_test_to_openssl",
+   "test_class": "OpenSSL"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1687,
+    1690
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects SubprocessError"
+   ],
+   "expected": [
+    "SubprocessError"
+   ],
+   "expected_kinds": [
+    "definition"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "SubprocessError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    1686,
+    1686
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::OpenSSL.do_eddsa_test_to_openssl#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "do_eddsa_test_to_openssl",
+   "test_class": "OpenSSL"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1783,
+    1788
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "BadDigestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadDigestError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    1782,
+    1782
+   ],
+   "included": false,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::TooSmallCurve.test_sign_too_small_curve_dont_allow_truncate_raises#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_too_small_curve_dont_allow_truncate_raises",
+   "test_class": "TooSmallCurve"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": [
+    1805,
+    1811
+   ],
+   "entry_calls": [
+    "verify"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadDigestError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "BadDigestError",
+   "file": "src/ecdsa/test_pyecdsa.py",
+   "form": "with",
+   "header_span": [
+    1804,
+    1804
+   ],
+   "included": true,
+   "k": 0,
+   "key": "src/ecdsa/test_pyecdsa.py::TooSmallCurve.test_verify_too_small_curve_dont_allow_truncate_raises#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_verify_too_small_curve_dont_allow_truncate_raises",
+   "test_class": "TooSmallCurve"
+  }
+ ],
+ "counts": {
+  "blocks": 67,
+  "entry_point_blocks": 9,
+  "included": 9
+ },
+ "test_files": [
+  "src/ecdsa/test_keys.py",
+  "src/ecdsa/test_malformed_sigs.py",
+  "src/ecdsa/test_pyecdsa.py"
+ ],
+ "test_files_sha256": {
+  "src/ecdsa/test_keys.py": "ade4362ad7ceb0035ae7d0aabef4568d99be49a59fb1c259549684f511722fde",
+  "src/ecdsa/test_malformed_sigs.py": "0e0d4392f833d6d3be2a167a7fd651963ca4cfc14162d95dde1ab55b684b2ccf",
+  "src/ecdsa/test_pyecdsa.py": "db3a167d1ff102a6a028e147549b7875365969cbb5cd3e09c571ff1c9500056f"
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "name": "supabase-auth",
+ "distribution": "supabase-auth",
+ "version": "2.34.1",
+ "repository": "https://github.com/supabase/supabase-py",
+ "repository_directory": "src/auth",
+ "tag": "v2.34.1",
+ "commit": "416bffd0d95662912b307a13f5956b91b61d0c74",
+ "release_source": "PyPI JSON interface, https://pypi.org/pypi/supabase-auth/json and https://pypi.org/pypi/supabase-auth/2.34.1/json, read 2026-11-17T13:52:02Z: 2.34.1 is the latest release that is not a pre-release, uploaded 2026-11-06T15:23:01Z, with no upload after it (the only pre-release is 3.0.0a1, 2026-04-09); its project_urls name the repository https://github.com/supabase/supabase-py and the directory src/auth. git ls-remote --tags of that repository, 2026-11-17T13:52:19Z: refs/tags/v2.34.1 is 416bffd0d95662912b307a13f5956b91b61d0c74. At that commit, src/auth/pyproject.toml, line 3, and src/auth/src/supabase_auth/version.py, line 1, give 2.34.1.",
+ "package": "supabase_auth",
+ "source_root": "src",
+ "package_source": "src/auth/pyproject.toml, line 2: name = \"supabase_auth\". The wheel supabase_auth-2.34.1-py3-none-any.whl of PyPI (SHA-256 45aa3334335926a8940beb89a9438386a9af0561d7315797e46c47b50d0c9620) holds the package supabase_auth: its 24 files are byte for byte the 24 files of src/auth/src/supabase_auth at the commit (compared 2026-11-17T13:57:04Z). Paths in this file are from the repository root.",
+ "entry_points": [
+  "get_claims"
+ ],
+ "entry_points_source": "sdk-compliance.yaml, lines 83-87: the feature auth.session.get_claims is implemented by AsyncGoTrueClient.get_claims and SyncGoTrueClient.get_claims. CHANGELOG.md, line 42: 'raise AuthInvalidJwtError for malformed JWTs in get_claims', and line 161: 'raise AuthInvalidJwtError when get_claims JWT has no exp'. src/auth/docs/source/api/client.rst, lines 4-9: the client class is the entry point of the library and is documented with its members. get_claims (src/auth/src/supabase_auth/_async/gotrue_client.py, lines 1348-1391, and _sync/gotrue_client.py, lines 1338-1381) takes a JWT and a key set, checks the structure and the exp claim of the JWT and verifies its signature. Entry points are names, so the same name elsewhere in the package counts too.",
+ "rejection_bases": [
+  "AuthError"
+ ],
+ "rejection_bases_source": "src/auth/src/supabase_auth/errors.py, line 93: class AuthError(Exception), from which every exception class of the package inherits (lines 108-259). AuthInvalidJwtError, the class that CHANGELOG.md, lines 42 and 161, names for get_claims, inherits from CustomAuthError (line 251), a subclass of AuthError (line 131).",
+ "test_directories_source": "src/auth/Makefile, lines 9-10: the target pytest runs 'uv run --package supabase_auth pytest --cov=./ --cov-report=xml --cov-report=html -vv' in src/auth with no path, and src/auth/pyproject.toml, lines 54-55 ([tool.pytest.ini_options]), sets no testpaths; so pytest collects from src/auth, whose test files (test_*.py) all lie under tests/.",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "suite_runs_source": "src/auth/Makefile, lines 5 and 9-10: the target tests runs the target pytest, 1 pytest call in src/auth with no path, whose test files all lie under tests/; Makefile, lines 71-72, and .github/workflows/ci.yml, lines 62 and 104-105, run it as 'make auth.tests'. The target pytest first runs the target start-infra (src/auth/Makefile, lines 19-20), which starts the test servers of src/auth/infra/docker-compose.yml on localhost; the suite runs of the toolkit start no server.",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "src",
+  "tests",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3",
+ "subject_files": [
+  "supabase_auth/__init__.py",
+  "supabase_auth/_async/__init__.py",
+  "supabase_auth/_async/gotrue_admin_api.py",
+  "supabase_auth/_async/gotrue_admin_mfa_api.py",
+  "supabase_auth/_async/gotrue_admin_oauth_api.py",
+  "supabase_auth/_async/gotrue_base_api.py",
+  "supabase_auth/_async/gotrue_client.py",
+  "supabase_auth/_async/gotrue_mfa_api.py",
+  "supabase_auth/_async/storage.py",
+  "supabase_auth/_sync/__init__.py",
+  "supabase_auth/_sync/gotrue_admin_api.py",
+  "supabase_auth/_sync/gotrue_admin_mfa_api.py",
+  "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+  "supabase_auth/_sync/gotrue_base_api.py",
+  "supabase_auth/_sync/gotrue_client.py",
+  "supabase_auth/_sync/gotrue_mfa_api.py",
+  "supabase_auth/_sync/storage.py",
+  "supabase_auth/constants.py",
+  "supabase_auth/errors.py",
+  "supabase_auth/helpers.py",
+  "supabase_auth/timer.py",
+  "supabase_auth/types.py",
+  "supabase_auth/version.py"
+ ],
+ "observed_files": [],
+ "tests": [
+  "tests/_async/test_client_flows.py",
+  "tests/_async/test_get_claims.py",
+  "tests/_async/test_gotrue.py",
+  "tests/_async/test_jwks_and_refresh.py",
+  "tests/_sync/test_client_flows.py",
+  "tests/_sync/test_get_claims.py",
+  "tests/_sync/test_gotrue.py",
+  "tests/_sync/test_jwks_and_refresh.py"
+ ],
+ "scope_counts": {
+  "test_files_in_test_directories": 40,
+  "blocks_in_test_directories": 81,
+  "test_files_with_an_included_block": 8
+ }
+}

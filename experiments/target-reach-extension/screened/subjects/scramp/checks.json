@@ -1,0 +1,5709 @@
+{
+ "checks": [
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "IterationCount.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "int",
+    "type",
+    "value"
+   ],
+   "guards": [
+    "type(value) is not int"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.IterationCount.__init__#1",
+   "lines": [
+    [
+     39,
+     39
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The value must be an int"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "IterationCount",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The value must be an int",
+   "template_parts": [
+    "The value must be an int"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "IterationCount.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "MAX_ITERATION_COUNT",
+    "self",
+    "value"
+   ],
+   "guards": [
+    "value > self.MAX_ITERATION_COUNT"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.IterationCount.__init__#2",
+   "lines": [
+    [
+     41,
+     44
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "IterationCount",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The value must not be > {*}",
+   "template_parts": [
+    "The value must not be > ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "IterationCount.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "MIN_ITERATION_COUNT",
+    "self",
+    "value"
+   ],
+   "guards": [
+    "value < self.MIN_ITERATION_COUNT"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.IterationCount.__init__#3",
+   "lines": [
+    [
+     46,
+     49
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "IterationCount",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The value must not be < {*}",
+   "template_parts": [
+    "The value must not be < ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "IterationCount.from_str",
+   "function_name": "from_str",
+   "guard_words": [
+    "c",
+    "isascii",
+    "isdigit"
+   ],
+   "guards": [
+    "not (c.isascii() and c.isdigit())"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.IterationCount.from_str#1",
+   "lines": [
+    [
+     70,
+     73
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The iteration count can only contain ASCII digits"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "IterationCount",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The iteration count can only contain ASCII digits",
+   "template_parts": [
+    "The iteration count can only contain ASCII digits"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "IterationCount.from_str",
+   "function_name": "from_str",
+   "guard_words": [
+    "len",
+    "value_str"
+   ],
+   "guards": [
+    "len(value_str) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.IterationCount.from_str#2",
+   "lines": [
+    [
+     75,
+     77
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The iteration count must not be empty"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "IterationCount",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The iteration count must not be empty",
+   "template_parts": [
+    "The iteration count must not be empty"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "IterationCount.from_str",
+   "function_name": "from_str",
+   "guard_words": [
+    "0",
+    "value_str"
+   ],
+   "guards": [
+    "value_str[0] == '0'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.IterationCount.from_str#3",
+   "lines": [
+    [
+     80,
+     83
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The iteration count must not begin with a zero"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "IterationCount",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The iteration count must not begin with a zero",
+   "template_parts": [
+    "The iteration count must not begin with a zero"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "IterationCount.from_str",
+   "function_name": "from_str",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.IterationCount.from_str#4",
+   "lines": [
+    [
+     87,
+     87
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Server iteration count is not valid"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "IterationCount",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Server iteration count is not valid",
+   "template_parts": [
+    "Server iteration count is not valid"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Salt.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "bytes",
+    "salt",
+    "type"
+   ],
+   "guards": [
+    "not type(salt) is bytes"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Salt.__init__#1",
+   "lines": [
+    [
+     97,
+     100
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Salt",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'salt' must be of type bytes, but found type {*}",
+   "template_parts": [
+    "The 'salt' must be of type bytes, but found type ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Salt.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "MIN_LENGTH",
+    "len_salt",
+    "self"
+   ],
+   "guards": [
+    "len_salt < self.MIN_LENGTH"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Salt.__init__#2",
+   "lines": [
+    [
+     103,
+     107
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Salt",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'salt' is {*} bytes long, but it must be at least {*} bytes long",
+   "template_parts": [
+    "The 'salt' is ",
+    null,
+    " bytes long, but it must be at least ",
+    null,
+    " bytes long"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Nonce.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "isinstance",
+    "nonce",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(nonce, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Nonce.__init__#1",
+   "lines": [
+    [
+     132,
+     135
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Nonce",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'nonce' must be of type str, but found type {*}",
+   "template_parts": [
+    "The 'nonce' must be of type str, but found type ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Nonce.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    ",",
+    "all",
+    "c",
+    "nonce",
+    "ord"
+   ],
+   "guards": [
+    "not all((33 <= ord(c) <= 126 and c != ',' for c in nonce))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Nonce.__init__#2",
+   "lines": [
+    [
+     137,
+     139
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Nonce contains invalid characters"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Nonce",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Nonce contains invalid characters",
+   "template_parts": [
+    "Nonce contains invalid characters"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Nonce.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "len",
+    "nonce"
+   ],
+   "guards": [
+    "len(nonce) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Nonce.__init__#3",
+   "lines": [
+    [
+     142,
+     144
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "An empty string isn't allowed"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Nonce",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "An empty string isn't allowed",
+   "template_parts": [
+    "An empty string isn't allowed"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "CbName.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "cb_name",
+    "isinstance",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(cb_name, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.CbName.__init__#1",
+   "lines": [
+    [
+     181,
+     184
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "CbName",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'cb_name' must be of type str, but found type {*}",
+   "template_parts": [
+    "The 'cb_name' must be of type str, but found type ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "CbName.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    ".-",
+    "c",
+    "isalpha",
+    "isascii",
+    "isdigit"
+   ],
+   "guards": [
+    "not (c.isascii() and (c.isalpha() or c.isdigit() or c in '.-'))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.CbName.__init__#2",
+   "lines": [
+    [
+     187,
+     191
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The channel binding name must contain only ASCII characters that are alphabetic or a digit or '.' or '-'"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "CbName",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The channel binding name must contain only ASCII characters that are alphabetic or a digit or '.' or '-'",
+   "template_parts": [
+    "The channel binding name must contain only ASCII characters that are alphabetic or a digit or '.' or '-'"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "CbName.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "UNSUPPORTED_TYPES",
+    "cb_name",
+    "self"
+   ],
+   "guards": [
+    "cb_name in self.UNSUPPORTED_TYPES"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.CbName.__init__#3",
+   "lines": [
+    [
+     193,
+     197
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "CbName",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The channel binding types {*} are not supported by Scramp. Please see the README for details",
+   "template_parts": [
+    "The channel binding types ",
+    null,
+    " are not supported by Scramp. Please see the README for details"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "CbName.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "SUPPORTED_TYPES",
+    "cb_name",
+    "self"
+   ],
+   "guards": [
+    "cb_name not in self.SUPPORTED_TYPES"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.CbName.__init__#4",
+   "lines": [
+    [
+     199,
+     204
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "CbName",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The channel binding type is not recognised by Scramp. The recognised types are {*}",
+   "template_parts": [
+    "The channel binding type is not recognised by Scramp. The recognised types are ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "CBindData.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "bytes",
+    "data",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(data, bytes)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.CBindData.__init__#1",
+   "lines": [
+    [
+     220,
+     223
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "CBindData",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'data' must be of type bytes, but found type {*}",
+   "template_parts": [
+    "The 'data' must be of type bytes, but found type ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "CBindData.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "data",
+    "len"
+   ],
+   "guards": [
+    "len(data) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.CBindData.__init__#2",
+   "lines": [
+    [
+     225,
+     228
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The 'data' can't be of zero length."
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "CBindData",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'data' can't be of zero length.",
+   "template_parts": [
+    "The 'data' can't be of zero length."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "CBindData.from_der",
+   "function_name": "from_der",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.CBindData.from_der#1",
+   "lines": [
+    [
+     243,
+     246
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Problem loading certificate from DER"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "CBindData",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Problem loading certificate from DER",
+   "template_parts": [
+    "Problem loading certificate from DER"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "CBindData.from_der",
+   "function_name": "from_der",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.CBindData.from_der#2",
+   "lines": [
+    [
+     251,
+     254
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Problem getting certificate algorithm"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "CBindData",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Problem getting certificate algorithm",
+   "template_parts": [
+    "Problem getting certificate algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "CBindData.from_der",
+   "function_name": "from_der",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.CBindData.from_der#3",
+   "lines": [
+    [
+     262,
+     265
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "CBindData",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Hash algorithm {*} not supported by hashlib",
+   "template_parts": [
+    "Hash algorithm ",
+    null,
+    " not supported by hashlib"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_check_stage",
+   "function_name": "_check_stage",
+   "guard_words": [
+    "next_stage"
+   ],
+   "guards": [
+    "next_stage != 1"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core._check_stage#1",
+   "lines": [
+    [
+     289,
+     289
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The method {*} must be called first.",
+   "template_parts": [
+    "The method ",
+    null,
+    " must be called first."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_check_stage",
+   "function_name": "_check_stage",
+   "guard_words": [
+    "current_stage"
+   ],
+   "guards": [
+    "current_stage == 4"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._check_stage#2",
+   "lines": [
+    [
+     291,
+     291
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The authentication sequence has already finished."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The authentication sequence has already finished.",
+   "template_parts": [
+    "The authentication sequence has already finished."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_check_stage",
+   "function_name": "_check_stage",
+   "guard_words": [
+    "current_stage",
+    "next_stage"
+   ],
+   "guards": [
+    "next_stage != current_stage + 1"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core._check_stage#3",
+   "lines": [
+    [
+     293,
+     296
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The next method to be called is {*}, not this method.",
+   "template_parts": [
+    "The next method to be called is ",
+    null,
+    ", not this method."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ChannelBinding.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "CbName",
+    "isinstance",
+    "name"
+   ],
+   "guards": [
+    "not isinstance(name, CbName)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ChannelBinding.__init__#1",
+   "lines": [
+    [
+     318,
+     318
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The channel binding name must be a CbName object."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ChannelBinding",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The channel binding name must be a CbName object.",
+   "template_parts": [
+    "The channel binding name must be a CbName object."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ChannelBinding.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "CBindData",
+    "data",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(data, CBindData)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ChannelBinding.__init__#2",
+   "lines": [
+    [
+     322,
+     322
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The channel binding data must be a CBindData object."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ChannelBinding",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The channel binding data must be a CBindData object.",
+   "template_parts": [
+    "The channel binding data must be a CBindData object."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "isinstance",
+    "mechanism",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(mechanism, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramMechanism.__init__#1",
+   "lines": [
+    [
+     336,
+     336
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The mechanism name must be a str"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The mechanism name must be a str",
+   "template_parts": [
+    "The mechanism name must be a str"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "KeyError"
+   ],
+   "guards": [
+    "except KeyError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.ScramMechanism.__init__#2",
+   "lines": [
+    [
+     341,
+     344
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The mechanism name is not supported. The supported mechanisms are {*}",
+   "template_parts": [
+    "The mechanism name is not supported. The supported mechanisms are ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_auth_info",
+   "function_name": "make_auth_info",
+   "guard_words": [
+    "i",
+    "iteration_count",
+    "self"
+   ],
+   "guards": [
+    "i < self.iteration_count"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.ScramMechanism.make_auth_info#1",
+   "lines": [
+    [
+     362,
+     365
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The iteration count must not be < {*}",
+   "template_parts": [
+    "The iteration count must not be < ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_server",
+   "function_name": "make_server",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramMechanism.make_server#1",
+   "lines": [
+    [
+     380,
+     383
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Channel binding must be a tuple with two items"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Channel binding must be a tuple with two items",
+   "template_parts": [
+    "Channel binding must be a tuple with two items"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_server",
+   "function_name": "make_server",
+   "guard_words": [
+    "SSLObject",
+    "SSLSocket",
+    "d_so_st",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(d_so_st, (SSLSocket, SSLObject))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramMechanism.make_server#2",
+   "lines": [
+    [
+     391,
+     396
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "If the channel type is 'tls-unique', the type of the second item of the channel_binding tuple must be bytes or ssl.SSLSocket"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "If the channel type is 'tls-unique', the type of the second item of the channel_binding tuple must be bytes or ssl.SSLSocket",
+   "template_parts": [
+    "If the channel type is 'tls-unique', the type of the second item of the channel_binding tuple must be bytes or ssl.SSLSocket"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_server",
+   "function_name": "make_server",
+   "guard_words": [
+    "d_so_st",
+    "isinstance",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(d_so_st, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramMechanism.make_server#3",
+   "lines": [
+    [
+     402,
+     407
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "If the channel type is 'tls-server-end-point', the type of the second item of the channel_binding tuple must be bytes or a str of the PEM certificate file"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "If the channel type is 'tls-server-end-point', the type of the second item of the channel_binding tuple must be bytes or a str of the PEM certificate file",
+   "template_parts": [
+    "If the channel type is 'tls-server-end-point', the type of the second item of the channel_binding tuple must be bytes or a str of the PEM certificate file"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_server",
+   "function_name": "make_server",
+   "guard_words": [
+    "UnicodeError"
+   ],
+   "guards": [
+    "except UnicodeError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramMechanism.make_server#4",
+   "lines": [
+    [
+     411,
+     415
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The PEM encoded certificate str must only contain ASCII characters"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The PEM encoded certificate str must only contain ASCII characters",
+   "template_parts": [
+    "The PEM encoded certificate str must only contain ASCII characters"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_server",
+   "function_name": "make_server",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramMechanism.make_server#5",
+   "lines": [
+    [
+     425,
+     428
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The PEM encoded certificate str doesn't seem to be valid"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The PEM encoded certificate str doesn't seem to be valid",
+   "template_parts": [
+    "The PEM encoded certificate str doesn't seem to be valid"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_server",
+   "function_name": "make_server",
+   "guard_words": [
+    "der"
+   ],
+   "guards": [
+    "der is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramMechanism.make_server#6",
+   "lines": [
+    [
+     431,
+     434
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No CERTIFICATE block found in PEM data"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No CERTIFICATE block found in PEM data",
+   "template_parts": [
+    "No CERTIFICATE block found in PEM data"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_server",
+   "function_name": "make_server",
+   "guard_words": [
+    "CbName",
+    "cb_name",
+    "tls-server-end-point"
+   ],
+   "guards": [
+    "cb_name == CbName('tls-server-end-point')"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramMechanism.make_server#7",
+   "lines": [
+    [
+     439,
+     441
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Channel binding name not recognized"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramMechanism",
+   "raise_numbers": [
+    7
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Channel binding name not recognized",
+   "template_parts": [
+    "Channel binding name not recognized"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "isinstance",
+    "list",
+    "mechanisms",
+    "tuple"
+   ],
+   "guards": [
+    "not isinstance(mechanisms, (list, tuple))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.ScramClient.__init__#1",
+   "lines": [
+    [
+     462,
+     465
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ScramClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "'{*}' The 'mechanisms' parameter must be a list or tuple of mechanism names.",
+   "template_parts": [
+    "'",
+    null,
+    "' The 'mechanisms' parameter must be a list or tuple of mechanism names."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "len",
+    "mechanisms"
+   ],
+   "guards": [
+    "not len(mechanisms) > 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramClient.__init__#2",
+   "lines": [
+    [
+     467,
+     469
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The 'mechanisms' parameter must contain at least one mechanism name"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ScramClient",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'mechanisms' parameter must contain at least one mechanism name",
+   "template_parts": [
+    "The 'mechanisms' parameter must contain at least one mechanism name"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramClient.__init__#3",
+   "lines": [
+    [
+     477,
+     480
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Channel binding must be a tuple with two items"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramClient",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Channel binding must be a tuple with two items",
+   "template_parts": [
+    "Channel binding must be a tuple with two items"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "der"
+   ],
+   "guards": [
+    "der is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramClient.__init__#4",
+   "lines": [
+    [
+     494,
+     497
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "There is no peer certificate for the SSL socket"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramClient",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "There is no peer certificate for the SSL socket",
+   "template_parts": [
+    "There is no peer certificate for the SSL socket"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "CbName",
+    "cb_name",
+    "tls-server-end-point"
+   ],
+   "guards": [
+    "cb_name == CbName('tls-server-end-point')"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramClient.__init__#5",
+   "lines": [
+    [
+     501,
+     503
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Channel binding name not recognized"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramClient",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Channel binding name not recognized",
+   "template_parts": [
+    "Channel binding name not recognized"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "SSLObject",
+    "SSLSocket",
+    "d_s",
+    "isinstance"
+   ],
+   "guards": [
+    "isinstance(d_s, (SSLSocket, SSLObject))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramClient.__init__#6",
+   "lines": [
+    [
+     505,
+     509
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The second item of the channel_binding tuple must be of type bytes or ssl.SSLSocket"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramClient",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The second item of the channel_binding tuple must be of type bytes or ssl.SSLSocket",
+   "template_parts": [
+    "The second item of the channel_binding tuple must be of type bytes or ssl.SSLSocket"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramClient.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "len",
+    "mechs"
+   ],
+   "guards": [
+    "len(mechs) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramClient.__init__#7",
+   "lines": [
+    [
+     516,
+     519
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The mechanisms in the 'mechanisms' parameter all require channel binding but a 'channel_binding' parameter hasn't been provided"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ScramClient",
+   "raise_numbers": [
+    7
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The mechanisms in the 'mechanisms' parameter all require channel binding but a 'channel_binding' parameter hasn't been provided",
+   "template_parts": [
+    "The mechanisms in the 'mechanisms' parameter all require channel binding but a 'channel_binding' parameter hasn't been provided"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramServer._set_mechanism",
+   "function_name": "_set_mechanism",
+   "guard_words": [
+    "cb",
+    "mechanism",
+    "self",
+    "use_binding"
+   ],
+   "guards": [
+    "mechanism.use_binding and self.cb is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramServer._set_mechanism#1",
+   "lines": [
+    [
+     598,
+     601
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The mechanism requires channel binding, and so channel_binding can't be None."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ScramServer",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The mechanism requires channel binding, and so channel_binding can't be None.",
+   "template_parts": [
+    "The mechanism requires channel binding, and so channel_binding can't be None."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "ScramServer.set_client_first",
+   "function_name": "set_client_first",
+   "guard_words": [
+    "client_first",
+    "isinstance",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(client_first, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.ScramServer.set_client_first#1",
+   "lines": [
+    [
+     612,
+     615
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The client_first message must be a str"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramServer",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The client_first message must be a str",
+   "template_parts": [
+    "The client_first message must be a str"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_check_client_key",
+   "function_name": "_check_client_key",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._check_client_key#1",
+   "lines": [
+    [
+     687,
+     689
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Can't create client key."
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Can't create client key.",
+   "template_parts": [
+    "Can't create client key."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_check_client_key",
+   "function_name": "_check_client_key",
+   "guard_words": [
+    "compare_digest",
+    "key",
+    "stored_key"
+   ],
+   "guards": [
+    "not compare_digest(key, stored_key)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._check_client_key#2",
+   "lines": [
+    [
+     694,
+     694
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The client keys don't match."
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The client keys don't match.",
+   "template_parts": [
+    "The client keys don't match."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Gs2Header.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "CbName",
+    "NoneType",
+    "cb_name",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(cb_name, (NoneType, CbName))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Gs2Header.__init__#1",
+   "lines": [
+    [
+     702,
+     702
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "must be CbName or None"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "Gs2Header",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "must be CbName or None",
+   "template_parts": [
+    "must be CbName or None"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Gs2Header.__str__",
+   "function_name": "__str__",
+   "guard_words": [
+    "gs2_char",
+    "p",
+    "self"
+   ],
+   "guards": [
+    "self.gs2_char == 'p'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Gs2Header.__str__#1",
+   "lines": [
+    [
+     713,
+     713
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid GS2 char"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "Gs2Header",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Invalid GS2 char",
+   "template_parts": [
+    "Invalid GS2 char"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Gs2Header.from_str",
+   "function_name": "from_str",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Gs2Header.from_str#1",
+   "lines": [
+    [
+     738,
+     741
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The gs2-header must contain exactly two commas"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Gs2Header",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The gs2-header must contain exactly two commas",
+   "template_parts": [
+    "The gs2-header must contain exactly two commas"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Gs2Header.from_str",
+   "function_name": "from_str",
+   "guard_words": [
+    "gs2_cbind_flag",
+    "p=",
+    "startswith"
+   ],
+   "guards": [
+    "gs2_cbind_flag.startswith('p=')"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Gs2Header.from_str#2",
+   "lines": [
+    [
+     755,
+     757
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "GS2 flag must be one of ('y', 'n', 'p=')"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Gs2Header",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "GS2 flag must be one of ('y', 'n', 'p=')",
+   "template_parts": [
+    "GS2 flag must be one of ('y', 'n', 'p=')"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Gs2Header.from_str",
+   "function_name": "from_str",
+   "guard_words": [
+    "",
+    "authzid"
+   ],
+   "guards": [
+    "authzid != ''"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Gs2Header.from_str#3",
+   "lines": [
+    [
+     760,
+     762
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The GS2 authzid must be empty"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Gs2Header",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The GS2 authzid must be empty",
+   "template_parts": [
+    "The GS2 authzid must be empty"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Gs2Header.from_str",
+   "function_name": "from_str",
+   "guard_words": [
+    "",
+    "trail"
+   ],
+   "guards": [
+    "trail != ''"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Gs2Header.from_str#4",
+   "lines": [
+    [
+     765,
+     768
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The gs2-header can't have characters after the last comma"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Gs2Header",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The gs2-header can't have characters after the last comma",
+   "template_parts": [
+    "The gs2-header can't have characters after the last comma"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "isinstance",
+    "msg",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(msg, str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Message.__init__#1",
+   "lines": [
+    [
+     788,
+     790
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "A message must be of type str"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "A message must be of type str",
+   "template_parts": [
+    "A message must be of type str"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "=",
+    "len",
+    "p"
+   ],
+   "guards": [
+    "len(p) < 2 or p[1] != '='"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Message.__init__#2",
+   "lines": [
+    [
+     794,
+     798
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Malformed {*} message. Attributes must be separated by a ',' and each attribute must start with a letter followed by a '='",
+   "template_parts": [
+    "Malformed ",
+    null,
+    " message. Attributes must be separated by a ',' and each attribute must start with a letter followed by a '='"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "isalpha",
+    "isascii",
+    "k"
+   ],
+   "guards": [
+    "not (k.isalpha() and k.isascii())"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Message.__init__#3",
+   "lines": [
+    [
+     801,
+     805
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Malformed {*} message. Attributes must be US-ASCII alpha characters.",
+   "template_parts": [
+    "Malformed ",
+    null,
+    " message. Attributes must be US-ASCII alpha characters."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "k",
+    "m"
+   ],
+   "guards": [
+    "k == 'm'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Message.__init__#4",
+   "lines": [
+    [
+     807,
+     811
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The 'm' attribute isn't supported by this version of the protocol."
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'm' attribute isn't supported by this version of the protocol.",
+   "template_parts": [
+    "The 'm' attribute isn't supported by this version of the protocol."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "k",
+    "m"
+   ],
+   "guards": [
+    "k in m"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Message.__init__#5",
+   "lines": [
+    [
+     813,
+     816
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Duplicate attributes not allowed in message"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Duplicate attributes not allowed in message",
+   "template_parts": [
+    "Duplicate attributes not allowed in message"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "",
+    "v"
+   ],
+   "guards": [
+    "v == ''"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Message.__init__#6",
+   "lines": [
+    [
+     820,
+     824
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Malformed {*} message. Attribute values must at least one character long",
+   "template_parts": [
+    "Malformed ",
+    null,
+    " message. Attribute values must at least one character long"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "\u0000",
+    "v"
+   ],
+   "guards": [
+    "'\\x00' in v"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Message.__init__#7",
+   "lines": [
+    [
+     826,
+     830
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    7
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Malformed {*} message. Attribute values can't contain the NUL character",
+   "template_parts": [
+    "Malformed ",
+    null,
+    " message. Attribute values can't contain the NUL character"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    ",",
+    "v"
+   ],
+   "guards": [
+    "',' in v"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Message.__init__#8",
+   "lines": [
+    [
+     832,
+     836
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    8
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Malformed {*} message. Attribute values can't contain the ',' character",
+   "template_parts": [
+    "Malformed ",
+    null,
+    " message. Attribute values can't contain the ',' character"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "attr_str",
+    "exp_strs"
+   ],
+   "guards": [
+    "attr_str not in exp_strs"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Message.__init__#9",
+   "lines": [
+    [
+     851,
+     855
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    9
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Malformed {*} message. Expected the attribute str to be one of {*} but found '{*}'{*}",
+   "template_parts": [
+    "Malformed ",
+    null,
+    " message. Expected the attribute str to be one of ",
+    null,
+    " but found '",
+    null,
+    "'",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Message.__init__#10",
+   "lines": [
+    [
+     876,
+     876
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The server returned an invalid error"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "Message",
+   "raise_numbers": [
+    10
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The server returned an invalid error",
+   "template_parts": [
+    "The server returned an invalid error"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Username.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ScramException",
+    "e"
+   ],
+   "guards": [
+    "except ScramException as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Username.__init__#1",
+   "lines": [
+    [
+     923,
+     923
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Username",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Username.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "len",
+    "self",
+    "username"
+   ],
+   "guards": [
+    "len(self.username) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.Username.__init__#2",
+   "lines": [
+    [
+     926,
+     928
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The username cannot be empty"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Username",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The username cannot be empty",
+   "template_parts": [
+    "The username cannot be empty"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_username_unescape",
+   "function_name": "_username_unescape",
+   "guard_words": [
+    "ESCAPE_COMMA",
+    "ESCAPE_EQUALS",
+    "i",
+    "username"
+   ],
+   "guards": [
+    "username[i:i + 3] not in (ESCAPE_EQUALS, ESCAPE_COMMA)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._username_unescape#1",
+   "lines": [
+    [
+     955,
+     958
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "An '=' in a username must be followed by '3D', or  '2C'"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "An '=' in a username must be followed by '3D', or  '2C'",
+   "template_parts": [
+    "An '=' in a username must be followed by '3D', or  '2C'"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "AuthFn.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "auth_fn",
+    "callable"
+   ],
+   "guards": [
+    "not callable(auth_fn)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.AuthFn.__init__#1",
+   "lines": [
+    [
+     965,
+     967
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The 'auth_fn' must be callable"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "AuthFn",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'auth_fn' must be callable",
+   "template_parts": [
+    "The 'auth_fn' must be callable"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "AuthFn.__call__",
+   "function_name": "__call__",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.AuthFn.__call__#1",
+   "lines": [
+    [
+     974,
+     974
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "auth_fn exception"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "AuthFn",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "auth_fn exception",
+   "template_parts": [
+    "auth_fn exception"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "AuthFn.__call__",
+   "function_name": "__call__",
+   "guard_words": [
+    "result"
+   ],
+   "guards": [
+    "result is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.AuthFn.__call__#2",
+   "lines": [
+    [
+     977,
+     977
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Unknown user"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "AuthFn",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unknown user",
+   "template_parts": [
+    "Unknown user"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "AuthFn.__call__",
+   "function_name": "__call__",
+   "guard_words": [
+    "isinstance",
+    "result",
+    "tuple"
+   ],
+   "guards": [
+    "not isinstance(result, tuple)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.AuthFn.__call__#3",
+   "lines": [
+    [
+     980,
+     982
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "auth_fun must return None or a tuple"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "AuthFn",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "auth_fun must return None or a tuple",
+   "template_parts": [
+    "auth_fun must return None or a tuple"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "AuthFn.__call__",
+   "function_name": "__call__",
+   "guard_words": [
+    "len",
+    "result"
+   ],
+   "guards": [
+    "len(result) != 4"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core.AuthFn.__call__#4",
+   "lines": [
+    [
+     985,
+     988
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "auth_fun must return a tuple with exactly four items"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "AuthFn",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "auth_fun must return a tuple with exactly four items",
+   "template_parts": [
+    "auth_fun must return a tuple with exactly four items"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "AuthFn.__call__",
+   "function_name": "__call__",
+   "guard_words": [
+    "bytes",
+    "isinstance",
+    "stored_key"
+   ],
+   "guards": [
+    "not isinstance(stored_key, bytes)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.AuthFn.__call__#5",
+   "lines": [
+    [
+     993,
+     997
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "AuthFn",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'stored_key' must be of type bytes, but found type {*}",
+   "template_parts": [
+    "The 'stored_key' must be of type bytes, but found type ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "AuthFn.__call__",
+   "function_name": "__call__",
+   "guard_words": [
+    "bytes",
+    "isinstance",
+    "server_key"
+   ],
+   "guards": [
+    "not isinstance(server_key, bytes)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.AuthFn.__call__#6",
+   "lines": [
+    [
+     1000,
+     1004
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "AuthFn",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The 'server_key' must be of type bytes, but found type {*}",
+   "template_parts": [
+    "The 'server_key' must be of type bytes, but found type ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "Password.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ScramException",
+    "e"
+   ],
+   "guards": [
+    "except ScramException as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core.Password.__init__#1",
+   "lines": [
+    [
+     1019,
+     1019
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "Password",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_client_first",
+   "function_name": "_set_client_first",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_client_first#1",
+   "lines": [
+    [
+     1039,
+     1041
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The client sent a malformed first message"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The client sent a malformed first message",
+   "template_parts": [
+    "The client sent a malformed first message"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_client_first",
+   "function_name": "_set_client_first",
+   "guard_words": [
+    "cb"
+   ],
+   "guards": [
+    "cb is not None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_client_first#2",
+   "lines": [
+    [
+     1047,
+     1051
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Received GS2 flag 'y' which indicates that the client doesn't think the server supports channel binding, but in fact it does"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Received GS2 flag 'y' which indicates that the client doesn't think the server supports channel binding, but in fact it does",
+   "template_parts": [
+    "Received GS2 flag 'y' which indicates that the client doesn't think the server supports channel binding, but in fact it does"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_client_first",
+   "function_name": "_set_client_first",
+   "guard_words": [
+    "use_binding"
+   ],
+   "guards": [
+    "use_binding"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_client_first#3",
+   "lines": [
+    [
+     1055,
+     1059
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Received GS2 flag 'n' which indicates that the client doesn't require channel binding, but the server does"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Received GS2 flag 'n' which indicates that the client doesn't require channel binding, but the server does",
+   "template_parts": [
+    "Received GS2 flag 'n' which indicates that the client doesn't require channel binding, but the server does"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_client_first",
+   "function_name": "_set_client_first",
+   "guard_words": [
+    "cb"
+   ],
+   "guards": [
+    "cb is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_client_first#4",
+   "lines": [
+    [
+     1063,
+     1067
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Received GS2 flag 'p' which indicates that the client requires channel binding, but the server does not"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Received GS2 flag 'p' which indicates that the client requires channel binding, but the server does not",
+   "template_parts": [
+    "Received GS2 flag 'p' which indicates that the client requires channel binding, but the server does not"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_client_first",
+   "function_name": "_set_client_first",
+   "guard_words": [
+    "cb_name",
+    "channel_type"
+   ],
+   "guards": [
+    "cb_name != channel_type"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core._set_client_first#5",
+   "lines": [
+    [
+     1074,
+     1078
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Received channel binding name doesn't match the channel binding name of the server: {*}",
+   "template_parts": [
+    "Received channel binding name doesn't match the channel binding name of the server: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_server_first",
+   "function_name": "_set_server_first",
+   "guard_words": [
+    "e",
+    "msg"
+   ],
+   "guards": [
+    "'e' in msg"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_server_first#1",
+   "lines": [
+    [
+     1107,
+     1107
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The server returned an error"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [
+    "e"
+   ],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The server returned an error",
+   "template_parts": [
+    "The server returned an error"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_server_first",
+   "function_name": "_set_server_first",
+   "guard_words": [
+    "c_nonce",
+    "nonce",
+    "startswith"
+   ],
+   "guards": [
+    "not nonce.startswith(c_nonce)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_server_first#2",
+   "lines": [
+    [
+     1114,
+     1114
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Client nonce doesn't match."
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Client nonce doesn't match.",
+   "template_parts": [
+    "Client nonce doesn't match."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_server_first",
+   "function_name": "_set_server_first",
+   "guard_words": [
+    "c_nonce",
+    "len",
+    "nonce"
+   ],
+   "guards": [
+    "not len(nonce) > len(c_nonce)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_server_first#3",
+   "lines": [
+    [
+     1117,
+     1119
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The nonce must be longer than the client nonce"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The nonce must be longer than the client nonce",
+   "template_parts": [
+    "The nonce must be longer than the client nonce"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_client_final",
+   "function_name": "_set_client_final",
+   "guard_words": [
+    "ScramException",
+    "e"
+   ],
+   "guards": [
+    "except ScramException as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "core._set_client_final#1",
+   "lines": [
+    [
+     1166,
+     1169
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The channel binding isn't correctly encoded: {*}",
+   "template_parts": [
+    "The channel binding isn't correctly encoded: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_client_final",
+   "function_name": "_set_client_final",
+   "guard_words": [
+    "chan_binding_bin",
+    "channel_binding",
+    "compare_digest",
+    "gs2_header",
+    "make_cbind_input"
+   ],
+   "guards": [
+    "not compare_digest(chan_binding_bin, gs2_header.make_cbind_input(channel_binding))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_client_final#2",
+   "lines": [
+    [
+     1176,
+     1179
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The channel bindings don't match."
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The channel bindings don't match.",
+   "template_parts": [
+    "The channel bindings don't match."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_client_final",
+   "function_name": "_set_client_final",
+   "guard_words": [
+    "msg_nonce",
+    "nonce"
+   ],
+   "guards": [
+    "not nonce == msg_nonce"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_client_final#3",
+   "lines": [
+    [
+     1182,
+     1182
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Server nonce doesn't match."
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Server nonce doesn't match.",
+   "template_parts": [
+    "Server nonce doesn't match."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_server_final",
+   "function_name": "_set_server_final",
+   "guard_words": [
+    "e",
+    "msg"
+   ],
+   "guards": [
+    "'e' in msg"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_server_final#1",
+   "lines": [
+    [
+     1204,
+     1204
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The server returned an error"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [
+    "e"
+   ],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The server returned an error",
+   "template_parts": [
+    "The server returned an error"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "scramp/core.py",
+   "function": "_set_server_final",
+   "function_name": "_set_server_final",
+   "guard_words": [
+    "compare_digest",
+    "msg",
+    "server_signature",
+    "v"
+   ],
+   "guards": [
+    "not compare_digest(server_signature, msg['v'])"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "core._set_server_final#2",
+   "lines": [
+    [
+     1207,
+     1209
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The server signature doesn't match."
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The server signature doesn't match.",
+   "template_parts": [
+    "The server signature doesn't match."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "definition"
+   ],
+   "file": "scramp/utils.py",
+   "function": "ScramException.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "NoneType",
+    "ServerError",
+    "isinstance",
+    "server_error"
+   ],
+   "guards": [
+    "not isinstance(server_error, (NoneType, ServerError))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "utils.ScramException.__init__#1",
+   "lines": [
+    [
+     42,
+     45
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Server error must be None or of type ServerError"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "ScramException",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Server error must be None or of type ServerError",
+   "template_parts": [
+    "Server error must be None or of type ServerError"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "definition"
+   ],
+   "file": "scramp/utils.py",
+   "function": "b64dec",
+   "function_name": "b64dec",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "utils.b64dec#1",
+   "lines": [
+    [
+     97,
+     97
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid base 64 encoding"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid base 64 encoding",
+   "template_parts": [
+    "Invalid base 64 encoding"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "definition"
+   ],
+   "file": "scramp/utils.py",
+   "function": "saslprep",
+   "function_name": "saslprep",
+   "guard_words": [
+    "data",
+    "is_ral_char"
+   ],
+   "guards": [
+    "not is_ral_char(data[-1])"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "utils.saslprep#1",
+   "lines": [
+    [
+     127,
+     129
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "malformed bidi sequence"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "malformed bidi sequence",
+   "template_parts": [
+    "malformed bidi sequence"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ScramException",
+   "class_name": "ScramException",
+   "class_resolution": [
+    "definition"
+   ],
+   "file": "scramp/utils.py",
+   "function": "saslprep",
+   "function_name": "saslprep",
+   "guard_words": [
+    "c",
+    "f"
+   ],
+   "guards": [
+    "f(c)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "utils.saslprep#2",
+   "lines": [
+    [
+     156,
+     156
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  }
+ ],
+ "classes": {
+  "AuthFn": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__call__",
+    "__init__"
+   ],
+   "init_attrs": {
+    "auth_fn": 0
+   },
+   "init_params": [
+    "auth_fn"
+   ],
+   "module": "scramp.core",
+   "name": "AuthFn",
+   "qualname": "AuthFn"
+  },
+  "CBindData": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__bytes__",
+    "__eq__",
+    "__init__",
+    "from_der"
+   ],
+   "init_attrs": {
+    "data": 0
+   },
+   "init_params": [
+    "data"
+   ],
+   "module": "scramp.core",
+   "name": "CBindData",
+   "qualname": "CBindData"
+  },
+  "CbName": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__repr__",
+    "__str__"
+   ],
+   "init_attrs": {
+    "cb_name": 0
+   },
+   "init_params": [
+    "cb_name"
+   ],
+   "module": "scramp.core",
+   "name": "CbName",
+   "qualname": "CbName"
+  },
+  "ChannelBinding": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__eq__",
+    "__init__"
+   ],
+   "init_attrs": {
+    "data": 1,
+    "name": 0
+   },
+   "init_params": [
+    "name",
+    "data"
+   ],
+   "module": "scramp.core",
+   "name": "ChannelBinding",
+   "qualname": "ChannelBinding"
+  },
+  "ClientFinal": {
+   "bases": [
+    "Message"
+   ],
+   "bases_declared": [
+    "Message"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "message"
+   ],
+   "module": "scramp.core",
+   "name": "ClientFinal",
+   "qualname": "ClientFinal"
+  },
+  "ClientFirstBare": {
+   "bases": [
+    "Message"
+   ],
+   "bases_declared": [
+    "Message"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "message"
+   ],
+   "module": "scramp.core",
+   "name": "ClientFirstBare",
+   "qualname": "ClientFirstBare"
+  },
+  "ClientStage": {
+   "bases": [
+    "enum.IntEnum"
+   ],
+   "bases_declared": [
+    "enum.IntEnum"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "scramp.core",
+   "name": "ClientStage",
+   "qualname": "ClientStage"
+  },
+  "Gs2Header": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__bytes__",
+    "__eq__",
+    "__init__",
+    "__str__",
+    "from_binding",
+    "from_str",
+    "make_cbind_input"
+   ],
+   "init_attrs": {
+    "cb_name": 1,
+    "gs2_char": 0
+   },
+   "init_params": [
+    "gs2_char",
+    "cb_name"
+   ],
+   "module": "scramp.core",
+   "name": "Gs2Header",
+   "qualname": "Gs2Header"
+  },
+  "IterationCount": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__int__",
+    "__lt__",
+    "__str__",
+    "from_str"
+   ],
+   "init_attrs": {
+    "value": 0
+   },
+   "init_params": [
+    "value"
+   ],
+   "module": "scramp.core",
+   "name": "IterationCount",
+   "qualname": "IterationCount"
+  },
+  "Message": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__contains__",
+    "__getitem__",
+    "__init__",
+    "__len__",
+    "_iter__",
+    "items"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "msg",
+    "desc"
+   ],
+   "module": "scramp.core",
+   "name": "Message",
+   "qualname": "Message"
+  },
+  "Nonce": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__add__",
+    "__eq__",
+    "__init__",
+    "__len__",
+    "__str__",
+    "create",
+    "startswith"
+   ],
+   "init_attrs": {
+    "nonce": 0
+   },
+   "init_params": [
+    "nonce"
+   ],
+   "module": "scramp.core",
+   "name": "Nonce",
+   "qualname": "Nonce"
+  },
+  "Password": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__bytes__",
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "password"
+   ],
+   "module": "scramp.core",
+   "name": "Password",
+   "qualname": "Password"
+  },
+  "Salt": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__bytes__",
+    "__eq__",
+    "__init__",
+    "__str__",
+    "create",
+    "from_str"
+   ],
+   "init_attrs": {
+    "salt": 0
+   },
+   "init_params": [
+    "salt"
+   ],
+   "module": "scramp.core",
+   "name": "Salt",
+   "qualname": "Salt"
+  },
+  "ScramClient": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "_set_stage",
+    "get_client_final",
+    "get_client_first",
+    "set_server_final",
+    "set_server_first"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "mechanisms",
+    "username",
+    "password",
+    "channel_binding",
+    "c_nonce"
+   ],
+   "module": "scramp.core",
+   "name": "ScramClient",
+   "qualname": "ScramClient"
+  },
+  "ScramException": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [
+    "__init__",
+    "__str__"
+   ],
+   "init_attrs": {
+    "server_error": 1
+   },
+   "init_params": [
+    "message",
+    "server_error"
+   ],
+   "module": "scramp.utils",
+   "name": "ScramException",
+   "qualname": "ScramException"
+  },
+  "ScramMechanism": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "make_auth_info",
+    "make_server"
+   ],
+   "init_attrs": {
+    "name": 0
+   },
+   "init_params": [
+    "mechanism"
+   ],
+   "module": "scramp.core",
+   "name": "ScramMechanism",
+   "qualname": "ScramMechanism"
+  },
+  "ScramServer": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "_set_mechanism",
+    "_set_stage",
+    "get_server_final",
+    "get_server_first",
+    "set_client_final",
+    "set_client_first"
+   ],
+   "init_attrs": {
+    "auth_fn": 1,
+    "cb": 2
+   },
+   "init_params": [
+    "mechanism",
+    "auth_fn",
+    "cb",
+    "s_nonce"
+   ],
+   "module": "scramp.core",
+   "name": "ScramServer",
+   "qualname": "ScramServer"
+  },
+  "ServerError": {
+   "bases": [
+    "enum.Enum"
+   ],
+   "bases_declared": [
+    "enum.Enum"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "scramp.utils",
+   "name": "ServerError",
+   "qualname": "ServerError"
+  },
+  "ServerFinal": {
+   "bases": [
+    "Message"
+   ],
+   "bases_declared": [
+    "Message"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "message"
+   ],
+   "module": "scramp.core",
+   "name": "ServerFinal",
+   "qualname": "ServerFinal"
+  },
+  "ServerFirst": {
+   "bases": [
+    "Message"
+   ],
+   "bases_declared": [
+    "Message"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "message"
+   ],
+   "module": "scramp.core",
+   "name": "ServerFirst",
+   "qualname": "ServerFirst"
+  },
+  "ServerStage": {
+   "bases": [
+    "enum.IntEnum"
+   ],
+   "bases_declared": [
+    "enum.IntEnum"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "scramp.core",
+   "name": "ServerStage",
+   "qualname": "ServerStage"
+  },
+  "Username": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__str__",
+    "escape",
+    "from_escaped"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "username"
+   ],
+   "module": "scramp.core",
+   "name": "Username",
+   "qualname": "Username"
+  }
+ },
+ "functions": [
+  {
+   "file": "scramp/core.py",
+   "function": "AuthFn.__call__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "AuthFn.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "CBindData.__bytes__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "CBindData.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "CBindData.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "CBindData.from_der",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "CbName.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "CbName.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "CbName.__repr__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "CbName.__str__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ChannelBinding.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ChannelBinding.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ClientFinal.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ClientFirstBare.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Gs2Header.__bytes__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Gs2Header.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Gs2Header.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Gs2Header.__str__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Gs2Header.from_binding",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Gs2Header.from_str",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Gs2Header.make_cbind_input",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "IterationCount.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "IterationCount.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "IterationCount.__int__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "IterationCount.__lt__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "IterationCount.__str__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "IterationCount.from_str",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Message.__contains__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Message.__getitem__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Message.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Message.__len__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Message._iter__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Message.items",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Nonce.__add__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Nonce.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Nonce.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Nonce.__len__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Nonce.__str__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Nonce.create",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Nonce.startswith",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Password.__bytes__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Password.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Salt.__bytes__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Salt.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Salt.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Salt.__str__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Salt.create",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Salt.from_str",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramClient.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramClient._set_stage",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramClient.get_client_final",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramClient.get_client_first",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramClient.set_server_final",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramClient.set_server_first",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_auth_info",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramMechanism.make_server",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramServer.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramServer._set_mechanism",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramServer._set_stage",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramServer.get_server_final",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramServer.get_server_first",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramServer.set_client_final",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ScramServer.set_client_first",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ServerFinal.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "ServerFirst.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Username.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Username.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Username.__str__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Username.escape",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "Username.from_escaped",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_c_key_stored_key_s_key",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_check_client_key",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_check_stage",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_get_client_final",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_get_client_first",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_get_server_final",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_get_server_first",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_make_auth_info",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_make_auth_message",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_make_message",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_set_client_final",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_set_client_first",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_set_server_final",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_set_server_first",
+   "reachable": true
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_username_escape",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "_username_unescape",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "set_error",
+   "reachable": false
+  },
+  {
+   "file": "scramp/core.py",
+   "function": "set_error.wrapper",
+   "reachable": false
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "ScramException.__init__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "ScramException.__str__",
+   "reachable": false
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "b64dec",
+   "reachable": true
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "b64enc",
+   "reachable": false
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "h",
+   "reachable": true
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "hi",
+   "reachable": false
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "hi_pbkdf2_hmac",
+   "reachable": false
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "hmac",
+   "reachable": true
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "pbkdf2_hmac_hashlib",
+   "reachable": false
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "pbkdf2_hmac_pure_python",
+   "reachable": false
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "saslprep",
+   "reachable": false
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "uenc",
+   "reachable": true
+  },
+  {
+   "file": "scramp/utils.py",
+   "function": "xor",
+   "reachable": true
+  }
+ ],
+ "other_raises": [
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 164,
+   "file": "scramp/core.py",
+   "function": "Nonce.startswith",
+   "guard": "not isinstance(other, Nonce)",
+   "line": 164,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError(f'expected Nonce, got {type(other).__name__}')",
+   "via": null
+  },
+  {
+   "class": null,
+   "class_resolved": null,
+   "end_line": 579,
+   "file": "scramp/core.py",
+   "function": "set_error.wrapper",
+   "guard": "except ScramException as e",
+   "line": 579,
+   "raise_number": 1,
+   "reason": "bare raise",
+   "source": "raise",
+   "via": null
+  }
+ ],
+ "rejection_bases": [
+  {
+   "kind": "package",
+   "module": "scramp.utils",
+   "name": "ScramException",
+   "qualname": "ScramException"
+  }
+ ],
+ "rejection_classes": [
+  "ScramException"
+ ],
+ "sha256": {
+  "scramp/__init__.py": "92a3227318a1e73a4877f2dc7950d855a291895d48077319b98bafad41e81c91",
+  "scramp/core.py": "f240176fe1c07861c37ed195b25e9b52356a5457888ab2c942cf30285420973a",
+  "scramp/utils.py": "9fcd0a398ab9a09ab0e72b81afb5a6a27eba239796d3f3ea54864461ab61464b"
+ },
+ "subject": {
+  "commit": "58a281a2b0570834a39e78dcc9d52aa8245c0aea",
+  "copy": [
+   "src",
+   "test",
+   "README.md"
+  ],
+  "distribution": "scramp",
+  "entry_points": [
+   "set_client_final",
+   "set_client_first",
+   "set_server_final",
+   "set_server_first"
+  ],
+  "entry_points_source": "README.md, API Docs: scramp.ScramClient has set_server_first(message), 'Set the first message from the server.', and set_server_final(message), 'Set the final message from the server.' (lines 658 and 660); scramp.ScramServer has set_client_first(message), 'Set the first message from the client.', and set_client_final(message), 'Set the final client message.' (lines 723 and 725). The examples end 'If it all runs through without raising an exception, the authentication has succeeded' (lines 128-129). Entry points are names, so the same names elsewhere in the package count too.",
+  "name": "scramp",
+  "observed_files": [],
+  "package": "scramp",
+  "package_source": "pyproject.toml line 6: name = \"scramp\"; the commit holds 1 package, src/scramp (__init__.py, core.py, utils.py), and the wheel scramp-1.5.0-py3-none-any.whl at PyPI (read 2026-11-17T13:57:41Z) holds the same 3 files, byte-identical, as the package scramp.",
+  "pytest_args": [
+   "-p",
+   "no:cacheprovider"
+  ],
+  "python": "3.12.3",
+  "rejection_bases": [
+   "ScramException"
+  ],
+  "rejection_bases_source": "README.md, examples Server Error and Avoiding User Enumeration: set_client_first, set_client_final and set_server_final reject the message inside `except ScramException as e:` (lines 467-471, 538-541 and 549-552); release notes of 1.4.4: 'make sure that a `ScramException` is raised if a message is malformed' (lines 850-851). src/scramp/utils.py line 38: class ScramException(Exception), exported by src/scramp/__init__.py lines 4 and 6.",
+  "release_source": "PyPI JSON https://pypi.org/pypi/scramp/json, read 2026-11-17T13:52:00Z: 28 versions, none a pre-release; the latest, 1.5.0, uploaded 2026-10-25T17:43:17Z (wheel) and 17:43:19Z (sdist), and no file of any version uploaded later; project_urls Homepage https://codeberg.org/tlocke/scramp. git ls-remote --tags of that repository, 2026-11-17T13:52:14Z: the annotated tag 1.5.0 (tag object afe02849b18a83af1a16f250efe326e6c5af2556) points to the commit. The files of the sdist scramp-1.5.0.tar.gz, PKG-INFO aside, are byte-identical to the 11 files of the commit.",
+  "repository": "https://codeberg.org/tlocke/scramp",
+  "scope_counts": {
+   "blocks_in_test_directories": 31,
+   "test_files_in_test_directories": 4,
+   "test_files_with_an_included_block": 1
+  },
+  "source_root": "src",
+  "subject_files": [
+   "scramp/__init__.py",
+   "scramp/core.py",
+   "scramp/utils.py"
+  ],
+  "suite_runs": [
+   {
+    "name": "all",
+    "paths": [
+     "test"
+    ]
+   }
+  ],
+  "suite_runs_source": "pyproject.toml, [tool.tox.env_run_base]: 1 pytest call, pytest -v -x \"-W error\" test (lines 78-84), in the 1 environment of envlist = [\"py\"] (line 46)",
+  "tag": "1.5.0",
+  "test_directories_source": "pyproject.toml, [tool.tox.env_run_base], commands: [\"pytest\", \"-v\", \"-x\", \"-W error\", \"test\"] (lines 78-84); README.md, Testing: run tox (lines 732-736)",
+  "tests": [
+   "test/test_scramp.py"
+  ],
+  "version": "1.5.0"
+ }
+}

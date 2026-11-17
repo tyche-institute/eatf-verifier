@@ -1,0 +1,15 @@
+cffi==2.1.1
+coverage==7.17.3
+cryptography==50.0.2
+ecdsa==0.19.2
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.7.0
+pyasn1==0.6.5
+pycparser==3.12
+pycryptodome==3.24.1
+Pygments==2.21.0
+pytest==9.2.0
+pytest-cov==7.1.0
+rsa==4.9.1
+six==1.17.0

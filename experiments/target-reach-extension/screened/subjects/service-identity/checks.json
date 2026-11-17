@@ -1,0 +1,1071 @@
+{
+ "checks": [
+  {
+   "class": "CertificateError",
+   "class_name": "CertificateError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "service_identity/cryptography.py",
+   "function": "extract_patterns",
+   "function_name": "extract_patterns",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "cryptography.extract_patterns#1",
+   "lines": [
+    [
+     165,
+     165
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "CertificateError",
+   "class_name": "CertificateError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "service_identity/hazmat.py",
+   "function": "verify_service_identity",
+   "function_name": "verify_service_identity",
+   "guard_words": [
+    "cert_patterns"
+   ],
+   "guards": [
+    "not cert_patterns"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "hazmat.verify_service_identity#1",
+   "lines": [
+    [
+     55,
+     55
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "VerificationError",
+   "class_name": "VerificationError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "service_identity/hazmat.py",
+   "function": "verify_service_identity",
+   "function_name": "verify_service_identity",
+   "guard_words": [
+    "errors"
+   ],
+   "guards": [
+    "errors"
+   ],
+   "has_keywords": true,
+   "has_placeholder": false,
+   "id": "hazmat.verify_service_identity#2",
+   "lines": [
+    [
+     82,
+     82
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "CertificateError",
+   "class_name": "CertificateError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "service_identity/hazmat.py",
+   "function": "DNSPattern.from_bytes",
+   "function_name": "from_bytes",
+   "guard_words": [
+    "_is_ip_address",
+    "pattern"
+   ],
+   "guards": [
+    "pattern == b'' or _is_ip_address(pattern) or b'\\x00' in pattern"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "hazmat.DNSPattern.from_bytes#1",
+   "lines": [
+    [
+     164,
+     164
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "DNSPattern",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "CertificateError",
+   "class_name": "CertificateError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "service_identity/hazmat.py",
+   "function": "IPAddressPattern.from_bytes",
+   "function_name": "from_bytes",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "hazmat.IPAddressPattern.from_bytes#1",
+   "lines": [
+    [
+     188,
+     188
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "IPAddressPattern",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "CertificateError",
+   "class_name": "CertificateError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "service_identity/hazmat.py",
+   "function": "URIPattern.from_bytes",
+   "function_name": "from_bytes",
+   "guard_words": [
+    "_is_ip_address",
+    "pattern"
+   ],
+   "guards": [
+    "b':' not in pattern or b'*' in pattern or _is_ip_address(pattern)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "hazmat.URIPattern.from_bytes#1",
+   "lines": [
+    [
+     212,
+     212
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "URIPattern",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "CertificateError",
+   "class_name": "CertificateError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "service_identity/hazmat.py",
+   "function": "SRVPattern.from_bytes",
+   "function_name": "from_bytes",
+   "guard_words": [
+    "_is_ip_address",
+    "pattern"
+   ],
+   "guards": [
+    "pattern[0] != b'_'[0] or b'.' not in pattern or b'*' in pattern or _is_ip_address(pattern)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "hazmat.SRVPattern.from_bytes#1",
+   "lines": [
+    [
+     248,
+     248
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SRVPattern",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "CertificateError",
+   "class_name": "CertificateError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "service_identity/hazmat.py",
+   "function": "_validate_pattern",
+   "function_name": "_validate_pattern",
+   "guard_words": [
+    "any",
+    "cnt",
+    "len",
+    "p",
+    "parts"
+   ],
+   "guards": [
+    "cnt > 1",
+    "len(parts) < 3",
+    "b'*' not in parts[0]",
+    "any((not len(p) for p in parts))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "hazmat._validate_pattern#1",
+   "lines": [
+    [
+     453,
+     453
+    ],
+    [
+     457,
+     457
+    ],
+    [
+     461,
+     461
+    ],
+    [
+     464,
+     464
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null,
+    null,
+    null,
+    null
+   ]
+  }
+ ],
+ "classes": {
+  "CertificateError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.exceptions",
+   "name": "CertificateError",
+   "qualname": "CertificateError"
+  },
+  "DNSMismatch": {
+   "bases": [
+    "Mismatch"
+   ],
+   "bases_declared": [
+    "Mismatch"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.exceptions",
+   "name": "DNSMismatch",
+   "qualname": "DNSMismatch"
+  },
+  "DNSPattern": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "from_bytes"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.hazmat",
+   "name": "DNSPattern",
+   "qualname": "DNSPattern"
+  },
+  "DNS_ID": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "hostname"
+   ],
+   "module": "service_identity.hazmat",
+   "name": "DNS_ID",
+   "qualname": "DNS_ID"
+  },
+  "IPAddressMismatch": {
+   "bases": [
+    "Mismatch"
+   ],
+   "bases_declared": [
+    "Mismatch"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.exceptions",
+   "name": "IPAddressMismatch",
+   "qualname": "IPAddressMismatch"
+  },
+  "IPAddressPattern": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "from_bytes"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.hazmat",
+   "name": "IPAddressPattern",
+   "qualname": "IPAddressPattern"
+  },
+  "IPAddress_ID": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.hazmat",
+   "name": "IPAddress_ID",
+   "qualname": "IPAddress_ID"
+  },
+  "Mismatch": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.exceptions",
+   "name": "Mismatch",
+   "qualname": "Mismatch"
+  },
+  "SRVMismatch": {
+   "bases": [
+    "Mismatch"
+   ],
+   "bases_declared": [
+    "Mismatch"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.exceptions",
+   "name": "SRVMismatch",
+   "qualname": "SRVMismatch"
+  },
+  "SRVPattern": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "from_bytes"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.hazmat",
+   "name": "SRVPattern",
+   "qualname": "SRVPattern"
+  },
+  "SRV_ID": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "srv"
+   ],
+   "module": "service_identity.hazmat",
+   "name": "SRV_ID",
+   "qualname": "SRV_ID"
+  },
+  "ServiceID": {
+   "bases": [
+    "typing.Protocol"
+   ],
+   "bases_declared": [
+    "typing.Protocol"
+   ],
+   "defines": [
+    "error_on_mismatch",
+    "pattern_class",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.hazmat",
+   "name": "ServiceID",
+   "qualname": "ServiceID"
+  },
+  "ServiceMatch": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.hazmat",
+   "name": "ServiceMatch",
+   "qualname": "ServiceMatch"
+  },
+  "SubjectAltNameWarning": {
+   "bases": [
+    "DeprecationWarning"
+   ],
+   "bases_declared": [
+    "DeprecationWarning"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.exceptions",
+   "name": "SubjectAltNameWarning",
+   "qualname": "SubjectAltNameWarning"
+  },
+  "URIMismatch": {
+   "bases": [
+    "Mismatch"
+   ],
+   "bases_declared": [
+    "Mismatch"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.exceptions",
+   "name": "URIMismatch",
+   "qualname": "URIMismatch"
+  },
+  "URIPattern": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "from_bytes"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.hazmat",
+   "name": "URIPattern",
+   "qualname": "URIPattern"
+  },
+  "URI_ID": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "uri"
+   ],
+   "module": "service_identity.hazmat",
+   "name": "URI_ID",
+   "qualname": "URI_ID"
+  },
+  "VerificationError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [
+    "__str__"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "service_identity.exceptions",
+   "name": "VerificationError",
+   "qualname": "VerificationError"
+  }
+ },
+ "functions": [
+  {
+   "file": "service_identity/__init__.py",
+   "function": "__getattr__",
+   "reachable": false
+  },
+  {
+   "file": "service_identity/cryptography.py",
+   "function": "extract_ids",
+   "reachable": false
+  },
+  {
+   "file": "service_identity/cryptography.py",
+   "function": "extract_patterns",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/cryptography.py",
+   "function": "verify_certificate_hostname",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/cryptography.py",
+   "function": "verify_certificate_ip_address",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/exceptions.py",
+   "function": "VerificationError.__str__",
+   "reachable": false
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "DNSPattern.from_bytes",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "DNS_ID.__init__",
+   "reachable": false
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "DNS_ID.verify",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "IPAddressPattern.from_bytes",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "IPAddress_ID.verify",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "SRVPattern.from_bytes",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "SRV_ID.__init__",
+   "reachable": false
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "SRV_ID.verify",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "ServiceID.error_on_mismatch",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "ServiceID.pattern_class",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "ServiceID.verify",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "URIPattern.from_bytes",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "URI_ID.__init__",
+   "reachable": false
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "URI_ID.verify",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "_contains_instance_of",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "_find_matches",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "_hostname_matches",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "_is_ip_address",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "_validate_pattern",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/hazmat.py",
+   "function": "verify_service_identity",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/pyopenssl.py",
+   "function": "extract_ids",
+   "reachable": false
+  },
+  {
+   "file": "service_identity/pyopenssl.py",
+   "function": "extract_patterns",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/pyopenssl.py",
+   "function": "verify_hostname",
+   "reachable": true
+  },
+  {
+   "file": "service_identity/pyopenssl.py",
+   "function": "verify_ip_address",
+   "reachable": true
+  }
+ ],
+ "other_raises": [
+  {
+   "class": "AttributeError",
+   "class_resolved": "AttributeError",
+   "end_line": 34,
+   "file": "service_identity/__init__.py",
+   "function": "__getattr__",
+   "guard": "name != '__version__'",
+   "line": 34,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise AttributeError(msg)",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 158,
+   "file": "service_identity/hazmat.py",
+   "function": "DNSPattern.from_bytes",
+   "guard": "not isinstance(pattern, bytes)",
+   "line": 158,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError(msg)",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 206,
+   "file": "service_identity/hazmat.py",
+   "function": "URIPattern.from_bytes",
+   "guard": "not isinstance(pattern, bytes)",
+   "line": 206,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError(msg)",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 237,
+   "file": "service_identity/hazmat.py",
+   "function": "SRVPattern.from_bytes",
+   "guard": "not isinstance(pattern, bytes)",
+   "line": 237,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError(msg)",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 292,
+   "file": "service_identity/hazmat.py",
+   "function": "DNS_ID.__init__",
+   "guard": "not isinstance(hostname, str)",
+   "line": 292,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError(msg)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 297,
+   "file": "service_identity/hazmat.py",
+   "function": "DNS_ID.__init__",
+   "guard": "not hostname or _is_ip_address(hostname)",
+   "line": 297,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(msg)",
+   "via": null
+  },
+  {
+   "class": "ImportError",
+   "class_resolved": "ImportError",
+   "end_line": 304,
+   "file": "service_identity/hazmat.py",
+   "function": "DNS_ID.__init__",
+   "guard": "idna",
+   "line": 304,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise ImportError(msg)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 311,
+   "file": "service_identity/hazmat.py",
+   "function": "DNS_ID.__init__",
+   "guard": "self._RE_LEGAL_CHARS.match(self.hostname) is None",
+   "line": 311,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(msg)",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 361,
+   "file": "service_identity/hazmat.py",
+   "function": "URI_ID.__init__",
+   "guard": "not isinstance(uri, str)",
+   "line": 361,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError(msg)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 366,
+   "file": "service_identity/hazmat.py",
+   "function": "URI_ID.__init__",
+   "guard": "':' not in uri or _is_ip_address(uri)",
+   "line": 366,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(msg)",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 401,
+   "file": "service_identity/hazmat.py",
+   "function": "SRV_ID.__init__",
+   "guard": "not isinstance(srv, str)",
+   "line": 401,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError(msg)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 406,
+   "file": "service_identity/hazmat.py",
+   "function": "SRV_ID.__init__",
+   "guard": "'.' not in srv or _is_ip_address(srv) or srv[0] != '_'",
+   "line": 406,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(msg)",
+   "via": null
+  }
+ ],
+ "rejection_bases": [
+  {
+   "kind": "package",
+   "module": "service_identity.exceptions",
+   "name": "CertificateError",
+   "qualname": "CertificateError"
+  },
+  {
+   "kind": "package",
+   "module": "service_identity.exceptions",
+   "name": "VerificationError",
+   "qualname": "VerificationError"
+  }
+ ],
+ "rejection_classes": [
+  "CertificateError",
+  "VerificationError"
+ ],
+ "sha256": {
+  "service_identity/__init__.py": "d099089fba93b7e990d2d8a85c29057dc24b41a9e63c3206f76226b0d2007aee",
+  "service_identity/cryptography.py": "ac8db78bc75bd15dc5ad9507b12d4738e91efa72c0d1156d0160de7830ebaae2",
+  "service_identity/exceptions.py": "88ad97af05620253faaf27bc400478224026a8f50138fbca936c338883678fe2",
+  "service_identity/hazmat.py": "ab25fd3559d17f3212951ccc613c11487d64e068ae1d8129de6b1fc3f9f49285",
+  "service_identity/pyopenssl.py": "fb90b3d2294c69a5251c6891ebfbf59392f3c171b174bcd01c3446bca6228652"
+ },
+ "subject": {
+  "commit": "5025f92e3856e814bb5012ba4ed03b71320131d8",
+  "copy": [
+   "src",
+   "tests",
+   "pyproject.toml"
+  ],
+  "distribution": "service-identity",
+  "entry_points": [
+   "verify_certificate_hostname",
+   "verify_certificate_ip_address",
+   "verify_hostname",
+   "verify_ip_address",
+   "verify_service_identity"
+  ],
+  "entry_points_source": "docs/api.rst documents service_identity.cryptography.verify_certificate_hostname and verify_certificate_ip_address (lines 15-18) and service_identity.pyopenssl.verify_hostname and verify_ip_address (lines 25-34), each 'Verify whether *certificate* is valid for ...' or 'Verify whether the certificate of *connection* is valid for ...' (src/service_identity/cryptography.py lines 43 and 79, pyopenssl.py lines 32 and 65); its note (lines 5-9) points to the verify_service_identity function of the hazmat module, which the 4 functions call with the patterns of the certificate (cryptography.py lines 68 and 108, pyopenssl.py lines 54 and 90) and which 'Verify whether *cert_patterns* are valid for *obligatory_ids* and *optional_ids*' (hazmat.py lines 41-48). extract_patterns (docs/api.rst lines 19 and 35) is documented as extracting the patterns of a certificate (cryptography.py line 120), not as a verification. Entry points are names, so the same names elsewhere in the package count too.",
+  "name": "service-identity",
+  "observed_files": [],
+  "package": "service_identity",
+  "pytest_args": [
+   "-p",
+   "no:cacheprovider"
+  ],
+  "python": "3.12.3",
+  "rejection_bases": [
+   "CertificateError",
+   "VerificationError"
+  ],
+  "rejection_bases_source": "The docstrings of the 4 functions of docs/api.rst name 2 exceptions, service_identity.VerificationError and service_identity.CertificateError (src/service_identity/cryptography.py lines 55-61 and 93-99, pyopenssl.py lines 39-47 and 74-81), which docs/api.rst lists under 'Universal Errors and Warnings' (lines 71-77). src/service_identity/exceptions.py declares each as a direct subclass of the built-in Exception (lines 62-63 and 74), so the 2 share no base below Exception, and each is taken as a rejection base. Exception is not taken: it would make every built-in exception class a rejection class.",
+  "repository": "https://github.com/pyca/service-identity",
+  "scope_counts": {
+   "blocks_in_test_directories": 38,
+   "test_files_in_test_directories": 4,
+   "test_files_with_an_included_block": 3
+  },
+  "source_root": "src",
+  "subject_files": [
+   "service_identity/__init__.py",
+   "service_identity/cryptography.py",
+   "service_identity/exceptions.py",
+   "service_identity/hazmat.py",
+   "service_identity/pyopenssl.py"
+  ],
+  "suite_runs": [
+   {
+    "name": "all",
+    "paths": [
+     "tests"
+    ]
+   }
+  ],
+  "suite_runs_source": "tox.ini, [testenv]: coverage run -m pytest {posargs} (lines 27-28), the 1 pytest call of every test environment py3{8-15}{,-pyopenssl}{,-oldest}{,-idna} (line 7), with testpaths = \"tests\" (pyproject.toml line 99); CI runs those environments with tox run -f py<version> (.github/workflows/ci.yml lines 81-85). The doctest call of tox.ini line 29 is conditional on a factor latest that no environment of env_list (lines 3-8) has.",
+  "tag": "26.1.0",
+  "test_directories_source": "pyproject.toml, [tool.pytest.ini_options]: testpaths = \"tests\" (line 99); norecursedirs = [\"tests/typing\"] (line 101) leaves out tests/typing, which holds no test file (tests/typing/api.py, which mypy reads, tox.ini line 60)",
+  "tests": [
+   "tests/test_cryptography.py",
+   "tests/test_hazmat.py",
+   "tests/test_pyopenssl.py"
+  ],
+  "version": "26.1.0"
+ }
+}

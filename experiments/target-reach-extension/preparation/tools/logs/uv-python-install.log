@@ -1,0 +1,16 @@
+Downloading cpython-3.13.14-linux-x86_64-gnu (download) (33.3MiB)
+Downloading cpython-3.11.15-linux-x86_64-gnu (download) (29.4MiB)
+Downloading cpython-3.9.25-linux-x86_64-gnu (download) (27.0MiB)
+Downloading cpython-3.14.6-linux-x86_64-gnu (download) (34.4MiB)
+Downloading cpython-3.10.20-linux-x86_64-gnu (download) (28.0MiB)
+ Downloaded cpython-3.9.25-linux-x86_64-gnu (download)
+ Downloaded cpython-3.10.20-linux-x86_64-gnu (download)
+ Downloaded cpython-3.11.15-linux-x86_64-gnu (download)
+ Downloaded cpython-3.13.14-linux-x86_64-gnu (download)
+ Downloaded cpython-3.14.6-linux-x86_64-gnu (download)
+Installed 5 versions in 2.16s
+ + cpython-3.9.25-linux-x86_64-gnu
+ + cpython-3.10.20-linux-x86_64-gnu
+ + cpython-3.11.15-linux-x86_64-gnu
+ + cpython-3.13.14-linux-x86_64-gnu
+ + cpython-3.14.6-linux-x86_64-gnu

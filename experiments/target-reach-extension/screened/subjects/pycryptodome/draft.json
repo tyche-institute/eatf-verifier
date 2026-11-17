@@ -1,0 +1,44 @@
+{
+ "name": "pycryptodome",
+ "distribution": "pycryptodome",
+ "version": "4.4.0",
+ "repository": "https://github.com/Legrandin/pycryptodome",
+ "tag": "v4.4.0",
+ "commit": "3a016ab7269b9a43cd14016989011c5051487b77",
+ "package": "Crypto",
+ "source_root": "lib",
+ "entry_points": [
+  "bcrypt_check",
+  "decrypt_and_verify",
+  "hexverify",
+  "unseal",
+  "verify"
+ ],
+ "entry_points_source": "Doc/src/signature/signature.rst, lines 25-37: a signature is verified with the verify method of a verifier object, which takes the hash and the incoming signature and raises ValueError if the message is not authentic; lib/Crypto/Signature defines verify for pkcs1_15, pss, eddsa, mldsa and DSS (DSS.py, line 127: ':raise ValueError: if the signature is not authentic'). Doc/src/guides/hashing.rst, lines 92-103: a MAC tag is checked with verify() or hexverify(), which HMAC, CMAC, Poly1305, KMAC128, BLAKE2b and BLAKE2s define (lib/Crypto/Hash). Doc/src/cipher/aes.rst, lines 36-43 and 175-182: the authenticated modes check the received tag with verify or decrypt_and_verify (their modules in lib/Crypto/Cipher also define hexverify), and the KW and KWP modes unwrap a key with unseal. Doc/src/guides/public_key_encryption.rst, lines 50-60: HPKE unseal() raises ValueError if the data was modified. Doc/src/io/kdf_limits.rst, lines 145-152, and Doc/src/protocol/kdf.rst, lines 101-124: bcrypt_check verifies a password against a bcrypt hash (lib/Crypto/Protocol/KDF.py, line 810: 'ValueError: if the password does not match'). Entry points are names, so the same names elsewhere in the package count too. Not entry points: new, the constructor of every cipher, hash and signature scheme, and decrypt, the decryption method of every cipher, which verify nothing in most of them (the decrypt of lib/Crypto/Cipher/oaep.py and the new of lib/Crypto/Protocol/HPKE.py, which reject invalid input, are left out with them); and the functions that import keys or remove padding, which parse.",
+ "rejection_bases": [
+  "ValueError"
+ ],
+ "rejection_bases_source": "Doc/src/exceptions.rst, lines 6-15: errors are reported with the standard Python exceptions, ValueError when a value is not acceptable, for instance a message whose MAC tag does not match in decrypt_and_verify or in the verify method of a signature scheme, and the dedicated exceptions are all subclasses of ValueError. The docstrings of the entry points name ValueError: lib/Crypto/Signature/DSS.py, line 127; lib/Crypto/Hash/HMAC.py, line 196; lib/Crypto/Cipher/_mode_gcm.py, lines 679-680; lib/Crypto/Cipher/_mode_kw.py, lines 109-110; lib/Crypto/Protocol/HPKE.py, line 369; lib/Crypto/Protocol/KDF.py, lines 808-810.",
+ "test_directories": [
+  "lib/Crypto/SelfTest"
+ ],
+ "test_directories_source": "pyproject.toml, lines 93-97, [tool.pytest.ini_options]: addopts = [\"-p\", \"Crypto.SelfTest.plugin\", \"--pyargs\"], testpaths = [\"Crypto.SelfTest\"], the package that is lib/Crypto/SelfTest in the repository (setup.py, lines 325-326: packages=find_packages(where=\"lib\", ...), package_dir={\"\": \"lib\"})",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "lib/Crypto/SelfTest"
+   ]
+  }
+ ],
+ "suite_runs_source": "INSTALL.rst, lines 9-16: python -m Crypto.SelfTest 'runs the complete test suite'; .github/workflows/integration.yml, lines 41-61: the job build_linux installs requirements-test.txt and the package and runs python -m Crypto.SelfTest; lib/Crypto/SelfTest/__init__.py, lines 41 and 56, and __main__.py, line 34: that is 1 pytest call, pytest -p Crypto.SelfTest.plugin -p no:cacheprovider --pyargs Crypto.SelfTest. The second test step of the workflow (lines 66-74: --skip-slow-tests with PYCRYPTODOME_DISABLE_BMI2_ADX=1) runs only for Python 3.15.",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "lib",
+  "pyproject.toml"
+ ],
+ "python": "3.12.3"
+}

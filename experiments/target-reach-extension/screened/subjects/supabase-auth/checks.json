@@ -1,0 +1,7041 @@
+{
+ "checks": [
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_up",
+   "function_name": "sign_up",
+   "guard_words": [
+    "password",
+    "phone"
+   ],
+   "guards": [
+    "phone and password"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.sign_up#1",
+   "lines": [
+    [
+     280,
+     282
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either an email or phone number and a password"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either an email or phone number and a password",
+   "template_parts": [
+    "You must provide either an email or phone number and a password"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_in_with_password",
+   "function_name": "sign_in_with_password",
+   "guard_words": [
+    "password",
+    "phone"
+   ],
+   "guards": [
+    "phone and password"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.sign_in_with_password#1",
+   "lines": [
+    [
+     332,
+     334
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either an email or phone number and a password"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either an email or phone number and a password",
+   "template_parts": [
+    "You must provide either an email or phone number and a password"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_in_with_sso",
+   "function_name": "sign_in_with_sso",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.sign_in_with_sso#1",
+   "lines": [
+    [
+     433,
+     435
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either a domain or provider_id"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either a domain or provider_id",
+   "template_parts": [
+    "You must provide either a domain or provider_id"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.link_identity",
+   "function_name": "link_identity",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.link_identity#1",
+   "lines": [
+    [
+     476,
+     476
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.get_user_identities",
+   "function_name": "get_user_identities",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.get_user_identities#1",
+   "lines": [
+    [
+     491,
+     491
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.unlink_identity",
+   "function_name": "unlink_identity",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.unlink_identity#1",
+   "lines": [
+    [
+     496,
+     496
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_in_with_otp",
+   "function_name": "sign_in_with_otp",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.sign_in_with_otp#1",
+   "lines": [
+    [
+     573,
+     575
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either an email or phone number"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either an email or phone number",
+   "template_parts": [
+    "You must provide either an email or phone number"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.resend",
+   "function_name": "resend",
+   "guard_words": [
+    "email",
+    "phone"
+   ],
+   "guards": [
+    "email is None and phone is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.resend#1",
+   "lines": [
+    [
+     598,
+     600
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either an email or phone number"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either an email or phone number",
+   "template_parts": [
+    "You must provide either an email or phone number"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.reauthenticate",
+   "function_name": "reauthenticate",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.reauthenticate#1",
+   "lines": [
+    [
+     646,
+     646
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.update_user",
+   "function_name": "update_user",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.update_user#1",
+   "lines": [
+    [
+     703,
+     703
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.set_session",
+   "function_name": "set_session",
+   "guard_words": [
+    "refresh_token"
+   ],
+   "guards": [
+    "not refresh_token"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.set_session#1",
+   "lines": [
+    [
+     748,
+     748
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "UserDoesntExist",
+   "class_name": "UserDoesntExist",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.set_session",
+   "function_name": "set_session",
+   "guard_words": [
+    "user_response"
+   ],
+   "guards": [
+    "user_response is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.set_session#2",
+   "lines": [
+    [
+     756,
+     756
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.refresh_session",
+   "function_name": "refresh_session",
+   "guard_words": [
+    "refresh_token"
+   ],
+   "guards": [
+    "not refresh_token"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.refresh_session#1",
+   "lines": [
+    [
+     784,
+     784
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._enroll",
+   "function_name": "_enroll",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._enroll#1",
+   "lines": [
+    [
+     917,
+     917
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._challenge",
+   "function_name": "_challenge",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._challenge#1",
+   "lines": [
+    [
+     945,
+     945
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._verify",
+   "function_name": "_verify",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._verify#1",
+   "lines": [
+    [
+     974,
+     974
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._unenroll",
+   "function_name": "_unenroll",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._unenroll#1",
+   "lines": [
+    [
+     990,
+     990
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "_is_implicit_grant_flow",
+    "self",
+    "url"
+   ],
+   "guards": [
+    "not self._is_implicit_grant_flow(url)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#1",
+   "lines": [
+    [
+     1060,
+     1060
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not a valid implicit grant flow url."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not a valid implicit grant flow url.",
+   "template_parts": [
+    "Not a valid implicit grant flow url."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "error_code"
+   ],
+   "guards": [
+    "not error_code"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#2",
+   "lines": [
+    [
+     1067,
+     1067
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No error_code detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No error_code detected.",
+   "template_parts": [
+    "No error_code detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "error"
+   ],
+   "guards": [
+    "not error"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#3",
+   "lines": [
+    [
+     1069,
+     1069
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No error detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No error detected.",
+   "template_parts": [
+    "No error detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "error_description"
+   ],
+   "guards": [
+    "error_description"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#4",
+   "lines": [
+    [
+     1070,
+     1073
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [
+    "code",
+    "error"
+   ],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "access_token"
+   ],
+   "guards": [
+    "not access_token"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#5",
+   "lines": [
+    [
+     1078,
+     1078
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No access_token detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No access_token detected.",
+   "template_parts": [
+    "No access_token detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "expires_in"
+   ],
+   "guards": [
+    "not expires_in"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#6",
+   "lines": [
+    [
+     1081,
+     1081
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No expires_in detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No expires_in detected.",
+   "template_parts": [
+    "No expires_in detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "refresh_token"
+   ],
+   "guards": [
+    "not refresh_token"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#7",
+   "lines": [
+    [
+     1084,
+     1084
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No refresh_token detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    7
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No refresh_token detected.",
+   "template_parts": [
+    "No refresh_token detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "token_type"
+   ],
+   "guards": [
+    "not token_type"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#8",
+   "lines": [
+    [
+     1087,
+     1087
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No token_type detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    8
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No token_type detected.",
+   "template_parts": [
+    "No token_type detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "UserDoesntExist",
+   "class_name": "UserDoesntExist",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "user"
+   ],
+   "guards": [
+    "user is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#9",
+   "lines": [
+    [
+     1092,
+     1092
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    9
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._call_refresh_token",
+   "function_name": "_call_refresh_token",
+   "guard_words": [
+    "refresh_token",
+    "response",
+    "session"
+   ],
+   "guards": [
+    "not refresh_token",
+    "not response.session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._call_refresh_token#1",
+   "lines": [
+    [
+     1148,
+     1148
+    ],
+    [
+     1151,
+     1151
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0,
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1,
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._fetch_jwks",
+   "function_name": "_fetch_jwks",
+   "guard_words": [
+    "jwk"
+   ],
+   "guards": [
+    "not jwk"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+   "lines": [
+    [
+     1342,
+     1342
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No matching signing key found in JWKS"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "No matching signing key found in JWKS",
+   "template_parts": [
+    "No matching signing key found in JWKS"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._fetch_jwks",
+   "function_name": "_fetch_jwks",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+   "lines": [
+    [
+     1346,
+     1346
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "JWT has no valid kid"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "JWT has no valid kid",
+   "template_parts": [
+    "JWT has no valid kid"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.get_claims",
+   "function_name": "get_claims",
+   "guard_words": [
+    "is_valid"
+   ],
+   "guards": [
+    "not is_valid"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+   "lines": [
+    [
+     1388,
+     1388
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid JWT signature"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "AsyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid JWT signature",
+   "template_parts": [
+    "Invalid JWT signature"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_up",
+   "function_name": "sign_up",
+   "guard_words": [
+    "password",
+    "phone"
+   ],
+   "guards": [
+    "phone and password"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.sign_up#1",
+   "lines": [
+    [
+     280,
+     282
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either an email or phone number and a password"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either an email or phone number and a password",
+   "template_parts": [
+    "You must provide either an email or phone number and a password"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_in_with_password",
+   "function_name": "sign_in_with_password",
+   "guard_words": [
+    "password",
+    "phone"
+   ],
+   "guards": [
+    "phone and password"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.sign_in_with_password#1",
+   "lines": [
+    [
+     332,
+     334
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either an email or phone number and a password"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either an email or phone number and a password",
+   "template_parts": [
+    "You must provide either an email or phone number and a password"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_in_with_sso",
+   "function_name": "sign_in_with_sso",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.sign_in_with_sso#1",
+   "lines": [
+    [
+     431,
+     433
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either a domain or provider_id"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either a domain or provider_id",
+   "template_parts": [
+    "You must provide either a domain or provider_id"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.link_identity",
+   "function_name": "link_identity",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.link_identity#1",
+   "lines": [
+    [
+     472,
+     472
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.get_user_identities",
+   "function_name": "get_user_identities",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.get_user_identities#1",
+   "lines": [
+    [
+     487,
+     487
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.unlink_identity",
+   "function_name": "unlink_identity",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.unlink_identity#1",
+   "lines": [
+    [
+     492,
+     492
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_in_with_otp",
+   "function_name": "sign_in_with_otp",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.sign_in_with_otp#1",
+   "lines": [
+    [
+     569,
+     571
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either an email or phone number"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either an email or phone number",
+   "template_parts": [
+    "You must provide either an email or phone number"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidCredentialsError",
+   "class_name": "AuthInvalidCredentialsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.resend",
+   "function_name": "resend",
+   "guard_words": [
+    "email",
+    "phone"
+   ],
+   "guards": [
+    "email is None and phone is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.resend#1",
+   "lines": [
+    [
+     594,
+     596
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "You must provide either an email or phone number"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "You must provide either an email or phone number",
+   "template_parts": [
+    "You must provide either an email or phone number"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.reauthenticate",
+   "function_name": "reauthenticate",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.reauthenticate#1",
+   "lines": [
+    [
+     642,
+     642
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.update_user",
+   "function_name": "update_user",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.update_user#1",
+   "lines": [
+    [
+     699,
+     699
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.set_session",
+   "function_name": "set_session",
+   "guard_words": [
+    "refresh_token"
+   ],
+   "guards": [
+    "not refresh_token"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.set_session#1",
+   "lines": [
+    [
+     744,
+     744
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "UserDoesntExist",
+   "class_name": "UserDoesntExist",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.set_session",
+   "function_name": "set_session",
+   "guard_words": [
+    "user_response"
+   ],
+   "guards": [
+    "user_response is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.set_session#2",
+   "lines": [
+    [
+     752,
+     752
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.refresh_session",
+   "function_name": "refresh_session",
+   "guard_words": [
+    "refresh_token"
+   ],
+   "guards": [
+    "not refresh_token"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.refresh_session#1",
+   "lines": [
+    [
+     780,
+     780
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._enroll",
+   "function_name": "_enroll",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._enroll#1",
+   "lines": [
+    [
+     913,
+     913
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._challenge",
+   "function_name": "_challenge",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._challenge#1",
+   "lines": [
+    [
+     941,
+     941
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._verify",
+   "function_name": "_verify",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._verify#1",
+   "lines": [
+    [
+     970,
+     970
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._unenroll",
+   "function_name": "_unenroll",
+   "guard_words": [
+    "session"
+   ],
+   "guards": [
+    "not session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._unenroll#1",
+   "lines": [
+    [
+     986,
+     986
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "_is_implicit_grant_flow",
+    "self",
+    "url"
+   ],
+   "guards": [
+    "not self._is_implicit_grant_flow(url)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#1",
+   "lines": [
+    [
+     1056,
+     1056
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not a valid implicit grant flow url."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Not a valid implicit grant flow url.",
+   "template_parts": [
+    "Not a valid implicit grant flow url."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "error_code"
+   ],
+   "guards": [
+    "not error_code"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#2",
+   "lines": [
+    [
+     1063,
+     1063
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No error_code detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No error_code detected.",
+   "template_parts": [
+    "No error_code detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "error"
+   ],
+   "guards": [
+    "not error"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#3",
+   "lines": [
+    [
+     1065,
+     1065
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No error detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No error detected.",
+   "template_parts": [
+    "No error detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "error_description"
+   ],
+   "guards": [
+    "error_description"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#4",
+   "lines": [
+    [
+     1066,
+     1069
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [
+    "code",
+    "error"
+   ],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "access_token"
+   ],
+   "guards": [
+    "not access_token"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#5",
+   "lines": [
+    [
+     1074,
+     1074
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No access_token detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No access_token detected.",
+   "template_parts": [
+    "No access_token detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "expires_in"
+   ],
+   "guards": [
+    "not expires_in"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#6",
+   "lines": [
+    [
+     1077,
+     1077
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No expires_in detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No expires_in detected.",
+   "template_parts": [
+    "No expires_in detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "refresh_token"
+   ],
+   "guards": [
+    "not refresh_token"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#7",
+   "lines": [
+    [
+     1080,
+     1080
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No refresh_token detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    7
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No refresh_token detected.",
+   "template_parts": [
+    "No refresh_token detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthImplicitGrantRedirectError",
+   "class_name": "AuthImplicitGrantRedirectError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "token_type"
+   ],
+   "guards": [
+    "not token_type"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#8",
+   "lines": [
+    [
+     1083,
+     1083
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No token_type detected."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    8
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "No token_type detected.",
+   "template_parts": [
+    "No token_type detected."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "UserDoesntExist",
+   "class_name": "UserDoesntExist",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "function_name": "_get_session_from_url",
+   "guard_words": [
+    "user"
+   ],
+   "guards": [
+    "user is None"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#9",
+   "lines": [
+    [
+     1088,
+     1088
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    9
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthSessionMissingError",
+   "class_name": "AuthSessionMissingError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._call_refresh_token",
+   "function_name": "_call_refresh_token",
+   "guard_words": [
+    "refresh_token",
+    "response",
+    "session"
+   ],
+   "guards": [
+    "not refresh_token",
+    "not response.session"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._call_refresh_token#1",
+   "lines": [
+    [
+     1144,
+     1144
+    ],
+    [
+     1147,
+     1147
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0,
+    0
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1,
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._fetch_jwks",
+   "function_name": "_fetch_jwks",
+   "guard_words": [
+    "jwk"
+   ],
+   "guards": [
+    "not jwk"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+   "lines": [
+    [
+     1332,
+     1332
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No matching signing key found in JWKS"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "No matching signing key found in JWKS",
+   "template_parts": [
+    "No matching signing key found in JWKS"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._fetch_jwks",
+   "function_name": "_fetch_jwks",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+   "lines": [
+    [
+     1336,
+     1336
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "JWT has no valid kid"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "JWT has no valid kid",
+   "template_parts": [
+    "JWT has no valid kid"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.get_claims",
+   "function_name": "get_claims",
+   "guard_words": [
+    "is_valid"
+   ],
+   "guards": [
+    "not is_valid"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+   "lines": [
+    [
+     1378,
+     1378
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid JWT signature"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "SyncGoTrueClient",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid JWT signature",
+   "template_parts": [
+    "Invalid JWT signature"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/helpers.py",
+   "function": "parse_jwks",
+   "function_name": "parse_jwks",
+   "guard_words": [
+    "jwk",
+    "keys",
+    "len"
+   ],
+   "guards": [
+    "len(jwk['keys']) == 0"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "helpers.parse_jwks#1",
+   "lines": [
+    [
+     92,
+     92
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "JWKS is empty"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "JWKS is empty",
+   "template_parts": [
+    "JWKS is empty"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/helpers.py",
+   "function": "decode_jwt",
+   "function_name": "decode_jwt",
+   "guard_words": [
+    "ValueError",
+    "e",
+    "len",
+    "parts"
+   ],
+   "guards": [
+    "len(parts) != 3",
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "helpers.decode_jwt#1",
+   "lines": [
+    [
+     204,
+     204
+    ],
+    [
+     211,
+     211
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid JWT structure"
+     }
+    },
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid JWT structure"
+     }
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1,
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid JWT structure",
+   "template_parts": [
+    "Invalid JWT structure"
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/helpers.py",
+   "function": "validate_exp",
+   "function_name": "validate_exp",
+   "guard_words": [
+    "exp"
+   ],
+   "guards": [
+    "not exp"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "helpers.validate_exp#1",
+   "lines": [
+    [
+     269,
+     269
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "JWT has no expiration time"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "JWT has no expiration time",
+   "template_parts": [
+    "JWT has no expiration time"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "AuthInvalidJwtError",
+   "class_name": "AuthInvalidJwtError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "supabase_auth/helpers.py",
+   "function": "validate_exp",
+   "function_name": "validate_exp",
+   "guard_words": [
+    "exp",
+    "time_now"
+   ],
+   "guards": [
+    "exp <= time_now"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "helpers.validate_exp#2",
+   "lines": [
+    [
+     273,
+     273
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "JWT has expired"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "JWT has expired",
+   "template_parts": [
+    "JWT has expired"
+   ],
+   "via_variable": [
+    null
+   ]
+  }
+ ],
+ "classes": {
+  "AMREntry": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AMREntry",
+   "qualname": "AMREntry"
+  },
+  "AMREntryDict": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AMREntryDict",
+   "qualname": "AMREntryDict"
+  },
+  "AdminUserAttributes": {
+   "bases": [
+    "UserAttributes",
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "UserAttributes",
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AdminUserAttributes",
+   "qualname": "AdminUserAttributes"
+  },
+  "AsyncGoTrueAdminAPI": {
+   "bases": [
+    "AsyncGoTrueBaseAPI"
+   ],
+   "bases_declared": [
+    "AsyncGoTrueBaseAPI"
+   ],
+   "defines": [
+    "__init__",
+    "_create_oauth_client",
+    "_delete_factor",
+    "_delete_oauth_client",
+    "_get_oauth_client",
+    "_list_factors",
+    "_list_oauth_clients",
+    "_regenerate_oauth_client_secret",
+    "_update_oauth_client",
+    "create_user",
+    "delete_user",
+    "generate_link",
+    "get_user_by_id",
+    "invite_user_by_email",
+    "list_users",
+    "sign_out",
+    "update_user_by_id"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth._async.gotrue_admin_api",
+   "name": "AsyncGoTrueAdminAPI",
+   "qualname": "AsyncGoTrueAdminAPI"
+  },
+  "AsyncGoTrueAdminMFAAPI": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "delete_factor",
+    "list_factors"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth._async.gotrue_admin_mfa_api",
+   "name": "AsyncGoTrueAdminMFAAPI",
+   "qualname": "AsyncGoTrueAdminMFAAPI"
+  },
+  "AsyncGoTrueAdminOAuthAPI": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "create_client",
+    "delete_client",
+    "get_client",
+    "list_clients",
+    "regenerate_client_secret",
+    "update_client"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth._async.gotrue_admin_oauth_api",
+   "name": "AsyncGoTrueAdminOAuthAPI",
+   "qualname": "AsyncGoTrueAdminOAuthAPI"
+  },
+  "AsyncGoTrueBaseAPI": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__aenter__",
+    "__aexit__",
+    "__init__",
+    "_request",
+    "close"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth._async.gotrue_base_api",
+   "name": "AsyncGoTrueBaseAPI",
+   "qualname": "AsyncGoTrueBaseAPI"
+  },
+  "AsyncGoTrueClient": {
+   "bases": [
+    "AsyncGoTrueBaseAPI"
+   ],
+   "bases_declared": [
+    "AsyncGoTrueBaseAPI"
+   ],
+   "defines": [
+    "__del__",
+    "__init__",
+    "_call_refresh_token",
+    "_challenge",
+    "_challenge_and_verify",
+    "_enroll",
+    "_fetch_jwks",
+    "_get_authenticator_assurance_level",
+    "_get_param",
+    "_get_session_from_url",
+    "_get_url_for_provider",
+    "_get_valid_session",
+    "_is_implicit_grant_flow",
+    "_list_factors",
+    "_load_session",
+    "_notify_all_subscribers",
+    "_prepare_pkce_challenge",
+    "_recover_and_refresh",
+    "_refresh_access_token",
+    "_remove_session",
+    "_save_session",
+    "_start_auto_refresh_token",
+    "_unenroll",
+    "_verify",
+    "_with_pkce_challenge",
+    "exchange_code_for_session",
+    "get_claims",
+    "get_session",
+    "get_user",
+    "get_user_identities",
+    "initialize",
+    "initialize_from_storage",
+    "initialize_from_url",
+    "link_identity",
+    "on_auth_state_change",
+    "reauthenticate",
+    "refresh_session",
+    "resend",
+    "reset_password_email",
+    "reset_password_for_email",
+    "set_session",
+    "sign_in_anonymously",
+    "sign_in_with_id_token",
+    "sign_in_with_oauth",
+    "sign_in_with_otp",
+    "sign_in_with_password",
+    "sign_in_with_sso",
+    "sign_out",
+    "sign_up",
+    "unlink_identity",
+    "update_user",
+    "verify_otp"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth._async.gotrue_client",
+   "name": "AsyncGoTrueClient",
+   "qualname": "AsyncGoTrueClient"
+  },
+  "AsyncGoTrueMFAAPI": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "challenge",
+    "challenge_and_verify",
+    "enroll",
+    "get_authenticator_assurance_level",
+    "list_factors",
+    "unenroll",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth._async.gotrue_mfa_api",
+   "name": "AsyncGoTrueMFAAPI",
+   "qualname": "AsyncGoTrueMFAAPI"
+  },
+  "AsyncMemoryStorage": {
+   "bases": [
+    "AsyncSupportedStorage"
+   ],
+   "bases_declared": [
+    "AsyncSupportedStorage"
+   ],
+   "defines": [
+    "__init__",
+    "get_item",
+    "remove_item",
+    "set_item"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth._async.storage",
+   "name": "AsyncMemoryStorage",
+   "qualname": "AsyncMemoryStorage"
+  },
+  "AsyncSupportedStorage": {
+   "bases": [
+    "abc.ABC"
+   ],
+   "bases_declared": [
+    "abc.ABC"
+   ],
+   "defines": [
+    "get_item",
+    "remove_item",
+    "set_item"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth._async.storage",
+   "name": "AsyncSupportedStorage",
+   "qualname": "AsyncSupportedStorage"
+  },
+  "AuthApiError": {
+   "bases": [
+    "AuthError"
+   ],
+   "bases_declared": [
+    "AuthError"
+   ],
+   "defines": [
+    "__init__",
+    "to_dict"
+   ],
+   "init_attrs": {
+    "code": 2,
+    "status": 1
+   },
+   "init_params": [
+    "message",
+    "status",
+    "code"
+   ],
+   "module": "supabase_auth.errors",
+   "name": "AuthApiError",
+   "qualname": "AuthApiError"
+  },
+  "AuthApiErrorDict": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.errors",
+   "name": "AuthApiErrorDict",
+   "qualname": "AuthApiErrorDict"
+  },
+  "AuthApiErrorWithReasonsDict": {
+   "bases": [
+    "AuthApiErrorDict"
+   ],
+   "bases_declared": [
+    "AuthApiErrorDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.errors",
+   "name": "AuthApiErrorWithReasonsDict",
+   "qualname": "AuthApiErrorWithReasonsDict"
+  },
+  "AuthError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {
+    "code": 1,
+    "message": 0
+   },
+   "init_params": [
+    "message",
+    "code"
+   ],
+   "module": "supabase_auth.errors",
+   "name": "AuthError",
+   "qualname": "AuthError"
+  },
+  "AuthImplicitGrantRedirectError": {
+   "bases": [
+    "CustomAuthError"
+   ],
+   "bases_declared": [
+    "CustomAuthError"
+   ],
+   "defines": [
+    "__init__",
+    "to_dict"
+   ],
+   "init_attrs": {
+    "details": 1
+   },
+   "init_params": [
+    "message",
+    "details"
+   ],
+   "module": "supabase_auth.errors",
+   "name": "AuthImplicitGrantRedirectError",
+   "qualname": "AuthImplicitGrantRedirectError"
+  },
+  "AuthImplicitGrantRedirectErrorDetails": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.errors",
+   "name": "AuthImplicitGrantRedirectErrorDetails",
+   "qualname": "AuthImplicitGrantRedirectErrorDetails"
+  },
+  "AuthImplicitGrantRedirectErrorDict": {
+   "bases": [
+    "AuthApiErrorDict"
+   ],
+   "bases_declared": [
+    "AuthApiErrorDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.errors",
+   "name": "AuthImplicitGrantRedirectErrorDict",
+   "qualname": "AuthImplicitGrantRedirectErrorDict"
+  },
+  "AuthInvalidCredentialsError": {
+   "bases": [
+    "CustomAuthError"
+   ],
+   "bases_declared": [
+    "CustomAuthError"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "message"
+   ],
+   "module": "supabase_auth.errors",
+   "name": "AuthInvalidCredentialsError",
+   "qualname": "AuthInvalidCredentialsError"
+  },
+  "AuthInvalidJwtError": {
+   "bases": [
+    "CustomAuthError"
+   ],
+   "bases_declared": [
+    "CustomAuthError"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "message"
+   ],
+   "module": "supabase_auth.errors",
+   "name": "AuthInvalidJwtError",
+   "qualname": "AuthInvalidJwtError"
+  },
+  "AuthMFAAdminDeleteFactorParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAAdminDeleteFactorParams",
+   "qualname": "AuthMFAAdminDeleteFactorParams"
+  },
+  "AuthMFAAdminDeleteFactorResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAAdminDeleteFactorResponse",
+   "qualname": "AuthMFAAdminDeleteFactorResponse"
+  },
+  "AuthMFAAdminListFactorsParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAAdminListFactorsParams",
+   "qualname": "AuthMFAAdminListFactorsParams"
+  },
+  "AuthMFAChallengeResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAChallengeResponse",
+   "qualname": "AuthMFAChallengeResponse"
+  },
+  "AuthMFAEnrollResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [
+    "validate_phone_required_for_phone_type"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAEnrollResponse",
+   "qualname": "AuthMFAEnrollResponse"
+  },
+  "AuthMFAEnrollResponseTotp": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAEnrollResponseTotp",
+   "qualname": "AuthMFAEnrollResponseTotp"
+  },
+  "AuthMFAGetAuthenticatorAssuranceLevelResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAGetAuthenticatorAssuranceLevelResponse",
+   "qualname": "AuthMFAGetAuthenticatorAssuranceLevelResponse"
+  },
+  "AuthMFAListFactorsResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAListFactorsResponse",
+   "qualname": "AuthMFAListFactorsResponse"
+  },
+  "AuthMFAUnenrollResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAUnenrollResponse",
+   "qualname": "AuthMFAUnenrollResponse"
+  },
+  "AuthMFAVerifyResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthMFAVerifyResponse",
+   "qualname": "AuthMFAVerifyResponse"
+  },
+  "AuthOtpResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthOtpResponse",
+   "qualname": "AuthOtpResponse"
+  },
+  "AuthResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "AuthResponse",
+   "qualname": "AuthResponse"
+  },
+  "AuthRetryableError": {
+   "bases": [
+    "CustomAuthError"
+   ],
+   "bases_declared": [
+    "CustomAuthError"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "message",
+    "status"
+   ],
+   "module": "supabase_auth.errors",
+   "name": "AuthRetryableError",
+   "qualname": "AuthRetryableError"
+  },
+  "AuthSessionMissingError": {
+   "bases": [
+    "CustomAuthError"
+   ],
+   "bases_declared": [
+    "CustomAuthError"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth.errors",
+   "name": "AuthSessionMissingError",
+   "qualname": "AuthSessionMissingError"
+  },
+  "AuthUnknownError": {
+   "bases": [
+    "AuthError"
+   ],
+   "bases_declared": [
+    "AuthError"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {
+    "original_error": 1
+   },
+   "init_params": [
+    "message",
+    "original_error"
+   ],
+   "module": "supabase_auth.errors",
+   "name": "AuthUnknownError",
+   "qualname": "AuthUnknownError"
+  },
+  "AuthWeakPasswordError": {
+   "bases": [
+    "CustomAuthError"
+   ],
+   "bases_declared": [
+    "CustomAuthError"
+   ],
+   "defines": [
+    "__init__",
+    "to_dict"
+   ],
+   "init_attrs": {
+    "reasons": 2
+   },
+   "init_params": [
+    "message",
+    "status",
+    "reasons"
+   ],
+   "module": "supabase_auth.errors",
+   "name": "AuthWeakPasswordError",
+   "qualname": "AuthWeakPasswordError"
+  },
+  "ClaimsResponse": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "ClaimsResponse",
+   "qualname": "ClaimsResponse"
+  },
+  "CodeExchangeParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "CodeExchangeParams",
+   "qualname": "CodeExchangeParams"
+  },
+  "CreateOAuthClientParams": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "CreateOAuthClientParams",
+   "qualname": "CreateOAuthClientParams"
+  },
+  "CustomAuthError": {
+   "bases": [
+    "AuthError"
+   ],
+   "bases_declared": [
+    "AuthError"
+   ],
+   "defines": [
+    "__init__",
+    "to_dict"
+   ],
+   "init_attrs": {
+    "name": 1,
+    "status": 2
+   },
+   "init_params": [
+    "message",
+    "name",
+    "status",
+    "code"
+   ],
+   "module": "supabase_auth.errors",
+   "name": "CustomAuthError",
+   "qualname": "CustomAuthError"
+  },
+  "DecodedJWT": {
+   "bases": [
+    "typing.TypedDict"
+   ],
+   "bases_declared": [
+    "typing.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.helpers",
+   "name": "DecodedJWT",
+   "qualname": "DecodedJWT"
+  },
+  "DecodedJWTDict": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "DecodedJWTDict",
+   "qualname": "DecodedJWTDict"
+  },
+  "Factor": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "Factor",
+   "qualname": "Factor"
+  },
+  "GenerateEmailChangeLinkParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "GenerateEmailChangeLinkParams",
+   "qualname": "GenerateEmailChangeLinkParams"
+  },
+  "GenerateInviteOrMagiclinkParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "GenerateInviteOrMagiclinkParams",
+   "qualname": "GenerateInviteOrMagiclinkParams"
+  },
+  "GenerateLinkParamsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "GenerateLinkParamsOptions",
+   "qualname": "GenerateLinkParamsOptions"
+  },
+  "GenerateLinkParamsWithDataOptions": {
+   "bases": [
+    "GenerateLinkParamsOptions",
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "GenerateLinkParamsOptions",
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "GenerateLinkParamsWithDataOptions",
+   "qualname": "GenerateLinkParamsWithDataOptions"
+  },
+  "GenerateLinkProperties": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "GenerateLinkProperties",
+   "qualname": "GenerateLinkProperties"
+  },
+  "GenerateLinkResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "GenerateLinkResponse",
+   "qualname": "GenerateLinkResponse"
+  },
+  "GenerateRecoveryLinkParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "GenerateRecoveryLinkParams",
+   "qualname": "GenerateRecoveryLinkParams"
+  },
+  "GenerateSignupLinkParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "GenerateSignupLinkParams",
+   "qualname": "GenerateSignupLinkParams"
+  },
+  "IdentitiesResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "IdentitiesResponse",
+   "qualname": "IdentitiesResponse"
+  },
+  "InviteUserByEmailOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "InviteUserByEmailOptions",
+   "qualname": "InviteUserByEmailOptions"
+  },
+  "JWK": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "JWK",
+   "qualname": "JWK"
+  },
+  "JWKSet": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "JWKSet",
+   "qualname": "JWKSet"
+  },
+  "JWTHeader": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "JWTHeader",
+   "qualname": "JWTHeader"
+  },
+  "JWTPayload": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "JWTPayload",
+   "qualname": "JWTPayload"
+  },
+  "LinkIdentityResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "LinkIdentityResponse",
+   "qualname": "LinkIdentityResponse"
+  },
+  "MFAChallengeAndVerifyParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "MFAChallengeAndVerifyParams",
+   "qualname": "MFAChallengeAndVerifyParams"
+  },
+  "MFAChallengeParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "MFAChallengeParams",
+   "qualname": "MFAChallengeParams"
+  },
+  "MFAEnrollPhoneParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "MFAEnrollPhoneParams",
+   "qualname": "MFAEnrollPhoneParams"
+  },
+  "MFAEnrollTOTPParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "MFAEnrollTOTPParams",
+   "qualname": "MFAEnrollTOTPParams"
+  },
+  "MFAUnenrollParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "MFAUnenrollParams",
+   "qualname": "MFAUnenrollParams"
+  },
+  "MFAVerifyParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "MFAVerifyParams",
+   "qualname": "MFAVerifyParams"
+  },
+  "OAuthClient": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "OAuthClient",
+   "qualname": "OAuthClient"
+  },
+  "OAuthClientListResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "OAuthClientListResponse",
+   "qualname": "OAuthClientListResponse"
+  },
+  "OAuthClientResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "OAuthClientResponse",
+   "qualname": "OAuthClientResponse"
+  },
+  "OAuthResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "OAuthResponse",
+   "qualname": "OAuthResponse"
+  },
+  "Options": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "Options",
+   "qualname": "Options"
+  },
+  "PageParams": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "PageParams",
+   "qualname": "PageParams"
+  },
+  "Pagination": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "Pagination",
+   "qualname": "Pagination"
+  },
+  "RequiredClaims": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "RequiredClaims",
+   "qualname": "RequiredClaims"
+  },
+  "ResendEmailCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "ResendEmailCredentials",
+   "qualname": "ResendEmailCredentials"
+  },
+  "ResendEmailCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "ResendEmailCredentialsOptions",
+   "qualname": "ResendEmailCredentialsOptions"
+  },
+  "ResendPhoneCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "ResendPhoneCredentials",
+   "qualname": "ResendPhoneCredentials"
+  },
+  "ResendPhoneCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "ResendPhoneCredentialsOptions",
+   "qualname": "ResendPhoneCredentialsOptions"
+  },
+  "SSOResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SSOResponse",
+   "qualname": "SSOResponse"
+  },
+  "Session": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [
+    "validator"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "Session",
+   "qualname": "Session"
+  },
+  "SignInAnonymouslyCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInAnonymouslyCredentials",
+   "qualname": "SignInAnonymouslyCredentials"
+  },
+  "SignInAnonymouslyCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInAnonymouslyCredentialsOptions",
+   "qualname": "SignInAnonymouslyCredentialsOptions"
+  },
+  "SignInWithEmailAndPasswordCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithEmailAndPasswordCredentials",
+   "qualname": "SignInWithEmailAndPasswordCredentials"
+  },
+  "SignInWithEmailAndPasswordlessCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithEmailAndPasswordlessCredentials",
+   "qualname": "SignInWithEmailAndPasswordlessCredentials"
+  },
+  "SignInWithEmailAndPasswordlessCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithEmailAndPasswordlessCredentialsOptions",
+   "qualname": "SignInWithEmailAndPasswordlessCredentialsOptions"
+  },
+  "SignInWithIdTokenCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithIdTokenCredentials",
+   "qualname": "SignInWithIdTokenCredentials"
+  },
+  "SignInWithIdTokenCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithIdTokenCredentialsOptions",
+   "qualname": "SignInWithIdTokenCredentialsOptions"
+  },
+  "SignInWithOAuthCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithOAuthCredentials",
+   "qualname": "SignInWithOAuthCredentials"
+  },
+  "SignInWithOAuthCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithOAuthCredentialsOptions",
+   "qualname": "SignInWithOAuthCredentialsOptions"
+  },
+  "SignInWithPasswordCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithPasswordCredentialsOptions",
+   "qualname": "SignInWithPasswordCredentialsOptions"
+  },
+  "SignInWithPhoneAndPasswordCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithPhoneAndPasswordCredentials",
+   "qualname": "SignInWithPhoneAndPasswordCredentials"
+  },
+  "SignInWithPhoneAndPasswordlessCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithPhoneAndPasswordlessCredentials",
+   "qualname": "SignInWithPhoneAndPasswordlessCredentials"
+  },
+  "SignInWithPhoneAndPasswordlessCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithPhoneAndPasswordlessCredentialsOptions",
+   "qualname": "SignInWithPhoneAndPasswordlessCredentialsOptions"
+  },
+  "SignInWithSSOCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithSSOCredentials",
+   "qualname": "SignInWithSSOCredentials"
+  },
+  "SignInWithSSOOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignInWithSSOOptions",
+   "qualname": "SignInWithSSOOptions"
+  },
+  "SignOutOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignOutOptions",
+   "qualname": "SignOutOptions"
+  },
+  "SignUpWithEmailAndPasswordCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignUpWithEmailAndPasswordCredentials",
+   "qualname": "SignUpWithEmailAndPasswordCredentials"
+  },
+  "SignUpWithEmailAndPasswordCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignUpWithEmailAndPasswordCredentialsOptions",
+   "qualname": "SignUpWithEmailAndPasswordCredentialsOptions"
+  },
+  "SignUpWithPhoneAndPasswordCredentials": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignUpWithPhoneAndPasswordCredentials",
+   "qualname": "SignUpWithPhoneAndPasswordCredentials"
+  },
+  "SignUpWithPhoneAndPasswordCredentialsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "SignUpWithPhoneAndPasswordCredentialsOptions",
+   "qualname": "SignUpWithPhoneAndPasswordCredentialsOptions"
+  },
+  "Subscription": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "Subscription",
+   "qualname": "Subscription"
+  },
+  "SyncGoTrueAdminAPI": {
+   "bases": [
+    "SyncGoTrueBaseAPI"
+   ],
+   "bases_declared": [
+    "SyncGoTrueBaseAPI"
+   ],
+   "defines": [
+    "__init__",
+    "_create_oauth_client",
+    "_delete_factor",
+    "_delete_oauth_client",
+    "_get_oauth_client",
+    "_list_factors",
+    "_list_oauth_clients",
+    "_regenerate_oauth_client_secret",
+    "_update_oauth_client",
+    "create_user",
+    "delete_user",
+    "generate_link",
+    "get_user_by_id",
+    "invite_user_by_email",
+    "list_users",
+    "sign_out",
+    "update_user_by_id"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth._sync.gotrue_admin_api",
+   "name": "SyncGoTrueAdminAPI",
+   "qualname": "SyncGoTrueAdminAPI"
+  },
+  "SyncGoTrueAdminMFAAPI": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "delete_factor",
+    "list_factors"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth._sync.gotrue_admin_mfa_api",
+   "name": "SyncGoTrueAdminMFAAPI",
+   "qualname": "SyncGoTrueAdminMFAAPI"
+  },
+  "SyncGoTrueAdminOAuthAPI": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "create_client",
+    "delete_client",
+    "get_client",
+    "list_clients",
+    "regenerate_client_secret",
+    "update_client"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth._sync.gotrue_admin_oauth_api",
+   "name": "SyncGoTrueAdminOAuthAPI",
+   "qualname": "SyncGoTrueAdminOAuthAPI"
+  },
+  "SyncGoTrueBaseAPI": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__enter__",
+    "__exit__",
+    "__init__",
+    "_request",
+    "close"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth._sync.gotrue_base_api",
+   "name": "SyncGoTrueBaseAPI",
+   "qualname": "SyncGoTrueBaseAPI"
+  },
+  "SyncGoTrueClient": {
+   "bases": [
+    "SyncGoTrueBaseAPI"
+   ],
+   "bases_declared": [
+    "SyncGoTrueBaseAPI"
+   ],
+   "defines": [
+    "__del__",
+    "__init__",
+    "_call_refresh_token",
+    "_challenge",
+    "_challenge_and_verify",
+    "_enroll",
+    "_fetch_jwks",
+    "_get_authenticator_assurance_level",
+    "_get_param",
+    "_get_session_from_url",
+    "_get_url_for_provider",
+    "_get_valid_session",
+    "_is_implicit_grant_flow",
+    "_list_factors",
+    "_load_session",
+    "_notify_all_subscribers",
+    "_prepare_pkce_challenge",
+    "_recover_and_refresh",
+    "_refresh_access_token",
+    "_remove_session",
+    "_save_session",
+    "_start_auto_refresh_token",
+    "_unenroll",
+    "_verify",
+    "_with_pkce_challenge",
+    "exchange_code_for_session",
+    "get_claims",
+    "get_session",
+    "get_user",
+    "get_user_identities",
+    "initialize",
+    "initialize_from_storage",
+    "initialize_from_url",
+    "link_identity",
+    "on_auth_state_change",
+    "reauthenticate",
+    "refresh_session",
+    "resend",
+    "reset_password_email",
+    "reset_password_for_email",
+    "set_session",
+    "sign_in_anonymously",
+    "sign_in_with_id_token",
+    "sign_in_with_oauth",
+    "sign_in_with_otp",
+    "sign_in_with_password",
+    "sign_in_with_sso",
+    "sign_out",
+    "sign_up",
+    "unlink_identity",
+    "update_user",
+    "verify_otp"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth._sync.gotrue_client",
+   "name": "SyncGoTrueClient",
+   "qualname": "SyncGoTrueClient"
+  },
+  "SyncGoTrueMFAAPI": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "challenge",
+    "challenge_and_verify",
+    "enroll",
+    "get_authenticator_assurance_level",
+    "list_factors",
+    "unenroll",
+    "verify"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth._sync.gotrue_mfa_api",
+   "name": "SyncGoTrueMFAAPI",
+   "qualname": "SyncGoTrueMFAAPI"
+  },
+  "SyncMemoryStorage": {
+   "bases": [
+    "SyncSupportedStorage"
+   ],
+   "bases_declared": [
+    "SyncSupportedStorage"
+   ],
+   "defines": [
+    "__init__",
+    "get_item",
+    "remove_item",
+    "set_item"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth._sync.storage",
+   "name": "SyncMemoryStorage",
+   "qualname": "SyncMemoryStorage"
+  },
+  "SyncSupportedStorage": {
+   "bases": [
+    "abc.ABC"
+   ],
+   "bases_declared": [
+    "abc.ABC"
+   ],
+   "defines": [
+    "get_item",
+    "remove_item",
+    "set_item"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth._sync.storage",
+   "name": "SyncSupportedStorage",
+   "qualname": "SyncSupportedStorage"
+  },
+  "Timer": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "cancel",
+    "is_alive",
+    "start"
+   ],
+   "init_attrs": {
+    "_function": 1,
+    "_milliseconds": 0
+   },
+   "init_params": [
+    "seconds",
+    "function"
+   ],
+   "module": "supabase_auth.timer",
+   "name": "Timer",
+   "qualname": "Timer"
+  },
+  "UpdatableFactorAttributes": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "UpdatableFactorAttributes",
+   "qualname": "UpdatableFactorAttributes"
+  },
+  "UpdateOAuthClientParams": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "UpdateOAuthClientParams",
+   "qualname": "UpdateOAuthClientParams"
+  },
+  "UpdateUserOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "UpdateUserOptions",
+   "qualname": "UpdateUserOptions"
+  },
+  "User": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "User",
+   "qualname": "User"
+  },
+  "UserAttributes": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "UserAttributes",
+   "qualname": "UserAttributes"
+  },
+  "UserDoesntExist": {
+   "bases": [
+    "CustomAuthError"
+   ],
+   "bases_declared": [
+    "CustomAuthError"
+   ],
+   "defines": [
+    "__init__"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "supabase_auth.errors",
+   "name": "UserDoesntExist",
+   "qualname": "UserDoesntExist"
+  },
+  "UserIdentity": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "UserIdentity",
+   "qualname": "UserIdentity"
+  },
+  "UserList": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "UserList",
+   "qualname": "UserList"
+  },
+  "UserResponse": {
+   "bases": [
+    "pydantic.BaseModel"
+   ],
+   "bases_declared": [
+    "pydantic.BaseModel"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "UserResponse",
+   "qualname": "UserResponse"
+  },
+  "VerifyEmailOtpParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "VerifyEmailOtpParams",
+   "qualname": "VerifyEmailOtpParams"
+  },
+  "VerifyMobileOtpParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "VerifyMobileOtpParams",
+   "qualname": "VerifyMobileOtpParams"
+  },
+  "VerifyOtpParamsOptions": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "VerifyOtpParamsOptions",
+   "qualname": "VerifyOtpParamsOptions"
+  },
+  "VerifyTokenHashParams": {
+   "bases": [
+    "typing_extensions.TypedDict"
+   ],
+   "bases_declared": [
+    "typing_extensions.TypedDict"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "supabase_auth.types",
+   "name": "VerifyTokenHashParams",
+   "qualname": "VerifyTokenHashParams"
+  }
+ },
+ "functions": [
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI._create_oauth_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI._delete_factor",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI._delete_oauth_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI._get_oauth_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI._list_factors",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI._list_oauth_clients",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI._regenerate_oauth_client_secret",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI._update_oauth_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI.create_user",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI.delete_user",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI.generate_link",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI.get_user_by_id",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI.invite_user_by_email",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI.list_users",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI.sign_out",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_api.py",
+   "function": "AsyncGoTrueAdminAPI.update_user_by_id",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_mfa_api.py",
+   "function": "AsyncGoTrueAdminMFAAPI.delete_factor",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_mfa_api.py",
+   "function": "AsyncGoTrueAdminMFAAPI.list_factors",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.create_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.delete_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.get_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.list_clients",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.regenerate_client_secret",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.update_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_base_api.py",
+   "function": "AsyncGoTrueBaseAPI.__aenter__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_base_api.py",
+   "function": "AsyncGoTrueBaseAPI.__aexit__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_base_api.py",
+   "function": "AsyncGoTrueBaseAPI.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_base_api.py",
+   "function": "AsyncGoTrueBaseAPI._request",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_base_api.py",
+   "function": "AsyncGoTrueBaseAPI.close",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.__del__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._call_refresh_token",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._challenge",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._challenge_and_verify",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._enroll",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._fetch_jwks",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_authenticator_assurance_level",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_param",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_session_from_url",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_url_for_provider",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._get_valid_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._is_implicit_grant_flow",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._list_factors",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._load_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._notify_all_subscribers",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._prepare_pkce_challenge",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._recover_and_refresh",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._refresh_access_token",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._remove_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._save_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._start_auto_refresh_token",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._start_auto_refresh_token.refresh_token_function",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._unenroll",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._verify",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient._with_pkce_challenge",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.exchange_code_for_session",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.get_claims",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.get_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.get_user",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.get_user_identities",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.initialize",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.initialize_from_storage",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.initialize_from_url",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.link_identity",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.on_auth_state_change",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.on_auth_state_change._unsubscribe",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.reauthenticate",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.refresh_session",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.resend",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.reset_password_email",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.reset_password_for_email",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.set_session",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_in_anonymously",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_in_with_id_token",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_in_with_oauth",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_in_with_otp",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_in_with_password",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_in_with_sso",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_out",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_up",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.unlink_identity",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.update_user",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.verify_otp",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "_is_signed_out_error",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.challenge",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.challenge_and_verify",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.enroll",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.get_authenticator_assurance_level",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.list_factors",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.unenroll",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.verify",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/storage.py",
+   "function": "AsyncMemoryStorage.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_async/storage.py",
+   "function": "AsyncMemoryStorage.get_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/storage.py",
+   "function": "AsyncMemoryStorage.remove_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/storage.py",
+   "function": "AsyncMemoryStorage.set_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/storage.py",
+   "function": "AsyncSupportedStorage.get_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/storage.py",
+   "function": "AsyncSupportedStorage.remove_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_async/storage.py",
+   "function": "AsyncSupportedStorage.set_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI._create_oauth_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI._delete_factor",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI._delete_oauth_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI._get_oauth_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI._list_factors",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI._list_oauth_clients",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI._regenerate_oauth_client_secret",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI._update_oauth_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI.create_user",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI.delete_user",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI.generate_link",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI.get_user_by_id",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI.invite_user_by_email",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI.list_users",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI.sign_out",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_api.py",
+   "function": "SyncGoTrueAdminAPI.update_user_by_id",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_mfa_api.py",
+   "function": "SyncGoTrueAdminMFAAPI.delete_factor",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_mfa_api.py",
+   "function": "SyncGoTrueAdminMFAAPI.list_factors",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.create_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.delete_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.get_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.list_clients",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.regenerate_client_secret",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.update_client",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_base_api.py",
+   "function": "SyncGoTrueBaseAPI.__enter__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_base_api.py",
+   "function": "SyncGoTrueBaseAPI.__exit__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_base_api.py",
+   "function": "SyncGoTrueBaseAPI.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_base_api.py",
+   "function": "SyncGoTrueBaseAPI._request",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_base_api.py",
+   "function": "SyncGoTrueBaseAPI.close",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.__del__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._call_refresh_token",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._challenge",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._challenge_and_verify",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._enroll",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._fetch_jwks",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_authenticator_assurance_level",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_param",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_session_from_url",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_url_for_provider",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._get_valid_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._is_implicit_grant_flow",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._list_factors",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._load_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._notify_all_subscribers",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._prepare_pkce_challenge",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._recover_and_refresh",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._refresh_access_token",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._remove_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._save_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._start_auto_refresh_token",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._start_auto_refresh_token.refresh_token_function",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._unenroll",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._verify",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient._with_pkce_challenge",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.exchange_code_for_session",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.get_claims",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.get_session",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.get_user",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.get_user_identities",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.initialize",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.initialize_from_storage",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.initialize_from_url",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.link_identity",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.on_auth_state_change",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.on_auth_state_change._unsubscribe",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.reauthenticate",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.refresh_session",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.resend",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.reset_password_email",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.reset_password_for_email",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.set_session",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_in_anonymously",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_in_with_id_token",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_in_with_oauth",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_in_with_otp",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_in_with_password",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_in_with_sso",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_out",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_up",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.unlink_identity",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.update_user",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.verify_otp",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "_is_signed_out_error",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.challenge",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.challenge_and_verify",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.enroll",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.get_authenticator_assurance_level",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.list_factors",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.unenroll",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.verify",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/storage.py",
+   "function": "SyncMemoryStorage.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/_sync/storage.py",
+   "function": "SyncMemoryStorage.get_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/storage.py",
+   "function": "SyncMemoryStorage.remove_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/storage.py",
+   "function": "SyncMemoryStorage.set_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/storage.py",
+   "function": "SyncSupportedStorage.get_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/storage.py",
+   "function": "SyncSupportedStorage.remove_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/_sync/storage.py",
+   "function": "SyncSupportedStorage.set_item",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthApiError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthApiError.to_dict",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthImplicitGrantRedirectError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthImplicitGrantRedirectError.to_dict",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthInvalidCredentialsError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthInvalidJwtError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthRetryableError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthSessionMissingError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthUnknownError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthWeakPasswordError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "AuthWeakPasswordError.to_dict",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "CustomAuthError.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "CustomAuthError.to_dict",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/errors.py",
+   "function": "UserDoesntExist.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "_parse_url_params",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "base64url_to_bytes",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "decode_jwt",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "generate_pkce_challenge",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "generate_pkce_verifier",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "get_error_message",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "get_error_message.filter",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "handle_exception",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "is_http_url",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "is_valid_uuid",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "parse_auth_otp_response",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "parse_auth_response",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "parse_jwks",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "parse_link_identity_response",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "parse_link_response",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "parse_response_api_version",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "parse_sso_response",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "parse_user_response",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "validate_exp",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/helpers.py",
+   "function": "validate_uuid",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/timer.py",
+   "function": "Timer.__init__",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/timer.py",
+   "function": "Timer.cancel",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/timer.py",
+   "function": "Timer.is_alive",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/timer.py",
+   "function": "Timer.start",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/timer.py",
+   "function": "Timer.start.cleanup",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/timer.py",
+   "function": "Timer.start.schedule",
+   "reachable": true
+  },
+  {
+   "file": "supabase_auth/types.py",
+   "function": "AuthMFAEnrollResponse.validate_phone_required_for_phone_type",
+   "reachable": false
+  },
+  {
+   "file": "supabase_auth/types.py",
+   "function": "Session.validator",
+   "reachable": false
+  }
+ ],
+ "other_raises": [
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 21,
+   "file": "supabase_auth/_async/gotrue_admin_mfa_api.py",
+   "function": "AsyncGoTrueAdminMFAAPI.list_factors",
+   "guard": null,
+   "line": 21,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 32,
+   "file": "supabase_auth/_async/gotrue_admin_mfa_api.py",
+   "function": "AsyncGoTrueAdminMFAAPI.delete_factor",
+   "guard": null,
+   "line": 32,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 27,
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.list_clients",
+   "guard": null,
+   "line": 27,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 40,
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.create_client",
+   "guard": null,
+   "line": 40,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 53,
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.get_client",
+   "guard": null,
+   "line": 53,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 67,
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.update_client",
+   "guard": null,
+   "line": 67,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 80,
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.delete_client",
+   "guard": null,
+   "line": 80,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 93,
+   "file": "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "function": "AsyncGoTrueAdminOAuthAPI.regenerate_client_secret",
+   "guard": null,
+   "line": 93,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "handle_exception",
+   "class_resolved": "?handle_exception",
+   "end_line": 78,
+   "file": "supabase_auth/_async/gotrue_base_api.py",
+   "function": "AsyncGoTrueBaseAPI._request",
+   "guard": "except (HTTPStatusError, RequestError, RuntimeError) as e",
+   "line": 78,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise handle_exception(e) from e",
+   "via": null
+  },
+  {
+   "class": "e",
+   "class_resolved": "?e",
+   "end_line": 191,
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.initialize_from_url",
+   "guard": "except Exception as e",
+   "line": 191,
+   "raise_number": 1,
+   "reason": "re-raise of a bound exception",
+   "source": "raise e",
+   "via": null
+  },
+  {
+   "class": null,
+   "class_resolved": null,
+   "end_line": 821,
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_out",
+   "guard": "scope == 'others'",
+   "line": 821,
+   "raise_number": 1,
+   "reason": "bare raise",
+   "source": "raise",
+   "via": null
+  },
+  {
+   "class": null,
+   "class_resolved": null,
+   "end_line": 829,
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_out",
+   "guard": "except Exception",
+   "line": 829,
+   "raise_number": 2,
+   "reason": "bare raise",
+   "source": "raise",
+   "via": null
+  },
+  {
+   "class": "teardown_error",
+   "class_resolved": "?teardown_error",
+   "end_line": 851,
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_out",
+   "guard": "teardown_error is not None",
+   "line": 851,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise teardown_error",
+   "via": null
+  },
+  {
+   "class": "error",
+   "class_resolved": "?error",
+   "end_line": 853,
+   "file": "supabase_auth/_async/gotrue_client.py",
+   "function": "AsyncGoTrueClient.sign_out",
+   "guard": "error is not None",
+   "line": 853,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise error",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 33,
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.enroll",
+   "guard": null,
+   "line": 33,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 40,
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.challenge",
+   "guard": null,
+   "line": 40,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 51,
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.challenge_and_verify",
+   "guard": null,
+   "line": 51,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 58,
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.verify",
+   "guard": null,
+   "line": 58,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 66,
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.unenroll",
+   "guard": null,
+   "line": 66,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 76,
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.list_factors",
+   "guard": null,
+   "line": 76,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 94,
+   "file": "supabase_auth/_async/gotrue_mfa_api.py",
+   "function": "AsyncGoTrueMFAAPI.get_authenticator_assurance_level",
+   "guard": null,
+   "line": 94,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 21,
+   "file": "supabase_auth/_sync/gotrue_admin_mfa_api.py",
+   "function": "SyncGoTrueAdminMFAAPI.list_factors",
+   "guard": null,
+   "line": 21,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 32,
+   "file": "supabase_auth/_sync/gotrue_admin_mfa_api.py",
+   "function": "SyncGoTrueAdminMFAAPI.delete_factor",
+   "guard": null,
+   "line": 32,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 27,
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.list_clients",
+   "guard": null,
+   "line": 27,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 40,
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.create_client",
+   "guard": null,
+   "line": 40,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 53,
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.get_client",
+   "guard": null,
+   "line": 53,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 67,
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.update_client",
+   "guard": null,
+   "line": 67,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 80,
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.delete_client",
+   "guard": null,
+   "line": 80,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 93,
+   "file": "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "function": "SyncGoTrueAdminOAuthAPI.regenerate_client_secret",
+   "guard": null,
+   "line": 93,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "handle_exception",
+   "class_resolved": "?handle_exception",
+   "end_line": 78,
+   "file": "supabase_auth/_sync/gotrue_base_api.py",
+   "function": "SyncGoTrueBaseAPI._request",
+   "guard": "except (HTTPStatusError, RequestError, RuntimeError) as e",
+   "line": 78,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise handle_exception(e) from e",
+   "via": null
+  },
+  {
+   "class": "e",
+   "class_resolved": "?e",
+   "end_line": 191,
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.initialize_from_url",
+   "guard": "except Exception as e",
+   "line": 191,
+   "raise_number": 1,
+   "reason": "re-raise of a bound exception",
+   "source": "raise e",
+   "via": null
+  },
+  {
+   "class": null,
+   "class_resolved": null,
+   "end_line": 817,
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_out",
+   "guard": "scope == 'others'",
+   "line": 817,
+   "raise_number": 1,
+   "reason": "bare raise",
+   "source": "raise",
+   "via": null
+  },
+  {
+   "class": null,
+   "class_resolved": null,
+   "end_line": 825,
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_out",
+   "guard": "except Exception",
+   "line": 825,
+   "raise_number": 2,
+   "reason": "bare raise",
+   "source": "raise",
+   "via": null
+  },
+  {
+   "class": "teardown_error",
+   "class_resolved": "?teardown_error",
+   "end_line": 847,
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_out",
+   "guard": "teardown_error is not None",
+   "line": 847,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise teardown_error",
+   "via": null
+  },
+  {
+   "class": "error",
+   "class_resolved": "?error",
+   "end_line": 849,
+   "file": "supabase_auth/_sync/gotrue_client.py",
+   "function": "SyncGoTrueClient.sign_out",
+   "guard": "error is not None",
+   "line": 849,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise error",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 33,
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.enroll",
+   "guard": null,
+   "line": 33,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 40,
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.challenge",
+   "guard": null,
+   "line": 40,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 51,
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.challenge_and_verify",
+   "guard": null,
+   "line": 51,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 58,
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.verify",
+   "guard": null,
+   "line": 58,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 66,
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.unenroll",
+   "guard": null,
+   "line": 66,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 76,
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.list_factors",
+   "guard": null,
+   "line": 76,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 94,
+   "file": "supabase_auth/_sync/gotrue_mfa_api.py",
+   "function": "SyncGoTrueMFAAPI.get_authenticator_assurance_level",
+   "guard": null,
+   "line": 94,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": null,
+   "class_resolved": null,
+   "end_line": 123,
+   "file": "supabase_auth/helpers.py",
+   "function": "handle_exception",
+   "guard": "except Exception",
+   "line": 123,
+   "raise_number": 1,
+   "reason": "bare raise",
+   "source": "raise",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 227,
+   "file": "supabase_auth/helpers.py",
+   "function": "generate_pkce_verifier",
+   "guard": "length < 43 or length > 128",
+   "line": 227,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('PKCE verifier length must be between 43 and 128 characters')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 286,
+   "file": "supabase_auth/helpers.py",
+   "function": "validate_uuid",
+   "guard": "id is None",
+   "line": 286,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid id, id is None')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 288,
+   "file": "supabase_auth/helpers.py",
+   "function": "validate_uuid",
+   "guard": "not is_valid_uuid(id)",
+   "line": 288,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(f\"Invalid id, '{id}' is not a valid uuid\")",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 677,
+   "file": "supabase_auth/types.py",
+   "function": "AuthMFAEnrollResponse.validate_phone_required_for_phone_type",
+   "guard": "self.type == 'phone' and (not self.phone)",
+   "line": 677,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(\"phone is required when type is 'phone'\")",
+   "via": null
+  }
+ ],
+ "rejection_bases": [
+  {
+   "kind": "package",
+   "module": "supabase_auth.errors",
+   "name": "AuthError",
+   "qualname": "AuthError"
+  }
+ ],
+ "rejection_classes": [
+  "AuthApiError",
+  "AuthError",
+  "AuthImplicitGrantRedirectError",
+  "AuthInvalidCredentialsError",
+  "AuthInvalidJwtError",
+  "AuthRetryableError",
+  "AuthSessionMissingError",
+  "AuthUnknownError",
+  "AuthWeakPasswordError",
+  "CustomAuthError",
+  "UserDoesntExist"
+ ],
+ "sha256": {
+  "supabase_auth/__init__.py": "18971d788e2715be4ae117efb27522fadf45349ecc572ffa279bfacf933bdf72",
+  "supabase_auth/_async/__init__.py": "5384bfdb2df380b6557cc7a71d16891415bccaa87699406e236f752c6415389f",
+  "supabase_auth/_async/gotrue_admin_api.py": "6af9f686070e10152a801b42b5e36d89da57e280cd8c1e9aea5b2d1b97c72282",
+  "supabase_auth/_async/gotrue_admin_mfa_api.py": "2dc7fe4104a39ba7bef3104682135f17830907f285b2cb09e837090844e9efa5",
+  "supabase_auth/_async/gotrue_admin_oauth_api.py": "78621623f16798e8e37d5496edb84506df5b6b8674e600ee8761933a7b643fc1",
+  "supabase_auth/_async/gotrue_base_api.py": "6880818d93d341f20ee46f6f10482784e946ebaaa91668456a4a18d5b8cdec26",
+  "supabase_auth/_async/gotrue_client.py": "c2e0eea9358bb913dbb2cdb931d737670bc167b070666724fe3cd77406793c22",
+  "supabase_auth/_async/gotrue_mfa_api.py": "8db62b79cf729c24e2d97bb551f3470c706b3498b8ace9d4446f692d7bab4503",
+  "supabase_auth/_async/storage.py": "c7274018f888033ff483275ff5859dd5a4f5dbb46587caaf6d5a5ecbe2936713",
+  "supabase_auth/_sync/__init__.py": "5384bfdb2df380b6557cc7a71d16891415bccaa87699406e236f752c6415389f",
+  "supabase_auth/_sync/gotrue_admin_api.py": "9fda6ae6417a1e8b96f5ef9f345e81784216eead41a5255c0087274f9eb49344",
+  "supabase_auth/_sync/gotrue_admin_mfa_api.py": "5f85e3ec0dd5ed2661e057d0dbea6c6c46e15d2a1cb9942d1f36225a671d5198",
+  "supabase_auth/_sync/gotrue_admin_oauth_api.py": "2668520576fa4a5cf05772012959c701f00bfe820c866ff0fafb6ddef118d6c2",
+  "supabase_auth/_sync/gotrue_base_api.py": "55b8e8a7c6d10757c3f390fb2a0f6fb5b6255a06bc164969c39f598c358544fe",
+  "supabase_auth/_sync/gotrue_client.py": "5ae3a7cf34c0a194a0fb576c43594e41751089bfb0f6eef24349ea3d2db678a3",
+  "supabase_auth/_sync/gotrue_mfa_api.py": "82bf04ce748c01fba8084fd6f4eefce30f07bd455afb587835a9694f9404a5b4",
+  "supabase_auth/_sync/storage.py": "254dd04aaf9520084dae1bb8aa1d6776fb3c094f0f0bc439647a905ebe104dad",
+  "supabase_auth/constants.py": "c5530849776b824b78a04f1aaaff70eef03178efbc03faa1cf1e0ff8ff4b1803",
+  "supabase_auth/errors.py": "b0c08e2bfface6074717d0f043c0959a1bc4f9824a56c86b9f732ee37ed36294",
+  "supabase_auth/helpers.py": "eacd71b0628e6dd5e398092e3009b17baf66a200811041e432d82608a282b10a",
+  "supabase_auth/timer.py": "dd3d2d7de4cc5deb8950e145c1971cd8d7444ca6884343679cbe868cd1591dfb",
+  "supabase_auth/types.py": "74f667448c4356575ddbc0145a15ee0cef76c862d2d978b8afa870737f0b2d12",
+  "supabase_auth/version.py": "a98b0905c9884baae2f18a7d0637ad929d5d7680e3e40d452531a91d5ad4765c"
+ },
+ "subject": {
+  "commit": "416bffd0d95662912b307a13f5956b91b61d0c74",
+  "copy": [
+   "src",
+   "tests",
+   "pyproject.toml"
+  ],
+  "distribution": "supabase-auth",
+  "entry_points": [
+   "get_claims"
+  ],
+  "entry_points_source": "sdk-compliance.yaml, lines 83-87: the feature auth.session.get_claims is implemented by AsyncGoTrueClient.get_claims and SyncGoTrueClient.get_claims. CHANGELOG.md, line 42: 'raise AuthInvalidJwtError for malformed JWTs in get_claims', and line 161: 'raise AuthInvalidJwtError when get_claims JWT has no exp'. src/auth/docs/source/api/client.rst, lines 4-9: the client class is the entry point of the library and is documented with its members. get_claims (src/auth/src/supabase_auth/_async/gotrue_client.py, lines 1348-1391, and _sync/gotrue_client.py, lines 1338-1381) takes a JWT and a key set, checks the structure and the exp claim of the JWT and verifies its signature. Entry points are names, so the same name elsewhere in the package counts too.",
+  "name": "supabase-auth",
+  "observed_files": [],
+  "package": "supabase_auth",
+  "package_source": "src/auth/pyproject.toml, line 2: name = \"supabase_auth\". The wheel supabase_auth-2.34.1-py3-none-any.whl of PyPI (SHA-256 45aa3334335926a8940beb89a9438386a9af0561d7315797e46c47b50d0c9620) holds the package supabase_auth: its 24 files are byte for byte the 24 files of src/auth/src/supabase_auth at the commit (compared 2026-11-17T13:57:04Z). Paths in this file are from the repository root.",
+  "pytest_args": [
+   "-p",
+   "no:cacheprovider"
+  ],
+  "python": "3.12.3",
+  "rejection_bases": [
+   "AuthError"
+  ],
+  "rejection_bases_source": "src/auth/src/supabase_auth/errors.py, line 93: class AuthError(Exception), from which every exception class of the package inherits (lines 108-259). AuthInvalidJwtError, the class that CHANGELOG.md, lines 42 and 161, names for get_claims, inherits from CustomAuthError (line 251), a subclass of AuthError (line 131).",
+  "release_source": "PyPI JSON interface, https://pypi.org/pypi/supabase-auth/json and https://pypi.org/pypi/supabase-auth/2.34.1/json, read 2026-11-17T13:52:02Z: 2.34.1 is the latest release that is not a pre-release, uploaded 2026-11-06T15:23:01Z, with no upload after it (the only pre-release is 3.0.0a1, 2026-04-09); its project_urls name the repository https://github.com/supabase/supabase-py and the directory src/auth. git ls-remote --tags of that repository, 2026-11-17T13:52:19Z: refs/tags/v2.34.1 is 416bffd0d95662912b307a13f5956b91b61d0c74. At that commit, src/auth/pyproject.toml, line 3, and src/auth/src/supabase_auth/version.py, line 1, give 2.34.1.",
+  "repository": "https://github.com/supabase/supabase-py",
+  "repository_directory": "src/auth",
+  "scope_counts": {
+   "blocks_in_test_directories": 81,
+   "test_files_in_test_directories": 40,
+   "test_files_with_an_included_block": 8
+  },
+  "source_root": "src",
+  "subject_files": [
+   "supabase_auth/__init__.py",
+   "supabase_auth/_async/__init__.py",
+   "supabase_auth/_async/gotrue_admin_api.py",
+   "supabase_auth/_async/gotrue_admin_mfa_api.py",
+   "supabase_auth/_async/gotrue_admin_oauth_api.py",
+   "supabase_auth/_async/gotrue_base_api.py",
+   "supabase_auth/_async/gotrue_client.py",
+   "supabase_auth/_async/gotrue_mfa_api.py",
+   "supabase_auth/_async/storage.py",
+   "supabase_auth/_sync/__init__.py",
+   "supabase_auth/_sync/gotrue_admin_api.py",
+   "supabase_auth/_sync/gotrue_admin_mfa_api.py",
+   "supabase_auth/_sync/gotrue_admin_oauth_api.py",
+   "supabase_auth/_sync/gotrue_base_api.py",
+   "supabase_auth/_sync/gotrue_client.py",
+   "supabase_auth/_sync/gotrue_mfa_api.py",
+   "supabase_auth/_sync/storage.py",
+   "supabase_auth/constants.py",
+   "supabase_auth/errors.py",
+   "supabase_auth/helpers.py",
+   "supabase_auth/timer.py",
+   "supabase_auth/types.py",
+   "supabase_auth/version.py"
+  ],
+  "suite_runs": [
+   {
+    "name": "all",
+    "paths": [
+     "tests"
+    ]
+   }
+  ],
+  "suite_runs_source": "src/auth/Makefile, lines 5 and 9-10: the target tests runs the target pytest, 1 pytest call in src/auth with no path, whose test files all lie under tests/; Makefile, lines 71-72, and .github/workflows/ci.yml, lines 62 and 104-105, run it as 'make auth.tests'. The target pytest first runs the target start-infra (src/auth/Makefile, lines 19-20), which starts the test servers of src/auth/infra/docker-compose.yml on localhost; the suite runs of the toolkit start no server.",
+  "tag": "v2.34.1",
+  "test_directories_source": "src/auth/Makefile, lines 9-10: the target pytest runs 'uv run --package supabase_auth pytest --cov=./ --cov-report=xml --cov-report=html -vv' in src/auth with no path, and src/auth/pyproject.toml, lines 54-55 ([tool.pytest.ini_options]), sets no testpaths; so pytest collects from src/auth, whose test files (test_*.py) all lie under tests/.",
+  "tests": [
+   "tests/_async/test_client_flows.py",
+   "tests/_async/test_get_claims.py",
+   "tests/_async/test_gotrue.py",
+   "tests/_async/test_jwks_and_refresh.py",
+   "tests/_sync/test_client_flows.py",
+   "tests/_sync/test_get_claims.py",
+   "tests/_sync/test_gotrue.py",
+   "tests/_sync/test_jwks_and_refresh.py"
+  ],
+  "version": "2.34.1"
+ }
+}

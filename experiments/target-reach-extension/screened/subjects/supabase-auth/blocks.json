@@ -1,0 +1,1791 @@
+{
+ "blocks": [
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    166,
+    166
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthImplicitGrantRedirectError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthImplicitGrantRedirectError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    165,
+    165
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_initialize_from_error_url_raises_with_details#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "message",
+     "Link expired"
+    ]
+   ],
+   "post_unparsed": [
+    "assert exc_info.value.details == {'code': 'otp_expired', 'error': 'access_denied'}"
+   ],
+   "test": "test_initialize_from_error_url_raises_with_details",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    192,
+    192
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthImplicitGrantRedirectError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthImplicitGrantRedirectError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    191,
+    191
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_initialize_from_url_rejects_incomplete_redirects#0",
+   "match": null,
+   "match_unparsed": "message",
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_initialize_from_url_rejects_incomplete_redirects",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    258,
+    258
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthInvalidCredentialsError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidCredentialsError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    257,
+    257
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_sign_in_with_password_requires_email_or_phone#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_in_with_password_requires_email_or_phone",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    299,
+    299
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthInvalidCredentialsError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidCredentialsError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    298,
+    298
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_sign_in_with_sso_requires_domain_or_provider_id#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_in_with_sso_requires_domain_or_provider_id",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    423,
+    423
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthSessionMissingError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthSessionMissingError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    422,
+    422
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_methods_requiring_session_raise_when_signed_out#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_methods_requiring_session_raise_when_signed_out",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    597,
+    597
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthSessionMissingError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthSessionMissingError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    596,
+    596
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_set_session_with_expired_token_and_no_refresh_token_raises#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_set_session_with_expired_token_and_no_refresh_token_raises",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    604,
+    604
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    603,
+    603
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+   "match": "JWT has expired",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_expired_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    613,
+    613
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    612,
+    612
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+   "match": "no expiration time",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_token_without_expiry",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    632,
+    634
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthApiError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthApiError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    631,
+    631
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_api_errors_surface_status_and_code#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "status",
+     400
+    ],
+    [
+     "attr_eq",
+     "code",
+     "invalid_credentials"
+    ],
+    [
+     "attr_eq",
+     "message",
+     "Invalid login credentials"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_api_errors_surface_status_and_code",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    658,
+    658
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthWeakPasswordError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthWeakPasswordError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    657,
+    657
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_weak_password_errors_carry_reasons#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "status",
+     422
+    ]
+   ],
+   "post_unparsed": [
+    "assert exc_info.value.reasons == ['length']"
+   ],
+   "test": "test_weak_password_errors_carry_reasons",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    695,
+    695
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    694,
+    694
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_client_flows.py::test_set_session_rejects_non_jwt_access_token#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_set_session_rejects_non_jwt_access_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    35,
+    35
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_get_claims.py",
+   "form": "with",
+   "header_span": [
+    34,
+    34
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_raises_auth_error_for_malformed_header",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    45,
+    45
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_get_claims.py",
+   "form": "with",
+   "header_span": [
+    44,
+    44
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_raises_auth_error_for_undecodable_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    44,
+    44
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    43,
+    43
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+   "match": "JWT has no expiration time",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_raises_when_exp_claim_is_missing",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    230,
+    230
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthSessionMissingError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthSessionMissingError",
+   "file": "tests/_async/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    229,
+    229
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_gotrue.py::test_set_session_without_refresh_token#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_set_session_without_refresh_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    238,
+    238
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    237,
+    237
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_gotrue.py::test_set_session_with_invalid_token#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_set_session_with_invalid_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    873,
+    873
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ?raises"
+   ],
+   "expected": [
+    "?raises"
+   ],
+   "expected_kinds": [
+    "unknown"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "raises",
+   "file": "tests/_async/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    872,
+    872
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_gotrue.py::test_sign_out_when_logout_request_fails#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_out_when_logout_request_fails",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    922,
+    922
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ?raises"
+   ],
+   "expected": [
+    "?raises"
+   ],
+   "expected_kinds": [
+    "unknown"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "raises",
+   "file": "tests/_async/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    921,
+    921
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_gotrue.py::test_sign_out_when_refresh_fails#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_out_when_refresh_fails",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    970,
+    970
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects RuntimeError"
+   ],
+   "expected": [
+    "RuntimeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "RuntimeError",
+   "file": "tests/_async/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    969,
+    969
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_gotrue.py::test_local_sign_out_sends_request_when_subscriber_raises#0",
+   "match": "subscriber failed",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_local_sign_out_sends_request_when_subscriber_raises",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1050,
+    1052
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthRetryableError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthRetryableError",
+   "file": "tests/_async/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    1049,
+    1049
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_gotrue.py::test_network_error_raises_auth_retryable_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "status",
+     0
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_network_error_raises_auth_retryable_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    112,
+    112
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_jwks_and_refresh.py",
+   "form": "with",
+   "header_span": [
+    111,
+    111
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+   "match": "No matching signing key",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_unknown_signing_key",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    119,
+    119
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_jwks_and_refresh.py",
+   "form": "with",
+   "header_span": [
+    118,
+    118
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+   "match": "JWKS is empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_empty_jwks",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    127,
+    127
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_async/test_jwks_and_refresh.py",
+   "form": "with",
+   "header_span": [
+    126,
+    126
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+   "match": "Invalid JWT signature",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_invalid_signature",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    177,
+    177
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthSessionMissingError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthSessionMissingError",
+   "file": "tests/_async/test_jwks_and_refresh.py",
+   "form": "with",
+   "header_span": [
+    176,
+    176
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_async/test_jwks_and_refresh.py::test_refresh_returning_no_session_raises_session_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_refresh_returning_no_session_raises_session_missing",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    166,
+    166
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthImplicitGrantRedirectError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthImplicitGrantRedirectError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    165,
+    165
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_initialize_from_error_url_raises_with_details#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "message",
+     "Link expired"
+    ]
+   ],
+   "post_unparsed": [
+    "assert exc_info.value.details == {'code': 'otp_expired', 'error': 'access_denied'}"
+   ],
+   "test": "test_initialize_from_error_url_raises_with_details",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    192,
+    192
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthImplicitGrantRedirectError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthImplicitGrantRedirectError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    191,
+    191
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_initialize_from_url_rejects_incomplete_redirects#0",
+   "match": null,
+   "match_unparsed": "message",
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_initialize_from_url_rejects_incomplete_redirects",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    256,
+    256
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthInvalidCredentialsError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidCredentialsError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    255,
+    255
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_sign_in_with_password_requires_email_or_phone#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_in_with_password_requires_email_or_phone",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    297,
+    297
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthInvalidCredentialsError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidCredentialsError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    296,
+    296
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_sign_in_with_sso_requires_domain_or_provider_id#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_in_with_sso_requires_domain_or_provider_id",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    421,
+    421
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthSessionMissingError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthSessionMissingError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    420,
+    420
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_methods_requiring_session_raise_when_signed_out#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_methods_requiring_session_raise_when_signed_out",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    595,
+    595
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthSessionMissingError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthSessionMissingError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    594,
+    594
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_set_session_with_expired_token_and_no_refresh_token_raises#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_set_session_with_expired_token_and_no_refresh_token_raises",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    602,
+    602
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    601,
+    601
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+   "match": "JWT has expired",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_expired_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    611,
+    611
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    610,
+    610
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+   "match": "no expiration time",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_token_without_expiry",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    630,
+    630
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthApiError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthApiError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    629,
+    629
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_api_errors_surface_status_and_code#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "status",
+     400
+    ],
+    [
+     "attr_eq",
+     "code",
+     "invalid_credentials"
+    ],
+    [
+     "attr_eq",
+     "message",
+     "Invalid login credentials"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_api_errors_surface_status_and_code",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    654,
+    654
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthWeakPasswordError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthWeakPasswordError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    653,
+    653
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_weak_password_errors_carry_reasons#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "status",
+     422
+    ]
+   ],
+   "post_unparsed": [
+    "assert exc_info.value.reasons == ['length']"
+   ],
+   "test": "test_weak_password_errors_carry_reasons",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    691,
+    691
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_client_flows.py",
+   "form": "with",
+   "header_span": [
+    690,
+    690
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_client_flows.py::test_set_session_rejects_non_jwt_access_token#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_set_session_rejects_non_jwt_access_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    35,
+    35
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_get_claims.py",
+   "form": "with",
+   "header_span": [
+    34,
+    34
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_raises_auth_error_for_malformed_header",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    45,
+    45
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_get_claims.py",
+   "form": "with",
+   "header_span": [
+    44,
+    44
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_raises_auth_error_for_undecodable_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    44,
+    44
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    43,
+    43
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+   "match": "JWT has no expiration time",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_raises_when_exp_claim_is_missing",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    230,
+    230
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthSessionMissingError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthSessionMissingError",
+   "file": "tests/_sync/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    229,
+    229
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_gotrue.py::test_set_session_without_refresh_token#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_set_session_without_refresh_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    238,
+    238
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    237,
+    237
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_gotrue.py::test_set_session_with_invalid_token#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_set_session_with_invalid_token",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    871,
+    871
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ?raises"
+   ],
+   "expected": [
+    "?raises"
+   ],
+   "expected_kinds": [
+    "unknown"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "raises",
+   "file": "tests/_sync/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    870,
+    870
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_gotrue.py::test_sign_out_when_logout_request_fails#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_out_when_logout_request_fails",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    920,
+    920
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects ?raises"
+   ],
+   "expected": [
+    "?raises"
+   ],
+   "expected_kinds": [
+    "unknown"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "raises",
+   "file": "tests/_sync/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    919,
+    919
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_gotrue.py::test_sign_out_when_refresh_fails#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_sign_out_when_refresh_fails",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    966,
+    966
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects RuntimeError"
+   ],
+   "expected": [
+    "RuntimeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "RuntimeError",
+   "file": "tests/_sync/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    965,
+    965
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_gotrue.py::test_local_sign_out_sends_request_when_subscriber_raises#0",
+   "match": "subscriber failed",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_local_sign_out_sends_request_when_subscriber_raises",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1044,
+    1046
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthRetryableError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthRetryableError",
+   "file": "tests/_sync/test_gotrue.py",
+   "form": "with",
+   "header_span": [
+    1043,
+    1043
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_gotrue.py::test_network_error_raises_auth_retryable_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "attr_eq",
+     "status",
+     0
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_network_error_raises_auth_retryable_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    112,
+    112
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_jwks_and_refresh.py",
+   "form": "with",
+   "header_span": [
+    111,
+    111
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+   "match": "No matching signing key",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_unknown_signing_key",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    119,
+    119
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_jwks_and_refresh.py",
+   "form": "with",
+   "header_span": [
+    118,
+    118
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+   "match": "JWKS is empty",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_empty_jwks",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    127,
+    127
+   ],
+   "entry_calls": [
+    "get_claims"
+   ],
+   "exclusion": [],
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthInvalidJwtError",
+   "file": "tests/_sync/test_jwks_and_refresh.py",
+   "form": "with",
+   "header_span": [
+    126,
+    126
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+   "match": "Invalid JWT signature",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_get_claims_rejects_invalid_signature",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    177,
+    177
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthSessionMissingError"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthSessionMissingError",
+   "file": "tests/_sync/test_jwks_and_refresh.py",
+   "form": "with",
+   "header_span": [
+    176,
+    176
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/_sync/test_jwks_and_refresh.py::test_refresh_returning_no_session_raises_session_missing#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_refresh_returning_no_session_raises_session_missing",
+   "test_class": null
+  }
+ ],
+ "counts": {
+  "blocks": 48,
+  "entry_point_blocks": 16,
+  "included": 16
+ },
+ "test_files": [
+  "tests/_async/test_client_flows.py",
+  "tests/_async/test_get_claims.py",
+  "tests/_async/test_gotrue.py",
+  "tests/_async/test_jwks_and_refresh.py",
+  "tests/_sync/test_client_flows.py",
+  "tests/_sync/test_get_claims.py",
+  "tests/_sync/test_gotrue.py",
+  "tests/_sync/test_jwks_and_refresh.py"
+ ],
+ "test_files_sha256": {
+  "tests/_async/test_client_flows.py": "e666bbbeff216f95ad1859c1ae626bd5b27096d2d013794dcfc502baededebe2",
+  "tests/_async/test_get_claims.py": "75c4e228b455e591673e45e4cd40728df4314ed97a83418032aa500b39e56cc7",
+  "tests/_async/test_gotrue.py": "d908d37ee498adc5a738748f16a0f02401e4ed49fc5eccb618aa62f09543bfc3",
+  "tests/_async/test_jwks_and_refresh.py": "f69b1f9038fe08ac47982bbe2eb620970ce42def9615d52a1ee5ac512900c97c",
+  "tests/_sync/test_client_flows.py": "7746acf39c38933d5a98174aafce8af376743dd1f1de72a51bcbfee10e6592e0",
+  "tests/_sync/test_get_claims.py": "bdda91000ea1e4211af6f151b8a356f66a01f872bc39de566816e5a95ccf8185",
+  "tests/_sync/test_gotrue.py": "a45205d851f7abb64c3a7cfdce4a9c1449c970e08e6f920472b76c16e3c790d1",
+  "tests/_sync/test_jwks_and_refresh.py": "94d613f37083aab8c382e79e7eb457465772a87beee146fa6eed91ff56ddc193"
+ }
+}

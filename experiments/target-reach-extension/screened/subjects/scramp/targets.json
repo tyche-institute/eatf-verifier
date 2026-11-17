@@ -1,0 +1,417 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "core.Gs2Header.from_str#1",
+    "core.Gs2Header.from_str#2",
+    "core.Gs2Header.from_str#3",
+    "core.Gs2Header.from_str#4",
+    "core.IterationCount.from_str#1",
+    "core.IterationCount.from_str#2",
+    "core.IterationCount.from_str#3",
+    "core.IterationCount.from_str#4",
+    "core.ScramServer._set_mechanism#1",
+    "core.ScramServer.set_client_first#1",
+    "core._check_client_key#1",
+    "core._check_client_key#2",
+    "core._check_stage#1",
+    "core._check_stage#2",
+    "core._check_stage#3",
+    "core._set_client_final#1",
+    "core._set_client_final#2",
+    "core._set_client_final#3",
+    "core._set_client_first#1",
+    "core._set_client_first#2",
+    "core._set_client_first#3",
+    "core._set_client_first#4",
+    "core._set_client_first#5",
+    "core._set_server_final#1",
+    "core._set_server_final#2",
+    "core._set_server_first#1",
+    "core._set_server_first#2",
+    "core._set_server_first#3",
+    "utils.b64dec#1"
+   ],
+   "C_class": [
+    "core.Gs2Header.from_str#1",
+    "core.Gs2Header.from_str#2",
+    "core.Gs2Header.from_str#3",
+    "core.Gs2Header.from_str#4",
+    "core.IterationCount.from_str#1",
+    "core.IterationCount.from_str#2",
+    "core.IterationCount.from_str#3",
+    "core.IterationCount.from_str#4",
+    "core.ScramServer._set_mechanism#1",
+    "core.ScramServer.set_client_first#1",
+    "core._check_client_key#1",
+    "core._check_client_key#2",
+    "core._check_stage#1",
+    "core._check_stage#2",
+    "core._check_stage#3",
+    "core._set_client_final#1",
+    "core._set_client_final#2",
+    "core._set_client_final#3",
+    "core._set_client_first#1",
+    "core._set_client_first#2",
+    "core._set_client_first#3",
+    "core._set_client_first#4",
+    "core._set_client_first#5",
+    "core._set_server_final#1",
+    "core._set_server_final#2",
+    "core._set_server_first#1",
+    "core._set_server_first#2",
+    "core._set_server_first#3",
+    "utils.b64dec#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ScramException"
+   ],
+   "key": "test/test_scramp.py::test_client_order#0",
+   "name_tokens": [
+    "client",
+    "order"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "core.ScramServer.set_client_first#1",
+     "score": 0.802346,
+     "tokens": [
+      "client"
+     ]
+    },
+    {
+     "check": "core._check_client_key#1",
+     "score": 0.802346,
+     "tokens": [
+      "client"
+     ]
+    },
+    {
+     "check": "core._check_client_key#2",
+     "score": 0.802346,
+     "tokens": [
+      "client"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "core.ScramServer.set_client_first#1",
+    "core._check_client_key#1",
+    "core._check_client_key#2",
+    "core._set_client_final#1",
+    "core._set_client_final#2",
+    "core._set_client_final#3",
+    "core._set_client_first#1",
+    "core._set_client_first#2",
+    "core._set_client_first#3",
+    "core._set_client_first#4",
+    "core._set_client_first#5",
+    "core._set_server_first#2",
+    "core._set_server_first#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "core.Gs2Header.from_str#1",
+    "core.Gs2Header.from_str#2",
+    "core.Gs2Header.from_str#3",
+    "core.Gs2Header.from_str#4",
+    "core.IterationCount.from_str#1",
+    "core.IterationCount.from_str#2",
+    "core.IterationCount.from_str#3",
+    "core.IterationCount.from_str#4",
+    "core.ScramServer._set_mechanism#1",
+    "core.ScramServer.set_client_first#1",
+    "core._check_client_key#1",
+    "core._check_client_key#2",
+    "core._check_stage#1",
+    "core._check_stage#2",
+    "core._check_stage#3",
+    "core._set_client_final#1",
+    "core._set_client_final#2",
+    "core._set_client_final#3",
+    "core._set_client_first#1",
+    "core._set_client_first#2",
+    "core._set_client_first#3",
+    "core._set_client_first#4",
+    "core._set_client_first#5",
+    "core._set_server_final#1",
+    "core._set_server_final#2",
+    "core._set_server_first#1",
+    "core._set_server_first#2",
+    "core._set_server_first#3",
+    "utils.b64dec#1"
+   ],
+   "C_class": [
+    "core.Gs2Header.from_str#1",
+    "core.Gs2Header.from_str#2",
+    "core.Gs2Header.from_str#3",
+    "core.Gs2Header.from_str#4",
+    "core.IterationCount.from_str#1",
+    "core.IterationCount.from_str#2",
+    "core.IterationCount.from_str#3",
+    "core.IterationCount.from_str#4",
+    "core.ScramServer._set_mechanism#1",
+    "core.ScramServer.set_client_first#1",
+    "core._check_client_key#1",
+    "core._check_client_key#2",
+    "core._check_stage#1",
+    "core._check_stage#2",
+    "core._check_stage#3",
+    "core._set_client_final#1",
+    "core._set_client_final#2",
+    "core._set_client_final#3",
+    "core._set_client_first#1",
+    "core._set_client_first#2",
+    "core._set_client_first#3",
+    "core._set_client_first#4",
+    "core._set_client_first#5",
+    "core._set_server_final#1",
+    "core._set_server_final#2",
+    "core._set_server_first#1",
+    "core._set_server_first#2",
+    "core._set_server_first#3",
+    "utils.b64dec#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "ScramException"
+   ],
+   "key": "test/test_scramp.py::test_server_order#0",
+   "name_tokens": [
+    "order",
+    "server"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "core.IterationCount.from_str#4",
+     "score": 0.969401,
+     "tokens": [
+      "server"
+     ]
+    },
+    {
+     "check": "core._set_client_final#3",
+     "score": 0.969401,
+     "tokens": [
+      "server"
+     ]
+    },
+    {
+     "check": "core._set_client_first#2",
+     "score": 0.969401,
+     "tokens": [
+      "server"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "core.IterationCount.from_str#4",
+    "core._set_client_final#3",
+    "core._set_client_first#2",
+    "core._set_client_first#3",
+    "core._set_client_first#4",
+    "core._set_client_first#5",
+    "core._set_server_final#1",
+    "core._set_server_final#2",
+    "core._set_server_first#1",
+    "core._set_server_first#2",
+    "core._set_server_first#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "core.Gs2Header.from_str#1",
+    "core.Gs2Header.from_str#2",
+    "core.Gs2Header.from_str#3",
+    "core.Gs2Header.from_str#4",
+    "core.IterationCount.from_str#1",
+    "core.IterationCount.from_str#2",
+    "core.IterationCount.from_str#3",
+    "core.IterationCount.from_str#4",
+    "core.ScramServer._set_mechanism#1",
+    "core.ScramServer.set_client_first#1",
+    "core._check_client_key#1",
+    "core._check_client_key#2",
+    "core._check_stage#1",
+    "core._check_stage#2",
+    "core._check_stage#3",
+    "core._set_client_final#1",
+    "core._set_client_final#2",
+    "core._set_client_final#3",
+    "core._set_client_first#1",
+    "core._set_client_first#2",
+    "core._set_client_first#3",
+    "core._set_client_first#4",
+    "core._set_client_first#5",
+    "core._set_server_final#1",
+    "core._set_server_final#2",
+    "core._set_server_first#1",
+    "core._set_server_first#2",
+    "core._set_server_first#3",
+    "utils.b64dec#1"
+   ],
+   "C_class": [
+    "core.Gs2Header.from_str#1",
+    "core.Gs2Header.from_str#2",
+    "core.Gs2Header.from_str#3",
+    "core.Gs2Header.from_str#4",
+    "core.IterationCount.from_str#1",
+    "core.IterationCount.from_str#2",
+    "core.IterationCount.from_str#3",
+    "core.IterationCount.from_str#4",
+    "core.ScramServer._set_mechanism#1",
+    "core.ScramServer.set_client_first#1",
+    "core._check_client_key#1",
+    "core._check_client_key#2",
+    "core._check_stage#1",
+    "core._check_stage#2",
+    "core._check_stage#3",
+    "core._set_client_final#1",
+    "core._set_client_final#2",
+    "core._set_client_final#3",
+    "core._set_client_first#1",
+    "core._set_client_first#2",
+    "core._set_client_first#3",
+    "core._set_client_first#4",
+    "core._set_client_first#5",
+    "core._set_server_final#1",
+    "core._set_server_final#2",
+    "core._set_server_first#1",
+    "core._set_server_first#2",
+    "core._set_server_first#3",
+    "utils.b64dec#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "ScramException"
+   ],
+   "key": "test/test_scramp.py::test_ScramClient_set_server_final_missing_param#0",
+   "name_tokens": [
+    "client",
+    "final",
+    "missing",
+    "param",
+    "scram",
+    "server",
+    "set"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "core._set_client_final#3",
+     "score": 4.188851,
+     "tokens": [
+      "client",
+      "final",
+      "scram",
+      "server",
+      "set"
+     ]
+    },
+    {
+     "check": "core._set_server_final#1",
+     "score": 3.386504,
+     "tokens": [
+      "final",
+      "scram",
+      "server",
+      "set"
+     ]
+    },
+    {
+     "check": "core._set_server_final#2",
+     "score": 3.386504,
+     "tokens": [
+      "final",
+      "scram",
+      "server",
+      "set"
+     ]
+    }
+   ],
+   "target": "core._set_client_final#3",
+   "tier": "name"
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "name": 1,
+  "none: tie": 2
+ },
+ "rule_version": "reach-target-rule/2"
+}

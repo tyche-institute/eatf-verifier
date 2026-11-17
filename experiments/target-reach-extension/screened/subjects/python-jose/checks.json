@@ -1,0 +1,6822 @@
+{
+ "checks": [
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ALGORITHMS",
+    "EC",
+    "algorithm"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.EC"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyECKey.__init__#1",
+   "lines": [
+    [
+     40,
+     40
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyECKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "hash_alg: {*} is not a valid hash algorithm",
+   "template_parts": [
+    "hash_alg: ",
+    null,
+    " is not a valid hash algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyECKey.__init__#2",
+   "lines": [
+    [
+     76,
+     76
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyECKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyECKey.__init__#3",
+   "lines": [
+    [
+     81,
+     81
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyECKey",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unable to parse an ECKey from key: {*}",
+   "template_parts": [
+    "Unable to parse an ECKey from key: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "EC",
+    "get",
+    "jwk_dict",
+    "kty"
+   ],
+   "guards": [
+    "not jwk_dict.get('kty') == 'EC'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyECKey._process_jwk#1",
+   "lines": [
+    [
+     85,
+     85
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyECKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Incorrect key type. Expected: 'EC', Received: {*}",
+   "template_parts": [
+    "Incorrect key type. Expected: 'EC', Received: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "all",
+    "crv",
+    "jwk_dict",
+    "k",
+    "x",
+    "y"
+   ],
+   "guards": [
+    "not all((k in jwk_dict for k in ['x', 'y', 'crv']))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "backends.cryptography_backend.CryptographyECKey._process_jwk#2",
+   "lines": [
+    [
+     88,
+     88
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Mandatory parameters are missing"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyECKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Mandatory parameters are missing",
+   "template_parts": [
+    "Mandatory parameters are missing"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ALGORITHMS",
+    "RSA",
+    "algorithm"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.RSA"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyRSAKey.__init__#1",
+   "lines": [
+    [
+     214,
+     214
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyRSAKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "hash_alg: {*} is not a valid hash algorithm",
+   "template_parts": [
+    "hash_alg: ",
+    null,
+    " is not a valid hash algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyRSAKey.__init__#2",
+   "lines": [
+    [
+     254,
+     254
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyRSAKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyRSAKey.__init__#3",
+   "lines": [
+    [
+     257,
+     257
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyRSAKey",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unable to parse an RSA_JWK from key: {*}",
+   "template_parts": [
+    "Unable to parse an RSA_JWK from key: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "RSA",
+    "get",
+    "jwk_dict",
+    "kty"
+   ],
+   "guards": [
+    "not jwk_dict.get('kty') == 'RSA'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyRSAKey._process_jwk#1",
+   "lines": [
+    [
+     261,
+     261
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyRSAKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Incorrect key type. Expected: 'RSA', Received: {*}",
+   "template_parts": [
+    "Incorrect key type. Expected: 'RSA', Received: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "all",
+    "extra_params",
+    "jwk_dict",
+    "k"
+   ],
+   "guards": [
+    "not all((k in jwk_dict for k in extra_params))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "backends.cryptography_backend.CryptographyRSAKey._process_jwk#2",
+   "lines": [
+    [
+     281,
+     281
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Precomputed private key parameters are incomplete."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyRSAKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Precomputed private key parameters are incomplete.",
+   "template_parts": [
+    "Precomputed private key parameters are incomplete."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.sign",
+   "function_name": "sign",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyRSAKey.sign#1",
+   "lines": [
+    [
+     308,
+     308
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyRSAKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.wrap_key",
+   "function_name": "wrap_key",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyRSAKey.wrap_key#1",
+   "lines": [
+    [
+     382,
+     382
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyRSAKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.unwrap_key",
+   "function_name": "unwrap_key",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1",
+   "lines": [
+    [
+     391,
+     391
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyRSAKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "AES",
+    "ALGORITHMS",
+    "algorithm"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.AES"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.__init__#1",
+   "lines": [
+    [
+     431,
+     431
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*} is not a valid AES algorithm",
+   "template_parts": [
+    null,
+    " is not a valid AES algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "AES_PSEUDO",
+    "ALGORITHMS",
+    "SUPPORTED",
+    "algorithm",
+    "union"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.SUPPORTED.union(ALGORITHMS.AES_PSEUDO)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.__init__#2",
+   "lines": [
+    [
+     433,
+     433
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*} is not a supported algorithm",
+   "template_parts": [
+    null,
+    " is not a supported algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "KEY_128",
+    "algorithm",
+    "key",
+    "len",
+    "self"
+   ],
+   "guards": [
+    "algorithm in self.KEY_128 and len(key) != 16"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.__init__#3",
+   "lines": [
+    [
+     439,
+     439
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Key must be 128 bit for alg {*}",
+   "template_parts": [
+    "Key must be 128 bit for alg ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "KEY_192",
+    "algorithm",
+    "key",
+    "len",
+    "self"
+   ],
+   "guards": [
+    "algorithm in self.KEY_192 and len(key) != 24"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.__init__#4",
+   "lines": [
+    [
+     441,
+     441
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Key must be 192 bit for alg {*}",
+   "template_parts": [
+    "Key must be 192 bit for alg ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "KEY_256",
+    "algorithm",
+    "key",
+    "len",
+    "self"
+   ],
+   "guards": [
+    "algorithm in self.KEY_256 and len(key) != 32"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.__init__#5",
+   "lines": [
+    [
+     443,
+     443
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    5
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Key must be 256 bit for alg {*}",
+   "template_parts": [
+    "Key must be 256 bit for alg ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "KEY_384",
+    "algorithm",
+    "key",
+    "len",
+    "self"
+   ],
+   "guards": [
+    "algorithm in self.KEY_384 and len(key) != 48"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.__init__#6",
+   "lines": [
+    [
+     445,
+     445
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    6
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Key must be 384 bit for alg {*}",
+   "template_parts": [
+    "Key must be 384 bit for alg ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "KEY_512",
+    "algorithm",
+    "key",
+    "len",
+    "self"
+   ],
+   "guards": [
+    "algorithm in self.KEY_512 and len(key) != 64"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.__init__#7",
+   "lines": [
+    [
+     447,
+     447
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    7
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Key must be 512 bit for alg {*}",
+   "template_parts": [
+    "Key must be 512 bit for alg ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.encrypt",
+   "function_name": "encrypt",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.encrypt#1",
+   "lines": [
+    [
+     476,
+     476
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.decrypt",
+   "function_name": "decrypt",
+   "guard_words": [
+    "InvalidTag"
+   ],
+   "guards": [
+    "except InvalidTag"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "backends.cryptography_backend.CryptographyAESKey.decrypt#1",
+   "lines": [
+    [
+     491,
+     491
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid JWE Auth Tag"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid JWE Auth Tag",
+   "template_parts": [
+    "Invalid JWE Auth Tag"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.decrypt",
+   "function_name": "decrypt",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+   "lines": [
+    [
+     503,
+     503
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.unwrap_key",
+   "function_name": "unwrap_key",
+   "guard_words": [
+    "InvalidUnwrap",
+    "cause"
+   ],
+   "guards": [
+    "except InvalidUnwrap as cause"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+   "lines": [
+    [
+     515,
+     515
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyAESKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyHMACKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ALGORITHMS",
+    "HMAC",
+    "algorithm"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.HMAC"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyHMACKey.__init__#1",
+   "lines": [
+    [
+     529,
+     529
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyHMACKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "hash_alg: {*} is not a valid hash algorithm",
+   "template_parts": [
+    "hash_alg: ",
+    null,
+    " is not a valid hash algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyHMACKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "bytes",
+    "isinstance",
+    "key",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(key, str) and (not isinstance(key, bytes))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "backends.cryptography_backend.CryptographyHMACKey.__init__#2",
+   "lines": [
+    [
+     538,
+     538
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Expecting a string- or bytes-formatted key."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyHMACKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Expecting a string- or bytes-formatted key.",
+   "template_parts": [
+    "Expecting a string- or bytes-formatted key."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyHMACKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "is_pem_format",
+    "is_ssh_key",
+    "key"
+   ],
+   "guards": [
+    "is_pem_format(key) or is_ssh_key(key)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "backends.cryptography_backend.CryptographyHMACKey.__init__#3",
+   "lines": [
+    [
+     544,
+     547
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyHMACKey",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret.",
+   "template_parts": [
+    "The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyHMACKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "get",
+    "jwk_dict",
+    "kty",
+    "oct"
+   ],
+   "guards": [
+    "not jwk_dict.get('kty') == 'oct'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.cryptography_backend.CryptographyHMACKey._process_jwk#1",
+   "lines": [
+    [
+     553,
+     553
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "CryptographyHMACKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Incorrect key type. Expected: 'oct', Received: {*}",
+   "template_parts": [
+    "Incorrect key type. Expected: 'oct', Received: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ALGORITHMS",
+    "EC",
+    "algorithm"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.EC"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.ecdsa_backend.ECDSAECKey.__init__#1",
+   "lines": [
+    [
+     38,
+     38
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECDSAECKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "hash_alg: {*} is not a valid hash algorithm",
+   "template_parts": [
+    "hash_alg: ",
+    null,
+    " is not a valid hash algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.ecdsa_backend.ECDSAECKey.__init__#2",
+   "lines": [
+    [
+     69,
+     69
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECDSAECKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.ecdsa_backend.ECDSAECKey.__init__#3",
+   "lines": [
+    [
+     74,
+     74
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECDSAECKey",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unable to parse an ECKey from key: {*}",
+   "template_parts": [
+    "Unable to parse an ECKey from key: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "EC",
+    "get",
+    "jwk_dict",
+    "kty"
+   ],
+   "guards": [
+    "not jwk_dict.get('kty') == 'EC'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.ecdsa_backend.ECDSAECKey._process_jwk#1",
+   "lines": [
+    [
+     78,
+     78
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECDSAECKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Incorrect key type. Expected: 'EC', Received: {*}",
+   "template_parts": [
+    "Incorrect key type. Expected: 'EC', Received: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "all",
+    "crv",
+    "jwk_dict",
+    "k",
+    "x",
+    "y"
+   ],
+   "guards": [
+    "not all((k in jwk_dict for k in ['x', 'y', 'crv']))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "backends.ecdsa_backend.ECDSAECKey._process_jwk#2",
+   "lines": [
+    [
+     81,
+     81
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Mandatory parameters are missing"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECDSAECKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Mandatory parameters are missing",
+   "template_parts": [
+    "Mandatory parameters are missing"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "curve",
+    "ecdsa",
+    "generator",
+    "point_is_valid",
+    "self",
+    "x",
+    "y"
+   ],
+   "guards": [
+    "not ecdsa.ecdsa.point_is_valid(self.curve.generator, x, y)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.ecdsa_backend.ECDSAECKey._process_jwk#3",
+   "lines": [
+    [
+     93,
+     93
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "ECDSAECKey",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Point: {*}, {*} is not a valid point",
+   "template_parts": [
+    "Point: ",
+    null,
+    ", ",
+    null,
+    " is not a valid point"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/native.py",
+   "function": "HMACKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ALGORITHMS",
+    "HMAC",
+    "algorithm"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.HMAC"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.native.HMACKey.__init__#1",
+   "lines": [
+    [
+     25,
+     25
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "hash_alg: {*} is not a valid hash algorithm",
+   "template_parts": [
+    "hash_alg: ",
+    null,
+    " is not a valid hash algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/native.py",
+   "function": "HMACKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "bytes",
+    "isinstance",
+    "key",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(key, str) and (not isinstance(key, bytes))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "backends.native.HMACKey.__init__#2",
+   "lines": [
+    [
+     34,
+     34
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Expecting a string- or bytes-formatted key."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Expecting a string- or bytes-formatted key.",
+   "template_parts": [
+    "Expecting a string- or bytes-formatted key."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/native.py",
+   "function": "HMACKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "is_pem_format",
+    "is_ssh_key",
+    "key"
+   ],
+   "guards": [
+    "is_pem_format(key) or is_ssh_key(key)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "backends.native.HMACKey.__init__#3",
+   "lines": [
+    [
+     40,
+     43
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACKey",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret.",
+   "template_parts": [
+    "The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/native.py",
+   "function": "HMACKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "get",
+    "jwk_dict",
+    "kty",
+    "oct"
+   ],
+   "guards": [
+    "not jwk_dict.get('kty') == 'oct'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.native.HMACKey._process_jwk#1",
+   "lines": [
+    [
+     49,
+     49
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "HMACKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Incorrect key type. Expected: 'oct', Received: {*}",
+   "template_parts": [
+    "Incorrect key type. Expected: 'oct', Received: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ALGORITHMS",
+    "RSA",
+    "algorithm"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.RSA"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.rsa_backend.RSAKey.__init__#1",
+   "lines": [
+    [
+     127,
+     127
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "hash_alg: {*} is not a valid hash algorithm",
+   "template_parts": [
+    "hash_alg: ",
+    null,
+    " is not a valid hash algorithm"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ALGORITHMS",
+    "RSA1_5",
+    "RSA_KW",
+    "algorithm"
+   ],
+   "guards": [
+    "algorithm in ALGORITHMS.RSA_KW and algorithm != ALGORITHMS.RSA1_5"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.rsa_backend.RSAKey.__init__#2",
+   "lines": [
+    [
+     130,
+     130
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "alg: {*} is not supported by the RSA backend",
+   "template_parts": [
+    "alg: ",
+    null,
+    " is not supported by the RSA backend"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.rsa_backend.RSAKey.__init__#3",
+   "lines": [
+    [
+     171,
+     171
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAKey",
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.__init__",
+   "function_name": "__init__",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.rsa_backend.RSAKey.__init__#4",
+   "lines": [
+    [
+     173,
+     173
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAKey",
+   "raise_numbers": [
+    4
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Unable to parse an RSA_JWK from key: {*}",
+   "template_parts": [
+    "Unable to parse an RSA_JWK from key: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "RSA",
+    "get",
+    "jwk_dict",
+    "kty"
+   ],
+   "guards": [
+    "not jwk_dict.get('kty') == 'RSA'"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.rsa_backend.RSAKey._process_jwk#1",
+   "lines": [
+    [
+     177,
+     177
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Incorrect key type. Expected: 'RSA', Received: {*}",
+   "template_parts": [
+    "Incorrect key type. Expected: 'RSA', Received: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey._process_jwk",
+   "function_name": "_process_jwk",
+   "guard_words": [
+    "all",
+    "extra_params",
+    "jwk_dict",
+    "k"
+   ],
+   "guards": [
+    "not all((k in jwk_dict for k in extra_params))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "backends.rsa_backend.RSAKey._process_jwk#2",
+   "lines": [
+    [
+     194,
+     194
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Precomputed private key parameters are incomplete."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Precomputed private key parameters are incomplete.",
+   "template_parts": [
+    "Precomputed private key parameters are incomplete."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.unwrap_key",
+   "function_name": "unwrap_key",
+   "guard_words": [
+    "DecryptionError",
+    "e"
+   ],
+   "guards": [
+    "except DecryptionError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "backends.rsa_backend.RSAKey.unwrap_key#1",
+   "lines": [
+    [
+     282,
+     282
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "RSAKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "encrypt",
+   "function_name": "encrypt",
+   "guard_words": [
+    "ALGORITHMS",
+    "SUPPORTED",
+    "algorithm",
+    "encryption"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.SUPPORTED",
+    "encryption not in ALGORITHMS.SUPPORTED"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwe.encrypt#1",
+   "lines": [
+    [
+     47,
+     47
+    ],
+    [
+     49,
+     49
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1,
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Algorithm {*} not supported.",
+   "template_parts": [
+    "Algorithm ",
+    null,
+    " not supported."
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "decrypt",
+   "function_name": "decrypt",
+   "guard_words": [
+    "JWE_SIZE_LIMIT",
+    "jwe_str",
+    "len"
+   ],
+   "guards": [
+    "len(jwe_str) > JWE_SIZE_LIMIT"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwe.decrypt#1",
+   "lines": [
+    [
+     84,
+     84
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "JWE string {*} bytes exceeds {*} bytes",
+   "template_parts": [
+    "JWE string ",
+    null,
+    " bytes exceeds ",
+    null,
+    " bytes"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "decrypt",
+   "function_name": "decrypt",
+   "guard_words": [
+    "ALGORITHMS",
+    "SUPPORTED",
+    "alg",
+    "enc"
+   ],
+   "guards": [
+    "alg not in ALGORITHMS.SUPPORTED",
+    "enc not in ALGORITHMS.SUPPORTED"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwe.decrypt#2",
+   "lines": [
+    [
+     100,
+     100
+    ],
+    [
+     102,
+     102
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2,
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Algorithm {*} not supported.",
+   "template_parts": [
+    "Algorithm ",
+    null,
+    " not supported."
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "JWEParseError",
+   "class_name": "JWEParseError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "decrypt",
+   "function_name": "decrypt",
+   "guard_words": [
+    "KeyError"
+   ],
+   "guards": [
+    "except KeyError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwe.decrypt#3",
+   "lines": [
+    [
+     105,
+     105
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "alg and enc headers are required!"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "alg and enc headers are required!",
+   "template_parts": [
+    "alg and enc headers are required!"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "decrypt",
+   "function_name": "decrypt",
+   "guard_words": [
+    "NotImplementedError"
+   ],
+   "guards": [
+    "except NotImplementedError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwe.decrypt#4",
+   "lines": [
+    [
+     147,
+     147
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "alg {*} is not implemented",
+   "template_parts": [
+    "alg ",
+    null,
+    " is not implemented"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "decrypt",
+   "function_name": "decrypt",
+   "guard_words": [
+    "NotImplementedError"
+   ],
+   "guards": [
+    "except NotImplementedError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwe.decrypt#5",
+   "lines": [
+    [
+     187,
+     187
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    6
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "enc {*} is not implemented",
+   "template_parts": [
+    "enc ",
+    null,
+    " is not implemented"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "decrypt",
+   "function_name": "decrypt",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwe.decrypt#6",
+   "lines": [
+    [
+     189,
+     189
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    7
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_decrypt_and_auth",
+   "function_name": "_decrypt_and_auth",
+   "guard_words": [
+    "auth_tag",
+    "auth_tag_check"
+   ],
+   "guards": [
+    "auth_tag != auth_tag_check"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwe._decrypt_and_auth#1",
+   "lines": [
+    [
+     248,
+     248
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid JWE Auth Tag"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid JWE Auth Tag",
+   "template_parts": [
+    "Invalid JWE Auth Tag"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEParseError",
+   "class_name": "JWEParseError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_deserialize",
+   "function_name": "_jwe_compact_deserialize",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwe._jwe_compact_deserialize#1",
+   "lines": [
+    [
+     285,
+     285
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not enough segments"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Not enough segments",
+   "template_parts": [
+    "Not enough segments"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEParseError",
+   "class_name": "JWEParseError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_deserialize",
+   "function_name": "_jwe_compact_deserialize",
+   "guard_words": [
+    "Error",
+    "TypeError",
+    "binascii"
+   ],
+   "guards": [
+    "except (TypeError, binascii.Error)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwe._jwe_compact_deserialize#2",
+   "lines": [
+    [
+     287,
+     287
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid header"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid header",
+   "template_parts": [
+    "Invalid header"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEParseError",
+   "class_name": "JWEParseError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_deserialize",
+   "function_name": "_jwe_compact_deserialize",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwe._jwe_compact_deserialize#3",
+   "lines": [
+    [
+     309,
+     309
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid header string: {*}",
+   "template_parts": [
+    "Invalid header string: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEParseError",
+   "class_name": "JWEParseError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_deserialize",
+   "function_name": "_jwe_compact_deserialize",
+   "guard_words": [
+    "Mapping",
+    "header",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(header, Mapping)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwe._jwe_compact_deserialize#4",
+   "lines": [
+    [
+     312,
+     312
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid header string: must be a json object"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid header string: must be a json object",
+   "template_parts": [
+    "Invalid header string: must be a json object"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEParseError",
+   "class_name": "JWEParseError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_deserialize",
+   "function_name": "_jwe_compact_deserialize",
+   "guard_words": [
+    "Error",
+    "TypeError",
+    "binascii"
+   ],
+   "guards": [
+    "except (TypeError, binascii.Error)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwe._jwe_compact_deserialize#5",
+   "lines": [
+    [
+     317,
+     317
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid encrypted key"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid encrypted key",
+   "template_parts": [
+    "Invalid encrypted key"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEParseError",
+   "class_name": "JWEParseError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_deserialize",
+   "function_name": "_jwe_compact_deserialize",
+   "guard_words": [
+    "Error",
+    "TypeError",
+    "binascii"
+   ],
+   "guards": [
+    "except (TypeError, binascii.Error)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwe._jwe_compact_deserialize#6",
+   "lines": [
+    [
+     322,
+     322
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid IV"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    6
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid IV",
+   "template_parts": [
+    "Invalid IV"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEParseError",
+   "class_name": "JWEParseError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_deserialize",
+   "function_name": "_jwe_compact_deserialize",
+   "guard_words": [
+    "Error",
+    "TypeError",
+    "binascii"
+   ],
+   "guards": [
+    "except (TypeError, binascii.Error)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwe._jwe_compact_deserialize#7",
+   "lines": [
+    [
+     327,
+     327
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid cyphertext"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    7
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid cyphertext",
+   "template_parts": [
+    "Invalid cyphertext"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEParseError",
+   "class_name": "JWEParseError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_deserialize",
+   "function_name": "_jwe_compact_deserialize",
+   "guard_words": [
+    "Error",
+    "TypeError",
+    "binascii"
+   ],
+   "guards": [
+    "except (TypeError, binascii.Error)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwe._jwe_compact_deserialize#8",
+   "lines": [
+    [
+     332,
+     332
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid auth tag"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    8
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid auth tag",
+   "template_parts": [
+    "Invalid auth tag"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_encrypt_and_auth",
+   "function_name": "_encrypt_and_auth",
+   "guard_words": [
+    "NotImplementedError"
+   ],
+   "guards": [
+    "except NotImplementedError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwe._encrypt_and_auth#1",
+   "lines": [
+    [
+     391,
+     391
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "alg {*} is not implemented",
+   "template_parts": [
+    "alg ",
+    null,
+    " is not implemented"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWEError",
+   "class_name": "JWEError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwe.py",
+   "function": "_decompress",
+   "function_name": "_decompress",
+   "guard_words": [
+    "decompressor",
+    "unconsumed_tail"
+   ],
+   "guards": [
+    "decompressor.unconsumed_tail"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwe._decompress#1",
+   "lines": [
+    [
+     465,
+     465
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Decompressed JWE string exceeds {*} bytes",
+   "template_parts": [
+    "Decompressed JWE string exceeds ",
+    null,
+    " bytes"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWKError",
+   "class_name": "JWKError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwk.py",
+   "function": "construct",
+   "function_name": "construct",
+   "guard_words": [
+    "algorithm",
+    "key_class"
+   ],
+   "guards": [
+    "not algorithm",
+    "not key_class"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwk.construct#1",
+   "lines": [
+    [
+     74,
+     74
+    ],
+    [
+     78,
+     78
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Unable to find an algorithm for key"
+     }
+    },
+    {
+     "kw": {},
+     "pos": {
+      "0": "Unable to find an algorithm for key"
+     }
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1,
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Unable to find an algorithm for key",
+   "template_parts": [
+    "Unable to find an algorithm for key"
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "sign",
+   "function_name": "sign",
+   "guard_words": [
+    "ALGORITHMS",
+    "SUPPORTED",
+    "algorithm"
+   ],
+   "guards": [
+    "algorithm not in ALGORITHMS.SUPPORTED"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jws.sign#1",
+   "lines": [
+    [
+     43,
+     43
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Algorithm {*} not supported.",
+   "template_parts": [
+    "Algorithm ",
+    null,
+    " not supported."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_sign_header_and_claims",
+   "function_name": "_sign_header_and_claims",
+   "guard_words": [
+    "Exception",
+    "e"
+   ],
+   "guards": [
+    "except Exception as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jws._sign_header_and_claims#1",
+   "lines": [
+    [
+     167,
+     167
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_load",
+   "function_name": "_load",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jws._load#1",
+   "lines": [
+    [
+     184,
+     184
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not enough segments"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Not enough segments",
+   "template_parts": [
+    "Not enough segments"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_load",
+   "function_name": "_load",
+   "guard_words": [
+    "Error",
+    "TypeError",
+    "binascii"
+   ],
+   "guards": [
+    "except (TypeError, binascii.Error)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jws._load#2",
+   "lines": [
+    [
+     186,
+     186
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid header padding"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid header padding",
+   "template_parts": [
+    "Invalid header padding"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_load",
+   "function_name": "_load",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jws._load#3",
+   "lines": [
+    [
+     191,
+     191
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid header string: {*}",
+   "template_parts": [
+    "Invalid header string: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_load",
+   "function_name": "_load",
+   "guard_words": [
+    "Mapping",
+    "header",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(header, Mapping)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jws._load#4",
+   "lines": [
+    [
+     194,
+     194
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid header string: must be a json object"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid header string: must be a json object",
+   "template_parts": [
+    "Invalid header string: must be a json object"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_load",
+   "function_name": "_load",
+   "guard_words": [
+    "Error",
+    "TypeError",
+    "binascii"
+   ],
+   "guards": [
+    "except (TypeError, binascii.Error)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jws._load#5",
+   "lines": [
+    [
+     199,
+     199
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid payload padding"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid payload padding",
+   "template_parts": [
+    "Invalid payload padding"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_load",
+   "function_name": "_load",
+   "guard_words": [
+    "Error",
+    "TypeError",
+    "binascii"
+   ],
+   "guards": [
+    "except (TypeError, binascii.Error)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jws._load#6",
+   "lines": [
+    [
+     204,
+     204
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid crypto padding"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    6
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid crypto padding",
+   "template_parts": [
+    "Invalid crypto padding"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "alg"
+   ],
+   "guards": [
+    "not alg"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jws._verify_signature#1",
+   "lines": [
+    [
+     256,
+     256
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "No algorithm was specified in the JWS header."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "No algorithm was specified in the JWS header.",
+   "template_parts": [
+    "No algorithm was specified in the JWS header."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "alg",
+    "algorithms"
+   ],
+   "guards": [
+    "algorithms is not None and alg not in algorithms"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jws._verify_signature#2",
+   "lines": [
+    [
+     259,
+     259
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The specified alg value is not allowed"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The specified alg value is not allowed",
+   "template_parts": [
+    "The specified alg value is not allowed"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSSignatureError",
+   "class_name": "JWSSignatureError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "_sig_matches_keys",
+    "alg",
+    "keys",
+    "signature",
+    "signing_input"
+   ],
+   "guards": [
+    "not _sig_matches_keys(keys, signing_input, signature, alg)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jws._verify_signature#3",
+   "lines": [
+    [
+     264,
+     264
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    0
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "",
+   "template_parts": [],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "JWSSignatureError"
+   ],
+   "guards": [
+    "except JWSSignatureError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jws._verify_signature#4",
+   "lines": [
+    [
+     266,
+     266
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Signature verification failed."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    4
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Signature verification failed.",
+   "template_parts": [
+    "Signature verification failed."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWSError",
+   "class_name": "JWSError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jws.py",
+   "function": "_verify_signature",
+   "function_name": "_verify_signature",
+   "guard_words": [
+    "JWSError"
+   ],
+   "guards": [
+    "except JWSError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jws._verify_signature#5",
+   "lines": [
+    [
+     268,
+     268
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    5
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid or unsupported algorithm: {*}",
+   "template_parts": [
+    "Invalid or unsupported algorithm: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTError",
+   "class_name": "JWTError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "decode",
+   "function_name": "decode",
+   "guard_words": [
+    "JWSError",
+    "e"
+   ],
+   "guards": [
+    "except JWSError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwt.decode#1",
+   "lines": [
+    [
+     161,
+     161
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTError",
+   "class_name": "JWTError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "decode",
+   "function_name": "decode",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwt.decode#2",
+   "lines": [
+    [
+     169,
+     169
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid payload string: {*}",
+   "template_parts": [
+    "Invalid payload string: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTError",
+   "class_name": "JWTError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "decode",
+   "function_name": "decode",
+   "guard_words": [
+    "Mapping",
+    "claims",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(claims, Mapping)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt.decode#3",
+   "lines": [
+    [
+     172,
+     172
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid payload string: must be a json object"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid payload string: must be a json object",
+   "template_parts": [
+    "Invalid payload string: must be a json object"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTError",
+   "class_name": "JWTError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "get_unverified_header",
+   "function_name": "get_unverified_header",
+   "guard_words": [
+    "Exception"
+   ],
+   "guards": [
+    "except Exception"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt.get_unverified_header#1",
+   "lines": [
+    [
+     202,
+     202
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Error decoding token headers."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Error decoding token headers.",
+   "template_parts": [
+    "Error decoding token headers."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTError",
+   "class_name": "JWTError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "get_unverified_claims",
+   "function_name": "get_unverified_claims",
+   "guard_words": [
+    "Exception"
+   ],
+   "guards": [
+    "except Exception"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt.get_unverified_claims#1",
+   "lines": [
+    [
+     240,
+     240
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Error decoding token claims."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Error decoding token claims.",
+   "template_parts": [
+    "Error decoding token claims."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTError",
+   "class_name": "JWTError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "get_unverified_claims",
+   "function_name": "get_unverified_claims",
+   "guard_words": [
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except ValueError as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwt.get_unverified_claims#2",
+   "lines": [
+    [
+     245,
+     245
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Invalid claims string: {*}",
+   "template_parts": [
+    "Invalid claims string: ",
+    null
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTError",
+   "class_name": "JWTError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "get_unverified_claims",
+   "function_name": "get_unverified_claims",
+   "guard_words": [
+    "Mapping",
+    "claims",
+    "isinstance"
+   ],
+   "guards": [
+    "not isinstance(claims, Mapping)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt.get_unverified_claims#3",
+   "lines": [
+    [
+     248,
+     248
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid claims string: must be a json object"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": false,
+   "role": "subject",
+   "template": "Invalid claims string: must be a json object",
+   "template_parts": [
+    "Invalid claims string: must be a json object"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_iat",
+   "function_name": "_validate_iat",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_iat#1",
+   "lines": [
+    [
+     271,
+     271
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Issued At claim (iat) must be an integer."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Issued At claim (iat) must be an integer.",
+   "template_parts": [
+    "Issued At claim (iat) must be an integer."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_nbf",
+   "function_name": "_validate_nbf",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_nbf#1",
+   "lines": [
+    [
+     296,
+     296
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Not Before claim (nbf) must be an integer."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Not Before claim (nbf) must be an integer.",
+   "template_parts": [
+    "Not Before claim (nbf) must be an integer."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_nbf",
+   "function_name": "_validate_nbf",
+   "guard_words": [
+    "leeway",
+    "nbf",
+    "now"
+   ],
+   "guards": [
+    "nbf > now + leeway"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_nbf#2",
+   "lines": [
+    [
+     301,
+     301
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "The token is not yet valid (nbf)"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "The token is not yet valid (nbf)",
+   "template_parts": [
+    "The token is not yet valid (nbf)"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_exp",
+   "function_name": "_validate_exp",
+   "guard_words": [
+    "ValueError"
+   ],
+   "guards": [
+    "except ValueError"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_exp#1",
+   "lines": [
+    [
+     326,
+     326
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Expiration Time claim (exp) must be an integer."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Expiration Time claim (exp) must be an integer.",
+   "template_parts": [
+    "Expiration Time claim (exp) must be an integer."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "ExpiredSignatureError",
+   "class_name": "ExpiredSignatureError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_exp",
+   "function_name": "_validate_exp",
+   "guard_words": [
+    "exp",
+    "leeway",
+    "now"
+   ],
+   "guards": [
+    "exp < now - leeway"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_exp#2",
+   "lines": [
+    [
+     331,
+     331
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Signature has expired."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Signature has expired.",
+   "template_parts": [
+    "Signature has expired."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_aud",
+   "function_name": "_validate_aud",
+   "guard_words": [
+    "any",
+    "audience_claims",
+    "c",
+    "isinstance",
+    "list",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(audience_claims, list)",
+    "any((not isinstance(c, str) for c in audience_claims))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_aud#1",
+   "lines": [
+    [
+     363,
+     363
+    ],
+    [
+     365,
+     365
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid claim format in token"
+     }
+    },
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid claim format in token"
+     }
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1,
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid claim format in token",
+   "template_parts": [
+    "Invalid claim format in token"
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_aud",
+   "function_name": "_validate_aud",
+   "guard_words": [
+    "audience",
+    "audience_claims"
+   ],
+   "guards": [
+    "audience not in audience_claims"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_aud#2",
+   "lines": [
+    [
+     367,
+     367
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid audience"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid audience",
+   "template_parts": [
+    "Invalid audience"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_iss",
+   "function_name": "_validate_iss",
+   "guard_words": [
+    "claims",
+    "get",
+    "iss",
+    "issuer"
+   ],
+   "guards": [
+    "claims.get('iss') not in issuer"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_iss#1",
+   "lines": [
+    [
+     388,
+     388
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid issuer"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid issuer",
+   "template_parts": [
+    "Invalid issuer"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_sub",
+   "function_name": "_validate_sub",
+   "guard_words": [
+    "claims",
+    "isinstance",
+    "str",
+    "sub"
+   ],
+   "guards": [
+    "not isinstance(claims['sub'], str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_sub#1",
+   "lines": [
+    [
+     411,
+     411
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Subject must be a string."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Subject must be a string.",
+   "template_parts": [
+    "Subject must be a string."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_sub",
+   "function_name": "_validate_sub",
+   "guard_words": [
+    "claims",
+    "get",
+    "sub",
+    "subject"
+   ],
+   "guards": [
+    "claims.get('sub') != subject"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_sub#2",
+   "lines": [
+    [
+     415,
+     415
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Invalid subject"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Invalid subject",
+   "template_parts": [
+    "Invalid subject"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_jti",
+   "function_name": "_validate_jti",
+   "guard_words": [
+    "claims",
+    "isinstance",
+    "jti",
+    "str"
+   ],
+   "guards": [
+    "not isinstance(claims['jti'], str)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_jti#1",
+   "lines": [
+    [
+     437,
+     437
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "JWT ID must be a string."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "JWT ID must be a string.",
+   "template_parts": [
+    "JWT ID must be a string."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_at_hash",
+   "function_name": "_validate_at_hash",
+   "guard_words": [
+    "TypeError",
+    "ValueError",
+    "access_token"
+   ],
+   "guards": [
+    "not access_token",
+    "except (TypeError, ValueError)"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwt._validate_at_hash#1",
+   "lines": [
+    [
+     463,
+     463
+    ],
+    [
+     469,
+     469
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    },
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1,
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1,
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "{*}",
+   "template_parts": [
+    null
+   ],
+   "via_variable": [
+    null,
+    null
+   ]
+  },
+  {
+   "class": "JWTClaimsError",
+   "class_name": "JWTClaimsError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_at_hash",
+   "function_name": "_validate_at_hash",
+   "guard_words": [
+    "at_hash",
+    "claims",
+    "expected_hash"
+   ],
+   "guards": [
+    "claims['at_hash'] != expected_hash"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_at_hash#2",
+   "lines": [
+    [
+     472,
+     472
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "at_hash claim does not match access_token."
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    3
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "at_hash claim does not match access_token.",
+   "template_parts": [
+    "at_hash claim does not match access_token."
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTError",
+   "class_name": "JWTError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_claims",
+   "function_name": "_validate_claims",
+   "guard_words": [
+    "claims",
+    "require_claim"
+   ],
+   "guards": [
+    "require_claim not in claims"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "jwt._validate_claims#1",
+   "lines": [
+    [
+     483,
+     483
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "missing required key \"{*}\" among claims",
+   "template_parts": [
+    "missing required key \"",
+    null,
+    "\" among claims"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "JWTError",
+   "class_name": "JWTError",
+   "class_resolution": [
+    "import"
+   ],
+   "file": "jose/jwt.py",
+   "function": "_validate_claims",
+   "function_name": "_validate_claims",
+   "guard_words": [
+    "audience",
+    "isinstance",
+    "str",
+    "type"
+   ],
+   "guards": [
+    "not isinstance(audience, ((str,), type(None)))"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "jwt._validate_claims#2",
+   "lines": [
+    [
+     488,
+     488
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "audience must be a string or None"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "audience must be a string or None",
+   "template_parts": [
+    "audience must be a string or None"
+   ],
+   "via_variable": [
+    null
+   ]
+  }
+ ],
+ "classes": {
+  "Algorithms": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.constants",
+   "name": "Algorithms",
+   "qualname": "Algorithms"
+  },
+  "CryptographyAESKey": {
+   "bases": [
+    "Key"
+   ],
+   "bases_declared": [
+    "Key"
+   ],
+   "defines": [
+    "__init__",
+    "decrypt",
+    "encrypt",
+    "to_dict",
+    "unwrap_key",
+    "wrap_key"
+   ],
+   "init_attrs": {
+    "_algorithm": 1,
+    "_key": 0
+   },
+   "init_params": [
+    "key",
+    "algorithm"
+   ],
+   "module": "jose.backends.cryptography_backend",
+   "name": "CryptographyAESKey",
+   "qualname": "CryptographyAESKey"
+  },
+  "CryptographyECKey": {
+   "bases": [
+    "Key"
+   ],
+   "bases_declared": [
+    "Key"
+   ],
+   "defines": [
+    "__init__",
+    "_der_to_raw",
+    "_process_jwk",
+    "_raw_to_der",
+    "_sig_component_length",
+    "is_public",
+    "public_key",
+    "sign",
+    "to_dict",
+    "to_pem",
+    "verify"
+   ],
+   "init_attrs": {
+    "_algorithm": 1,
+    "cryptography_backend": 2,
+    "prepared_key": 0
+   },
+   "init_params": [
+    "key",
+    "algorithm",
+    "cryptography_backend"
+   ],
+   "module": "jose.backends.cryptography_backend",
+   "name": "CryptographyECKey",
+   "qualname": "CryptographyECKey"
+  },
+  "CryptographyHMACKey": {
+   "bases": [
+    "Key"
+   ],
+   "bases_declared": [
+    "Key"
+   ],
+   "defines": [
+    "__init__",
+    "_process_jwk",
+    "sign",
+    "to_dict",
+    "verify"
+   ],
+   "init_attrs": {
+    "_algorithm": 1,
+    "prepared_key": 0
+   },
+   "init_params": [
+    "key",
+    "algorithm"
+   ],
+   "module": "jose.backends.cryptography_backend",
+   "name": "CryptographyHMACKey",
+   "qualname": "CryptographyHMACKey"
+  },
+  "CryptographyRSAKey": {
+   "bases": [
+    "Key"
+   ],
+   "bases_declared": [
+    "Key"
+   ],
+   "defines": [
+    "__init__",
+    "_process_cert",
+    "_process_jwk",
+    "is_public",
+    "public_key",
+    "sign",
+    "to_dict",
+    "to_pem",
+    "unwrap_key",
+    "verify",
+    "wrap_key"
+   ],
+   "init_attrs": {
+    "_algorithm": 1,
+    "cryptography_backend": 2,
+    "prepared_key": 0
+   },
+   "init_params": [
+    "key",
+    "algorithm",
+    "cryptography_backend"
+   ],
+   "module": "jose.backends.cryptography_backend",
+   "name": "CryptographyRSAKey",
+   "qualname": "CryptographyRSAKey"
+  },
+  "DIRKey": {
+   "bases": [
+    "Key"
+   ],
+   "bases_declared": [
+    "Key"
+   ],
+   "defines": [
+    "__init__",
+    "to_dict"
+   ],
+   "init_attrs": {
+    "_alg": 1
+   },
+   "init_params": [
+    "key_data",
+    "algorithm"
+   ],
+   "module": "jose.backends.base",
+   "name": "DIRKey",
+   "qualname": "DIRKey"
+  },
+  "ECDSAECKey": {
+   "bases": [
+    "Key"
+   ],
+   "bases_declared": [
+    "Key"
+   ],
+   "defines": [
+    "__init__",
+    "_process_jwk",
+    "is_public",
+    "public_key",
+    "sign",
+    "to_dict",
+    "to_pem",
+    "verify"
+   ],
+   "init_attrs": {
+    "_algorithm": 1,
+    "prepared_key": 0
+   },
+   "init_params": [
+    "key",
+    "algorithm"
+   ],
+   "module": "jose.backends.ecdsa_backend",
+   "name": "ECDSAECKey",
+   "qualname": "ECDSAECKey"
+  },
+  "ExpiredSignatureError": {
+   "bases": [
+    "JWTError"
+   ],
+   "bases_declared": [
+    "JWTError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "ExpiredSignatureError",
+   "qualname": "ExpiredSignatureError"
+  },
+  "HMACKey": {
+   "bases": [
+    "Key"
+   ],
+   "bases_declared": [
+    "Key"
+   ],
+   "defines": [
+    "__init__",
+    "_process_jwk",
+    "sign",
+    "to_dict",
+    "verify"
+   ],
+   "init_attrs": {
+    "_algorithm": 1,
+    "prepared_key": 0
+   },
+   "init_params": [
+    "key",
+    "algorithm"
+   ],
+   "module": "jose.backends.native",
+   "name": "HMACKey",
+   "qualname": "HMACKey"
+  },
+  "JOSEError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JOSEError",
+   "qualname": "JOSEError"
+  },
+  "JWEAlgorithmUnsupportedError": {
+   "bases": [
+    "JWEError"
+   ],
+   "bases_declared": [
+    "JWEError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWEAlgorithmUnsupportedError",
+   "qualname": "JWEAlgorithmUnsupportedError"
+  },
+  "JWEError": {
+   "bases": [
+    "JOSEError"
+   ],
+   "bases_declared": [
+    "JOSEError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWEError",
+   "qualname": "JWEError"
+  },
+  "JWEInvalidAuth": {
+   "bases": [
+    "JWEError"
+   ],
+   "bases_declared": [
+    "JWEError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWEInvalidAuth",
+   "qualname": "JWEInvalidAuth"
+  },
+  "JWEParseError": {
+   "bases": [
+    "JWEError"
+   ],
+   "bases_declared": [
+    "JWEError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWEParseError",
+   "qualname": "JWEParseError"
+  },
+  "JWKError": {
+   "bases": [
+    "JOSEError"
+   ],
+   "bases_declared": [
+    "JOSEError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWKError",
+   "qualname": "JWKError"
+  },
+  "JWSAlgorithmError": {
+   "bases": [
+    "JWSError"
+   ],
+   "bases_declared": [
+    "JWSError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWSAlgorithmError",
+   "qualname": "JWSAlgorithmError"
+  },
+  "JWSError": {
+   "bases": [
+    "JOSEError"
+   ],
+   "bases_declared": [
+    "JOSEError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWSError",
+   "qualname": "JWSError"
+  },
+  "JWSSignatureError": {
+   "bases": [
+    "JWSError"
+   ],
+   "bases_declared": [
+    "JWSError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWSSignatureError",
+   "qualname": "JWSSignatureError"
+  },
+  "JWTClaimsError": {
+   "bases": [
+    "JWTError"
+   ],
+   "bases_declared": [
+    "JWTError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWTClaimsError",
+   "qualname": "JWTClaimsError"
+  },
+  "JWTError": {
+   "bases": [
+    "JOSEError"
+   ],
+   "bases_declared": [
+    "JOSEError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.exceptions",
+   "name": "JWTError",
+   "qualname": "JWTError"
+  },
+  "Key": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "decrypt",
+    "encrypt",
+    "public_key",
+    "sign",
+    "to_dict",
+    "to_pem",
+    "unwrap_key",
+    "verify",
+    "wrap_key"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "key",
+    "algorithm"
+   ],
+   "module": "jose.backends.base",
+   "name": "Key",
+   "qualname": "Key"
+  },
+  "PKCS8PrivateKey": {
+   "bases": [
+    "pyasn1.type.univ.Sequence"
+   ],
+   "bases_declared": [
+    "pyasn1.type.univ.Sequence"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.backends._asn1",
+   "name": "PKCS8PrivateKey",
+   "qualname": "PKCS8PrivateKey"
+  },
+  "PublicKeyInfo": {
+   "bases": [
+    "pyasn1.type.univ.Sequence"
+   ],
+   "bases_declared": [
+    "pyasn1.type.univ.Sequence"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.backends._asn1",
+   "name": "PublicKeyInfo",
+   "qualname": "PublicKeyInfo"
+  },
+  "RSAKey": {
+   "bases": [
+    "Key"
+   ],
+   "bases_declared": [
+    "Key"
+   ],
+   "defines": [
+    "__init__",
+    "_process_jwk",
+    "is_public",
+    "public_key",
+    "sign",
+    "to_dict",
+    "to_pem",
+    "unwrap_key",
+    "verify",
+    "wrap_key"
+   ],
+   "init_attrs": {
+    "_algorithm": 1,
+    "_prepared_key": 0
+   },
+   "init_params": [
+    "key",
+    "algorithm"
+   ],
+   "module": "jose.backends.rsa_backend",
+   "name": "RSAKey",
+   "qualname": "RSAKey"
+  },
+  "RsaAlgorithmIdentifier": {
+   "bases": [
+    "pyasn1.type.univ.Sequence"
+   ],
+   "bases_declared": [
+    "pyasn1.type.univ.Sequence"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.backends._asn1",
+   "name": "RsaAlgorithmIdentifier",
+   "qualname": "RsaAlgorithmIdentifier"
+  },
+  "Zips": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "jose.constants",
+   "name": "Zips",
+   "qualname": "Zips"
+  }
+ },
+ "functions": [
+  {
+   "file": "jose/backends/_asn1.py",
+   "function": "rsa_private_key_pkcs1_to_pkcs8",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/_asn1.py",
+   "function": "rsa_private_key_pkcs8_to_pkcs1",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/_asn1.py",
+   "function": "rsa_public_key_pkcs1_to_pkcs8",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/_asn1.py",
+   "function": "rsa_public_key_pkcs8_to_pkcs1",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "DIRKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "DIRKey.to_dict",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.decrypt",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.encrypt",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.public_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.sign",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.to_dict",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.to_pem",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.unwrap_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.verify",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/base.py",
+   "function": "Key.wrap_key",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.decrypt",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.encrypt",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.to_dict",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.unwrap_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.wrap_key",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey._der_to_raw",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey._process_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey._raw_to_der",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey._sig_component_length",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.is_public",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.public_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.sign",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.to_dict",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.to_pem",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.verify",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyHMACKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyHMACKey._process_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyHMACKey.sign",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyHMACKey.to_dict",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyHMACKey.verify",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey._process_cert",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey._process_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.is_public",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.public_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.sign",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.to_dict",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.to_pem",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.unwrap_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.verify",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.wrap_key",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey._process_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.is_public",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.public_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.sign",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.to_dict",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.to_pem",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.verify",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/native.py",
+   "function": "HMACKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/native.py",
+   "function": "HMACKey._process_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/native.py",
+   "function": "HMACKey.sign",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/native.py",
+   "function": "HMACKey.to_dict",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/native.py",
+   "function": "HMACKey.verify",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/native.py",
+   "function": "get_random_bytes",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey._process_jwk",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.is_public",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.public_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.sign",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.to_dict",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.to_pem",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.unwrap_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.verify",
+   "reachable": true
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.wrap_key",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "_gcd",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "_legacy_private_key_pkcs8_to_pkcs1",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "_rsa_recover_prime_factors",
+   "reachable": false
+  },
+  {
+   "file": "jose/backends/rsa_backend.py",
+   "function": "pem_to_spki",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_auth_tag",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_big_endian",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_compress",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_decompress",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_decrypt_and_auth",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_encoded_header",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_encrypt_and_auth",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_get_cek",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_get_direct_key_wrap_cek",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_get_encryption_key_mac_key_and_key_length_from_cek",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_get_hmac_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_get_key_bytes_from_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_get_key_wrap_cek",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_get_random_cek_bytes_for_enc",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_deserialize",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "_jwe_compact_serialize",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "decrypt",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "encrypt",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwe.py",
+   "function": "get_unverified_header",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwk.py",
+   "function": "construct",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwk.py",
+   "function": "get_key",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwk.py",
+   "function": "register_key",
+   "reachable": false
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "_encode_header",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "_encode_payload",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "_get_keys",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "_load",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "_sig_matches_keys",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "_sign_header_and_claims",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "_verify_signature",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "get_unverified_claims",
+   "reachable": false
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "get_unverified_header",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "get_unverified_headers",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "sign",
+   "reachable": true
+  },
+  {
+   "file": "jose/jws.py",
+   "function": "verify",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "_validate_at_hash",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "_validate_aud",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "_validate_claims",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "_validate_exp",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "_validate_iat",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "_validate_iss",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "_validate_jti",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "_validate_nbf",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "_validate_sub",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "decode",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "encode",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "get_unverified_claims",
+   "reachable": false
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "get_unverified_header",
+   "reachable": true
+  },
+  {
+   "file": "jose/jwt.py",
+   "function": "get_unverified_headers",
+   "reachable": true
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "base64_to_long",
+   "reachable": false
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "base64url_decode",
+   "reachable": true
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "base64url_encode",
+   "reachable": true
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "calculate_at_hash",
+   "reachable": true
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "ensure_binary",
+   "reachable": true
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "int_arr_to_long",
+   "reachable": false
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "is_pem_format",
+   "reachable": false
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "is_ssh_key",
+   "reachable": false
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "long_to_base64",
+   "reachable": true
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "long_to_bytes",
+   "reachable": true
+  },
+  {
+   "file": "jose/utils.py",
+   "function": "timedelta_total_seconds",
+   "reachable": true
+  }
+ ],
+ "other_raises": [
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 45,
+   "file": "jose/backends/_asn1.py",
+   "function": "rsa_private_key_pkcs8_to_pkcs1",
+   "guard": "except IndexError",
+   "line": 45,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid private key encoding')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 82,
+   "file": "jose/backends/_asn1.py",
+   "function": "rsa_public_key_pkcs8_to_pkcs1",
+   "guard": "except IndexError",
+   "line": 82,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid public key encoding.')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 13,
+   "file": "jose/backends/base.py",
+   "function": "Key.sign",
+   "guard": null,
+   "line": 13,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 16,
+   "file": "jose/backends/base.py",
+   "function": "Key.verify",
+   "guard": null,
+   "line": 16,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 19,
+   "file": "jose/backends/base.py",
+   "function": "Key.public_key",
+   "guard": null,
+   "line": 19,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 22,
+   "file": "jose/backends/base.py",
+   "function": "Key.to_pem",
+   "guard": null,
+   "line": 22,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 25,
+   "file": "jose/backends/base.py",
+   "function": "Key.to_dict",
+   "guard": null,
+   "line": 25,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 38,
+   "file": "jose/backends/base.py",
+   "function": "Key.encrypt",
+   "guard": null,
+   "line": 38,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 52,
+   "file": "jose/backends/base.py",
+   "function": "Key.decrypt",
+   "guard": null,
+   "line": 52,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 64,
+   "file": "jose/backends/base.py",
+   "function": "Key.wrap_key",
+   "guard": null,
+   "line": 64,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 76,
+   "file": "jose/backends/base.py",
+   "function": "Key.unwrap_key",
+   "guard": null,
+   "line": 76,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError()",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 125,
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey._raw_to_der",
+   "guard": "len(raw_signature) != int(2 * component_length)",
+   "line": 125,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid signature')",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 138,
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyECKey.sign",
+   "guard": "self.hash_alg.digest_size * 8 > self.prepared_key.curve.key_size",
+   "line": 135,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('this curve (%s) is too short for your digest (%d)' % (self.prepared_key.curve.name, 8 * self.hash_alg.digest_size))",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 336,
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.to_pem",
+   "guard": "pem_format == 'PKCS1'",
+   "line": 336,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid format specified: %r' % pem_format)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 345,
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyRSAKey.to_pem",
+   "guard": "pem_format == 'PKCS1'",
+   "line": 345,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid format specified: %r' % pem_format)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 485,
+   "file": "jose/backends/cryptography_backend.py",
+   "function": "CryptographyAESKey.decrypt",
+   "guard": "tag is None",
+   "line": 485,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('tag cannot be None')",
+   "via": null
+  },
+  {
+   "class": "KeyError",
+   "class_resolved": "KeyError",
+   "end_line": 132,
+   "file": "jose/backends/ecdsa_backend.py",
+   "function": "ECDSAECKey.to_dict",
+   "guard": "not crv",
+   "line": 132,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise KeyError(f\"Can't match {self.prepared_key.curve}\")",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 90,
+   "file": "jose/backends/rsa_backend.py",
+   "function": "_rsa_recover_prime_factors",
+   "guard": "not spotted",
+   "line": 90,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Unable to compute factors p and q from exponent d.')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 115,
+   "file": "jose/backends/rsa_backend.py",
+   "function": "_legacy_private_key_pkcs8_to_pkcs1",
+   "guard": "not pkcs8_key.startswith(LEGACY_INVALID_PKCS8_RSA_HEADER + ASN1_SEQUENCE_ID)",
+   "line": 115,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid private key encoding')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 232,
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.to_pem",
+   "guard": "pem_format == 'PKCS1'",
+   "line": 232,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(f'Invalid pem format specified: {pem_format!r}')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 242,
+   "file": "jose/backends/rsa_backend.py",
+   "function": "RSAKey.to_pem",
+   "guard": "pem_format == 'PKCS1'",
+   "line": 242,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(f'Invalid pem format specified: {pem_format!r}')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 244,
+   "file": "jose/jwe.py",
+   "function": "_decrypt_and_auth",
+   "guard": "enc in ALGORITHMS.GCM",
+   "line": 244,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError(f'enc {enc} is not implemented!')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 401,
+   "file": "jose/jwe.py",
+   "function": "_encrypt_and_auth",
+   "guard": "enc in ALGORITHMS.GCM",
+   "line": 401,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError(f'enc {enc} is not implemented!')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 434,
+   "file": "jose/jwe.py",
+   "function": "_compress",
+   "guard": "zip not in ZIPS.SUPPORTED",
+   "line": 434,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError(f'ZIP {zip} is not supported!')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 440,
+   "file": "jose/jwe.py",
+   "function": "_compress",
+   "guard": "zip == ZIPS.DEF",
+   "line": 440,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError(f'ZIP {zip} is not implemented!')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 456,
+   "file": "jose/jwe.py",
+   "function": "_decompress",
+   "guard": "zip not in ZIPS.SUPPORTED",
+   "line": 456,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError(f'ZIP {zip} is not supported!')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 467,
+   "file": "jose/jwe.py",
+   "function": "_decompress",
+   "guard": "zip == ZIPS.DEF",
+   "line": 467,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError(f'ZIP {zip} is not implemented!')",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 508,
+   "file": "jose/jwe.py",
+   "function": "_get_direct_key_wrap_cek",
+   "guard": "jwk_data['kty'] == 'oct'",
+   "line": 508,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError('JWK type {} not supported!'.format(jwk_data['kty']))",
+   "via": null
+  },
+  {
+   "class": "NotImplementedError",
+   "class_resolved": "NotImplementedError",
+   "end_line": 564,
+   "file": "jose/jwe.py",
+   "function": "_get_random_cek_bytes_for_enc",
+   "guard": "enc == ALGORITHMS.A256CBC_HS512",
+   "line": 564,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotImplementedError(f'{enc} not supported')",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 57,
+   "file": "jose/jwk.py",
+   "function": "register_key",
+   "guard": "not issubclass(key_class, Key)",
+   "line": 57,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('Key class is not a subclass of jwk.Key')",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 108,
+   "file": "jose/utils.py",
+   "function": "ensure_binary",
+   "guard": null,
+   "line": 108,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError(f\"not expecting type '{type(s)}'\")",
+   "via": null
+  }
+ ],
+ "rejection_bases": [
+  {
+   "kind": "package",
+   "module": "jose.exceptions",
+   "name": "JOSEError",
+   "qualname": "JOSEError"
+  }
+ ],
+ "rejection_classes": [
+  "ExpiredSignatureError",
+  "JOSEError",
+  "JWEAlgorithmUnsupportedError",
+  "JWEError",
+  "JWEInvalidAuth",
+  "JWEParseError",
+  "JWKError",
+  "JWSAlgorithmError",
+  "JWSError",
+  "JWSSignatureError",
+  "JWTClaimsError",
+  "JWTError"
+ ],
+ "sha256": {
+  "jose/__init__.py": "c7cbd607476b06a89fc589edfa5a209dbad1b8a6fa5f7a91c40779974e77803c",
+  "jose/backends/__init__.py": "91a0ec3795e4b657c0f05ff7d3ad0f79775a2f804d76fa144f33cb0233ffbffb",
+  "jose/backends/_asn1.py": "d82aa7441ecba234eb354e1dd470bd040d96909bf938e33a8329fa07eb55c249",
+  "jose/backends/base.py": "d24ba9a2c29f8b1011d96dde9cab9876a119a551b9e8e0ce40311d82afe99afb",
+  "jose/backends/cryptography_backend.py": "bf55ea3ba3c8529630c8002c3286f5143f43e2aeab3f07d7ec2195f8ac459405",
+  "jose/backends/ecdsa_backend.py": "3913917a9229212f43e2ce95b668658b919957d923dc2263dbf32fd0044a1aa1",
+  "jose/backends/native.py": "b99b8ff04aa28403ec986771b25332861f831a87b5c972d7981fcffb6cd7c92f",
+  "jose/backends/rsa_backend.py": "fad89017f1b6bf5e9ae4f2c22e3115c12a1869e072de1f938fa28a9ad62502e6",
+  "jose/constants.py": "b4f64ba3aa08f267acc455ce0a2ba513ef86700356d55dfbc243b47f5bd5bea6",
+  "jose/exceptions.py": "2bfb9e141b264f0432484d02534f6232d84e01d3da4d0fc7bf3473f65613d65b",
+  "jose/jwe.py": "2fb199b0a9baa9cd80a43b4e9ccd180ecd8a84fd51de158ca12a082a2f1c4108",
+  "jose/jwk.py": "4ee22b3e82a454565cc2b9e9fc873049d5092fbf7ea4018299ab80cb2b260a84",
+  "jose/jws.py": "3f64805213ba6718e15a4e971c5a6e960a5111f00727f92d020ccf83e389ff7c",
+  "jose/jwt.py": "39756e1ce3fa834e6d1f2ce8f5e3f8b4b9fc473a9b7692ab11653a570b4d3ab0",
+  "jose/utils.py": "dd1e8456210fc1cd8dade3b59e352c69bf6b1ca9dce9fcdf449996a3d7f863dd"
+ },
+ "subject": {
+  "commit": "018b310ddb8b50dcfd09a0c152117835a21dd656",
+  "copy": [
+   "jose",
+   "tests",
+   "pytest.ini"
+  ],
+  "distribution": "python-jose",
+  "entry_points": [
+   "decode",
+   "decrypt",
+   "verify"
+  ],
+  "entry_points_source": "docs/jwt/api.rst, docs/jws/api.rst and docs/jwe/api.rst (automodule of jose.jwt, jose.jws and jose.jwe): jwt.decode, 'Verifies a JWT string's signature and validates reserved claims.' (jose/jwt.py, line 67); jws.verify, 'Verifies a JWS string's signature.' (jose/jws.py, line 53); jwe.decrypt, 'Decrypts a JWE compact serialized string and returns the plaintext.', which raises JWEError 'If there is an exception verifying the token.' (jose/jwe.py, lines 61 and 71-72). docs/jwk/index.rst shows key.verify(message, decoded_sig) under 'Verifying token signatures'. Entry points are names, so the same names elsewhere in the package count too.",
+  "name": "python-jose",
+  "observed_files": [],
+  "package": "jose",
+  "package_source": "setup.cfg, [options] packages = find: (line 34) and [options.packages.find] exclude = tests* (lines 52-54): the package jose, with its subpackage jose.backends, at the root of the repository",
+  "pytest_args": [
+   "-p",
+   "no:cacheprovider"
+  ],
+  "python": "3.12.3",
+  "rejection_bases": [
+   "JOSEError"
+  ],
+  "rejection_bases_source": "The docstrings of the entry points name JWTError, ExpiredSignatureError and JWTClaimsError (jose/jwt.py, lines 120-123), JWSError (jose/jws.py, lines 64-65) and JWEError (jose/jwe.py, lines 71-72). In jose/exceptions.py, JWSError (line 5), JWTError (line 17) and JWEError (line 33) inherit from JOSEError (line 1), and JWTClaimsError and ExpiredSignatureError from JWTError (lines 21 and 25): JOSEError is the base class of all of them and of every other exception class of the module.",
+  "release_source": "https://pypi.org/pypi/python-jose/json, read 2026-11-17T13:51:52Z: 3.5.0, uploaded 2025-05-28T17:31:52Z, is the latest release, no release or pre-release is later, and project_urls names the source https://github.com/mpdavis/python-jose/. git ls-remote --tags https://github.com/mpdavis/python-jose, 2026-11-17T13:52:00Z: refs/tags/3.5.0 is 018b310ddb8b50dcfd09a0c152117835a21dd656, a commit (the tag is lightweight). At that commit, jose/__init__.py, line 1, sets __version__ = \"3.5.0\", which setup.cfg, line 3, makes the version of the distribution.",
+  "repository": "https://github.com/mpdavis/python-jose",
+  "scope_counts": {
+   "blocks_in_test_directories": 91,
+   "test_files_in_test_directories": 18,
+   "test_files_with_an_included_block": 5
+  },
+  "source_root": ".",
+  "subject_files": [
+   "jose/__init__.py",
+   "jose/backends/__init__.py",
+   "jose/backends/_asn1.py",
+   "jose/backends/base.py",
+   "jose/backends/cryptography_backend.py",
+   "jose/backends/ecdsa_backend.py",
+   "jose/backends/native.py",
+   "jose/backends/rsa_backend.py",
+   "jose/constants.py",
+   "jose/exceptions.py",
+   "jose/jwe.py",
+   "jose/jwk.py",
+   "jose/jws.py",
+   "jose/jwt.py",
+   "jose/utils.py"
+  ],
+  "suite_runs": [
+   {
+    "name": "compatibility",
+    "paths": [
+     "tests"
+    ]
+   }
+  ],
+  "suite_runs_source": "tox.ini: for Python 3.12, the environments py312-base, py312-cryptography-only, py312-pycryptodome-norsa and py312-compatibility ([gh-actions], line 13; .github/workflows/ci.yml, line 44, runs tox), each with 1 pytest call from the root of the repository ([testenv:basecommand], line 20). compatibility installs the extras cryptography and pycryptodome (lines 29-32 and 56) and gives no marker expression (line 52), so its call runs every test that the other 3 select with -m (lines 46, 48 and 50); those 3 run in environments that lack backends, the extras (base), ecdsa and rsa (cryptography-only, line 41) or rsa (pycryptodome-norsa, line 43), which the 1 environment of a subject cannot be. The suite run is the call of compatibility, without its coverage options, on tests, the directory of every test file.",
+  "tag": "3.5.0",
+  "test_directories_source": "pytest.ini sets no testpaths, and pytest reads it ahead of the [tool:pytest] section of setup.cfg (pytest 9.2.0, _pytest/config/findpaths.py, lines 240-252: the configuration files in precedence order, pytest.ini before setup.cfg); tox.ini, [testenv:basecommand] (line 20), runs pytest without a path from the root of the repository, and every test file of the repository is under tests/ (git ls-files at the commit). setup.cfg, [tool:pytest], names the same directory: testpaths = tests (line 72).",
+  "tests": [
+   "tests/algorithms/test_AES_compat.py",
+   "tests/algorithms/test_EC.py",
+   "tests/test_jwe.py",
+   "tests/test_jws.py",
+   "tests/test_jwt.py"
+  ],
+  "version": "3.5.0"
+ }
+}

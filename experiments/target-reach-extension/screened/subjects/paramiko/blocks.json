@@ -1,0 +1,354 @@
+{
+ "blocks": [
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "SSHException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "SSHException",
+   "file": "tests/test_client.py",
+   "form": "call",
+   "header_span": [
+    317,
+    322
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_client.py::SSHClientTest.test_multiple_key_files_failure#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_multiple_key_files_failure",
+   "test_class": "SSHClientTest"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    459,
+    459
+   ],
+   "entry_calls": [
+    "connect"
+   ],
+   "exclusion": [
+    "expects ?SocksToBeYou"
+   ],
+   "expected": [
+    "?SocksToBeYou"
+   ],
+   "expected_kinds": [
+    "unknown"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "SocksToBeYou",
+   "file": "tests/test_client.py",
+   "form": "with",
+   "header_span": [
+    458,
+    458
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_client.py::SSHClientTest.test_closes_socket_on_socket_errors#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_closes_socket_on_socket_errors",
+   "test_class": "SSHClientTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "connect"
+   ],
+   "exclusion": [],
+   "expected": [
+    "SSHException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "paramiko.SSHException",
+   "file": "tests/test_client.py",
+   "form": "call",
+   "header_span": [
+    500,
+    500
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_client.py::SSHClientTest.test_banner_timeout#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_banner_timeout",
+   "test_class": "SSHClientTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "AuthenticationException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "AuthenticationException",
+   "file": "tests/test_client.py",
+   "form": "call",
+   "header_span": [
+    528,
+    533
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_client.py::SSHClientTest.test_auth_timeout#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_auth_timeout",
+   "test_class": "SSHClientTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "SSHException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "paramiko.SSHException",
+   "file": "tests/test_client.py",
+   "form": "call",
+   "header_span": [
+    557,
+    557
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_client.py::SSHClientTest.test_channel_timeout#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_channel_timeout",
+   "test_class": "SSHClientTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "connect"
+   ],
+   "exclusion": [],
+   "expected": [
+    "SSHException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "paramiko.SSHException",
+   "file": "tests/test_client.py",
+   "form": "call",
+   "header_span": [
+    568,
+    573
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_client.py::SSHClientTest.test_reject_policy#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_reject_policy",
+   "test_class": "SSHClientTest"
+  },
+  {
+   "api": "unittest",
+   "binding": null,
+   "body_span": null,
+   "entry_calls": [
+    "connect"
+   ],
+   "exclusion": [],
+   "expected": [
+    "BadHostKeyException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "paramiko.BadHostKeyException",
+   "file": "tests/test_client.py",
+   "form": "call",
+   "header_span": [
+    584,
+    589
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_client.py::SSHClientTest._client_host_key_bad#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "_client_host_key_bad",
+   "test_class": "SSHClientTest"
+  },
+  {
+   "api": "unittest",
+   "binding": "manager",
+   "body_span": [
+    653,
+    653
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "SSHException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "SSHException",
+   "file": "tests/test_client.py",
+   "form": "with",
+   "header_span": [
+    651,
+    651
+   ],
+   "included": false,
+   "k": 0,
+   "key": "tests/test_client.py::SSHClientTest.test_env_update_failures#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "self.assertTrue('INVALID_ENV' in str(manager.exception), 'Expected variable name in error message')",
+    "self.assertTrue(isinstance(manager.exception.args[1], SSHException), 'Expected original SSHException in exception')"
+   ],
+   "test": "test_env_update_failures",
+   "test_class": "SSHClientTest"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    566,
+    568
+   ],
+   "entry_calls": [
+    "parse_next"
+   ],
+   "exclusion": [],
+   "expected": [
+    "SSHException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "SSHException",
+   "file": "tests/test_kex.py",
+   "form": "with",
+   "header_span": [
+    565,
+    565
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_kex.py::MLKEM768X25519Test.test_rejects_wrong_init_length#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rejects_wrong_init_length",
+   "test_class": "MLKEM768X25519Test"
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    588,
+    590
+   ],
+   "entry_calls": [
+    "parse_next"
+   ],
+   "exclusion": [],
+   "expected": [
+    "SSHException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "SSHException",
+   "file": "tests/test_kex.py",
+   "form": "with",
+   "header_span": [
+    587,
+    587
+   ],
+   "included": true,
+   "k": 0,
+   "key": "tests/test_kex.py::MLKEM768X25519Test.test_rejects_wrong_reply_length#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_rejects_wrong_reply_length",
+   "test_class": "MLKEM768X25519Test"
+  }
+ ],
+ "counts": {
+  "blocks": 10,
+  "entry_point_blocks": 6,
+  "included": 5
+ },
+ "test_files": [
+  "tests/test_client.py",
+  "tests/test_kex.py"
+ ],
+ "test_files_sha256": {
+  "tests/test_client.py": "ce57e0d2eebb4f3ff3539c4ed28157a7d8e3c0af8223d77869b2f6d986e9e251",
+  "tests/test_kex.py": "d8da8839d770d77a7952b3808b771727b13491ec41051058671dd5eab7a4d9ad"
+ }
+}

@@ -1,0 +1,1256 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+   "name_tokens": [
+    "claim",
+    "expired",
+    "get",
+    "token"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "helpers.validate_exp#2",
+     "score": 2.302585,
+     "tokens": [
+      "expired"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+   "name_tokens": [
+    "claim",
+    "expiry",
+    "get",
+    "token",
+    "without"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+   "name_tokens": [
+    "auth",
+    "claim",
+    "get",
+    "header",
+    "malformed"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "auth",
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "auth",
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 0.0,
+     "tokens": [
+      "auth"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+   "name_tokens": [
+    "auth",
+    "claim",
+    "get",
+    "token",
+    "undecodable"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "auth",
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "auth",
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 0.0,
+     "tokens": [
+      "auth"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+   "name_tokens": [
+    "claim",
+    "exp",
+    "get",
+    "missing"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "helpers.validate_exp#1",
+     "score": 1.609438,
+     "tokens": [
+      "exp"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+   "name_tokens": [
+    "claim",
+    "get",
+    "key",
+    "signing",
+    "unknown"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 2.813411,
+     "tokens": [
+      "key",
+      "signing"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+   "name_tokens": [
+    "claim",
+    "empty",
+    "get",
+    "jwk"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "helpers.parse_jwks#1",
+     "score": 2.995732,
+     "tokens": [
+      "empty",
+      "jwk"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+   "name_tokens": [
+    "claim",
+    "get",
+    "invalid",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 4.828314,
+     "tokens": [
+      "claim",
+      "get",
+      "invalid",
+      "signature"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 4.828314,
+     "tokens": [
+      "claim",
+      "get",
+      "invalid",
+      "signature"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+   "name_tokens": [
+    "claim",
+    "expired",
+    "get",
+    "token"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "helpers.validate_exp#2",
+     "score": 2.302585,
+     "tokens": [
+      "expired"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+   "name_tokens": [
+    "claim",
+    "expiry",
+    "get",
+    "token",
+    "without"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+   "name_tokens": [
+    "auth",
+    "claim",
+    "get",
+    "header",
+    "malformed"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "auth",
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "auth",
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 0.0,
+     "tokens": [
+      "auth"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+   "name_tokens": [
+    "auth",
+    "claim",
+    "get",
+    "token",
+    "undecodable"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "auth",
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "auth",
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 0.0,
+     "tokens": [
+      "auth"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+   "name_tokens": [
+    "claim",
+    "exp",
+    "get",
+    "missing"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "helpers.validate_exp#1",
+     "score": 1.609438,
+     "tokens": [
+      "exp"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+   "name_tokens": [
+    "claim",
+    "get",
+    "key",
+    "signing",
+    "unknown"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 2.813411,
+     "tokens": [
+      "key",
+      "signing"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+   "name_tokens": [
+    "claim",
+    "empty",
+    "get",
+    "jwk"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 3.218876,
+     "tokens": [
+      "claim",
+      "get"
+     ]
+    },
+    {
+     "check": "helpers.parse_jwks#1",
+     "score": 2.995732,
+     "tokens": [
+      "empty",
+      "jwk"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_class": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "AuthInvalidJwtError"
+   ],
+   "key": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+   "name_tokens": [
+    "claim",
+    "get",
+    "invalid",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+     "score": 4.828314,
+     "tokens": [
+      "claim",
+      "get",
+      "invalid",
+      "signature"
+     ]
+    },
+    {
+     "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+     "score": 4.828314,
+     "tokens": [
+      "claim",
+      "get",
+      "invalid",
+      "signature"
+     ]
+    },
+    {
+     "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+   ],
+   "tier": null
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "none: tie": 16
+ },
+ "rule_version": "reach-target-rule/2"
+}

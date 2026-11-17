@@ -1,0 +1,99 @@
+{
+ "name": "paramiko",
+ "distribution": "paramiko",
+ "version": "5.1.0",
+ "repository": "https://github.com/paramiko/paramiko",
+ "tag": "5.1.0",
+ "commit": "0e9ccb91e0f9a68f2587233d523ad7fe46e730fe",
+ "release_source": "PyPI JSON https://pypi.org/pypi/paramiko/json and https://pypi.org/pypi/paramiko/5.1.0/json, read 2026-11-17T13:52:48Z: 153 versions, none a pre-release (8 versions of 0.1 and 0.9, such as 0.9-doduo, are no PEP 440 versions); the latest, 5.1.0, uploaded 2026-10-18T02:38:49Z (wheel) and 02:38:51Z (sdist), and no file of any version uploaded later; project_urls Source https://github.com/paramiko/paramiko. git ls-remote of that repository, 2026-11-17T13:53:06Z: the annotated tag 5.1.0 (tag object f8d947066257b14732f98b5922e62abd02cb7c03) points to the commit ('Cut 5.1.0', 2026-10-17T22:36:52-04:00). pyproject.toml line 4 at the commit: version = \"5.1.0\".",
+ "package": "paramiko",
+ "package_source": "pyproject.toml lines 50-51: [tool.setuptools] packages = [\"paramiko\"]. The wheel paramiko-5.1.0-py3-none-any.whl of PyPI (SHA-256 d9fe6d67a9d0bbf3eb85b051d26ab850b678c02d060f32915b944e5ca6d0d9e1, the digest PyPI gives) holds the package paramiko: its 42 files are byte for byte the 42 files of paramiko/ at the commit (compared 2026-11-17T14:07:46Z).",
+ "source_root": ".",
+ "entry_points": [
+  "connect",
+  "missing_host_key",
+  "parse_next",
+  "read_message",
+  "start_client",
+  "start_server"
+ ],
+ "entry_points_source": "sites/docs/index.rst lines 13-22: the client API starts with SSHClient; Transport.start_server and Transport.start_client 'negotiate with the remote host as either a server or client', and 'Key signature and verification is done by paramiko'. paramiko/transport.py: start_client (line 655, 'Negotiate a new SSH2 session as a client'), start_server (line 713, 'as a server') and connect (line 1273, 'Negotiate an SSH2 session, and optionally verify the server's host key'). paramiko/client.py: SSHClient.connect (line 216), which checks the server's host key against the known host keys and otherwise hands it to the missing host key policy (lines 238-243), whose method missing_host_key (line 797) is 'Called when an SSHClient receives a server key for a server that isn't in either the system or local HostKeys object ... To reject, raised an exception'. paramiko/packet.py: Packetizer.read_message (line 488; sites/docs/api/packet.rst documents paramiko.packet), ':raises: SSHException -- if the packet is mangled' (line 493). parse_next: the public method of each key-exchange class (kex_group14.py line 69, kex_gex.py 89, kex_ecdh_nist.py 49, kex_curve25519.py 60, kex_mlkem.py 99) to which Transport.run hands every received key-exchange message (transport.py line 2086); in client mode it reads the server's reply, whose host key and signature Transport._verify_key checks (kex_group14.py line 118, transport.py line 1854). It has no docstring, and no page of sites/docs/api documents the key-exchange modules. Left out: renegotiate_keys (transport.py line 1168, a request to switch keys), methods that return a bool (PKey.verify_ssh_sig, pkey.py line 434; HostKeys.check, hostkeys.py line 206), the authentication methods of the client (the verdict is the server's) and the loaders of key and configuration files (local input). Entry points are names, so the same names elsewhere in the package count too: connect also names AgentClientProxy.connect and AgentServerProxy.connect (agent.py lines 270 and 321).",
+ "rejection_bases": [
+  "SSHException"
+ ],
+ "rejection_bases_source": "paramiko/ssh_exception.py line 22: SSHException, 'Exception raised by failures in SSH2 protocol negotiation or logic errors' (line 24). The docstrings of the entry points name SSHException (transport.py lines 686-688, 751-753 and 1310-1311; packet.py line 493) and, for SSHClient.connect (client.py lines 323-339), also BadHostKeyException, AuthenticationException and UnableToAuthenticate, which inherit from SSHException (ssh_exception.py lines 115, 30 and 93); the default policy RejectPolicy rejects a host key with SSHException (client.py line 838). Not rejections: socket.error and its subclass NoValidConnectionsError (ssh_exception.py line 178), named for failures to connect, and NeedRekeyException (packet.py line 50, a subclass of Exception), named for a rekey.",
+ "test_directories_source": "pytest.ini lines 2-3: testpaths = tests, python_files = *, with the plugin pytest-relaxed of the dependency group dev (pyproject.toml line 63), which skips every name that starts with '_' and conftest.py and collects every other .py file (pytest_relaxed/plugin.py of pytest-relaxed 2.0.2, lines 12-14 and 22-37). In tests/ these are the 16 files test_*.py and tests/agent.py, tests/auth.py and tests/pkey.py; the 3 are named as files, as T/subjects/jwcrypto names the files of its python_files.",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "tests"
+   ]
+  }
+ ],
+ "suite_runs_source": "tasks.py lines 80-85: the task coverage, 'Execute all tests (normal and slow) with coverage enabled', calls the task test (lines 16-77) with include_slow=True, so without -m 'not slow' (lines 45-46) and without a path (lines 53-58 and 75), which pytest.ini line 2 (testpaths = tests) then gives; .circleci/config.yml lines 69-71: the main test run of CI, 'w/ coverage', is the job orb/coverage named Test. The options --verbose, --color=yes and --capture=sys of the task (lines 38-44) and its runner 'coverage run -m pytest' (line 66) are not taken.",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "paramiko",
+  "tests",
+  "pytest.ini"
+ ],
+ "python": "3.12.3",
+ "subject_files": [
+  "paramiko/__init__.py",
+  "paramiko/_winapi.py",
+  "paramiko/agent.py",
+  "paramiko/auth_handler.py",
+  "paramiko/auth_strategy.py",
+  "paramiko/ber.py",
+  "paramiko/buffered_pipe.py",
+  "paramiko/channel.py",
+  "paramiko/client.py",
+  "paramiko/common.py",
+  "paramiko/compress.py",
+  "paramiko/config.py",
+  "paramiko/ecdsakey.py",
+  "paramiko/ed25519key.py",
+  "paramiko/file.py",
+  "paramiko/hostkeys.py",
+  "paramiko/kex_curve25519.py",
+  "paramiko/kex_ecdh_nist.py",
+  "paramiko/kex_gex.py",
+  "paramiko/kex_group14.py",
+  "paramiko/kex_group16.py",
+  "paramiko/kex_mlkem.py",
+  "paramiko/message.py",
+  "paramiko/packet.py",
+  "paramiko/pipe.py",
+  "paramiko/pkey.py",
+  "paramiko/primes.py",
+  "paramiko/proxy.py",
+  "paramiko/rsakey.py",
+  "paramiko/server.py",
+  "paramiko/sftp.py",
+  "paramiko/sftp_attr.py",
+  "paramiko/sftp_client.py",
+  "paramiko/sftp_file.py",
+  "paramiko/sftp_handle.py",
+  "paramiko/sftp_server.py",
+  "paramiko/sftp_si.py",
+  "paramiko/ssh_exception.py",
+  "paramiko/transport.py",
+  "paramiko/util.py",
+  "paramiko/win_openssh.py",
+  "paramiko/win_pageant.py"
+ ],
+ "observed_files": [],
+ "tests": [
+  "tests/test_client.py",
+  "tests/test_kex.py"
+ ],
+ "scope_counts": {
+  "test_files_in_test_directories": 19,
+  "blocks_in_test_directories": 74,
+  "test_files_with_an_included_block": 2
+ }
+}

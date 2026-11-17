@@ -1,0 +1,477 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "cryptography.extract_patterns#1",
+    "hazmat.DNSPattern.from_bytes#1",
+    "hazmat.IPAddressPattern.from_bytes#1",
+    "hazmat.SRVPattern.from_bytes#1",
+    "hazmat.URIPattern.from_bytes#1",
+    "hazmat._validate_pattern#1",
+    "hazmat.verify_service_identity#1"
+   ],
+   "C_class": [
+    "cryptography.extract_patterns#1",
+    "hazmat.DNSPattern.from_bytes#1",
+    "hazmat.IPAddressPattern.from_bytes#1",
+    "hazmat.SRVPattern.from_bytes#1",
+    "hazmat.URIPattern.from_bytes#1",
+    "hazmat._validate_pattern#1",
+    "hazmat.verify_service_identity#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "CertificateError"
+   ],
+   "key": "tests/test_cryptography.py::TestPublicAPI.test_no_cert_patterns_hostname#0",
+   "name_tokens": [
+    "cert",
+    "hostname",
+    "no",
+    "pattern"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "hazmat.verify_service_identity#1",
+     "score": 2.100061,
+     "tokens": [
+      "cert",
+      "pattern"
+     ]
+    },
+    {
+     "check": "cryptography.extract_patterns#1",
+     "score": 0.154151,
+     "tokens": [
+      "pattern"
+     ]
+    },
+    {
+     "check": "hazmat.DNSPattern.from_bytes#1",
+     "score": 0.154151,
+     "tokens": [
+      "pattern"
+     ]
+    }
+   ],
+   "target": "hazmat.verify_service_identity#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "cryptography.extract_patterns#1",
+    "hazmat.DNSPattern.from_bytes#1",
+    "hazmat.IPAddressPattern.from_bytes#1",
+    "hazmat.SRVPattern.from_bytes#1",
+    "hazmat.URIPattern.from_bytes#1",
+    "hazmat._validate_pattern#1",
+    "hazmat.verify_service_identity#1"
+   ],
+   "C_class": [
+    "cryptography.extract_patterns#1",
+    "hazmat.DNSPattern.from_bytes#1",
+    "hazmat.IPAddressPattern.from_bytes#1",
+    "hazmat.SRVPattern.from_bytes#1",
+    "hazmat.URIPattern.from_bytes#1",
+    "hazmat._validate_pattern#1",
+    "hazmat.verify_service_identity#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "CertificateError"
+   ],
+   "key": "tests/test_cryptography.py::TestPublicAPI.test_no_cert_patterns_ip_address#0",
+   "name_tokens": [
+    "addres",
+    "cert",
+    "ip",
+    "no",
+    "pattern"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "hazmat.verify_service_identity#1",
+     "score": 2.100061,
+     "tokens": [
+      "cert",
+      "pattern"
+     ]
+    },
+    {
+     "check": "hazmat.DNSPattern.from_bytes#1",
+     "score": 1.848746,
+     "tokens": [
+      "addres",
+      "ip",
+      "pattern"
+     ]
+    },
+    {
+     "check": "hazmat.SRVPattern.from_bytes#1",
+     "score": 1.848746,
+     "tokens": [
+      "addres",
+      "ip",
+      "pattern"
+     ]
+    }
+   ],
+   "target": "hazmat.verify_service_identity#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_class": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "VerificationError"
+   ],
+   "key": "tests/test_cryptography.py::TestPublicAPI.test_certificate_verify_hostname_fail#0",
+   "name_tokens": [
+    "certificate",
+    "hostname",
+    "verify"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "hazmat.verify_service_identity#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_class": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "VerificationError"
+   ],
+   "key": "tests/test_cryptography.py::TestPublicAPI.test_verify_ip_address_fail#0",
+   "name_tokens": [
+    "addres",
+    "ip",
+    "verify"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "hazmat.verify_service_identity#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "cryptography.extract_patterns#1",
+    "hazmat.DNSPattern.from_bytes#1",
+    "hazmat.IPAddressPattern.from_bytes#1",
+    "hazmat.SRVPattern.from_bytes#1",
+    "hazmat.URIPattern.from_bytes#1",
+    "hazmat._validate_pattern#1",
+    "hazmat.verify_service_identity#1"
+   ],
+   "C_class": [
+    "cryptography.extract_patterns#1",
+    "hazmat.DNSPattern.from_bytes#1",
+    "hazmat.IPAddressPattern.from_bytes#1",
+    "hazmat.SRVPattern.from_bytes#1",
+    "hazmat.URIPattern.from_bytes#1",
+    "hazmat._validate_pattern#1",
+    "hazmat.verify_service_identity#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "CertificateError"
+   ],
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_no_cert_patterns#0",
+   "name_tokens": [
+    "cert",
+    "no",
+    "pattern"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "hazmat.verify_service_identity#1",
+     "score": 2.100061,
+     "tokens": [
+      "cert",
+      "pattern"
+     ]
+    },
+    {
+     "check": "cryptography.extract_patterns#1",
+     "score": 0.154151,
+     "tokens": [
+      "pattern"
+     ]
+    },
+    {
+     "check": "hazmat.DNSPattern.from_bytes#1",
+     "score": 0.154151,
+     "tokens": [
+      "pattern"
+     ]
+    }
+   ],
+   "target": "hazmat.verify_service_identity#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_class": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "VerificationError"
+   ],
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_integration_dns_id_fail#0",
+   "name_tokens": [
+    "dns",
+    "id",
+    "integration"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "hazmat.verify_service_identity#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_class": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "VerificationError"
+   ],
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_single_label_hostname_mismatch#0",
+   "name_tokens": [
+    "hostname",
+    "label",
+    "mismatch",
+    "single"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "hazmat.verify_service_identity#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_class": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "VerificationError"
+   ],
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_obligatory_missing#0",
+   "name_tokens": [
+    "missing",
+    "obligatory"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "hazmat.verify_service_identity#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_class": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "VerificationError"
+   ],
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_obligatory_mismatch#0",
+   "name_tokens": [
+    "mismatch",
+    "obligatory"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "hazmat.verify_service_identity#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_class": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "VerificationError"
+   ],
+   "key": "tests/test_hazmat.py::TestVerifyServiceIdentity.test_optional_mismatch#0",
+   "name_tokens": [
+    "mismatch",
+    "optional"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "hazmat.verify_service_identity#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_class": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "VerificationError"
+   ],
+   "key": "tests/test_pyopenssl.py::TestPublicAPI.test_verify_hostname_fail#0",
+   "name_tokens": [
+    "hostname",
+    "verify"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "hazmat.verify_service_identity#2",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_class": [
+    "hazmat.verify_service_identity#2"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "VerificationError"
+   ],
+   "key": "tests/test_pyopenssl.py::TestPublicAPI.test_verify_ip_address_fail#0",
+   "name_tokens": [
+    "addres",
+    "ip",
+    "verify"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "hazmat.verify_service_identity#2",
+   "tier": "assertion"
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "class": 9,
+  "name": 3
+ },
+ "rule_version": "reach-target-rule/2"
+}

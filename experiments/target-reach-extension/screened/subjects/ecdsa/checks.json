@@ -1,0 +1,5828 @@
+{
+ "checks": [
+  {
+   "class": "BadDigestError",
+   "class_name": "BadDigestError",
+   "class_resolution": [
+    "definition"
+   ],
+   "file": "ecdsa/keys.py",
+   "function": "_truncate_and_convert_digest",
+   "function_name": "_truncate_and_convert_digest",
+   "guard_words": [
+    "baselen",
+    "curve",
+    "digest",
+    "len"
+   ],
+   "guards": [
+    "len(digest) > curve.baselen"
+   ],
+   "has_keywords": false,
+   "has_placeholder": true,
+   "id": "keys._truncate_and_convert_digest#1",
+   "lines": [
+    [
+     63,
+     68
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {}
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": null,
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "this curve ({*}) is too short for the length of your digest ({*})",
+   "template_parts": [
+    "this curve (",
+    null,
+    ") is too short for the length of your digest (",
+    null,
+    ")"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "BadSignatureError",
+   "class_name": "BadSignatureError",
+   "class_resolution": [
+    "definition"
+   ],
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.verify",
+   "function_name": "verify",
+   "guard_words": [
+    "MalformedPointError",
+    "ValueError",
+    "e"
+   ],
+   "guards": [
+    "except (ValueError, MalformedPointError) as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "keys.VerifyingKey.verify#1",
+   "lines": [
+    [
+     681,
+     681
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Signature verification failed"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "VerifyingKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Signature verification failed",
+   "template_parts": [
+    "Signature verification failed"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "BadSignatureError",
+   "class_name": "BadSignatureError",
+   "class_resolution": [
+    "definition"
+   ],
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.verify_digest",
+   "function_name": "verify_digest",
+   "guard_words": [
+    "MalformedSignature",
+    "UnexpectedDER",
+    "der",
+    "e"
+   ],
+   "guards": [
+    "except (der.UnexpectedDER, MalformedSignature) as e"
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "keys.VerifyingKey.verify_digest#1",
+   "lines": [
+    [
+     737,
+     737
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Malformed formatting of signature"
+     }
+    }
+   ],
+   "n_positional": [
+    2
+   ],
+   "other_literals": [],
+   "owner_class": "VerifyingKey",
+   "raise_numbers": [
+    1
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Malformed formatting of signature",
+   "template_parts": [
+    "Malformed formatting of signature"
+   ],
+   "via_variable": [
+    null
+   ]
+  },
+  {
+   "class": "BadSignatureError",
+   "class_name": "BadSignatureError",
+   "class_resolution": [
+    "definition"
+   ],
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.verify_digest",
+   "function_name": "verify_digest",
+   "guard_words": [],
+   "guards": [
+    null
+   ],
+   "has_keywords": false,
+   "has_placeholder": false,
+   "id": "keys.VerifyingKey.verify_digest#2",
+   "lines": [
+    [
+     741,
+     741
+    ]
+   ],
+   "literal_args": [
+    {
+     "kw": {},
+     "pos": {
+      "0": "Signature verification failed"
+     }
+    }
+   ],
+   "n_positional": [
+    1
+   ],
+   "other_literals": [],
+   "owner_class": "VerifyingKey",
+   "raise_numbers": [
+    2
+   ],
+   "reachable": true,
+   "role": "subject",
+   "template": "Signature verification failed",
+   "template_parts": [
+    "Signature verification failed"
+   ],
+   "via_variable": [
+    null
+   ]
+  }
+ ],
+ "classes": {
+  "AbstractPoint": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "_compressed_encode",
+    "_edwards_encode",
+    "_from_compressed",
+    "_from_edwards",
+    "_from_hybrid",
+    "_from_raw_encoding",
+    "_hybrid_encode",
+    "_naf",
+    "_raw_encode",
+    "from_bytes",
+    "to_bytes"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.ellipticcurve",
+   "name": "AbstractPoint",
+   "qualname": "AbstractPoint"
+  },
+  "BadDigestError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.keys",
+   "name": "BadDigestError",
+   "qualname": "BadDigestError"
+  },
+  "BadSignatureError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.keys",
+   "name": "BadSignatureError",
+   "qualname": "BadSignatureError"
+  },
+  "Curve": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__ne__",
+    "__repr__",
+    "from_der",
+    "from_pem",
+    "to_der",
+    "to_pem"
+   ],
+   "init_attrs": {
+    "curve": 1,
+    "generator": 2,
+    "name": 0,
+    "oid": 3,
+    "openssl_name": 4
+   },
+   "init_params": [
+    "name",
+    "curve",
+    "generator",
+    "oid",
+    "openssl_name"
+   ],
+   "module": "ecdsa.curves",
+   "name": "Curve",
+   "qualname": "Curve"
+  },
+  "CurveEdTw": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__eq__",
+    "__hash__",
+    "__ne__",
+    "__str__",
+    "a",
+    "cofactor",
+    "contains_point",
+    "d",
+    "hash_func",
+    "p"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.ellipticcurve",
+   "name": "CurveEdTw",
+   "qualname": "CurveEdTw"
+  },
+  "CurveFp": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__eq__",
+    "__hash__",
+    "__ne__",
+    "__str__",
+    "a",
+    "b",
+    "cofactor",
+    "contains_point",
+    "p"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.ellipticcurve",
+   "name": "CurveFp",
+   "qualname": "CurveFp"
+  },
+  "DER": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_constructed",
+    "test_integer",
+    "test_length",
+    "test_number",
+    "test_sequence"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "DER",
+   "qualname": "DER"
+  },
+  "ECDSA": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "assertTruePrivkeysEqual",
+    "assertTruePubkeysEqual",
+    "test_bad_usage",
+    "test_basic",
+    "test_compressed_decoding_with_blocked_format",
+    "test_decoding",
+    "test_decoding_with_inconsistent_hybrid",
+    "test_decoding_with_inconsistent_hybrid_odd_point",
+    "test_decoding_with_malformed_compressed",
+    "test_decoding_with_malformed_uncompressed",
+    "test_decoding_with_point_at_infinity",
+    "test_decoding_with_point_not_on_curve",
+    "test_decoding_with_unknown_format",
+    "test_deterministic",
+    "test_encoding",
+    "test_from_string_with_invalid_curve_too_long_ver_key_len",
+    "test_from_string_with_invalid_curve_too_short_ver_key_len",
+    "test_hashfunc",
+    "test_hybrid_decoding_with_blocked_format",
+    "test_hybrid_decoding_with_inconsistent_encoding_and_no_validation",
+    "test_lengths_default",
+    "test_nonrandom",
+    "test_not_lying_on_curve",
+    "test_privkey_creation",
+    "test_privkey_strings",
+    "test_privkey_strings_brainpool",
+    "test_pubkey_strings",
+    "test_pubkey_strings_brainpool",
+    "test_public_key_recovery",
+    "test_public_key_recovery_with_custom_hash",
+    "test_raw_decoding_with_blocked_format",
+    "test_serialize",
+    "test_sig_decode_strings_with_invalid_count",
+    "test_sig_decode_strings_with_wrong_r_len",
+    "test_sig_decode_strings_with_wrong_s_len",
+    "test_sigencode_der_canonize",
+    "test_sigencode_der_canonize_no_change",
+    "test_sigencode_der_canonize_with_close_to_half_order",
+    "test_sigencode_string_canonize",
+    "test_sigencode_string_canonize_no_change",
+    "test_sigencode_strings_canonize",
+    "test_sigencode_strings_canonize_no_change",
+    "test_sign_with_too_long_hash",
+    "test_signature_strings",
+    "test_sk_from_der_garbage_after_privkey_oid",
+    "test_sk_from_der_invalid_const_tag",
+    "test_sk_from_der_with_junk_after_sequence",
+    "test_sk_from_der_with_short_privkey",
+    "test_sk_from_der_with_wrong_version",
+    "test_sk_from_p8_der_with_trailing_junk_after_algorithm",
+    "test_sk_from_p8_der_with_trailing_junk_after_key",
+    "test_sk_from_p8_der_with_wrong_algorithm",
+    "test_sk_from_p8_der_with_wrong_version",
+    "test_sk_from_secret_exponent_with_wrong_sec_exponent",
+    "test_sk_from_string_with_wrong_len_string",
+    "test_sk_to_der_with_invalid_point_encoding",
+    "test_uncompressed_decoding_as_only_alowed",
+    "test_uncompressed_decoding_with_blocked_format",
+    "test_verify_with_too_long_input",
+    "test_vk_from_der_garbage_after_curve_oid",
+    "test_vk_from_der_garbage_after_point_string",
+    "test_vk_from_der_invalid_bitstring",
+    "test_vk_from_der_invalid_key_type",
+    "test_vk_from_der_with_invalid_length_of_encoding",
+    "test_vk_from_der_with_raw_encoding",
+    "test_vk_to_der_with_invalid_point_encoding"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "ECDSA",
+   "qualname": "ECDSA"
+  },
+  "Error": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.numbertheory",
+   "name": "Error",
+   "qualname": "Error"
+  },
+  "FakeCurveFp": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "p"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "FakeCurveFp",
+   "qualname": "ECDSA.test_pubkey_strings.<locals>.FakeCurveFp"
+  },
+  "FakeGenerator": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "order"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "FakeGenerator",
+   "qualname": "ECDSA.test_pubkey_strings.<locals>.FakeGenerator"
+  },
+  "InvalidCurveError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.ecdh",
+   "name": "InvalidCurveError",
+   "qualname": "InvalidCurveError"
+  },
+  "InvalidPointError": {
+   "bases": [
+    "RuntimeError"
+   ],
+   "bases_declared": [
+    "RuntimeError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.ecdsa",
+   "name": "InvalidPointError",
+   "qualname": "InvalidPointError"
+  },
+  "InvalidSharedSecretError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.ecdh",
+   "name": "InvalidSharedSecretError",
+   "qualname": "InvalidSharedSecretError"
+  },
+  "JacobiError": {
+   "bases": [
+    "Error"
+   ],
+   "bases_declared": [
+    "Error"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.numbertheory",
+   "name": "JacobiError",
+   "qualname": "JacobiError"
+  },
+  "MalformedPointError": {
+   "bases": [
+    "AssertionError"
+   ],
+   "bases_declared": [
+    "AssertionError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.errors",
+   "name": "MalformedPointError",
+   "qualname": "MalformedPointError"
+  },
+  "MalformedSignature": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.util",
+   "name": "MalformedSignature",
+   "qualname": "MalformedSignature"
+  },
+  "NegativeExponentError": {
+   "bases": [
+    "Error"
+   ],
+   "bases_declared": [
+    "Error"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.numbertheory",
+   "name": "NegativeExponentError",
+   "qualname": "NegativeExponentError"
+  },
+  "NoCurveError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.ecdh",
+   "name": "NoCurveError",
+   "qualname": "NoCurveError"
+  },
+  "NoKeyError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.ecdh",
+   "name": "NoKeyError",
+   "qualname": "NoKeyError"
+  },
+  "NotThisMethod": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa._version",
+   "name": "NotThisMethod",
+   "qualname": "NotThisMethod"
+  },
+  "OpenSSL": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "do_eddsa_test_from_openssl",
+    "do_eddsa_test_to_openssl",
+    "do_test_from_openssl",
+    "do_test_to_openssl",
+    "get_openssl_messagedigest_arg",
+    "test_from_openssl_brainpoolp160r1",
+    "test_from_openssl_brainpoolp160t1",
+    "test_from_openssl_brainpoolp192r1",
+    "test_from_openssl_brainpoolp192t1",
+    "test_from_openssl_brainpoolp224r1",
+    "test_from_openssl_brainpoolp224t1",
+    "test_from_openssl_brainpoolp256r1",
+    "test_from_openssl_brainpoolp256t1",
+    "test_from_openssl_brainpoolp320r1",
+    "test_from_openssl_brainpoolp320t1",
+    "test_from_openssl_brainpoolp384r1",
+    "test_from_openssl_brainpoolp384t1",
+    "test_from_openssl_brainpoolp512r1",
+    "test_from_openssl_brainpoolp512t1",
+    "test_from_openssl_ed25519",
+    "test_from_openssl_ed448",
+    "test_from_openssl_nist192p",
+    "test_from_openssl_nist192p_sha256",
+    "test_from_openssl_nist224p",
+    "test_from_openssl_nist256p",
+    "test_from_openssl_nist256p_sha384",
+    "test_from_openssl_nist256p_sha512",
+    "test_from_openssl_nist384p",
+    "test_from_openssl_nist521p",
+    "test_from_openssl_secp112r1",
+    "test_from_openssl_secp112r2",
+    "test_from_openssl_secp128r1",
+    "test_from_openssl_secp160r1",
+    "test_from_openssl_secp256k1",
+    "test_to_openssl_brainpoolp160r1",
+    "test_to_openssl_brainpoolp160t1",
+    "test_to_openssl_brainpoolp192r1",
+    "test_to_openssl_brainpoolp192t1",
+    "test_to_openssl_brainpoolp224r1",
+    "test_to_openssl_brainpoolp224t1",
+    "test_to_openssl_brainpoolp256r1",
+    "test_to_openssl_brainpoolp256t1",
+    "test_to_openssl_brainpoolp320r1",
+    "test_to_openssl_brainpoolp320t1",
+    "test_to_openssl_brainpoolp384r1",
+    "test_to_openssl_brainpoolp384t1",
+    "test_to_openssl_brainpoolp512r1",
+    "test_to_openssl_brainpoolp512t1",
+    "test_to_openssl_ed25519",
+    "test_to_openssl_ed448",
+    "test_to_openssl_nist192p",
+    "test_to_openssl_nist192p_sha256",
+    "test_to_openssl_nist224p",
+    "test_to_openssl_nist256p",
+    "test_to_openssl_nist256p_sha384",
+    "test_to_openssl_nist256p_sha512",
+    "test_to_openssl_nist384p",
+    "test_to_openssl_nist521p",
+    "test_to_openssl_secp112r1",
+    "test_to_openssl_secp112r2",
+    "test_to_openssl_secp128r1",
+    "test_to_openssl_secp160r1",
+    "test_to_openssl_secp256k1"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "OpenSSL",
+   "qualname": "OpenSSL"
+  },
+  "PRNG": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__call__",
+    "__init__",
+    "block_generator"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "seed"
+   ],
+   "module": "ecdsa.util",
+   "name": "PRNG",
+   "qualname": "PRNG"
+  },
+  "Point": {
+   "bases": [
+    "AbstractPoint"
+   ],
+   "bases_declared": [
+    "AbstractPoint"
+   ],
+   "defines": [
+    "__add__",
+    "__eq__",
+    "__init__",
+    "__mul__",
+    "__ne__",
+    "__neg__",
+    "__rmul__",
+    "__str__",
+    "curve",
+    "double",
+    "from_bytes",
+    "order",
+    "x",
+    "y"
+   ],
+   "init_attrs": {
+    "__curve": 0,
+    "__order": 3,
+    "__x": 1,
+    "__y": 2
+   },
+   "init_params": [
+    "curve",
+    "x",
+    "y",
+    "order"
+   ],
+   "module": "ecdsa.ellipticcurve",
+   "name": "Point",
+   "qualname": "Point"
+  },
+  "PointEdwards": {
+   "bases": [
+    "AbstractPoint"
+   ],
+   "bases_declared": [
+    "AbstractPoint"
+   ],
+   "defines": [
+    "__add__",
+    "__eq__",
+    "__init__",
+    "__mul__",
+    "__ne__",
+    "__radd__",
+    "__rmul__",
+    "_add",
+    "_double",
+    "_maybe_precompute",
+    "_mul_precompute",
+    "curve",
+    "double",
+    "from_bytes",
+    "order",
+    "scale",
+    "x",
+    "y"
+   ],
+   "init_attrs": {
+    "__curve": 0,
+    "__generator": 6,
+    "__order": 5
+   },
+   "init_params": [
+    "curve",
+    "x",
+    "y",
+    "z",
+    "t",
+    "order",
+    "generator"
+   ],
+   "module": "ecdsa.ellipticcurve",
+   "name": "PointEdwards",
+   "qualname": "PointEdwards"
+  },
+  "PointJacobi": {
+   "bases": [
+    "AbstractPoint"
+   ],
+   "bases_declared": [
+    "AbstractPoint"
+   ],
+   "defines": [
+    "__add__",
+    "__eq__",
+    "__getstate__",
+    "__init__",
+    "__mul__",
+    "__ne__",
+    "__neg__",
+    "__radd__",
+    "__rmul__",
+    "__setstate__",
+    "_add",
+    "_add_with_z2_1",
+    "_add_with_z_1",
+    "_add_with_z_eq",
+    "_add_with_z_ne",
+    "_double",
+    "_double_with_z_1",
+    "_maybe_precompute",
+    "_mul_precompute",
+    "curve",
+    "double",
+    "from_affine",
+    "from_bytes",
+    "mul_add",
+    "order",
+    "scale",
+    "to_affine",
+    "x",
+    "y"
+   ],
+   "init_attrs": {
+    "__curve": 0,
+    "__generator": 5,
+    "__order": 4
+   },
+   "init_params": [
+    "curve",
+    "x",
+    "y",
+    "z",
+    "order",
+    "generator"
+   ],
+   "module": "ecdsa.ellipticcurve",
+   "name": "PointJacobi",
+   "qualname": "PointJacobi"
+  },
+  "PrivateKey": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__ne__",
+    "_key_prune",
+    "private_key",
+    "public_key",
+    "sign"
+   ],
+   "init_attrs": {
+    "generator": 0
+   },
+   "init_params": [
+    "generator",
+    "private_key"
+   ],
+   "module": "ecdsa.eddsa",
+   "name": "PrivateKey",
+   "qualname": "PrivateKey"
+  },
+  "Private_key": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__ne__",
+    "sign"
+   ],
+   "init_attrs": {
+    "public_key": 0,
+    "secret_multiplier": 1
+   },
+   "init_params": [
+    "public_key",
+    "secret_multiplier"
+   ],
+   "module": "ecdsa.ecdsa",
+   "name": "Private_key",
+   "qualname": "Private_key"
+  },
+  "PublicKey": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__ne__",
+    "point",
+    "public_key",
+    "public_point",
+    "verify"
+   ],
+   "init_attrs": {
+    "__encoded": 1,
+    "__point": 2,
+    "generator": 0
+   },
+   "init_params": [
+    "generator",
+    "public_key",
+    "public_point"
+   ],
+   "module": "ecdsa.eddsa",
+   "name": "PublicKey",
+   "qualname": "PublicKey"
+  },
+  "Public_key": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__ne__",
+    "verifies"
+   ],
+   "init_attrs": {
+    "generator": 0,
+    "point": 1
+   },
+   "init_params": [
+    "generator",
+    "point",
+    "verify"
+   ],
+   "module": "ecdsa.ecdsa",
+   "name": "Public_key",
+   "qualname": "Public_key"
+  },
+  "RFC6932": {
+   "bases": [
+    "ecdsa.test_pyecdsa.ECDH"
+   ],
+   "bases_declared": [
+    "ecdsa.test_pyecdsa.ECDH"
+   ],
+   "defines": [
+    "test_brainpoolP224r1",
+    "test_brainpoolP256r1",
+    "test_brainpoolP384r1",
+    "test_brainpoolP512r1"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "RFC6932",
+   "qualname": "RFC6932"
+  },
+  "RFC6979": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "_do",
+    "test_1",
+    "test_10",
+    "test_2",
+    "test_3",
+    "test_4",
+    "test_5",
+    "test_6",
+    "test_7",
+    "test_8",
+    "test_9",
+    "test_SECP256k1",
+    "test_SECP256k1_2",
+    "test_SECP256k1_3",
+    "test_SECP256k1_4",
+    "test_SECP256k1_5",
+    "test_SECP256k1_6"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "RFC6979",
+   "qualname": "RFC6979"
+  },
+  "RFC7027": {
+   "bases": [
+    "ecdsa.test_pyecdsa.ECDH"
+   ],
+   "bases_declared": [
+    "ecdsa.test_pyecdsa.ECDH"
+   ],
+   "defines": [
+    "test_brainpoolP256r1",
+    "test_brainpoolP384r1",
+    "test_brainpoolP512r1"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "RFC7027",
+   "qualname": "RFC7027"
+  },
+  "RSZeroError": {
+   "bases": [
+    "RuntimeError"
+   ],
+   "bases_declared": [
+    "RuntimeError"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.ecdsa",
+   "name": "RSZeroError",
+   "qualname": "RSZeroError"
+  },
+  "RunOpenSslError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_ecdh",
+   "name": "RunOpenSslError",
+   "qualname": "RunOpenSslError"
+  },
+  "Signature": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__init__",
+    "recover_public_keys"
+   ],
+   "init_attrs": {
+    "r": 0,
+    "s": 1
+   },
+   "init_params": [
+    "r",
+    "s"
+   ],
+   "module": "ecdsa.ecdsa",
+   "name": "Signature",
+   "qualname": "Signature"
+  },
+  "SigningKey": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__ne__",
+    "_encode_eddsa",
+    "_twisted_edwards_keygen",
+    "_weierstrass_keygen",
+    "from_der",
+    "from_pem",
+    "from_secret_exponent",
+    "from_string",
+    "generate",
+    "get_verifying_key",
+    "sign",
+    "sign_deterministic",
+    "sign_digest",
+    "sign_digest_deterministic",
+    "sign_number",
+    "to_der",
+    "to_pem",
+    "to_ssh",
+    "to_string"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "_error__please_use_generate"
+   ],
+   "module": "ecdsa.keys",
+   "name": "SigningKey",
+   "qualname": "SigningKey"
+  },
+  "SquareRootError": {
+   "bases": [
+    "Error"
+   ],
+   "bases_declared": [
+    "Error"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.numbertheory",
+   "name": "SquareRootError",
+   "qualname": "SquareRootError"
+  },
+  "SubprocessError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "SubprocessError",
+   "qualname": "SubprocessError"
+  },
+  "TestA2B_Hex": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_invalid_input"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_eddsa",
+   "name": "TestA2B_Hex",
+   "qualname": "TestA2B_Hex"
+  },
+  "TestBytesToInt": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_bytes_to_int_wrong_endian",
+    "test_int_to_bytes_wrong_endian"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_sha3",
+   "name": "TestBytesToInt",
+   "qualname": "TestBytesToInt"
+  },
+  "TestCurve": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test___str__",
+    "test___str___with_cofactor",
+    "test_conflation_curves",
+    "test_equality_curves",
+    "test_hashability_curves",
+    "test_inequality_curves",
+    "test_inequality_curves_by_b_only",
+    "test_usability_in_a_hashed_collection_curves"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_ellipticcurve",
+   "name": "TestCurve",
+   "qualname": "TestCurve"
+  },
+  "TestCurveEdTw": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test___str__",
+    "test___str___with_cofactor",
+    "test_hashability_curves",
+    "test_usability_in_a_hashed_collection_curves"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_ellipticcurve",
+   "name": "TestCurveEdTw",
+   "qualname": "TestCurveEdTw"
+  },
+  "TestCurveSearching": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_correct_name",
+    "test_openssl_name",
+    "test_unknown_curve",
+    "test_with_None_as_parameter"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_curves",
+   "name": "TestCurveSearching",
+   "qualname": "TestCurveSearching"
+  },
+  "TestECDH": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_generate_without_curve",
+    "test_load_bytes_without_curve_set",
+    "test_load_key_from_wrong_curve",
+    "test_set_curve_from_received_public_key"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_ecdh",
+   "name": "TestECDH",
+   "qualname": "TestECDH"
+  },
+  "TestEd25519": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_add_wrong_curves",
+    "test_add_wrong_point_type"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_eddsa",
+   "name": "TestEd25519",
+   "qualname": "TestEd25519"
+  },
+  "TestEdDSAEquality": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_equal_private_keys",
+    "test_equal_public_points",
+    "test_unequal_private_keys",
+    "test_unequal_privatekey_curves",
+    "test_unequal_privatekey_to_string",
+    "test_unequal_public_points",
+    "test_unequal_publickey_curves",
+    "test_unequal_to_string"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_eddsa",
+   "name": "TestEdDSAEquality",
+   "qualname": "TestEdDSAEquality"
+  },
+  "TestEdwardsMalformed": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_ed448_invalid",
+    "test_invalid_length",
+    "test_invalid_point"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_eddsa",
+   "name": "TestEdwardsMalformed",
+   "qualname": "TestEdwardsMalformed"
+  },
+  "TestEncodeBitstring": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_empty_string",
+    "test_explicit_unused_bits",
+    "test_implicit_unused_bits",
+    "test_invalid_unused_count",
+    "test_invalid_unused_with_empty_string",
+    "test_new_call_convention",
+    "test_non_zero_padding_bits",
+    "test_old_call_convention"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestEncodeBitstring",
+   "qualname": "TestEncodeBitstring"
+  },
+  "TestEncodeImplicit": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_encode_with_application_class",
+    "test_encode_with_context_specific_class",
+    "test_encode_with_default_class",
+    "test_encode_with_invalid_class",
+    "test_encode_with_private_class",
+    "test_encode_with_too_large_tag"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestEncodeImplicit",
+   "qualname": "TestEncodeImplicit"
+  },
+  "TestEncodeOid": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_large_second_subid",
+    "test_nist224p_oid",
+    "test_nist256p_oid",
+    "test_pub_key_oid",
+    "test_small_first_max_second",
+    "test_with_invalid_first",
+    "test_with_small_first_large_second",
+    "test_with_two_subids",
+    "test_with_wrong_types",
+    "test_zero_zero"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestEncodeOid",
+   "qualname": "TestEncodeOid"
+  },
+  "TestInvalidEdDSAInputs": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_changing_public_key",
+    "test_changing_public_key_to_different_point",
+    "test_invalid_r_value",
+    "test_invalid_s_value",
+    "test_invalid_signature_length",
+    "test_wrong_cofactor_curve",
+    "test_wrong_length_of_private_key",
+    "test_wrong_length_of_public_key"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_eddsa",
+   "name": "TestInvalidEdDSAInputs",
+   "qualname": "TestInvalidEdDSAInputs"
+  },
+  "TestIsPrime": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_large_prime",
+    "test_medium_non_trivial_composite",
+    "test_medium_prime_1",
+    "test_medium_prime_2",
+    "test_medium_trivial_composite",
+    "test_pseudoprime_base_19",
+    "test_pseudoprime_base_300",
+    "test_small_prime",
+    "test_special_composite",
+    "test_very_small_composite",
+    "test_very_small_prime"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_numbertheory",
+   "name": "TestIsPrime",
+   "qualname": "TestIsPrime"
+  },
+  "TestJacobi": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test___init__",
+    "test_add_diff_z_to_infinity",
+    "test_add_different_points_same_scale_static",
+    "test_add_different_scale_points",
+    "test_add_different_scale_points_static",
+    "test_add_one_scaled_point",
+    "test_add_point_3_times",
+    "test_add_same_point_different_scale_second_z_1_static",
+    "test_add_same_scale_points",
+    "test_add_same_scale_points_static",
+    "test_add_scaled_points",
+    "test_add_to_infinity",
+    "test_add_to_infinity_static",
+    "test_add_to_x_0",
+    "test_add_to_y_0",
+    "test_add_with_affine_point",
+    "test_add_with_different_curves",
+    "test_add_with_infinity",
+    "test_add_with_point_at_infinity",
+    "test_add_zero_point_to_affine",
+    "test_compare_different_curves",
+    "test_compare_double_with_multiply",
+    "test_compare_non_zero_bad_scale_with_infinity",
+    "test_compare_non_zero_with_infinity",
+    "test_compare_with_affine_point",
+    "test_compare_zero_point_with_infinity",
+    "test_conversion",
+    "test_double_to_infinity",
+    "test_double_to_x_0",
+    "test_double_with_zero_equivalent_point",
+    "test_double_with_zero_equivalent_point_non_zero_z",
+    "test_double_with_zero_equivalent_point_non_zero_z_non_zero_y",
+    "test_double_with_zero_point",
+    "test_eq_with_same_x_different_y",
+    "test_eq_x_0_on_curve_with_infinity",
+    "test_eq_y_0_on_curve_with_infinity",
+    "test_equality",
+    "test_equality_with_invalid_object",
+    "test_equality_with_non_point",
+    "test_equality_with_wrong_curves",
+    "test_mul_add",
+    "test_mul_add_differnt",
+    "test_mul_add_inf",
+    "test_mul_add_large",
+    "test_mul_add_precompute",
+    "test_mul_add_precompute_large",
+    "test_mul_add_random",
+    "test_mul_add_same",
+    "test_mul_add_slightly_different",
+    "test_mul_add_to_mul",
+    "test_mul_add_with_doubled_negation_of_itself",
+    "test_mul_add_with_infinity_as_result",
+    "test_mul_add_without_order",
+    "test_mul_add_zero",
+    "test_mul_to_infinity",
+    "test_mul_to_x_0",
+    "test_mul_to_y_0",
+    "test_mul_without_order",
+    "test_multiplications",
+    "test_multiply_by_one",
+    "test_multiply_by_two",
+    "test_multiply_by_zero",
+    "test_multithreading",
+    "test_multithreading_with_interrupts",
+    "test_pickle",
+    "test_precompute",
+    "test_radd_with_affine_point",
+    "test_rmul_by_two",
+    "test_single_double",
+    "test_to_affine_with_zero_point",
+    "test_zero_point_multiply_by_one"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_jacobi",
+   "name": "TestJacobi",
+   "qualname": "TestJacobi"
+  },
+  "TestNumbertheory": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_factorisation_not_smallprimes",
+    "test_factorisation_smallprimes",
+    "test_factorization",
+    "test_gcd",
+    "test_gcd_with_com_factor",
+    "test_gcd_with_random_numbers",
+    "test_gcd_with_uncom_factor",
+    "test_inverse_mod",
+    "test_inverse_mod_with_zero",
+    "test_jacobi",
+    "test_jacobi_with_one",
+    "test_jacobi_with_zero",
+    "test_lcm",
+    "test_lcm_with_random_numbers",
+    "test_square_root_mod_prime"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_numbertheory",
+   "name": "TestNumbertheory",
+   "qualname": "TestNumbertheory"
+  },
+  "TestP192FromX9_62": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_mult_and_addition",
+    "test_point_multiplication",
+    "test_point_multiplication_2",
+    "test_rejection",
+    "test_signature",
+    "test_verification",
+    "test_verification_with_regular_point"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_ecdsa",
+   "name": "TestP192FromX9_62",
+   "qualname": "TestP192FromX9_62"
+  },
+  "TestParameterEncoding": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_compare_curves_with_different_generators",
+    "test_compare_with_different_object",
+    "test_decode_malformed_explicit_garbage_after_ECParam",
+    "test_decode_malformed_garbage_after_prime",
+    "test_decode_malformed_named_curve",
+    "test_decode_malformed_unknown_field_type",
+    "test_decode_malformed_unknown_version_number",
+    "test_decoding_explicit_from_openssl",
+    "test_decoding_well_known_from_explicit_params",
+    "test_decoding_with_incorrect_valid_encodings",
+    "test_default_encode_for_custom_curve",
+    "test_encoding_to_explicit_compressed_params",
+    "test_encoding_to_explicit_params",
+    "test_encoding_to_unsupported_type",
+    "test_from_pem",
+    "test_from_pem_with_explicit_when_explicit_disabled",
+    "test_from_pem_with_named_curve_with_named_curve_disabled",
+    "test_from_pem_with_wrong_header",
+    "test_named_curve_encode_for_custom_curve",
+    "test_named_curve_params_der",
+    "test_to_pem",
+    "test_try_decoding_binary_explicit",
+    "test_verify_that_default_is_named_curve_der"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_curves",
+   "name": "TestParameterEncoding",
+   "qualname": "TestParameterEncoding"
+  },
+  "TestPoint": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_add",
+    "test_add_as_double",
+    "test_add_self_to_infinity",
+    "test_add_to_infinity",
+    "test_add_to_neg_self",
+    "test_double",
+    "test_double_infinity",
+    "test_double_to_infinity",
+    "test_equality_points",
+    "test_inequality_diff_y",
+    "test_inequality_points",
+    "test_inequality_points_diff_types",
+    "test_mul_by_negative",
+    "test_mul_infinity_by_scalar",
+    "test_mul_to_infinity",
+    "test_multiply",
+    "test_p192",
+    "test_str_infinity",
+    "test_str_point",
+    "test_to_bytes_from_bytes"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_ellipticcurve",
+   "name": "TestPoint",
+   "qualname": "TestPoint"
+  },
+  "TestPrivateKey": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_equality_private_keys",
+    "test_inequality_private_keys",
+    "test_inequality_private_keys_not_implemented"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_ecdsa",
+   "name": "TestPrivateKey",
+   "qualname": "TestPrivateKey"
+  },
+  "TestPublicKey": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_equality_public_keys",
+    "test_inequality_different_curves",
+    "test_inequality_public_key",
+    "test_inequality_public_key_not_implemented",
+    "test_invalid_point_x_equal_p",
+    "test_invalid_point_x_negative",
+    "test_invalid_point_y_equal_p",
+    "test_invalid_point_y_negative",
+    "test_point_is_valid_with_not_scalar_multiple_of_base_point",
+    "test_public_key_with_generator_without_order",
+    "test_public_point_on_curve_not_scalar_multiple_of_base_point"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_ecdsa",
+   "name": "TestPublicKey",
+   "qualname": "TestPublicKey"
+  },
+  "TestPublicKeyVerifies": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_sig_with_r_order",
+    "test_sig_with_r_zero",
+    "test_sig_with_s_order",
+    "test_sig_with_s_zero"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_ecdsa",
+   "name": "TestPublicKeyVerifies",
+   "qualname": "TestPublicKeyVerifies"
+  },
+  "TestReadLength": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_empty_string",
+    "test_length_overflow",
+    "test_long_form_with_zero_length",
+    "test_smallest_two_byte_length",
+    "test_two_byte_small_length",
+    "test_two_byte_zero_length",
+    "test_two_three_byte_length",
+    "test_zero_length",
+    "test_zero_padded_length"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestReadLength",
+   "qualname": "TestReadLength"
+  },
+  "TestRemoveBitstring": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_empty_encoding",
+    "test_empty_string",
+    "test_implicit_unexpected_unused",
+    "test_invalid_encoding_of_empty_string",
+    "test_invalid_encoding_of_unused_bits",
+    "test_invalid_padding_bits",
+    "test_new_call_convention",
+    "test_no_length",
+    "test_not_a_bitstring",
+    "test_old_call_convention",
+    "test_unexpected_number_of_unused_bits",
+    "test_with_padding"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestRemoveBitstring",
+   "qualname": "TestRemoveBitstring"
+  },
+  "TestRemoveConstructed": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_simple",
+    "test_with_malformed_tag"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestRemoveConstructed",
+   "qualname": "TestRemoveConstructed"
+  },
+  "TestRemoveImplicit": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_encode_decode",
+    "test_simple",
+    "test_with_application_class",
+    "test_with_constructed",
+    "test_with_data_following",
+    "test_with_private_class",
+    "test_with_wrong_class",
+    "test_wrong_expected_class"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestRemoveImplicit",
+   "qualname": "TestRemoveImplicit"
+  },
+  "TestRemoveInteger": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_empty_string",
+    "test_encoding_of_127",
+    "test_encoding_of_128",
+    "test_encoding_of_zero",
+    "test_minimal_with_high_bit_set",
+    "test_negative_with_high_bit_set",
+    "test_non_minimal_encoding",
+    "test_two_zero_bytes_with_high_bit_set",
+    "test_wrong_length",
+    "test_wrong_tag",
+    "test_zero_length_integer"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestRemoveInteger",
+   "qualname": "TestRemoveInteger"
+  },
+  "TestRemoveObject": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_empty_oid",
+    "test_empty_oid_overflow",
+    "test_empty_string",
+    "test_missing_length",
+    "test_pub_key_oid",
+    "test_with_extra_bytes",
+    "test_with_large_second_subid",
+    "test_with_missing_last_byte_of_multi_byte",
+    "test_with_padded_first_subid",
+    "test_with_padded_second_subid",
+    "test_with_too_long_length",
+    "test_with_two_subids",
+    "test_with_wrong_type",
+    "test_zero_zero"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestRemoveObject",
+   "qualname": "TestRemoveObject"
+  },
+  "TestRemoveOctetString": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_simple",
+    "test_with_malformed_tag"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestRemoveOctetString",
+   "qualname": "TestRemoveOctetString"
+  },
+  "TestRemoveSequence": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_simple",
+    "test_with_empty_string",
+    "test_with_wrong_length",
+    "test_with_wrong_tag"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestRemoveSequence",
+   "qualname": "TestRemoveSequence"
+  },
+  "TestSigningKey": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_compare_verifying_key_with_precompute",
+    "test_decoding_explicit_curve_parameters",
+    "test_decoding_explicit_curve_parameters_with_explicit_disabled",
+    "test_ed25519_custom_entropy",
+    "test_ed25519_from_der_bad_alg_id_params",
+    "test_ed25519_from_der_junk_after_priv_key",
+    "test_ed25519_from_pem",
+    "test_ed25519_from_secret_exponent",
+    "test_ed25519_sign",
+    "test_ed25519_sign_digest",
+    "test_ed25519_sign_digest_deterministic",
+    "test_ed25519_sign_number",
+    "test_ed25519_to_and_from_pem",
+    "test_ed25519_to_der_ssleay",
+    "test_ed25519_to_pem",
+    "test_ed25519_to_ssh",
+    "test_ed448_encode_decode",
+    "test_ed448_from_pem",
+    "test_ed448_to_pem",
+    "test_equality_on_signing_keys",
+    "test_inequality_on_signing_keys",
+    "test_inequality_on_signing_keys_not_implemented",
+    "test_to_der_pkcs8",
+    "test_verify_with_empty_message",
+    "test_verify_with_lazy_precompute",
+    "test_verify_with_precompute"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_keys",
+   "name": "TestSigningKey",
+   "qualname": "TestSigningKey"
+  },
+  "TestSquareRootModPrime": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_no_square",
+    "test_non_prime",
+    "test_non_prime_with_negative",
+    "test_power_of_2_p"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_numbertheory",
+   "name": "TestSquareRootModPrime",
+   "qualname": "TestSquareRootModPrime"
+  },
+  "TestStrIdxAsInt": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_bytearray",
+    "test_bytes",
+    "test_str"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_der",
+   "name": "TestStrIdxAsInt",
+   "qualname": "TestStrIdxAsInt"
+  },
+  "TestTrivialCurve": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_deterministic_sign",
+    "test_deterministic_sign_random_message",
+    "test_deterministic_sign_that_rises_R_zero_error",
+    "test_deterministic_sign_that_rises_S_zero_error",
+    "test_generator_sanity",
+    "test_public_key_sanity"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_keys",
+   "name": "TestTrivialCurve",
+   "qualname": "TestTrivialCurve"
+  },
+  "TestVerifyingKeyFromDer": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_SigningKey_inequality_on_same_curve",
+    "test_VerifyingKey_inequality_on_same_curve",
+    "test_array_array_of_bytes",
+    "test_array_array_of_bytes_memoryview",
+    "test_bytearray",
+    "test_bytes",
+    "test_bytes_memoryview",
+    "test_bytesarray_memoryview",
+    "test_custom_hashfunc",
+    "test_ed25519_VerifyingKey_repr__",
+    "test_ed25519_export_import",
+    "test_ed25519_sig_verify",
+    "test_ed25519_sig_verify_malformed",
+    "test_ed448_export_import",
+    "test_ed448_from_pem",
+    "test_ed448_sig_verify",
+    "test_ed448_to_pem",
+    "test_edwards_from_public_key_recovery",
+    "test_edwards_from_public_key_recovery_with_digest",
+    "test_edwards_from_public_point",
+    "test_edwards_precompute_no_side_effect",
+    "test_equality_on_verifying_keys",
+    "test_export_ed255_to_pem",
+    "test_export_ed255_to_ssh",
+    "test_from_pem_with_custom_hashfunc",
+    "test_from_public_point_old",
+    "test_inequality_on_verifying_keys",
+    "test_inequality_on_verifying_keys_not_implemented",
+    "test_inequality_on_wrong_types",
+    "test_load_ed25519_from_pem",
+    "test_load_key_with_disabled_format",
+    "test_load_key_with_explicit_parameters",
+    "test_load_key_with_explicit_with_explicit_disabled",
+    "test_parse_malfomed_eddsa_der_pubkey"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_keys",
+   "name": "TestVerifyingKeyFromDer",
+   "qualname": "TestVerifyingKeyFromDer"
+  },
+  "TestVerifyingKeyFromString": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUpClass",
+    "test_array_array_of_bytes",
+    "test_array_array_of_bytes_memoryview",
+    "test_array_array_of_ints",
+    "test_array_array_of_ints_memoryview",
+    "test_bytearray",
+    "test_bytearray_compressed",
+    "test_bytearray_uncompressed",
+    "test_bytes",
+    "test_bytes_compressed",
+    "test_bytes_memoryview",
+    "test_bytes_uncompressed",
+    "test_bytesarray_memoryview",
+    "test_ed25519_VerifyingKey_from_string_imported"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_keys",
+   "name": "TestVerifyingKeyFromString",
+   "qualname": "TestVerifyingKeyFromString"
+  },
+  "TestZeroCurve": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "setUp",
+    "test_compare_to_old_implementation",
+    "test_double_of_0_0_point",
+    "test_double_to_0_0_point",
+    "test_double_to_0_0_point_with_non_one_z",
+    "test_mul_to_0_0_point",
+    "test_zero_point_on_curve"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_jacobi",
+   "name": "TestZeroCurve",
+   "qualname": "TestZeroCurve"
+  },
+  "TooSmallCurve": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "test_sign_too_small_curve_dont_allow_truncate_raises",
+    "test_verify_too_small_curve_dont_allow_truncate_raises"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "TooSmallCurve",
+   "qualname": "TooSmallCurve"
+  },
+  "UnexpectedDER": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.der",
+   "name": "UnexpectedDER",
+   "qualname": "UnexpectedDER"
+  },
+  "UnknownCurveError": {
+   "bases": [
+    "Exception"
+   ],
+   "bases_declared": [
+    "Exception"
+   ],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.curves",
+   "name": "UnknownCurveError",
+   "qualname": "UnknownCurveError"
+  },
+  "Util": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "OFF_test_prove_uniformity",
+    "test_randrange",
+    "test_trytryagain",
+    "test_trytryagain_single"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "Util",
+   "qualname": "Util"
+  },
+  "VerifyingKey": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__eq__",
+    "__init__",
+    "__ne__",
+    "__repr__",
+    "from_der",
+    "from_pem",
+    "from_public_key_recovery",
+    "from_public_key_recovery_with_digest",
+    "from_public_point",
+    "from_string",
+    "precompute",
+    "to_der",
+    "to_pem",
+    "to_ssh",
+    "to_string",
+    "verify",
+    "verify_digest"
+   ],
+   "init_attrs": {},
+   "init_params": [
+    "_error__please_use_generate"
+   ],
+   "module": "ecdsa.keys",
+   "name": "VerifyingKey",
+   "qualname": "VerifyingKey"
+  },
+  "VersioneerConfig": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa._version",
+   "name": "VersioneerConfig",
+   "qualname": "VersioneerConfig"
+  },
+  "_Serializer": {
+   "bases": [],
+   "bases_declared": [],
+   "defines": [
+    "__init__",
+    "encode",
+    "put_pad",
+    "put_raw",
+    "put_str",
+    "put_u32",
+    "tobytes",
+    "topem"
+   ],
+   "init_attrs": {},
+   "init_params": [],
+   "module": "ecdsa.ssh",
+   "name": "_Serializer",
+   "qualname": "_Serializer"
+  },
+  "ecdsa.ecdh.ECDH": {
+   "bases": [
+    "object"
+   ],
+   "bases_declared": [
+    "object"
+   ],
+   "defines": [
+    "__init__",
+    "_get_shared_secret",
+    "generate_private_key",
+    "generate_sharedsecret",
+    "generate_sharedsecret_bytes",
+    "get_public_key",
+    "load_private_key",
+    "load_private_key_bytes",
+    "load_private_key_der",
+    "load_private_key_pem",
+    "load_received_public_key",
+    "load_received_public_key_bytes",
+    "load_received_public_key_der",
+    "load_received_public_key_pem",
+    "set_curve"
+   ],
+   "init_attrs": {
+    "curve": 0
+   },
+   "init_params": [
+    "curve",
+    "private_key",
+    "public_key"
+   ],
+   "module": "ecdsa.ecdh",
+   "name": "ECDH",
+   "qualname": "ECDH"
+  },
+  "ecdsa.test_pyecdsa.ECDH": {
+   "bases": [
+    "unittest2.TestCase"
+   ],
+   "bases_declared": [
+    "unittest2.TestCase"
+   ],
+   "defines": [
+    "_do"
+   ],
+   "init_attrs": {},
+   "init_params": null,
+   "module": "ecdsa.test_pyecdsa",
+   "name": "ECDH",
+   "qualname": "ECDH"
+  }
+ },
+ "functions": [
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "a2b_hex",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "a2b_hex~2",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "b2a_hex",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "bit_length",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "bit_length~2",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "bit_length~3",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "byte_length",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "bytes_to_int",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "compat26_str",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "compat26_str~2",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "compat26_str~3",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "hmac_compat",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "hmac_compat~2",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "int_to_bytes",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "int_to_bytes~2",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "normalise_bytes",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "normalise_bytes~2",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "remove_whitespace",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "remove_whitespace~2",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "remove_whitespace~3",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_compat.py",
+   "function": "str_idx_as_int",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_sha3.py",
+   "function": "shake_256",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "get_config",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "get_keywords",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "get_versions",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "git_get_keywords",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "git_pieces_from_vcs",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "git_versions_from_keywords",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "pep440_split_post",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "plus_or_dot",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "register_vcs_handler",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "register_vcs_handler.decorate",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "render",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "render_git_describe",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "render_git_describe_long",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "render_pep440",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "render_pep440_branch",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "render_pep440_old",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "render_pep440_post",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "render_pep440_post_branch",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "render_pep440_pre",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "run_command",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/_version.py",
+   "function": "versions_from_parentdir",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "Curve.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "Curve.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "Curve.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "Curve.__repr__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_pem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "Curve.to_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "Curve.to_pem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "curve_by_name",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/curves.py",
+   "function": "find_curve",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "encode_bitstring",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "encode_constructed",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "encode_implicit",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "encode_integer",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "encode_length",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "encode_number",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "encode_octet_string",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "encode_oid",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "encode_sequence",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "is_sequence",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "read_length",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "read_number",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "remove_bitstring",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "remove_constructed",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "remove_implicit",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "remove_integer",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "remove_object",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "remove_octet_string",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "remove_sequence",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "topem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/der.py",
+   "function": "unpem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH._get_shared_secret",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.generate_private_key",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.generate_sharedsecret",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.generate_sharedsecret_bytes",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.get_public_key",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_private_key",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_private_key_bytes",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_private_key_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_private_key_pem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_received_public_key",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_received_public_key_bytes",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_received_public_key_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_received_public_key_pem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.set_curve",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Private_key.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Private_key.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Private_key.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Private_key.sign",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Public_key.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Public_key.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Public_key.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Public_key.verifies",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Signature.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "Signature.recover_public_keys",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "digest_integer",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "int_to_string",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "point_is_valid",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ecdsa.py",
+   "function": "string_to_int",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PrivateKey.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PrivateKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PrivateKey.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PrivateKey._key_prune",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PrivateKey.private_key",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PrivateKey.public_key",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PrivateKey.sign",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.point",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.point~2",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.public_key",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.public_point",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.verify",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "_sha512",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/eddsa.py",
+   "function": "_shake256",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._compressed_encode",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._edwards_encode",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._from_compressed",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._from_edwards",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._from_hybrid",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._from_raw_encoding",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._hybrid_encode",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._naf",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._raw_encode",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint.from_bytes",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint.to_bytes",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.__hash__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.__init__~2",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.__str__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.a",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.cofactor",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.contains_point",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.d",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.hash_func",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveEdTw.p",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.__hash__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.__init__~2",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.__str__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.a",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.b",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.cofactor",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.contains_point",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "CurveFp.p",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.__add__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.__mul__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.__mul__.leftmost_bit",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.__neg__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.__rmul__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.__str__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.curve",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.double",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.from_bytes",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.order",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.x",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "Point.y",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.__add__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.__mul__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.__radd__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.__rmul__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards._add",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards._double",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards._maybe_precompute",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards._mul_precompute",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.curve",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.double",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.from_bytes",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.order",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.scale",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.x",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.y",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__add__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__getstate__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__mul__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__neg__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__radd__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__rmul__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__setstate__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi._add",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi._add_with_z2_1",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi._add_with_z_1",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi._add_with_z_eq",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi._add_with_z_ne",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi._double",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi._double_with_z_1",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi._maybe_precompute",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi._mul_precompute",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.curve",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.double",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.from_affine",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.from_bytes",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.mul_add",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.order",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.scale",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.to_affine",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.x",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.y",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey._encode_eddsa",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey._twisted_edwards_keygen",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey._weierstrass_keygen",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_pem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_secret_exponent",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_string",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.generate",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.get_verifying_key",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.sign",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.sign_deterministic",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.sign_digest",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.sign_digest_deterministic",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.sign_digest_deterministic.simple_r_s",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.sign_number",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.to_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.to_pem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.to_ssh",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.to_string",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.__eq__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.__ne__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.__repr__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_pem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_public_key_recovery",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_public_key_recovery_with_digest",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_public_point",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_string",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.precompute",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.to_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.to_pem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.to_ssh",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.to_string",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.verify",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.verify_digest",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/keys.py",
+   "function": "_truncate_and_convert_digest",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "carmichael",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "carmichael_of_factorized",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "carmichael_of_ppower",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "factorization",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "gcd",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "inverse_mod",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "inverse_mod~2",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "inverse_mod~3",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "inverse_mod~4",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "is_prime",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "jacobi",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "kinda_order_mod",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "largest_factor_relatively_prime",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "lcm",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "lcm2",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "modular_exp",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "next_prime",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "order_mod",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "phi",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "polynomial_exp_mod",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "polynomial_multiply_mod",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "polynomial_reduce_mod",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/numbertheory.py",
+   "function": "square_root_mod_prime",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/rfc6979.py",
+   "function": "bits2int",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/rfc6979.py",
+   "function": "bits2octets",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/rfc6979.py",
+   "function": "generate_k",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "_Serializer.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "_Serializer.encode",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "_Serializer.put_pad",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "_Serializer.put_raw",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "_Serializer.put_str",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "_Serializer.put_u32",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "_Serializer.tobytes",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "_Serializer.topem",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "_get_key_type",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "serialize_private",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/ssh.py",
+   "function": "serialize_public",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "PRNG.__call__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "PRNG.__init__",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "PRNG.block_generator",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "_canonize",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "bit_length",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "bit_length~2",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "bits_and_bytes",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "entropy_to_bits",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "entropy_to_bits~2",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "lsb_of_ones",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "number_to_string",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "number_to_string_crop",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "orderlen",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "randrange",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "randrange_from_seed__overshoot_modulo",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "randrange_from_seed__truncate_bits",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "randrange_from_seed__truncate_bytes",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "randrange_from_seed__trytryagain",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "sigdecode_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "sigdecode_string",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "sigdecode_strings",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "sigencode_der",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "sigencode_der_canonize",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "sigencode_string",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "sigencode_string_canonize",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "sigencode_strings",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "sigencode_strings_canonize",
+   "reachable": false
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "string_to_number",
+   "reachable": true
+  },
+  {
+   "file": "ecdsa/util.py",
+   "function": "string_to_number_fixedlen",
+   "reachable": false
+  }
+ ],
+ "other_raises": [
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 67,
+   "file": "ecdsa/_compat.py",
+   "function": "a2b_hex",
+   "guard": "except Exception as e",
+   "line": 67,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('base16 error: %s' % e)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 77,
+   "file": "ecdsa/_compat.py",
+   "function": "bytes_to_int",
+   "guard": null,
+   "line": 77,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(\"Only 'big' and 'little' endian supported\")",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 91,
+   "file": "ecdsa/_compat.py",
+   "function": "int_to_bytes",
+   "guard": null,
+   "line": 91,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(\"Only 'big' or 'little' endian supported\")",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 113,
+   "file": "ecdsa/_compat.py",
+   "function": "a2b_hex~2",
+   "guard": "except Exception as e",
+   "line": 113,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('base16 error: %s' % e)",
+   "via": null
+  },
+  {
+   "class": "NotThisMethod",
+   "class_resolved": "NotThisMethod",
+   "end_line": 139,
+   "file": "ecdsa/_version.py",
+   "function": "versions_from_parentdir",
+   "guard": null,
+   "line": 139,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotThisMethod(\"rootdir doesn't start with parentdir_prefix\")",
+   "via": null
+  },
+  {
+   "class": "NotThisMethod",
+   "class_resolved": "NotThisMethod",
+   "end_line": 174,
+   "file": "ecdsa/_version.py",
+   "function": "git_versions_from_keywords",
+   "guard": "'refnames' not in keywords",
+   "line": 174,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotThisMethod('Short version file found')",
+   "via": null
+  },
+  {
+   "class": "NotThisMethod",
+   "class_resolved": "NotThisMethod",
+   "end_line": 192,
+   "file": "ecdsa/_version.py",
+   "function": "git_versions_from_keywords",
+   "guard": "refnames.startswith('$Format')",
+   "line": 192,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise NotThisMethod('unexpanded keywords, not a git-archive tarball')",
+   "via": null
+  },
+  {
+   "class": "NotThisMethod",
+   "class_resolved": "NotThisMethod",
+   "end_line": 261,
+   "file": "ecdsa/_version.py",
+   "function": "git_pieces_from_vcs",
+   "guard": "rc != 0",
+   "line": 261,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NotThisMethod(\"'git rev-parse --git-dir' returned error\")",
+   "via": null
+  },
+  {
+   "class": "NotThisMethod",
+   "class_resolved": "NotThisMethod",
+   "end_line": 280,
+   "file": "ecdsa/_version.py",
+   "function": "git_pieces_from_vcs",
+   "guard": "describe_out is None",
+   "line": 280,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise NotThisMethod(\"'git describe' failed\")",
+   "via": null
+  },
+  {
+   "class": "NotThisMethod",
+   "class_resolved": "NotThisMethod",
+   "end_line": 284,
+   "file": "ecdsa/_version.py",
+   "function": "git_pieces_from_vcs",
+   "guard": "full_out is None",
+   "line": 284,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise NotThisMethod(\"'git rev-parse' failed\")",
+   "via": null
+  },
+  {
+   "class": "NotThisMethod",
+   "class_resolved": "NotThisMethod",
+   "end_line": 297,
+   "file": "ecdsa/_version.py",
+   "function": "git_pieces_from_vcs",
+   "guard": "rc != 0 or branch_name is None",
+   "line": 297,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise NotThisMethod(\"'git rev-parse --abbrev-ref' returned error\")",
+   "via": null
+  },
+  {
+   "class": "NotThisMethod",
+   "class_resolved": "NotThisMethod",
+   "end_line": 307,
+   "file": "ecdsa/_version.py",
+   "function": "git_pieces_from_vcs",
+   "guard": "rc != 0 or branches is None",
+   "line": 307,
+   "raise_number": 5,
+   "reason": "not a rejection class",
+   "source": "raise NotThisMethod(\"'git branch --contains' returned error\")",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 633,
+   "file": "ecdsa/_version.py",
+   "function": "render",
+   "guard": "style == 'git-describe-long'",
+   "line": 633,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(\"unknown style '%s'\" % style)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 114,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.to_der",
+   "guard": "encoding not in ('named_curve', 'explicit')",
+   "line": 112,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(\"Only 'named_curve' and 'explicit' encodings supported\")",
+   "via": null
+  },
+  {
+   "class": "UnknownCurveError",
+   "class_resolved": "UnknownCurveError",
+   "end_line": 121,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.to_der",
+   "guard": "not self.oid",
+   "line": 118,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnknownCurveError(\"Can't encode curve using named_curve encoding without associated curve OID\")",
+   "via": null
+  },
+  {
+   "class": "UnknownCurveError",
+   "class_resolved": "UnknownCurveError",
+   "end_line": 127,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.to_der",
+   "guard": "isinstance(self.curve, ellipticcurve.CurveEdTw)",
+   "line": 125,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise UnknownCurveError(\"Twisted Edwards curves don't support explicit encoding\")",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 186,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "guard": "not all((i in ['named_curve', 'explicit'] for i in valid_encodings))",
+   "line": 184,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Only named_curve and explicit encodings supported')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 192,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "guard": "'named_curve' not in valid_encodings",
+   "line": 190,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('named_curve curve parameters not allowed')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 195,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "guard": "empty",
+   "line": 195,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('Unexpected data after OID')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 199,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "guard": "'explicit' not in valid_encodings",
+   "line": 199,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('explicit curve parameters not allowed')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 205,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "guard": "empty",
+   "line": 203,
+   "raise_number": 5,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('Unexpected data after ECParameters structure')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 209,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "guard": "version != 1",
+   "line": 209,
+   "raise_number": 6,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('Unknown parameter encoding format')",
+   "via": null
+  },
+  {
+   "class": "UnknownCurveError",
+   "class_resolved": "UnknownCurveError",
+   "end_line": 223,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "guard": "field_type == CHARACTERISTIC_TWO_FIELD_OID",
+   "line": 223,
+   "raise_number": 7,
+   "reason": "not a rejection class",
+   "source": "raise UnknownCurveError('Characteristic 2 curves unsupported')",
+   "via": null
+  },
+  {
+   "class": "UnknownCurveError",
+   "class_resolved": "UnknownCurveError",
+   "end_line": 227,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "guard": "field_type != PRIME_FIELD_OID",
+   "line": 225,
+   "raise_number": 8,
+   "reason": "not a rejection class",
+   "source": "raise UnknownCurveError('Unknown field type: {0}'.format(field_type))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 232,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_der",
+   "guard": "empty",
+   "line": 230,
+   "raise_number": 9,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('Unexpected data after ECParameters.fieldID.Prime-p element')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 277,
+   "file": "ecdsa/curves.py",
+   "function": "Curve.from_pem",
+   "guard": "ec_param_index == -1",
+   "line": 277,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('EC PARAMETERS PEM header not found')",
+   "via": null
+  },
+  {
+   "class": "UnknownCurveError",
+   "class_resolved": "UnknownCurveError",
+   "end_line": 566,
+   "file": "ecdsa/curves.py",
+   "function": "find_curve",
+   "guard": null,
+   "line": 563,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnknownCurveError(\"I don't know about the curve with oid %s.I only know about these: %s\" % (oid_curve, [c.name for c in curves]))",
+   "via": null
+  },
+  {
+   "class": "UnknownCurveError",
+   "class_resolved": "UnknownCurveError",
+   "end_line": 590,
+   "file": "ecdsa/curves.py",
+   "function": "curve_by_name",
+   "guard": null,
+   "line": 586,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnknownCurveError('Curve with name {0!r} unknown, only curves supported: {1}'.format(name, [c.name for c in curves]))",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 30,
+   "file": "ecdsa/der.py",
+   "function": "encode_implicit",
+   "guard": "cls not in ('application', 'context-specific', 'private')",
+   "line": 30,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('invalid tag class')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 32,
+   "file": "ecdsa/der.py",
+   "function": "encode_implicit",
+   "guard": "tag > 31",
+   "line": 32,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Long tags not supported')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 111,
+   "file": "ecdsa/der.py",
+   "function": "encode_bitstring",
+   "guard": "not 0 <= unused <= 7",
+   "line": 111,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('unused must be integer between 0 and 7')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 114,
+   "file": "ecdsa/der.py",
+   "function": "encode_bitstring",
+   "guard": "not s",
+   "line": 114,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('unused is non-zero but s is empty')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 117,
+   "file": "ecdsa/der.py",
+   "function": "encode_bitstring",
+   "guard": "last & 2 ** unused - 1",
+   "line": 117,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('unused bits must be zeros in DER')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 163,
+   "file": "ecdsa/der.py",
+   "function": "remove_constructed",
+   "guard": "s0 & 224 != 160",
+   "line": 161,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER(\"wanted type 'constructed tag' (0xa0-0xbf), got 0x%02x\" % s0)",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 167,
+   "file": "ecdsa/der.py",
+   "function": "remove_constructed",
+   "guard": "length > len(string) - 1 - llen",
+   "line": 167,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Length longer than the provided buffer')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 188,
+   "file": "ecdsa/der.py",
+   "function": "remove_implicit",
+   "guard": "exp_class not in ('context-specific', 'application', 'private')",
+   "line": 188,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('invalid `exp_class` value')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 203,
+   "file": "ecdsa/der.py",
+   "function": "remove_implicit",
+   "guard": "s0 & tag_mask != tag_class",
+   "line": 201,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('wanted class {0}, got 0x{1:02x} tag'.format(exp_class, s0))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 207,
+   "file": "ecdsa/der.py",
+   "function": "remove_implicit",
+   "guard": "s0 & 32 != 0",
+   "line": 205,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('wanted type primitive, got 0x{0:02x} tag'.format(s0))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 212,
+   "file": "ecdsa/der.py",
+   "function": "remove_implicit",
+   "guard": "length > len(string) - 1 - llen",
+   "line": 212,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Length longer than the provided buffer')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 220,
+   "file": "ecdsa/der.py",
+   "function": "remove_sequence",
+   "guard": "not string",
+   "line": 220,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Empty string does not encode a sequence')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 223,
+   "file": "ecdsa/der.py",
+   "function": "remove_sequence",
+   "guard": "string[:1] != b'0'",
+   "line": 223,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER(\"wanted type 'sequence' (0x30), got 0x%02x\" % n)",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 226,
+   "file": "ecdsa/der.py",
+   "function": "remove_sequence",
+   "guard": "length > len(string) - 1 - lengthlength",
+   "line": 226,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Length longer than the provided buffer')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 234,
+   "file": "ecdsa/der.py",
+   "function": "remove_octet_string",
+   "guard": "string[:1] != b'\\x04'",
+   "line": 234,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER(\"wanted type 'octetstring' (0x04), got 0x%02x\" % n)",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 237,
+   "file": "ecdsa/der.py",
+   "function": "remove_octet_string",
+   "guard": "length > len(string) - 1 - llen",
+   "line": 237,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Length longer than the provided buffer')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 247,
+   "file": "ecdsa/der.py",
+   "function": "remove_object",
+   "guard": "not string",
+   "line": 245,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Empty string does not encode an object identifier')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 250,
+   "file": "ecdsa/der.py",
+   "function": "remove_object",
+   "guard": "string[:1] != b'\\x06'",
+   "line": 250,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER(\"wanted type 'object' (0x06), got 0x%02x\" % n)",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 255,
+   "file": "ecdsa/der.py",
+   "function": "remove_object",
+   "guard": "not body",
+   "line": 255,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Empty object identifier')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 259,
+   "file": "ecdsa/der.py",
+   "function": "remove_object",
+   "guard": "len(body) != length",
+   "line": 257,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Length of object identifier longer than the provided buffer')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 280,
+   "file": "ecdsa/der.py",
+   "function": "remove_integer",
+   "guard": "not string",
+   "line": 278,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Empty string is an invalid encoding of an integer')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 283,
+   "file": "ecdsa/der.py",
+   "function": "remove_integer",
+   "guard": "string[:1] != b'\\x02'",
+   "line": 283,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER(\"wanted type 'integer' (0x02), got 0x%02x\" % n)",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 286,
+   "file": "ecdsa/der.py",
+   "function": "remove_integer",
+   "guard": "length > len(string) - 1 - llen",
+   "line": 286,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Length longer than provided buffer')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 288,
+   "file": "ecdsa/der.py",
+   "function": "remove_integer",
+   "guard": "length == 0",
+   "line": 288,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('0-byte long encoding of integer')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 293,
+   "file": "ecdsa/der.py",
+   "function": "remove_integer",
+   "guard": "not msb < 128",
+   "line": 293,
+   "raise_number": 5,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Negative integers are not supported')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 303,
+   "file": "ecdsa/der.py",
+   "function": "remove_integer",
+   "guard": "smsb < 128",
+   "line": 300,
+   "raise_number": 6,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Invalid encoding of integer, unnecessary zero padding bytes')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 311,
+   "file": "ecdsa/der.py",
+   "function": "read_number",
+   "guard": "str_idx_as_int(string, 0) == 128",
+   "line": 311,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Non minimal encoding of OID subidentifier')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 316,
+   "file": "ecdsa/der.py",
+   "function": "read_number",
+   "guard": "llen >= len(string)",
+   "line": 316,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('ran out of length bytes')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 340,
+   "file": "ecdsa/der.py",
+   "function": "read_length",
+   "guard": "not string",
+   "line": 340,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER(\"Empty string can't encode valid length value\")",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 349,
+   "file": "ecdsa/der.py",
+   "function": "read_length",
+   "guard": "not llen",
+   "line": 349,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Invalid length encoding, length of length is 0')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 351,
+   "file": "ecdsa/der.py",
+   "function": "read_length",
+   "guard": "llen > len(string) - 1",
+   "line": 351,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Length of length longer than provided buffer')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 355,
+   "file": "ecdsa/der.py",
+   "function": "read_length",
+   "guard": "not msb or (llen == 1 and msb < 128)",
+   "line": 355,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Not minimal encoding of length')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 399,
+   "file": "ecdsa/der.py",
+   "function": "remove_bitstring",
+   "guard": "not string",
+   "line": 399,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Empty string does not encode a bitstring')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 408,
+   "file": "ecdsa/der.py",
+   "function": "remove_bitstring",
+   "guard": "string[:1] != b'\\x03'",
+   "line": 408,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('wanted bitstring (0x03), got 0x%02x' % num)",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 411,
+   "file": "ecdsa/der.py",
+   "function": "remove_bitstring",
+   "guard": "not length",
+   "line": 411,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER(\"Invalid length of bit string, can't be 0\")",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 417,
+   "file": "ecdsa/der.py",
+   "function": "remove_bitstring",
+   "guard": "not 0 <= unused <= 7",
+   "line": 417,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Invalid encoding of unused bits')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 419,
+   "file": "ecdsa/der.py",
+   "function": "remove_bitstring",
+   "guard": "expect_unused is not None and expect_unused != unused",
+   "line": 419,
+   "raise_number": 5,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Unexpected number of unused bits')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 423,
+   "file": "ecdsa/der.py",
+   "function": "remove_bitstring",
+   "guard": "not body",
+   "line": 423,
+   "raise_number": 6,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Invalid encoding of empty bit string')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 427,
+   "file": "ecdsa/der.py",
+   "function": "remove_bitstring",
+   "guard": "last & 2 ** unused - 1",
+   "line": 427,
+   "raise_number": 7,
+   "reason": "not a rejection class",
+   "source": "raise UnexpectedDER('Non zero padding bits in bit string')",
+   "via": null
+  },
+  {
+   "class": "NoKeyError",
+   "class_resolved": "NoKeyError",
+   "end_line": 81,
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH._get_shared_secret",
+   "guard": "not self.private_key",
+   "line": 79,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NoKeyError('Private key needs to be set to create shared secret')",
+   "via": null
+  },
+  {
+   "class": "NoKeyError",
+   "class_resolved": "NoKeyError",
+   "end_line": 85,
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH._get_shared_secret",
+   "guard": "not self.public_key",
+   "line": 83,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise NoKeyError('Public key needs to be set to create shared secret')",
+   "via": null
+  },
+  {
+   "class": "InvalidCurveError",
+   "class_resolved": "InvalidCurveError",
+   "end_line": 91,
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH._get_shared_secret",
+   "guard": "not self.private_key.curve == self.curve == remote_public_key.curve",
+   "line": 89,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise InvalidCurveError('Curves for public key and private key is not equal.')",
+   "via": null
+  },
+  {
+   "class": "InvalidSharedSecretError",
+   "class_resolved": "InvalidSharedSecretError",
+   "end_line": 99,
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH._get_shared_secret",
+   "guard": "result == INFINITY",
+   "line": 99,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise InvalidSharedSecretError('Invalid shared secret (INFINITY).')",
+   "via": null
+  },
+  {
+   "class": "NoCurveError",
+   "class_resolved": "NoCurveError",
+   "end_line": 122,
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.generate_private_key",
+   "guard": "not self.curve",
+   "line": 122,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NoCurveError('Curve must be set prior to key generation.')",
+   "via": null
+  },
+  {
+   "class": "InvalidCurveError",
+   "class_resolved": "InvalidCurveError",
+   "end_line": 143,
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_private_key",
+   "guard": "self.curve != private_key.curve",
+   "line": 143,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise InvalidCurveError('Curve mismatch.')",
+   "via": null
+  },
+  {
+   "class": "NoCurveError",
+   "class_resolved": "NoCurveError",
+   "end_line": 164,
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_private_key_bytes",
+   "guard": "not self.curve",
+   "line": 164,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NoCurveError('Curve must be set prior to key load.')",
+   "via": null
+  },
+  {
+   "class": "InvalidCurveError",
+   "class_resolved": "InvalidCurveError",
+   "end_line": 237,
+   "file": "ecdsa/ecdh.py",
+   "function": "ECDH.load_received_public_key",
+   "guard": "self.curve != public_key.curve",
+   "line": 237,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise InvalidCurveError('Curve mismatch.')",
+   "via": null
+  },
+  {
+   "class": "InvalidPointError",
+   "class_resolved": "InvalidPointError",
+   "end_line": 154,
+   "file": "ecdsa/ecdsa.py",
+   "function": "Public_key.__init__",
+   "guard": "not 0 <= point.x() < p or not 0 <= point.y() < p",
+   "line": 152,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise InvalidPointError('The public point has x or y out of range.')",
+   "via": null
+  },
+  {
+   "class": "InvalidPointError",
+   "class_resolved": "InvalidPointError",
+   "end_line": 156,
+   "file": "ecdsa/ecdsa.py",
+   "function": "Public_key.__init__",
+   "guard": "verify and (not self.curve.contains_point(point.x(), point.y()))",
+   "line": 156,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise InvalidPointError('Point does not lay on the curve')",
+   "via": null
+  },
+  {
+   "class": "InvalidPointError",
+   "class_resolved": "InvalidPointError",
+   "end_line": 158,
+   "file": "ecdsa/ecdsa.py",
+   "function": "Public_key.__init__",
+   "guard": "not n",
+   "line": 158,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise InvalidPointError('Generator point must have order.')",
+   "via": null
+  },
+  {
+   "class": "InvalidPointError",
+   "class_resolved": "InvalidPointError",
+   "end_line": 167,
+   "file": "ecdsa/ecdsa.py",
+   "function": "Public_key.__init__",
+   "guard": "verify and self.curve.cofactor() != 1 and (not n * point == ellipticcurve.INFINITY)",
+   "line": 167,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise InvalidPointError('Generator point order is bad.')",
+   "via": null
+  },
+  {
+   "class": "RSZeroError",
+   "class_resolved": "RSZeroError",
+   "end_line": 263,
+   "file": "ecdsa/ecdsa.py",
+   "function": "Private_key.sign",
+   "guard": "r == 0",
+   "line": 263,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise RSZeroError('amazingly unlucky random number r')",
+   "via": null
+  },
+  {
+   "class": "RSZeroError",
+   "class_resolved": "RSZeroError",
+   "end_line": 269,
+   "file": "ecdsa/ecdsa.py",
+   "function": "Private_key.sign",
+   "guard": "s == 0",
+   "line": 269,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise RSZeroError('amazingly unlucky random number s')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 97,
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.__init__",
+   "guard": "len(public_key) != self.baselen",
+   "line": 93,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Incorrect size of the public key, expected: {0} bytes'.format(self.baselen))",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 122,
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.point~2",
+   "guard": "self.__point != other",
+   "line": 122,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(\"Can't change the coordinates of the point\")",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 139,
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.verify",
+   "guard": "len(signature) != 2 * self.baselen",
+   "line": 135,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid signature length, expected: {0} bytes'.format(2 * self.baselen))",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 145,
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.verify",
+   "guard": "S >= self.generator.order()",
+   "line": 145,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid signature')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 157,
+   "file": "ecdsa/eddsa.py",
+   "function": "PublicKey.verify",
+   "guard": "self.generator * S != self.__point * k + R",
+   "line": 157,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Invalid signature')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 175,
+   "file": "ecdsa/eddsa.py",
+   "function": "PrivateKey.__init__",
+   "guard": "len(private_key) != self.baselen",
+   "line": 171,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Incorrect size of private key, expected: {0} bytes'.format(self.baselen))",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 208,
+   "file": "ecdsa/eddsa.py",
+   "function": "PrivateKey._key_prune",
+   "guard": "h == 8",
+   "line": 208,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Only cofactor 4 and 8 curves supported')",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 270,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._from_compressed",
+   "guard": "data[:1] not in (b'\\x02', b'\\x03')",
+   "line": 270,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Malformed compressed point encoding')",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 281,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._from_compressed",
+   "guard": "except numbertheory.Error as e",
+   "line": 279,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Encoding does not correspond to a point on curve', e)",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 304,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._from_hybrid",
+   "guard": "validate_encoding and (y & 1 and data[:1] != b'\\x07' or (not y & 1 and data[:1] != b'\\x06'))",
+   "line": 304,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Inconsistent hybrid point encoding')",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 316,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._from_edwards",
+   "guard": "len(data) != exp_len",
+   "line": 316,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError(\"Point length doesn't match the curve.\")",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 336,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint._from_edwards",
+   "guard": "except numbertheory.Error as e",
+   "line": 334,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Encoding does not correspond to a point on curve', e)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 388,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint.from_bytes",
+   "guard": "not all((i in set(('uncompressed', 'compressed', 'hybrid', 'raw')) for i in valid_encodings))",
+   "line": 385,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Only uncompressed, compressed, hybrid or raw encoding supported.')",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 414,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint.from_bytes",
+   "guard": "data[:1] == b'\\x04' and 'uncompressed' in valid_encodings",
+   "line": 412,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Invalid X9.62 encoding of the public point')",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 425,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "AbstractPoint.from_bytes",
+   "guard": "key_len == raw_encoding_length // 2 + 1 and 'compressed' in valid_encodings",
+   "line": 421,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Length of string does not match lengths of any of the enabled ({0}) encodings of the curve.'.format(', '.join(valid_encodings)))",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 914,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointJacobi.__add__",
+   "guard": "self.__curve != other.__curve",
+   "line": 914,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('The other point is on different curve')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 1499,
+   "file": "ecdsa/ellipticcurve.py",
+   "function": "PointEdwards.__add__",
+   "guard": "not isinstance(other, PointEdwards) or self.__curve != other.__curve",
+   "line": 1499,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('The other point is on a different curve.')",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 109,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.__init__",
+   "guard": "not _error__please_use_generate",
+   "line": 107,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('Please use VerifyingKey.generate() to construct me')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 164,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_public_point",
+   "guard": "isinstance(curve.curve, CurveEdTw)",
+   "line": 164,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Method incompatible with Edwards curves')",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 174,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_public_point",
+   "guard": "except ecdsa.InvalidPointError",
+   "line": 174,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Point does not lay on the curve')",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 272,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_string",
+   "guard": "except ValueError",
+   "line": 272,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Malformed point for the curve')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 378,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_der",
+   "guard": "empty != b''",
+   "line": 376,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('trailing junk after DER pubkey: %s' % binascii.hexlify(empty))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 390,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_der",
+   "guard": "empty",
+   "line": 390,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('trailing junk after public key')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 396,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_der",
+   "guard": "not oid_pk == oid_ecPublicKey",
+   "line": 393,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('Unexpected object identifier in DER encoding: {0!r}'.format(oid_pk))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 403,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_der",
+   "guard": "empty != b''",
+   "line": 400,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('trailing junk after pubkey pointstring: %s' % binascii.hexlify(empty))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 406,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_der",
+   "guard": "len(point_str) == curve.verifying_key_length",
+   "line": 406,
+   "raise_number": 5,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('Malformed encoding of public point')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 454,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_public_key_recovery",
+   "guard": "isinstance(curve.curve, CurveEdTw)",
+   "line": 454,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Method unsupported for Edwards curves')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 507,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.from_public_key_recovery_with_digest",
+   "guard": "isinstance(curve.curve, CurveEdTw)",
+   "line": 507,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Method unsupported for Edwards curves')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 600,
+   "file": "ecdsa/keys.py",
+   "function": "VerifyingKey.to_der",
+   "guard": "point_encoding == 'raw'",
+   "line": 600,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('raw point_encoding not allowed in DER')",
+   "via": null
+  },
+  {
+   "class": "TypeError",
+   "class_resolved": "TypeError",
+   "end_line": 761,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.__init__",
+   "guard": "not _error__please_use_generate",
+   "line": 761,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise TypeError('Please use SigningKey.generate() to construct me')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 862,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_secret_exponent",
+   "guard": "isinstance(curve.curve, CurveEdTw)",
+   "line": 859,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError(\"Edwards keys don't support setting the secret scalar (exponent) directly\")",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 872,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_secret_exponent",
+   "guard": "not 1 <= secexp < n",
+   "line": 869,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Invalid value for secexp, expected integer between 1 and {0}'.format(n))",
+   "via": null
+  },
+  {
+   "class": "MalformedPointError",
+   "class_resolved": "MalformedPointError",
+   "end_line": 916,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_string",
+   "guard": "len(string) != curve.baselen",
+   "line": 913,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise MalformedPointError('Invalid length of private key, received {0}, expected {1}'.format(len(string), curve.baselen))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 1050,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_der",
+   "guard": "empty != b''",
+   "line": 1048,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('trailing junk after DER privkey: %s' % binascii.hexlify(empty))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 1063,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_der",
+   "guard": "version not in (0, 1)",
+   "line": 1060,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER(\"expected version '0' or '1' at start of privkey, got %d\" % version)",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 1072,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_der",
+   "guard": "algorithm_identifier",
+   "line": 1070,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('Non NULL parameters for a EdDSA key')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 1088,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_der",
+   "guard": "s",
+   "line": 1086,
+   "raise_number": 4,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('trailing junk after the encoded private key')",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 1101,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_der",
+   "guard": "algorithm_oid not in (oid_ecPublicKey, oid_ecDH, oid_ecMQV)",
+   "line": 1099,
+   "raise_number": 5,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER(\"unexpected algorithm identifier '%s'\" % (algorithm_oid,))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 1116,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_der",
+   "guard": "empty != b''",
+   "line": 1113,
+   "raise_number": 6,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('trailing junk after DER privkey: %s' % binascii.hexlify(empty))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 1125,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_der",
+   "guard": "version != 1",
+   "line": 1122,
+   "raise_number": 7,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER(\"expected version '1' at start of DER privkey, got %d\" % version)",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 1134,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.from_der",
+   "guard": "tag != 0",
+   "line": 1132,
+   "raise_number": 8,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('expected tag 0 in DER privkey, got %d' % tag)",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 1252,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.to_der",
+   "guard": "point_encoding == 'raw'",
+   "line": 1252,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('raw encoding not allowed in DER')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 1256,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.to_der",
+   "guard": "format != 'pkcs8'",
+   "line": 1256,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Only PKCS#8 format supported for EdDSA keys')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 1425,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.sign_digest_deterministic",
+   "guard": "isinstance(self.curve.curve, CurveEdTw)",
+   "line": 1425,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Method unsupported for Edwards curves')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 1587,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.sign_digest",
+   "guard": "isinstance(self.curve.curve, CurveEdTw)",
+   "line": 1587,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Method unsupported for Edwards curves')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 1621,
+   "file": "ecdsa/keys.py",
+   "function": "SigningKey.sign_number",
+   "guard": "isinstance(self.curve.curve, CurveEdTw)",
+   "line": 1621,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Method unsupported for Edwards curves')",
+   "via": null
+  },
+  {
+   "class": "NegativeExponentError",
+   "class_resolved": "NegativeExponentError",
+   "end_line": 76,
+   "file": "ecdsa/numbertheory.py",
+   "function": "modular_exp",
+   "guard": "exponent < 0",
+   "line": 74,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise NegativeExponentError('Negative exponents (%d) not allowed' % exponent)",
+   "via": null
+  },
+  {
+   "class": "JacobiError",
+   "class_resolved": "JacobiError",
+   "end_line": 169,
+   "file": "ecdsa/numbertheory.py",
+   "function": "jacobi",
+   "guard": "not n >= 3",
+   "line": 169,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise JacobiError('n must be larger than 2')",
+   "via": null
+  },
+  {
+   "class": "JacobiError",
+   "class_resolved": "JacobiError",
+   "end_line": 171,
+   "file": "ecdsa/numbertheory.py",
+   "function": "jacobi",
+   "guard": "not n % 2 == 1",
+   "line": 171,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise JacobiError('n must be odd')",
+   "via": null
+  },
+  {
+   "class": "SquareRootError",
+   "class_resolved": "SquareRootError",
+   "end_line": 209,
+   "file": "ecdsa/numbertheory.py",
+   "function": "square_root_mod_prime",
+   "guard": "jac == -1",
+   "line": 209,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise SquareRootError('%d has no square root modulo %d' % (a, p))",
+   "via": null
+  },
+  {
+   "class": "SquareRootError",
+   "class_resolved": "SquareRootError",
+   "end_line": 231,
+   "file": "ecdsa/numbertheory.py",
+   "function": "square_root_mod_prime",
+   "guard": "ff[1]",
+   "line": 231,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise SquareRootError('p is not prime')",
+   "via": null
+  },
+  {
+   "class": "RuntimeError",
+   "class_resolved": "RuntimeError",
+   "end_line": 234,
+   "file": "ecdsa/numbertheory.py",
+   "function": "square_root_mod_prime",
+   "guard": null,
+   "line": 234,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise RuntimeError('No b found.')",
+   "via": null
+  },
+  {
+   "class": "ValueError",
+   "class_resolved": "ValueError",
+   "end_line": 14,
+   "file": "ecdsa/ssh.py",
+   "function": "_get_key_type",
+   "guard": "name == 'Ed25519'",
+   "line": 14,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise ValueError('Unsupported key type')",
+   "via": null
+  },
+  {
+   "class": "MalformedSignature",
+   "class_resolved": "MalformedSignature",
+   "end_line": 443,
+   "file": "ecdsa/util.py",
+   "function": "sigdecode_string",
+   "guard": "not len(signature) == 2 * l",
+   "line": 440,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise MalformedSignature('Invalid length of signature, expected {0} bytes long, provided string is {1} bytes long'.format(2 * l, len(signature)))",
+   "via": null
+  },
+  {
+   "class": "MalformedSignature",
+   "class_resolved": "MalformedSignature",
+   "end_line": 473,
+   "file": "ecdsa/util.py",
+   "function": "sigdecode_strings",
+   "guard": "not len(rs_strings) == 2",
+   "line": 469,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise MalformedSignature('Invalid number of strings provided: {0}, expected 2'.format(len(rs_strings)))",
+   "via": null
+  },
+  {
+   "class": "MalformedSignature",
+   "class_resolved": "MalformedSignature",
+   "end_line": 483,
+   "file": "ecdsa/util.py",
+   "function": "sigdecode_strings",
+   "guard": "not len(r_str) == l",
+   "line": 479,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise MalformedSignature(\"Invalid length of first string ('r' parameter), expected {0} bytes long, provided string is {1} bytes long\".format(l, len(r_str)))",
+   "via": null
+  },
+  {
+   "class": "MalformedSignature",
+   "class_resolved": "MalformedSignature",
+   "end_line": 489,
+   "file": "ecdsa/util.py",
+   "function": "sigdecode_strings",
+   "guard": "not len(s_str) == l",
+   "line": 485,
+   "raise_number": 3,
+   "reason": "not a rejection class",
+   "source": "raise MalformedSignature(\"Invalid length of second string ('s' parameter), expected {0} bytes long, provided string is {1} bytes long\".format(l, len(s_str)))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 526,
+   "file": "ecdsa/util.py",
+   "function": "sigdecode_der",
+   "guard": "empty != b''",
+   "line": 524,
+   "raise_number": 1,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('trailing junk after DER sig: %s' % binascii.hexlify(empty))",
+   "via": null
+  },
+  {
+   "class": "UnexpectedDER",
+   "class_resolved": "UnexpectedDER",
+   "end_line": 532,
+   "file": "ecdsa/util.py",
+   "function": "sigdecode_der",
+   "guard": "empty != b''",
+   "line": 530,
+   "raise_number": 2,
+   "reason": "not a rejection class",
+   "source": "raise der.UnexpectedDER('trailing junk after DER numbers: %s' % binascii.hexlify(empty))",
+   "via": null
+  }
+ ],
+ "rejection_bases": [
+  {
+   "kind": "package",
+   "module": "ecdsa.keys",
+   "name": "BadDigestError",
+   "qualname": "BadDigestError"
+  },
+  {
+   "kind": "package",
+   "module": "ecdsa.keys",
+   "name": "BadSignatureError",
+   "qualname": "BadSignatureError"
+  }
+ ],
+ "rejection_classes": [
+  "BadDigestError",
+  "BadSignatureError"
+ ],
+ "sha256": {
+  "ecdsa/__init__.py": "c11527537834d4c33e98b35e9a7a2ffbff01f350e56d2aeaa05b4e3b86d9cd04",
+  "ecdsa/_compat.py": "e443fbdf90e599a49bf12964e0132787d67b32f6294e7192dd2fc30661c44f0a",
+  "ecdsa/_sha3.py": "0c9b3b40b99d910314df9965c83f0741e01736f7f9b0c72e8ceea815d49c22a2",
+  "ecdsa/_version.py": "6f8e0bc4a778a595dfc1d49b934c517783564ef55aba9a33218d406b873fd667",
+  "ecdsa/curves.py": "11c3c4d16445923a4f3197d5334fa1450eb709d5b918a4e40d1a4af953b2d59a",
+  "ecdsa/der.py": "93efbb567ec291b8c257f15320dec71a28d85e40e86644a8fb0d2f94856c6306",
+  "ecdsa/ecdh.py": "4e28ab6b0b79c5e8150eb63d792f804efbdf9932339d4cafe5fcb693b567cd39",
+  "ecdsa/ecdsa.py": "f36102caf7b7eab2f8ff2f1993c8cf07e5326faecfa71e8261da887859e2bfbc",
+  "ecdsa/eddsa.py": "233b06ce818079f72862317b0d58c5917e5926a88ad8b4ce98031eeb0c9fe145",
+  "ecdsa/ellipticcurve.py": "3a1a3126c249ffb0e9e5ed7401b943fee8bd528d96c68cd16f2dfb831a9cb8e9",
+  "ecdsa/errors.py": "6f89a19e622946711d1f36de72d1c003917b3bd32d49a23e7d8a1cd77fef0714",
+  "ecdsa/keys.py": "164a6e6cbf4c1827e4089e9a56f5797346ef7b866e06d5373f57514414ed8749",
+  "ecdsa/numbertheory.py": "01ddbe99515a3b2b4ca26042fbb7747096a8e2da6454b878c7bbf2aa3ef71ba0",
+  "ecdsa/rfc6979.py": "cf0ce8df796c64903daf67527fb1c296223fc886f0e5c274124f6d2dd4513b8d",
+  "ecdsa/ssh.py": "dfad0963475b61e65aab1f64fce8651f33d96194f0e54079c6d2b65cb06a6f43",
+  "ecdsa/util.py": "522c571fa3d1f69a0cad6409f77acaa54495647c4fd4098bc2592b908dc55851"
+ },
+ "subject": {
+  "commit": "bd66899550d7185939bf27b75713a2ac9325a9d3",
+  "copy": [
+   "src",
+   "conftest.py"
+  ],
+  "distribution": "ecdsa",
+  "entry_points": [
+   "verify",
+   "verify_digest"
+  ],
+  "entry_points_source": "README.md, section Usage (lines 295-297), and docs/source/quickstart.rst, section Verifying (lines 157-178), show VerifyingKey.verify; docs/source/ecdsa.keys.rst (automodule of ecdsa.keys) documents VerifyingKey.verify, 'Verify a signature made over provided data' (src/ecdsa/keys.py line 638), and VerifyingKey.verify_digest, 'Verify a signature made over provided hash value' (line 695); docs/source/ecdsa.eddsa.rst (automodule of ecdsa.eddsa) documents PublicKey.verify, 'Verify a Pure EdDSA signature over data' (src/ecdsa/eddsa.py line 132), which VerifyingKey.verify calls for Edwards curves (keys.py lines 676-681). Entry points are names, so the same names elsewhere in the package count too. Public_key.verifies (src/ecdsa/ecdsa.py lines 184-186) returns True or False and is no entry point.",
+  "name": "ecdsa",
+  "observed_files": [],
+  "package": "ecdsa",
+  "pytest_args": [
+   "-p",
+   "no:cacheprovider"
+  ],
+  "python": "3.12.3",
+  "rejection_bases": [
+   "BadDigestError",
+   "BadSignatureError"
+  ],
+  "rejection_bases_source": "src/ecdsa/keys.py: the docstring of VerifyingKey.verify names BadSignatureError, 'if the signature is invalid or malformed' (line 668); that of VerifyingKey.verify_digest names BadSignatureError and BadDigestError, 'if the provided digest is too big for the curve associated with this VerifyingKey and allow_truncate was not set' (lines 718-720); README.md, section Usage (lines 295-297): verify 'either returns True or raises BadSignatureError'. Each of the 2 classes inherits from the built-in Exception alone (keys.py lines 38 and 53), so each is a base. The docstring of eddsa.PublicKey.verify (src/ecdsa/eddsa.py line 132) names no exception.",
+  "repository": "https://github.com/tlsfuzzer/python-ecdsa",
+  "scope_counts": {
+   "blocks_in_test_directories": 170,
+   "test_files_in_test_directories": 12,
+   "test_files_with_an_included_block": 3
+  },
+  "source_root": "src",
+  "subject_files": [
+   "ecdsa/__init__.py",
+   "ecdsa/_compat.py",
+   "ecdsa/_sha3.py",
+   "ecdsa/_version.py",
+   "ecdsa/curves.py",
+   "ecdsa/der.py",
+   "ecdsa/ecdh.py",
+   "ecdsa/ecdsa.py",
+   "ecdsa/eddsa.py",
+   "ecdsa/ellipticcurve.py",
+   "ecdsa/errors.py",
+   "ecdsa/keys.py",
+   "ecdsa/numbertheory.py",
+   "ecdsa/rfc6979.py",
+   "ecdsa/ssh.py",
+   "ecdsa/util.py"
+  ],
+  "suite_runs": [
+   {
+    "name": "all",
+    "paths": [
+     "src/ecdsa"
+    ]
+   }
+  ],
+  "suite_runs_source": "tox.ini, [testenv] (line 30): 1 pytest call on src/ecdsa, under coverage; .github/workflows/ci.yml runs it for Python 3.12 as tox -e py312 (lines 83-86 and 340-342)",
+  "tag": "python-ecdsa-0.19.2",
+  "test_directories_source": "tox.ini, [testenv] (line 30): commands = coverage run --branch -m pytest {posargs:src/ecdsa}",
+  "tests": [
+   "src/ecdsa/test_keys.py",
+   "src/ecdsa/test_malformed_sigs.py",
+   "src/ecdsa/test_pyecdsa.py"
+  ],
+  "version": "0.19.2"
+ }
+}

@@ -1,0 +1,1035 @@
+{
+ "blocks": [
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    143,
+    143
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    142,
+    142
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_Message_init_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg"
+   ],
+   "test": "test_Message_init_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    160,
+    160
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    159,
+    159
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_IterationCount_init_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_IterationCount_init_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    178,
+    178
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    177,
+    177
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_IterationCount_from_str_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_IterationCount_from_str_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    187,
+    187
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call",
+    "expects TypeError"
+   ],
+   "expected": [
+    "TypeError"
+   ],
+   "expected_kinds": [
+    "builtin"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "TypeError",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    186,
+    186
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_IterationCount_lt_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "'<' not supported between instances of 'IterationCount' and 'int'"
+    ]
+   ],
+   "post_unparsed": [],
+   "test": "test_IterationCount_lt_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    223,
+    223
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    222,
+    222
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_username_unescape_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_username_unescape_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    241,
+    241
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    240,
+    240
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_CBindData_from_der_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_CBindData_from_der_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    280,
+    280
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    279,
+    279
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_Gs2Header_from_str_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_Gs2Header_from_str_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    325,
+    325
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    324,
+    324
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_Username_init_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_Username_init_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    346,
+    346
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    345,
+    345
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_Salt_init_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_Salt_init_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    364,
+    364
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    363,
+    363
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_Salt_from_str_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_Salt_from_str_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    390,
+    390
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    389,
+    389
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_Nonce_init_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_Nonce_init_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    421,
+    421
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    420,
+    420
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_CbName_init_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_CbName_init_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    458,
+    458
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    457,
+    457
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_AuthFn_call_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_AuthFn_call_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    539,
+    539
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    538,
+    538
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_ScramMechanism_make_auth_info_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_ScramMechanism_make_auth_info_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    609,
+    614
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    608,
+    608
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_ScramMechanism_make_server_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == msg"
+   ],
+   "test": "test_ScramMechanism_make_server_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    637,
+    637
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    636,
+    636
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_check_client_key_fail#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == msg",
+    "assert exc_info.value.server_error == ServerError.INVALID_PROOF"
+   ],
+   "test": "test_check_client_key_fail",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    955,
+    955
+   ],
+   "entry_calls": [
+    "set_server_first"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    954,
+    954
+   ],
+   "included": true,
+   "k": 0,
+   "key": "test/test_scramp.py::test_client_order#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_client_order",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1091,
+    1091
+   ],
+   "entry_calls": [
+    "set_client_final"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1090,
+    1090
+   ],
+   "included": true,
+   "k": 0,
+   "key": "test/test_scramp.py::test_server_order#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_server_order",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1124,
+    1128
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1120,
+    1123
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_check_stage#0",
+   "match": "The next method to be called is get_server_first, not this method.",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_check_stage",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1200,
+    1200
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1199,
+    1199
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_set_client_first_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_set_client_first_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1212,
+    1218
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1211,
+    1211
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_set_client_first_error_unknown_user#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "Unknown user: unknown-user"
+    ]
+   ],
+   "post_unparsed": [
+    "assert exc_info.value.server_error == ServerError.UNKNOWN_USER"
+   ],
+   "test": "test_set_client_first_error_unknown_user",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1230,
+    1236
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1229,
+    1229
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_set_client_first_error_auth_fn#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [
+    [
+     "str_eq",
+     "auth_fn exception: no-resources"
+    ]
+   ],
+   "post_unparsed": [
+    "assert exc_info.value.server_error == ServerError.NO_RESOURCES"
+   ],
+   "test": "test_set_client_first_error_auth_fn",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1325,
+    1335
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1324,
+    1324
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_set_client_final_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg",
+    "assert exc_info.value.server_error == server_error"
+   ],
+   "test": "test_set_client_final_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1381,
+    1381
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1380,
+    1380
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_set_server_first_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == error_msg"
+   ],
+   "test": "test_set_server_first_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1408,
+    1414
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1407,
+    1407
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_ScramClient_init_error_no_cert#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == expected_error_msg"
+   ],
+   "test": "test_ScramClient_init_error_no_cert",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": "exc_info",
+   "body_span": [
+    1522,
+    1522
+   ],
+   "entry_calls": [],
+   "exclusion": [
+    "no entry-point call"
+   ],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1521,
+    1521
+   ],
+   "included": false,
+   "k": 0,
+   "key": "test/test_scramp.py::test_ScramClient_init_error#0",
+   "match": null,
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [
+    "assert str(exc_info.value) == msg"
+   ],
+   "test": "test_ScramClient_init_error",
+   "test_class": null
+  },
+  {
+   "api": "pytest",
+   "binding": null,
+   "body_span": [
+    1543,
+    1543
+   ],
+   "entry_calls": [
+    "set_server_final"
+   ],
+   "exclusion": [],
+   "expected": [
+    "ScramException"
+   ],
+   "expected_kinds": [
+    "import"
+   ],
+   "expected_resolution": "direct",
+   "expected_source": "ScramException",
+   "file": "test/test_scramp.py",
+   "form": "with",
+   "header_span": [
+    1538,
+    1542
+   ],
+   "included": true,
+   "k": 0,
+   "key": "test/test_scramp.py::test_ScramClient_set_server_final_missing_param#0",
+   "match": "Malformed server final message. Attributes must be separated by a ',' and each attribute must start with a letter followed by a '=': other-error",
+   "match_unparsed": null,
+   "post": [],
+   "post_unparsed": [],
+   "test": "test_ScramClient_set_server_final_missing_param",
+   "test_class": null
+  }
+ ],
+ "counts": {
+  "blocks": 27,
+  "entry_point_blocks": 3,
+  "included": 3
+ },
+ "test_files": [
+  "test/test_scramp.py"
+ ],
+ "test_files_sha256": {
+  "test/test_scramp.py": "ff55a5131b16098cfc548fc061bd8edeec09769e0011166652a28d82679c4821"
+ }
+}

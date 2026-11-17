@@ -1,0 +1,68 @@
+{
+ "name": "ecdsa",
+ "distribution": "ecdsa",
+ "version": "0.19.2",
+ "repository": "https://github.com/tlsfuzzer/python-ecdsa",
+ "tag": "python-ecdsa-0.19.2",
+ "commit": "bd66899550d7185939bf27b75713a2ac9325a9d3",
+ "package": "ecdsa",
+ "source_root": "src",
+ "entry_points": [
+  "verify",
+  "verify_digest"
+ ],
+ "entry_points_source": "README.md, section Usage (lines 295-297), and docs/source/quickstart.rst, section Verifying (lines 157-178), show VerifyingKey.verify; docs/source/ecdsa.keys.rst (automodule of ecdsa.keys) documents VerifyingKey.verify, 'Verify a signature made over provided data' (src/ecdsa/keys.py line 638), and VerifyingKey.verify_digest, 'Verify a signature made over provided hash value' (line 695); docs/source/ecdsa.eddsa.rst (automodule of ecdsa.eddsa) documents PublicKey.verify, 'Verify a Pure EdDSA signature over data' (src/ecdsa/eddsa.py line 132), which VerifyingKey.verify calls for Edwards curves (keys.py lines 676-681). Entry points are names, so the same names elsewhere in the package count too. Public_key.verifies (src/ecdsa/ecdsa.py lines 184-186) returns True or False and is no entry point.",
+ "rejection_bases": [
+  "BadDigestError",
+  "BadSignatureError"
+ ],
+ "rejection_bases_source": "src/ecdsa/keys.py: the docstring of VerifyingKey.verify names BadSignatureError, 'if the signature is invalid or malformed' (line 668); that of VerifyingKey.verify_digest names BadSignatureError and BadDigestError, 'if the provided digest is too big for the curve associated with this VerifyingKey and allow_truncate was not set' (lines 718-720); README.md, section Usage (lines 295-297): verify 'either returns True or raises BadSignatureError'. Each of the 2 classes inherits from the built-in Exception alone (keys.py lines 38 and 53), so each is a base. The docstring of eddsa.PublicKey.verify (src/ecdsa/eddsa.py line 132) names no exception.",
+ "test_directories_source": "tox.ini, [testenv] (line 30): commands = coverage run --branch -m pytest {posargs:src/ecdsa}",
+ "suite_runs": [
+  {
+   "name": "all",
+   "paths": [
+    "src/ecdsa"
+   ]
+  }
+ ],
+ "suite_runs_source": "tox.ini, [testenv] (line 30): 1 pytest call on src/ecdsa, under coverage; .github/workflows/ci.yml runs it for Python 3.12 as tox -e py312 (lines 83-86 and 340-342)",
+ "pytest_args": [
+  "-p",
+  "no:cacheprovider"
+ ],
+ "copy": [
+  "src",
+  "conftest.py"
+ ],
+ "python": "3.12.3",
+ "subject_files": [
+  "ecdsa/__init__.py",
+  "ecdsa/_compat.py",
+  "ecdsa/_sha3.py",
+  "ecdsa/_version.py",
+  "ecdsa/curves.py",
+  "ecdsa/der.py",
+  "ecdsa/ecdh.py",
+  "ecdsa/ecdsa.py",
+  "ecdsa/eddsa.py",
+  "ecdsa/ellipticcurve.py",
+  "ecdsa/errors.py",
+  "ecdsa/keys.py",
+  "ecdsa/numbertheory.py",
+  "ecdsa/rfc6979.py",
+  "ecdsa/ssh.py",
+  "ecdsa/util.py"
+ ],
+ "observed_files": [],
+ "tests": [
+  "src/ecdsa/test_keys.py",
+  "src/ecdsa/test_malformed_sigs.py",
+  "src/ecdsa/test_pyecdsa.py"
+ ],
+ "scope_counts": {
+  "test_files_in_test_directories": 12,
+  "blocks_in_test_directories": 170,
+  "test_files_with_an_included_block": 3
+ }
+}

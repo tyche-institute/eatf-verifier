@@ -1,0 +1,3643 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#1",
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+    "backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1",
+    "backends.rsa_backend.RSAKey.unwrap_key#1",
+    "jwe._decompress#1",
+    "jwe._decrypt_and_auth#1",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#1",
+    "jwe.decrypt#2",
+    "jwe.decrypt#3",
+    "jwe.decrypt#4",
+    "jwe.decrypt#5",
+    "jwe.decrypt#6"
+   ],
+   "C_class": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#1",
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+    "backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1",
+    "backends.rsa_backend.RSAKey.unwrap_key#1",
+    "jwe._decompress#1",
+    "jwe._decrypt_and_auth#1",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#1",
+    "jwe.decrypt#2",
+    "jwe.decrypt#3",
+    "jwe.decrypt#4",
+    "jwe.decrypt#5",
+    "jwe.decrypt#6"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWEError"
+   ],
+   "key": "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0",
+   "name_tokens": [
+    "encryption",
+    "parity"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "backends.cryptography_backend.CryptographyAESKey.decrypt#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#1",
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+    "backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1",
+    "backends.rsa_backend.RSAKey.unwrap_key#1",
+    "jwe._decompress#1",
+    "jwe._decrypt_and_auth#1",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#1",
+    "jwe.decrypt#2",
+    "jwe.decrypt#3",
+    "jwe.decrypt#4",
+    "jwe.decrypt#5",
+    "jwe.decrypt#6"
+   ],
+   "C_class": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#1",
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+    "backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1",
+    "backends.rsa_backend.RSAKey.unwrap_key#1",
+    "jwe._decompress#1",
+    "jwe._decrypt_and_auth#1",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#1",
+    "jwe.decrypt#2",
+    "jwe.decrypt#3",
+    "jwe.decrypt#4",
+    "jwe.decrypt#5",
+    "jwe.decrypt#6"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWEError"
+   ],
+   "key": "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0",
+   "name_tokens": [
+    "parity",
+    "wrap"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "backends.cryptography_backend.CryptographyAESKey.decrypt#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "backends.cryptography_backend.CryptographyRSAKey.sign#1",
+    "jwk.construct#1"
+   ],
+   "C_class": [
+    "backends.cryptography_backend.CryptographyRSAKey.sign#1",
+    "jwk.construct#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWKError"
+   ],
+   "key": "tests/algorithms/test_EC.py::test_incorrect_public_key_hmac_signing#0",
+   "name_tokens": [
+    "hmac",
+    "incorrect",
+    "key",
+    "public",
+    "signing"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwk.construct#1",
+     "score": 0.693147,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "backends.cryptography_backend.CryptographyRSAKey.sign#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "jwk.construct#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#3"
+   ],
+   "C_class": [
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#3"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWEParseError"
+   ],
+   "key": "tests/test_jwe.py::TestDecrypt.test_invalid_jwe_is_parse_error#0",
+   "name_tokens": [
+    "invalid",
+    "jwe",
+    "parse"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwe._jwe_compact_deserialize#2",
+     "score": 0.369097,
+     "tokens": [
+      "invalid",
+      "jwe"
+     ]
+    },
+    {
+     "check": "jwe._jwe_compact_deserialize#3",
+     "score": 0.369097,
+     "tokens": [
+      "invalid",
+      "jwe"
+     ]
+    },
+    {
+     "check": "jwe._jwe_compact_deserialize#4",
+     "score": 0.369097,
+     "tokens": [
+      "invalid",
+      "jwe"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#3"
+   ],
+   "C_class": [
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#3"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWEParseError"
+   ],
+   "key": "tests/test_jwe.py::TestDecrypt.test_non_json_header_is_parse_error#0",
+   "name_tokens": [
+    "header",
+    "json",
+    "non",
+    "parse"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwe._jwe_compact_deserialize#4",
+     "score": 3.008155,
+     "tokens": [
+      "header",
+      "json"
+     ]
+    },
+    {
+     "check": "jwe._jwe_compact_deserialize#2",
+     "score": 0.81093,
+     "tokens": [
+      "header"
+     ]
+    },
+    {
+     "check": "jwe._jwe_compact_deserialize#3",
+     "score": 0.81093,
+     "tokens": [
+      "header"
+     ]
+    }
+   ],
+   "target": "jwe._jwe_compact_deserialize#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+    "backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1",
+    "backends.rsa_backend.RSAKey.unwrap_key#1",
+    "jwe._decompress#1",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe.decrypt#1",
+    "jwe.decrypt#2",
+    "jwe.decrypt#4",
+    "jwe.decrypt#5",
+    "jwe.decrypt#6"
+   ],
+   "C_class": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#1",
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+    "backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1",
+    "backends.rsa_backend.RSAKey.unwrap_key#1",
+    "jwe._decompress#1",
+    "jwe._decrypt_and_auth#1",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#1",
+    "jwe.decrypt#2",
+    "jwe.decrypt#3",
+    "jwe.decrypt#4",
+    "jwe.decrypt#5",
+    "jwe.decrypt#6"
+   ],
+   "C_pos": [
+    "jwe._decompress#1",
+    "jwe.decrypt#1"
+   ],
+   "basis": null,
+   "excluded": {
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#1": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ],
+    "jwe._decrypt_and_auth#1": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#1": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#2": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#4": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#5": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#6": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#7": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#8": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ],
+    "jwe.decrypt#3": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ]
+   },
+   "expected": [
+    "JWEError"
+   ],
+   "key": "tests/test_jwe.py::TestEncrypt.test_jwe_with_excessive_data#0",
+   "name_tokens": [
+    "data",
+    "excessive",
+    "jwe"
+   ],
+   "pool": "C_pos",
+   "positive": {
+    "jwe._decompress#1": [
+     "'JWE string' in str"
+    ],
+    "jwe.decrypt#1": [
+     "'JWE string' in str",
+     "'bytes exceeds' in str"
+    ]
+   },
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwe._decompress#1",
+     "score": 0.0,
+     "tokens": [
+      "jwe"
+     ]
+    },
+    {
+     "check": "jwe.decrypt#1",
+     "score": 0.0,
+     "tokens": [
+      "jwe"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+    "backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1",
+    "backends.rsa_backend.RSAKey.unwrap_key#1",
+    "jwe._decompress#1",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe.decrypt#1",
+    "jwe.decrypt#2",
+    "jwe.decrypt#4",
+    "jwe.decrypt#5",
+    "jwe.decrypt#6"
+   ],
+   "C_class": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#1",
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "backends.cryptography_backend.CryptographyAESKey.unwrap_key#1",
+    "backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1",
+    "backends.rsa_backend.RSAKey.unwrap_key#1",
+    "jwe._decompress#1",
+    "jwe._decrypt_and_auth#1",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe._jwe_compact_deserialize#2",
+    "jwe._jwe_compact_deserialize#3",
+    "jwe._jwe_compact_deserialize#4",
+    "jwe._jwe_compact_deserialize#5",
+    "jwe._jwe_compact_deserialize#6",
+    "jwe._jwe_compact_deserialize#7",
+    "jwe._jwe_compact_deserialize#8",
+    "jwe.decrypt#1",
+    "jwe.decrypt#2",
+    "jwe.decrypt#3",
+    "jwe.decrypt#4",
+    "jwe.decrypt#5",
+    "jwe.decrypt#6"
+   ],
+   "C_pos": [
+    "jwe._decompress#1"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#1": [
+     "'Decompressed JWE string exceeds' in str"
+    ],
+    "jwe._decrypt_and_auth#1": [
+     "'Decompressed JWE string exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#1": [
+     "'Decompressed JWE string exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#2": [
+     "'Decompressed JWE string exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#4": [
+     "'Decompressed JWE string exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#5": [
+     "'Decompressed JWE string exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#6": [
+     "'Decompressed JWE string exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#7": [
+     "'Decompressed JWE string exceeds' in str"
+    ],
+    "jwe._jwe_compact_deserialize#8": [
+     "'Decompressed JWE string exceeds' in str"
+    ],
+    "jwe.decrypt#3": [
+     "'Decompressed JWE string exceeds' in str"
+    ]
+   },
+   "expected": [
+    "JWEError"
+   ],
+   "key": "tests/test_jwe.py::TestEncrypt.test_jwe_zip_with_excessive_data#0",
+   "name_tokens": [
+    "data",
+    "excessive",
+    "jwe",
+    "zip"
+   ],
+   "positive": {
+    "jwe._decompress#1": [
+     "'Decompressed JWE string exceeds' in str"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "jwe._decompress#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestJWS.test_invalid_algorithm#0",
+   "name_tokens": [
+    "algorithm",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws._verify_signature#5",
+     "score": 1.951845,
+     "tokens": [
+      "algorithm",
+      "invalid"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#1",
+     "score": 1.178655,
+     "tokens": [
+      "algorithm"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#2",
+     "score": 1.178655,
+     "tokens": [
+      "algorithm"
+     ]
+    }
+   ],
+   "target": "jws._verify_signature#5",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestJWS.test_not_enough_segments#0",
+   "name_tokens": [
+    "enough",
+    "not",
+    "segment"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws._load#1",
+     "score": 6.596236,
+     "tokens": [
+      "enough",
+      "not",
+      "segment"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#2",
+     "score": 1.466337,
+     "tokens": [
+      "not"
+     ]
+    },
+    {
+     "check": "jws.sign#1",
+     "score": 1.466337,
+     "tokens": [
+      "not"
+     ]
+    }
+   ],
+   "target": "jws._load#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestJWS.test_header_invalid_padding#0",
+   "name_tokens": [
+    "header",
+    "invalid",
+    "padding"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws._load#2",
+     "score": 3.195038,
+     "tokens": [
+      "header",
+      "invalid",
+      "padding"
+     ]
+    },
+    {
+     "check": "jws._load#5",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "padding"
+     ]
+    },
+    {
+     "check": "jws._load#6",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "padding"
+     ]
+    }
+   ],
+   "target": "jws._load#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestJWS.test_header_not_json#0",
+   "name_tokens": [
+    "header",
+    "json",
+    "not"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws._load#4",
+     "score": 3.520461,
+     "tokens": [
+      "header",
+      "json"
+     ]
+    },
+    {
+     "check": "jws._load#1",
+     "score": 1.466337,
+     "tokens": [
+      "not"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#2",
+     "score": 1.466337,
+     "tokens": [
+      "not"
+     ]
+    }
+   ],
+   "target": "jws._load#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestJWS.test_claims_invalid_padding#0",
+   "name_tokens": [
+    "claim",
+    "invalid",
+    "padding"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws._sign_header_and_claims#1",
+     "score": 2.564949,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jws._load#2",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "padding"
+     ]
+    },
+    {
+     "check": "jws._load#5",
+     "score": 2.239527,
+     "tokens": [
+      "invalid",
+      "padding"
+     ]
+    }
+   ],
+   "target": "jws._sign_header_and_claims#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestJWS.test_claims_not_json#0",
+   "name_tokens": [
+    "claim",
+    "json",
+    "not"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jws._load#4",
+     "score": 2.564949,
+     "tokens": [
+      "json"
+     ]
+    },
+    {
+     "check": "jws._sign_header_and_claims#1",
+     "score": 2.564949,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jws._load#1",
+     "score": 1.466337,
+     "tokens": [
+      "not"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jws._load#4",
+    "jws._sign_header_and_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestHMAC.test_wrong_alg#0",
+   "name_tokens": [
+    "alg",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jws._verify_signature#1",
+     "score": 1.466337,
+     "tokens": [
+      "alg"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#2",
+     "score": 1.466337,
+     "tokens": [
+      "alg"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#3",
+     "score": 1.466337,
+     "tokens": [
+      "alg"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestHMAC.test_wrong_key#0",
+   "name_tokens": [
+    "key",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws._verify_signature#3",
+     "score": 2.564949,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "jws._load#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws._load#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "jws._verify_signature#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestRSA.test_jwk_set_failure#0",
+   "name_tokens": [
+    "jwk",
+    "set"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jws._load#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws._load#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws._load#3",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestRSA.test_wrong_alg#0",
+   "name_tokens": [
+    "alg",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jws._verify_signature#1",
+     "score": 1.466337,
+     "tokens": [
+      "alg"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#2",
+     "score": 1.466337,
+     "tokens": [
+      "alg"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#3",
+     "score": 1.466337,
+     "tokens": [
+      "alg"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestRSA.test_wrong_key#0",
+   "name_tokens": [
+    "key",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws._verify_signature#3",
+     "score": 2.564949,
+     "tokens": [
+      "key"
+     ]
+    },
+    {
+     "check": "jws._load#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jws._load#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "jws._verify_signature#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestEC.test_wrong_alg#0",
+   "name_tokens": [
+    "alg",
+    "wrong"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jws._verify_signature#1",
+     "score": 1.466337,
+     "tokens": [
+      "alg"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#2",
+     "score": 1.466337,
+     "tokens": [
+      "alg"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#3",
+     "score": 1.466337,
+     "tokens": [
+      "alg"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestLoad.test_header_not_mapping#0",
+   "name_tokens": [
+    "header",
+    "mapping",
+    "not"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jws._load#4",
+     "score": 3.520461,
+     "tokens": [
+      "header",
+      "mapping"
+     ]
+    },
+    {
+     "check": "jws._load#1",
+     "score": 1.466337,
+     "tokens": [
+      "not"
+     ]
+    },
+    {
+     "check": "jws._verify_signature#2",
+     "score": 1.466337,
+     "tokens": [
+      "not"
+     ]
+    }
+   ],
+   "target": "jws._load#4",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestLoad.test_claims_not_mapping#0",
+   "name_tokens": [
+    "claim",
+    "mapping",
+    "not"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jws._load#4",
+     "score": 2.564949,
+     "tokens": [
+      "mapping"
+     ]
+    },
+    {
+     "check": "jws._sign_header_and_claims#1",
+     "score": 2.564949,
+     "tokens": [
+      "claim"
+     ]
+    },
+    {
+     "check": "jws._load#1",
+     "score": 1.466337,
+     "tokens": [
+      "not"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jws._load#4",
+    "jws._sign_header_and_claims#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_class": [
+    "jws._load#1",
+    "jws._load#2",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._sign_header_and_claims#1",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jws._verify_signature#5",
+    "jws.sign#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWSError"
+   ],
+   "key": "tests/test_jws.py::TestLoad.test_signature_padding#0",
+   "name_tokens": [
+    "padding",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jws._load#2",
+     "score": 1.466337,
+     "tokens": [
+      "padding"
+     ]
+    },
+    {
+     "check": "jws._load#5",
+     "score": 1.466337,
+     "tokens": [
+      "padding"
+     ]
+    },
+    {
+     "check": "jws._load#6",
+     "score": 1.466337,
+     "tokens": [
+      "padding"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jws._load#2",
+    "jws._load#5",
+    "jws._load#6"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_no_alg#0",
+   "name_tokens": [
+    "alg",
+    "no"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwt._validate_at_hash#2",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_claims#1",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [
+    "jwt.decode#2",
+    "jwt.decode#3"
+   ],
+   "basis": "assert+name",
+   "excluded": {
+    "jwt._validate_at_hash#2": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_aud#1": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_aud#2": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_claims#2": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_exp#1": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_exp#2": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_iat#1": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_iss#1": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_jti#1": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_nbf#1": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_nbf#2": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_sub#1": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt._validate_sub#2": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt.get_unverified_header#1": [
+     "match 'Invalid payload string: '"
+    ]
+   },
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_invalid_claims_json#0",
+   "name_tokens": [
+    "claim",
+    "invalid",
+    "json"
+   ],
+   "pool": "C_pos",
+   "positive": {
+    "jwt.decode#2": [
+     "match 'Invalid payload string: '"
+    ],
+    "jwt.decode#3": [
+     "match 'Invalid payload string: '"
+    ]
+   },
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt.decode#3",
+     "score": 1.386294,
+     "tokens": [
+      "claim",
+      "invalid",
+      "json"
+     ]
+    },
+    {
+     "check": "jwt.decode#2",
+     "score": 0.0,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": "jwt.decode#3",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_claims#1",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [
+    "jwt.decode#3"
+   ],
+   "basis": "assert-literal",
+   "excluded": {
+    "jwt._validate_at_hash#2": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_aud#1": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_aud#2": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_claims#2": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_exp#1": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_exp#2": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_iat#1": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_iss#1": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_jti#1": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_nbf#1": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_nbf#2": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_sub#1": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt._validate_sub#2": [
+     "match 'Invalid payload string: must be a json object'"
+    ],
+    "jwt.get_unverified_header#1": [
+     "match 'Invalid payload string: must be a json object'"
+    ]
+   },
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_invalid_claims#0",
+   "name_tokens": [
+    "claim",
+    "invalid"
+   ],
+   "positive": {
+    "jwt.decode#3": [
+     "match 'Invalid payload string: must be a json object'"
+    ]
+   },
+   "reason": null,
+   "scores": [],
+   "target": "jwt.decode#3",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_iat_not_int#0",
+   "name_tokens": [
+    "iat",
+    "int",
+    "not"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt._validate_iat#1",
+     "score": 2.944439,
+     "tokens": [
+      "iat"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#2",
+     "score": 1.845827,
+     "tokens": [
+      "not"
+     ]
+    },
+    {
+     "check": "jwt._validate_nbf#1",
+     "score": 1.845827,
+     "tokens": [
+      "not"
+     ]
+    }
+   ],
+   "target": "jwt._validate_iat#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_nbf_not_int#0",
+   "name_tokens": [
+    "int",
+    "nbf",
+    "not"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_nbf#1",
+     "score": 4.097118,
+     "tokens": [
+      "nbf",
+      "not"
+     ]
+    },
+    {
+     "check": "jwt._validate_nbf#2",
+     "score": 4.097118,
+     "tokens": [
+      "nbf",
+      "not"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#2",
+     "score": 1.845827,
+     "tokens": [
+      "not"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_nbf_in_future#0",
+   "name_tokens": [
+    "future",
+    "nbf"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_nbf#1",
+     "score": 2.251292,
+     "tokens": [
+      "nbf"
+     ]
+    },
+    {
+     "check": "jwt._validate_nbf#2",
+     "score": 2.251292,
+     "tokens": [
+      "nbf"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_nbf_skip#0",
+   "name_tokens": [
+    "nbf",
+    "skip"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_nbf#1",
+     "score": 2.251292,
+     "tokens": [
+      "nbf"
+     ]
+    },
+    {
+     "check": "jwt._validate_nbf#2",
+     "score": 2.251292,
+     "tokens": [
+      "nbf"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_exp_not_int#0",
+   "name_tokens": [
+    "exp",
+    "int",
+    "not"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_exp#1",
+     "score": 2.251292,
+     "tokens": [
+      "exp"
+     ]
+    },
+    {
+     "check": "jwt._validate_exp#2",
+     "score": 2.251292,
+     "tokens": [
+      "exp"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#2",
+     "score": 1.845827,
+     "tokens": [
+      "not"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_exp_in_past#0",
+   "name_tokens": [
+    "exp",
+    "past"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_exp#1",
+     "score": 2.251292,
+     "tokens": [
+      "exp"
+     ]
+    },
+    {
+     "check": "jwt._validate_exp#2",
+     "score": 2.251292,
+     "tokens": [
+      "exp"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_exp_skip#0",
+   "name_tokens": [
+    "exp",
+    "skip"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_exp#1",
+     "score": 2.251292,
+     "tokens": [
+      "exp"
+     ]
+    },
+    {
+     "check": "jwt._validate_exp#2",
+     "score": 2.251292,
+     "tokens": [
+      "exp"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_aud_list_is_strings#0",
+   "name_tokens": [
+    "aud",
+    "list",
+    "string"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 5.195731,
+     "tokens": [
+      "aud",
+      "list"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#2",
+     "score": 2.251292,
+     "tokens": [
+      "aud"
+     ]
+    },
+    {
+     "check": "jwt._validate_claims#2",
+     "score": 1.335001,
+     "tokens": [
+      "string"
+     ]
+    }
+   ],
+   "target": "jwt._validate_aud#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_aud_case_sensitive#0",
+   "name_tokens": [
+    "aud",
+    "case",
+    "sensitive"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 2.251292,
+     "tokens": [
+      "aud"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#2",
+     "score": 2.251292,
+     "tokens": [
+      "aud"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_aud_not_string_or_list#0",
+   "name_tokens": [
+    "aud",
+    "list",
+    "not",
+    "string"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 5.195731,
+     "tokens": [
+      "aud",
+      "list"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#2",
+     "score": 2.251292,
+     "tokens": [
+      "aud"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#2",
+     "score": 1.845827,
+     "tokens": [
+      "not"
+     ]
+    }
+   ],
+   "target": "jwt._validate_aud#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_aud_given_number#0",
+   "name_tokens": [
+    "aud",
+    "given",
+    "number"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 2.251292,
+     "tokens": [
+      "aud"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#2",
+     "score": 2.251292,
+     "tokens": [
+      "aud"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_iss_invalid#0",
+   "name_tokens": [
+    "invalid",
+    "iss"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt._validate_iss#1",
+     "score": 4.097118,
+     "tokens": [
+      "invalid",
+      "iss"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 1.15268,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#2",
+     "score": 1.15268,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": "jwt._validate_iss#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_sub_invalid#0",
+   "name_tokens": [
+    "invalid",
+    "sub"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt._validate_sub#2",
+     "score": 3.403971,
+     "tokens": [
+      "invalid",
+      "sub"
+     ]
+    },
+    {
+     "check": "jwt._validate_sub#1",
+     "score": 2.251292,
+     "tokens": [
+      "sub"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 1.15268,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": "jwt._validate_sub#2",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_sub_incorrect#0",
+   "name_tokens": [
+    "incorrect",
+    "sub"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_sub#1",
+     "score": 2.251292,
+     "tokens": [
+      "sub"
+     ]
+    },
+    {
+     "check": "jwt._validate_sub#2",
+     "score": 2.251292,
+     "tokens": [
+      "sub"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_jti_invalid#0",
+   "name_tokens": [
+    "invalid",
+    "jti"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt._validate_jti#1",
+     "score": 2.944439,
+     "tokens": [
+      "jti"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 1.15268,
+     "tokens": [
+      "invalid"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#2",
+     "score": 1.15268,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": "jwt._validate_jti#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_at_hash_invalid#0",
+   "name_tokens": [
+    "hash",
+    "invalid"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 2.251292,
+     "tokens": [
+      "hash"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#2",
+     "score": 2.251292,
+     "tokens": [
+      "hash"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 1.15268,
+     "tokens": [
+      "invalid"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_at_hash_missing_access_token#0",
+   "name_tokens": [
+    "acces",
+    "hash",
+    "missing",
+    "token"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 5.837585,
+     "tokens": [
+      "acces",
+      "hash",
+      "token"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#2",
+     "score": 5.837585,
+     "tokens": [
+      "acces",
+      "hash",
+      "token"
+     ]
+    },
+    {
+     "check": "jwt._validate_claims#1",
+     "score": 2.944439,
+     "tokens": [
+      "missing"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_at_hash_unable_to_calculate#0",
+   "name_tokens": [
+    "calculate",
+    "hash",
+    "unable"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 2.251292,
+     "tokens": [
+      "hash"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#2",
+     "score": 2.251292,
+     "tokens": [
+      "hash"
+     ]
+    },
+    {
+     "check": "jwt._validate_aud#1",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_class": [
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#1",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_iat#1",
+    "jwt._validate_iss#1",
+    "jwt._validate_jti#1",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2",
+    "jwt.decode#3",
+    "jwt.get_unverified_header#1"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "JWTError"
+   ],
+   "key": "tests/test_jwt.py::TestJWT.test_require#0",
+   "name_tokens": [
+    "require"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "jwt._validate_claims#1",
+     "score": 2.944439,
+     "tokens": [
+      "require"
+     ]
+    },
+    {
+     "check": "jwt._validate_at_hash#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "jwt._validate_at_hash#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": "jwt._validate_claims#1",
+   "tier": "name"
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "assert+name": 1,
+  "assert-literal": 2,
+  "name": 17,
+  "none: no name token matches": 5,
+  "none: tie": 19
+ },
+ "rule_version": "reach-target-rule/2"
+}

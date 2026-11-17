@@ -1,0 +1,491 @@
+{
+ "blocks": [
+  {
+   "C_assert": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_class": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_ed25519_sig_verify_malformed#0",
+   "name_tokens": [
+    "ed25519",
+    "malformed",
+    "sig",
+    "verify"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "keys.VerifyingKey.verify#1",
+     "score": 0.405465,
+     "tokens": [
+      "malformed",
+      "verify"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#1",
+     "score": 0.405465,
+     "tokens": [
+      "malformed",
+      "verify"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#2",
+     "score": 0.0,
+     "tokens": [
+      "verify"
+     ]
+    }
+   ],
+   "target": null,
+   "tied": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_class": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0",
+   "name_tokens": [
+    "der",
+    "fuzzed",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "keys.VerifyingKey.verify_digest#1",
+     "score": 1.098612,
+     "tokens": [
+      "der",
+      "signature"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#2",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": "keys.VerifyingKey.verify_digest#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_class": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0",
+   "name_tokens": [
+    "der",
+    "ecdsa",
+    "random",
+    "sig",
+    "value"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "tie",
+   "scores": [
+    {
+     "check": "keys.VerifyingKey.verify#1",
+     "score": 1.098612,
+     "tokens": [
+      "value"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#1",
+     "score": 1.098612,
+     "tokens": [
+      "der"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tied": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1"
+   ],
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_class": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_pos": [],
+   "basis": "name",
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0",
+   "name_tokens": [
+    "der",
+    "random",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": null,
+   "scores": [
+    {
+     "check": "keys.VerifyingKey.verify_digest#1",
+     "score": 1.098612,
+     "tokens": [
+      "der",
+      "signature"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#2",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": "keys.VerifyingKey.verify_digest#1",
+   "tier": "name"
+  },
+  {
+   "C_assert": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_class": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0",
+   "name_tokens": [
+    "byte",
+    "random",
+    "signature"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "keys.VerifyingKey.verify#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#2",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_class": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0",
+   "name_tokens": [
+    "fuzzed",
+    "signature",
+    "string"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "keys.VerifyingKey.verify#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#1",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#2",
+     "score": 0.0,
+     "tokens": [
+      "signature"
+     ]
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_class": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys.VerifyingKey.verify_digest#2"
+   ],
+   "C_pos": [],
+   "basis": null,
+   "excluded": {},
+   "expected": [
+    "BadSignatureError"
+   ],
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_basic#0",
+   "name_tokens": [
+    "basic"
+   ],
+   "pool": "C_assert",
+   "positive": {},
+   "reason": "no name token matches",
+   "scores": [
+    {
+     "check": "keys.VerifyingKey.verify#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#1",
+     "score": 0.0,
+     "tokens": []
+    },
+    {
+     "check": "keys.VerifyingKey.verify_digest#2",
+     "score": 0.0,
+     "tokens": []
+    }
+   ],
+   "target": null,
+   "tier": null
+  },
+  {
+   "C_assert": [
+    "keys._truncate_and_convert_digest#1"
+   ],
+   "C_class": [
+    "keys._truncate_and_convert_digest#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "BadDigestError"
+   ],
+   "key": "src/ecdsa/test_pyecdsa.py::ECDSA.test_verify_with_too_long_input#0",
+   "name_tokens": [
+    "input",
+    "long",
+    "too",
+    "verify"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "keys._truncate_and_convert_digest#1",
+   "tier": "assertion"
+  },
+  {
+   "C_assert": [
+    "keys._truncate_and_convert_digest#1"
+   ],
+   "C_class": [
+    "keys._truncate_and_convert_digest#1"
+   ],
+   "C_pos": [],
+   "basis": "class",
+   "excluded": {},
+   "expected": [
+    "BadDigestError"
+   ],
+   "key": "src/ecdsa/test_pyecdsa.py::TooSmallCurve.test_verify_too_small_curve_dont_allow_truncate_raises#0",
+   "name_tokens": [
+    "allow",
+    "curve",
+    "dont",
+    "small",
+    "too",
+    "truncate",
+    "verify"
+   ],
+   "positive": {},
+   "reason": null,
+   "scores": [],
+   "target": "keys._truncate_and_convert_digest#1",
+   "tier": "assertion"
+  }
+ ],
+ "constants": {
+  "assertion_tier": [
+   "class",
+   "assert",
+   "assert-literal"
+  ],
+  "min_len": 2,
+  "name_tier": [
+   "assert+name",
+   "name"
+  ],
+  "score_digits": 9,
+  "stop": [
+   "a",
+   "an",
+   "and",
+   "are",
+   "as",
+   "at",
+   "be",
+   "by",
+   "error",
+   "errors",
+   "exception",
+   "exceptions",
+   "fail",
+   "fails",
+   "failure",
+   "for",
+   "if",
+   "in",
+   "is",
+   "it",
+   "of",
+   "on",
+   "or",
+   "raise",
+   "raised",
+   "raises",
+   "reject",
+   "rejected",
+   "rejects",
+   "should",
+   "test",
+   "tests",
+   "that",
+   "the",
+   "throw",
+   "throws",
+   "to",
+   "when",
+   "with"
+  ],
+  "strip_s_above": 3,
+  "weight": "log(N / df(t))"
+ },
+ "counts": {
+  "class": 2,
+  "name": 2,
+  "none: no name token matches": 3,
+  "none: tie": 2
+ },
+ "rule_version": "reach-target-rule/2"
+}
