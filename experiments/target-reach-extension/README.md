@@ -26,18 +26,47 @@ run; its section 1 gives the source of each number below.
 
 ## Status
 
-None of the runs that `PROTOCOL.md` describes has been made. The folder holds
-the protocol, the definitions of the 7 screened libraries with the record of
-their preparation, the sample of 20 checks, the scripts of the 3 parts and
-their tests. The outputs listed under "Files" as "after the runs" do not exist
-yet. Section 5 of the protocol states what had been done before its commit.
+The runs of steps 3, 4 and 6 of section 6 of `PROTOCOL.md` were made on
+2026-11-17 from 15:29:03Z to 15:48:56Z, after the 2 time stamps of the
+protocol commit (15:27:56Z); the last runs of the scripts of the reading
+(step 5) were made from 15:48:31Z to 16:14:00Z, as their records in
+`no-fire/reach/` give. `DEVIATIONS.md` lists 4 departures: steps 3 and 4 ran
+at the same time; `ecdsa` was left out of its second computation, of the
+report and of the sweep, which were run again with it; the paths of the
+machine in outputs and logs were made relative; and the scripts of the
+reading changed between their runs. In short, with the files that give each
+number:
+
+- **Screened libraries.** `paramiko`, `pycryptodome` and `scramp` went
+  through no step (section 3.3). `ecdsa` gets no verdict on the 5
+  expectations, because sentinel 1 does not hold. For `python-jose`,
+  `supabase-auth` and `service-identity`, `screened/generated/REPORT.md` gives
+  the counts and the verdicts, and the second computation agrees with
+  `reach/analyse.py` on every count that both give (`logs/stream-1/` and
+  `logs/stream-3/`, the logs of `compare.py`).
+- **Sweep.** For `python-jose`, `supabase-auth` and `service-identity`, no
+  outcome of a selected test and no case differs from the control on any
+  interpreter run, and on 3.12.3 no case differs from the main baseline. For
+  `ecdsa`, no outcome differs; 11 cases differ from the control on 3.13.14
+  and 9 on 3.14.6, and on 3.12.3 9 cases differ from the main baseline
+  (`screened/versions/interpreters.csv`).
+- **No-fire deletions.** The whole suite detects the deletion of 39 of the
+  39 checks of `google-auth` that fire in no case, 11 of 13 in `oauthlib`, 7
+  of 12 in `authlib` and 29 of 39 in `joserfc` (no count is pooled across
+  libraries, `PROTOCOL.md`, section 7). No deletion and no control copy timed out, and no
+  control copy is detected. The deletions of the 2 checks of `oauthlib` named
+  in section 5 of the protocol are both detected
+  (`no-fire/deletions-nofire.csv`).
+- **Nested-header depth.** The 12 runs are in `nested-depth/results.jsonl`.
+- **The sample.** The reading of the 20 sampled checks is in
+  `no-fire/reach/`.
 
 ## Files
 
 | File | Content |
 |---|---|
 | `PROTOCOL.md` | The protocol of the 3 parts, fixed by its commit |
-| `DEVIATIONS.md` | The departures from the protocol; none so far |
+| `DEVIATIONS.md` | The departures from the protocol |
 | `no-fire/README.md` | The scripts of the part, the population, the dry run and the preparation of the clones and environments |
 | `no-fire/sample.py`, `no-fire/sample.csv` | The draw of the 20 sampled checks, and its 20 rows |
 | `no-fire/nofire_deletions.py` | The deletion of the 103 checks and the whole-suite runs, with the functions of the toolkit |
@@ -60,9 +89,12 @@ After the runs (`PROTOCOL.md`, section 6):
 | `screened/recompute/<name>/` | The second computation and its comparison |
 | `screened/versions/` | `<name>.json`, `interpreters.csv`, `outcomes.csv` and `cases.csv` of the sweep |
 | `timestamps/` | The tokens of the protocol commit and of the results commit |
+| `logs/stream-1/`, `logs/stream-2/`, `logs/stream-3/` | The output of each command of the runs, with `runs.jsonl` (command, start, end, exit status) and, in `stream-1/by-hand.txt`, the 2 commands given by hand |
+| `superseded/` | The outputs of the first report and of the first sweep, which left out `ecdsa` (`DEVIATIONS.md`, entry 2), and 2 earlier runs of the reading of `authlib` (entry 4) |
 
-`work/` (clones, interpreters, environments, copies, raw records and logs) is
-not deposited.
+`work/` (clones, interpreters, environments, copies, raw records and the logs
+of single runs) is not deposited; the logs of the commands are in `logs/`. In the logs, the times that the scripts print without a date are
+the local time of the machine, UTC+01:00; the times of `runs.jsonl` are UTC.
 
 ## How to run
 

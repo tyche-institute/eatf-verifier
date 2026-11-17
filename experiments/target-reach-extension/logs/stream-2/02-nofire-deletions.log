@@ -1,0 +1,22 @@
+google-auth: 39 of the 100 rows of experiments/target-reach/generated/google-auth/checks.csv have reachable yes and cases_fired 0
+oauthlib: 13 of the 88 rows of experiments/target-reach/generated/oauthlib/checks.csv have reachable yes and cases_fired 0
+authlib: 12 of the 39 rows of experiments/target-reach/generated/authlib/checks.csv have reachable yes and cases_fired 0
+joserfc: 39 of the 97 rows of experiments/target-reach/generated/joserfc/checks.csv have reachable yes and cases_fired 0
+total: 103
+16:29:05 verify: commit 50b1eb269f11, 78 subject files and 1 test files match, CPython 3.12.3
+16:31:52 whole-baseline: 2349 tests pass in both runs, 0 unstable, run 1 {'passed': 2349}, 84.7 s
+16:37:26 whole-deletions: 39 copies and the control in 333.0 s; control detected: False; not detected: 0
+google-auth: 39 of 39 deletions detected; control detected: no
+16:37:26 verify: commit 6e3aa05af929, 75 subject files and 8 test files match, CPython 3.12.3
+16:37:30 whole-baseline: 717 tests pass in both runs, 0 unstable, run 1 {'passed': 717, 'skipped': 2}, 1.8 s
+16:37:34 whole-deletions: 13 copies and the control in 4.2 s; control detected: False; not detected: 2
+oauthlib: 11 of 13 deletions detected; control detected: no
+16:37:34 verify: commit 42607cbc2135, 215 subject files and 3 test files match, CPython 3.12.3
+16:38:28 whole-baseline: 1211 tests pass in both runs, 0 unstable, run 1 {'passed': 1211, 'skipped': 2}, 26.9 s
+16:39:28 whole-deletions: 12 copies and the control in 60.0 s; control detected: False; not detected: 5
+authlib: 7 of 12 deletions detected; control detected: no
+16:39:29 verify: commit f345ff71cd6c, 55 subject files and 11 test files match, CPython 3.12.3
+16:39:42 whole-baseline: 310 tests pass in both runs, 0 unstable, run 1 {'passed': 310}, 6.8 s
+16:40:19 whole-deletions: 39 copies and the control in 36.2 s; control detected: False; not detected: 10
+joserfc: 29 of 39 deletions detected; control detected: no
+wrote experiments/target-reach-extension/no-fire/deletions-nofire.csv: 107 rows; summary experiments/target-reach-extension/no-fire/summary.json; records experiments/target-reach-extension/no-fire/records

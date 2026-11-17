@@ -1,0 +1,907 @@
+{
+ "Q1": {
+  "cases_with_a_target": 0,
+  "cases_with_a_target_by_tier": {},
+  "cases_without_a_target": 20,
+  "flag_ids": [],
+  "flags": 0,
+  "flags_by_class": "not computed: a reading of the sources (section 6, step 4)",
+  "flags_by_tier": {},
+  "outcome_ids": {},
+  "outcomes": {
+   "not decided by the target": 0,
+   "the target decides the case": 0,
+   "the target does not fire": 0,
+   "the target fires and another check decides": 0,
+   "the target fires and no check decides": 0
+  },
+  "outcomes_by_tier": {}
+ },
+ "Q2": {
+  "cases_of_deletions_that_exceeded_the_time_limit": [],
+  "copies_whose_final_run_ended_without_a_record_or_a_result": 0,
+  "deletions": 8,
+  "deletions_not_detected_by_the_whole_suite_with_a_witness_that_holds": [],
+  "deletions_not_detected_by_the_whole_suite_without_a_witness_that_holds": [],
+  "deletions_of_checks_that_fire_and_never_decide": 0,
+  "deletions_of_deciding_checks": 8,
+  "deletions_time_limit_exceeded_twice": [],
+  "deletions_with_crashed_cases": [],
+  "deletions_with_withheld_cases": [],
+  "inclusion_breaks": {
+   "O_S_without_suite": [],
+   "O_V_without_O_C": [],
+   "O_V_without_O_S": [],
+   "O_Vfc_without_O_V": [],
+   "suite_without_whole_suite": []
+  },
+  "inclusion_breaks_counts": {
+   "O_S_without_suite": 0,
+   "O_V_without_O_C": 0,
+   "O_V_without_O_S": 0,
+   "O_Vfc_without_O_V": 0,
+   "suite_without_whole_suite": 0
+  },
+  "not_detected_checks_that_fire_and_never_decide": {
+   "O_C": 0,
+   "O_S": 0,
+   "O_T": 0,
+   "O_V": 0,
+   "O_Vfc": 0,
+   "suite": 0,
+   "whole_suite": 0
+  },
+  "not_detected_checks_that_fire_and_never_decide_ids": {
+   "O_C": [],
+   "O_S": [],
+   "O_T": [],
+   "O_V": [],
+   "O_Vfc": [],
+   "suite": [],
+   "whole_suite": []
+  },
+  "not_detected_checks_that_fire_and_never_decide_withheld_as_failing": {
+   "O_C": 0,
+   "O_T": 0,
+   "O_V": 0,
+   "O_Vfc": 0
+  },
+  "not_detected_checks_that_fire_and_never_decide_withheld_as_failing_ids": {
+   "O_C": [],
+   "O_T": [],
+   "O_V": [],
+   "O_Vfc": []
+  },
+  "not_detected_deciding_checks": {
+   "O_C": 1,
+   "O_S": 0,
+   "O_T": 8,
+   "O_V": 1,
+   "O_Vfc": 5,
+   "suite": 0,
+   "whole_suite": 0
+  },
+  "not_detected_deciding_checks_ids": {
+   "O_C": [
+    "helpers.parse_jwks#1"
+   ],
+   "O_S": [],
+   "O_T": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "O_V": [
+    "helpers.parse_jwks#1"
+   ],
+   "O_Vfc": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1"
+   ],
+   "suite": [],
+   "whole_suite": []
+  },
+  "not_detected_deciding_checks_withheld_as_failing": {
+   "O_C": 1,
+   "O_T": 8,
+   "O_V": 1,
+   "O_Vfc": 5
+  },
+  "not_detected_deciding_checks_withheld_as_failing_ids": {
+   "O_C": [
+    "helpers.parse_jwks#1"
+   ],
+   "O_T": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "O_V": [
+    "helpers.parse_jwks#1"
+   ],
+   "O_Vfc": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1"
+   ]
+  },
+  "per_deletion": {
+   "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1": {
+    "case_status": {
+     "observed": 20
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "_async.gotrue_client.AsyncGoTrueClient.get_claims#1": {
+    "case_status": {
+     "observed": 20
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0"
+     ],
+     "O_Vfc": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1": {
+    "case_status": {
+     "observed": 20
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "_sync.gotrue_client.SyncGoTrueClient.get_claims#1": {
+    "case_status": {
+     "observed": 20
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0"
+     ],
+     "O_Vfc": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "helpers.decode_jwt#1": {
+    "case_status": {
+     "observed": 20
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 12,
+    "tests_of_cases_not_passing": [
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]",
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "helpers.parse_jwks#1": {
+    "case_status": {
+     "observed": 20
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [],
+     "O_T": [],
+     "O_V": [],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": false,
+     "O_S": true,
+     "O_T": false,
+     "O_V": false,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": false,
+     "O_T": false,
+     "O_V": false,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 2,
+    "tests_of_cases_not_passing": [
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "helpers.validate_exp#1": {
+    "case_status": {
+     "observed": 20
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0",
+      "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0",
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0",
+      "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0",
+      "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0",
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0",
+      "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 4,
+    "tests_of_cases_not_passing": [
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "helpers.validate_exp#2": {
+    "case_status": {
+     "observed": 20
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0",
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0",
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0"
+     ],
+     "O_Vfc": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0",
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 2,
+    "tests_of_cases_not_passing": [
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   }
+  },
+  "recorder_runs_repeated": [],
+  "recorder_runs_without_a_record": [],
+  "runs_repeated": 0,
+  "runs_that_ended_without_a_record_or_a_result": [],
+  "runs_without_a_record_or_a_result": 0,
+  "whole_suite_final_runs_that_exceeded_the_time_limit": [],
+  "whole_suite_final_runs_without_a_result_file": [],
+  "whole_suite_records_inconsistent": [],
+  "whole_suite_runs_repeated": [],
+  "whole_suite_runs_that_exceeded_the_time_limit_any_attempt": [],
+  "whole_suite_runs_without_a_result": [],
+  "witness_files": {},
+  "witness_files_count": 0,
+  "witness_files_do_not_hold": 0,
+  "witness_files_hold": 0
+ },
+ "Q3": {
+  "own_test_without_the_target": {
+   "counted": 0,
+   "ids": {
+    "asserts more": {
+     "fails": [],
+     "passes": []
+    },
+    "class-only": {
+     "fails": [],
+     "passes": []
+    }
+   },
+   "not_counted": 0,
+   "not_counted_by_reason": {},
+   "not_counted_ids": {},
+   "own_test_by_kind_of_block": {
+    "asserts more": {
+     "fails": 0,
+     "passes": 0
+    },
+    "class-only": {
+     "fails": 0,
+     "passes": 0
+    }
+   },
+   "when_the_own_test_passes_the_case": {
+    "asserts more": {},
+    "class-only": {}
+   }
+  },
+  "pinning_without_the_deciding_check": {
+   "counted": 20,
+   "ids": {
+    "asserts more": {
+     "fails": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0",
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0",
+      "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0",
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0",
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0",
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0",
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0",
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0",
+      "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0",
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0",
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0",
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0"
+     ],
+     "passes": []
+    },
+    "class-only": {
+     "fails": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0"
+     ],
+     "passes": []
+    }
+   },
+   "not_counted": 0,
+   "not_counted_by_reason": {},
+   "not_counted_ids": {},
+   "own_test_by_kind_of_block": {
+    "asserts more": {
+     "fails": 12,
+     "passes": 0
+    },
+    "class-only": {
+     "fails": 8,
+     "passes": 0
+    }
+   },
+   "when_the_own_test_passes_the_case": {
+    "asserts more": {},
+    "class-only": {}
+   }
+  }
+ },
+ "cases": {
+  "cases_left_out": 0,
+  "cases_left_out_by_reason": {},
+  "cases_left_out_ids": {},
+  "cases_of_the_study": 20,
+  "cases_of_the_study_decided_by_a_check": 20,
+  "cases_of_the_study_decided_by_no_check": 0,
+  "cases_of_the_study_decided_by_no_check_by_raise_site": {},
+  "cases_of_the_study_decided_by_no_check_ids": [],
+  "fired_checks_recorded": true,
+  "recorded_executions_of_included_blocks": 20
+ },
+ "checks_at_run_time": {
+  "checks_that_fire_all": 8,
+  "checks_that_fire_and_never_decide_all": 0,
+  "checks_that_fire_and_never_decide_ids": [],
+  "checks_that_fire_and_never_decide_in_subject_files": 0,
+  "checks_that_fire_in_subject_files": 8,
+  "deciding_checks_all": 8,
+  "deciding_checks_ids": [
+   "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+   "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+   "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+   "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+   "helpers.decode_jwt#1",
+   "helpers.parse_jwks#1",
+   "helpers.validate_exp#1",
+   "helpers.validate_exp#2"
+  ],
+  "deciding_checks_in_subject_files": 8
+ },
+ "definitions": {
+  "blocks_in_blocks_json": 48,
+  "blocks_in_test_files_of_the_recorder_runs": 48,
+  "blocks_in_test_files_with_an_included_block": 48,
+  "checks_all": 64,
+  "checks_in_observed_files": 0,
+  "checks_in_subject_files": 64,
+  "class_only_blocks_among_all_blocks_of_the_recorder_run_files": 24,
+  "class_only_included_blocks": 4,
+  "included_blocks": 16,
+  "included_blocks_asserting_more_than_the_class": 12,
+  "included_blocks_with_a_target": 0,
+  "included_blocks_with_a_target_by_tier": {},
+  "raise_statements_listed_apart_not_checks": 47,
+  "reachable_checks_all": 12,
+  "reachable_checks_in_subject_files": 12,
+  "scope_counts_of_subject_json": {
+   "blocks_in_test_directories": 81,
+   "test_files_in_test_directories": 40,
+   "test_files_with_an_included_block": 8
+  },
+  "test_files_in_blocks_json": 8,
+  "test_files_of_the_recorder_runs": 8,
+  "test_files_with_an_included_block": 8
+ },
+ "expectations": {
+  "E1": {
+   "count": 1,
+   "rule": "at least 1 deletion of a deciding check is not detected by O_V",
+   "units": 8,
+   "verdict": "held",
+   "verdict_ignoring_sentinels": "held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "held",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "held"
+   }
+  },
+  "E2": {
+   "count": 0,
+   "rule": "O_C detects at least 1 deletion of a deciding check that O_V does not",
+   "units": 8,
+   "verdict": "not held",
+   "verdict_ignoring_sentinels": "not held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "not held",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "not held"
+   }
+  },
+  "E3": {
+   "count": 8,
+   "rule": "the whole suite detects every deletion of a deciding check",
+   "units": 8,
+   "verdict": "held",
+   "verdict_ignoring_sentinels": "held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "held",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "held"
+   }
+  },
+  "E4": {
+   "count": 0,
+   "rule": "at least 1 case with a target is not decided by its target",
+   "units": 0,
+   "verdict": "not applicable",
+   "verdict_ignoring_sentinels": "not applicable",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "not applicable",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "not applicable"
+   }
+  },
+  "E5": {
+   "class_only_included_blocks": 4,
+   "count": 0,
+   "included_blocks": 16,
+   "rule": "at least 1 case of a class-only block passes its own test after the deletion of its deciding check",
+   "units": 8,
+   "verdict": "not stated",
+   "verdict_ignoring_sentinels": "not stated",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "not stated",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "not stated"
+   }
+  }
+ },
+ "protocol": "PROTOCOL.md, sections 2, 4 and 7",
+ "refused_connection_attempts": {
+  "baseline_recorder_runs": {
+   "base-1": 0,
+   "base-2": 0
+  },
+  "deletion_and_control_recorder_runs_total": 0,
+  "deletion_and_control_recorder_runs_without_a_count": [],
+  "suite_run_without_recorder": 0,
+  "total": 0,
+  "whole_suite_deletion_and_control_runs_total": 0,
+  "whole_suite_deletion_and_control_runs_without_a_count": [],
+  "whole_suite_unmodified_runs": [
+   0,
+   0
+  ],
+  "witness_runs_total": 0
+ },
+ "runs": {
+  "cases_of_nested_blocks_all_recorded": 0,
+  "cases_of_nested_blocks_in_the_study": [],
+  "cases_of_nested_blocks_in_the_study_count": 0,
+  "cases_with_a_firing_in_another_thread_all_recorded": 0,
+  "cases_with_a_firing_in_another_thread_in_the_study": [],
+  "cases_with_a_firing_in_another_thread_in_the_study_count": 0,
+  "copies_that_stay": [],
+  "copies_that_stay_count": 0,
+  "expected_baseline_failures": [
+   "tests/_async/test_gotrue.py::test_get_authenticator_assurance_level",
+   "tests/_async/test_gotrue.py::test_get_claims_calls_get_user_if_symmetric_jwt",
+   "tests/_async/test_gotrue.py::test_get_claims_fetches_jwks_to_verify_asymmetric_jwt",
+   "tests/_async/test_gotrue.py::test_get_user_identities",
+   "tests/_async/test_gotrue.py::test_jwks_ttl_cache_behavior",
+   "tests/_async/test_gotrue.py::test_link_identity",
+   "tests/_async/test_gotrue.py::test_mfa_challenge",
+   "tests/_async/test_gotrue.py::test_mfa_enroll",
+   "tests/_async/test_gotrue.py::test_mfa_list_factors",
+   "tests/_async/test_gotrue.py::test_mfa_unenroll",
+   "tests/_async/test_gotrue.py::test_set_session_with_expired_token",
+   "tests/_async/test_gotrue.py::test_set_session_with_valid_tokens",
+   "tests/_async/test_gotrue.py::test_set_session_without_refresh_token",
+   "tests/_async/test_gotrue.py::test_sign_in_with_password",
+   "tests/_sync/test_gotrue.py::test_get_authenticator_assurance_level",
+   "tests/_sync/test_gotrue.py::test_get_claims_calls_get_user_if_symmetric_jwt",
+   "tests/_sync/test_gotrue.py::test_get_claims_fetches_jwks_to_verify_asymmetric_jwt",
+   "tests/_sync/test_gotrue.py::test_get_user_identities",
+   "tests/_sync/test_gotrue.py::test_jwks_ttl_cache_behavior",
+   "tests/_sync/test_gotrue.py::test_link_identity",
+   "tests/_sync/test_gotrue.py::test_mfa_challenge",
+   "tests/_sync/test_gotrue.py::test_mfa_enroll",
+   "tests/_sync/test_gotrue.py::test_mfa_list_factors",
+   "tests/_sync/test_gotrue.py::test_mfa_unenroll",
+   "tests/_sync/test_gotrue.py::test_set_session_with_expired_token",
+   "tests/_sync/test_gotrue.py::test_set_session_with_valid_tokens",
+   "tests/_sync/test_gotrue.py::test_set_session_without_refresh_token",
+   "tests/_sync/test_gotrue.py::test_sign_in_with_password"
+  ],
+  "expected_baseline_failures_count": 28,
+  "test_files_not_collected": [],
+  "test_files_not_collected_count": 0,
+  "tests_deselected_as_copies": [],
+  "tests_deselected_as_copies_count": 0,
+  "tests_deselected_in_baseline_recorder_run": [
+   "tests/_async/test_gotrue.py::test_get_authenticator_assurance_level",
+   "tests/_async/test_gotrue.py::test_get_claims_calls_get_user_if_symmetric_jwt",
+   "tests/_async/test_gotrue.py::test_get_claims_fetches_jwks_to_verify_asymmetric_jwt",
+   "tests/_async/test_gotrue.py::test_get_user_identities",
+   "tests/_async/test_gotrue.py::test_jwks_ttl_cache_behavior",
+   "tests/_async/test_gotrue.py::test_link_identity",
+   "tests/_async/test_gotrue.py::test_mfa_challenge",
+   "tests/_async/test_gotrue.py::test_mfa_enroll",
+   "tests/_async/test_gotrue.py::test_mfa_list_factors",
+   "tests/_async/test_gotrue.py::test_mfa_unenroll",
+   "tests/_async/test_gotrue.py::test_set_session_with_expired_token",
+   "tests/_async/test_gotrue.py::test_set_session_with_valid_tokens",
+   "tests/_async/test_gotrue.py::test_set_session_without_refresh_token",
+   "tests/_async/test_gotrue.py::test_sign_in_with_password",
+   "tests/_sync/test_gotrue.py::test_get_authenticator_assurance_level",
+   "tests/_sync/test_gotrue.py::test_get_claims_calls_get_user_if_symmetric_jwt",
+   "tests/_sync/test_gotrue.py::test_get_claims_fetches_jwks_to_verify_asymmetric_jwt",
+   "tests/_sync/test_gotrue.py::test_get_user_identities",
+   "tests/_sync/test_gotrue.py::test_jwks_ttl_cache_behavior",
+   "tests/_sync/test_gotrue.py::test_link_identity",
+   "tests/_sync/test_gotrue.py::test_mfa_challenge",
+   "tests/_sync/test_gotrue.py::test_mfa_enroll",
+   "tests/_sync/test_gotrue.py::test_mfa_list_factors",
+   "tests/_sync/test_gotrue.py::test_mfa_unenroll",
+   "tests/_sync/test_gotrue.py::test_set_session_with_expired_token",
+   "tests/_sync/test_gotrue.py::test_set_session_with_valid_tokens",
+   "tests/_sync/test_gotrue.py::test_set_session_without_refresh_token",
+   "tests/_sync/test_gotrue.py::test_sign_in_with_password"
+  ],
+  "tests_in_baseline_recorder_run": 210,
+  "tests_passing_in_baseline_recorder_run": 210,
+  "time_limit_seconds_recorder": 60.0,
+  "time_limit_seconds_whole_suite": 60.0,
+  "whole_suite_tests_passing_in_both_unmodified_runs": 428
+ },
+ "sentinels": {
+  "1": "holds",
+  "2": "holds",
+  "3": "holds",
+  "4": "holds",
+  "5": "holds",
+  "6": "holds",
+  "7": "holds"
+ },
+ "sentinels_alternative_readings": {
+  "sentinel 2 also asks the run without the recorder to collect every file": {
+   "1": "holds",
+   "2": "holds",
+   "3": "holds",
+   "4": "holds",
+   "5": "holds",
+   "6": "holds",
+   "7": "holds"
+  },
+  "sentinel 3 excuses deletions that exceeded the time limit 2 times": {
+   "1": "holds",
+   "2": "holds",
+   "3": "holds",
+   "4": "holds",
+   "5": "holds",
+   "6": "holds",
+   "7": "holds"
+  }
+ },
+ "sentinels_detail": {
+  "1": "identical",
+  "2": {
+   "collect_errors": [],
+   "deselected_equal_expected_failures": true,
+   "not_collected_in_suite_run": [],
+   "tests_neither_passing_nor_skipped": []
+  },
+  "3": {
+   "deletions_whose_check_fires": [],
+   "deletions_without_a_record": [],
+   "deletions_without_a_record_that_did_not_exceed_the_time_limit_2_times": []
+  },
+  "4": {
+   "no_record_without_two_time_outs": []
+  },
+  "5": {
+   "cases_of_the_study_whose_deciding_check_is_not_among_the_fired": [],
+   "recorded_cases_whose_deciding_check_is_not_among_the_fired": []
+  },
+  "6": {
+   "control_ok": true,
+   "deletion_copies_without_whole_suite_run": []
+  },
+  "7": {
+   "deleted_not_expected": [],
+   "expected_not_deleted": []
+  }
+ },
+ "subject": "supabase-auth",
+ "version": "2.34.1"
+}

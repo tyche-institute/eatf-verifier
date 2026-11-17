@@ -1,0 +1,287 @@
+agrees   checks: 64
+agrees   checks in subject files: 64
+agrees   reachable checks: 12
+agrees   blocks (test files of the recorder runs): 48
+agrees   included blocks: 16
+agrees   class-only included blocks: 4
+agrees   included blocks with a target: 0
+agrees   recorded executions of included blocks: 20
+agrees   cases of the study: 20
+agrees   cases left out: 0
+agrees   cases left out, values by reason (sorted): []
+agrees   cases left out, number of identifiers: 0
+agrees   cases decided by a check: 20
+agrees   cases decided by no check: 0
+agrees   fired checks recorded: true
+agrees   deciding checks: 8
+agrees   deciding checks in subject files: 8
+agrees   checks that fire: 8
+agrees   checks that fire and never decide: 0
+agrees   Q1 cases with a target: 0
+agrees   Q1 cases with a target, assertion tier: 0
+agrees   Q1 cases with a target, name tier: 0
+agrees   Q1 outcome: the target decides the case: 0
+agrees   Q1 outcome: the target fires and another check decides: 0
+agrees   Q1 outcome: the target fires and no check decides: 0
+agrees   Q1 outcome: the target does not fire: 0
+agrees   Q1 outcome: not decided by the target (no fired checks): 0
+agrees   Q1 cases the target decides: 0
+agrees   Q1 cases in which the target fires (decides or fires): 0
+agrees   Q1 flags: 0
+agrees   Q1 flags, assertion tier: 0
+agrees   Q1 flags, name tier: 0
+agrees   Q1 flags whose target fires: 0
+agrees   Q2 deletions: 8
+agrees   Q2 deletions of deciding checks: 8
+agrees   Q2 deletions of checks that fire and never decide: 0
+agrees   Q2 deletions of checks that fire and never decide, identifiers: []
+agrees   Q2 not detected, deciding checks, O_V: 1
+agrees   Q2 not detected, checks that fire and never decide, O_V (first: all minus deciding): 0
+agrees   Q2 not detected, all deletions, O_V, identifiers: ["helpers.parse_jwks#1"]
+agrees   Q2 not detected, deciding checks, O_Vfc: 5
+agrees   Q2 not detected, checks that fire and never decide, O_Vfc (first: all minus deciding): 0
+agrees   Q2 not detected, all deletions, O_Vfc, identifiers: ["_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1", "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1", "helpers.decode_jwt#1", "helpers.parse_jwks#1", "helpers.validate_exp#1"]
+agrees   Q2 not detected, deciding checks, O_C: 1
+agrees   Q2 not detected, checks that fire and never decide, O_C (first: all minus deciding): 0
+agrees   Q2 not detected, all deletions, O_C, identifiers: ["helpers.parse_jwks#1"]
+agrees   Q2 not detected, deciding checks, O_T: 8
+agrees   Q2 not detected, checks that fire and never decide, O_T (first: all minus deciding): 0
+agrees   Q2 not detected, all deletions, O_T, identifiers: ["_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1", "_async.gotrue_client.AsyncGoTrueClient.get_claims#1", "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1", "_sync.gotrue_client.SyncGoTrueClient.get_claims#1", "helpers.decode_jwt#1", "helpers.parse_jwks#1", "helpers.validate_exp#1", "helpers.validate_exp#2"]
+agrees   Q2 not detected, deciding checks, O_S: 0
+agrees   Q2 not detected, checks that fire and never decide, O_S (first: all minus deciding): 0
+agrees   Q2 not detected, all deletions, O_S, identifiers: []
+agrees   Q2 not detected, deciding checks, suite: 0
+agrees   Q2 not detected, checks that fire and never decide, suite (first: all minus deciding): 0
+agrees   Q2 not detected, all deletions, suite, identifiers: []
+agrees   Q2 not detected, deciding checks, whole_suite: 0
+agrees   Q2 not detected, checks that fire and never decide, whole_suite (first: all minus deciding): 0
+agrees   Q2 not detected, all deletions, whole_suite, identifiers: []
+agrees   Q2 withheld as failing, not detected, deciding checks, O_V: 1
+agrees   Q2 withheld as failing, not detected, checks that fire and never decide, O_V (first: all minus deciding): 0
+agrees   Q2 withheld as failing, not detected, all deletions, O_V, identifiers: ["helpers.parse_jwks#1"]
+agrees   Q2 withheld as failing, not detected, deciding checks, O_Vfc: 5
+agrees   Q2 withheld as failing, not detected, checks that fire and never decide, O_Vfc (first: all minus deciding): 0
+agrees   Q2 withheld as failing, not detected, all deletions, O_Vfc, identifiers: ["_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1", "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1", "helpers.decode_jwt#1", "helpers.parse_jwks#1", "helpers.validate_exp#1"]
+agrees   Q2 withheld as failing, not detected, deciding checks, O_C: 1
+agrees   Q2 withheld as failing, not detected, checks that fire and never decide, O_C (first: all minus deciding): 0
+agrees   Q2 withheld as failing, not detected, all deletions, O_C, identifiers: ["helpers.parse_jwks#1"]
+agrees   Q2 withheld as failing, not detected, deciding checks, O_T: 8
+agrees   Q2 withheld as failing, not detected, checks that fire and never decide, O_T (first: all minus deciding): 0
+agrees   Q2 withheld as failing, not detected, all deletions, O_T, identifiers: ["_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1", "_async.gotrue_client.AsyncGoTrueClient.get_claims#1", "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1", "_sync.gotrue_client.SyncGoTrueClient.get_claims#1", "helpers.decode_jwt#1", "helpers.parse_jwks#1", "helpers.validate_exp#1", "helpers.validate_exp#2"]
+agrees   Q2 deletions that exceeded the time limit 2 times: 0
+agrees   Q2 deletions that exceeded the time limit, identifiers: []
+agrees   Q2 recorder runs repeated: 0
+agrees   Q2 recorder runs repeated, identifiers: []
+agrees   Q2 recorder runs without a record: 0
+agrees   Q2 recorder runs without a record, identifiers: []
+agrees   Q2 whole-suite runs repeated: []
+agrees   Q2 whole-suite runs without a result (time limit or no result file): []
+agrees   Q2 whole-suite runs that exceeded the time limit (final run), identifiers: []
+agrees   Q2 whole-suite runs without a result file (final run), identifiers: []
+agrees   Q2 inclusion broken: O_Vfc_without_O_V: 0
+agrees   Q2 inclusion broken: O_Vfc_without_O_V, identifiers: []
+agrees   Q2 inclusion broken: O_V_without_O_C: 0
+agrees   Q2 inclusion broken: O_V_without_O_C, identifiers: []
+agrees   Q2 inclusion broken: O_V_without_O_S: 0
+agrees   Q2 inclusion broken: O_V_without_O_S, identifiers: []
+agrees   Q2 inclusion broken: O_S_without_suite: 0
+agrees   Q2 inclusion broken: O_S_without_suite, identifiers: []
+agrees   Q2 inclusion broken: suite_without_whole_suite: 0
+agrees   Q2 inclusion broken: suite_without_whole_suite, identifiers: []
+agrees   Q2 witness files: 0
+agrees   Q2 witness files that hold: 0
+agrees   Q3 pinning: cases counted: 20
+agrees   Q3 pinning: class-only cases: 8
+agrees   Q3 pinning: class-only cases whose test passes: 0
+agrees   Q3 pinning: cases of blocks that assert more: 12
+agrees   Q3 pinning: cases of blocks that assert more whose test passes: 0
+agrees   Q3 pinning: test fails: 20
+agrees   Q3 pinning: test passes: 0
+agrees   Q3 pinning: not counted, no deciding check: 0
+agrees   Q3 pinning: not counted, deciding check not deleted: 0
+agrees   Q3 pinning: not counted, time limit: 0
+agrees   Q3 pinning: not counted, no record: 0
+agrees   Q3 pinning: test passes, number described by what the case does: 0
+agrees   Q3 own test without the target: fails (first: sum over outcomes): 0
+agrees   Q3 own test without the target: passes (first: sum over outcomes): 0
+agrees   Q3 own test without the target: not read (first: sum over outcomes of every other value): 0
+agrees   expected baseline failures: 28
+agrees   expected baseline failures, identifiers: ["tests/_async/test_gotrue.py::test_get_authenticator_assurance_level", "tests/_async/test_gotrue.py::test_get_claims_calls_get_user_if_symmetric_jwt", "tests/_async/test_gotrue.py::test_get_claims_fetches_jwks_to_verify_asymmetric_jwt", "tests/_async/test_gotrue.py::test_get_user_identities", "tests/_async/test_gotrue.py::test_jwks_ttl_cache_behavior", "tests/_async/test_gotrue.py::test_link_identity", "tests/_async/test_gotrue.py::test_mfa_challenge", "tests/_async/test_gotrue.py::test_mfa_enroll", "tests/_async/test_gotrue.py::test_mfa_list_factors", "tests/_async/test_gotrue.py::test_mfa_unenroll", "tests/_async/test_gotrue.py::test_set_session_with_expired_token", "tests/_async/test_gotrue.py::test_set_session_with_valid_tokens", "tests/_async/test_gotrue.py::test_set_session_without_refresh_token", "tests/_async/test_gotrue.py::test_sign_in_with_password", "tests/_sync/test_gotrue.py::test_get_authenticator_assurance_level", "tests/_sync/test_gotrue.py::test_get_claims_calls_get_user_if_symmetric_jwt", "tests/_sync/test_gotrue.py::test_get_claims_fetches_jwks_to_verify_asymmetric_jwt", "tests/_sync/test_gotrue.py::test_get_user_identities", "tests/_sync/test_gotrue.py::test_jwks_ttl_cache_behavior", "tests/_sync/test_gotrue.py::test_link_identity", "tests/_sync/test_gotrue.py::test_mfa_challenge", "tests/_sync/test_gotrue.py::test_mfa_enroll", "tests/_sync/test_gotrue.py::test_mfa_list_factors", "tests/_sync/test_gotrue.py::test_mfa_unenroll", "tests/_sync/test_gotrue.py::test_set_session_with_expired_token", "tests/_sync/test_gotrue.py::test_set_session_with_valid_tokens", "tests/_sync/test_gotrue.py::test_set_session_without_refresh_token", "tests/_sync/test_gotrue.py::test_sign_in_with_password"]
+agrees   test files not collected: 0
+agrees   test files not collected, identifiers: []
+agrees   tests deselected as copies: 0
+agrees   tests deselected as copies, number of identifiers: 0
+agrees   copies that stay: 0
+agrees   copies that stay, number of identifiers: 0
+agrees   cases of nested blocks: 0
+agrees   cases with a firing in another thread: 0
+agrees   tests of the baseline recorder run: 210
+agrees   whole-suite tests passing in both unmodified runs: 428
+agrees   refused attempts, suite run: 0
+agrees   refused attempts, baseline recorder runs: [0, 0]
+agrees   refused attempts, whole-suite unmodified runs: [0, 0]
+agrees   refused attempts, deletion and control recorder runs: total is 0 (first: maximum is 0): true
+agrees   refused attempts, deletion and control recorder runs without a count: 0
+agrees   refused attempts, whole-suite deletion and control runs: total is 0 (first: maximum is 0): true
+agrees   refused attempts, whole-suite deletion and control runs without a count: 0
+agrees   refused attempts, witness runs: 0
+agrees   sentinel 1: "holds"
+agrees   sentinel 2: "holds"
+agrees   sentinel 3: "holds"
+agrees   sentinel 4: "holds"
+agrees   sentinel 5: "holds"
+agrees   sentinel 6: "holds"
+agrees   sentinel 7: "holds"
+
+counts of the second output without a counterpart in the table:
+  second: Q1 / cases_without_a_target
+  second: Q1 / flag_ids
+  second: Q1 / flags_by_class
+  second: Q1 / outcome_ids
+  second: Q1 / outcomes_by_tier
+  second: Q2 / cases_of_deletions_that_exceeded_the_time_limit
+  second: Q2 / copies_whose_final_run_ended_without_a_record_or_a_result
+  second: Q2 / deletions_not_detected_by_the_whole_suite_with_a_witness_that_holds
+  second: Q2 / deletions_not_detected_by_the_whole_suite_without_a_witness_that_holds
+  second: Q2 / deletions_with_crashed_cases
+  second: Q2 / deletions_with_withheld_cases
+  second: Q2 / runs_repeated
+  second: Q2 / runs_that_ended_without_a_record_or_a_result
+  second: Q2 / runs_without_a_record_or_a_result
+  second: Q2 / whole_suite_records_inconsistent
+  second: Q2 / whole_suite_runs_that_exceeded_the_time_limit_any_attempt
+  second: Q2 / witness_files_do_not_hold
+  second: Q3 / own_test_without_the_target / counted
+  second: Q3 / own_test_without_the_target / ids
+  second: Q3 / own_test_without_the_target / not_counted_by_reason
+  second: Q3 / own_test_without_the_target / not_counted_ids
+  second: Q3 / own_test_without_the_target / when_the_own_test_passes_the_case
+  second: Q3 / pinning_without_the_deciding_check / ids
+  second: Q3 / pinning_without_the_deciding_check / not_counted
+  second: Q3 / pinning_without_the_deciding_check / not_counted_ids
+  second: cases / cases_of_the_study_decided_by_no_check_by_raise_site
+  second: cases / cases_of_the_study_decided_by_no_check_ids
+  second: checks_at_run_time / checks_that_fire_and_never_decide_ids
+  second: checks_at_run_time / checks_that_fire_and_never_decide_in_subject_files
+  second: checks_at_run_time / checks_that_fire_in_subject_files
+  second: checks_at_run_time / deciding_checks_ids
+  second: definitions / blocks_in_blocks_json
+  second: definitions / blocks_in_test_files_with_an_included_block
+  second: definitions / checks_in_observed_files
+  second: definitions / class_only_blocks_among_all_blocks_of_the_recorder_run_files
+  second: definitions / included_blocks_asserting_more_than_the_class
+  second: definitions / included_blocks_with_a_target_by_tier
+  second: definitions / raise_statements_listed_apart_not_checks
+  second: definitions / reachable_checks_in_subject_files
+  second: definitions / scope_counts_of_subject_json / blocks_in_test_directories
+  second: definitions / scope_counts_of_subject_json / test_files_in_test_directories
+  second: definitions / scope_counts_of_subject_json / test_files_with_an_included_block
+  second: definitions / test_files_in_blocks_json
+  second: definitions / test_files_of_the_recorder_runs
+  second: definitions / test_files_with_an_included_block
+  second: expectations / E1 / count
+  second: expectations / E1 / rule
+  second: expectations / E1 / units
+  second: expectations / E1 / verdict
+  second: expectations / E1 / verdict_ignoring_sentinels
+  second: expectations / E1 / verdict_under_alternative_readings
+  second: expectations / E2 / count
+  second: expectations / E2 / rule
+  second: expectations / E2 / units
+  second: expectations / E2 / verdict
+  second: expectations / E2 / verdict_ignoring_sentinels
+  second: expectations / E2 / verdict_under_alternative_readings
+  second: expectations / E3 / count
+  second: expectations / E3 / rule
+  second: expectations / E3 / units
+  second: expectations / E3 / verdict
+  second: expectations / E3 / verdict_ignoring_sentinels
+  second: expectations / E3 / verdict_under_alternative_readings
+  second: expectations / E4 / count
+  second: expectations / E4 / rule
+  second: expectations / E4 / units
+  second: expectations / E4 / verdict
+  second: expectations / E4 / verdict_ignoring_sentinels
+  second: expectations / E4 / verdict_under_alternative_readings
+  second: expectations / E5 / class_only_included_blocks
+  second: expectations / E5 / count
+  second: expectations / E5 / included_blocks
+  second: expectations / E5 / rule
+  second: expectations / E5 / units
+  second: expectations / E5 / verdict
+  second: expectations / E5 / verdict_ignoring_sentinels
+  second: expectations / E5 / verdict_under_alternative_readings
+  second: protocol
+  second: refused_connection_attempts / total
+  second: runs / cases_of_nested_blocks_all_recorded
+  second: runs / cases_of_nested_blocks_in_the_study
+  second: runs / cases_with_a_firing_in_another_thread_all_recorded
+  second: runs / cases_with_a_firing_in_another_thread_in_the_study
+  second: runs / tests_deselected_in_baseline_recorder_run
+  second: runs / tests_passing_in_baseline_recorder_run
+  second: runs / time_limit_seconds_recorder
+  second: runs / time_limit_seconds_whole_suite
+  second: sentinels_alternative_readings / sentinel 2 also asks the run without the recorder to collect every file / 1
+  second: sentinels_alternative_readings / sentinel 2 also asks the run without the recorder to collect every file / 2
+  second: sentinels_alternative_readings / sentinel 2 also asks the run without the recorder to collect every file / 3
+  second: sentinels_alternative_readings / sentinel 2 also asks the run without the recorder to collect every file / 4
+  second: sentinels_alternative_readings / sentinel 2 also asks the run without the recorder to collect every file / 5
+  second: sentinels_alternative_readings / sentinel 2 also asks the run without the recorder to collect every file / 6
+  second: sentinels_alternative_readings / sentinel 2 also asks the run without the recorder to collect every file / 7
+  second: sentinels_alternative_readings / sentinel 3 excuses deletions that exceeded the time limit 2 times / 1
+  second: sentinels_alternative_readings / sentinel 3 excuses deletions that exceeded the time limit 2 times / 2
+  second: sentinels_alternative_readings / sentinel 3 excuses deletions that exceeded the time limit 2 times / 3
+  second: sentinels_alternative_readings / sentinel 3 excuses deletions that exceeded the time limit 2 times / 4
+  second: sentinels_alternative_readings / sentinel 3 excuses deletions that exceeded the time limit 2 times / 5
+  second: sentinels_alternative_readings / sentinel 3 excuses deletions that exceeded the time limit 2 times / 6
+  second: sentinels_alternative_readings / sentinel 3 excuses deletions that exceeded the time limit 2 times / 7
+  second: sentinels_detail / 1
+  second: sentinels_detail / 2 / collect_errors
+  second: sentinels_detail / 2 / deselected_equal_expected_failures
+  second: sentinels_detail / 2 / not_collected_in_suite_run
+  second: sentinels_detail / 2 / tests_neither_passing_nor_skipped
+  second: sentinels_detail / 3 / deletions_whose_check_fires
+  second: sentinels_detail / 3 / deletions_without_a_record
+  second: sentinels_detail / 3 / deletions_without_a_record_that_did_not_exceed_the_time_limit_2_times
+  second: sentinels_detail / 4 / no_record_without_two_time_outs
+  second: sentinels_detail / 5 / cases_of_the_study_whose_deciding_check_is_not_among_the_fired
+  second: sentinels_detail / 5 / recorded_cases_whose_deciding_check_is_not_among_the_fired
+  second: sentinels_detail / 6 / control_ok
+  second: sentinels_detail / 6 / deletion_copies_without_whole_suite_run
+  second: sentinels_detail / 7 / deleted_not_expected
+  second: sentinels_detail / 7 / expected_not_deleted
+  second: subject
+  second: version
+counts of the first output without a counterpart in the table:
+  first: counts / block_targets_by_basis / none: tie
+  first: counts / cases_another_check_fires_too
+  first: counts / cases_class_only
+  first: counts / cases_message_text_differs_between_unmodified_runs
+  first: counts / cases_with_target_by_basis
+  first: counts / checks_deciding_not_statically_reachable
+  first: counts / deletions_in_handler
+  first: counts / included_blocks_never_run
+  first: counts / reached_targets
+  first: counts / reached_targets_deletion_not_detected_O_T
+  first: counts / tests_with_cases
+  first: lists / checks_deciding_not_statically_reachable
+  first: lists / included_blocks_never_run
+  first: refused_connection_attempts / deletion_recorder_runs / minimum
+  first: refused_connection_attempts / deletion_recorder_runs / runs
+  first: refused_connection_attempts / deletion_recorder_runs / runs_with_attempts
+  first: refused_connection_attempts / tests
+  first: refused_connection_attempts / whole_suite_deletion_runs / minimum
+  first: refused_connection_attempts / whole_suite_deletion_runs / runs
+  first: refused_connection_attempts / whole_suite_deletion_runs / runs_with_attempts
+  first: rule_version
+  first: subject / commit
+  first: subject / name
+  first: subject / version
+  first: suite_without_recorder
+  first: whole_suite / counts / run 1
+  first: whole_suite / counts / run 2
+  first: whole_suite / counts / unstable
+  first: whole_suite / deletions_run
+  first: whole_suite / suite_runs
+
+134 counts compared: 134 agree, 0 differ, 0 absent from 1 file

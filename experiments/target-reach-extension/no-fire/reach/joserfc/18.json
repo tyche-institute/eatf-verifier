@@ -1,0 +1,1102 @@
+{
+ "library": "joserfc",
+ "row": 18,
+ "check": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+ "file": "joserfc/_rfc7516/registry.py",
+ "lines": [
+  [
+   140,
+   140
+  ]
+ ],
+ "class": "ExceededSizeError",
+ "function": "JWERegistry.validate_ciphertext_size",
+ "script": "experiments/target-reach-extension/no-fire/reach/joserfc/18.py",
+ "harness": "experiments/target-reach-extension/no-fire/reach/joserfc/reach_harness.py",
+ "harness_sha256": "59765a732d1ba06dd8126a648e3d81894cdd0f91bd239723220dab8a5e0f95e0",
+ "script_sha256": "a0d3ac74e06eef1f2da190a92be63cb7a2d01bb8f215ed8e5a1e1d87742f0679",
+ "started": "2026-11-17T16:13:59.450Z",
+ "outer_python": "3.12.3",
+ "clone": {
+  "path": "experiments/target-reach/work/src/joserfc",
+  "commit": "f345ff71cd6c36452a4e11e47b805ad450a95dd8",
+  "read_from": ".git/HEAD (no git command)"
+ },
+ "environment": {
+  "python": "experiments/target-reach/work/venvs/joserfc/bin/python",
+  "interpreter": "CPython 3.12.3",
+  "packages": {
+   "cffi": "2.1.1",
+   "cryptography": "50.0.2",
+   "iniconfig": "2.3.1",
+   "packaging": "26.3",
+   "pluggy": "1.7.0",
+   "pycparser": "3.12",
+   "pycryptodome": "4.4.0",
+   "pygments": "2.21.0",
+   "pytest": "9.2.0"
+  },
+  "problems": []
+ },
+ "copy": "experiments/target-reach-extension/work/reach/joserfc/copy",
+ "definitions_sha256": {
+  "experiments/target-reach/subjects/joserfc/subject.json": "f81481ed8b295263bc512d9fc0ce3edf4bf107bb8addb1f0aea4e9fb3ac4bc51",
+  "experiments/target-reach/subjects/joserfc/checks.json": "49eaea742bda9a5f6743061d8d8161e939d9639f46f8aec11f77611a99428e49",
+  "experiments/target-reach/subjects/joserfc/blocks.json": "940010fa4461804dc7920bfe0ece6c2ec6ed56c5adaf0a4619646700eb70d6b4",
+  "experiments/target-reach/subjects/joserfc/requirements.txt": "48071646248d39ad97b41d30b616c5c64efda03e635a8d4a8816da3192177fee",
+  "experiments/target-reach-extension/no-fire/sample.csv": "5637e6bc9241273992552eb79331b9e5095ee5c8e8b291afc718f2efeea3a8fa"
+ },
+ "sample_row": {
+  "library": "joserfc",
+  "check": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+  "file": "joserfc/_rfc7516/registry.py",
+  "line": "140",
+  "function": "JWERegistry.validate_ciphertext_size",
+  "class": "ExceededSizeError",
+  "template": "Ciphertext size exceeds {*} bytes.",
+  "reachable": "yes"
+ },
+ "cases": [
+  {
+   "name": "input",
+   "kind": "input",
+   "entry_point": "joserfc.jwe.decrypt_compact (jwe.py:96)",
+   "settings": "key: OctKey of a 16-byte key; algorithms, registry, sender_key: defaults",
+   "input": "dir + A128GCM compact JWE of a 49153-byte plaintext: ciphertext segment of 65538 characters",
+   "runs": [
+    {
+     "run": 1,
+     "started": "2026-11-17T16:13:59.516Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:59.615Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/18.py",
+      "--inner",
+      "input",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "input",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "6516ff9750fdb1c1d6079b0e8135bb02ee661052f40c6d83e1dbe87b0f7ac31a",
+       "segment_lengths": [
+        39,
+        0,
+        16,
+        65538,
+        22
+       ],
+       "token_length": 65619,
+       "plaintext_length": 49153,
+       "plaintext_sha256": "692a2cfc58859db79f5889feddf967a25c868d019d1b1a90a7528545b7aa8cb0"
+      },
+      "outcome": {
+       "raised": {
+        "class": "joserfc.errors.ExceededSizeError",
+        "message": "exceeded_size: Ciphertext size exceeds 65536 bytes.",
+        "is_rejection_class": true,
+        "site": {
+         "file": "joserfc/_rfc7516/registry.py",
+         "function": "JWERegistry.validate_ciphertext_size",
+         "line": 140,
+         "check": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1"
+        },
+        "package_frames": [
+         "joserfc/jwe.py:128 decrypt_compact",
+         "joserfc/_rfc7516/compact.py:47 extract_compact",
+         "joserfc/_rfc7516/registry.py:140 validate_ciphertext_size"
+        ],
+        "is_the_object_raised_at_the_check": true,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": true,
+      "target_raise_line_executed": true,
+      "checks_fired": [
+       "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1"
+      ],
+      "raise_events": [
+       {
+        "file": "joserfc/_rfc7516/registry.py",
+        "line": 140,
+        "function": "JWERegistry.validate_ciphertext_size",
+        "exception": "ExceededSizeError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+        "firing": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1"
+       },
+       {
+        "file": "joserfc/_rfc7516/compact.py",
+        "line": 47,
+        "function": "extract_compact",
+        "exception": "ExceededSizeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwe.py",
+        "line": 128,
+        "function": "decrypt_compact",
+        "exception": "ExceededSizeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/errors.py:15 JoseError.__init__"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        140
+       ],
+       "joserfc/errors.py": [
+        16,
+        17,
+        19,
+        20
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12
+       ]
+      },
+      "warnings": []
+     }
+    },
+    {
+     "run": 2,
+     "started": "2026-11-17T16:13:59.615Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:59.721Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/18.py",
+      "--inner",
+      "input",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "input",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "6516ff9750fdb1c1d6079b0e8135bb02ee661052f40c6d83e1dbe87b0f7ac31a",
+       "segment_lengths": [
+        39,
+        0,
+        16,
+        65538,
+        22
+       ],
+       "token_length": 65619,
+       "plaintext_length": 49153,
+       "plaintext_sha256": "692a2cfc58859db79f5889feddf967a25c868d019d1b1a90a7528545b7aa8cb0"
+      },
+      "outcome": {
+       "raised": {
+        "class": "joserfc.errors.ExceededSizeError",
+        "message": "exceeded_size: Ciphertext size exceeds 65536 bytes.",
+        "is_rejection_class": true,
+        "site": {
+         "file": "joserfc/_rfc7516/registry.py",
+         "function": "JWERegistry.validate_ciphertext_size",
+         "line": 140,
+         "check": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1"
+        },
+        "package_frames": [
+         "joserfc/jwe.py:128 decrypt_compact",
+         "joserfc/_rfc7516/compact.py:47 extract_compact",
+         "joserfc/_rfc7516/registry.py:140 validate_ciphertext_size"
+        ],
+        "is_the_object_raised_at_the_check": true,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": true,
+      "target_raise_line_executed": true,
+      "checks_fired": [
+       "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1"
+      ],
+      "raise_events": [
+       {
+        "file": "joserfc/_rfc7516/registry.py",
+        "line": 140,
+        "function": "JWERegistry.validate_ciphertext_size",
+        "exception": "ExceededSizeError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+        "firing": "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1"
+       },
+       {
+        "file": "joserfc/_rfc7516/compact.py",
+        "line": 47,
+        "function": "extract_compact",
+        "exception": "ExceededSizeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwe.py",
+        "line": 128,
+        "function": "decrypt_compact",
+        "exception": "ExceededSizeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/errors.py:15 JoseError.__init__"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        140
+       ],
+       "joserfc/errors.py": [
+        16,
+        17,
+        19,
+        20
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12
+       ]
+      },
+      "warnings": []
+     }
+    }
+   ],
+   "runs_identical": true
+  },
+  {
+   "name": "control-at-limit",
+   "kind": "control",
+   "entry_point": "joserfc.jwe.decrypt_compact (jwe.py:96)",
+   "settings": "as the input",
+   "input": "the same construction with a 49152-byte plaintext: segment of 65536 characters",
+   "runs": [
+    {
+     "run": 1,
+     "started": "2026-11-17T16:13:59.721Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:59.820Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/18.py",
+      "--inner",
+      "control-at-limit",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "control-at-limit",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "31ec5b37905fb69d45edb8473f388858550450b2d8fe58f7e686a614a5725002",
+       "segment_lengths": [
+        39,
+        0,
+        16,
+        65536,
+        22
+       ],
+       "token_length": 65617,
+       "plaintext_length": 49152,
+       "plaintext_sha256": "148f7deb5e91a889238be83ecd72cc4200ed506425b58e98a6914249be6239b6"
+      },
+      "outcome": {
+       "returned": {
+        "type": "joserfc._rfc7516.models.CompactEncryption",
+        "plaintext_length": 49152,
+        "plaintext_sha256": "148f7deb5e91a889238be83ecd72cc4200ed506425b58e98a6914249be6239b6"
+       }
+      },
+      "target_fired": false,
+      "target_raise_line_executed": false,
+      "checks_fired": [],
+      "raise_events": [],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key",
+       "joserfc/_rfc7517/models.py:205 BaseKey.check_use",
+       "joserfc/_rfc7517/models.py:116 BaseKey.get",
+       "joserfc/_rfc7517/models.py:144 BaseKey.dict_value",
+       "joserfc/_rfc7517/models.py:296 SymmetricKey.raw_value",
+       "joserfc/_rfc7517/models.py:301 SymmetricKey.is_private",
+       "joserfc/_rfc7518/oct_key.py:42 OctBinding.convert_raw_key_to_dict",
+       "joserfc/util.py:40 urlsafe_b64encode",
+       "joserfc/_rfc7517/models.py:263 BaseKey.validate_dict_key",
+       "joserfc/_rfc7517/models.py:57 NativeKeyBinding.validate_dict_key_registry",
+       "joserfc/registry.py:14 is_str",
+       "joserfc/_rfc7517/models.py:69 NativeKeyBinding.validate_dict_key_use_operations",
+       "joserfc/_rfc7516/message.py:99 perform_decrypt",
+       "joserfc/_rfc7516/message.py:106 _perform_decrypt",
+       "joserfc/_rfc7516/registry.py:166 JWERegistry.get_enc",
+       "joserfc/_rfc7516/registry.py:184 JWERegistry._check_algorithm",
+       "joserfc/_rfc7516/models.py:204 JWEEncModel.check_iv",
+       "joserfc/_rfc7516/models.py:94 CompactEncryption.recipients",
+       "joserfc/_rfc7516/message.py:203 _check_recipient_header_protection",
+       "joserfc/registry.py:217 reject_unprotected_crit_header",
+       "joserfc/_rfc7516/models.py:42 Recipient.headers",
+       "joserfc/_rfc7516/registry.py:97 JWERegistry.check_header",
+       "joserfc/registry.py:200 check_crit_header",
+       "joserfc/registry.py:189 check_registry_header",
+       "joserfc/_rfc7516/registry.py:154 JWERegistry.get_alg",
+       "joserfc/registry.py:182 check_supported_header",
+       "joserfc/_rfc7516/message.py:242 decrypt_recipient",
+       "joserfc/_rfc7516/models.py:246 KeyManagement.direct_mode",
+       "joserfc/_rfc7518/jwe_algs.py:44 DirectAlgEncryption.compute_cek",
+       "joserfc/_rfc7516/models.py:250 KeyManagement.check_key_type",
+       "joserfc/_rfc7518/jwe_encs.py:99 GCMEncModel.decrypt"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/message.py": [
+        100,
+        101,
+        107,
+        109,
+        110,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        123,
+        124,
+        125,
+        130,
+        133,
+        136,
+        139,
+        140,
+        143,
+        148,
+        150,
+        151,
+        155,
+        204,
+        206,
+        244,
+        248,
+        251,
+        257,
+        258,
+        285
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        46,
+        49,
+        50,
+        71,
+        73,
+        74,
+        75,
+        76,
+        96,
+        97,
+        205,
+        207,
+        248,
+        251
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        99,
+        100,
+        102,
+        103,
+        110,
+        111,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143,
+        159,
+        160,
+        161,
+        162,
+        164,
+        171,
+        172,
+        173,
+        185,
+        188,
+        192
+       ],
+       "joserfc/_rfc7517/models.py": [
+        59,
+        60,
+        63,
+        64,
+        65,
+        71,
+        117,
+        147,
+        150,
+        151,
+        153,
+        154,
+        155,
+        156,
+        220,
+        221,
+        265,
+        266,
+        267,
+        299,
+        304
+       ],
+       "joserfc/_rfc7518/jwe_algs.py": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        51
+       ],
+       "joserfc/_rfc7518/jwe_encs.py": [
+        101,
+        102,
+        103,
+        104,
+        105
+       ],
+       "joserfc/_rfc7518/oct_key.py": [
+        44,
+        45
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        136,
+        137
+       ],
+       "joserfc/jwk.py": [
+        77,
+        80,
+        82,
+        83
+       ],
+       "joserfc/registry.py": [
+        15,
+        183,
+        184,
+        185,
+        190,
+        191,
+        193,
+        194,
+        195,
+        202,
+        203,
+        204,
+        211,
+        213,
+        218,
+        221,
+        222
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        41,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    },
+    {
+     "run": 2,
+     "started": "2026-11-17T16:13:59.820Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:59.920Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/18.py",
+      "--inner",
+      "control-at-limit",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "control-at-limit",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "31ec5b37905fb69d45edb8473f388858550450b2d8fe58f7e686a614a5725002",
+       "segment_lengths": [
+        39,
+        0,
+        16,
+        65536,
+        22
+       ],
+       "token_length": 65617,
+       "plaintext_length": 49152,
+       "plaintext_sha256": "148f7deb5e91a889238be83ecd72cc4200ed506425b58e98a6914249be6239b6"
+      },
+      "outcome": {
+       "returned": {
+        "type": "joserfc._rfc7516.models.CompactEncryption",
+        "plaintext_length": 49152,
+        "plaintext_sha256": "148f7deb5e91a889238be83ecd72cc4200ed506425b58e98a6914249be6239b6"
+       }
+      },
+      "target_fired": false,
+      "target_raise_line_executed": false,
+      "checks_fired": [],
+      "raise_events": [],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key",
+       "joserfc/_rfc7517/models.py:205 BaseKey.check_use",
+       "joserfc/_rfc7517/models.py:116 BaseKey.get",
+       "joserfc/_rfc7517/models.py:144 BaseKey.dict_value",
+       "joserfc/_rfc7517/models.py:296 SymmetricKey.raw_value",
+       "joserfc/_rfc7517/models.py:301 SymmetricKey.is_private",
+       "joserfc/_rfc7518/oct_key.py:42 OctBinding.convert_raw_key_to_dict",
+       "joserfc/util.py:40 urlsafe_b64encode",
+       "joserfc/_rfc7517/models.py:263 BaseKey.validate_dict_key",
+       "joserfc/_rfc7517/models.py:57 NativeKeyBinding.validate_dict_key_registry",
+       "joserfc/registry.py:14 is_str",
+       "joserfc/_rfc7517/models.py:69 NativeKeyBinding.validate_dict_key_use_operations",
+       "joserfc/_rfc7516/message.py:99 perform_decrypt",
+       "joserfc/_rfc7516/message.py:106 _perform_decrypt",
+       "joserfc/_rfc7516/registry.py:166 JWERegistry.get_enc",
+       "joserfc/_rfc7516/registry.py:184 JWERegistry._check_algorithm",
+       "joserfc/_rfc7516/models.py:204 JWEEncModel.check_iv",
+       "joserfc/_rfc7516/models.py:94 CompactEncryption.recipients",
+       "joserfc/_rfc7516/message.py:203 _check_recipient_header_protection",
+       "joserfc/registry.py:217 reject_unprotected_crit_header",
+       "joserfc/_rfc7516/models.py:42 Recipient.headers",
+       "joserfc/_rfc7516/registry.py:97 JWERegistry.check_header",
+       "joserfc/registry.py:200 check_crit_header",
+       "joserfc/registry.py:189 check_registry_header",
+       "joserfc/_rfc7516/registry.py:154 JWERegistry.get_alg",
+       "joserfc/registry.py:182 check_supported_header",
+       "joserfc/_rfc7516/message.py:242 decrypt_recipient",
+       "joserfc/_rfc7516/models.py:246 KeyManagement.direct_mode",
+       "joserfc/_rfc7518/jwe_algs.py:44 DirectAlgEncryption.compute_cek",
+       "joserfc/_rfc7516/models.py:250 KeyManagement.check_key_type",
+       "joserfc/_rfc7518/jwe_encs.py:99 GCMEncModel.decrypt"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/message.py": [
+        100,
+        101,
+        107,
+        109,
+        110,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        123,
+        124,
+        125,
+        130,
+        133,
+        136,
+        139,
+        140,
+        143,
+        148,
+        150,
+        151,
+        155,
+        204,
+        206,
+        244,
+        248,
+        251,
+        257,
+        258,
+        285
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        46,
+        49,
+        50,
+        71,
+        73,
+        74,
+        75,
+        76,
+        96,
+        97,
+        205,
+        207,
+        248,
+        251
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        99,
+        100,
+        102,
+        103,
+        110,
+        111,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143,
+        159,
+        160,
+        161,
+        162,
+        164,
+        171,
+        172,
+        173,
+        185,
+        188,
+        192
+       ],
+       "joserfc/_rfc7517/models.py": [
+        59,
+        60,
+        63,
+        64,
+        65,
+        71,
+        117,
+        147,
+        150,
+        151,
+        153,
+        154,
+        155,
+        156,
+        220,
+        221,
+        265,
+        266,
+        267,
+        299,
+        304
+       ],
+       "joserfc/_rfc7518/jwe_algs.py": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        51
+       ],
+       "joserfc/_rfc7518/jwe_encs.py": [
+        101,
+        102,
+        103,
+        104,
+        105
+       ],
+       "joserfc/_rfc7518/oct_key.py": [
+        44,
+        45
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        136,
+        137
+       ],
+       "joserfc/jwk.py": [
+        77,
+        80,
+        82,
+        83
+       ],
+       "joserfc/registry.py": [
+        15,
+        183,
+        184,
+        185,
+        190,
+        191,
+        193,
+        194,
+        195,
+        202,
+        203,
+        204,
+        211,
+        213,
+        218,
+        221,
+        222
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        41,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    }
+   ],
+   "runs_identical": true
+  }
+ ],
+ "fired_by_an_input": true,
+ "all_runs_clean": true,
+ "ended": "2026-11-17T16:13:59.920Z"
+}

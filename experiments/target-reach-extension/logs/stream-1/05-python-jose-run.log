@@ -1,0 +1,15 @@
+16:29:47 == verify
+16:29:47 verify: commit 018b310ddb8b, 15 subject files and 5 test files match, CPython 3.12.3
+16:29:47 == baseline
+16:29:50 suite without recorder: 1 1 failed, 249 passed, 6 skipped, 5 warnings (1 failing tests deselected, 0 files not collected)
+16:29:52 base-1 returncode 0 2.531 s
+16:29:55 base-2 returncode 0 2.535 s
+16:29:55 == deletions
+16:29:55 deletions: 31 deletion copies and 1 control copy, 10 at a time
+16:30:06 deletions: done in 11.2 s; without record: []
+16:30:06 == whole-baseline
+16:30:36 whole-baseline: 457 tests pass in both runs, 0 unstable, run 1 {'failed': 1, 'passed': 457, 'skipped': 12}, 14.7 s
+16:30:36 == whole-deletions
+16:31:44 whole-deletions: 31 copies and the control in 68.3 s; control detected: False; not detected: 2
+16:31:44 == pack
+16:31:44 pack: 43 records, 15964 bytes, SHA-256 018fb181ccf9d46c75f92be78d1534cc6c6ebcc0360b74e1445721183f8d2c59

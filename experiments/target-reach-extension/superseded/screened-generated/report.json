@@ -1,0 +1,367 @@
+{
+ "expectations": {
+  "E1": "At least 1 deletion of a deciding check is not detected by O_V.",
+  "E2": "O_C detects at least 1 deletion of a deciding check that O_V does not.",
+  "E3": "The whole suite detects every deletion of a deciding check.",
+  "E4": "At least 1 case with a target is not decided by its target.",
+  "E5": "At least 1 case of a block that asserts the class alone passes its own test after the deletion of its deciding check."
+ },
+ "held_out": [
+  "python-jose",
+  "supabase-auth",
+  "service-identity"
+ ],
+ "held_out_expectations": {
+  "python-jose": {
+   "held": 4,
+   "no verdict": 0,
+   "not applicable": 0,
+   "not held": 1,
+   "not stated": 0
+  },
+  "service-identity": {
+   "held": 1,
+   "no verdict": 0,
+   "not applicable": 0,
+   "not held": 3,
+   "not stated": 1
+  },
+  "supabase-auth": {
+   "held": 2,
+   "no verdict": 0,
+   "not applicable": 1,
+   "not held": 1,
+   "not stated": 1
+  }
+ },
+ "sentinels_that_do_not_hold": {},
+ "subjects": {
+  "python-jose": {
+   "expectations": {
+    "E1": {
+     "counts": "1 of 29",
+     "status": "held"
+    },
+    "E2": {
+     "counts": "1 of 29",
+     "status": "held"
+    },
+    "E3": {
+     "counts": "28 of 29",
+     "status": "not held"
+    },
+    "E4": {
+     "counts": "9 of 25",
+     "status": "held"
+    },
+    "E5": {
+     "counts": "2 of 52",
+     "status": "held"
+    }
+   },
+   "facts": {
+    "blocks": 58,
+    "cases": 56,
+    "cases in which a check fires in another thread": 0,
+    "cases left out": 0,
+    "cases of a block inside another block": 0,
+    "cases with a target": 25,
+    "cases with a target, assertion tier": 2,
+    "cases with a target, name tier": 23,
+    "checks in subject files": 99,
+    "checks reachable": 55,
+    "checks that fire": 31,
+    "checks that fire and never decide": 2,
+    "connection attempts refused in a whole-suite run at baseline": 0,
+    "connection attempts refused in the recorder runs at baseline": 0,
+    "deciding checks": 29,
+    "deciding checks: O_C detects and O_V does not": 1,
+    "deletions": 31,
+    "deletions breaking an inclusion": 0,
+    "deletions of checks that fire and never decide": 2,
+    "deletions of deciding checks": 29,
+    "deletions that exceeded the time limit": 0,
+    "deletions without a record": 0,
+    "flags": 9,
+    "flags, assertion tier": 0,
+    "flags, name tier": 9,
+    "imported tests that stay": 0,
+    "included blocks": 44,
+    "included blocks with a target": 20,
+    "included blocks, class-only": 40,
+    "not detected with withheld cases counted as failing, checks that fire and never decide": {
+     "O_C": 1,
+     "O_T": 2,
+     "O_V": 1,
+     "O_Vfc": 1
+    },
+    "not detected with withheld cases counted as failing, deciding checks": {
+     "O_C": 0,
+     "O_T": 20,
+     "O_V": 1,
+     "O_Vfc": 12
+    },
+    "not detected, checks that fire and never decide": {
+     "O_C": 1,
+     "O_S": 1,
+     "O_T": 2,
+     "O_V": 1,
+     "O_Vfc": 1,
+     "suite": 1,
+     "whole suite": 1
+    },
+    "not detected, deciding checks": {
+     "O_C": 0,
+     "O_S": 1,
+     "O_T": 20,
+     "O_V": 1,
+     "O_Vfc": 12,
+     "suite": 1,
+     "whole suite": 1
+    },
+    "outcomes": {
+     "decided by the target": 16,
+     "the target does not fire": 8,
+     "the target fires and another check decides": 1,
+     "the target fires and no check decides": 0
+    },
+    "pinning": {
+     "blocks that assert more, test passes": 0,
+     "cases": 56,
+     "cases of blocks that assert more": 4,
+     "class-only cases": 52,
+     "class-only, test passes": 2,
+     "test passes": 2
+    },
+    "sentinels": 7,
+    "sentinels that hold": 7,
+    "test files not collected": 0,
+    "tests collected again and deselected": 0,
+    "tests expected to fail at baseline": 1,
+    "version": "3.5.0",
+    "whole-suite tests passing in both unmodified runs": 457,
+    "witness tests": 0,
+    "witness tests that hold": 0
+   },
+   "role": "held out"
+  },
+  "service-identity": {
+   "expectations": {
+    "E1": {
+     "counts": "0 of 2",
+     "status": "not held"
+    },
+    "E2": {
+     "counts": "0 of 2",
+     "status": "not held"
+    },
+    "E3": {
+     "counts": "2 of 2",
+     "status": "held"
+    },
+    "E4": {
+     "counts": "0 of 15",
+     "status": "not held"
+    },
+    "E5": {
+     "counts": "0 of 12 included blocks assert the class alone",
+     "status": "not stated"
+    }
+   },
+   "facts": {
+    "blocks": 37,
+    "cases": 15,
+    "cases in which a check fires in another thread": 0,
+    "cases left out": 0,
+    "cases of a block inside another block": 0,
+    "cases with a target": 15,
+    "cases with a target, assertion tier": 11,
+    "cases with a target, name tier": 4,
+    "checks in subject files": 8,
+    "checks reachable": 8,
+    "checks that fire": 2,
+    "checks that fire and never decide": 0,
+    "connection attempts refused in a whole-suite run at baseline": 0,
+    "connection attempts refused in the recorder runs at baseline": 0,
+    "deciding checks": 2,
+    "deciding checks: O_C detects and O_V does not": 0,
+    "deletions": 2,
+    "deletions breaking an inclusion": 0,
+    "deletions of checks that fire and never decide": 0,
+    "deletions of deciding checks": 2,
+    "deletions that exceeded the time limit": 0,
+    "deletions without a record": 0,
+    "flags": 0,
+    "flags, assertion tier": 0,
+    "flags, name tier": 0,
+    "imported tests that stay": 0,
+    "included blocks": 12,
+    "included blocks with a target": 12,
+    "included blocks, class-only": 0,
+    "not detected with withheld cases counted as failing, checks that fire and never decide": {
+     "O_C": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0
+    },
+    "not detected with withheld cases counted as failing, deciding checks": {
+     "O_C": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0
+    },
+    "not detected, checks that fire and never decide": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0,
+     "suite": 0,
+     "whole suite": 0
+    },
+    "not detected, deciding checks": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0,
+     "suite": 0,
+     "whole suite": 0
+    },
+    "outcomes": {
+     "decided by the target": 15,
+     "the target does not fire": 0,
+     "the target fires and another check decides": 0,
+     "the target fires and no check decides": 0
+    },
+    "pinning": {
+     "blocks that assert more, test passes": 0,
+     "cases": 15,
+     "cases of blocks that assert more": 15,
+     "class-only cases": 0,
+     "class-only, test passes": 0,
+     "test passes": 0
+    },
+    "sentinels": 7,
+    "sentinels that hold": 7,
+    "test files not collected": 0,
+    "tests collected again and deselected": 0,
+    "tests expected to fail at baseline": 0,
+    "version": "26.1.0",
+    "whole-suite tests passing in both unmodified runs": 134,
+    "witness tests": 0,
+    "witness tests that hold": 0
+   },
+   "role": "held out"
+  },
+  "supabase-auth": {
+   "expectations": {
+    "E1": {
+     "counts": "1 of 8",
+     "status": "held"
+    },
+    "E2": {
+     "counts": "0 of 8",
+     "status": "not held"
+    },
+    "E3": {
+     "counts": "8 of 8",
+     "status": "held"
+    },
+    "E4": {
+     "counts": "0 of 0",
+     "status": "not applicable"
+    },
+    "E5": {
+     "counts": "4 of 16 included blocks assert the class alone",
+     "status": "not stated"
+    }
+   },
+   "facts": {
+    "blocks": 48,
+    "cases": 20,
+    "cases in which a check fires in another thread": 0,
+    "cases left out": 0,
+    "cases of a block inside another block": 0,
+    "cases with a target": 0,
+    "cases with a target, assertion tier": 0,
+    "cases with a target, name tier": 0,
+    "checks in subject files": 64,
+    "checks reachable": 12,
+    "checks that fire": 8,
+    "checks that fire and never decide": 0,
+    "connection attempts refused in a whole-suite run at baseline": 0,
+    "connection attempts refused in the recorder runs at baseline": 0,
+    "deciding checks": 8,
+    "deciding checks: O_C detects and O_V does not": 0,
+    "deletions": 8,
+    "deletions breaking an inclusion": 0,
+    "deletions of checks that fire and never decide": 0,
+    "deletions of deciding checks": 8,
+    "deletions that exceeded the time limit": 0,
+    "deletions without a record": 0,
+    "flags": 0,
+    "flags, assertion tier": 0,
+    "flags, name tier": 0,
+    "imported tests that stay": 0,
+    "included blocks": 16,
+    "included blocks with a target": 0,
+    "included blocks, class-only": 4,
+    "not detected with withheld cases counted as failing, checks that fire and never decide": {
+     "O_C": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0
+    },
+    "not detected with withheld cases counted as failing, deciding checks": {
+     "O_C": 1,
+     "O_T": 8,
+     "O_V": 1,
+     "O_Vfc": 5
+    },
+    "not detected, checks that fire and never decide": {
+     "O_C": 0,
+     "O_S": 0,
+     "O_T": 0,
+     "O_V": 0,
+     "O_Vfc": 0,
+     "suite": 0,
+     "whole suite": 0
+    },
+    "not detected, deciding checks": {
+     "O_C": 1,
+     "O_S": 0,
+     "O_T": 8,
+     "O_V": 1,
+     "O_Vfc": 5,
+     "suite": 0,
+     "whole suite": 0
+    },
+    "outcomes": {
+     "decided by the target": 0,
+     "the target does not fire": 0,
+     "the target fires and another check decides": 0,
+     "the target fires and no check decides": 0
+    },
+    "pinning": {
+     "blocks that assert more, test passes": 0,
+     "cases": 20,
+     "cases of blocks that assert more": 12,
+     "class-only cases": 8,
+     "class-only, test passes": 0,
+     "test passes": 0
+    },
+    "sentinels": 7,
+    "sentinels that hold": 7,
+    "test files not collected": 0,
+    "tests collected again and deselected": 0,
+    "tests expected to fail at baseline": 28,
+    "version": "2.34.1",
+    "whole-suite tests passing in both unmodified runs": 428,
+    "witness tests": 0,
+    "witness tests that hold": 0
+   },
+   "role": "held out"
+  }
+ }
+}

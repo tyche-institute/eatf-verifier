@@ -1,0 +1,107 @@
+{
+ "check": "jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#1",
+ "checks_json_sha256": "3208594ee8627cfe505c022cf74a491b367668769e232cfca30d933fffb4c7d0",
+ "clone": "../target-reach/work/src/authlib",
+ "copy": "work/reach/authlib/copy",
+ "file": "authlib/jose/rfc7515/jws.py",
+ "inputs": [
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T15:52:05Z",
+   "entry_point": "authlib.jose.rfc7515.jws.JsonWebSignature.deserialize_compact",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "JsonWebSignature.__init__": 1,
+    "JsonWebSignature._validate_crit_headers": 1,
+    "JsonWebSignature.deserialize_compact": 1,
+    "_extract_header": 1
+   },
+   "input": "compact JWS, protected header {\"alg\":\"HS256\",\"crit\":\"kid\",\"kid\":\"k1\"}, valid HS256 signature",
+   "line_events_in_file": 14,
+   "module_of_file_imported": [
+    "authlib.jose.rfc7515.jws"
+   ],
+   "outcome": {
+    "class": "authlib.jose.errors.InvalidHeaderParameterNameError",
+    "description": "Invalid Header Parameter Name: crit",
+    "error": "invalid_header_parameter_name",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7515/jws.py",
+     "function": "JsonWebSignature._validate_crit_headers",
+     "line": 303
+    },
+    "str": "invalid_header_parameter_name: Invalid Header Parameter Name: crit"
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "303": "raise InvalidHeaderParameterNameError(\"crit\")"
+   },
+   "raise_lines_executed": {
+    "303": 1
+   },
+   "reached": true,
+   "returncode": 0,
+   "settings": "JsonWebSignature() (algorithms=None, private_headers=None: the defaults); key: 32-byte HMAC secret (bytes)",
+   "start": "2026-11-17T15:52:04Z",
+   "stderr": "no-fire/reach/authlib/11.py:91: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebSignature",
+   "token": "eyJhbGciOiJIUzI1NiIsImNyaXQiOiJraWQiLCJraWQiOiJrMSJ9.eyJzdWIiOiJyb3ctMTEiLCJpYXQiOjE3MDAwMDAwMDB9.thcUoVYujp0AJ8qjJDcG3JeHkPnAzEIDpIJMIb0c4HQ",
+   "within_4_4": true
+  },
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T15:52:05Z",
+   "entry_point": "authlib.jose.rfc7519.jwt.JsonWebToken.decode (the object authlib.jose.jwt)",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "JsonWebSignature._validate_crit_headers": 1,
+    "JsonWebSignature.deserialize_compact": 1,
+    "_extract_header": 1
+   },
+   "input": "the token of input a",
+   "line_events_in_file": 12,
+   "module_of_file_imported": [
+    "authlib.jose.rfc7515.jws"
+   ],
+   "outcome": {
+    "class": "authlib.jose.errors.InvalidHeaderParameterNameError",
+    "description": "Invalid Header Parameter Name: crit",
+    "error": "invalid_header_parameter_name",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7515/jws.py",
+     "function": "JsonWebSignature._validate_crit_headers",
+     "line": 303
+    },
+    "str": "invalid_header_parameter_name: Invalid Header Parameter Name: crit"
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "303": "raise InvalidHeaderParameterNameError(\"crit\")"
+   },
+   "raise_lines_executed": {
+    "303": 1
+   },
+   "reached": true,
+   "returncode": 0,
+   "settings": "authlib.jose.jwt as the package defines it; key: the same 32-byte HMAC secret (bytes)",
+   "start": "2026-11-17T15:52:05Z",
+   "stderr": "no-fire/reach/authlib/11.py:105: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import jwt",
+   "token": "eyJhbGciOiJIUzI1NiIsImNyaXQiOiJraWQiLCJraWQiOiJrMSJ9.eyJzdWIiOiJyb3ctMTEiLCJpYXQiOjE3MDAwMDAwMDB9.thcUoVYujp0AJ8qjJDcG3JeHkPnAzEIDpIJMIb0c4HQ",
+   "within_4_4": true
+  }
+ ],
+ "interpreter": "../target-reach/work/venvs/authlib/bin/python",
+ "python": "3.12.3",
+ "raise_lines": [
+  303
+ ],
+ "reached": true,
+ "row": 11,
+ "script": "no-fire/reach/authlib/11.py",
+ "script_sha256": "409ae951a86a552a71244301b67365461f667361c459567b9185cbe3a5ce7aef"
+}

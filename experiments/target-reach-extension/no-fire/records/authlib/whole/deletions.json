@@ -1,0 +1,186 @@
+{
+ "_control": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 32.711,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "jose.drafts._jwe_algorithms.ECDH1PUAlgorithm.generate_keys_and_prepare_headers#1": {
+  "detected": true,
+  "examples": [
+   "jose|tests.jose.test_ecdh_1pu::test_ecdh_1pu_encryption_fails_if_not_aes_cbc_hmac_sha2_enc_is_used_with_kw"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 33.223,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "jose.rfc7515.jws.JsonWebSignature._prepare_algorithm_key#1": {
+  "detected": true,
+  "examples": [
+   "jose|tests.jose.test_jws::test_invalid_alg"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 35.457,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 44.6,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#3": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 35.07,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "jose.rfc7515.jws.JsonWebSignature._validate_private_headers#1": {
+  "detected": true,
+  "examples": [
+   "jose|tests.jose.test_jws::test_validate_header"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 32.39,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "jose.rfc7516.jwe.JsonWebEncryption.deserialize_json._unwrap_for_matching_recipient#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 34.368,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "jose.rfc7516.jwe.JsonWebEncryption.get_header_alg#1": {
+  "detected": true,
+  "examples": [
+   "jose|tests.jose.test_jwe::test_invalid_header"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 36.195,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "jose.rfc7516.jwe.JsonWebEncryption.get_header_enc#1": {
+  "detected": true,
+  "examples": [
+   "jose|tests.jose.test_jwe::test_invalid_header"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 31.535,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "jose.rfc7516.jwe.JsonWebEncryption.get_header_zip#1": {
+  "detected": true,
+  "examples": [
+   "jose|tests.jose.test_jwe::test_invalid_header",
+   "jose|tests.jose.test_jwe::test_not_supported_alg"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 30.825,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "jose.rfc7517.base_key.Key.check_key_op#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 28.145,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "jose.rfc7519.jwt.JsonWebToken.check_sensitive_data#1": {
+  "detected": true,
+  "examples": [
+   "jose|tests.jose.test_jwt::test_encode_sensitive_data"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 27.879,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "jose.rfc7519.jwt.JsonWebToken.decode#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 27.588,
+  "tests_not_passing": 0,
+  "timed_out": false
+ }
+}

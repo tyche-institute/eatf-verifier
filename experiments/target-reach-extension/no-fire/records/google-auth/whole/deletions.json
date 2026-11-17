@@ -1,0 +1,880 @@
+{
+ "_control": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 84.026,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "auth._agent_identity_utils.get_cached_cert_fingerprint#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_agent_identity_utils.TestAgentIdentityUtils::test_get_cached_cert_fingerprint_no_cert"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 83.738,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth._agent_identity_utils.parse_certificate#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_agent_identity_utils.TestAgentIdentityUtils::test_parse_certificate_empty_or_none_raises_value_error[None]",
+   "unit|tests.test_agent_identity_utils.TestAgentIdentityUtils::test_parse_certificate_empty_or_none_raises_value_error[]"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 83.675,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "auth._agent_identity_utils.parse_certificate#2": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_agent_identity_utils.TestAgentIdentityUtils::test_get_agent_identity_certificate_and_bytes_corrupt_intermediate_warns[-----BEGIN CERTIFICATE-----\\ntruncated_without_end_marker\\n]",
+   "unit|tests.test_agent_identity_utils.TestAgentIdentityUtils::test_parse_certificate_full_chain_rejects_malformed_intermediate[-----BEGIN CERTIFICATE-----\\nMIIB\\n]",
+   "unit|tests.test_agent_identity_utils.TestAgentIdentityUtils::test_parse_certificate_full_chain_rejects_malformed_intermediate[MIIB\\n-----END CERTIFICATE-----\\n]"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 83.012,
+  "tests_not_passing": 3,
+  "timed_out": false
+ },
+ "auth._helpers.from_bytes#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test__helpers::test_from_bytes_with_nonstring_type"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 80.977,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth._helpers.to_bytes#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test__helpers::test_to_bytes_with_nonstring_type"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.947,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth._refresh_worker.RefreshThreadManager.start_refresh#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test__refresh_worker::test_invalid_start_refresh"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_with_quota_project_integration": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 80.792,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.aio.credentials.AnonymousCredentials.apply#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_credentials_async::test_anonymous_credentials_apply_default"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.293,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.aio.credentials.AnonymousCredentials.refresh#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_credentials_async::test_anonymous_credentials_refresh"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 83.004,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.aio.credentials.StaticCredentials.refresh#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_credentials_async::test_static_credentials_refresh"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.907,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.aws.RequestSigner.get_request_options#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_aws.TestRequestSigner::test_get_request_options_with_invalid_scheme_url",
+   "unit|tests.test_aws.TestRequestSigner::test_get_request_options_with_missing_hostname_url",
+   "unit|tests.test_aws.TestRequestSigner::test_get_request_options_with_missing_scheme_url"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.831,
+  "tests_not_passing": 3,
+  "timed_out": false
+ },
+ "auth.compute_engine._metadata.get#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.compute_engine.test__metadata::test_get_body_with_get_method_raises_value_error"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.292,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.compute_engine._mtls._parse_mds_mode#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.compute_engine.test__mtls::test__parse_mds_mode_invalid"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.316,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.credentials.AnonymousCredentials.apply#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_credentials::test_anonymous_credentials_apply_default",
+   "unit|tests_async.test_credentials_async::test_anonymous_credentials_apply_default"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 83.385,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "auth.credentials.AnonymousCredentials.refresh#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_credentials::test_anonymous_credentials_refresh",
+   "unit|tests_async.test_credentials_async::test_anonymous_credentials_refresh"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 85.045,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "auth.crypt._python_rsa.RSASigner.from_string#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.crypt.test__python_rsa.TestRSASigner::test_from_string_pkcs8_extra_bytes"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 83.989,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.crypt._python_rsa.RSASigner.from_string#2": {
+  "detected": true,
+  "examples": [
+   "unit|tests.crypt.test__python_rsa.TestRSASigner::test_from_string_bogus_key"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.293,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.crypt._python_rsa.RSAVerifier.from_string#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.crypt.test__python_rsa.TestRSAVerifier::test_from_string_pub_cert_failure"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.422,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.downscoped.AccessBoundaryRule.available_permissions~2#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_downscoped.TestAccessBoundaryRule::test_invalid_available_permissions_value"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 84.223,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.downscoped.CredentialAccessBoundary.rules~2#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_downscoped.TestCredentialAccessBoundary::test_invalid_rules_value"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.635,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.pluggable.Credentials._parse_subject_token#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_pluggable.TestCredentials::test_retrieve_subject_token_missing_error_code_message"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_with_target_audience_integration": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.055,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.pluggable.Credentials._parse_subject_token#2": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_pluggable.TestCredentials::test_retrieve_subject_token_missing_token_type"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_with_target_audience_integration": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.442,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.pluggable.Credentials._validate_response_schema#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_pluggable.TestCredentials::test_retrieve_subject_token_file_cache_value_error_report",
+   "unit|tests.test_pluggable.TestCredentials::test_retrieve_subject_token_missing_version",
+   "unit|tests.test_pluggable.TestCredentials::test_revoke_failed"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.975,
+  "tests_not_passing": 3,
+  "timed_out": false
+ },
+ "auth.pluggable.Credentials._validate_response_schema#2": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_pluggable.TestCredentials::test_retrieve_subject_token_missing_success",
+   "unit|tests.test_pluggable.TestCredentials::test_revoke_failed"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 83.661,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "auth.pluggable.Credentials._validate_running_mode#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_pluggable.TestCredentials::test_retrieve_subject_token_not_allowd",
+   "unit|tests.test_pluggable.TestCredentials::test_revoke_failed_executable_not_allowed"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 80.717,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "auth.pluggable.Credentials._validate_running_mode#2": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_pluggable.TestCredentials::test_credential_source_missing_output_interactive_mode"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 2,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.905,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.pluggable.Credentials._validate_running_mode#3": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_pluggable.TestCredentials::test_retrieve_subject_token_fail_on_validation_missing_interactive_timeout"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_with_quota_project_integration": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_with_target_audience_integration": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.027,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "auth.pluggable.Credentials._validate_running_mode#4": {
+  "detected": true,
+  "examples": [
+   "unit|tests.test_pluggable.TestCredentials::test_retrieve_subject_token_non_workforce_fail_interactive_mode"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.63,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_challenges::test_security_key_webauthn"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.358,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#2": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_challenges::test_security_key_webauthn"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.514,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#3": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_challenges::test_security_key_webauthn"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.687,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#4": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_challenges::test_security_key_webauthn"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 83.826,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#5": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_challenges::test_security_key_webauthn"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 80.576,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.challenges.SecurityKeyChallenge._obtain_challenge_input_webauthn#6": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_challenges::test_security_key_webauthn"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 82.413,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.webauthn_handler.PluginHandler._call_plugin#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_webauthn_handler::test_malformated_get_assertion_response"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.275,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.webauthn_handler.PluginHandler._find_plugin#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_webauthn_handler::test_PluginHandler_is_available",
+   "unit|tests.oauth2.test_webauthn_handler_factory::test_WebauthHandlerFactory_get"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.84,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "oauth2.webauthn_types.GetResponse.from_json#1": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_webauthn_types::test_MalformatedJsonInput"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 8,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_with_quota_project_integration": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 79.39,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.webauthn_types.GetResponse.from_json#2": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_webauthn_types::test_GetResponse_error[input_dict0-Invalid Get response type]",
+   "unit|tests.oauth2.test_webauthn_types::test_GetResponse_error[input_dict1-Invalid Get response type]"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 84.014,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "oauth2.webauthn_types.GetResponse.from_json#3": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_webauthn_types::test_GetResponse_error[input_dict2-Get response is empty]"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|": 2,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 80.806,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.webauthn_types.GetResponse.from_json#4": {
+  "detected": true,
+  "examples": [
+   "unit|tests.oauth2.test_webauthn_types::test_GetResponse_error[input_dict4-Invalid credential type]",
+   "unit|tests.oauth2.test_webauthn_types::test_GetResponse_error[input_dict5-Invalid credential type]"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 9,
+   "tests": {
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+    "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_with_quota_project_integration": 1,
+    "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+    "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+    "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+   }
+  },
+  "runs": 1,
+  "seconds": 81.837,
+  "tests_not_passing": 2,
+  "timed_out": false
+ }
+}

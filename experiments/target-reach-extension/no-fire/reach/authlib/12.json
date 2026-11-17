@@ -1,0 +1,94 @@
+{
+ "check": "jose.drafts._jwe_algorithms.ECDH1PUAlgorithm.generate_keys_and_prepare_headers#1",
+ "checks_json_sha256": "3208594ee8627cfe505c022cf74a491b367668769e232cfca30d933fffb4c7d0",
+ "clone": "../target-reach/work/src/authlib",
+ "copy": "work/reach/authlib/copy",
+ "file": "authlib/jose/drafts/_jwe_algorithms.py",
+ "inputs": [
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T15:52:46Z",
+   "entry_point": "authlib.jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {},
+   "input": "compact JWE, protected header {\"alg\":\"ECDH-1PU+A128KW\",\"enc\":\"A128GCM\",\"epk\":<ephemeral public P-256 JWK>}, made by ECDH-1PU with key wrapping for the recipient key",
+   "line_events_in_file": 0,
+   "module_of_file_imported": [],
+   "name": "a",
+   "outcome": {
+    "class": "authlib.jose.errors.UnsupportedAlgorithmError",
+    "description": "",
+    "error": "unsupported_algorithm",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7516/jwe.py",
+     "function": "JsonWebEncryption.get_header_alg",
+     "line": 701
+    },
+    "str": "unsupported_algorithm: "
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "127": "raise InvalidEncryptionAlgorithmForECDH1PUWithKeyWrappingError()"
+   },
+   "raise_lines_executed": {},
+   "reached": false,
+   "returncode": 0,
+   "settings": "JsonWebEncryption() (algorithms=None, private_headers=None: the defaults); key: the recipient's private P-256 JWK (a dict); sender_key: the sender's public P-256 JWK (a dict), the parameter of deserialize_compact for ECDH-1PU",
+   "start": "2026-11-17T15:52:46Z",
+   "stderr": "no-fire/reach/authlib/12.py:156: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebEncryption",
+   "token": "eyJhbGciOiJFQ0RILTFQVStBMTI4S1ciLCJlbmMiOiJBMTI4R0NNIiwiZXBrIjp7Imt0eSI6IkVDIiwiY3J2IjoiUC0yNTYiLCJ4Ijoic2dXUVVRVEJzbXlnOXNSeVAteVY3X0JJZ1JuZm9uMEFpeVdodGtMWFRyYyIsInkiOiJaSDNnc1RTbUtzSlRpaG5rb201QjdJX1RlVXZXQl9GUkE1bkk5dVlmX0lFIn19.PJRSFhYLUmf0zsDnmIRP9WWxJdwxYlbw.cm93LTEyLWl2LTEy.GMYOOQHNcitKKH2_2LMpQwcis2cMiNauxBSSUSYqE9RW.v9B0qU2mjcd2DdpIoC1SDw",
+   "within_4_4": true
+  },
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T15:52:47Z",
+   "entry_point": "authlib.jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "ECDH1PUAlgorithm.compute_derived_key": 1,
+    "ECDH1PUAlgorithm.compute_fixed_info": 1,
+    "ECDH1PUAlgorithm.compute_shared_key": 1,
+    "ECDH1PUAlgorithm.deliver_at_recipient": 1,
+    "ECDH1PUAlgorithm.prepare_key": 2,
+    "ECDH1PUAlgorithm.unwrap": 1
+   },
+   "input": "the token of run a",
+   "line_events_in_file": 37,
+   "module_of_file_imported": [
+    "authlib.jose.drafts._jwe_algorithms"
+   ],
+   "name": "b",
+   "outcome": {
+    "kind": "returned",
+    "value": "{'header': {'alg': 'ECDH-1PU+A128KW', 'enc': 'A128GCM', 'epk': {'kty': 'EC', 'crv': 'P-256', 'x': 'sgWQUQTBsmyg9sRyP-yV7_BIgRnfon0AiyWhtkLXTrc', 'y': 'ZH3gsTSmKsJTihnkom5B7I_TeUvWB_FRA5nI9uYf_IE'}}, 'payload': b'{\"sub\":\"row-12\",\"iat\":1700000000}'}"
+   },
+   "outside_4_4_because": "calls authlib.jose.drafts.register_jwe_draft, a function of the package that is not an entry point (and that docs/ does not name), before the entry point",
+   "python": "3.12.3",
+   "raise_lines": {
+    "127": "raise InvalidEncryptionAlgorithmForECDH1PUWithKeyWrappingError()"
+   },
+   "raise_lines_executed": {},
+   "reached": false,
+   "returncode": 0,
+   "settings": "register_jwe_draft(JsonWebEncryption) called first; JsonWebEncryption() (the defaults); key: the recipient's private P-256 JWK (a dict); sender_key: the sender's public P-256 JWK (a dict), the parameter of deserialize_compact for ECDH-1PU",
+   "start": "2026-11-17T15:52:46Z",
+   "stderr": "no-fire/reach/authlib/12.py:169: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebEncryption",
+   "token": "eyJhbGciOiJFQ0RILTFQVStBMTI4S1ciLCJlbmMiOiJBMTI4R0NNIiwiZXBrIjp7Imt0eSI6IkVDIiwiY3J2IjoiUC0yNTYiLCJ4Ijoic2dXUVVRVEJzbXlnOXNSeVAteVY3X0JJZ1JuZm9uMEFpeVdodGtMWFRyYyIsInkiOiJaSDNnc1RTbUtzSlRpaG5rb201QjdJX1RlVXZXQl9GUkE1bkk5dVlmX0lFIn19.PJRSFhYLUmf0zsDnmIRP9WWxJdwxYlbw.cm93LTEyLWl2LTEy.GMYOOQHNcitKKH2_2LMpQwcis2cMiNauxBSSUSYqE9RW.v9B0qU2mjcd2DdpIoC1SDw",
+   "within_4_4": false
+  }
+ ],
+ "interpreter": "../target-reach/work/venvs/authlib/bin/python",
+ "python": "3.12.3",
+ "raise_lines": [
+  127
+ ],
+ "reached": false,
+ "row": 12,
+ "script": "no-fire/reach/authlib/12.py",
+ "script_sha256": "9f775b5c37e1a525536b24bc9e238ddb19282688fc47e01c6f053e508087cd61"
+}

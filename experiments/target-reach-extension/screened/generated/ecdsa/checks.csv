@@ -1,0 +1,5 @@
+check,file,role,function,class,template,in_handler,reachable,decides,cases_decided,blocks_targeting,cases_fired
+keys._truncate_and_convert_digest#1,ecdsa/keys.py,subject,_truncate_and_convert_digest,BadDigestError,this curve ({*}) is too short for the length of your digest ({*}),no,yes,yes,2,2,2
+keys.VerifyingKey.verify#1,ecdsa/keys.py,subject,VerifyingKey.verify,BadSignatureError,Signature verification failed,yes,yes,yes,5,0,5
+keys.VerifyingKey.verify_digest#1,ecdsa/keys.py,subject,VerifyingKey.verify_digest,BadSignatureError,Malformed formatting of signature,yes,yes,yes,37,2,37
+keys.VerifyingKey.verify_digest#2,ecdsa/keys.py,subject,VerifyingKey.verify_digest,BadSignatureError,Signature verification failed,no,yes,yes,13,0,13

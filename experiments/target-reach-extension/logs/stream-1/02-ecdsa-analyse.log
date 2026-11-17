@@ -1,0 +1,1 @@
+analyse: 57 cases, 22 of 22 reach their target, 0 flags, 4 deletions, not detected {"O_V": 0, "O_Vfc": 3, "O_C": 0, "O_T": 0, "O_S": 0, "suite": 0, "whole suite": 0}; pinning the own test passes in 6 of 57 cases; sentinels that do not hold: ['2 baseline runs and the control copy give identical records, message texts aside']

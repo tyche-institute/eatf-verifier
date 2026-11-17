@@ -1,0 +1,371 @@
+{
+ "counts": {
+  "block_targets_by_basis": {
+   "assert+name": 1,
+   "assert-literal": 2,
+   "name": 17,
+   "none: no name token matches": 5,
+   "none: tie": 19
+  },
+  "blocks": 58,
+  "cases": 56,
+  "cases_another_check_fires_too": 5,
+  "cases_by_site_kind": {
+   "check": 56
+  },
+  "cases_class_only": 52,
+  "cases_fired_in_other_threads": 0,
+  "cases_left_out": 0,
+  "cases_left_out_by_reason": {},
+  "cases_message_text_differs_between_unmodified_runs": 0,
+  "cases_nested": 0,
+  "cases_of_included_blocks": 56,
+  "cases_reaching_target": 16,
+  "cases_target_fires": 17,
+  "cases_with_target": 25,
+  "cases_with_target_by_basis": {
+   "assert+name": 1,
+   "assert-literal": 2,
+   "name": 22
+  },
+  "cases_with_target_by_outcome": {
+   "decided by the target": 16,
+   "decided by the target; own test without the target: fails": 16,
+   "the target does not fire": 8,
+   "the target does not fire; own test without the target: passes": 4,
+   "the target does not fire; own test without the target: target not deleted": 4,
+   "the target fires and another check decides": 1,
+   "the target fires and another check decides; own test without the target: fails": 1
+  },
+  "cases_with_target_by_tier": {
+   "assertion": 2,
+   "name": 23
+  },
+  "checks": 99,
+  "checks_deciding": 29,
+  "checks_deciding_in_subject_files": 29,
+  "checks_deciding_not_statically_reachable": 0,
+  "checks_firing": 31,
+  "checks_firing_and_never_deciding": 2,
+  "checks_in_subject_files": 99,
+  "checks_reachable": 55,
+  "deletion_runs_repeated": 0,
+  "deletions": 31,
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": 0,
+   "O_V within O_C": 0,
+   "O_V within O_S": 0,
+   "O_Vfc within O_V": 0,
+   "suite within whole suite": 0
+  },
+  "deletions_in_handler": 13,
+  "deletions_not_detected": {
+   "O_C": 1,
+   "O_S": 2,
+   "O_T": 22,
+   "O_V": 2,
+   "O_Vfc": 13,
+   "suite": 2,
+   "whole suite": 2
+  },
+  "deletions_not_detected_of_deciding_checks": {
+   "O_C": 0,
+   "O_S": 1,
+   "O_T": 20,
+   "O_V": 1,
+   "O_Vfc": 12,
+   "suite": 1,
+   "whole suite": 1
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": 1,
+   "O_T": 22,
+   "O_V": 2,
+   "O_Vfc": 13
+  },
+  "deletions_not_detected_withheld_as_failing_of_deciding_checks": {
+   "O_C": 0,
+   "O_T": 20,
+   "O_V": 1,
+   "O_Vfc": 12
+  },
+  "deletions_of_checks_that_fire_and_never_decide": 2,
+  "deletions_of_deciding_checks": 29,
+  "deletions_time_limit": 0,
+  "deletions_without_record": 0,
+  "fired_recorded": true,
+  "flags": 9,
+  "flags_by_tier": {
+   "name": 9
+  },
+  "flags_target_fires": 1,
+  "included_blocks": 44,
+  "included_blocks_class_only": 40,
+  "included_blocks_never_run": 1,
+  "included_blocks_with_target": 20,
+  "pinning": {
+   "cases": 56,
+   "cases_not_counted_deciding_check_not_deleted": 0,
+   "cases_not_counted_no_deciding_check": 0,
+   "cases_not_counted_no_record": 0,
+   "cases_not_counted_time_limit": 0,
+   "class_only": {
+    "cases": 52,
+    "test_passes": 2
+   },
+   "message": {
+    "cases": 4,
+    "test_passes": 0
+   },
+   "test_fails": 54,
+   "test_passes": 2,
+   "test_passes_by_what_the_case_does": {
+    "other class, another check": 1,
+    "same class, another check": 1
+   }
+  },
+  "reached_targets": 9,
+  "reached_targets_deletion_not_detected_O_T": 0,
+  "test_files_not_collected": 0,
+  "tests_collected_again": 0,
+  "tests_expected_to_fail_at_baseline": 1,
+  "tests_imported_and_kept": 0,
+  "tests_run": 255,
+  "tests_with_cases": 56
+ },
+ "expected_baseline_failures": [
+  "tests/algorithms/test_EC.py::test_incorrect_public_key_hmac_signing"
+ ],
+ "lists": {
+  "cases_left_out": [],
+  "checks_deciding_not_statically_reachable": [],
+  "deletion_runs_repeated": [],
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": [],
+   "O_V within O_C": [],
+   "O_V within O_S": [],
+   "O_Vfc within O_V": [],
+   "suite within whole suite": []
+  },
+  "deletions_not_detected": {
+   "O_C": [
+    "jws._verify_signature#1"
+   ],
+   "O_S": [
+    "jws._verify_signature#1",
+    "jwt._validate_claims#2"
+   ],
+   "O_T": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe.decrypt#1",
+    "jws._load#3",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2"
+   ],
+   "O_V": [
+    "jws._verify_signature#1",
+    "jwt._validate_claims#2"
+   ],
+   "O_Vfc": [
+    "jwe._jwe_compact_deserialize#1",
+    "jws._load#1",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._verify_signature#1",
+    "jwt._validate_at_hash#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_nbf#1",
+    "jwt.decode#1",
+    "jwt.decode#2"
+   ],
+   "suite": [
+    "jws._verify_signature#1",
+    "jwt._validate_claims#2"
+   ],
+   "whole suite": [
+    "jws._verify_signature#1",
+    "jwt._validate_claims#2"
+   ]
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": [
+    "jws._verify_signature#1"
+   ],
+   "O_T": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe.decrypt#1",
+    "jws._load#3",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._verify_signature#1",
+    "jws._verify_signature#2",
+    "jws._verify_signature#3",
+    "jws._verify_signature#4",
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2"
+   ],
+   "O_V": [
+    "jws._verify_signature#1",
+    "jwt._validate_claims#2"
+   ],
+   "O_Vfc": [
+    "jwe._jwe_compact_deserialize#1",
+    "jws._load#1",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._verify_signature#1",
+    "jwt._validate_at_hash#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_nbf#1",
+    "jwt.decode#1",
+    "jwt.decode#2"
+   ]
+  },
+  "deletions_of_checks_that_fire_and_never_decide": [
+   "jws._verify_signature#1",
+   "jws._verify_signature#3"
+  ],
+  "deletions_time_limit": [],
+  "deletions_without_record": [],
+  "included_blocks_never_run": [
+   "tests/algorithms/test_EC.py::test_incorrect_public_key_hmac_signing#0"
+  ]
+ },
+ "refused_connection_attempts": {
+  "baseline_recorder_runs": [
+   0,
+   0
+  ],
+  "deletion_recorder_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 32,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "suite_run": 0,
+  "tests": [],
+  "whole_suite_baseline_runs": [
+   0,
+   0
+  ],
+  "whole_suite_deletion_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 32,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "witness_runs": 0
+ },
+ "rule_version": "reach-target-rule/2",
+ "sentinels": [
+  {
+   "detail": "",
+   "name": "2 baseline runs and the control copy give identical records, message texts aside",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "in the baseline recorder run every test passes or is skipped, every test file is collected, and the tests deselected are the expected baseline failures",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "under the deletion of a check, that check fires in no case",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "every deletion run gave a record or exceeded the time limit 2 times",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the check that decides a case is among the checks that fire in it",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the whole suite ran on every deletion copy, and on the control copy it ends with its results and loses no test that passes in both unmodified runs",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the deleted checks are the checks of the subject files that fire in at least 1 case of the study",
+   "pass": true
+  }
+ ],
+ "subject": {
+  "commit": "018b310ddb8b50dcfd09a0c152117835a21dd656",
+  "name": "python-jose",
+  "version": "3.5.0"
+ },
+ "suite_without_recorder": "1 failed, 249 passed, 6 skipped, 5 warnings",
+ "test_files_not_collected": [],
+ "tests_collected_again": [],
+ "tests_imported_and_kept": [],
+ "whole_suite": {
+  "counts": {
+   "passing in both": 457,
+   "run 1": {
+    "failed": 1,
+    "passed": 457,
+    "skipped": 12
+   },
+   "run 2": {
+    "failed": 1,
+    "passed": 457,
+    "skipped": 12
+   },
+   "unstable": 0
+  },
+  "deletions_no_result": [],
+  "deletions_run": true,
+  "deletions_time_limit": [],
+  "runs_repeated": [],
+  "suite_runs": [
+   {
+    "name": "compatibility",
+    "paths": [
+     "tests"
+    ]
+   }
+  ]
+ },
+ "witnesses": {}
+}

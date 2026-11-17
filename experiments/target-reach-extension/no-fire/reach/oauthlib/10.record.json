@@ -1,0 +1,271 @@
+{
+ "check": "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3",
+ "check_definition": {
+  "class": "InvalidGrantError",
+  "class_name": "InvalidGrantError",
+  "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+  "file_sha256_in_copy": "e75d01898546168125cff9cdde9cb870ba59d781d53ae40530eb6c0e570cebf4",
+  "function": "DeviceCodeGrant.validate_device_code",
+  "raise_source": {
+   "202": "raise rfc6749_errors.InvalidGrantError(request=request)"
+  },
+  "raise_statements": [
+   [
+    202,
+    202
+   ]
+  ],
+  "template": ""
+ },
+ "clone": {
+  "copied_paths_clean": true,
+  "head": "6e3aa05af92978755939a18cb4dd655ced156c1e",
+  "path": "experiments/target-reach/work/src/oauthlib"
+ },
+ "copy": {
+  "package_imported_from": "experiments/target-reach-extension/work/reach/oauthlib/copy/10/oauthlib/__init__.py",
+  "path": "experiments/target-reach-extension/work/reach/oauthlib/copy/10",
+  "paths": [
+   "oauthlib",
+   "tests"
+  ],
+  "subject_files_checked": 75
+ },
+ "decides": true,
+ "entry_point": {
+  "called_on": "oauthlib.oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant",
+  "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+  "line": 116,
+  "name": "validate_token_request",
+  "qualname": "DeviceCodeGrant.validate_token_request"
+ },
+ "exception": {
+  "class": "oauthlib.oauth2.rfc6749.errors.InvalidGrantError",
+  "description": "",
+  "error": "invalid_grant",
+  "message": "(invalid_grant)  <oauthlib.Request SANITIZED>",
+  "raise_site": {
+   "check": "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3",
+   "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+   "function": "DeviceCodeGrant.validate_device_code",
+   "line": 202
+  },
+  "status_code": 400,
+  "traceback": [
+   {
+    "file": "trace_input.py (outside the package)",
+    "function": "main",
+    "line": 277
+   },
+   {
+    "file": "10.py (outside the package)",
+    "function": "build.<locals>.<lambda>",
+    "line": 99
+   },
+   {
+    "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+    "function": "DeviceCodeGrant.validate_token_request",
+    "line": 147
+   },
+   {
+    "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+    "function": "DeviceCodeGrant.validate_device_code",
+    "line": 202
+   }
+  ]
+ },
+ "facts": {},
+ "fired": true,
+ "input": "POST https://server.example.com/token, Authorization: Basic (client 1406020730 and its secret), body grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Adevice_code&device_code=GmRhmhcxhwAzkoEqiMEg_DnyEysNkuNhszIySk9eS, a device code of which the provider holds no record",
+ "interpreter": {
+  "dont_write_bytecode": true,
+  "environment_variables": [
+   "HOME",
+   "LANG",
+   "LC_ALL",
+   "PATH"
+  ],
+  "executable": "experiments/target-reach/work/venvs/oauthlib/bin/python",
+  "hash_randomization": true,
+  "implementation": "CPython",
+  "isolated": true,
+  "locale": {
+   "LANG": "C.UTF-8",
+   "LC_ALL": "C.UTF-8"
+  },
+  "prefix": "experiments/target-reach/work/venvs/oauthlib",
+  "version": "3.12.3"
+ },
+ "library": "oauthlib",
+ "lines_executed": {
+  "oauthlib/__init__.py": {
+   "get_debug": [
+    34
+   ]
+  },
+  "oauthlib/common.py": {
+   "CaseInsensitiveDict.__contains__": [
+    307
+   ],
+   "CaseInsensitiveDict.__getitem__": [
+    315,
+    316
+   ],
+   "CaseInsensitiveDict.get": [
+    319
+   ],
+   "Request.__getattr__": [
+    400,
+    401
+   ],
+   "Request.__repr__": [
+    406,
+    407
+   ],
+   "Request.duplicate_params": [
+    430,
+    431,
+    432,
+    433,
+    434,
+    435
+   ],
+   "Request.duplicate_params.<locals>.<genexpr>": [
+    431,
+    432
+   ],
+   "Request.uri_query": [
+    419
+   ],
+   "Request.uri_query_params": [
+    423,
+    424
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/errors.py": {
+   "OAuth2Error.__init__": [
+    44,
+    47,
+    48,
+    49,
+    50,
+    52,
+    53,
+    55,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/grant_types/base.py": {
+   "GrantTypeBase.validate_client_authentication": [
+    223,
+    224
+   ],
+   "GrantTypeBase.validate_client_confidential": [
+    184,
+    185,
+    189,
+    190,
+    195,
+    196
+   ],
+   "GrantTypeBase.validate_grant_type": [
+    157,
+    158,
+    159
+   ]
+  },
+  "oauthlib/oauth2/rfc8628/grant_types/device_code.py": {
+   "DeviceCodeGrant.validate_device_code": [
+    164,
+    169,
+    170,
+    172,
+    189,
+    190,
+    196,
+    202
+   ],
+   "DeviceCodeGrant.validate_token_request": [
+    121,
+    124,
+    129,
+    132,
+    133,
+    138,
+    141,
+    147
+   ]
+  },
+  "oauthlib/oauth2/rfc8628/request_validator.py": {
+   "RequestValidator.client_authentication_required": [
+    25
+   ]
+  }
+ },
+ "outcome": "raised",
+ "raise_events": [
+  {
+   "check_at_line": "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3",
+   "exception": "oauthlib.oauth2.rfc6749.errors.InvalidGrantError",
+   "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+   "firing_of_the_check": true,
+   "function": "DeviceCodeGrant.validate_device_code",
+   "instruction": "RAISE_VARARGS",
+   "line": 202
+  },
+  {
+   "check_at_line": null,
+   "exception": "oauthlib.oauth2.rfc6749.errors.InvalidGrantError",
+   "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+   "firing_of_the_check": false,
+   "function": "DeviceCodeGrant.validate_token_request",
+   "instruction": "CACHE",
+   "line": 147
+  }
+ ],
+ "raise_lines_executed": [
+  202
+ ],
+ "result": "reached",
+ "returned": null,
+ "row": 10,
+ "settings": [
+  "DeviceCodeGrant(request_validator) with no other argument: no custom validators",
+  "request validator, a subclass of oauthlib.oauth2.rfc8628.request_validator.RequestValidator: client_authentication_required keeps the library's default (True)",
+  "authenticate_client: accepts the HTTP Basic credentials of the registered client and sets request.client (the library has no default)",
+  "validate_grant_type: True, the client is allowed the device flow (no default)",
+  "validate_device_code: None, the provider holds no record of the device code; the documented answer for an unknown or invalid device code (rfc8628/request_validator.py, lines 49-50; no default)"
+ ],
+ "times": {
+  "call_ended": "2026-11-17T15:48:31Z",
+  "call_started": "2026-11-17T15:48:31Z",
+  "ended": "2026-11-17T15:48:31Z",
+  "started": "2026-11-17T15:48:31Z"
+ },
+ "validator_calls": [
+  [
+   "client_authentication_required (library default)",
+   "True"
+  ],
+  [
+   "authenticate_client",
+   "True"
+  ],
+  [
+   "validate_grant_type",
+   "True"
+  ],
+  [
+   "validate_device_code",
+   "None"
+  ]
+ ]
+}

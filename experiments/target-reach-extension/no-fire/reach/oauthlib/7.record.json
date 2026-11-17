@@ -1,0 +1,221 @@
+{
+ "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+ "check_definition": {
+  "class": "oauthlib.oauth2.rfc6749.errors.InvalidRequestError",
+  "class_name": "InvalidRequestError",
+  "file": "oauthlib/oauth2/rfc6749/endpoints/base.py",
+  "file_sha256_in_copy": "7d25500223a25581fdb6b233cca29430212ba6a228d3a31ea21237e85d0f3c04",
+  "function": "BaseEndpoint._raise_on_bad_method",
+  "raise_source": {
+   "79": "raise InvalidRequestError(request=request,",
+   "80": "description=('Unsupported request method %s' % request.http_method.upper()))"
+  },
+  "raise_statements": [
+   [
+    79,
+    80
+   ]
+  ],
+  "template": "Unsupported request method {*}"
+ },
+ "clone": {
+  "copied_paths_clean": true,
+  "head": "6e3aa05af92978755939a18cb4dd655ced156c1e",
+  "path": "experiments/target-reach/work/src/oauthlib"
+ },
+ "copy": {
+  "package_imported_from": "experiments/target-reach-extension/work/reach/oauthlib/copy/7/oauthlib/__init__.py",
+  "path": "experiments/target-reach-extension/work/reach/oauthlib/copy/7",
+  "paths": [
+   "oauthlib",
+   "tests"
+  ],
+  "subject_files_checked": 75
+ },
+ "decides": true,
+ "entry_point": {
+  "called_on": "oauthlib.oauth2.rfc6749.endpoints.pre_configured.WebApplicationServer",
+  "file": "oauthlib/oauth2/rfc6749/endpoints/token.py",
+  "line": 117,
+  "name": "validate_token_request",
+  "qualname": "TokenEndpoint.validate_token_request"
+ },
+ "exception": {
+  "class": "oauthlib.oauth2.rfc6749.errors.InvalidRequestError",
+  "description": "Unsupported request method GET",
+  "error": "invalid_request",
+  "message": "(invalid_request) Unsupported request method GET <oauthlib.Request SANITIZED>",
+  "raise_site": {
+   "check": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+   "file": "oauthlib/oauth2/rfc6749/endpoints/base.py",
+   "function": "BaseEndpoint._raise_on_bad_method",
+   "line": 79
+  },
+  "status_code": 400,
+  "traceback": [
+   {
+    "file": "trace_input.py (outside the package)",
+    "function": "main",
+    "line": 277
+   },
+   {
+    "file": "7.py (outside the package)",
+    "function": "build.<locals>.<lambda>",
+    "line": 47
+   },
+   {
+    "file": "oauthlib/oauth2/rfc6749/endpoints/token.py",
+    "function": "TokenEndpoint.validate_token_request",
+    "line": 118
+   },
+   {
+    "file": "oauthlib/oauth2/rfc6749/endpoints/base.py",
+    "function": "BaseEndpoint._raise_on_bad_method",
+    "line": 79
+   }
+  ]
+ },
+ "facts": {
+  "classes_of_the_mro_that_define_valid_request_methods": [
+   [
+    "IntrospectEndpoint",
+    "('POST',)"
+   ],
+   [
+    "TokenEndpoint",
+    "('POST',)"
+   ],
+   [
+    "RevocationEndpoint",
+    "('POST',)"
+   ],
+   [
+    "BaseEndpoint",
+    "<property object at 0x70afe436bf10>"
+   ]
+  ],
+  "method_resolution_order": [
+   "WebApplicationServer",
+   "AuthorizationEndpoint",
+   "IntrospectEndpoint",
+   "TokenEndpoint",
+   "ResourceEndpoint",
+   "RevocationEndpoint",
+   "BaseEndpoint",
+   "object"
+  ]
+ },
+ "fired": true,
+ "input": "GET https://server.example.com/token?grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA, no body",
+ "interpreter": {
+  "dont_write_bytecode": true,
+  "environment_variables": [
+   "HOME",
+   "LANG",
+   "LC_ALL",
+   "PATH"
+  ],
+  "executable": "experiments/target-reach/work/venvs/oauthlib/bin/python",
+  "hash_randomization": true,
+  "implementation": "CPython",
+  "isolated": true,
+  "locale": {
+   "LANG": "C.UTF-8",
+   "LC_ALL": "C.UTF-8"
+  },
+  "prefix": "experiments/target-reach/work/venvs/oauthlib",
+  "version": "3.12.3"
+ },
+ "library": "oauthlib",
+ "lines_executed": {
+  "oauthlib/__init__.py": {
+   "get_debug": [
+    34
+   ]
+  },
+  "oauthlib/common.py": {
+   "Request.__getattr__": [
+    400,
+    401
+   ],
+   "Request.__repr__": [
+    406,
+    407
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/endpoints/base.py": {
+   "BaseEndpoint._raise_on_bad_method": [
+    76,
+    78,
+    79,
+    80
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/endpoints/token.py": {
+   "TokenEndpoint.validate_token_request": [
+    118
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/errors.py": {
+   "OAuth2Error.__init__": [
+    44,
+    45,
+    47,
+    48,
+    49,
+    50,
+    52,
+    53,
+    55,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+   ]
+  }
+ },
+ "outcome": "raised",
+ "raise_events": [
+  {
+   "check_at_line": "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1",
+   "exception": "oauthlib.oauth2.rfc6749.errors.InvalidRequestError",
+   "file": "oauthlib/oauth2/rfc6749/endpoints/base.py",
+   "firing_of_the_check": true,
+   "function": "BaseEndpoint._raise_on_bad_method",
+   "instruction": "RAISE_VARARGS",
+   "line": 79
+  },
+  {
+   "check_at_line": null,
+   "exception": "oauthlib.oauth2.rfc6749.errors.InvalidRequestError",
+   "file": "oauthlib/oauth2/rfc6749/endpoints/token.py",
+   "firing_of_the_check": false,
+   "function": "TokenEndpoint.validate_token_request",
+   "instruction": "CACHE",
+   "line": 118
+  }
+ ],
+ "raise_lines_executed": [
+  79,
+  80
+ ],
+ "result": "reached",
+ "returned": null,
+ "row": 7,
+ "settings": [
+  "WebApplicationServer(request_validator) with no other argument; the library's RequestValidator, unchanged, whose methods the call does not reach",
+  "valid_request_methods is not set by the caller: the class attribute ('POST',) of the library applies"
+ ],
+ "times": {
+  "call_ended": "2026-11-17T15:48:31Z",
+  "call_started": "2026-11-17T15:48:31Z",
+  "ended": "2026-11-17T15:48:31Z",
+  "started": "2026-11-17T15:48:31Z"
+ },
+ "validator_calls": null
+}

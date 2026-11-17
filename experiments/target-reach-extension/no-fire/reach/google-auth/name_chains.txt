@@ -1,0 +1,36 @@
+entry points: google/auth/_jwt_async.py:decode (line 71), google/auth/jwt.py:decode (line 234)
+functions in the subject files: 892; in the closure of the entry points: 505
+
+row 1: auth.aws.RequestSigner.get_request_options#1 (google/auth/aws.py, line 126)
+  start: google/auth/jwt.py:decode (line 234)
+  google/auth/jwt.py:decode refers to `get` (line 267, 268, 320) -> google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.get (def at line 661)
+  google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.get refers to `request` (line 702) -> google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.request (def at line 371)
+  google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.request refers to `refresh` (line 583) -> google/auth/credentials.py:CredentialsWithRegionalAccessBoundary.refresh (def at line 513)
+  google/auth/credentials.py:CredentialsWithRegionalAccessBoundary.refresh refers to `_perform_refresh_token` (line 519) -> google/auth/external_account.py:Credentials._perform_refresh_token (def at line 477)
+  google/auth/external_account.py:Credentials._perform_refresh_token refers to `retrieve_subject_token` (line 519) -> google/auth/aws.py:Credentials.retrieve_subject_token (def at line 717)
+  google/auth/aws.py:Credentials.retrieve_subject_token refers to `get_request_options` (line 767) -> google/auth/aws.py:RequestSigner.get_request_options (def at line 89)
+
+row 2: auth._agent_identity_utils.parse_certificate#1 (google/auth/_agent_identity_utils.py, line 329)
+  start: google/auth/jwt.py:decode (line 234)
+  google/auth/jwt.py:decode refers to `get` (line 267, 268, 320) -> google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.get (def at line 661)
+  google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.get refers to `request` (line 702) -> google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.request (def at line 371)
+  google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.request refers to `check_parameters_for_unauthorized_response` (line 502) -> google/auth/aio/transport/mtls.py:check_parameters_for_unauthorized_response (def at line 182)
+  google/auth/aio/transport/mtls.py:check_parameters_for_unauthorized_response refers to `parse_certificate` (line 205) -> google/auth/_agent_identity_utils.py:parse_certificate (def at line 312)
+
+row 3: auth.crypt._python_rsa.RSASigner.from_string#1 (google/auth/crypt/_python_rsa.py, line 190)
+  start: google/auth/jwt.py:decode (line 234)
+  google/auth/jwt.py:decode refers to `verify_signature` (line 301) -> google/auth/crypt/__init__.py:verify_signature (def at line 56)
+  google/auth/crypt/__init__.py:verify_signature refers to `from_string` (line 78) -> google/auth/crypt/_python_rsa.py:RSASigner.from_string (def at line 164)
+
+row 4: auth.credentials.AnonymousCredentials.apply#1 (google/auth/credentials.py, line 606)
+  start: google/auth/jwt.py:decode (line 234)
+  google/auth/jwt.py:decode refers to `get` (line 267, 268, 320) -> google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.get (def at line 661)
+  google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.get refers to `request` (line 702) -> google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.request (def at line 371)
+  google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.request refers to `before_request` (line 435) -> google/auth/_credentials_async.py:Credentials.before_request (def at line 44)
+  google/auth/_credentials_async.py:Credentials.before_request refers to `apply` (line 73) -> google/auth/credentials.py:AnonymousCredentials.apply (def at line 597)
+
+row 5: auth.credentials.AnonymousCredentials.refresh#1 (google/auth/credentials.py, line 595)
+  start: google/auth/jwt.py:decode (line 234)
+  google/auth/jwt.py:decode refers to `get` (line 267, 268, 320) -> google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.get (def at line 661)
+  google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.get refers to `request` (line 702) -> google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.request (def at line 371)
+  google/auth/aio/transport/sessions.py:AsyncAuthorizedSession.request refers to `refresh` (line 583) -> google/auth/credentials.py:AnonymousCredentials.refresh (def at line 592)

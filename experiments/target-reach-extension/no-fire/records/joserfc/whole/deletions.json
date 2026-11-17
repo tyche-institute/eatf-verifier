@@ -1,0 +1,604 @@
+{
+ "_control": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 6.822,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "_keys.JWKRegistry.generate_key#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_jwk_set.TestKeySet::test_generate_key_set_errors",
+   "all|tests.jwk.test_key_methods.TestKeyMethods::test_generate_key"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 20.215,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "_keys.JWKRegistry.import_key#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_key_methods.TestKeyMethods::test_import_without_kty"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 12.056,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_keys.JWKRegistry.import_key#2": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_jwk_set.TestKeySet::test_import_key_set_ignores_unknown_kty",
+   "all|tests.jwk.test_key_methods.TestKeyMethods::test_import_key"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 8.762,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "_keys.KeySet.get_by_kid#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_jwk_set.TestKeySet::test_key_set_methods",
+   "all|tests.jwk.test_key_methods.TestKeyMethods::test_guess_key_set"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.894,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "_rfc7515.json.extract_general_json#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.033,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "_rfc7515.model.JWSAlgModel.check_key#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jws.test_errors.TestJWSWithKeyErrors::test_invalid_key_type",
+   "all|tests.jws.test_registry.JWSRegistryTest::test_filter_algorithms_default_names",
+   "all|tests.jws.test_registry.JWSRegistryTest::test_filter_algorithms_with_key_set",
+   "all|tests.jws.test_registry.JWSRegistryTest::test_guess_algorithm_with_key_set",
+   "all|tests.jws.test_registry.JWSRegistryTest::test_guess_recommended_algorithm",
+   "all|tests.jws.test_registry.JWSRegistryTest::test_guess_security_algorithm"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.571,
+  "tests_not_passing": 6,
+  "timed_out": false
+ },
+ "_rfc7515.registry.JWSRegistry.get_alg#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.307,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "_rfc7515.registry.JWSRegistry.get_alg#3": {
+  "detected": true,
+  "examples": [
+   "all|tests.jws.test_compact.TestCompact::test_raise_unsupported_algorithm_error"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.551,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc7516.message._perform_decrypt#2": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 6.922,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "_rfc7516.message.decrypt_recipient#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.216,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "_rfc7516.message.pre_encrypt_recipients#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwe.test_json.TestJWEJSON::test_multiple_recipients_with_direct_mode"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.261,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc7516.models.JWEKeyWrapping.check_op_key#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwe.test_errors.TestJWEErrors::test_invalid_key_length"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.449,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc7516.registry.JWERegistry._check_algorithm#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 8.777,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "_rfc7516.registry.JWERegistry._check_algorithm#2": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.207,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.019,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "_rfc7516.registry.JWERegistry.validate_protected_header_size#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.361,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "_rfc7517.models.BaseKey.check_alg#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_key_methods.TestKeyMethods::test_check_alg",
+   "all|tests.jws.test_errors.TestJWSWithKeyErrors::test_invalid_key_alg"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 10.448,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "_rfc7517.models.BaseKey.check_key_op#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_key_methods.TestKeyMethods::test_check_ops",
+   "all|tests.jws.test_errors.TestJWSWithKeyErrors::test_invalid_key_ops"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 8.495,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "_rfc7517.models.BaseKey.check_key_op#2": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_key_methods.TestKeyMethods::test_check_ops"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.105,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc7517.models.BaseKey.check_use#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_key_methods.TestKeyMethods::test_check_use",
+   "all|tests.jws.test_errors.TestJWSWithKeyErrors::test_invalid_key_use"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 10.512,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_oct_key.TestOctKey::test_import_missing_k"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.596,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#2": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_oct_key.TestOctKey::test_invalid_key_ops",
+   "all|tests.jwk.test_oct_key.TestOctKey::test_invalid_typeof_k",
+   "all|tests.jwk.test_oct_key.TestOctKey::test_invalid_use",
+   "all|tests.jwk.test_rsa_key.TestRSAKey::test_with_oth"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 8.723,
+  "tests_not_passing": 4,
+  "timed_out": false
+ },
+ "_rfc7517.models.NativeKeyBinding.validate_dict_key_use_operations#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_oct_key.TestOctKey::test_mismatch_use_key_ops"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 12.358,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc7517.pem.CryptographyBinding.import_from_bytes#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_ec_key.TestECKey::test_import_invalid_pem_key",
+   "all|tests.jwk.test_okp_key.TestOKPKey::test_import_invalid_pem_key",
+   "all|tests.jwk.test_rsa_key.TestRSAKey::test_import_invalid_pem_key"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.413,
+  "tests_not_passing": 3,
+  "timed_out": false
+ },
+ "_rfc7518.ec_key.ECBinding.generate_private_key#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_ec_key.TestECKey::test_generate_key"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 8.469,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc7518.jwe_algs.DirectAlgEncryption.compute_cek#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwe.test_compact.TestJWECompact::test_dir_alg",
+   "all|tests.jwe.test_errors.TestJWEErrors::test_invalid_key_length"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 8.748,
+  "tests_not_passing": 2,
+  "timed_out": false
+ },
+ "_rfc7518.jwe_algs.RSAAlgKeyEncryption.encrypt_cek#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwe.test_errors.TestJWEErrors::test_invalid_key_length"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 8.114,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc7518.jws_algs.ESAlgorithm.check_key#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jws.test_errors.TestJWSErrors::test_ec_incorrect_curve",
+   "all|tests.jws.test_registry.JWSRegistryTest::test_filter_algorithms_with_key_set",
+   "all|tests.jws.test_registry.JWSRegistryTest::test_guess_security_algorithm"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.416,
+  "tests_not_passing": 3,
+  "timed_out": false
+ },
+ "_rfc7518.rsa_key.has_all_prime_factors#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_rsa_key.TestRSAKey::test_import_only_from_d"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.601,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc7797.util.is_rfc7797_enabled#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jws.test_rfc7797.TestRFC7797::test_b64_without_crit"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.234,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc8037.jws_eddsa.EdDSAAlgorithm.sign#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jws.test_eddsa.TestEdDSA::test_EdDSA"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.278,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "_rfc8037.okp_key.OKPBinding.generate_private_key#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwk.test_okp_key.TestOKPKey::test_generate_keys"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 9.504,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "drafts.jwe_ecdh_1pu.ECDH1PUAlgModel._check_enc#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwe.test_ecdh_1pu.TestECDH1PUCompact::test_ecdh_1pu_agreement_mode_with_other_encryption_algorithms"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.739,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "jwk.import_key~6#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.419,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "jws.serialize_compact#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jws.test_errors.TestJWSErrors::test_without_key"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 8.866,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "registry.check_crit_header#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jws.test_errors.TestJWSErrors::test_crit_header"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.527,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "registry.check_crit_header#2": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.22,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "registry.check_registry_header#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jws.test_errors.TestJWSErrors::test_without_alg"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.822,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "registry.check_supported_header#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.jwe.test_errors.TestJWEErrors::test_extra_header",
+   "all|tests.jwe.test_errors.TestJWEErrors::test_strict_check_header_with_more_header_registry",
+   "all|tests.jws.test_compact.TestCompact::test_strict_check_header",
+   "all|tests.jws.test_errors.TestJWSErrors::test_extra_header",
+   "all|tests.jws.test_json.TestJSON::test_strict_check_header",
+   "all|tests.jwt.test_jwt.TestJWT::test_using_registry"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 7.054,
+  "tests_not_passing": 6,
+  "timed_out": false
+ }
+}

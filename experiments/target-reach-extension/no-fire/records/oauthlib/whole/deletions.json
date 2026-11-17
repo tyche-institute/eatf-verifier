@@ -1,0 +1,212 @@
+{
+ "_control": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 3.208,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc6749.endpoints.test_error_responses.ErrorResponseTest::test_invalid_request_method",
+   "all|tests.oauth2.rfc6749.endpoints.test_introspect_endpoint.IntrospectEndpointTest::test_introspect_invalid_request_method",
+   "all|tests.oauth2.rfc6749.endpoints.test_revocation_endpoint.RevocationEndpointTest::test_revoke_invalid_request_method"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 2.235,
+  "tests_not_passing": 3,
+  "timed_out": false
+ },
+ "oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_post_request#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc6749.endpoints.test_error_responses.ErrorResponseTest::test_invalid_post_request",
+   "all|tests.oauth2.rfc6749.endpoints.test_introspect_endpoint.IntrospectEndpointTest::test_introspect_bad_post_request",
+   "all|tests.oauth2.rfc6749.endpoints.test_revocation_endpoint.RevocationEndpointTest::test_revoke_bad_post_request"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 2.228,
+  "tests_not_passing": 3,
+  "timed_out": false
+ },
+ "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc6749.endpoints.test_error_responses.ErrorResponseTest::test_access_denied_no_default_redirecturi"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 2.356,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc6749.endpoints.test_error_responses.ErrorResponseTest::test_unauthorized_client"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 2.174,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 2.284,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#2": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc6749.endpoints.test_error_responses.ErrorResponseTest::test_unsupported_grant_type"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 2.236,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#3": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc6749.endpoints.test_error_responses.ErrorResponseTest::test_invalid_request"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 2.245,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#1": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc8628.grant_types.test_device_code::test_missing_device_code"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 3.203,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#2": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc8628.grant_types.test_device_code::test_device_code_authorized_without_scopes_fails_loudly"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 2.245,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc8628.grant_types.test_device_code::test_invalid_device_code[None]",
+   "all|tests.oauth2.rfc8628.grant_types.test_device_code::test_invalid_device_code[True]",
+   "all|tests.oauth2.rfc8628.grant_types.test_device_code::test_invalid_device_code[not_a_real_status]"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 1.883,
+  "tests_not_passing": 3,
+  "timed_out": false
+ },
+ "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1": {
+  "detected": false,
+  "examples": [],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 1.937,
+  "tests_not_passing": 0,
+  "timed_out": false
+ },
+ "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#2": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc8628.grant_types.test_device_code::test_invalid_grant_type_error"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 1.908,
+  "tests_not_passing": 1,
+  "timed_out": false
+ },
+ "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#3": {
+  "detected": true,
+  "examples": [
+   "all|tests.oauth2.rfc8628.grant_types.test_device_code::test_duplicate_params_error"
+  ],
+  "no_result": [],
+  "refused": {
+   "attempts": 0,
+   "tests": {}
+  },
+  "runs": 1,
+  "seconds": 1.923,
+  "tests_not_passing": 1,
+  "timed_out": false
+ }
+}

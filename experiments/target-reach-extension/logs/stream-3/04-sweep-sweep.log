@@ -1,0 +1,51 @@
+uv: ~/.local/bin/uv uv 0.11.21 (x86_64-unknown-linux-gnu)
+ecdsa 0.19.2: release metadata ecdsa-0.19.2.json; 9 pins; 9 included blocks
+16:47:44 suite without recorder: 0 9 passed, 2 warnings (0 failing tests deselected, 0 files not collected)
+{"library": "ecdsa", "python": "3.9.25", "error": null, "summary": "9 passed, 2 warnings", "cases": {}}
+16:47:47 suite without recorder: 0 9 passed, 2 warnings (0 failing tests deselected, 0 files not collected)
+{"library": "ecdsa", "python": "3.10.20", "error": null, "summary": "9 passed, 2 warnings", "cases": {}}
+16:47:50 suite without recorder: 0 9 passed, 2 warnings (0 failing tests deselected, 0 files not collected)
+{"library": "ecdsa", "python": "3.11.15", "error": null, "summary": "9 passed, 2 warnings", "cases": {}}
+16:47:53 suite without recorder: 0 9 passed, 2 warnings (0 failing tests deselected, 0 files not collected)
+{"library": "ecdsa", "python": "3.12.3", "error": null, "summary": "9 passed, 2 warnings", "cases": {"base-1": 57, "base-2": 57}}
+16:47:58 suite without recorder: 0 9 passed, 2 warnings (0 failing tests deselected, 0 files not collected)
+{"library": "ecdsa", "python": "3.13.14", "error": null, "summary": "9 passed, 2 warnings", "cases": {"base-1": 57, "base-2": 57}}
+16:48:04 suite without recorder: 0 9 passed, 2 warnings (0 failing tests deselected, 0 files not collected)
+{"library": "ecdsa", "python": "3.14.6", "error": null, "summary": "9 passed, 2 warnings", "cases": {"base-1": 57, "base-2": 57}}
+python-jose 3.5.0: release metadata python-jose-3.5.0.json; 15 pins; 44 included blocks
+16:48:09 suite without recorder: 1 1 failed, 56 passed (1 failing tests deselected, 0 files not collected)
+{"library": "python-jose", "python": "3.9.25", "error": null, "summary": "1 failed, 56 passed", "cases": {}}
+16:48:10 suite without recorder: 1 1 failed, 56 passed, 4 warnings (1 failing tests deselected, 0 files not collected)
+{"library": "python-jose", "python": "3.10.20", "error": null, "summary": "1 failed, 56 passed, 4 warnings", "cases": {}}
+16:48:12 suite without recorder: 1 1 failed, 56 passed, 4 warnings (1 failing tests deselected, 0 files not collected)
+{"library": "python-jose", "python": "3.11.15", "error": null, "summary": "1 failed, 56 passed, 4 warnings", "cases": {}}
+16:48:13 suite without recorder: 1 1 failed, 56 passed, 4 warnings (1 failing tests deselected, 0 files not collected)
+{"library": "python-jose", "python": "3.12.3", "error": null, "summary": "1 failed, 56 passed, 4 warnings", "cases": {"base-1": 56, "base-2": 56}}
+16:48:17 suite without recorder: 1 1 failed, 56 passed, 4 warnings (1 failing tests deselected, 0 files not collected)
+{"library": "python-jose", "python": "3.13.14", "error": null, "summary": "1 failed, 56 passed, 4 warnings", "cases": {"base-1": 56, "base-2": 56}}
+16:48:20 suite without recorder: 1 1 failed, 56 passed, 4 warnings (1 failing tests deselected, 0 files not collected)
+{"library": "python-jose", "python": "3.14.6", "error": null, "summary": "1 failed, 56 passed, 4 warnings", "cases": {"base-1": 56, "base-2": 56}}
+supabase-auth 2.34.1: release metadata supabase-auth-2.34.1.json; 34 pins; 16 included blocks
+{"library": "supabase-auth", "python": "3.9.25", "planned": false, "support": {"requires_python": ">=3.11", "classifier_minor_versions": [], "admitted_by_requires_python": false, "listed_in_classifiers": null, "both": false, "requires-python": false}}
+{"library": "supabase-auth", "python": "3.10.20", "planned": false, "support": {"requires_python": ">=3.11", "classifier_minor_versions": [], "admitted_by_requires_python": false, "listed_in_classifiers": null, "both": false, "requires-python": false}}
+16:48:26 suite without recorder: 0 20 passed (0 failing tests deselected, 0 files not collected)
+{"library": "supabase-auth", "python": "3.11.15", "error": null, "summary": "20 passed", "cases": {}}
+16:48:29 suite without recorder: 0 20 passed (0 failing tests deselected, 0 files not collected)
+{"library": "supabase-auth", "python": "3.12.3", "error": null, "summary": "20 passed", "cases": {"base-1": 20, "base-2": 20}}
+16:48:36 suite without recorder: 0 20 passed (0 failing tests deselected, 0 files not collected)
+{"library": "supabase-auth", "python": "3.13.14", "error": null, "summary": "20 passed", "cases": {"base-1": 20, "base-2": 20}}
+16:48:43 suite without recorder: 0 20 passed (0 failing tests deselected, 0 files not collected)
+{"library": "supabase-auth", "python": "3.14.6", "error": null, "summary": "20 passed", "cases": {"base-1": 20, "base-2": 20}}
+service-identity 26.1.0: release metadata service-identity-26.1.0.json; 13 pins; 12 included blocks
+16:48:48 suite without recorder: 0 15 passed (0 failing tests deselected, 0 files not collected)
+{"library": "service-identity", "python": "3.9.25", "error": null, "summary": "15 passed", "cases": {}}
+16:48:49 suite without recorder: 0 15 passed (0 failing tests deselected, 0 files not collected)
+{"library": "service-identity", "python": "3.10.20", "error": null, "summary": "15 passed", "cases": {}}
+16:48:50 suite without recorder: 0 15 passed (0 failing tests deselected, 0 files not collected)
+{"library": "service-identity", "python": "3.11.15", "error": null, "summary": "15 passed", "cases": {}}
+16:48:51 suite without recorder: 0 15 passed (0 failing tests deselected, 0 files not collected)
+{"library": "service-identity", "python": "3.12.3", "error": null, "summary": "15 passed", "cases": {"base-1": 15, "base-2": 15}}
+16:48:53 suite without recorder: 0 15 passed (0 failing tests deselected, 0 files not collected)
+{"library": "service-identity", "python": "3.13.14", "error": null, "summary": "15 passed", "cases": {"base-1": 15, "base-2": 15}}
+16:48:55 suite without recorder: 0 15 passed (0 failing tests deselected, 0 files not collected)
+{"library": "service-identity", "python": "3.14.6", "error": null, "summary": "15 passed", "cases": {"base-1": 15, "base-2": 15}}

@@ -1,0 +1,3 @@
+{"group": "sample", "name": "redraw", "cmd": ["/usr/bin/python3", "-I", "-B", "no-fire/sample.py", "--out", "<outside>/sample-redraw.csv"], "start": "2026-11-17T15:29:05Z", "end": "2026-11-17T15:29:05Z", "seconds": 0.1, "rc": 0}
+{"group": "nofire", "name": "deletions", "cmd": ["/usr/bin/python3", "-I", "-B", "no-fire/nofire_deletions.py"], "start": "2026-11-17T15:29:05Z", "end": "2026-11-17T15:40:19Z", "seconds": 673.9, "rc": 0}
+{"group": "depth", "name": "runs", "cmd": ["/usr/bin/python3", "-I", "-B", "nested-depth/depth_runs.py"], "start": "2026-11-17T15:40:19Z", "end": "2026-11-17T15:40:20Z", "seconds": 1.3, "rc": 0}

@@ -1,0 +1,100 @@
+check,file,role,function,class,template,in_handler,reachable,decides,cases_decided,blocks_targeting,cases_fired
+backends.cryptography_backend.CryptographyECKey.__init__#1,jose/backends/cryptography_backend.py,subject,CryptographyECKey.__init__,JWKError,hash_alg: {*} is not a valid hash algorithm,no,no,no,0,0,0
+backends.cryptography_backend.CryptographyECKey.__init__#2,jose/backends/cryptography_backend.py,subject,CryptographyECKey.__init__,JWKError,{*},yes,no,no,0,0,0
+backends.cryptography_backend.CryptographyECKey.__init__#3,jose/backends/cryptography_backend.py,subject,CryptographyECKey.__init__,JWKError,Unable to parse an ECKey from key: {*},no,no,no,0,0,0
+backends.cryptography_backend.CryptographyECKey._process_jwk#1,jose/backends/cryptography_backend.py,subject,CryptographyECKey._process_jwk,JWKError,"Incorrect key type. Expected: 'EC', Received: {*}",no,no,no,0,0,0
+backends.cryptography_backend.CryptographyECKey._process_jwk#2,jose/backends/cryptography_backend.py,subject,CryptographyECKey._process_jwk,JWKError,Mandatory parameters are missing,no,no,no,0,0,0
+backends.cryptography_backend.CryptographyRSAKey.__init__#1,jose/backends/cryptography_backend.py,subject,CryptographyRSAKey.__init__,JWKError,hash_alg: {*} is not a valid hash algorithm,no,no,no,0,0,0
+backends.cryptography_backend.CryptographyRSAKey.__init__#2,jose/backends/cryptography_backend.py,subject,CryptographyRSAKey.__init__,JWKError,{*},yes,no,no,0,0,0
+backends.cryptography_backend.CryptographyRSAKey.__init__#3,jose/backends/cryptography_backend.py,subject,CryptographyRSAKey.__init__,JWKError,Unable to parse an RSA_JWK from key: {*},no,no,no,0,0,0
+backends.cryptography_backend.CryptographyRSAKey._process_jwk#1,jose/backends/cryptography_backend.py,subject,CryptographyRSAKey._process_jwk,JWKError,"Incorrect key type. Expected: 'RSA', Received: {*}",no,no,no,0,0,0
+backends.cryptography_backend.CryptographyRSAKey._process_jwk#2,jose/backends/cryptography_backend.py,subject,CryptographyRSAKey._process_jwk,JWKError,Precomputed private key parameters are incomplete.,no,no,no,0,0,0
+backends.cryptography_backend.CryptographyRSAKey.sign#1,jose/backends/cryptography_backend.py,subject,CryptographyRSAKey.sign,JWKError,{*},yes,yes,no,0,0,0
+backends.cryptography_backend.CryptographyRSAKey.wrap_key#1,jose/backends/cryptography_backend.py,subject,CryptographyRSAKey.wrap_key,JWEError,{*},yes,no,no,0,0,0
+backends.cryptography_backend.CryptographyRSAKey.unwrap_key#1,jose/backends/cryptography_backend.py,subject,CryptographyRSAKey.unwrap_key,JWEError,{*},yes,yes,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.__init__#1,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.__init__,JWKError,{*} is not a valid AES algorithm,no,no,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.__init__#2,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.__init__,JWKError,{*} is not a supported algorithm,no,no,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.__init__#3,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.__init__,JWKError,Key must be 128 bit for alg {*},no,no,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.__init__#4,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.__init__,JWKError,Key must be 192 bit for alg {*},no,no,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.__init__#5,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.__init__,JWKError,Key must be 256 bit for alg {*},no,no,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.__init__#6,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.__init__,JWKError,Key must be 384 bit for alg {*},no,no,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.__init__#7,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.__init__,JWKError,Key must be 512 bit for alg {*},no,no,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.encrypt#1,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.encrypt,JWEError,{*},yes,no,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.decrypt#1,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.decrypt,JWEError,Invalid JWE Auth Tag,yes,yes,no,0,0,0
+backends.cryptography_backend.CryptographyAESKey.decrypt#2,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.decrypt,JWEError,{*},yes,yes,yes,9,0,9
+backends.cryptography_backend.CryptographyAESKey.unwrap_key#1,jose/backends/cryptography_backend.py,subject,CryptographyAESKey.unwrap_key,JWEError,{*},yes,yes,no,0,0,0
+backends.cryptography_backend.CryptographyHMACKey.__init__#1,jose/backends/cryptography_backend.py,subject,CryptographyHMACKey.__init__,JWKError,hash_alg: {*} is not a valid hash algorithm,no,no,no,0,0,0
+backends.cryptography_backend.CryptographyHMACKey.__init__#2,jose/backends/cryptography_backend.py,subject,CryptographyHMACKey.__init__,JWKError,Expecting a string- or bytes-formatted key.,no,no,no,0,0,0
+backends.cryptography_backend.CryptographyHMACKey.__init__#3,jose/backends/cryptography_backend.py,subject,CryptographyHMACKey.__init__,JWKError,The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret.,no,no,no,0,0,0
+backends.cryptography_backend.CryptographyHMACKey._process_jwk#1,jose/backends/cryptography_backend.py,subject,CryptographyHMACKey._process_jwk,JWKError,"Incorrect key type. Expected: 'oct', Received: {*}",no,no,no,0,0,0
+backends.ecdsa_backend.ECDSAECKey.__init__#1,jose/backends/ecdsa_backend.py,subject,ECDSAECKey.__init__,JWKError,hash_alg: {*} is not a valid hash algorithm,no,no,no,0,0,0
+backends.ecdsa_backend.ECDSAECKey.__init__#2,jose/backends/ecdsa_backend.py,subject,ECDSAECKey.__init__,JWKError,{*},yes,no,no,0,0,0
+backends.ecdsa_backend.ECDSAECKey.__init__#3,jose/backends/ecdsa_backend.py,subject,ECDSAECKey.__init__,JWKError,Unable to parse an ECKey from key: {*},no,no,no,0,0,0
+backends.ecdsa_backend.ECDSAECKey._process_jwk#1,jose/backends/ecdsa_backend.py,subject,ECDSAECKey._process_jwk,JWKError,"Incorrect key type. Expected: 'EC', Received: {*}",no,no,no,0,0,0
+backends.ecdsa_backend.ECDSAECKey._process_jwk#2,jose/backends/ecdsa_backend.py,subject,ECDSAECKey._process_jwk,JWKError,Mandatory parameters are missing,no,no,no,0,0,0
+backends.ecdsa_backend.ECDSAECKey._process_jwk#3,jose/backends/ecdsa_backend.py,subject,ECDSAECKey._process_jwk,JWKError,"Point: {*}, {*} is not a valid point",no,no,no,0,0,0
+backends.native.HMACKey.__init__#1,jose/backends/native.py,subject,HMACKey.__init__,JWKError,hash_alg: {*} is not a valid hash algorithm,no,no,no,0,0,0
+backends.native.HMACKey.__init__#2,jose/backends/native.py,subject,HMACKey.__init__,JWKError,Expecting a string- or bytes-formatted key.,no,no,no,0,0,0
+backends.native.HMACKey.__init__#3,jose/backends/native.py,subject,HMACKey.__init__,JWKError,The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret.,no,no,no,0,0,0
+backends.native.HMACKey._process_jwk#1,jose/backends/native.py,subject,HMACKey._process_jwk,JWKError,"Incorrect key type. Expected: 'oct', Received: {*}",no,no,no,0,0,0
+backends.rsa_backend.RSAKey.__init__#1,jose/backends/rsa_backend.py,subject,RSAKey.__init__,JWKError,hash_alg: {*} is not a valid hash algorithm,no,no,no,0,0,0
+backends.rsa_backend.RSAKey.__init__#2,jose/backends/rsa_backend.py,subject,RSAKey.__init__,JWKError,alg: {*} is not supported by the RSA backend,no,no,no,0,0,0
+backends.rsa_backend.RSAKey.__init__#3,jose/backends/rsa_backend.py,subject,RSAKey.__init__,JWKError,{*},yes,no,no,0,0,0
+backends.rsa_backend.RSAKey.__init__#4,jose/backends/rsa_backend.py,subject,RSAKey.__init__,JWKError,Unable to parse an RSA_JWK from key: {*},no,no,no,0,0,0
+backends.rsa_backend.RSAKey._process_jwk#1,jose/backends/rsa_backend.py,subject,RSAKey._process_jwk,JWKError,"Incorrect key type. Expected: 'RSA', Received: {*}",no,no,no,0,0,0
+backends.rsa_backend.RSAKey._process_jwk#2,jose/backends/rsa_backend.py,subject,RSAKey._process_jwk,JWKError,Precomputed private key parameters are incomplete.,no,no,no,0,0,0
+backends.rsa_backend.RSAKey.unwrap_key#1,jose/backends/rsa_backend.py,subject,RSAKey.unwrap_key,JWEError,{*},yes,yes,no,0,0,0
+jwe.encrypt#1,jose/jwe.py,subject,encrypt,JWEError,Algorithm {*} not supported.,no,no,no,0,0,0
+jwe.decrypt#1,jose/jwe.py,subject,decrypt,JWEError,JWE string {*} bytes exceeds {*} bytes,no,yes,yes,1,0,1
+jwe.decrypt#2,jose/jwe.py,subject,decrypt,JWEError,Algorithm {*} not supported.,no,yes,no,0,0,0
+jwe.decrypt#3,jose/jwe.py,subject,decrypt,JWEParseError,alg and enc headers are required!,yes,yes,no,0,0,0
+jwe.decrypt#4,jose/jwe.py,subject,decrypt,JWEError,alg {*} is not implemented,yes,yes,no,0,0,0
+jwe.decrypt#5,jose/jwe.py,subject,decrypt,JWEError,enc {*} is not implemented,yes,yes,no,0,0,0
+jwe.decrypt#6,jose/jwe.py,subject,decrypt,JWEError,{*},yes,yes,no,0,0,0
+jwe._decrypt_and_auth#1,jose/jwe.py,subject,_decrypt_and_auth,JWEError,Invalid JWE Auth Tag,no,yes,no,0,0,0
+jwe._jwe_compact_deserialize#1,jose/jwe.py,subject,_jwe_compact_deserialize,JWEParseError,Not enough segments,yes,yes,yes,2,0,2
+jwe._jwe_compact_deserialize#2,jose/jwe.py,subject,_jwe_compact_deserialize,JWEParseError,Invalid header,yes,yes,no,0,0,0
+jwe._jwe_compact_deserialize#3,jose/jwe.py,subject,_jwe_compact_deserialize,JWEParseError,Invalid header string: {*},yes,yes,no,0,0,0
+jwe._jwe_compact_deserialize#4,jose/jwe.py,subject,_jwe_compact_deserialize,JWEParseError,Invalid header string: must be a json object,no,yes,no,0,1,0
+jwe._jwe_compact_deserialize#5,jose/jwe.py,subject,_jwe_compact_deserialize,JWEParseError,Invalid encrypted key,yes,yes,no,0,0,0
+jwe._jwe_compact_deserialize#6,jose/jwe.py,subject,_jwe_compact_deserialize,JWEParseError,Invalid IV,yes,yes,no,0,0,0
+jwe._jwe_compact_deserialize#7,jose/jwe.py,subject,_jwe_compact_deserialize,JWEParseError,Invalid cyphertext,yes,yes,no,0,0,0
+jwe._jwe_compact_deserialize#8,jose/jwe.py,subject,_jwe_compact_deserialize,JWEParseError,Invalid auth tag,yes,yes,no,0,0,0
+jwe._encrypt_and_auth#1,jose/jwe.py,subject,_encrypt_and_auth,JWEError,alg {*} is not implemented,yes,no,no,0,0,0
+jwe._decompress#1,jose/jwe.py,subject,_decompress,JWEError,Decompressed JWE string exceeds {*} bytes,no,yes,yes,1,1,1
+jwk.construct#1,jose/jwk.py,subject,construct,JWKError,Unable to find an algorithm for key,no,yes,no,0,1,0
+jws.sign#1,jose/jws.py,subject,sign,JWSError,Algorithm {*} not supported.,no,yes,no,0,0,0
+jws._sign_header_and_claims#1,jose/jws.py,subject,_sign_header_and_claims,JWSError,{*},yes,yes,no,0,1,0
+jws._load#1,jose/jws.py,subject,_load,JWSError,Not enough segments,yes,yes,yes,2,1,2
+jws._load#2,jose/jws.py,subject,_load,JWSError,Invalid header padding,yes,yes,no,0,1,0
+jws._load#3,jose/jws.py,subject,_load,JWSError,Invalid header string: {*},yes,yes,yes,1,0,1
+jws._load#4,jose/jws.py,subject,_load,JWSError,Invalid header string: must be a json object,no,yes,yes,1,2,1
+jws._load#5,jose/jws.py,subject,_load,JWSError,Invalid payload padding,yes,yes,yes,1,0,1
+jws._load#6,jose/jws.py,subject,_load,JWSError,Invalid crypto padding,yes,yes,yes,1,0,1
+jws._verify_signature#1,jose/jws.py,subject,_verify_signature,JWSError,No algorithm was specified in the JWS header.,no,yes,no,0,0,1
+jws._verify_signature#2,jose/jws.py,subject,_verify_signature,JWSError,The specified alg value is not allowed,no,yes,yes,5,0,5
+jws._verify_signature#3,jose/jws.py,subject,_verify_signature,JWSSignatureError,,no,yes,no,0,2,4
+jws._verify_signature#4,jose/jws.py,subject,_verify_signature,JWSError,Signature verification failed.,yes,yes,yes,4,0,4
+jws._verify_signature#5,jose/jws.py,subject,_verify_signature,JWSError,Invalid or unsupported algorithm: {*},yes,yes,no,0,1,0
+jwt.decode#1,jose/jwt.py,subject,decode,JWTError,{*},yes,yes,yes,1,0,1
+jwt.decode#2,jose/jwt.py,subject,decode,JWTError,Invalid payload string: {*},yes,yes,yes,1,0,1
+jwt.decode#3,jose/jwt.py,subject,decode,JWTError,Invalid payload string: must be a json object,no,yes,yes,1,2,1
+jwt.get_unverified_header#1,jose/jwt.py,subject,get_unverified_header,JWTError,Error decoding token headers.,yes,yes,no,0,0,0
+jwt.get_unverified_claims#1,jose/jwt.py,subject,get_unverified_claims,JWTError,Error decoding token claims.,yes,no,no,0,0,0
+jwt.get_unverified_claims#2,jose/jwt.py,subject,get_unverified_claims,JWTError,Invalid claims string: {*},yes,no,no,0,0,0
+jwt.get_unverified_claims#3,jose/jwt.py,subject,get_unverified_claims,JWTError,Invalid claims string: must be a json object,no,no,no,0,0,0
+jwt._validate_iat#1,jose/jwt.py,subject,_validate_iat,JWTClaimsError,Issued At claim (iat) must be an integer.,yes,yes,yes,1,1,1
+jwt._validate_nbf#1,jose/jwt.py,subject,_validate_nbf,JWTClaimsError,Not Before claim (nbf) must be an integer.,yes,yes,yes,1,0,1
+jwt._validate_nbf#2,jose/jwt.py,subject,_validate_nbf,JWTClaimsError,The token is not yet valid (nbf),no,yes,yes,2,0,2
+jwt._validate_exp#1,jose/jwt.py,subject,_validate_exp,JWTClaimsError,Expiration Time claim (exp) must be an integer.,yes,yes,yes,1,0,1
+jwt._validate_exp#2,jose/jwt.py,subject,_validate_exp,ExpiredSignatureError,Signature has expired.,no,yes,yes,2,0,2
+jwt._validate_aud#1,jose/jwt.py,subject,_validate_aud,JWTClaimsError,Invalid claim format in token,no,yes,yes,2,2,2
+jwt._validate_aud#2,jose/jwt.py,subject,_validate_aud,JWTClaimsError,Invalid audience,no,yes,yes,1,0,1
+jwt._validate_iss#1,jose/jwt.py,subject,_validate_iss,JWTClaimsError,Invalid issuer,no,yes,yes,1,1,1
+jwt._validate_sub#1,jose/jwt.py,subject,_validate_sub,JWTClaimsError,Subject must be a string.,no,yes,yes,1,0,1
+jwt._validate_sub#2,jose/jwt.py,subject,_validate_sub,JWTClaimsError,Invalid subject,no,yes,yes,1,1,1
+jwt._validate_jti#1,jose/jwt.py,subject,_validate_jti,JWTClaimsError,JWT ID must be a string.,no,yes,yes,1,1,1
+jwt._validate_at_hash#1,jose/jwt.py,subject,_validate_at_hash,JWTClaimsError,{*},yes,yes,yes,1,0,1
+jwt._validate_at_hash#2,jose/jwt.py,subject,_validate_at_hash,JWTClaimsError,at_hash claim does not match access_token.,no,yes,yes,2,0,2
+jwt._validate_claims#1,jose/jwt.py,subject,_validate_claims,JWTError,"missing required key ""{*}"" among claims",no,yes,yes,7,1,7
+jwt._validate_claims#2,jose/jwt.py,subject,_validate_claims,JWTError,audience must be a string or None,no,yes,yes,1,0,1

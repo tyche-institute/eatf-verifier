@@ -1,0 +1,332 @@
+{
+ "libraries": {
+  "authlib": {
+   "checks": 12,
+   "control": {
+    "absent": 0,
+    "check": "_control",
+    "detected": "no",
+    "detected_by_failure": "no",
+    "failed_or_error": 0,
+    "failing_tests": "",
+    "first_run_returncode": "",
+    "library": "authlib",
+    "no_result": "",
+    "refused_attempts": 0,
+    "returncode": "core=0;jose=0;clients=0;flask=0;django=0",
+    "runs": 1,
+    "seconds": 32.711,
+    "skipped": 0,
+    "tests_not_passing": 0,
+    "timed_out": "no"
+   },
+   "deposited_whole_baseline": {
+    "passing in both": 1211,
+    "passing in the deposit and not now": 0,
+    "passing now and not in the deposit": 0,
+    "timeout_seconds": 264.8
+   },
+   "detected": 7,
+   "ended": "2026-11-17T15:39:28Z",
+   "not_detected": [
+    "jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#1",
+    "jose.rfc7515.jws.JsonWebSignature._validate_json_jws#3",
+    "jose.rfc7516.jwe.JsonWebEncryption.deserialize_json._unwrap_for_matching_recipient#1",
+    "jose.rfc7517.base_key.Key.check_key_op#1",
+    "jose.rfc7519.jwt.JsonWebToken.decode#1"
+   ],
+   "started": "2026-11-17T15:37:34Z",
+   "whole_baseline": {
+    "counts": {
+     "passing in both": 1211,
+     "run 1": {
+      "passed": 1211,
+      "skipped": 2
+     },
+     "run 2": {
+      "passed": 1211,
+      "skipped": 2
+     },
+     "unstable": 0
+    },
+    "refused": [
+     {
+      "attempts": 0,
+      "tests": {}
+     },
+     {
+      "attempts": 0,
+      "tests": {}
+     }
+    ],
+    "returncodes": {
+     "base-1": [
+      {
+       "clients": 0,
+       "core": 0,
+       "django": 0,
+       "flask": 0,
+       "jose": 0
+      }
+     ],
+     "base-2": [
+      {
+       "clients": 0,
+       "core": 0,
+       "django": 0,
+       "flask": 0,
+       "jose": 0
+      }
+     ]
+    },
+    "seconds": [
+     26.95,
+     26.493
+    ],
+    "timeout_seconds": 269.5
+   }
+  },
+  "google-auth": {
+   "checks": 39,
+   "control": {
+    "absent": 0,
+    "check": "_control",
+    "detected": "no",
+    "detected_by_failure": "no",
+    "failed_or_error": 0,
+    "failing_tests": "",
+    "first_run_returncode": "",
+    "library": "google-auth",
+    "no_result": "",
+    "refused_attempts": 8,
+    "returncode": "unit=0",
+    "runs": 1,
+    "seconds": 84.026,
+    "skipped": 0,
+    "tests_not_passing": 0,
+    "timed_out": "no"
+   },
+   "deposited_whole_baseline": {
+    "passing in both": 2349,
+    "passing in the deposit and not now": 0,
+    "passing now and not in the deposit": 0,
+    "timeout_seconds": 836.1
+   },
+   "detected": 39,
+   "ended": "2026-11-17T15:37:26Z",
+   "not_detected": [],
+   "started": "2026-11-17T15:29:05Z",
+   "whole_baseline": {
+    "counts": {
+     "passing in both": 2349,
+     "run 1": {
+      "passed": 2349
+     },
+     "run 2": {
+      "passed": 2349
+     },
+     "unstable": 0
+    },
+    "refused": [
+     {
+      "attempts": 9,
+      "tests": {
+       "unit|": 1,
+       "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+       "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+       "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+       "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+       "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+      }
+     },
+     {
+      "attempts": 9,
+      "tests": {
+       "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_success": 1,
+       "unit|tests/compute_engine/test_credentials.py::TestIDTokenCredentials::test_refresh_with_agent_identity[None]": 1,
+       "unit|tests/transport/test__http_client.py::TestRequestResponse::test_connection_error": 1,
+       "unit|tests/transport/test_requests.py::TestRequestResponse::test_connection_error": 1,
+       "unit|tests/transport/test_urllib3.py::TestRequestResponse::test_connection_error": 4,
+       "unit|tests_async/transport/test_aiohttp_requests.py::TestRequestResponse::test_connection_error": 1
+      }
+     }
+    ],
+    "returncodes": {
+     "base-1": [
+      {
+       "unit": 0
+      }
+     ],
+     "base-2": [
+      {
+       "unit": 0
+      }
+     ]
+    },
+    "seconds": [
+     81.602,
+     84.667
+    ],
+    "timeout_seconds": 846.7
+   }
+  },
+  "joserfc": {
+   "checks": 39,
+   "control": {
+    "absent": 0,
+    "check": "_control",
+    "detected": "no",
+    "detected_by_failure": "no",
+    "failed_or_error": 0,
+    "failing_tests": "",
+    "first_run_returncode": "",
+    "library": "joserfc",
+    "no_result": "",
+    "refused_attempts": 0,
+    "returncode": "all=0",
+    "runs": 1,
+    "seconds": 6.822,
+    "skipped": 0,
+    "tests_not_passing": 0,
+    "timed_out": "no"
+   },
+   "deposited_whole_baseline": {
+    "passing in both": 310,
+    "passing in the deposit and not now": 0,
+    "passing now and not in the deposit": 0,
+    "timeout_seconds": 70.6
+   },
+   "detected": 29,
+   "ended": "2026-11-17T15:40:19Z",
+   "not_detected": [
+    "_rfc7515.json.extract_general_json#1",
+    "_rfc7515.registry.JWSRegistry.get_alg#1",
+    "_rfc7516.message._perform_decrypt#2",
+    "_rfc7516.message.decrypt_recipient#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#1",
+    "_rfc7516.registry.JWERegistry._check_algorithm#2",
+    "_rfc7516.registry.JWERegistry.validate_ciphertext_size#1",
+    "_rfc7516.registry.JWERegistry.validate_protected_header_size#1",
+    "jwk.import_key~6#1",
+    "registry.check_crit_header#2"
+   ],
+   "started": "2026-11-17T15:39:28Z",
+   "whole_baseline": {
+    "counts": {
+     "passing in both": 310,
+     "run 1": {
+      "passed": 310
+     },
+     "run 2": {
+      "passed": 310
+     },
+     "unstable": 0
+    },
+    "refused": [
+     {
+      "attempts": 0,
+      "tests": {}
+     },
+     {
+      "attempts": 0,
+      "tests": {}
+     }
+    ],
+    "returncodes": {
+     "base-1": [
+      {
+       "all": 0
+      }
+     ],
+     "base-2": [
+      {
+       "all": 0
+      }
+     ]
+    },
+    "seconds": [
+     6.595,
+     6.833
+    ],
+    "timeout_seconds": 68.3
+   }
+  },
+  "oauthlib": {
+   "checks": 13,
+   "control": {
+    "absent": 0,
+    "check": "_control",
+    "detected": "no",
+    "detected_by_failure": "no",
+    "failed_or_error": 0,
+    "failing_tests": "",
+    "first_run_returncode": "",
+    "library": "oauthlib",
+    "no_result": "",
+    "refused_attempts": 0,
+    "returncode": "all=0",
+    "runs": 1,
+    "seconds": 3.208,
+    "skipped": 0,
+    "tests_not_passing": 0,
+    "timed_out": "no"
+   },
+   "deposited_whole_baseline": {
+    "passing in both": 717,
+    "passing in the deposit and not now": 0,
+    "passing now and not in the deposit": 0,
+    "timeout_seconds": 60.0
+   },
+   "detected": 11,
+   "ended": "2026-11-17T15:37:34Z",
+   "not_detected": [
+    "oauth2.rfc6749.grant_types.client_credentials.ClientCredentialsGrant.validate_token_request#1",
+    "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1"
+   ],
+   "started": "2026-11-17T15:37:26Z",
+   "whole_baseline": {
+    "counts": {
+     "passing in both": 717,
+     "run 1": {
+      "passed": 717,
+      "skipped": 2
+     },
+     "run 2": {
+      "passed": 717,
+      "skipped": 2
+     },
+     "unstable": 0
+    },
+    "refused": [
+     {
+      "attempts": 0,
+      "tests": {}
+     },
+     {
+      "attempts": 0,
+      "tests": {}
+     }
+    ],
+    "returncodes": {
+     "base-1": [
+      {
+       "all": 0
+      }
+     ],
+     "base-2": [
+      {
+       "all": 0
+      }
+     ]
+    },
+    "seconds": [
+     1.801,
+     1.696
+    ],
+    "timeout_seconds": 60.0
+   }
+  }
+ },
+ "toolkit": "../target-reach",
+ "workers": 10
+}

@@ -1,0 +1,312 @@
+{
+ "counts": {
+  "block_targets_by_basis": {
+   "none: tie": 16
+  },
+  "blocks": 48,
+  "cases": 20,
+  "cases_another_check_fires_too": 0,
+  "cases_by_site_kind": {
+   "check": 20
+  },
+  "cases_class_only": 8,
+  "cases_fired_in_other_threads": 0,
+  "cases_left_out": 0,
+  "cases_left_out_by_reason": {},
+  "cases_message_text_differs_between_unmodified_runs": 0,
+  "cases_nested": 0,
+  "cases_of_included_blocks": 20,
+  "cases_reaching_target": 0,
+  "cases_target_fires": 0,
+  "cases_with_target": 0,
+  "cases_with_target_by_basis": {},
+  "cases_with_target_by_outcome": {},
+  "cases_with_target_by_tier": {},
+  "checks": 64,
+  "checks_deciding": 8,
+  "checks_deciding_in_subject_files": 8,
+  "checks_deciding_not_statically_reachable": 0,
+  "checks_firing": 8,
+  "checks_firing_and_never_deciding": 0,
+  "checks_in_subject_files": 64,
+  "checks_reachable": 12,
+  "deletion_runs_repeated": 0,
+  "deletions": 8,
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": 0,
+   "O_V within O_C": 0,
+   "O_V within O_S": 0,
+   "O_Vfc within O_V": 0,
+   "suite within whole suite": 0
+  },
+  "deletions_in_handler": 1,
+  "deletions_not_detected": {
+   "O_C": 1,
+   "O_S": 0,
+   "O_T": 8,
+   "O_V": 1,
+   "O_Vfc": 5,
+   "suite": 0,
+   "whole suite": 0
+  },
+  "deletions_not_detected_of_deciding_checks": {
+   "O_C": 1,
+   "O_S": 0,
+   "O_T": 8,
+   "O_V": 1,
+   "O_Vfc": 5,
+   "suite": 0,
+   "whole suite": 0
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": 1,
+   "O_T": 8,
+   "O_V": 1,
+   "O_Vfc": 5
+  },
+  "deletions_not_detected_withheld_as_failing_of_deciding_checks": {
+   "O_C": 1,
+   "O_T": 8,
+   "O_V": 1,
+   "O_Vfc": 5
+  },
+  "deletions_of_checks_that_fire_and_never_decide": 0,
+  "deletions_of_deciding_checks": 8,
+  "deletions_time_limit": 0,
+  "deletions_without_record": 0,
+  "fired_recorded": true,
+  "flags": 0,
+  "flags_by_tier": {},
+  "flags_target_fires": 0,
+  "included_blocks": 16,
+  "included_blocks_class_only": 4,
+  "included_blocks_never_run": 0,
+  "included_blocks_with_target": 0,
+  "pinning": {
+   "cases": 20,
+   "cases_not_counted_deciding_check_not_deleted": 0,
+   "cases_not_counted_no_deciding_check": 0,
+   "cases_not_counted_no_record": 0,
+   "cases_not_counted_time_limit": 0,
+   "class_only": {
+    "cases": 8,
+    "test_passes": 0
+   },
+   "message": {
+    "cases": 12,
+    "test_passes": 0
+   },
+   "test_fails": 20,
+   "test_passes": 0,
+   "test_passes_by_what_the_case_does": {}
+  },
+  "reached_targets": 0,
+  "reached_targets_deletion_not_detected_O_T": 0,
+  "test_files_not_collected": 0,
+  "tests_collected_again": 0,
+  "tests_expected_to_fail_at_baseline": 28,
+  "tests_imported_and_kept": 0,
+  "tests_run": 210,
+  "tests_with_cases": 20
+ },
+ "expected_baseline_failures": [
+  "tests/_async/test_gotrue.py::test_get_authenticator_assurance_level",
+  "tests/_async/test_gotrue.py::test_get_claims_calls_get_user_if_symmetric_jwt",
+  "tests/_async/test_gotrue.py::test_get_claims_fetches_jwks_to_verify_asymmetric_jwt",
+  "tests/_async/test_gotrue.py::test_get_user_identities",
+  "tests/_async/test_gotrue.py::test_jwks_ttl_cache_behavior",
+  "tests/_async/test_gotrue.py::test_link_identity",
+  "tests/_async/test_gotrue.py::test_mfa_challenge",
+  "tests/_async/test_gotrue.py::test_mfa_enroll",
+  "tests/_async/test_gotrue.py::test_mfa_list_factors",
+  "tests/_async/test_gotrue.py::test_mfa_unenroll",
+  "tests/_async/test_gotrue.py::test_set_session_with_expired_token",
+  "tests/_async/test_gotrue.py::test_set_session_with_valid_tokens",
+  "tests/_async/test_gotrue.py::test_set_session_without_refresh_token",
+  "tests/_async/test_gotrue.py::test_sign_in_with_password",
+  "tests/_sync/test_gotrue.py::test_get_authenticator_assurance_level",
+  "tests/_sync/test_gotrue.py::test_get_claims_calls_get_user_if_symmetric_jwt",
+  "tests/_sync/test_gotrue.py::test_get_claims_fetches_jwks_to_verify_asymmetric_jwt",
+  "tests/_sync/test_gotrue.py::test_get_user_identities",
+  "tests/_sync/test_gotrue.py::test_jwks_ttl_cache_behavior",
+  "tests/_sync/test_gotrue.py::test_link_identity",
+  "tests/_sync/test_gotrue.py::test_mfa_challenge",
+  "tests/_sync/test_gotrue.py::test_mfa_enroll",
+  "tests/_sync/test_gotrue.py::test_mfa_list_factors",
+  "tests/_sync/test_gotrue.py::test_mfa_unenroll",
+  "tests/_sync/test_gotrue.py::test_set_session_with_expired_token",
+  "tests/_sync/test_gotrue.py::test_set_session_with_valid_tokens",
+  "tests/_sync/test_gotrue.py::test_set_session_without_refresh_token",
+  "tests/_sync/test_gotrue.py::test_sign_in_with_password"
+ ],
+ "lists": {
+  "cases_left_out": [],
+  "checks_deciding_not_statically_reachable": [],
+  "deletion_runs_repeated": [],
+  "deletions_breaking_an_inclusion": {
+   "O_S within suite": [],
+   "O_V within O_C": [],
+   "O_V within O_S": [],
+   "O_Vfc within O_V": [],
+   "suite within whole suite": []
+  },
+  "deletions_not_detected": {
+   "O_C": [
+    "helpers.parse_jwks#1"
+   ],
+   "O_S": [],
+   "O_T": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "O_V": [
+    "helpers.parse_jwks#1"
+   ],
+   "O_Vfc": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1"
+   ],
+   "suite": [],
+   "whole suite": []
+  },
+  "deletions_not_detected_withheld_as_failing": {
+   "O_C": [
+    "helpers.parse_jwks#1"
+   ],
+   "O_T": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1",
+    "helpers.validate_exp#2"
+   ],
+   "O_V": [
+    "helpers.parse_jwks#1"
+   ],
+   "O_Vfc": [
+    "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+    "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+    "helpers.decode_jwt#1",
+    "helpers.parse_jwks#1",
+    "helpers.validate_exp#1"
+   ]
+  },
+  "deletions_of_checks_that_fire_and_never_decide": [],
+  "deletions_time_limit": [],
+  "deletions_without_record": [],
+  "included_blocks_never_run": []
+ },
+ "refused_connection_attempts": {
+  "baseline_recorder_runs": [
+   0,
+   0
+  ],
+  "deletion_recorder_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 9,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "suite_run": 0,
+  "tests": [],
+  "whole_suite_baseline_runs": [
+   0,
+   0
+  ],
+  "whole_suite_deletion_runs": {
+   "maximum": 0,
+   "minimum": 0,
+   "runs": 9,
+   "runs_with_attempts": 0,
+   "runs_without_a_count": 0
+  },
+  "witness_runs": 0
+ },
+ "rule_version": "reach-target-rule/2",
+ "sentinels": [
+  {
+   "detail": "",
+   "name": "2 baseline runs and the control copy give identical records, message texts aside",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "in the baseline recorder run every test passes or is skipped, every test file is collected, and the tests deselected are the expected baseline failures",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "under the deletion of a check, that check fires in no case",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "every deletion run gave a record or exceeded the time limit 2 times",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the check that decides a case is among the checks that fire in it",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the whole suite ran on every deletion copy, and on the control copy it ends with its results and loses no test that passes in both unmodified runs",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "the deleted checks are the checks of the subject files that fire in at least 1 case of the study",
+   "pass": true
+  }
+ ],
+ "subject": {
+  "commit": "416bffd0d95662912b307a13f5956b91b61d0c74",
+  "name": "supabase-auth",
+  "version": "2.34.1"
+ },
+ "suite_without_recorder": "28 failed, 210 passed",
+ "test_files_not_collected": [],
+ "tests_collected_again": [],
+ "tests_imported_and_kept": [],
+ "whole_suite": {
+  "counts": {
+   "passing in both": 428,
+   "run 1": {
+    "failed": 120,
+    "passed": 428
+   },
+   "run 2": {
+    "failed": 120,
+    "passed": 428
+   },
+   "unstable": 0
+  },
+  "deletions_no_result": [],
+  "deletions_run": true,
+  "deletions_time_limit": [],
+  "runs_repeated": [],
+  "suite_runs": [
+   {
+    "name": "all",
+    "paths": [
+     "tests"
+    ]
+   }
+  ]
+ },
+ "witnesses": {}
+}

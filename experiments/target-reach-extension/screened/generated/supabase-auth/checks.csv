@@ -1,0 +1,65 @@
+check,file,role,function,class,template,in_handler,reachable,decides,cases_decided,blocks_targeting,cases_fired
+_async.gotrue_client.AsyncGoTrueClient.sign_up#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.sign_up,AuthInvalidCredentialsError,You must provide either an email or phone number and a password,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.sign_in_with_password#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.sign_in_with_password,AuthInvalidCredentialsError,You must provide either an email or phone number and a password,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.sign_in_with_sso#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.sign_in_with_sso,AuthInvalidCredentialsError,You must provide either a domain or provider_id,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.link_identity#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.link_identity,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.get_user_identities#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.get_user_identities,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.unlink_identity#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.unlink_identity,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.sign_in_with_otp#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.sign_in_with_otp,AuthInvalidCredentialsError,You must provide either an email or phone number,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.resend#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.resend,AuthInvalidCredentialsError,You must provide either an email or phone number,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.reauthenticate#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.reauthenticate,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.update_user#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.update_user,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.set_session#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.set_session,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.set_session#2,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.set_session,UserDoesntExist,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.refresh_session#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.refresh_session,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._enroll#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._enroll,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._challenge#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._challenge,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._verify#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._verify,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._unenroll#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._unenroll,AuthSessionMissingError,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,Not a valid implicit grant flow url.,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#2,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No error_code detected.,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#3,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No error detected.,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#4,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,{*},no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#5,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No access_token detected.,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#6,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No expires_in detected.,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#7,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No refresh_token detected.,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#8,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No token_type detected.,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._get_session_from_url#9,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._get_session_from_url,UserDoesntExist,,no,no,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._call_refresh_token#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._call_refresh_token,AuthSessionMissingError,,no,yes,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._fetch_jwks,AuthInvalidJwtError,No matching signing key found in JWKS,no,yes,yes,1,0,1
+_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#2,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient._fetch_jwks,AuthInvalidJwtError,JWT has no valid kid,no,yes,no,0,0,0
+_async.gotrue_client.AsyncGoTrueClient.get_claims#1,supabase_auth/_async/gotrue_client.py,subject,AsyncGoTrueClient.get_claims,AuthInvalidJwtError,Invalid JWT signature,no,yes,yes,1,0,1
+_sync.gotrue_client.SyncGoTrueClient.sign_up#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.sign_up,AuthInvalidCredentialsError,You must provide either an email or phone number and a password,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.sign_in_with_password#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.sign_in_with_password,AuthInvalidCredentialsError,You must provide either an email or phone number and a password,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.sign_in_with_sso#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.sign_in_with_sso,AuthInvalidCredentialsError,You must provide either a domain or provider_id,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.link_identity#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.link_identity,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.get_user_identities#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.get_user_identities,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.unlink_identity#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.unlink_identity,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.sign_in_with_otp#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.sign_in_with_otp,AuthInvalidCredentialsError,You must provide either an email or phone number,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.resend#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.resend,AuthInvalidCredentialsError,You must provide either an email or phone number,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.reauthenticate#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.reauthenticate,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.update_user#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.update_user,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.set_session#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.set_session,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.set_session#2,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.set_session,UserDoesntExist,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.refresh_session#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.refresh_session,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._enroll#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._enroll,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._challenge#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._challenge,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._verify#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._verify,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._unenroll#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._unenroll,AuthSessionMissingError,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,Not a valid implicit grant flow url.,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#2,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No error_code detected.,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#3,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No error detected.,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#4,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,{*},no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#5,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No access_token detected.,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#6,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No expires_in detected.,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#7,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No refresh_token detected.,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#8,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._get_session_from_url,AuthImplicitGrantRedirectError,No token_type detected.,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._get_session_from_url#9,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._get_session_from_url,UserDoesntExist,,no,no,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._call_refresh_token#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._call_refresh_token,AuthSessionMissingError,,no,yes,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._fetch_jwks,AuthInvalidJwtError,No matching signing key found in JWKS,no,yes,yes,1,0,1
+_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#2,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient._fetch_jwks,AuthInvalidJwtError,JWT has no valid kid,no,yes,no,0,0,0
+_sync.gotrue_client.SyncGoTrueClient.get_claims#1,supabase_auth/_sync/gotrue_client.py,subject,SyncGoTrueClient.get_claims,AuthInvalidJwtError,Invalid JWT signature,no,yes,yes,1,0,1
+helpers.parse_jwks#1,supabase_auth/helpers.py,subject,parse_jwks,AuthInvalidJwtError,JWKS is empty,no,yes,yes,2,0,2
+helpers.decode_jwt#1,supabase_auth/helpers.py,subject,decode_jwt,AuthInvalidJwtError,Invalid JWT structure,yes,yes,yes,8,0,8
+helpers.validate_exp#1,supabase_auth/helpers.py,subject,validate_exp,AuthInvalidJwtError,JWT has no expiration time,no,yes,yes,4,0,4
+helpers.validate_exp#2,supabase_auth/helpers.py,subject,validate_exp,AuthInvalidJwtError,JWT has expired,no,yes,yes,2,0,2

@@ -1,0 +1,212 @@
+{
+ "check": "jose.rfc7516.jwe.JsonWebEncryption.get_header_zip#1",
+ "checks_json_sha256": "3208594ee8627cfe505c022cf74a491b367668769e232cfca30d933fffb4c7d0",
+ "clone": "../target-reach/work/src/authlib",
+ "copy": "work/reach/authlib/copy",
+ "file": "authlib/jose/rfc7516/jwe.py",
+ "inputs": [
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T16:02:09Z",
+   "entry_point": "authlib.jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "JsonWebEncryption.__init__": 1,
+    "JsonWebEncryption.deserialize_compact": 1,
+    "JsonWebEncryption.get_header_alg": 1,
+    "JsonWebEncryption.get_header_enc": 1,
+    "JsonWebEncryption.get_header_zip": 1
+   },
+   "input": "compact JWE, protected header {\"alg\":\"dir\",\"enc\":\"A128GCM\",\"zip\":\"XYZ\"}, payload encrypted with AES-128-GCM under the key",
+   "line_events_in_file": 30,
+   "module_of_file_imported": [
+    "authlib.jose.rfc7516.jwe"
+   ],
+   "name": "a",
+   "outcome": {
+    "class": "authlib.jose.errors.UnsupportedCompressionAlgorithmError",
+    "description": "Unsupported 'zip' value in header",
+    "error": "unsupported_compression_algorithm",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7516/jwe.py",
+     "function": "JsonWebEncryption.get_header_zip",
+     "line": 730
+    },
+    "str": "unsupported_compression_algorithm: Unsupported 'zip' value in header"
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "728": "raise UnsupportedCompressionAlgorithmError()",
+    "730": "raise UnsupportedCompressionAlgorithmError()"
+   },
+   "raise_lines_executed": {
+    "730": 1
+   },
+   "reached": true,
+   "returncode": 0,
+   "settings": "JsonWebEncryption() (algorithms=None, private_headers=None: the defaults); key: 16-byte secret (bytes)",
+   "start": "2026-11-17T16:02:09Z",
+   "stderr": "no-fire/reach/authlib/15.py:133: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebEncryption",
+   "token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4R0NNIiwiemlwIjoiWFlaIn0..cm93LTE1LWl2LTEy.47AVWtpKtJl2ovnQZQA7wckziEok_l6IBlNr8hX24yuW.-BpwKW7-GA_zs8eDxIw4RA",
+   "within_4_4": true
+  },
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T16:02:09Z",
+   "entry_point": "authlib.jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "JsonWebEncryption.__init__": 1,
+    "JsonWebEncryption.deserialize_compact": 1,
+    "JsonWebEncryption.get_header_alg": 1,
+    "JsonWebEncryption.get_header_enc": 1,
+    "JsonWebEncryption.get_header_zip": 1
+   },
+   "input": "compact JWE, protected header {\"alg\":\"dir\",\"enc\":\"A128GCM\",\"zip\":\"DEF\"}, payload compressed with DEFLATE and encrypted with AES-128-GCM under the key",
+   "line_events_in_file": 29,
+   "module_of_file_imported": [
+    "authlib.jose.rfc7516.jwe"
+   ],
+   "name": "b",
+   "outcome": {
+    "class": "authlib.jose.errors.UnsupportedCompressionAlgorithmError",
+    "description": "Unsupported 'zip' value in header",
+    "error": "unsupported_compression_algorithm",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7516/jwe.py",
+     "function": "JsonWebEncryption.get_header_zip",
+     "line": 728
+    },
+    "str": "unsupported_compression_algorithm: Unsupported 'zip' value in header"
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "728": "raise UnsupportedCompressionAlgorithmError()",
+    "730": "raise UnsupportedCompressionAlgorithmError()"
+   },
+   "raise_lines_executed": {
+    "728": 1
+   },
+   "reached": true,
+   "returncode": 0,
+   "settings": "not the default: JsonWebEncryption(algorithms=[\"dir\",\"A128GCM\"]); key: 16-byte secret (bytes)",
+   "start": "2026-11-17T16:02:09Z",
+   "stderr": "no-fire/reach/authlib/15.py:147: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebEncryption",
+   "token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4R0NNIiwiemlwIjoiREVGIn0..cm93LTE1LWl2LTEy.M8RMAfU6POkuB6EqYQFMP7qQpRJXdl2LAePZmCU.y3cDky4UyPZWRpS2luztEA",
+   "within_4_4": true
+  },
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T16:02:09Z",
+   "entry_point": "authlib.jose.rfc7516.jwe.JsonWebEncryption.deserialize",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "JsonWebEncryption.__init__": 1,
+    "JsonWebEncryption.deserialize": 1,
+    "JsonWebEncryption.deserialize_json": 1,
+    "JsonWebEncryption.get_header_alg": 1,
+    "JsonWebEncryption.get_header_enc": 1,
+    "JsonWebEncryption.get_header_zip": 1
+   },
+   "input": "JWE JSON serialization (general syntax, text), protected header {\"alg\":\"dir\",\"enc\":\"A128GCM\",\"zip\":\"XYZ\"}, 1 recipient with an empty encrypted key, payload encrypted with AES-128-GCM under the key",
+   "line_events_in_file": 47,
+   "module_of_file_imported": [
+    "authlib.jose.rfc7516.jwe"
+   ],
+   "name": "c",
+   "outcome": {
+    "class": "authlib.jose.errors.UnsupportedCompressionAlgorithmError",
+    "description": "Unsupported 'zip' value in header",
+    "error": "unsupported_compression_algorithm",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7516/jwe.py",
+     "function": "JsonWebEncryption.get_header_zip",
+     "line": 730
+    },
+    "str": "unsupported_compression_algorithm: Unsupported 'zip' value in header"
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "728": "raise UnsupportedCompressionAlgorithmError()",
+    "730": "raise UnsupportedCompressionAlgorithmError()"
+   },
+   "raise_lines_executed": {
+    "730": 1
+   },
+   "reached": true,
+   "returncode": 0,
+   "settings": "JsonWebEncryption() (the defaults); key: 16-byte secret (bytes)",
+   "start": "2026-11-17T16:02:09Z",
+   "stderr": "no-fire/reach/authlib/15.py:161: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebEncryption",
+   "token": "{\"protected\":\"eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4R0NNIiwiemlwIjoiWFlaIn0\",\"recipients\":[{\"encrypted_key\":\"\"}],\"iv\":\"cm93LTE1LWl2LTEy\",\"ciphertext\":\"47AVWtpKtJl2ovnQZQA7wckziEok_l6IBlNr8hX24yuW\",\"tag\":\"-BpwKW7-GA_zs8eDxIw4RA\"}",
+   "within_4_4": true
+  },
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T16:02:09Z",
+   "entry_point": "authlib.jose.rfc7519.jwt.JsonWebToken.decode",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "JsonWebEncryption.__init__": 1,
+    "JsonWebEncryption.deserialize_compact": 1,
+    "JsonWebEncryption.get_header_alg": 1,
+    "JsonWebEncryption.get_header_enc": 1,
+    "JsonWebEncryption.get_header_zip": 1
+   },
+   "input": "the token of input b",
+   "line_events_in_file": 29,
+   "module_of_file_imported": [
+    "authlib.jose.rfc7516.jwe"
+   ],
+   "name": "d",
+   "outcome": {
+    "class": "authlib.jose.errors.UnsupportedCompressionAlgorithmError",
+    "description": "Unsupported 'zip' value in header",
+    "error": "unsupported_compression_algorithm",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7516/jwe.py",
+     "function": "JsonWebEncryption.get_header_zip",
+     "line": 728
+    },
+    "str": "unsupported_compression_algorithm: Unsupported 'zip' value in header"
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "728": "raise UnsupportedCompressionAlgorithmError()",
+    "730": "raise UnsupportedCompressionAlgorithmError()"
+   },
+   "raise_lines_executed": {
+    "728": 1
+   },
+   "reached": true,
+   "returncode": 0,
+   "settings": "JsonWebToken([\"dir\",\"A128GCM\"]) (algorithms has no default; the package's own instance authlib.jose.jwt holds only JWS algorithms); key: 16-byte secret (bytes)",
+   "start": "2026-11-17T16:02:09Z",
+   "stderr": "no-fire/reach/authlib/15.py:179: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebToken",
+   "token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4R0NNIiwiemlwIjoiREVGIn0..cm93LTE1LWl2LTEy.M8RMAfU6POkuB6EqYQFMP7qQpRJXdl2LAePZmCU.y3cDky4UyPZWRpS2luztEA",
+   "within_4_4": true
+  }
+ ],
+ "interpreter": "../target-reach/work/venvs/authlib/bin/python",
+ "python": "3.12.3",
+ "raise_lines": [
+  728,
+  730
+ ],
+ "reached": true,
+ "row": 15,
+ "script": "no-fire/reach/authlib/15.py",
+ "script_sha256": "162d37751ba62e235235b7eff032073dd28c7802bc2594c7bc7319b8644df4e7"
+}

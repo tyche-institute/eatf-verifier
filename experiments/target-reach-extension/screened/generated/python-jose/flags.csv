@@ -1,0 +1,10 @@
+block,index,test,basis,tier,target,target_template,deciding_check,deciding_template,target_fired,own_test_without_target
+tests/test_jwe.py::TestDecrypt.test_non_json_header_is_parse_error#0,0,test_non_json_header_is_parse_error,name,name,jwe._jwe_compact_deserialize#4,Invalid header string: must be a json object,jwe._jwe_compact_deserialize#1,Not enough segments,no,target not deleted
+tests/test_jws.py::TestHMAC.test_wrong_key#0,0,test_wrong_key,name,name,jws._verify_signature#3,,jws._verify_signature#4,Signature verification failed.,yes,fails
+tests/test_jws.py::TestJWS.test_claims_invalid_padding#0,0,test_claims_invalid_padding,name,name,jws._sign_header_and_claims#1,{*},jws._load#5,Invalid payload padding,no,target not deleted
+tests/test_jws.py::TestJWS.test_header_invalid_padding#0,0,test_header_invalid_padding,name,name,jws._load#2,Invalid header padding,jws._load#1,Not enough segments,no,target not deleted
+tests/test_jws.py::TestJWS.test_header_not_json#0,0,test_header_not_json,name,name,jws._load#4,Invalid header string: must be a json object,jws._load#3,Invalid header string: {*},no,passes
+tests/test_jws.py::TestJWS.test_invalid_algorithm#0,0,test_invalid_algorithm,name,name,jws._verify_signature#5,Invalid or unsupported algorithm: {*},jws._verify_signature#2,The specified alg value is not allowed,no,target not deleted
+tests/test_jws.py::TestRSA.test_wrong_key#0,0,test_wrong_key,name,name,jws._verify_signature#3,,jws._verify_signature#2,The specified alg value is not allowed,no,passes
+tests/test_jwt.py::TestJWT.test_invalid_claims_json#0,0,test_invalid_claims_json,assert+name,name,jwt.decode#3,Invalid payload string: must be a json object,jwt.decode#2,Invalid payload string: {*},no,passes
+tests/test_jwt.py::TestJWT.test_sub_invalid#0,0,test_sub_invalid,name,name,jwt._validate_sub#2,Invalid subject,jwt._validate_sub#1,Subject must be a string.,no,passes

@@ -1,0 +1,258 @@
+{
+ "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1",
+ "check_definition": {
+  "class": "UnauthorizedClientError",
+  "class_name": "UnauthorizedClientError",
+  "file": "oauthlib/oauth2/rfc6749/grant_types/base.py",
+  "file_sha256_in_copy": "7dc0522da168f0f690bad005ae9bdac519938620eddf0528845ed48ced85481b",
+  "function": "GrantTypeBase.validate_grant_type",
+  "raise_source": {
+   "162": "raise errors.UnauthorizedClientError(request=request)"
+  },
+  "raise_statements": [
+   [
+    162,
+    162
+   ]
+  ],
+  "template": ""
+ },
+ "clone": {
+  "copied_paths_clean": true,
+  "head": "6e3aa05af92978755939a18cb4dd655ced156c1e",
+  "path": "experiments/target-reach/work/src/oauthlib"
+ },
+ "copy": {
+  "package_imported_from": "experiments/target-reach-extension/work/reach/oauthlib/copy/8/oauthlib/__init__.py",
+  "path": "experiments/target-reach-extension/work/reach/oauthlib/copy/8",
+  "paths": [
+   "oauthlib",
+   "tests"
+  ],
+  "subject_files_checked": 75
+ },
+ "decides": true,
+ "entry_point": {
+  "called_on": "oauthlib.oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant",
+  "file": "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py",
+  "line": 436,
+  "name": "validate_token_request",
+  "qualname": "AuthorizationCodeGrant.validate_token_request"
+ },
+ "exception": {
+  "class": "oauthlib.oauth2.rfc6749.errors.UnauthorizedClientError",
+  "description": "",
+  "error": "unauthorized_client",
+  "message": "(unauthorized_client)  <oauthlib.Request SANITIZED>",
+  "raise_site": {
+   "check": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1",
+   "file": "oauthlib/oauth2/rfc6749/grant_types/base.py",
+   "function": "GrantTypeBase.validate_grant_type",
+   "line": 162
+  },
+  "status_code": 400,
+  "traceback": [
+   {
+    "file": "trace_input.py (outside the package)",
+    "function": "main",
+    "line": 277
+   },
+   {
+    "file": "8.py (outside the package)",
+    "function": "build.<locals>.<lambda>",
+    "line": 87
+   },
+   {
+    "file": "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py",
+    "function": "AuthorizationCodeGrant.validate_token_request",
+    "line": 460
+   },
+   {
+    "file": "oauthlib/oauth2/rfc6749/grant_types/base.py",
+    "function": "GrantTypeBase.validate_grant_type",
+    "line": 162
+   }
+  ]
+ },
+ "facts": {},
+ "fired": true,
+ "input": "POST https://server.example.com/token, Authorization: Basic (client s6BhdRkqt3 and its secret), body grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%2F%2Fclient.example.com%2Fcb",
+ "interpreter": {
+  "dont_write_bytecode": true,
+  "environment_variables": [
+   "HOME",
+   "LANG",
+   "LC_ALL",
+   "PATH"
+  ],
+  "executable": "experiments/target-reach/work/venvs/oauthlib/bin/python",
+  "hash_randomization": true,
+  "implementation": "CPython",
+  "isolated": true,
+  "locale": {
+   "LANG": "C.UTF-8",
+   "LC_ALL": "C.UTF-8"
+  },
+  "prefix": "experiments/target-reach/work/venvs/oauthlib",
+  "version": "3.12.3"
+ },
+ "library": "oauthlib",
+ "lines_executed": {
+  "oauthlib/__init__.py": {
+   "get_debug": [
+    34
+   ]
+  },
+  "oauthlib/common.py": {
+   "CaseInsensitiveDict.__contains__": [
+    307
+   ],
+   "CaseInsensitiveDict.__getitem__": [
+    315,
+    316
+   ],
+   "CaseInsensitiveDict.get": [
+    319
+   ],
+   "Request.__getattr__": [
+    400,
+    401
+   ],
+   "Request.__repr__": [
+    406,
+    407
+   ],
+   "Request.duplicate_params": [
+    430,
+    431,
+    432,
+    433,
+    434,
+    435
+   ],
+   "Request.duplicate_params.<locals>.<genexpr>": [
+    431,
+    432
+   ],
+   "Request.uri_query": [
+    419
+   ],
+   "Request.uri_query_params": [
+    423,
+    424
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/errors.py": {
+   "OAuth2Error.__init__": [
+    44,
+    47,
+    48,
+    49,
+    50,
+    52,
+    53,
+    55,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py": {
+   "AuthorizationCodeGrant.validate_token_request": [
+    442,
+    445,
+    448,
+    452,
+    453,
+    457,
+    460
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/grant_types/base.py": {
+   "GrantTypeBase.validate_client_authentication": [
+    223,
+    224
+   ],
+   "GrantTypeBase.validate_client_confidential": [
+    184,
+    185,
+    189,
+    190,
+    195,
+    196
+   ],
+   "GrantTypeBase.validate_grant_type": [
+    157,
+    158,
+    159,
+    160,
+    161,
+    162
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/request_validator.py": {
+   "RequestValidator.client_authentication_required": [
+    39
+   ]
+  }
+ },
+ "outcome": "raised",
+ "raise_events": [
+  {
+   "check_at_line": "oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1",
+   "exception": "oauthlib.oauth2.rfc6749.errors.UnauthorizedClientError",
+   "file": "oauthlib/oauth2/rfc6749/grant_types/base.py",
+   "firing_of_the_check": true,
+   "function": "GrantTypeBase.validate_grant_type",
+   "instruction": "RAISE_VARARGS",
+   "line": 162
+  },
+  {
+   "check_at_line": null,
+   "exception": "oauthlib.oauth2.rfc6749.errors.UnauthorizedClientError",
+   "file": "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py",
+   "firing_of_the_check": false,
+   "function": "AuthorizationCodeGrant.validate_token_request",
+   "instruction": "CACHE",
+   "line": 460
+  }
+ ],
+ "raise_lines_executed": [
+  162
+ ],
+ "result": "reached",
+ "returned": null,
+ "row": 8,
+ "settings": [
+  "AuthorizationCodeGrant(request_validator) with no other argument: no custom validators",
+  "request validator, a subclass of oauthlib.oauth2.RequestValidator: client_authentication_required keeps the library's default (True)",
+  "authenticate_client: accepts the HTTP Basic credentials of the registered client and sets request.client (the library has no default)",
+  "validate_grant_type: False, the client is allowed the client credentials grant only (no default)"
+ ],
+ "times": {
+  "call_ended": "2026-11-17T15:48:31Z",
+  "call_started": "2026-11-17T15:48:31Z",
+  "ended": "2026-11-17T15:48:31Z",
+  "started": "2026-11-17T15:48:31Z"
+ },
+ "validator_calls": [
+  [
+   "client_authentication_required (library default)",
+   "True"
+  ],
+  [
+   "authenticate_client",
+   "True"
+  ],
+  [
+   "validate_grant_type",
+   "False"
+  ]
+ ]
+}

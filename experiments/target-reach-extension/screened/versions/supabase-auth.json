@@ -1,0 +1,2910 @@
+{
+ "clone": "work/supabase-auth/clone/src/auth",
+ "clone_problems": [],
+ "commit": "416bffd0d95662912b307a13f5956b91b61d0c74",
+ "interpreters": {
+  "3.10.20": {
+   "interpreter": "work/pythons/cpython-3.10.20-linux-x86_64-gnu/bin/python3.10",
+   "interpreter_sha256": "22f7a096f6a76520e95444b29bd0b87ce97814f81c680291307e1f31631a135c",
+   "planned": false,
+   "support": {
+    "admitted_by_requires_python": false,
+    "both": false,
+    "classifier_minor_versions": [],
+    "listed_in_classifiers": null,
+    "requires-python": false,
+    "requires_python": ">=3.11"
+   }
+  },
+  "3.11.15": {
+   "added": {},
+   "blocks": [
+    {
+     "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+     "nodeid": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     ]
+    },
+    {
+     "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+     "nodeid": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     ]
+    },
+    {
+     "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+     "nodeid": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     ]
+    },
+    {
+     "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+     "nodeid": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     ]
+    },
+    {
+     "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+     "nodeid": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+     "nodeid": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+     "nodeid": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+     "nodeid": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+     "nodeid": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+     "nodeid": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     ]
+    }
+   ],
+   "collect": {
+    "collected": 238,
+    "returncode": 0,
+    "summary": "238 tests collected"
+   },
+   "environment": "<outside>/screened-versions-2/supabase-auth/env-3.11.15/bin/python",
+   "environment_commands": [
+    [
+     "~/.local/bin/uv",
+     "venv",
+     "--quiet",
+     "-p",
+     "work/pythons/cpython-3.11.15-linux-x86_64-gnu/bin/python3.11",
+     "<outside>/screened-versions-2/supabase-auth/env-3.11.15"
+    ],
+    [
+     "~/.local/bin/uv",
+     "pip",
+     "install",
+     "--quiet",
+     "-p",
+     "<outside>/screened-versions-2/supabase-auth/env-3.11.15/bin/python",
+     "-r",
+     "<outside>/screened-versions-2/supabase-auth/py-3.11.15/requirements.txt",
+     "--only-binary",
+     ":all:"
+    ]
+   ],
+   "environment_problems": [],
+   "interpreter": "work/pythons/cpython-3.11.15-linux-x86_64-gnu/bin/python3.11",
+   "interpreter_sha256": "9e7f0dd93c77a32d07aa66631b48116101db6266701b292ebdc56a30d6cc7924",
+   "junit_entries_without_node_id": [],
+   "messages": {},
+   "negative_tests": [
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+   ],
+   "outcomes": {
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token": "passed",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]": "passed",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key": "passed",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token": "passed",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]": "passed",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key": "passed"
+   },
+   "outcomes_differ_from_control": {},
+   "pin_problems": [],
+   "pins": [
+    "annotated-types==0.8.0",
+    "anyio==4.16.0",
+    "certifi==2026.10.23",
+    "cffi==2.1.1",
+    "colorama==0.4.6",
+    "coverage==7.17.3",
+    "cryptography==50.0.2",
+    "Faker==40.54.0",
+    "future-fstrings==1.2.0",
+    "h11==0.16.0",
+    "h2==4.4.1",
+    "hpack==4.2.0",
+    "httpcore==1.0.9",
+    "httpx==0.28.1",
+    "hyperframe==6.1.0",
+    "idna==3.20",
+    "iniconfig==2.3.1",
+    "networkx==3.6.1",
+    "packaging==26.3",
+    "pluggy==1.7.0",
+    "pycparser==3.12",
+    "pydantic==2.14.3",
+    "pydantic_core==2.50.4",
+    "Pygments==2.21.0",
+    "PyJWT==2.15.1",
+    "PyOTP==2.12.0",
+    "pytest==9.2.0",
+    "pytest-asyncio==1.5.0",
+    "pytest-cov==7.1.0",
+    "pytest-depends==1.0.1",
+    "pytest-mock==3.17.0",
+    "respx==0.22.0",
+    "typing-inspection==0.4.5",
+    "typing_extensions==4.16.0"
+   ],
+   "planned": true,
+   "replacements": [
+    {
+     "package": "networkx",
+     "pinned": "3.7",
+     "pinned_requires_python": [
+      "!=3.14.1,>=3.12"
+     ],
+     "replacement": "3.6.1",
+     "replacement_requires_python": [
+      "!=3.14.1,>=3.11"
+     ]
+    }
+   ],
+   "selection": [
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+   ],
+   "suite": {
+    "failures": [],
+    "not_collected": [],
+    "refused": {
+     "attempts": 0,
+     "tests": {}
+    },
+    "returncode": 0,
+    "summary": "20 passed"
+   },
+   "support": {
+    "admitted_by_requires_python": true,
+    "both": true,
+    "classifier_minor_versions": [],
+    "listed_in_classifiers": null,
+    "requires-python": true,
+    "requires_python": ">=3.11"
+   },
+   "unresolved_blocks": []
+  },
+  "3.12.3": {
+   "added": {},
+   "base_runs_differ": [],
+   "blocks": [
+    {
+     "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+     "nodeid": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     ]
+    },
+    {
+     "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+     "nodeid": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     ]
+    },
+    {
+     "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+     "nodeid": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     ]
+    },
+    {
+     "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+     "nodeid": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     ]
+    },
+    {
+     "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+     "nodeid": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+     "nodeid": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+     "nodeid": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+     "nodeid": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+     "nodeid": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+     "nodeid": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     ]
+    }
+   ],
+   "cases": {
+    "base-1": {
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1388,
+      "message": "Invalid JWT signature",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1342,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1378,
+      "message": "Invalid JWT signature",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1332,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     }
+    },
+    "base-2": {
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1388,
+      "message": "Invalid JWT signature",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1342,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1378,
+      "message": "Invalid JWT signature",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1332,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     }
+    }
+   },
+   "cases_differ_from_main_baseline": {},
+   "collect": {
+    "collected": 238,
+    "returncode": 0,
+    "summary": "238 tests collected"
+   },
+   "deselected": [],
+   "environment": "<outside>/screened-versions-2/supabase-auth/env-3.12.3/bin/python",
+   "environment_commands": [
+    [
+     "~/.local/bin/uv",
+     "venv",
+     "--quiet",
+     "-p",
+     "/usr/bin/python3.12",
+     "<outside>/screened-versions-2/supabase-auth/env-3.12.3"
+    ],
+    [
+     "~/.local/bin/uv",
+     "pip",
+     "install",
+     "--quiet",
+     "-p",
+     "<outside>/screened-versions-2/supabase-auth/env-3.12.3/bin/python",
+     "-r",
+     "<outside>/screened-versions-2/supabase-auth/py-3.12.3/requirements.txt",
+     "--only-binary",
+     ":all:"
+    ]
+   ],
+   "environment_problems": [],
+   "interpreter": "/usr/bin/python3.12",
+   "interpreter_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+   "junit_entries_without_node_id": [],
+   "messages": {},
+   "negative_tests": [
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+   ],
+   "outcomes": {
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token": "passed",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]": "passed",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key": "passed",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token": "passed",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]": "passed",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key": "passed"
+   },
+   "pin_problems": [],
+   "pins": [
+    "annotated-types==0.8.0",
+    "anyio==4.16.0",
+    "certifi==2026.10.23",
+    "cffi==2.1.1",
+    "colorama==0.4.6",
+    "coverage==7.17.3",
+    "cryptography==50.0.2",
+    "Faker==40.54.0",
+    "future-fstrings==1.2.0",
+    "h11==0.16.0",
+    "h2==4.4.1",
+    "hpack==4.2.0",
+    "httpcore==1.0.9",
+    "httpx==0.28.1",
+    "hyperframe==6.1.0",
+    "idna==3.20",
+    "iniconfig==2.3.1",
+    "networkx==3.7",
+    "packaging==26.3",
+    "pluggy==1.7.0",
+    "pycparser==3.12",
+    "pydantic==2.14.3",
+    "pydantic_core==2.50.4",
+    "Pygments==2.21.0",
+    "PyJWT==2.15.1",
+    "PyOTP==2.12.0",
+    "pytest==9.2.0",
+    "pytest-asyncio==1.5.0",
+    "pytest-cov==7.1.0",
+    "pytest-depends==1.0.1",
+    "pytest-mock==3.17.0",
+    "respx==0.22.0",
+    "typing-inspection==0.4.5",
+    "typing_extensions==4.16.0"
+   ],
+   "planned": true,
+   "recorder_runs": {
+    "base-1": {
+     "record": true,
+     "refused": {
+      "attempts": 0,
+      "tests": {}
+     },
+     "returncode": 0,
+     "run": "base-1",
+     "seconds": 1.588,
+     "timed_out": false,
+     "timeout": 3600
+    },
+    "base-2": {
+     "record": true,
+     "refused": {
+      "attempts": 0,
+      "tests": {}
+     },
+     "returncode": 0,
+     "run": "base-2",
+     "seconds": 1.568,
+     "timed_out": false,
+     "timeout": 3600
+    }
+   },
+   "replacements": [],
+   "selection": [
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+   ],
+   "suite": {
+    "failures": [],
+    "not_collected": [],
+    "refused": {
+     "attempts": 0,
+     "tests": {}
+    },
+    "returncode": 0,
+    "summary": "20 passed"
+   },
+   "support": {
+    "admitted_by_requires_python": true,
+    "both": true,
+    "classifier_minor_versions": [],
+    "listed_in_classifiers": null,
+    "requires-python": true,
+    "requires_python": ">=3.11"
+   },
+   "unresolved_blocks": []
+  },
+  "3.13.14": {
+   "added": {},
+   "base_runs_differ": [],
+   "blocks": [
+    {
+     "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+     "nodeid": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     ]
+    },
+    {
+     "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+     "nodeid": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     ]
+    },
+    {
+     "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+     "nodeid": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     ]
+    },
+    {
+     "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+     "nodeid": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     ]
+    },
+    {
+     "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+     "nodeid": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+     "nodeid": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+     "nodeid": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+     "nodeid": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+     "nodeid": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+     "nodeid": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     ]
+    }
+   ],
+   "cases": {
+    "base-1": {
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1388,
+      "message": "Invalid JWT signature",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1342,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1378,
+      "message": "Invalid JWT signature",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1332,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     }
+    },
+    "base-2": {
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1388,
+      "message": "Invalid JWT signature",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1342,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1378,
+      "message": "Invalid JWT signature",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1332,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     }
+    }
+   },
+   "cases_differ_from_control": {},
+   "collect": {
+    "collected": 238,
+    "returncode": 0,
+    "summary": "238 tests collected"
+   },
+   "deselected": [],
+   "environment": "<outside>/screened-versions-2/supabase-auth/env-3.13.14/bin/python",
+   "environment_commands": [
+    [
+     "~/.local/bin/uv",
+     "venv",
+     "--quiet",
+     "-p",
+     "work/pythons/cpython-3.13.14-linux-x86_64-gnu/bin/python3.13",
+     "<outside>/screened-versions-2/supabase-auth/env-3.13.14"
+    ],
+    [
+     "~/.local/bin/uv",
+     "pip",
+     "install",
+     "--quiet",
+     "-p",
+     "<outside>/screened-versions-2/supabase-auth/env-3.13.14/bin/python",
+     "-r",
+     "<outside>/screened-versions-2/supabase-auth/py-3.13.14/requirements.txt",
+     "--only-binary",
+     ":all:"
+    ]
+   ],
+   "environment_problems": [],
+   "interpreter": "work/pythons/cpython-3.13.14-linux-x86_64-gnu/bin/python3.13",
+   "interpreter_sha256": "47d42800dda8f60eaae1f62092a107314157dbc2378cd410b2e0af059cb01ebb",
+   "junit_entries_without_node_id": [],
+   "messages": {},
+   "negative_tests": [
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+   ],
+   "outcomes": {
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token": "passed",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]": "passed",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key": "passed",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token": "passed",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]": "passed",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key": "passed"
+   },
+   "outcomes_differ_from_control": {},
+   "pin_problems": [],
+   "pins": [
+    "annotated-types==0.8.0",
+    "anyio==4.16.0",
+    "certifi==2026.10.23",
+    "cffi==2.1.1",
+    "colorama==0.4.6",
+    "coverage==7.17.3",
+    "cryptography==50.0.2",
+    "Faker==40.54.0",
+    "future-fstrings==1.2.0",
+    "h11==0.16.0",
+    "h2==4.4.1",
+    "hpack==4.2.0",
+    "httpcore==1.0.9",
+    "httpx==0.28.1",
+    "hyperframe==6.1.0",
+    "idna==3.20",
+    "iniconfig==2.3.1",
+    "networkx==3.7",
+    "packaging==26.3",
+    "pluggy==1.7.0",
+    "pycparser==3.12",
+    "pydantic==2.14.3",
+    "pydantic_core==2.50.4",
+    "Pygments==2.21.0",
+    "PyJWT==2.15.1",
+    "PyOTP==2.12.0",
+    "pytest==9.2.0",
+    "pytest-asyncio==1.5.0",
+    "pytest-cov==7.1.0",
+    "pytest-depends==1.0.1",
+    "pytest-mock==3.17.0",
+    "respx==0.22.0",
+    "typing-inspection==0.4.5",
+    "typing_extensions==4.16.0"
+   ],
+   "planned": true,
+   "recorder_runs": {
+    "base-1": {
+     "record": true,
+     "refused": {
+      "attempts": 0,
+      "tests": {}
+     },
+     "returncode": 0,
+     "run": "base-1",
+     "seconds": 1.594,
+     "timed_out": false,
+     "timeout": 3600
+    },
+    "base-2": {
+     "record": true,
+     "refused": {
+      "attempts": 0,
+      "tests": {}
+     },
+     "returncode": 0,
+     "run": "base-2",
+     "seconds": 1.604,
+     "timed_out": false,
+     "timeout": 3600
+    }
+   },
+   "replacements": [],
+   "selection": [
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+   ],
+   "suite": {
+    "failures": [],
+    "not_collected": [],
+    "refused": {
+     "attempts": 0,
+     "tests": {}
+    },
+    "returncode": 0,
+    "summary": "20 passed"
+   },
+   "support": {
+    "admitted_by_requires_python": true,
+    "both": true,
+    "classifier_minor_versions": [],
+    "listed_in_classifiers": null,
+    "requires-python": true,
+    "requires_python": ">=3.11"
+   },
+   "unresolved_blocks": []
+  },
+  "3.14.6": {
+   "added": {},
+   "base_runs_differ": [],
+   "blocks": [
+    {
+     "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+     "nodeid": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     ]
+    },
+    {
+     "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+     "nodeid": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     ]
+    },
+    {
+     "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+     "nodeid": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     ]
+    },
+    {
+     "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+     "nodeid": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+      "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     ]
+    },
+    {
+     "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+     "nodeid": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     ]
+    },
+    {
+     "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+     "nodeid": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+     "rule": "node id",
+     "tests": [
+      "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+     "nodeid": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+     "nodeid": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+     "nodeid": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+     "nodeid": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+      "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+     "nodeid": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     ]
+    },
+    {
+     "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+     "nodeid": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+     "rule": "node id",
+     "tests": [
+      "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     ]
+    }
+   ],
+   "cases": {
+    "base-1": {
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1388,
+      "message": "Invalid JWT signature",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1342,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1378,
+      "message": "Invalid JWT signature",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1332,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     }
+    },
+    "base-2": {
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1388,
+      "message": "Invalid JWT signature",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_async/gotrue_client.py",
+      "fired": [
+       "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1342,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0",
+      "check": "helpers.validate_exp#2",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#2"
+      ],
+      "index": 0,
+      "line": 273,
+      "message": "JWT has expired",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token"
+     },
+     "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": {
+      "block": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 204,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]"
+     },
+     "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": {
+      "block": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0",
+      "check": "helpers.decode_jwt#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.decode_jwt#1"
+      ],
+      "index": 0,
+      "line": 211,
+      "message": "Invalid JWT structure",
+      "test": "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]"
+     },
+     "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": {
+      "block": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0",
+      "check": "helpers.validate_exp#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.validate_exp#1"
+      ],
+      "index": 0,
+      "line": 269,
+      "message": "JWT has no expiration time",
+      "test": "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0",
+      "check": "helpers.parse_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/helpers.py",
+      "fired": [
+       "helpers.parse_jwks#1"
+      ],
+      "index": 0,
+      "line": 92,
+      "message": "JWKS is empty",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient.get_claims#1"
+      ],
+      "index": 0,
+      "line": 1378,
+      "message": "Invalid JWT signature",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature"
+     },
+     "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": {
+      "block": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0",
+      "check": "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1",
+      "class": "supabase_auth.errors.AuthInvalidJwtError",
+      "file": "supabase_auth/_sync/gotrue_client.py",
+      "fired": [
+       "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1"
+      ],
+      "index": 0,
+      "line": 1332,
+      "message": "No matching signing key found in JWKS",
+      "test": "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+     }
+    }
+   },
+   "cases_differ_from_control": {},
+   "collect": {
+    "collected": 238,
+    "returncode": 0,
+    "summary": "238 tests collected"
+   },
+   "deselected": [],
+   "environment": "<outside>/screened-versions-2/supabase-auth/env-3.14.6/bin/python",
+   "environment_commands": [
+    [
+     "~/.local/bin/uv",
+     "venv",
+     "--quiet",
+     "-p",
+     "work/pythons/cpython-3.14.6-linux-x86_64-gnu/bin/python3.14",
+     "<outside>/screened-versions-2/supabase-auth/env-3.14.6"
+    ],
+    [
+     "~/.local/bin/uv",
+     "pip",
+     "install",
+     "--quiet",
+     "-p",
+     "<outside>/screened-versions-2/supabase-auth/env-3.14.6/bin/python",
+     "-r",
+     "<outside>/screened-versions-2/supabase-auth/py-3.14.6/requirements.txt",
+     "--only-binary",
+     ":all:"
+    ]
+   ],
+   "environment_problems": [],
+   "interpreter": "work/pythons/cpython-3.14.6-linux-x86_64-gnu/bin/python3.14",
+   "interpreter_sha256": "c2afa8cc3c59d32bac482c122633a352c3910bfed85b59efd8ef49511d46bd2b",
+   "junit_entries_without_node_id": [],
+   "messages": {},
+   "negative_tests": [
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+   ],
+   "outcomes": {
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token": "passed",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]": "passed",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]": "passed",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature": "passed",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key": "passed",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token": "passed",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]": "passed",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]": "passed",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature": "passed",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key": "passed"
+   },
+   "outcomes_differ_from_control": {},
+   "pin_problems": [],
+   "pins": [
+    "annotated-types==0.8.0",
+    "anyio==4.16.0",
+    "certifi==2026.10.23",
+    "cffi==2.1.1",
+    "colorama==0.4.6",
+    "coverage==7.17.3",
+    "cryptography==50.0.2",
+    "Faker==40.54.0",
+    "future-fstrings==1.2.0",
+    "h11==0.16.0",
+    "h2==4.4.1",
+    "hpack==4.2.0",
+    "httpcore==1.0.9",
+    "httpx==0.28.1",
+    "hyperframe==6.1.0",
+    "idna==3.20",
+    "iniconfig==2.3.1",
+    "networkx==3.7",
+    "packaging==26.3",
+    "pluggy==1.7.0",
+    "pycparser==3.12",
+    "pydantic==2.14.3",
+    "pydantic_core==2.50.4",
+    "Pygments==2.21.0",
+    "PyJWT==2.15.1",
+    "PyOTP==2.12.0",
+    "pytest==9.2.0",
+    "pytest-asyncio==1.5.0",
+    "pytest-cov==7.1.0",
+    "pytest-depends==1.0.1",
+    "pytest-mock==3.17.0",
+    "respx==0.22.0",
+    "typing-inspection==0.4.5",
+    "typing_extensions==4.16.0"
+   ],
+   "planned": true,
+   "recorder_runs": {
+    "base-1": {
+     "record": true,
+     "refused": {
+      "attempts": 0,
+      "tests": {}
+     },
+     "returncode": 0,
+     "run": "base-1",
+     "seconds": 1.84,
+     "timed_out": false,
+     "timeout": 3600
+    },
+    "base-2": {
+     "record": true,
+     "refused": {
+      "attempts": 0,
+      "tests": {}
+     },
+     "returncode": 0,
+     "run": "base-2",
+     "seconds": 1.85,
+     "timed_out": false,
+     "timeout": 3600
+    }
+   },
+   "replacements": [],
+   "selection": [
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+    "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token",
+    "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header",
+    "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token",
+    "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature",
+    "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key"
+   ],
+   "suite": {
+    "failures": [],
+    "not_collected": [],
+    "refused": {
+     "attempts": 0,
+     "tests": {}
+    },
+    "returncode": 0,
+    "summary": "20 passed"
+   },
+   "support": {
+    "admitted_by_requires_python": true,
+    "both": true,
+    "classifier_minor_versions": [],
+    "listed_in_classifiers": null,
+    "requires-python": true,
+    "requires_python": ">=3.11"
+   },
+   "unresolved_blocks": []
+  },
+  "3.9.25": {
+   "interpreter": "work/pythons/cpython-3.9.25-linux-x86_64-gnu/bin/python3.9",
+   "interpreter_sha256": "84c920f304e265c53096e42d83309c6f7b829988f937a7dd15c24eebcb63f59a",
+   "planned": false,
+   "support": {
+    "admitted_by_requires_python": false,
+    "both": false,
+    "classifier_minor_versions": [],
+    "listed_in_classifiers": null,
+    "requires-python": false,
+    "requires_python": ">=3.11"
+   }
+  }
+ },
+ "library": "supabase-auth",
+ "main_baseline": {
+  "case_count": 20,
+  "checks": {
+   "tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_async/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": "helpers.validate_exp#2",
+   "tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_async/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": "helpers.validate_exp#1",
+   "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": "helpers.decode_jwt#1",
+   "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": "helpers.decode_jwt#1",
+   "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": "helpers.decode_jwt#1",
+   "tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_async/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": "helpers.decode_jwt#1",
+   "tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_async/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": "helpers.validate_exp#1",
+   "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": "helpers.parse_jwks#1",
+   "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": "_async.gotrue_client.AsyncGoTrueClient.get_claims#1",
+   "tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_async/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": "_async.gotrue_client.AsyncGoTrueClient._fetch_jwks#1",
+   "tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token|tests/_sync/test_client_flows.py::test_get_claims_rejects_expired_token#0|0": "helpers.validate_exp#2",
+   "tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry|tests/_sync/test_client_flows.py::test_get_claims_rejects_token_without_expiry#0|0": "helpers.validate_exp#1",
+   "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_malformed_header#0|0": "helpers.decode_jwt#1",
+   "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[non-ascii]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": "helpers.decode_jwt#1",
+   "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[not-a-jwt]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": "helpers.decode_jwt#1",
+   "tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token[undecodable-base64]|tests/_sync/test_get_claims.py::test_get_claims_raises_auth_error_for_undecodable_token#0|0": "helpers.decode_jwt#1",
+   "tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing|tests/_sync/test_gotrue.py::test_get_claims_raises_when_exp_claim_is_missing#0|0": "helpers.validate_exp#1",
+   "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_empty_jwks#0|0": "helpers.parse_jwks#1",
+   "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_invalid_signature#0|0": "_sync.gotrue_client.SyncGoTrueClient.get_claims#1",
+   "tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key|tests/_sync/test_jwks_and_refresh.py::test_get_claims_rejects_unknown_signing_key#0|0": "_sync.gotrue_client.SyncGoTrueClient._fetch_jwks#1"
+  },
+  "sha256": "e23f0ae56b29201a08ed8278536726d70cec980226c1608e0e5acb3292cb6eed",
+  "source": "screened/generated/supabase-auth/records.tar.xz"
+ },
+ "release_metadata": {
+  "path": "work/screened-versions/pypi/supabase-auth-2.34.1.json",
+  "sha256": "612f31b32adf4543705d16642812f38621441aea086a85a4874c021b663aa97f",
+  "url": "https://pypi.org/pypi/supabase-auth/2.34.1/json"
+ },
+ "select": "functions",
+ "support_rule": "requires-python",
+ "uv": "uv 0.11.21 (x86_64-unknown-linux-gnu)",
+ "version": "2.34.1"
+}

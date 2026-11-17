@@ -1,0 +1,3152 @@
+{
+ "library": "joserfc",
+ "row": 17,
+ "check": "_keys.JWKRegistry.import_key#1",
+ "file": "joserfc/_keys.py",
+ "lines": [
+  [
+   70,
+   70
+  ]
+ ],
+ "class": "MissingKeyTypeError",
+ "function": "JWKRegistry.import_key",
+ "script": "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+ "harness": "experiments/target-reach-extension/no-fire/reach/joserfc/reach_harness.py",
+ "harness_sha256": "59765a732d1ba06dd8126a648e3d81894cdd0f91bd239723220dab8a5e0f95e0",
+ "script_sha256": "d44d385d7d4f5959f6372d2d68e09362c0287d993578b01e9b5aeb3020493245",
+ "started": "2026-11-17T16:13:58.352Z",
+ "outer_python": "3.12.3",
+ "clone": {
+  "path": "experiments/target-reach/work/src/joserfc",
+  "commit": "f345ff71cd6c36452a4e11e47b805ad450a95dd8",
+  "read_from": ".git/HEAD (no git command)"
+ },
+ "environment": {
+  "python": "experiments/target-reach/work/venvs/joserfc/bin/python",
+  "interpreter": "CPython 3.12.3",
+  "packages": {
+   "cffi": "2.1.1",
+   "cryptography": "50.0.2",
+   "iniconfig": "2.3.1",
+   "packaging": "26.3",
+   "pluggy": "1.7.0",
+   "pycparser": "3.12",
+   "pycryptodome": "4.4.0",
+   "pygments": "2.21.0",
+   "pytest": "9.2.0"
+  },
+  "problems": []
+ },
+ "copy": "experiments/target-reach-extension/work/reach/joserfc/copy",
+ "definitions_sha256": {
+  "experiments/target-reach/subjects/joserfc/subject.json": "f81481ed8b295263bc512d9fc0ce3edf4bf107bb8addb1f0aea4e9fb3ac4bc51",
+  "experiments/target-reach/subjects/joserfc/checks.json": "49eaea742bda9a5f6743061d8d8161e939d9639f46f8aec11f77611a99428e49",
+  "experiments/target-reach/subjects/joserfc/blocks.json": "940010fa4461804dc7920bfe0ece6c2ec6ed56c5adaf0a4619646700eb70d6b4",
+  "experiments/target-reach/subjects/joserfc/requirements.txt": "48071646248d39ad97b41d30b616c5c64efda03e635a8d4a8816da3192177fee",
+  "experiments/target-reach-extension/no-fire/sample.csv": "5637e6bc9241273992552eb79331b9e5095ee5c8e8b291afc718f2efeea3a8fa"
+ },
+ "sample_row": {
+  "library": "joserfc",
+  "check": "_keys.JWKRegistry.import_key#1",
+  "file": "joserfc/_keys.py",
+  "line": "70",
+  "function": "JWKRegistry.import_key",
+  "class": "MissingKeyTypeError",
+  "template": "Missing key type",
+  "reachable": "yes"
+ },
+ "cases": [
+  {
+   "name": "input",
+   "kind": "input",
+   "entry_point": "joserfc.jwe.decrypt_compact (jwe.py:96)",
+   "settings": "key: ECKey (P-256); algorithms, registry, sender_key: defaults",
+   "input": "ECDH-ES + A128GCM compact JWE for the key whose epk header has no kty member",
+   "runs": [
+    {
+     "run": 1,
+     "started": "2026-11-17T16:13:58.406Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:58.509Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "input",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "input",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "0d40496f1766d42fd7d4ca39487cc2658331cb1580b22fa22c06a2ab0bfa28f6",
+       "segment_lengths": [
+        207,
+        0,
+        16,
+        66,
+        22
+       ],
+       "epk_members": [
+        "crv",
+        "x",
+        "y"
+       ],
+       "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf"
+      },
+      "outcome": {
+       "raised": {
+        "class": "joserfc.errors.KeyParameterError",
+        "message": "key_parameter: 'kty' is required",
+        "is_rejection_class": true,
+        "site": {
+         "file": "joserfc/_rfc7517/models.py",
+         "function": "NativeKeyBinding.validate_dict_key_registry",
+         "line": 61,
+         "check": "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1"
+        },
+        "package_frames": [
+         "joserfc/jwe.py:136 decrypt_compact",
+         "joserfc/_rfc7516/message.py:101 perform_decrypt",
+         "joserfc/_rfc7516/message.py:128 _perform_decrypt",
+         "joserfc/_rfc7516/message.py:124 _perform_decrypt",
+         "joserfc/_rfc7516/message.py:253 decrypt_recipient",
+         "joserfc/_rfc7518/jwe_algs.py:225 decrypt_agreed_upon_key",
+         "joserfc/_rfc7518/ec_key.py:163 import_key",
+         "joserfc/_rfc7517/models.py:277 import_key",
+         "joserfc/_rfc7517/models.py:265 validate_dict_key",
+         "joserfc/_rfc7517/models.py:61 validate_dict_key_registry"
+        ],
+        "is_the_object_raised_at_the_check": false,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": false,
+      "target_raise_line_executed": false,
+      "checks_fired": [
+       "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1"
+      ],
+      "raise_events": [
+       {
+        "file": "joserfc/_rfc7517/models.py",
+        "line": 61,
+        "function": "NativeKeyBinding.validate_dict_key_registry",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1",
+        "firing": "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1"
+       },
+       {
+        "file": "joserfc/_rfc7517/models.py",
+        "line": 265,
+        "function": "BaseKey.validate_dict_key",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7517/models.py",
+        "line": 277,
+        "function": "BaseKey.import_key",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7518/ec_key.py",
+        "line": 163,
+        "function": "ECKey.import_key",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7518/jwe_algs.py",
+        "line": 225,
+        "function": "ECDHESAlgKeyAgreement.decrypt_agreed_upon_key",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7516/message.py",
+        "line": 253,
+        "function": "decrypt_recipient",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7516/message.py",
+        "line": 124,
+        "function": "_perform_decrypt",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7516/message.py",
+        "line": 128,
+        "function": "_perform_decrypt",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7516/message.py",
+        "line": 101,
+        "function": "perform_decrypt",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwe.py",
+        "line": 136,
+        "function": "decrypt_compact",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key",
+       "joserfc/_rfc7517/models.py:205 BaseKey.check_use",
+       "joserfc/_rfc7517/models.py:116 BaseKey.get",
+       "joserfc/_rfc7517/models.py:144 BaseKey.dict_value",
+       "joserfc/_rfc7517/models.py:318 AsymmetricKey.raw_value",
+       "joserfc/_rfc7518/ec_key.py:122 ECKey.is_private",
+       "joserfc/_rfc7517/pem.py:108 CryptographyBinding.convert_raw_key_to_dict",
+       "joserfc/_rfc7518/ec_key.py:71 ECBinding.export_private_key",
+       "joserfc/util.py:50 int_to_base64",
+       "joserfc/util.py:40 urlsafe_b64encode",
+       "joserfc/_rfc7517/models.py:263 BaseKey.validate_dict_key",
+       "joserfc/_rfc7517/models.py:57 NativeKeyBinding.validate_dict_key_registry",
+       "joserfc/registry.py:14 is_str",
+       "joserfc/_rfc7517/models.py:69 NativeKeyBinding.validate_dict_key_use_operations",
+       "joserfc/_rfc7516/message.py:99 perform_decrypt",
+       "joserfc/_rfc7516/message.py:106 _perform_decrypt",
+       "joserfc/_rfc7516/registry.py:166 JWERegistry.get_enc",
+       "joserfc/_rfc7516/registry.py:184 JWERegistry._check_algorithm",
+       "joserfc/_rfc7516/models.py:204 JWEEncModel.check_iv",
+       "joserfc/_rfc7516/models.py:94 CompactEncryption.recipients",
+       "joserfc/_rfc7516/message.py:203 _check_recipient_header_protection",
+       "joserfc/registry.py:217 reject_unprotected_crit_header",
+       "joserfc/_rfc7516/models.py:42 Recipient.headers",
+       "joserfc/_rfc7516/registry.py:97 JWERegistry.check_header",
+       "joserfc/registry.py:200 check_crit_header",
+       "joserfc/registry.py:189 check_registry_header",
+       "joserfc/_rfc7516/registry.py:154 JWERegistry.get_alg",
+       "joserfc/registry.py:43 is_jwk",
+       "joserfc/registry.py:182 check_supported_header",
+       "joserfc/_rfc7516/message.py:242 decrypt_recipient",
+       "joserfc/_rfc7516/models.py:246 KeyManagement.direct_mode",
+       "joserfc/_rfc7518/jwe_algs.py:217 ECDHESAlgKeyAgreement.decrypt_agreed_upon_key",
+       "joserfc/_rfc7516/models.py:250 KeyManagement.check_key_type",
+       "joserfc/_rfc7518/ec_key.py:152 ECKey.import_key",
+       "joserfc/_rfc7517/models.py:269 BaseKey.import_key",
+       "joserfc/errors.py:15 JoseError.__init__"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/message.py": [
+        100,
+        101,
+        102,
+        107,
+        109,
+        110,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        123,
+        124,
+        126,
+        127,
+        128,
+        204,
+        206,
+        244,
+        248,
+        251,
+        253
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        46,
+        49,
+        50,
+        71,
+        73,
+        74,
+        75,
+        76,
+        96,
+        97,
+        205,
+        207,
+        248,
+        251
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        99,
+        100,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143,
+        159,
+        160,
+        161,
+        162,
+        164,
+        171,
+        172,
+        173,
+        185,
+        188,
+        192
+       ],
+       "joserfc/_rfc7517/models.py": [
+        59,
+        60,
+        61,
+        63,
+        64,
+        65,
+        71,
+        117,
+        147,
+        150,
+        151,
+        153,
+        154,
+        155,
+        156,
+        220,
+        221,
+        265,
+        266,
+        267,
+        276,
+        277,
+        320
+       ],
+       "joserfc/_rfc7517/pem.py": [
+        110,
+        111,
+        114
+       ],
+       "joserfc/_rfc7518/ec_key.py": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        124,
+        160,
+        163
+       ],
+       "joserfc/_rfc7518/jwe_algs.py": [
+        218,
+        219,
+        221,
+        222,
+        224,
+        225
+       ],
+       "joserfc/errors.py": [
+        16,
+        17,
+        19,
+        20
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        136
+       ],
+       "joserfc/jwk.py": [
+        77,
+        80,
+        82,
+        83
+       ],
+       "joserfc/registry.py": [
+        15,
+        44,
+        183,
+        184,
+        185,
+        190,
+        191,
+        193,
+        194,
+        195,
+        202,
+        203,
+        204,
+        211,
+        213,
+        218,
+        221,
+        222
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        41,
+        51,
+        54,
+        56,
+        59,
+        60,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    },
+    {
+     "run": 2,
+     "started": "2026-11-17T16:13:58.509Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:58.617Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "input",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "input",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "0d40496f1766d42fd7d4ca39487cc2658331cb1580b22fa22c06a2ab0bfa28f6",
+       "segment_lengths": [
+        207,
+        0,
+        16,
+        66,
+        22
+       ],
+       "epk_members": [
+        "crv",
+        "x",
+        "y"
+       ],
+       "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf"
+      },
+      "outcome": {
+       "raised": {
+        "class": "joserfc.errors.KeyParameterError",
+        "message": "key_parameter: 'kty' is required",
+        "is_rejection_class": true,
+        "site": {
+         "file": "joserfc/_rfc7517/models.py",
+         "function": "NativeKeyBinding.validate_dict_key_registry",
+         "line": 61,
+         "check": "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1"
+        },
+        "package_frames": [
+         "joserfc/jwe.py:136 decrypt_compact",
+         "joserfc/_rfc7516/message.py:101 perform_decrypt",
+         "joserfc/_rfc7516/message.py:128 _perform_decrypt",
+         "joserfc/_rfc7516/message.py:124 _perform_decrypt",
+         "joserfc/_rfc7516/message.py:253 decrypt_recipient",
+         "joserfc/_rfc7518/jwe_algs.py:225 decrypt_agreed_upon_key",
+         "joserfc/_rfc7518/ec_key.py:163 import_key",
+         "joserfc/_rfc7517/models.py:277 import_key",
+         "joserfc/_rfc7517/models.py:265 validate_dict_key",
+         "joserfc/_rfc7517/models.py:61 validate_dict_key_registry"
+        ],
+        "is_the_object_raised_at_the_check": false,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": false,
+      "target_raise_line_executed": false,
+      "checks_fired": [
+       "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1"
+      ],
+      "raise_events": [
+       {
+        "file": "joserfc/_rfc7517/models.py",
+        "line": 61,
+        "function": "NativeKeyBinding.validate_dict_key_registry",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1",
+        "firing": "_rfc7517.models.NativeKeyBinding.validate_dict_key_registry#1"
+       },
+       {
+        "file": "joserfc/_rfc7517/models.py",
+        "line": 265,
+        "function": "BaseKey.validate_dict_key",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7517/models.py",
+        "line": 277,
+        "function": "BaseKey.import_key",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7518/ec_key.py",
+        "line": 163,
+        "function": "ECKey.import_key",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7518/jwe_algs.py",
+        "line": 225,
+        "function": "ECDHESAlgKeyAgreement.decrypt_agreed_upon_key",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7516/message.py",
+        "line": 253,
+        "function": "decrypt_recipient",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7516/message.py",
+        "line": 124,
+        "function": "_perform_decrypt",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7516/message.py",
+        "line": 128,
+        "function": "_perform_decrypt",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/_rfc7516/message.py",
+        "line": 101,
+        "function": "perform_decrypt",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwe.py",
+        "line": 136,
+        "function": "decrypt_compact",
+        "exception": "KeyParameterError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key",
+       "joserfc/_rfc7517/models.py:205 BaseKey.check_use",
+       "joserfc/_rfc7517/models.py:116 BaseKey.get",
+       "joserfc/_rfc7517/models.py:144 BaseKey.dict_value",
+       "joserfc/_rfc7517/models.py:318 AsymmetricKey.raw_value",
+       "joserfc/_rfc7518/ec_key.py:122 ECKey.is_private",
+       "joserfc/_rfc7517/pem.py:108 CryptographyBinding.convert_raw_key_to_dict",
+       "joserfc/_rfc7518/ec_key.py:71 ECBinding.export_private_key",
+       "joserfc/util.py:50 int_to_base64",
+       "joserfc/util.py:40 urlsafe_b64encode",
+       "joserfc/_rfc7517/models.py:263 BaseKey.validate_dict_key",
+       "joserfc/_rfc7517/models.py:57 NativeKeyBinding.validate_dict_key_registry",
+       "joserfc/registry.py:14 is_str",
+       "joserfc/_rfc7517/models.py:69 NativeKeyBinding.validate_dict_key_use_operations",
+       "joserfc/_rfc7516/message.py:99 perform_decrypt",
+       "joserfc/_rfc7516/message.py:106 _perform_decrypt",
+       "joserfc/_rfc7516/registry.py:166 JWERegistry.get_enc",
+       "joserfc/_rfc7516/registry.py:184 JWERegistry._check_algorithm",
+       "joserfc/_rfc7516/models.py:204 JWEEncModel.check_iv",
+       "joserfc/_rfc7516/models.py:94 CompactEncryption.recipients",
+       "joserfc/_rfc7516/message.py:203 _check_recipient_header_protection",
+       "joserfc/registry.py:217 reject_unprotected_crit_header",
+       "joserfc/_rfc7516/models.py:42 Recipient.headers",
+       "joserfc/_rfc7516/registry.py:97 JWERegistry.check_header",
+       "joserfc/registry.py:200 check_crit_header",
+       "joserfc/registry.py:189 check_registry_header",
+       "joserfc/_rfc7516/registry.py:154 JWERegistry.get_alg",
+       "joserfc/registry.py:43 is_jwk",
+       "joserfc/registry.py:182 check_supported_header",
+       "joserfc/_rfc7516/message.py:242 decrypt_recipient",
+       "joserfc/_rfc7516/models.py:246 KeyManagement.direct_mode",
+       "joserfc/_rfc7518/jwe_algs.py:217 ECDHESAlgKeyAgreement.decrypt_agreed_upon_key",
+       "joserfc/_rfc7516/models.py:250 KeyManagement.check_key_type",
+       "joserfc/_rfc7518/ec_key.py:152 ECKey.import_key",
+       "joserfc/_rfc7517/models.py:269 BaseKey.import_key",
+       "joserfc/errors.py:15 JoseError.__init__"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/message.py": [
+        100,
+        101,
+        102,
+        107,
+        109,
+        110,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        123,
+        124,
+        126,
+        127,
+        128,
+        204,
+        206,
+        244,
+        248,
+        251,
+        253
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        46,
+        49,
+        50,
+        71,
+        73,
+        74,
+        75,
+        76,
+        96,
+        97,
+        205,
+        207,
+        248,
+        251
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        99,
+        100,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143,
+        159,
+        160,
+        161,
+        162,
+        164,
+        171,
+        172,
+        173,
+        185,
+        188,
+        192
+       ],
+       "joserfc/_rfc7517/models.py": [
+        59,
+        60,
+        61,
+        63,
+        64,
+        65,
+        71,
+        117,
+        147,
+        150,
+        151,
+        153,
+        154,
+        155,
+        156,
+        220,
+        221,
+        265,
+        266,
+        267,
+        276,
+        277,
+        320
+       ],
+       "joserfc/_rfc7517/pem.py": [
+        110,
+        111,
+        114
+       ],
+       "joserfc/_rfc7518/ec_key.py": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        124,
+        160,
+        163
+       ],
+       "joserfc/_rfc7518/jwe_algs.py": [
+        218,
+        219,
+        221,
+        222,
+        224,
+        225
+       ],
+       "joserfc/errors.py": [
+        16,
+        17,
+        19,
+        20
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        136
+       ],
+       "joserfc/jwk.py": [
+        77,
+        80,
+        82,
+        83
+       ],
+       "joserfc/registry.py": [
+        15,
+        44,
+        183,
+        184,
+        185,
+        190,
+        191,
+        193,
+        194,
+        195,
+        202,
+        203,
+        204,
+        211,
+        213,
+        218,
+        221,
+        222
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        41,
+        51,
+        54,
+        56,
+        59,
+        60,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    }
+   ],
+   "runs_identical": true
+  },
+  {
+   "name": "input-b",
+   "kind": "input",
+   "entry_point": "joserfc.jwe.decrypt_compact (jwe.py:96)",
+   "settings": "key: a JWK dict of the P-256 key without kty; algorithms, registry, sender_key: defaults",
+   "input": "well-formed ECDH-ES + A128GCM compact JWE (epk with kty)",
+   "runs": [
+    {
+     "run": 1,
+     "started": "2026-11-17T16:13:58.617Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:58.719Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "input-b",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "input-b",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "4bdf41478e3c94488c504b93ec0f7db2a0a6ae1e5d406157fd97c67faffd1537",
+       "segment_lengths": [
+        222,
+        0,
+        16,
+        66,
+        22
+       ],
+       "epk_members": [
+        "crv",
+        "kty",
+        "x",
+        "y"
+       ],
+       "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf",
+       "key_members": [
+        "crv",
+        "d",
+        "x",
+        "y"
+       ]
+      },
+      "outcome": {
+       "raised": {
+        "class": "builtins.ValueError",
+        "message": "Invalid key",
+        "is_rejection_class": false,
+        "site": {
+         "file": "joserfc/jwk.py",
+         "function": "guess_key",
+         "line": 103,
+         "check": null
+        },
+        "package_frames": [
+         "joserfc/jwe.py:131 decrypt_compact",
+         "joserfc/jwk.py:103 guess_key"
+        ],
+        "is_the_object_raised_at_the_check": false,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": false,
+      "target_raise_line_executed": false,
+      "checks_fired": [],
+      "raise_events": [
+       {
+        "file": "joserfc/jwk.py",
+        "line": 103,
+        "function": "guess_key",
+        "exception": "ValueError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwe.py",
+        "line": 131,
+        "function": "decrypt_compact",
+        "exception": "ValueError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        71,
+        73,
+        74,
+        75,
+        76
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131
+       ],
+       "joserfc/jwk.py": [
+        77,
+        80,
+        82,
+        84,
+        103
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    },
+    {
+     "run": 2,
+     "started": "2026-11-17T16:13:58.719Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:58.821Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "input-b",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "input-b",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "4bdf41478e3c94488c504b93ec0f7db2a0a6ae1e5d406157fd97c67faffd1537",
+       "segment_lengths": [
+        222,
+        0,
+        16,
+        66,
+        22
+       ],
+       "epk_members": [
+        "crv",
+        "kty",
+        "x",
+        "y"
+       ],
+       "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf",
+       "key_members": [
+        "crv",
+        "d",
+        "x",
+        "y"
+       ]
+      },
+      "outcome": {
+       "raised": {
+        "class": "builtins.ValueError",
+        "message": "Invalid key",
+        "is_rejection_class": false,
+        "site": {
+         "file": "joserfc/jwk.py",
+         "function": "guess_key",
+         "line": 103,
+         "check": null
+        },
+        "package_frames": [
+         "joserfc/jwe.py:131 decrypt_compact",
+         "joserfc/jwk.py:103 guess_key"
+        ],
+        "is_the_object_raised_at_the_check": false,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": false,
+      "target_raise_line_executed": false,
+      "checks_fired": [],
+      "raise_events": [
+       {
+        "file": "joserfc/jwk.py",
+        "line": 103,
+        "function": "guess_key",
+        "exception": "ValueError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwe.py",
+        "line": 131,
+        "function": "decrypt_compact",
+        "exception": "ValueError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        71,
+        73,
+        74,
+        75,
+        76
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131
+       ],
+       "joserfc/jwk.py": [
+        77,
+        80,
+        82,
+        84,
+        103
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    }
+   ],
+   "runs_identical": true
+  },
+  {
+   "name": "control-epk-with-kty",
+   "kind": "control",
+   "entry_point": "joserfc.jwe.decrypt_compact (jwe.py:96)",
+   "settings": "as the input",
+   "input": "the well-formed token (epk with kty)",
+   "runs": [
+    {
+     "run": 1,
+     "started": "2026-11-17T16:13:58.821Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:58.921Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "control-epk-with-kty",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "control-epk-with-kty",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "4bdf41478e3c94488c504b93ec0f7db2a0a6ae1e5d406157fd97c67faffd1537",
+       "segment_lengths": [
+        222,
+        0,
+        16,
+        66,
+        22
+       ],
+       "epk_members": [
+        "crv",
+        "kty",
+        "x",
+        "y"
+       ],
+       "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf"
+      },
+      "outcome": {
+       "returned": {
+        "type": "joserfc._rfc7516.models.CompactEncryption",
+        "plaintext_length": 49,
+        "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf"
+       }
+      },
+      "target_fired": false,
+      "target_raise_line_executed": false,
+      "checks_fired": [],
+      "raise_events": [],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key",
+       "joserfc/_rfc7517/models.py:205 BaseKey.check_use",
+       "joserfc/_rfc7517/models.py:116 BaseKey.get",
+       "joserfc/_rfc7517/models.py:144 BaseKey.dict_value",
+       "joserfc/_rfc7517/models.py:318 AsymmetricKey.raw_value",
+       "joserfc/_rfc7518/ec_key.py:122 ECKey.is_private",
+       "joserfc/_rfc7517/pem.py:108 CryptographyBinding.convert_raw_key_to_dict",
+       "joserfc/_rfc7518/ec_key.py:71 ECBinding.export_private_key",
+       "joserfc/util.py:50 int_to_base64",
+       "joserfc/util.py:40 urlsafe_b64encode",
+       "joserfc/_rfc7517/models.py:263 BaseKey.validate_dict_key",
+       "joserfc/_rfc7517/models.py:57 NativeKeyBinding.validate_dict_key_registry",
+       "joserfc/registry.py:14 is_str",
+       "joserfc/_rfc7517/models.py:69 NativeKeyBinding.validate_dict_key_use_operations",
+       "joserfc/_rfc7516/message.py:99 perform_decrypt",
+       "joserfc/_rfc7516/message.py:106 _perform_decrypt",
+       "joserfc/_rfc7516/registry.py:166 JWERegistry.get_enc",
+       "joserfc/_rfc7516/registry.py:184 JWERegistry._check_algorithm",
+       "joserfc/_rfc7516/models.py:204 JWEEncModel.check_iv",
+       "joserfc/_rfc7516/models.py:94 CompactEncryption.recipients",
+       "joserfc/_rfc7516/message.py:203 _check_recipient_header_protection",
+       "joserfc/registry.py:217 reject_unprotected_crit_header",
+       "joserfc/_rfc7516/models.py:42 Recipient.headers",
+       "joserfc/_rfc7516/registry.py:97 JWERegistry.check_header",
+       "joserfc/registry.py:200 check_crit_header",
+       "joserfc/registry.py:189 check_registry_header",
+       "joserfc/_rfc7516/registry.py:154 JWERegistry.get_alg",
+       "joserfc/registry.py:43 is_jwk",
+       "joserfc/registry.py:182 check_supported_header",
+       "joserfc/_rfc7516/message.py:242 decrypt_recipient",
+       "joserfc/_rfc7516/models.py:246 KeyManagement.direct_mode",
+       "joserfc/_rfc7518/jwe_algs.py:217 ECDHESAlgKeyAgreement.decrypt_agreed_upon_key",
+       "joserfc/_rfc7516/models.py:250 KeyManagement.check_key_type",
+       "joserfc/_rfc7518/ec_key.py:152 ECKey.import_key",
+       "joserfc/_rfc7517/models.py:269 BaseKey.import_key",
+       "joserfc/_rfc7517/pem.py:116 CryptographyBinding.import_from_dict",
+       "joserfc/_rfc7518/ec_key.py:82 ECBinding.import_public_key",
+       "joserfc/util.py:44 base64_to_int",
+       "joserfc/_rfc7517/models.py:87 BaseKey.__init__",
+       "joserfc/_rfc7518/ec_key.py:138 ECKey.exchange_derive_key",
+       "joserfc/_rfc7517/models.py:255 BaseKey.get_op_key",
+       "joserfc/_rfc7517/models.py:234 BaseKey.check_key_op",
+       "joserfc/_rfc7518/ec_key.py:126 ECKey.public_key",
+       "joserfc/_rfc7518/ec_key.py:132 ECKey.private_key",
+       "joserfc/_rfc7518/ec_key.py:144 ECKey.curve_name",
+       "joserfc/_rfc7518/derive_key.py:15 derive_key_for_concat_kdf",
+       "joserfc/_rfc7518/derive_key.py:46 u32be_len_input",
+       "joserfc/_rfc7518/jwe_encs.py:99 GCMEncModel.decrypt"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/message.py": [
+        100,
+        101,
+        107,
+        109,
+        110,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        123,
+        124,
+        125,
+        130,
+        133,
+        136,
+        139,
+        140,
+        143,
+        148,
+        150,
+        151,
+        155,
+        204,
+        206,
+        244,
+        248,
+        251,
+        253,
+        285
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        46,
+        49,
+        50,
+        71,
+        73,
+        74,
+        75,
+        76,
+        96,
+        97,
+        205,
+        207,
+        248,
+        251
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        99,
+        100,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143,
+        159,
+        160,
+        161,
+        162,
+        164,
+        171,
+        172,
+        173,
+        185,
+        188,
+        192
+       ],
+       "joserfc/_rfc7517/models.py": [
+        59,
+        60,
+        63,
+        64,
+        65,
+        71,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        101,
+        102,
+        103,
+        117,
+        147,
+        148,
+        150,
+        151,
+        153,
+        154,
+        155,
+        156,
+        220,
+        221,
+        240,
+        241,
+        244,
+        245,
+        246,
+        256,
+        257,
+        258,
+        261,
+        265,
+        266,
+        267,
+        276,
+        277,
+        278,
+        279,
+        320
+       ],
+       "joserfc/_rfc7517/pem.py": [
+        110,
+        111,
+        114,
+        118,
+        120
+       ],
+       "joserfc/_rfc7518/derive_key.py": [
+        19,
+        21,
+        24,
+        28,
+        29,
+        31,
+        32,
+        34,
+        38,
+        39,
+        40,
+        41,
+        43,
+        47,
+        48,
+        50,
+        53,
+        54
+       ],
+       "joserfc/_rfc7518/ec_key.py": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        84,
+        85,
+        86,
+        87,
+        88,
+        90,
+        124,
+        128,
+        130,
+        134,
+        135,
+        139,
+        140,
+        141,
+        146,
+        160,
+        163,
+        164
+       ],
+       "joserfc/_rfc7518/jwe_algs.py": [
+        218,
+        219,
+        221,
+        222,
+        224,
+        225,
+        226,
+        227
+       ],
+       "joserfc/_rfc7518/jwe_encs.py": [
+        101,
+        102,
+        103,
+        104,
+        105
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        136,
+        137
+       ],
+       "joserfc/jwk.py": [
+        77,
+        80,
+        82,
+        83
+       ],
+       "joserfc/registry.py": [
+        15,
+        44,
+        183,
+        184,
+        185,
+        190,
+        191,
+        193,
+        194,
+        195,
+        202,
+        203,
+        204,
+        211,
+        213,
+        218,
+        221,
+        222
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        41,
+        45,
+        46,
+        47,
+        51,
+        54,
+        56,
+        59,
+        60,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    },
+    {
+     "run": 2,
+     "started": "2026-11-17T16:13:58.921Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:59.023Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "control-epk-with-kty",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "control-epk-with-kty",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "4bdf41478e3c94488c504b93ec0f7db2a0a6ae1e5d406157fd97c67faffd1537",
+       "segment_lengths": [
+        222,
+        0,
+        16,
+        66,
+        22
+       ],
+       "epk_members": [
+        "crv",
+        "kty",
+        "x",
+        "y"
+       ],
+       "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf"
+      },
+      "outcome": {
+       "returned": {
+        "type": "joserfc._rfc7516.models.CompactEncryption",
+        "plaintext_length": 49,
+        "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf"
+       }
+      },
+      "target_fired": false,
+      "target_raise_line_executed": false,
+      "checks_fired": [],
+      "raise_events": [],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key",
+       "joserfc/_rfc7517/models.py:205 BaseKey.check_use",
+       "joserfc/_rfc7517/models.py:116 BaseKey.get",
+       "joserfc/_rfc7517/models.py:144 BaseKey.dict_value",
+       "joserfc/_rfc7517/models.py:318 AsymmetricKey.raw_value",
+       "joserfc/_rfc7518/ec_key.py:122 ECKey.is_private",
+       "joserfc/_rfc7517/pem.py:108 CryptographyBinding.convert_raw_key_to_dict",
+       "joserfc/_rfc7518/ec_key.py:71 ECBinding.export_private_key",
+       "joserfc/util.py:50 int_to_base64",
+       "joserfc/util.py:40 urlsafe_b64encode",
+       "joserfc/_rfc7517/models.py:263 BaseKey.validate_dict_key",
+       "joserfc/_rfc7517/models.py:57 NativeKeyBinding.validate_dict_key_registry",
+       "joserfc/registry.py:14 is_str",
+       "joserfc/_rfc7517/models.py:69 NativeKeyBinding.validate_dict_key_use_operations",
+       "joserfc/_rfc7516/message.py:99 perform_decrypt",
+       "joserfc/_rfc7516/message.py:106 _perform_decrypt",
+       "joserfc/_rfc7516/registry.py:166 JWERegistry.get_enc",
+       "joserfc/_rfc7516/registry.py:184 JWERegistry._check_algorithm",
+       "joserfc/_rfc7516/models.py:204 JWEEncModel.check_iv",
+       "joserfc/_rfc7516/models.py:94 CompactEncryption.recipients",
+       "joserfc/_rfc7516/message.py:203 _check_recipient_header_protection",
+       "joserfc/registry.py:217 reject_unprotected_crit_header",
+       "joserfc/_rfc7516/models.py:42 Recipient.headers",
+       "joserfc/_rfc7516/registry.py:97 JWERegistry.check_header",
+       "joserfc/registry.py:200 check_crit_header",
+       "joserfc/registry.py:189 check_registry_header",
+       "joserfc/_rfc7516/registry.py:154 JWERegistry.get_alg",
+       "joserfc/registry.py:43 is_jwk",
+       "joserfc/registry.py:182 check_supported_header",
+       "joserfc/_rfc7516/message.py:242 decrypt_recipient",
+       "joserfc/_rfc7516/models.py:246 KeyManagement.direct_mode",
+       "joserfc/_rfc7518/jwe_algs.py:217 ECDHESAlgKeyAgreement.decrypt_agreed_upon_key",
+       "joserfc/_rfc7516/models.py:250 KeyManagement.check_key_type",
+       "joserfc/_rfc7518/ec_key.py:152 ECKey.import_key",
+       "joserfc/_rfc7517/models.py:269 BaseKey.import_key",
+       "joserfc/_rfc7517/pem.py:116 CryptographyBinding.import_from_dict",
+       "joserfc/_rfc7518/ec_key.py:82 ECBinding.import_public_key",
+       "joserfc/util.py:44 base64_to_int",
+       "joserfc/_rfc7517/models.py:87 BaseKey.__init__",
+       "joserfc/_rfc7518/ec_key.py:138 ECKey.exchange_derive_key",
+       "joserfc/_rfc7517/models.py:255 BaseKey.get_op_key",
+       "joserfc/_rfc7517/models.py:234 BaseKey.check_key_op",
+       "joserfc/_rfc7518/ec_key.py:126 ECKey.public_key",
+       "joserfc/_rfc7518/ec_key.py:132 ECKey.private_key",
+       "joserfc/_rfc7518/ec_key.py:144 ECKey.curve_name",
+       "joserfc/_rfc7518/derive_key.py:15 derive_key_for_concat_kdf",
+       "joserfc/_rfc7518/derive_key.py:46 u32be_len_input",
+       "joserfc/_rfc7518/jwe_encs.py:99 GCMEncModel.decrypt"
+      ],
+      "lines_executed": {
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/message.py": [
+        100,
+        101,
+        107,
+        109,
+        110,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        123,
+        124,
+        125,
+        130,
+        133,
+        136,
+        139,
+        140,
+        143,
+        148,
+        150,
+        151,
+        155,
+        204,
+        206,
+        244,
+        248,
+        251,
+        253,
+        285
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        44,
+        46,
+        49,
+        50,
+        71,
+        73,
+        74,
+        75,
+        76,
+        96,
+        97,
+        205,
+        207,
+        248,
+        251
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        99,
+        100,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143,
+        159,
+        160,
+        161,
+        162,
+        164,
+        171,
+        172,
+        173,
+        185,
+        188,
+        192
+       ],
+       "joserfc/_rfc7517/models.py": [
+        59,
+        60,
+        63,
+        64,
+        65,
+        71,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        101,
+        102,
+        103,
+        117,
+        147,
+        148,
+        150,
+        151,
+        153,
+        154,
+        155,
+        156,
+        220,
+        221,
+        240,
+        241,
+        244,
+        245,
+        246,
+        256,
+        257,
+        258,
+        261,
+        265,
+        266,
+        267,
+        276,
+        277,
+        278,
+        279,
+        320
+       ],
+       "joserfc/_rfc7517/pem.py": [
+        110,
+        111,
+        114,
+        118,
+        120
+       ],
+       "joserfc/_rfc7518/derive_key.py": [
+        19,
+        21,
+        24,
+        28,
+        29,
+        31,
+        32,
+        34,
+        38,
+        39,
+        40,
+        41,
+        43,
+        47,
+        48,
+        50,
+        53,
+        54
+       ],
+       "joserfc/_rfc7518/ec_key.py": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        84,
+        85,
+        86,
+        87,
+        88,
+        90,
+        124,
+        128,
+        130,
+        134,
+        135,
+        139,
+        140,
+        141,
+        146,
+        160,
+        163,
+        164
+       ],
+       "joserfc/_rfc7518/jwe_algs.py": [
+        218,
+        219,
+        221,
+        222,
+        224,
+        225,
+        226,
+        227
+       ],
+       "joserfc/_rfc7518/jwe_encs.py": [
+        101,
+        102,
+        103,
+        104,
+        105
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        136,
+        137
+       ],
+       "joserfc/jwk.py": [
+        77,
+        80,
+        82,
+        83
+       ],
+       "joserfc/registry.py": [
+        15,
+        44,
+        183,
+        184,
+        185,
+        190,
+        191,
+        193,
+        194,
+        195,
+        202,
+        203,
+        204,
+        211,
+        213,
+        218,
+        221,
+        222
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        41,
+        45,
+        46,
+        47,
+        51,
+        54,
+        56,
+        59,
+        60,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    }
+   ],
+   "runs_identical": true
+  },
+  {
+   "name": "control-import-key-set",
+   "kind": "control",
+   "entry_point": "joserfc.jwk.KeySet.import_key_set (_keys.py:170; not an entry point)",
+   "settings": "none",
+   "input": "key set {\"keys\": [P-256 public JWK without kty]}",
+   "runs": [
+    {
+     "run": 1,
+     "started": "2026-11-17T16:13:59.023Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:59.114Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "control-import-key-set",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "control-import-key-set",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "key_members": [
+        "crv",
+        "x",
+        "y"
+       ]
+      },
+      "outcome": {
+       "raised": {
+        "class": "joserfc.errors.MissingKeyTypeError",
+        "message": "missing_key_type: Missing key type",
+        "is_rejection_class": true,
+        "site": {
+         "file": "joserfc/_keys.py",
+         "function": "JWKRegistry.import_key",
+         "line": 70,
+         "check": "_keys.JWKRegistry.import_key#1"
+        },
+        "package_frames": [
+         "joserfc/_keys.py:178 import_key_set",
+         "joserfc/_keys.py:70 import_key"
+        ],
+        "is_the_object_raised_at_the_check": true,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": true,
+      "target_raise_line_executed": true,
+      "checks_fired": [
+       "_keys.JWKRegistry.import_key#1"
+      ],
+      "raise_events": [
+       {
+        "file": "joserfc/_keys.py",
+        "line": 70,
+        "function": "JWKRegistry.import_key",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": "_keys.JWKRegistry.import_key#1",
+        "firing": "_keys.JWKRegistry.import_key#1"
+       },
+       {
+        "file": "joserfc/_keys.py",
+        "line": 178,
+        "function": "KeySet.import_key_set",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/_keys.py:169 KeySet.import_key_set",
+       "joserfc/_keys.py:55 JWKRegistry.import_key",
+       "joserfc/errors.py:15 JoseError.__init__"
+      ],
+      "lines_executed": {
+       "joserfc/_keys.py": [
+        66,
+        67,
+        70,
+        171,
+        173,
+        177,
+        178,
+        179
+       ],
+       "joserfc/errors.py": [
+        16,
+        17,
+        19,
+        20
+       ]
+      },
+      "warnings": []
+     }
+    },
+    {
+     "run": 2,
+     "started": "2026-11-17T16:13:59.114Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:59.207Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "control-import-key-set",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "control-import-key-set",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "key_members": [
+        "crv",
+        "x",
+        "y"
+       ]
+      },
+      "outcome": {
+       "raised": {
+        "class": "joserfc.errors.MissingKeyTypeError",
+        "message": "missing_key_type: Missing key type",
+        "is_rejection_class": true,
+        "site": {
+         "file": "joserfc/_keys.py",
+         "function": "JWKRegistry.import_key",
+         "line": 70,
+         "check": "_keys.JWKRegistry.import_key#1"
+        },
+        "package_frames": [
+         "joserfc/_keys.py:178 import_key_set",
+         "joserfc/_keys.py:70 import_key"
+        ],
+        "is_the_object_raised_at_the_check": true,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": true,
+      "target_raise_line_executed": true,
+      "checks_fired": [
+       "_keys.JWKRegistry.import_key#1"
+      ],
+      "raise_events": [
+       {
+        "file": "joserfc/_keys.py",
+        "line": 70,
+        "function": "JWKRegistry.import_key",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": "_keys.JWKRegistry.import_key#1",
+        "firing": "_keys.JWKRegistry.import_key#1"
+       },
+       {
+        "file": "joserfc/_keys.py",
+        "line": 178,
+        "function": "KeySet.import_key_set",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/_keys.py:169 KeySet.import_key_set",
+       "joserfc/_keys.py:55 JWKRegistry.import_key",
+       "joserfc/errors.py:15 JoseError.__init__"
+      ],
+      "lines_executed": {
+       "joserfc/_keys.py": [
+        66,
+        67,
+        70,
+        171,
+        173,
+        177,
+        178,
+        179
+       ],
+       "joserfc/errors.py": [
+        16,
+        17,
+        19,
+        20
+       ]
+      },
+      "warnings": []
+     }
+    }
+   ],
+   "runs_identical": true
+  },
+  {
+   "name": "control-key-callable",
+   "kind": "control",
+   "entry_point": "joserfc.jwe.decrypt_compact (jwe.py:96)",
+   "settings": "key: a callable of the caller that returns KeySet.import_key_set({\"keys\": [P-256 private JWK without kty]}); algorithms, registry, sender_key: defaults",
+   "input": "the well-formed token (epk with kty); the call of import_key_set is the caller's own code",
+   "runs": [
+    {
+     "run": 1,
+     "started": "2026-11-17T16:13:59.207Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:59.308Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "control-key-callable",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "control-key-callable",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "4bdf41478e3c94488c504b93ec0f7db2a0a6ae1e5d406157fd97c67faffd1537",
+       "segment_lengths": [
+        222,
+        0,
+        16,
+        66,
+        22
+       ],
+       "epk_members": [
+        "crv",
+        "kty",
+        "x",
+        "y"
+       ],
+       "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf",
+       "key_set_members": [
+        "crv",
+        "d",
+        "x",
+        "y"
+       ]
+      },
+      "outcome": {
+       "raised": {
+        "class": "joserfc.errors.MissingKeyTypeError",
+        "message": "missing_key_type: Missing key type",
+        "is_rejection_class": true,
+        "site": {
+         "file": "joserfc/_keys.py",
+         "function": "JWKRegistry.import_key",
+         "line": 70,
+         "check": "_keys.JWKRegistry.import_key#1"
+        },
+        "package_frames": [
+         "joserfc/jwe.py:131 decrypt_compact",
+         "joserfc/jwk.py:78 guess_key",
+         "joserfc/_keys.py:178 import_key_set",
+         "joserfc/_keys.py:70 import_key"
+        ],
+        "is_the_object_raised_at_the_check": true,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": true,
+      "target_raise_line_executed": true,
+      "checks_fired": [
+       "_keys.JWKRegistry.import_key#1"
+      ],
+      "raise_events": [
+       {
+        "file": "joserfc/_keys.py",
+        "line": 70,
+        "function": "JWKRegistry.import_key",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": "_keys.JWKRegistry.import_key#1",
+        "firing": "_keys.JWKRegistry.import_key#1"
+       },
+       {
+        "file": "joserfc/_keys.py",
+        "line": 178,
+        "function": "KeySet.import_key_set",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwk.py",
+        "line": 78,
+        "function": "guess_key",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwe.py",
+        "line": 131,
+        "function": "decrypt_compact",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key",
+       "joserfc/_keys.py:169 KeySet.import_key_set",
+       "joserfc/_keys.py:55 JWKRegistry.import_key",
+       "joserfc/errors.py:15 JoseError.__init__"
+      ],
+      "lines_executed": {
+       "joserfc/_keys.py": [
+        66,
+        67,
+        70,
+        171,
+        173,
+        177,
+        178,
+        179
+       ],
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        71,
+        73,
+        74,
+        75,
+        76
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143
+       ],
+       "joserfc/errors.py": [
+        16,
+        17,
+        19,
+        20
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131
+       ],
+       "joserfc/jwk.py": [
+        77,
+        78
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    },
+    {
+     "run": 2,
+     "started": "2026-11-17T16:13:59.308Z",
+     "copy_check": {
+      "subject_files_match": 55,
+      "test_files_match": 11
+     },
+     "ended": "2026-11-17T16:13:59.409Z",
+     "command": [
+      "experiments/target-reach/work/venvs/joserfc/bin/python",
+      "-I",
+      "-B",
+      "experiments/target-reach-extension/no-fire/reach/joserfc/17.py",
+      "--inner",
+      "control-key-callable",
+      "experiments/target-reach-extension/work/reach/joserfc/copy"
+     ],
+     "returncode": 0,
+     "stderr_tail": "",
+     "copy_before": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_after": {
+      "files": 136,
+      "sha256": "e1ffb7ad4c3d648cc22da93f1f90005341f8b5a3ad956607b04d63483133fb3e",
+      "pycache": []
+     },
+     "copy_unchanged": true,
+     "inner": {
+      "case": "control-key-callable",
+      "python": "3.12.3",
+      "prefix": "experiments/target-reach/work/venvs/joserfc",
+      "base_prefix": "/usr",
+      "dependency_files": {
+       "cryptography": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/cryptography/__init__.py",
+       "Crypto (pycryptodome)": "experiments/target-reach/work/venvs/joserfc/lib/python3.12/site-packages/Crypto/__init__.py"
+      },
+      "flags": {
+       "isolated": 1,
+       "dont_write_bytecode": 1,
+       "hash_randomization": 1
+      },
+      "package_file": "experiments/target-reach-extension/work/reach/joserfc/copy/src/joserfc/__init__.py",
+      "input_facts": {
+       "token_sha256": "4bdf41478e3c94488c504b93ec0f7db2a0a6ae1e5d406157fd97c67faffd1537",
+       "segment_lengths": [
+        222,
+        0,
+        16,
+        66,
+        22
+       ],
+       "epk_members": [
+        "crv",
+        "kty",
+        "x",
+        "y"
+       ],
+       "plaintext_sha256": "c0c5a6a0190f2a3cf360fa55ac69992411c994d32bb7d3c39163d4e7780861cf",
+       "key_set_members": [
+        "crv",
+        "d",
+        "x",
+        "y"
+       ]
+      },
+      "outcome": {
+       "raised": {
+        "class": "joserfc.errors.MissingKeyTypeError",
+        "message": "missing_key_type: Missing key type",
+        "is_rejection_class": true,
+        "site": {
+         "file": "joserfc/_keys.py",
+         "function": "JWKRegistry.import_key",
+         "line": 70,
+         "check": "_keys.JWKRegistry.import_key#1"
+        },
+        "package_frames": [
+         "joserfc/jwe.py:131 decrypt_compact",
+         "joserfc/jwk.py:78 guess_key",
+         "joserfc/_keys.py:178 import_key_set",
+         "joserfc/_keys.py:70 import_key"
+        ],
+        "is_the_object_raised_at_the_check": true,
+        "cause": null,
+        "context": null
+       }
+      },
+      "target_fired": true,
+      "target_raise_line_executed": true,
+      "checks_fired": [
+       "_keys.JWKRegistry.import_key#1"
+      ],
+      "raise_events": [
+       {
+        "file": "joserfc/_keys.py",
+        "line": 70,
+        "function": "JWKRegistry.import_key",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": true,
+        "check_of_line": "_keys.JWKRegistry.import_key#1",
+        "firing": "_keys.JWKRegistry.import_key#1"
+       },
+       {
+        "file": "joserfc/_keys.py",
+        "line": 178,
+        "function": "KeySet.import_key_set",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwk.py",
+        "line": 78,
+        "function": "guess_key",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       },
+       {
+        "file": "joserfc/jwe.py",
+        "line": 131,
+        "function": "decrypt_compact",
+        "exception": "MissingKeyTypeError",
+        "instruction_is_raise_varargs": false,
+        "check_of_line": null,
+        "firing": null
+       }
+      ],
+      "raise_events_not_kept": 0,
+      "functions_entered": [
+       "joserfc/jwe.py:96 decrypt_compact",
+       "joserfc/util.py:8 to_bytes",
+       "joserfc/_rfc7516/compact.py:36 extract_compact",
+       "joserfc/_rfc7516/registry.py:113 JWERegistry.validate_compact_value_size",
+       "joserfc/_rfc7516/registry.py:124 JWERegistry.validate_protected_header_size",
+       "joserfc/_rfc7516/registry.py:128 JWERegistry.validate_encrypted_key_size",
+       "joserfc/_rfc7516/registry.py:132 JWERegistry.validate_initialization_vector_size",
+       "joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size",
+       "joserfc/_rfc7516/registry.py:142 JWERegistry.validate_auth_tag_size",
+       "joserfc/util.py:68 json_b64decode",
+       "joserfc/util.py:24 urlsafe_b64decode",
+       "joserfc/_rfc7516/models.py:69 CompactEncryption.__init__",
+       "joserfc/_rfc7516/models.py:29 Recipient.__init__",
+       "joserfc/jwk.py:63 guess_key",
+       "joserfc/_keys.py:169 KeySet.import_key_set",
+       "joserfc/_keys.py:55 JWKRegistry.import_key",
+       "joserfc/errors.py:15 JoseError.__init__"
+      ],
+      "lines_executed": {
+       "joserfc/_keys.py": [
+        66,
+        67,
+        70,
+        171,
+        173,
+        177,
+        178,
+        179
+       ],
+       "joserfc/_rfc7516/compact.py": [
+        37,
+        39,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77
+       ],
+       "joserfc/_rfc7516/models.py": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        71,
+        73,
+        74,
+        75,
+        76
+       ],
+       "joserfc/_rfc7516/registry.py": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        125,
+        129,
+        133,
+        139,
+        143
+       ],
+       "joserfc/errors.py": [
+        16,
+        17,
+        19,
+        20
+       ],
+       "joserfc/jwe.py": [
+        123,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131
+       ],
+       "joserfc/jwk.py": [
+        77,
+        78
+       ],
+       "joserfc/util.py": [
+        9,
+        11,
+        12,
+        25,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        69
+       ]
+      },
+      "warnings": []
+     }
+    }
+   ],
+   "runs_identical": true
+  }
+ ],
+ "fired_by_an_input": false,
+ "all_runs_clean": true,
+ "ended": "2026-11-17T16:13:59.410Z"
+}

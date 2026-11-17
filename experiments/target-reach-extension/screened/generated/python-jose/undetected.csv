@@ -1,0 +1,3 @@
+deleted_check,block,index,test_node,baseline_class,baseline_decided_by,baseline_message,status,class,decided_by,message,fires_now_and_not_before
+jws._verify_signature#1,tests/test_jwt.py::TestJWT.test_no_alg#0,0,tests/test_jwt.py::TestJWT::test_no_alg,jose.exceptions.JWTError,jwt.decode#1,No algorithm was specified in the JWS header.,observed,jose.exceptions.JWTError,jwt.decode#1,The specified alg value is not allowed,jws._verify_signature#2
+jwt._validate_claims#2,tests/test_jwt.py::TestJWT.test_aud_given_number#0,0,tests/test_jwt.py::TestJWT::test_aud_given_number,jose.exceptions.JWTError,jwt._validate_claims#2,audience must be a string or None,observed,jose.exceptions.JWTClaimsError,jwt._validate_aud#2,Invalid audience,jwt._validate_aud#2

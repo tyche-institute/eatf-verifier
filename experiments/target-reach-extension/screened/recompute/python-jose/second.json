@@ -1,0 +1,2226 @@
+{
+ "Q1": {
+  "cases_with_a_target": 25,
+  "cases_with_a_target_by_tier": {
+   "assertion": 2,
+   "name": 23
+  },
+  "cases_without_a_target": 31,
+  "flag_ids": [
+   "tests/test_jwe.py::TestDecrypt::test_non_json_header_is_parse_error|tests/test_jwe.py::TestDecrypt.test_non_json_header_is_parse_error#0|0",
+   "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0",
+   "tests/test_jws.py::TestJWS::test_claims_invalid_padding|tests/test_jws.py::TestJWS.test_claims_invalid_padding#0|0",
+   "tests/test_jws.py::TestJWS::test_header_invalid_padding|tests/test_jws.py::TestJWS.test_header_invalid_padding#0|0",
+   "tests/test_jws.py::TestJWS::test_header_not_json|tests/test_jws.py::TestJWS.test_header_not_json#0|0",
+   "tests/test_jws.py::TestJWS::test_invalid_algorithm|tests/test_jws.py::TestJWS.test_invalid_algorithm#0|0",
+   "tests/test_jws.py::TestRSA::test_wrong_key|tests/test_jws.py::TestRSA.test_wrong_key#0|0",
+   "tests/test_jwt.py::TestJWT::test_invalid_claims_json|tests/test_jwt.py::TestJWT.test_invalid_claims_json#0|0",
+   "tests/test_jwt.py::TestJWT::test_sub_invalid|tests/test_jwt.py::TestJWT.test_sub_invalid#0|0"
+  ],
+  "flags": 9,
+  "flags_by_class": "not computed: a reading of the sources (section 6, step 4)",
+  "flags_by_tier": {
+   "name": 9
+  },
+  "outcome_ids": {
+   "the target decides the case": [
+    "tests/test_jwe.py::TestEncrypt::test_jwe_zip_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_zip_with_excessive_data#0|0",
+    "tests/test_jws.py::TestJWS::test_not_enough_segments|tests/test_jws.py::TestJWS.test_not_enough_segments#0|0",
+    "tests/test_jws.py::TestLoad::test_header_not_mapping|tests/test_jws.py::TestLoad.test_header_not_mapping#0|0",
+    "tests/test_jwt.py::TestJWT::test_aud_list_is_strings|tests/test_jwt.py::TestJWT.test_aud_list_is_strings#0|0",
+    "tests/test_jwt.py::TestJWT::test_aud_not_string_or_list|tests/test_jwt.py::TestJWT.test_aud_not_string_or_list#0|0",
+    "tests/test_jwt.py::TestJWT::test_iat_not_int|tests/test_jwt.py::TestJWT.test_iat_not_int#0|0",
+    "tests/test_jwt.py::TestJWT::test_invalid_claims|tests/test_jwt.py::TestJWT.test_invalid_claims#0|0",
+    "tests/test_jwt.py::TestJWT::test_iss_invalid|tests/test_jwt.py::TestJWT.test_iss_invalid#0|0",
+    "tests/test_jwt.py::TestJWT::test_jti_invalid|tests/test_jwt.py::TestJWT.test_jti_invalid#0|0",
+    "tests/test_jwt.py::TestJWT::test_require[ait-ait]|tests/test_jwt.py::TestJWT.test_require#0|0",
+    "tests/test_jwt.py::TestJWT::test_require[aud-aud]|tests/test_jwt.py::TestJWT.test_require#0|0",
+    "tests/test_jwt.py::TestJWT::test_require[exp-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+    "tests/test_jwt.py::TestJWT::test_require[iss-iss]|tests/test_jwt.py::TestJWT.test_require#0|0",
+    "tests/test_jwt.py::TestJWT::test_require[jti-jti]|tests/test_jwt.py::TestJWT.test_require#0|0",
+    "tests/test_jwt.py::TestJWT::test_require[nbf-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+    "tests/test_jwt.py::TestJWT::test_require[sub-sub]|tests/test_jwt.py::TestJWT.test_require#0|0"
+   ],
+   "the target does not fire": [
+    "tests/test_jwe.py::TestDecrypt::test_non_json_header_is_parse_error|tests/test_jwe.py::TestDecrypt.test_non_json_header_is_parse_error#0|0",
+    "tests/test_jws.py::TestJWS::test_claims_invalid_padding|tests/test_jws.py::TestJWS.test_claims_invalid_padding#0|0",
+    "tests/test_jws.py::TestJWS::test_header_invalid_padding|tests/test_jws.py::TestJWS.test_header_invalid_padding#0|0",
+    "tests/test_jws.py::TestJWS::test_header_not_json|tests/test_jws.py::TestJWS.test_header_not_json#0|0",
+    "tests/test_jws.py::TestJWS::test_invalid_algorithm|tests/test_jws.py::TestJWS.test_invalid_algorithm#0|0",
+    "tests/test_jws.py::TestRSA::test_wrong_key|tests/test_jws.py::TestRSA.test_wrong_key#0|0",
+    "tests/test_jwt.py::TestJWT::test_invalid_claims_json|tests/test_jwt.py::TestJWT.test_invalid_claims_json#0|0",
+    "tests/test_jwt.py::TestJWT::test_sub_invalid|tests/test_jwt.py::TestJWT.test_sub_invalid#0|0"
+   ],
+   "the target fires and another check decides": [
+    "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0"
+   ]
+  },
+  "outcomes": {
+   "not decided by the target": 0,
+   "the target decides the case": 16,
+   "the target does not fire": 8,
+   "the target fires and another check decides": 1,
+   "the target fires and no check decides": 0
+  },
+  "outcomes_by_tier": {
+   "assertion": {
+    "not decided by the target": 0,
+    "the target decides the case": 2,
+    "the target does not fire": 0,
+    "the target fires and another check decides": 0,
+    "the target fires and no check decides": 0
+   },
+   "name": {
+    "not decided by the target": 0,
+    "the target decides the case": 14,
+    "the target does not fire": 8,
+    "the target fires and another check decides": 1,
+    "the target fires and no check decides": 0
+   }
+  }
+ },
+ "Q2": {
+  "cases_of_deletions_that_exceeded_the_time_limit": [],
+  "copies_whose_final_run_ended_without_a_record_or_a_result": 0,
+  "deletions": 31,
+  "deletions_not_detected_by_the_whole_suite_with_a_witness_that_holds": [],
+  "deletions_not_detected_by_the_whole_suite_without_a_witness_that_holds": [
+   "jws._verify_signature#1",
+   "jwt._validate_claims#2"
+  ],
+  "deletions_of_checks_that_fire_and_never_decide": 2,
+  "deletions_of_deciding_checks": 29,
+  "deletions_time_limit_exceeded_twice": [],
+  "deletions_with_crashed_cases": [],
+  "deletions_with_withheld_cases": [],
+  "inclusion_breaks": {
+   "O_S_without_suite": [],
+   "O_V_without_O_C": [],
+   "O_V_without_O_S": [],
+   "O_Vfc_without_O_V": [],
+   "suite_without_whole_suite": []
+  },
+  "inclusion_breaks_counts": {
+   "O_S_without_suite": 0,
+   "O_V_without_O_C": 0,
+   "O_V_without_O_S": 0,
+   "O_Vfc_without_O_V": 0,
+   "suite_without_whole_suite": 0
+  },
+  "not_detected_checks_that_fire_and_never_decide": {
+   "O_C": 1,
+   "O_S": 1,
+   "O_T": 2,
+   "O_V": 1,
+   "O_Vfc": 1,
+   "suite": 1,
+   "whole_suite": 1
+  },
+  "not_detected_checks_that_fire_and_never_decide_ids": {
+   "O_C": [
+    "jws._verify_signature#1"
+   ],
+   "O_S": [
+    "jws._verify_signature#1"
+   ],
+   "O_T": [
+    "jws._verify_signature#1",
+    "jws._verify_signature#3"
+   ],
+   "O_V": [
+    "jws._verify_signature#1"
+   ],
+   "O_Vfc": [
+    "jws._verify_signature#1"
+   ],
+   "suite": [
+    "jws._verify_signature#1"
+   ],
+   "whole_suite": [
+    "jws._verify_signature#1"
+   ]
+  },
+  "not_detected_checks_that_fire_and_never_decide_withheld_as_failing": {
+   "O_C": 1,
+   "O_T": 2,
+   "O_V": 1,
+   "O_Vfc": 1
+  },
+  "not_detected_checks_that_fire_and_never_decide_withheld_as_failing_ids": {
+   "O_C": [
+    "jws._verify_signature#1"
+   ],
+   "O_T": [
+    "jws._verify_signature#1",
+    "jws._verify_signature#3"
+   ],
+   "O_V": [
+    "jws._verify_signature#1"
+   ],
+   "O_Vfc": [
+    "jws._verify_signature#1"
+   ]
+  },
+  "not_detected_deciding_checks": {
+   "O_C": 0,
+   "O_S": 1,
+   "O_T": 20,
+   "O_V": 1,
+   "O_Vfc": 12,
+   "suite": 1,
+   "whole_suite": 1
+  },
+  "not_detected_deciding_checks_ids": {
+   "O_C": [],
+   "O_S": [
+    "jwt._validate_claims#2"
+   ],
+   "O_T": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe.decrypt#1",
+    "jws._load#3",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._verify_signature#2",
+    "jws._verify_signature#4",
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2"
+   ],
+   "O_V": [
+    "jwt._validate_claims#2"
+   ],
+   "O_Vfc": [
+    "jwe._jwe_compact_deserialize#1",
+    "jws._load#1",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jwt._validate_at_hash#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_nbf#1",
+    "jwt.decode#1",
+    "jwt.decode#2"
+   ],
+   "suite": [
+    "jwt._validate_claims#2"
+   ],
+   "whole_suite": [
+    "jwt._validate_claims#2"
+   ]
+  },
+  "not_detected_deciding_checks_withheld_as_failing": {
+   "O_C": 0,
+   "O_T": 20,
+   "O_V": 1,
+   "O_Vfc": 12
+  },
+  "not_detected_deciding_checks_withheld_as_failing_ids": {
+   "O_C": [],
+   "O_T": [
+    "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+    "jwe._jwe_compact_deserialize#1",
+    "jwe.decrypt#1",
+    "jws._load#3",
+    "jws._load#5",
+    "jws._load#6",
+    "jws._verify_signature#2",
+    "jws._verify_signature#4",
+    "jwt._validate_at_hash#1",
+    "jwt._validate_at_hash#2",
+    "jwt._validate_aud#2",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_exp#2",
+    "jwt._validate_nbf#1",
+    "jwt._validate_nbf#2",
+    "jwt._validate_sub#1",
+    "jwt._validate_sub#2",
+    "jwt.decode#1",
+    "jwt.decode#2"
+   ],
+   "O_V": [
+    "jwt._validate_claims#2"
+   ],
+   "O_Vfc": [
+    "jwe._jwe_compact_deserialize#1",
+    "jws._load#1",
+    "jws._load#3",
+    "jws._load#4",
+    "jws._load#5",
+    "jws._load#6",
+    "jwt._validate_at_hash#1",
+    "jwt._validate_claims#2",
+    "jwt._validate_exp#1",
+    "jwt._validate_nbf#1",
+    "jwt.decode#1",
+    "jwt.decode#2"
+   ]
+  },
+  "per_deletion": {
+   "backends.cryptography_backend.CryptographyAESKey.decrypt#2": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A128KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A192KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A256KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A128KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A192KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A256KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0"
+     ],
+     "O_Vfc": [
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A128KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A192KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A256KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 9,
+    "tests_of_cases_not_passing": [
+     "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128CBC-pyca/cryptography-pyca/cryptography]",
+     "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128GCM-pyca/cryptography-pyca/cryptography]",
+     "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192CBC-pyca/cryptography-pyca/cryptography]",
+     "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192GCM-pyca/cryptography-pyca/cryptography]",
+     "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256CBC-pyca/cryptography-pyca/cryptography]",
+     "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256GCM-pyca/cryptography-pyca/cryptography]",
+     "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A128KW-pyca/cryptography-pyca/cryptography]",
+     "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A192KW-pyca/cryptography-pyca/cryptography]",
+     "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A256KW-pyca/cryptography-pyca/cryptography]"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwe._decompress#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwe.py::TestEncrypt::test_jwe_zip_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_zip_with_excessive_data#0|0"
+     ],
+     "O_T": [
+      "tests/test_jwe.py::TestEncrypt::test_jwe_zip_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_zip_with_excessive_data#0|0"
+     ],
+     "O_V": [
+      "tests/test_jwe.py::TestEncrypt::test_jwe_zip_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_zip_with_excessive_data#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwe.py::TestEncrypt::test_jwe_zip_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_zip_with_excessive_data#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwe.py::TestEncrypt::test_jwe_zip_with_excessive_data"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwe._jwe_compact_deserialize#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwe.py::TestDecrypt::test_invalid_jwe_is_parse_error|tests/test_jwe.py::TestDecrypt.test_invalid_jwe_is_parse_error#0|0",
+      "tests/test_jwe.py::TestDecrypt::test_non_json_header_is_parse_error|tests/test_jwe.py::TestDecrypt.test_non_json_header_is_parse_error#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwe.py::TestDecrypt::test_invalid_jwe_is_parse_error|tests/test_jwe.py::TestDecrypt.test_invalid_jwe_is_parse_error#0|0",
+      "tests/test_jwe.py::TestDecrypt::test_non_json_header_is_parse_error|tests/test_jwe.py::TestDecrypt.test_non_json_header_is_parse_error#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 4,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwe.py::TestDecrypt::test_invalid_jwe_is_parse_error",
+     "tests/test_jwe.py::TestDecrypt::test_non_json_header_is_parse_error"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwe.decrypt#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwe.py::TestEncrypt::test_jwe_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_with_excessive_data#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwe.py::TestEncrypt::test_jwe_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_with_excessive_data#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwe.py::TestEncrypt::test_jwe_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_with_excessive_data#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwe.py::TestEncrypt::test_jwe_with_excessive_data"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jws._load#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jws.py::TestJWS::test_header_invalid_padding|tests/test_jws.py::TestJWS.test_header_invalid_padding#0|0",
+      "tests/test_jws.py::TestJWS::test_not_enough_segments|tests/test_jws.py::TestJWS.test_not_enough_segments#0|0"
+     ],
+     "O_T": [
+      "tests/test_jws.py::TestJWS::test_not_enough_segments|tests/test_jws.py::TestJWS.test_not_enough_segments#0|0"
+     ],
+     "O_V": [
+      "tests/test_jws.py::TestJWS::test_header_invalid_padding|tests/test_jws.py::TestJWS.test_header_invalid_padding#0|0",
+      "tests/test_jws.py::TestJWS::test_not_enough_segments|tests/test_jws.py::TestJWS.test_not_enough_segments#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 2,
+    "tests_of_cases_not_passing": [
+     "tests/test_jws.py::TestJWS::test_header_invalid_padding",
+     "tests/test_jws.py::TestJWS::test_not_enough_segments"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jws._load#3": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jws.py::TestJWS::test_header_not_json|tests/test_jws.py::TestJWS.test_header_not_json#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jws.py::TestJWS::test_header_not_json|tests/test_jws.py::TestJWS.test_header_not_json#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jws.py::TestJWS::test_header_not_json"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jws._load#4": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jws.py::TestLoad::test_header_not_mapping|tests/test_jws.py::TestLoad.test_header_not_mapping#0|0"
+     ],
+     "O_T": [
+      "tests/test_jws.py::TestLoad::test_header_not_mapping|tests/test_jws.py::TestLoad.test_header_not_mapping#0|0"
+     ],
+     "O_V": [
+      "tests/test_jws.py::TestLoad::test_header_not_mapping|tests/test_jws.py::TestLoad.test_header_not_mapping#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jws.py::TestLoad::test_header_not_mapping"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jws._load#5": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jws.py::TestJWS::test_claims_invalid_padding|tests/test_jws.py::TestJWS.test_claims_invalid_padding#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jws.py::TestJWS::test_claims_invalid_padding|tests/test_jws.py::TestJWS.test_claims_invalid_padding#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jws.py::TestJWS::test_claims_invalid_padding"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jws._load#6": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jws.py::TestLoad::test_signature_padding|tests/test_jws.py::TestLoad.test_signature_padding#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jws.py::TestLoad::test_signature_padding|tests/test_jws.py::TestLoad.test_signature_padding#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jws.py::TestLoad::test_signature_padding"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jws._verify_signature#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [],
+     "O_T": [],
+     "O_V": [],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": false,
+     "O_S": false,
+     "O_T": false,
+     "O_V": false,
+     "O_Vfc": false,
+     "suite": false
+    },
+    "detected_withheld_as_failing": {
+     "O_C": false,
+     "O_T": false,
+     "O_V": false,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "fires and never decides",
+    "tests_not_passing": 0,
+    "tests_of_cases_not_passing": [],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": false,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jws._verify_signature#2": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jws.py::TestHMAC::test_wrong_alg|tests/test_jws.py::TestHMAC.test_wrong_alg#0|0",
+      "tests/test_jws.py::TestJWS::test_invalid_algorithm|tests/test_jws.py::TestJWS.test_invalid_algorithm#0|0",
+      "tests/test_jws.py::TestRSA::test_wrong_alg|tests/test_jws.py::TestRSA.test_wrong_alg#0|0",
+      "tests/test_jws.py::TestRSA::test_wrong_key|tests/test_jws.py::TestRSA.test_wrong_key#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jws.py::TestHMAC::test_wrong_alg|tests/test_jws.py::TestHMAC.test_wrong_alg#0|0",
+      "tests/test_jws.py::TestJWS::test_invalid_algorithm|tests/test_jws.py::TestJWS.test_invalid_algorithm#0|0",
+      "tests/test_jws.py::TestRSA::test_wrong_alg|tests/test_jws.py::TestRSA.test_wrong_alg#0|0",
+      "tests/test_jws.py::TestRSA::test_wrong_key|tests/test_jws.py::TestRSA.test_wrong_key#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jws.py::TestHMAC::test_wrong_alg|tests/test_jws.py::TestHMAC.test_wrong_alg#0|0",
+      "tests/test_jws.py::TestJWS::test_invalid_algorithm|tests/test_jws.py::TestJWS.test_invalid_algorithm#0|0",
+      "tests/test_jws.py::TestRSA::test_wrong_alg|tests/test_jws.py::TestRSA.test_wrong_alg#0|0",
+      "tests/test_jws.py::TestRSA::test_wrong_key|tests/test_jws.py::TestRSA.test_wrong_key#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 4,
+    "tests_of_cases_not_passing": [
+     "tests/test_jws.py::TestHMAC::test_wrong_alg",
+     "tests/test_jws.py::TestJWS::test_invalid_algorithm",
+     "tests/test_jws.py::TestRSA::test_wrong_alg",
+     "tests/test_jws.py::TestRSA::test_wrong_key"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jws._verify_signature#3": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0",
+      "tests/test_jws.py::TestJWS::test_claims_not_json|tests/test_jws.py::TestJWS.test_claims_not_json#0|0",
+      "tests/test_jws.py::TestLoad::test_claims_not_mapping|tests/test_jws.py::TestLoad.test_claims_not_mapping#0|0",
+      "tests/test_jws.py::TestRSA::test_jwk_set_failure|tests/test_jws.py::TestRSA.test_jwk_set_failure#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0",
+      "tests/test_jws.py::TestJWS::test_claims_not_json|tests/test_jws.py::TestJWS.test_claims_not_json#0|0",
+      "tests/test_jws.py::TestLoad::test_claims_not_mapping|tests/test_jws.py::TestLoad.test_claims_not_mapping#0|0",
+      "tests/test_jws.py::TestRSA::test_jwk_set_failure|tests/test_jws.py::TestRSA.test_jwk_set_failure#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0",
+      "tests/test_jws.py::TestJWS::test_claims_not_json|tests/test_jws.py::TestJWS.test_claims_not_json#0|0",
+      "tests/test_jws.py::TestLoad::test_claims_not_mapping|tests/test_jws.py::TestLoad.test_claims_not_mapping#0|0",
+      "tests/test_jws.py::TestRSA::test_jwk_set_failure|tests/test_jws.py::TestRSA.test_jwk_set_failure#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "fires and never decides",
+    "tests_not_passing": 4,
+    "tests_of_cases_not_passing": [
+     "tests/test_jws.py::TestHMAC::test_wrong_key",
+     "tests/test_jws.py::TestJWS::test_claims_not_json",
+     "tests/test_jws.py::TestLoad::test_claims_not_mapping",
+     "tests/test_jws.py::TestRSA::test_jwk_set_failure"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jws._verify_signature#4": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0",
+      "tests/test_jws.py::TestJWS::test_claims_not_json|tests/test_jws.py::TestJWS.test_claims_not_json#0|0",
+      "tests/test_jws.py::TestLoad::test_claims_not_mapping|tests/test_jws.py::TestLoad.test_claims_not_mapping#0|0",
+      "tests/test_jws.py::TestRSA::test_jwk_set_failure|tests/test_jws.py::TestRSA.test_jwk_set_failure#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0",
+      "tests/test_jws.py::TestJWS::test_claims_not_json|tests/test_jws.py::TestJWS.test_claims_not_json#0|0",
+      "tests/test_jws.py::TestLoad::test_claims_not_mapping|tests/test_jws.py::TestLoad.test_claims_not_mapping#0|0",
+      "tests/test_jws.py::TestRSA::test_jwk_set_failure|tests/test_jws.py::TestRSA.test_jwk_set_failure#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0",
+      "tests/test_jws.py::TestJWS::test_claims_not_json|tests/test_jws.py::TestJWS.test_claims_not_json#0|0",
+      "tests/test_jws.py::TestLoad::test_claims_not_mapping|tests/test_jws.py::TestLoad.test_claims_not_mapping#0|0",
+      "tests/test_jws.py::TestRSA::test_jwk_set_failure|tests/test_jws.py::TestRSA.test_jwk_set_failure#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 4,
+    "tests_of_cases_not_passing": [
+     "tests/test_jws.py::TestHMAC::test_wrong_key",
+     "tests/test_jws.py::TestJWS::test_claims_not_json",
+     "tests/test_jws.py::TestLoad::test_claims_not_mapping",
+     "tests/test_jws.py::TestRSA::test_jwk_set_failure"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_at_hash#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_at_hash_missing_access_token|tests/test_jwt.py::TestJWT.test_at_hash_missing_access_token#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_at_hash_missing_access_token|tests/test_jwt.py::TestJWT.test_at_hash_missing_access_token#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_at_hash_missing_access_token"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_at_hash#2": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_at_hash_invalid|tests/test_jwt.py::TestJWT.test_at_hash_invalid#0|0",
+      "tests/test_jwt.py::TestJWT::test_at_hash_unable_to_calculate|tests/test_jwt.py::TestJWT.test_at_hash_unable_to_calculate#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_at_hash_invalid|tests/test_jwt.py::TestJWT.test_at_hash_invalid#0|0",
+      "tests/test_jwt.py::TestJWT::test_at_hash_unable_to_calculate|tests/test_jwt.py::TestJWT.test_at_hash_unable_to_calculate#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_at_hash_invalid|tests/test_jwt.py::TestJWT.test_at_hash_invalid#0|0",
+      "tests/test_jwt.py::TestJWT::test_at_hash_unable_to_calculate|tests/test_jwt.py::TestJWT.test_at_hash_unable_to_calculate#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 2,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_at_hash_invalid",
+     "tests/test_jwt.py::TestJWT::test_at_hash_unable_to_calculate"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_aud#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_aud_list_is_strings|tests/test_jwt.py::TestJWT.test_aud_list_is_strings#0|0",
+      "tests/test_jwt.py::TestJWT::test_aud_not_string_or_list|tests/test_jwt.py::TestJWT.test_aud_not_string_or_list#0|0"
+     ],
+     "O_T": [
+      "tests/test_jwt.py::TestJWT::test_aud_list_is_strings|tests/test_jwt.py::TestJWT.test_aud_list_is_strings#0|0",
+      "tests/test_jwt.py::TestJWT::test_aud_not_string_or_list|tests/test_jwt.py::TestJWT.test_aud_not_string_or_list#0|0"
+     ],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_aud_list_is_strings|tests/test_jwt.py::TestJWT.test_aud_list_is_strings#0|0",
+      "tests/test_jwt.py::TestJWT::test_aud_not_string_or_list|tests/test_jwt.py::TestJWT.test_aud_not_string_or_list#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_aud_list_is_strings|tests/test_jwt.py::TestJWT.test_aud_list_is_strings#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 2,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_aud_list_is_strings",
+     "tests/test_jwt.py::TestJWT::test_aud_not_string_or_list"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_aud#2": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_aud_case_sensitive|tests/test_jwt.py::TestJWT.test_aud_case_sensitive#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_aud_case_sensitive|tests/test_jwt.py::TestJWT.test_aud_case_sensitive#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_aud_case_sensitive|tests/test_jwt.py::TestJWT.test_aud_case_sensitive#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_aud_case_sensitive"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_claims#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_require[ait-ait]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[aud-aud]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[exp-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[iss-iss]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[jti-jti]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[nbf-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[sub-sub]|tests/test_jwt.py::TestJWT.test_require#0|0"
+     ],
+     "O_T": [
+      "tests/test_jwt.py::TestJWT::test_require[ait-ait]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[aud-aud]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[exp-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[iss-iss]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[jti-jti]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[nbf-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[sub-sub]|tests/test_jwt.py::TestJWT.test_require#0|0"
+     ],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_require[ait-ait]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[aud-aud]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[exp-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[iss-iss]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[jti-jti]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[nbf-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[sub-sub]|tests/test_jwt.py::TestJWT.test_require#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_require[ait-ait]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[aud-aud]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[exp-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[iss-iss]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[jti-jti]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[nbf-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[sub-sub]|tests/test_jwt.py::TestJWT.test_require#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 7,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_require[ait-ait]",
+     "tests/test_jwt.py::TestJWT::test_require[aud-aud]",
+     "tests/test_jwt.py::TestJWT::test_require[exp-<lambda>]",
+     "tests/test_jwt.py::TestJWT::test_require[iss-iss]",
+     "tests/test_jwt.py::TestJWT::test_require[jti-jti]",
+     "tests/test_jwt.py::TestJWT::test_require[nbf-<lambda>]",
+     "tests/test_jwt.py::TestJWT::test_require[sub-sub]"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_claims#2": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_aud_given_number|tests/test_jwt.py::TestJWT.test_aud_given_number#0|0"
+     ],
+     "O_T": [],
+     "O_V": [],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": false,
+     "O_T": false,
+     "O_V": false,
+     "O_Vfc": false,
+     "suite": false
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": false,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 0,
+    "tests_of_cases_not_passing": [],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": false,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_exp#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_exp_not_int|tests/test_jwt.py::TestJWT.test_exp_not_int#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_exp_not_int|tests/test_jwt.py::TestJWT.test_exp_not_int#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_exp_not_int"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_exp#2": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_exp_in_past|tests/test_jwt.py::TestJWT.test_exp_in_past#0|0",
+      "tests/test_jwt.py::TestJWT::test_exp_skip|tests/test_jwt.py::TestJWT.test_exp_skip#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_exp_in_past|tests/test_jwt.py::TestJWT.test_exp_in_past#0|0",
+      "tests/test_jwt.py::TestJWT::test_exp_skip|tests/test_jwt.py::TestJWT.test_exp_skip#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_exp_in_past|tests/test_jwt.py::TestJWT.test_exp_in_past#0|0",
+      "tests/test_jwt.py::TestJWT::test_exp_skip|tests/test_jwt.py::TestJWT.test_exp_skip#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 2,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_exp_in_past",
+     "tests/test_jwt.py::TestJWT::test_exp_skip"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_iat#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_iat_not_int|tests/test_jwt.py::TestJWT.test_iat_not_int#0|0"
+     ],
+     "O_T": [
+      "tests/test_jwt.py::TestJWT::test_iat_not_int|tests/test_jwt.py::TestJWT.test_iat_not_int#0|0"
+     ],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_iat_not_int|tests/test_jwt.py::TestJWT.test_iat_not_int#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_iat_not_int|tests/test_jwt.py::TestJWT.test_iat_not_int#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_iat_not_int"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_iss#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_iss_invalid|tests/test_jwt.py::TestJWT.test_iss_invalid#0|0"
+     ],
+     "O_T": [
+      "tests/test_jwt.py::TestJWT::test_iss_invalid|tests/test_jwt.py::TestJWT.test_iss_invalid#0|0"
+     ],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_iss_invalid|tests/test_jwt.py::TestJWT.test_iss_invalid#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_iss_invalid|tests/test_jwt.py::TestJWT.test_iss_invalid#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_iss_invalid"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_jti#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_jti_invalid|tests/test_jwt.py::TestJWT.test_jti_invalid#0|0"
+     ],
+     "O_T": [
+      "tests/test_jwt.py::TestJWT::test_jti_invalid|tests/test_jwt.py::TestJWT.test_jti_invalid#0|0"
+     ],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_jti_invalid|tests/test_jwt.py::TestJWT.test_jti_invalid#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_jti_invalid|tests/test_jwt.py::TestJWT.test_jti_invalid#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_jti_invalid"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_nbf#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_nbf_not_int|tests/test_jwt.py::TestJWT.test_nbf_not_int#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_nbf_not_int|tests/test_jwt.py::TestJWT.test_nbf_not_int#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_nbf_not_int"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_nbf#2": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_nbf_in_future|tests/test_jwt.py::TestJWT.test_nbf_in_future#0|0",
+      "tests/test_jwt.py::TestJWT::test_nbf_skip|tests/test_jwt.py::TestJWT.test_nbf_skip#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_nbf_in_future|tests/test_jwt.py::TestJWT.test_nbf_in_future#0|0",
+      "tests/test_jwt.py::TestJWT::test_nbf_skip|tests/test_jwt.py::TestJWT.test_nbf_skip#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_nbf_in_future|tests/test_jwt.py::TestJWT.test_nbf_in_future#0|0",
+      "tests/test_jwt.py::TestJWT::test_nbf_skip|tests/test_jwt.py::TestJWT.test_nbf_skip#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 2,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_nbf_in_future",
+     "tests/test_jwt.py::TestJWT::test_nbf_skip"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_sub#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_sub_invalid|tests/test_jwt.py::TestJWT.test_sub_invalid#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_sub_invalid|tests/test_jwt.py::TestJWT.test_sub_invalid#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_sub_invalid|tests/test_jwt.py::TestJWT.test_sub_invalid#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_sub_invalid"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt._validate_sub#2": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_sub_incorrect|tests/test_jwt.py::TestJWT.test_sub_incorrect#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_sub_incorrect|tests/test_jwt.py::TestJWT.test_sub_incorrect#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_sub_incorrect|tests/test_jwt.py::TestJWT.test_sub_incorrect#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_sub_incorrect"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt.decode#1": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_no_alg|tests/test_jwt.py::TestJWT.test_no_alg#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_no_alg|tests/test_jwt.py::TestJWT.test_no_alg#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_no_alg"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt.decode#2": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_invalid_claims_json|tests/test_jwt.py::TestJWT.test_invalid_claims_json#0|0"
+     ],
+     "O_T": [],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_invalid_claims_json|tests/test_jwt.py::TestJWT.test_invalid_claims_json#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": false,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_invalid_claims_json"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "jwt.decode#3": {
+    "case_status": {
+     "observed": 56
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "tests/test_jwt.py::TestJWT::test_invalid_claims|tests/test_jwt.py::TestJWT.test_invalid_claims#0|0"
+     ],
+     "O_T": [
+      "tests/test_jwt.py::TestJWT::test_invalid_claims|tests/test_jwt.py::TestJWT.test_invalid_claims#0|0"
+     ],
+     "O_V": [
+      "tests/test_jwt.py::TestJWT::test_invalid_claims|tests/test_jwt.py::TestJWT.test_invalid_claims#0|0"
+     ],
+     "O_Vfc": [
+      "tests/test_jwt.py::TestJWT::test_invalid_claims|tests/test_jwt.py::TestJWT.test_invalid_claims#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 1,
+    "tests_of_cases_not_passing": [
+     "tests/test_jwt.py::TestJWT::test_invalid_claims"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   }
+  },
+  "recorder_runs_repeated": [],
+  "recorder_runs_without_a_record": [],
+  "runs_repeated": 0,
+  "runs_that_ended_without_a_record_or_a_result": [],
+  "runs_without_a_record_or_a_result": 0,
+  "whole_suite_final_runs_that_exceeded_the_time_limit": [],
+  "whole_suite_final_runs_without_a_result_file": [],
+  "whole_suite_records_inconsistent": [],
+  "whole_suite_runs_repeated": [],
+  "whole_suite_runs_that_exceeded_the_time_limit_any_attempt": [],
+  "whole_suite_runs_without_a_result": [],
+  "witness_files": {},
+  "witness_files_count": 0,
+  "witness_files_do_not_hold": 0,
+  "witness_files_hold": 0
+ },
+ "Q3": {
+  "own_test_without_the_target": {
+   "counted": 21,
+   "ids": {
+    "asserts more": {
+     "fails": [
+      "tests/test_jwe.py::TestEncrypt::test_jwe_zip_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_zip_with_excessive_data#0|0",
+      "tests/test_jwt.py::TestJWT::test_invalid_claims|tests/test_jwt.py::TestJWT.test_invalid_claims#0|0"
+     ],
+     "passes": [
+      "tests/test_jwt.py::TestJWT::test_invalid_claims_json|tests/test_jwt.py::TestJWT.test_invalid_claims_json#0|0"
+     ]
+    },
+    "class-only": {
+     "fails": [
+      "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0",
+      "tests/test_jws.py::TestJWS::test_not_enough_segments|tests/test_jws.py::TestJWS.test_not_enough_segments#0|0",
+      "tests/test_jws.py::TestLoad::test_header_not_mapping|tests/test_jws.py::TestLoad.test_header_not_mapping#0|0",
+      "tests/test_jwt.py::TestJWT::test_aud_list_is_strings|tests/test_jwt.py::TestJWT.test_aud_list_is_strings#0|0",
+      "tests/test_jwt.py::TestJWT::test_aud_not_string_or_list|tests/test_jwt.py::TestJWT.test_aud_not_string_or_list#0|0",
+      "tests/test_jwt.py::TestJWT::test_iat_not_int|tests/test_jwt.py::TestJWT.test_iat_not_int#0|0",
+      "tests/test_jwt.py::TestJWT::test_iss_invalid|tests/test_jwt.py::TestJWT.test_iss_invalid#0|0",
+      "tests/test_jwt.py::TestJWT::test_jti_invalid|tests/test_jwt.py::TestJWT.test_jti_invalid#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[ait-ait]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[aud-aud]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[exp-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[iss-iss]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[jti-jti]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[nbf-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[sub-sub]|tests/test_jwt.py::TestJWT.test_require#0|0"
+     ],
+     "passes": [
+      "tests/test_jws.py::TestJWS::test_header_not_json|tests/test_jws.py::TestJWS.test_header_not_json#0|0",
+      "tests/test_jws.py::TestRSA::test_wrong_key|tests/test_jws.py::TestRSA.test_wrong_key#0|0",
+      "tests/test_jwt.py::TestJWT::test_sub_invalid|tests/test_jwt.py::TestJWT.test_sub_invalid#0|0"
+     ]
+    }
+   },
+   "not_counted": 4,
+   "not_counted_by_reason": {
+    "the target fires in no case of the study": 4
+   },
+   "not_counted_ids": {
+    "the target fires in no case of the study": [
+     "tests/test_jwe.py::TestDecrypt::test_non_json_header_is_parse_error|tests/test_jwe.py::TestDecrypt.test_non_json_header_is_parse_error#0|0",
+     "tests/test_jws.py::TestJWS::test_claims_invalid_padding|tests/test_jws.py::TestJWS.test_claims_invalid_padding#0|0",
+     "tests/test_jws.py::TestJWS::test_header_invalid_padding|tests/test_jws.py::TestJWS.test_header_invalid_padding#0|0",
+     "tests/test_jws.py::TestJWS::test_invalid_algorithm|tests/test_jws.py::TestJWS.test_invalid_algorithm#0|0"
+    ]
+   },
+   "own_test_by_kind_of_block": {
+    "asserts more": {
+     "fails": 2,
+     "passes": 1
+    },
+    "class-only": {
+     "fails": 15,
+     "passes": 3
+    }
+   },
+   "when_the_own_test_passes_the_case": {
+    "asserts more": {
+     "observed: raises the class it raises at baseline": 1
+    },
+    "class-only": {
+     "observed: raises the class it raises at baseline": 3
+    }
+   }
+  },
+  "pinning_without_the_deciding_check": {
+   "counted": 56,
+   "ids": {
+    "asserts more": {
+     "fails": [
+      "tests/test_jwe.py::TestEncrypt::test_jwe_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_with_excessive_data#0|0",
+      "tests/test_jwe.py::TestEncrypt::test_jwe_zip_with_excessive_data|tests/test_jwe.py::TestEncrypt.test_jwe_zip_with_excessive_data#0|0",
+      "tests/test_jwt.py::TestJWT::test_invalid_claims_json|tests/test_jwt.py::TestJWT.test_invalid_claims_json#0|0",
+      "tests/test_jwt.py::TestJWT::test_invalid_claims|tests/test_jwt.py::TestJWT.test_invalid_claims#0|0"
+     ],
+     "passes": []
+    },
+    "class-only": {
+     "fails": [
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A128GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A192GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256CBC-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_encryption_parity[A256GCM-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_encryption_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A128KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A192KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0",
+      "tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility::test_wrap_parity[A256KW-pyca/cryptography-pyca/cryptography]|tests/algorithms/test_AES_compat.py::TestBackendAesCompatibility.test_wrap_parity#0|0",
+      "tests/test_jwe.py::TestDecrypt::test_invalid_jwe_is_parse_error|tests/test_jwe.py::TestDecrypt.test_invalid_jwe_is_parse_error#0|0",
+      "tests/test_jwe.py::TestDecrypt::test_non_json_header_is_parse_error|tests/test_jwe.py::TestDecrypt.test_non_json_header_is_parse_error#0|0",
+      "tests/test_jws.py::TestHMAC::test_wrong_alg|tests/test_jws.py::TestHMAC.test_wrong_alg#0|0",
+      "tests/test_jws.py::TestHMAC::test_wrong_key|tests/test_jws.py::TestHMAC.test_wrong_key#0|0",
+      "tests/test_jws.py::TestJWS::test_claims_invalid_padding|tests/test_jws.py::TestJWS.test_claims_invalid_padding#0|0",
+      "tests/test_jws.py::TestJWS::test_claims_not_json|tests/test_jws.py::TestJWS.test_claims_not_json#0|0",
+      "tests/test_jws.py::TestJWS::test_header_invalid_padding|tests/test_jws.py::TestJWS.test_header_invalid_padding#0|0",
+      "tests/test_jws.py::TestJWS::test_header_not_json|tests/test_jws.py::TestJWS.test_header_not_json#0|0",
+      "tests/test_jws.py::TestJWS::test_invalid_algorithm|tests/test_jws.py::TestJWS.test_invalid_algorithm#0|0",
+      "tests/test_jws.py::TestJWS::test_not_enough_segments|tests/test_jws.py::TestJWS.test_not_enough_segments#0|0",
+      "tests/test_jws.py::TestLoad::test_claims_not_mapping|tests/test_jws.py::TestLoad.test_claims_not_mapping#0|0",
+      "tests/test_jws.py::TestLoad::test_header_not_mapping|tests/test_jws.py::TestLoad.test_header_not_mapping#0|0",
+      "tests/test_jws.py::TestLoad::test_signature_padding|tests/test_jws.py::TestLoad.test_signature_padding#0|0",
+      "tests/test_jws.py::TestRSA::test_jwk_set_failure|tests/test_jws.py::TestRSA.test_jwk_set_failure#0|0",
+      "tests/test_jws.py::TestRSA::test_wrong_alg|tests/test_jws.py::TestRSA.test_wrong_alg#0|0",
+      "tests/test_jws.py::TestRSA::test_wrong_key|tests/test_jws.py::TestRSA.test_wrong_key#0|0",
+      "tests/test_jwt.py::TestJWT::test_at_hash_invalid|tests/test_jwt.py::TestJWT.test_at_hash_invalid#0|0",
+      "tests/test_jwt.py::TestJWT::test_at_hash_missing_access_token|tests/test_jwt.py::TestJWT.test_at_hash_missing_access_token#0|0",
+      "tests/test_jwt.py::TestJWT::test_at_hash_unable_to_calculate|tests/test_jwt.py::TestJWT.test_at_hash_unable_to_calculate#0|0",
+      "tests/test_jwt.py::TestJWT::test_aud_case_sensitive|tests/test_jwt.py::TestJWT.test_aud_case_sensitive#0|0",
+      "tests/test_jwt.py::TestJWT::test_aud_list_is_strings|tests/test_jwt.py::TestJWT.test_aud_list_is_strings#0|0",
+      "tests/test_jwt.py::TestJWT::test_aud_not_string_or_list|tests/test_jwt.py::TestJWT.test_aud_not_string_or_list#0|0",
+      "tests/test_jwt.py::TestJWT::test_exp_in_past|tests/test_jwt.py::TestJWT.test_exp_in_past#0|0",
+      "tests/test_jwt.py::TestJWT::test_exp_not_int|tests/test_jwt.py::TestJWT.test_exp_not_int#0|0",
+      "tests/test_jwt.py::TestJWT::test_exp_skip|tests/test_jwt.py::TestJWT.test_exp_skip#0|0",
+      "tests/test_jwt.py::TestJWT::test_iat_not_int|tests/test_jwt.py::TestJWT.test_iat_not_int#0|0",
+      "tests/test_jwt.py::TestJWT::test_iss_invalid|tests/test_jwt.py::TestJWT.test_iss_invalid#0|0",
+      "tests/test_jwt.py::TestJWT::test_jti_invalid|tests/test_jwt.py::TestJWT.test_jti_invalid#0|0",
+      "tests/test_jwt.py::TestJWT::test_nbf_in_future|tests/test_jwt.py::TestJWT.test_nbf_in_future#0|0",
+      "tests/test_jwt.py::TestJWT::test_nbf_not_int|tests/test_jwt.py::TestJWT.test_nbf_not_int#0|0",
+      "tests/test_jwt.py::TestJWT::test_nbf_skip|tests/test_jwt.py::TestJWT.test_nbf_skip#0|0",
+      "tests/test_jwt.py::TestJWT::test_no_alg|tests/test_jwt.py::TestJWT.test_no_alg#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[ait-ait]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[aud-aud]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[exp-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[iss-iss]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[jti-jti]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[nbf-<lambda>]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_require[sub-sub]|tests/test_jwt.py::TestJWT.test_require#0|0",
+      "tests/test_jwt.py::TestJWT::test_sub_incorrect|tests/test_jwt.py::TestJWT.test_sub_incorrect#0|0",
+      "tests/test_jwt.py::TestJWT::test_sub_invalid|tests/test_jwt.py::TestJWT.test_sub_invalid#0|0"
+     ],
+     "passes": [
+      "tests/test_jws.py::TestEC::test_wrong_alg|tests/test_jws.py::TestEC.test_wrong_alg#0|0",
+      "tests/test_jwt.py::TestJWT::test_aud_given_number|tests/test_jwt.py::TestJWT.test_aud_given_number#0|0"
+     ]
+    }
+   },
+   "not_counted": 0,
+   "not_counted_by_reason": {},
+   "not_counted_ids": {},
+   "own_test_by_kind_of_block": {
+    "asserts more": {
+     "fails": 4,
+     "passes": 0
+    },
+    "class-only": {
+     "fails": 50,
+     "passes": 2
+    }
+   },
+   "when_the_own_test_passes_the_case": {
+    "asserts more": {},
+    "class-only": {
+     "observed: raises another rejection class": 1,
+     "observed: raises the class it raises at baseline": 1
+    }
+   }
+  }
+ },
+ "cases": {
+  "cases_left_out": 0,
+  "cases_left_out_by_reason": {},
+  "cases_left_out_ids": {},
+  "cases_of_the_study": 56,
+  "cases_of_the_study_decided_by_a_check": 56,
+  "cases_of_the_study_decided_by_no_check": 0,
+  "cases_of_the_study_decided_by_no_check_by_raise_site": {},
+  "cases_of_the_study_decided_by_no_check_ids": [],
+  "fired_checks_recorded": true,
+  "recorded_executions_of_included_blocks": 56
+ },
+ "checks_at_run_time": {
+  "checks_that_fire_all": 31,
+  "checks_that_fire_and_never_decide_all": 2,
+  "checks_that_fire_and_never_decide_ids": [
+   "jws._verify_signature#1",
+   "jws._verify_signature#3"
+  ],
+  "checks_that_fire_and_never_decide_in_subject_files": 2,
+  "checks_that_fire_in_subject_files": 31,
+  "deciding_checks_all": 29,
+  "deciding_checks_ids": [
+   "backends.cryptography_backend.CryptographyAESKey.decrypt#2",
+   "jwe._decompress#1",
+   "jwe._jwe_compact_deserialize#1",
+   "jwe.decrypt#1",
+   "jws._load#1",
+   "jws._load#3",
+   "jws._load#4",
+   "jws._load#5",
+   "jws._load#6",
+   "jws._verify_signature#2",
+   "jws._verify_signature#4",
+   "jwt._validate_at_hash#1",
+   "jwt._validate_at_hash#2",
+   "jwt._validate_aud#1",
+   "jwt._validate_aud#2",
+   "jwt._validate_claims#1",
+   "jwt._validate_claims#2",
+   "jwt._validate_exp#1",
+   "jwt._validate_exp#2",
+   "jwt._validate_iat#1",
+   "jwt._validate_iss#1",
+   "jwt._validate_jti#1",
+   "jwt._validate_nbf#1",
+   "jwt._validate_nbf#2",
+   "jwt._validate_sub#1",
+   "jwt._validate_sub#2",
+   "jwt.decode#1",
+   "jwt.decode#2",
+   "jwt.decode#3"
+  ],
+  "deciding_checks_in_subject_files": 29
+ },
+ "definitions": {
+  "blocks_in_blocks_json": 58,
+  "blocks_in_test_files_of_the_recorder_runs": 58,
+  "blocks_in_test_files_with_an_included_block": 58,
+  "checks_all": 99,
+  "checks_in_observed_files": 0,
+  "checks_in_subject_files": 99,
+  "class_only_blocks_among_all_blocks_of_the_recorder_run_files": 54,
+  "class_only_included_blocks": 40,
+  "included_blocks": 44,
+  "included_blocks_asserting_more_than_the_class": 4,
+  "included_blocks_with_a_target": 20,
+  "included_blocks_with_a_target_by_tier": {
+   "assertion": 2,
+   "name": 18
+  },
+  "raise_statements_listed_apart_not_checks": 31,
+  "reachable_checks_all": 55,
+  "reachable_checks_in_subject_files": 55,
+  "scope_counts_of_subject_json": {
+   "blocks_in_test_directories": 91,
+   "test_files_in_test_directories": 18,
+   "test_files_with_an_included_block": 5
+  },
+  "test_files_in_blocks_json": 5,
+  "test_files_of_the_recorder_runs": 5,
+  "test_files_with_an_included_block": 5
+ },
+ "expectations": {
+  "E1": {
+   "count": 1,
+   "rule": "at least 1 deletion of a deciding check is not detected by O_V",
+   "units": 29,
+   "verdict": "held",
+   "verdict_ignoring_sentinels": "held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "held",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "held"
+   }
+  },
+  "E2": {
+   "count": 1,
+   "rule": "O_C detects at least 1 deletion of a deciding check that O_V does not",
+   "units": 29,
+   "verdict": "held",
+   "verdict_ignoring_sentinels": "held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "held",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "held"
+   }
+  },
+  "E3": {
+   "count": 28,
+   "rule": "the whole suite detects every deletion of a deciding check",
+   "units": 29,
+   "verdict": "not held",
+   "verdict_ignoring_sentinels": "not held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "not held",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "not held"
+   }
+  },
+  "E4": {
+   "count": 9,
+   "rule": "at least 1 case with a target is not decided by its target",
+   "units": 25,
+   "verdict": "held",
+   "verdict_ignoring_sentinels": "held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "held",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "held"
+   }
+  },
+  "E5": {
+   "class_only_included_blocks": 40,
+   "count": 2,
+   "included_blocks": 44,
+   "rule": "at least 1 case of a class-only block passes its own test after the deletion of its deciding check",
+   "units": 52,
+   "verdict": "held",
+   "verdict_ignoring_sentinels": "held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "held",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "held"
+   }
+  }
+ },
+ "protocol": "PROTOCOL.md, sections 2, 4 and 7",
+ "refused_connection_attempts": {
+  "baseline_recorder_runs": {
+   "base-1": 0,
+   "base-2": 0
+  },
+  "deletion_and_control_recorder_runs_total": 0,
+  "deletion_and_control_recorder_runs_without_a_count": [],
+  "suite_run_without_recorder": 0,
+  "total": 0,
+  "whole_suite_deletion_and_control_runs_total": 0,
+  "whole_suite_deletion_and_control_runs_without_a_count": [],
+  "whole_suite_unmodified_runs": [
+   0,
+   0
+  ],
+  "witness_runs_total": 0
+ },
+ "runs": {
+  "cases_of_nested_blocks_all_recorded": 0,
+  "cases_of_nested_blocks_in_the_study": [],
+  "cases_of_nested_blocks_in_the_study_count": 0,
+  "cases_with_a_firing_in_another_thread_all_recorded": 0,
+  "cases_with_a_firing_in_another_thread_in_the_study": [],
+  "cases_with_a_firing_in_another_thread_in_the_study_count": 0,
+  "copies_that_stay": [],
+  "copies_that_stay_count": 0,
+  "expected_baseline_failures": [
+   "tests/algorithms/test_EC.py::test_incorrect_public_key_hmac_signing"
+  ],
+  "expected_baseline_failures_count": 1,
+  "test_files_not_collected": [],
+  "test_files_not_collected_count": 0,
+  "tests_deselected_as_copies": [],
+  "tests_deselected_as_copies_count": 0,
+  "tests_deselected_in_baseline_recorder_run": [
+   "tests/algorithms/test_EC.py::test_incorrect_public_key_hmac_signing"
+  ],
+  "tests_in_baseline_recorder_run": 255,
+  "tests_passing_in_baseline_recorder_run": 249,
+  "time_limit_seconds_recorder": 60.0,
+  "time_limit_seconds_whole_suite": 147.1,
+  "whole_suite_tests_passing_in_both_unmodified_runs": 457
+ },
+ "sentinels": {
+  "1": "holds",
+  "2": "holds",
+  "3": "holds",
+  "4": "holds",
+  "5": "holds",
+  "6": "holds",
+  "7": "holds"
+ },
+ "sentinels_alternative_readings": {
+  "sentinel 2 also asks the run without the recorder to collect every file": {
+   "1": "holds",
+   "2": "holds",
+   "3": "holds",
+   "4": "holds",
+   "5": "holds",
+   "6": "holds",
+   "7": "holds"
+  },
+  "sentinel 3 excuses deletions that exceeded the time limit 2 times": {
+   "1": "holds",
+   "2": "holds",
+   "3": "holds",
+   "4": "holds",
+   "5": "holds",
+   "6": "holds",
+   "7": "holds"
+  }
+ },
+ "sentinels_detail": {
+  "1": "identical",
+  "2": {
+   "collect_errors": [],
+   "deselected_equal_expected_failures": true,
+   "not_collected_in_suite_run": [],
+   "tests_neither_passing_nor_skipped": []
+  },
+  "3": {
+   "deletions_whose_check_fires": [],
+   "deletions_without_a_record": [],
+   "deletions_without_a_record_that_did_not_exceed_the_time_limit_2_times": []
+  },
+  "4": {
+   "no_record_without_two_time_outs": []
+  },
+  "5": {
+   "cases_of_the_study_whose_deciding_check_is_not_among_the_fired": [],
+   "recorded_cases_whose_deciding_check_is_not_among_the_fired": []
+  },
+  "6": {
+   "control_ok": true,
+   "deletion_copies_without_whole_suite_run": []
+  },
+  "7": {
+   "deleted_not_expected": [],
+   "expected_not_deleted": []
+  }
+ },
+ "subject": "python-jose",
+ "version": "3.5.0"
+}

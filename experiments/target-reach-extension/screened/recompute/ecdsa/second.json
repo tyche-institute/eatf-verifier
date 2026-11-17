@@ -1,0 +1,863 @@
+{
+ "Q1": {
+  "cases_with_a_target": 22,
+  "cases_with_a_target_by_tier": {
+   "assertion": 2,
+   "name": 20
+  },
+  "cases_without_a_target": 35,
+  "flag_ids": [],
+  "flags": 0,
+  "flags_by_class": "not computed: a reading of the sources (section 6, step 4)",
+  "flags_by_tier": {},
+  "outcome_ids": {
+   "the target decides the case": [
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|0",
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|1",
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|2",
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|3",
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|4",
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|5",
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|6",
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|7",
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|8",
+    "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|9",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|0",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|1",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|2",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|3",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|4",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|5",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|6",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|7",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|8",
+    "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|9",
+    "src/ecdsa/test_pyecdsa.py::ECDSA::test_verify_with_too_long_input|src/ecdsa/test_pyecdsa.py::ECDSA.test_verify_with_too_long_input#0|0",
+    "src/ecdsa/test_pyecdsa.py::TooSmallCurve::test_verify_too_small_curve_dont_allow_truncate_raises|src/ecdsa/test_pyecdsa.py::TooSmallCurve.test_verify_too_small_curve_dont_allow_truncate_raises#0|0"
+   ]
+  },
+  "outcomes": {
+   "not decided by the target": 0,
+   "the target decides the case": 22,
+   "the target does not fire": 0,
+   "the target fires and another check decides": 0,
+   "the target fires and no check decides": 0
+  },
+  "outcomes_by_tier": {
+   "assertion": {
+    "not decided by the target": 0,
+    "the target decides the case": 2,
+    "the target does not fire": 0,
+    "the target fires and another check decides": 0,
+    "the target fires and no check decides": 0
+   },
+   "name": {
+    "not decided by the target": 0,
+    "the target decides the case": 20,
+    "the target does not fire": 0,
+    "the target fires and another check decides": 0,
+    "the target fires and no check decides": 0
+   }
+  }
+ },
+ "Q2": {
+  "cases_of_deletions_that_exceeded_the_time_limit": [],
+  "copies_whose_final_run_ended_without_a_record_or_a_result": 0,
+  "deletions": 4,
+  "deletions_not_detected_by_the_whole_suite_with_a_witness_that_holds": [],
+  "deletions_not_detected_by_the_whole_suite_without_a_witness_that_holds": [],
+  "deletions_of_checks_that_fire_and_never_decide": 0,
+  "deletions_of_deciding_checks": 4,
+  "deletions_time_limit_exceeded_twice": [],
+  "deletions_with_crashed_cases": [],
+  "deletions_with_withheld_cases": [],
+  "inclusion_breaks": {
+   "O_S_without_suite": [],
+   "O_V_without_O_C": [],
+   "O_V_without_O_S": [],
+   "O_Vfc_without_O_V": [],
+   "suite_without_whole_suite": []
+  },
+  "inclusion_breaks_counts": {
+   "O_S_without_suite": 0,
+   "O_V_without_O_C": 0,
+   "O_V_without_O_S": 0,
+   "O_Vfc_without_O_V": 0,
+   "suite_without_whole_suite": 0
+  },
+  "not_detected_checks_that_fire_and_never_decide": {
+   "O_C": 0,
+   "O_S": 0,
+   "O_T": 0,
+   "O_V": 0,
+   "O_Vfc": 0,
+   "suite": 0,
+   "whole_suite": 0
+  },
+  "not_detected_checks_that_fire_and_never_decide_ids": {
+   "O_C": [],
+   "O_S": [],
+   "O_T": [],
+   "O_V": [],
+   "O_Vfc": [],
+   "suite": [],
+   "whole_suite": []
+  },
+  "not_detected_checks_that_fire_and_never_decide_withheld_as_failing": {
+   "O_C": 0,
+   "O_T": 0,
+   "O_V": 0,
+   "O_Vfc": 0
+  },
+  "not_detected_checks_that_fire_and_never_decide_withheld_as_failing_ids": {
+   "O_C": [],
+   "O_T": [],
+   "O_V": [],
+   "O_Vfc": []
+  },
+  "not_detected_deciding_checks": {
+   "O_C": 0,
+   "O_S": 0,
+   "O_T": 0,
+   "O_V": 0,
+   "O_Vfc": 3,
+   "suite": 0,
+   "whole_suite": 0
+  },
+  "not_detected_deciding_checks_ids": {
+   "O_C": [],
+   "O_S": [],
+   "O_T": [],
+   "O_V": [],
+   "O_Vfc": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys._truncate_and_convert_digest#1"
+   ],
+   "suite": [],
+   "whole_suite": []
+  },
+  "not_detected_deciding_checks_withheld_as_failing": {
+   "O_C": 0,
+   "O_T": 0,
+   "O_V": 0,
+   "O_Vfc": 3
+  },
+  "not_detected_deciding_checks_withheld_as_failing_ids": {
+   "O_C": [],
+   "O_T": [],
+   "O_V": [],
+   "O_Vfc": [
+    "keys.VerifyingKey.verify#1",
+    "keys.VerifyingKey.verify_digest#1",
+    "keys._truncate_and_convert_digest#1"
+   ]
+  },
+  "per_deletion": {
+   "keys.VerifyingKey.verify#1": {
+    "case_status": {
+     "observed": 57
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer::test_ed25519_sig_verify_malformed|src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_ed25519_sig_verify_malformed#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|8"
+     ],
+     "O_T": [
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|8"
+     ],
+     "O_V": [
+      "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer::test_ed25519_sig_verify_malformed|src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_ed25519_sig_verify_malformed#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|8"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 2,
+    "tests_of_cases_not_passing": [
+     "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer::test_ed25519_sig_verify_malformed",
+     "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "keys.VerifyingKey.verify_digest#1": {
+    "case_status": {
+     "observed": 57
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|10",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|9"
+     ],
+     "O_T": [
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|9"
+     ],
+     "O_V": [
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|10",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|9"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 4,
+    "tests_of_cases_not_passing": [
+     "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures",
+     "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures",
+     "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature",
+     "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "keys.VerifyingKey.verify_digest#2": {
+    "case_status": {
+     "observed": 57
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|9",
+      "src/ecdsa/test_pyecdsa.py::ECDSA::test_basic|src/ecdsa/test_pyecdsa.py::ECDSA.test_basic#0|0"
+     ],
+     "O_T": [
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|9"
+     ],
+     "O_V": [
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|9",
+      "src/ecdsa/test_pyecdsa.py::ECDSA::test_basic|src/ecdsa/test_pyecdsa.py::ECDSA.test_basic#0|0"
+     ],
+     "O_Vfc": [
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|9",
+      "src/ecdsa/test_pyecdsa.py::ECDSA::test_basic|src/ecdsa/test_pyecdsa.py::ECDSA.test_basic#0|0"
+     ]
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": true
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 3,
+    "tests_of_cases_not_passing": [
+     "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature",
+     "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value",
+     "src/ecdsa/test_pyecdsa.py::ECDSA::test_basic"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   },
+   "keys._truncate_and_convert_digest#1": {
+    "case_status": {
+     "observed": 57
+    },
+    "cases_where_oracle_fails": {
+     "O_C": [
+      "src/ecdsa/test_pyecdsa.py::ECDSA::test_verify_with_too_long_input|src/ecdsa/test_pyecdsa.py::ECDSA.test_verify_with_too_long_input#0|0",
+      "src/ecdsa/test_pyecdsa.py::TooSmallCurve::test_verify_too_small_curve_dont_allow_truncate_raises|src/ecdsa/test_pyecdsa.py::TooSmallCurve.test_verify_too_small_curve_dont_allow_truncate_raises#0|0"
+     ],
+     "O_T": [
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|9",
+      "src/ecdsa/test_pyecdsa.py::ECDSA::test_verify_with_too_long_input|src/ecdsa/test_pyecdsa.py::ECDSA.test_verify_with_too_long_input#0|0",
+      "src/ecdsa/test_pyecdsa.py::TooSmallCurve::test_verify_too_small_curve_dont_allow_truncate_raises|src/ecdsa/test_pyecdsa.py::TooSmallCurve.test_verify_too_small_curve_dont_allow_truncate_raises#0|0"
+     ],
+     "O_V": [
+      "src/ecdsa/test_pyecdsa.py::ECDSA::test_verify_with_too_long_input|src/ecdsa/test_pyecdsa.py::ECDSA.test_verify_with_too_long_input#0|0"
+     ],
+     "O_Vfc": []
+    },
+    "crashed_cases": [],
+    "detected": {
+     "O_C": true,
+     "O_S": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false,
+     "suite": true
+    },
+    "detected_withheld_as_failing": {
+     "O_C": true,
+     "O_T": true,
+     "O_V": true,
+     "O_Vfc": false
+    },
+    "fires_in_cases_of_its_own_run": [],
+    "missing_cases": [],
+    "no_record": false,
+    "repeated": false,
+    "role": "deciding",
+    "tests_not_passing": 4,
+    "tests_of_cases_not_passing": [
+     "src/ecdsa/test_pyecdsa.py::ECDSA::test_verify_with_too_long_input",
+     "src/ecdsa/test_pyecdsa.py::TooSmallCurve::test_verify_too_small_curve_dont_allow_truncate_raises"
+    ],
+    "time_limit_exceeded_twice": false,
+    "whole_suite_detected": true,
+    "whole_suite_record": true,
+    "whole_suite_record_consistent": true,
+    "withheld_cases": []
+   }
+  },
+  "recorder_runs_repeated": [],
+  "recorder_runs_without_a_record": [],
+  "runs_repeated": 0,
+  "runs_that_ended_without_a_record_or_a_result": [],
+  "runs_without_a_record_or_a_result": 0,
+  "whole_suite_final_runs_that_exceeded_the_time_limit": [],
+  "whole_suite_final_runs_without_a_result_file": [],
+  "whole_suite_records_inconsistent": [],
+  "whole_suite_runs_repeated": [],
+  "whole_suite_runs_that_exceeded_the_time_limit_any_attempt": [],
+  "whole_suite_runs_without_a_result": [],
+  "witness_files": {},
+  "witness_files_count": 0,
+  "witness_files_do_not_hold": 0,
+  "witness_files_hold": 0
+ },
+ "Q3": {
+  "own_test_without_the_target": {
+   "counted": 22,
+   "ids": {
+    "asserts more": {
+     "fails": [],
+     "passes": []
+    },
+    "class-only": {
+     "fails": [
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|9",
+      "src/ecdsa/test_pyecdsa.py::ECDSA::test_verify_with_too_long_input|src/ecdsa/test_pyecdsa.py::ECDSA.test_verify_with_too_long_input#0|0",
+      "src/ecdsa/test_pyecdsa.py::TooSmallCurve::test_verify_too_small_curve_dont_allow_truncate_raises|src/ecdsa/test_pyecdsa.py::TooSmallCurve.test_verify_too_small_curve_dont_allow_truncate_raises#0|0"
+     ],
+     "passes": []
+    }
+   },
+   "not_counted": 0,
+   "not_counted_by_reason": {},
+   "not_counted_ids": {},
+   "own_test_by_kind_of_block": {
+    "asserts more": {
+     "fails": 0,
+     "passes": 0
+    },
+    "class-only": {
+     "fails": 22,
+     "passes": 0
+    }
+   },
+   "when_the_own_test_passes_the_case": {
+    "asserts more": {},
+    "class-only": {}
+   }
+  },
+  "pinning_without_the_deciding_check": {
+   "counted": 57,
+   "ids": {
+    "asserts more": {
+     "fails": [],
+     "passes": []
+    },
+    "class-only": {
+     "fails": [
+      "src/ecdsa/test_keys.py::TestVerifyingKeyFromDer::test_ed25519_sig_verify_malformed|src/ecdsa/test_keys.py::TestVerifyingKeyFromDer.test_ed25519_sig_verify_malformed#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_der_signatures#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|10",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|11",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|12",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_der_as_signature#0|9",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|1",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|3",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|7",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|8",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|9",
+      "src/ecdsa/test_pyecdsa.py::ECDSA::test_basic|src/ecdsa/test_pyecdsa.py::ECDSA.test_basic#0|0",
+      "src/ecdsa/test_pyecdsa.py::ECDSA::test_verify_with_too_long_input|src/ecdsa/test_pyecdsa.py::ECDSA.test_verify_with_too_long_input#0|0",
+      "src/ecdsa/test_pyecdsa.py::TooSmallCurve::test_verify_too_small_curve_dont_allow_truncate_raises|src/ecdsa/test_pyecdsa.py::TooSmallCurve.test_verify_too_small_curve_dont_allow_truncate_raises#0|0"
+     ],
+     "passes": [
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|0",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|2",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|4",
+      "src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures|src/ecdsa/test_malformed_sigs.py::test_fuzzed_string_signatures#0|6",
+      "src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature|src/ecdsa/test_malformed_sigs.py::test_random_bytes_as_signature#0|5",
+      "src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value|src/ecdsa/test_malformed_sigs.py::test_random_der_ecdsa_sig_value#0|5"
+     ]
+    }
+   },
+   "not_counted": 0,
+   "not_counted_by_reason": {},
+   "not_counted_ids": {},
+   "own_test_by_kind_of_block": {
+    "asserts more": {
+     "fails": 0,
+     "passes": 0
+    },
+    "class-only": {
+     "fails": 51,
+     "passes": 6
+    }
+   },
+   "when_the_own_test_passes_the_case": {
+    "asserts more": {},
+    "class-only": {
+     "observed: raises the class it raises at baseline": 6
+    }
+   }
+  }
+ },
+ "cases": {
+  "cases_left_out": 0,
+  "cases_left_out_by_reason": {},
+  "cases_left_out_ids": {},
+  "cases_of_the_study": 57,
+  "cases_of_the_study_decided_by_a_check": 57,
+  "cases_of_the_study_decided_by_no_check": 0,
+  "cases_of_the_study_decided_by_no_check_by_raise_site": {},
+  "cases_of_the_study_decided_by_no_check_ids": [],
+  "fired_checks_recorded": true,
+  "recorded_executions_of_included_blocks": 57
+ },
+ "checks_at_run_time": {
+  "checks_that_fire_all": 4,
+  "checks_that_fire_and_never_decide_all": 0,
+  "checks_that_fire_and_never_decide_ids": [],
+  "checks_that_fire_and_never_decide_in_subject_files": 0,
+  "checks_that_fire_in_subject_files": 4,
+  "deciding_checks_all": 4,
+  "deciding_checks_ids": [
+   "keys.VerifyingKey.verify#1",
+   "keys.VerifyingKey.verify_digest#1",
+   "keys.VerifyingKey.verify_digest#2",
+   "keys._truncate_and_convert_digest#1"
+  ],
+  "deciding_checks_in_subject_files": 4
+ },
+ "definitions": {
+  "blocks_in_blocks_json": 67,
+  "blocks_in_test_files_of_the_recorder_runs": 67,
+  "blocks_in_test_files_with_an_included_block": 67,
+  "checks_all": 4,
+  "checks_in_observed_files": 0,
+  "checks_in_subject_files": 4,
+  "class_only_blocks_among_all_blocks_of_the_recorder_run_files": 50,
+  "class_only_included_blocks": 9,
+  "included_blocks": 9,
+  "included_blocks_asserting_more_than_the_class": 0,
+  "included_blocks_with_a_target": 4,
+  "included_blocks_with_a_target_by_tier": {
+   "assertion": 2,
+   "name": 2
+  },
+  "raise_statements_listed_apart_not_checks": 140,
+  "reachable_checks_all": 4,
+  "reachable_checks_in_subject_files": 4,
+  "scope_counts_of_subject_json": {
+   "blocks_in_test_directories": 170,
+   "test_files_in_test_directories": 12,
+   "test_files_with_an_included_block": 3
+  },
+  "test_files_in_blocks_json": 3,
+  "test_files_of_the_recorder_runs": 3,
+  "test_files_with_an_included_block": 3
+ },
+ "expectations": {
+  "E1": {
+   "count": 0,
+   "rule": "at least 1 deletion of a deciding check is not detected by O_V",
+   "sentinels_not_holding": [
+    1
+   ],
+   "units": 4,
+   "verdict": "no verdict",
+   "verdict_ignoring_sentinels": "not held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "no verdict",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "no verdict"
+   }
+  },
+  "E2": {
+   "count": 0,
+   "rule": "O_C detects at least 1 deletion of a deciding check that O_V does not",
+   "sentinels_not_holding": [
+    1
+   ],
+   "units": 4,
+   "verdict": "no verdict",
+   "verdict_ignoring_sentinels": "not held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "no verdict",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "no verdict"
+   }
+  },
+  "E3": {
+   "count": 4,
+   "rule": "the whole suite detects every deletion of a deciding check",
+   "sentinels_not_holding": [
+    1
+   ],
+   "units": 4,
+   "verdict": "no verdict",
+   "verdict_ignoring_sentinels": "held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "no verdict",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "no verdict"
+   }
+  },
+  "E4": {
+   "count": 0,
+   "rule": "at least 1 case with a target is not decided by its target",
+   "sentinels_not_holding": [
+    1
+   ],
+   "units": 22,
+   "verdict": "no verdict",
+   "verdict_ignoring_sentinels": "not held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "no verdict",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "no verdict"
+   }
+  },
+  "E5": {
+   "class_only_included_blocks": 9,
+   "count": 6,
+   "included_blocks": 9,
+   "rule": "at least 1 case of a class-only block passes its own test after the deletion of its deciding check",
+   "sentinels_not_holding": [
+    1
+   ],
+   "units": 57,
+   "verdict": "no verdict",
+   "verdict_ignoring_sentinels": "held",
+   "verdict_under_alternative_readings": {
+    "sentinel 2 also asks the run without the recorder to collect every file": "no verdict",
+    "sentinel 3 excuses deletions that exceeded the time limit 2 times": "no verdict"
+   }
+  }
+ },
+ "protocol": "PROTOCOL.md, sections 2, 4 and 7",
+ "refused_connection_attempts": {
+  "baseline_recorder_runs": {
+   "base-1": 0,
+   "base-2": 0
+  },
+  "deletion_and_control_recorder_runs_total": 0,
+  "deletion_and_control_recorder_runs_without_a_count": [],
+  "suite_run_without_recorder": 0,
+  "total": 0,
+  "whole_suite_deletion_and_control_runs_total": 0,
+  "whole_suite_deletion_and_control_runs_without_a_count": [],
+  "whole_suite_unmodified_runs": [
+   0,
+   0
+  ],
+  "witness_runs_total": 0
+ },
+ "runs": {
+  "cases_of_nested_blocks_all_recorded": 0,
+  "cases_of_nested_blocks_in_the_study": [],
+  "cases_of_nested_blocks_in_the_study_count": 0,
+  "cases_with_a_firing_in_another_thread_all_recorded": 0,
+  "cases_with_a_firing_in_another_thread_in_the_study": [],
+  "cases_with_a_firing_in_another_thread_in_the_study_count": 0,
+  "copies_that_stay": [],
+  "copies_that_stay_count": 0,
+  "expected_baseline_failures": [],
+  "expected_baseline_failures_count": 0,
+  "test_files_not_collected": [],
+  "test_files_not_collected_count": 0,
+  "tests_deselected_as_copies": [],
+  "tests_deselected_as_copies_count": 0,
+  "tests_deselected_in_baseline_recorder_run": [],
+  "tests_in_baseline_recorder_run": 1183,
+  "tests_passing_in_baseline_recorder_run": 1183,
+  "time_limit_seconds_recorder": 60.0,
+  "time_limit_seconds_whole_suite": 81.8,
+  "whole_suite_tests_passing_in_both_unmodified_runs": 2018
+ },
+ "sentinels": {
+  "1": "does not hold",
+  "2": "holds",
+  "3": "holds",
+  "4": "holds",
+  "5": "holds",
+  "6": "holds",
+  "7": "holds"
+ },
+ "sentinels_alternative_readings": {
+  "sentinel 2 also asks the run without the recorder to collect every file": {
+   "1": "does not hold",
+   "2": "holds",
+   "3": "holds",
+   "4": "holds",
+   "5": "holds",
+   "6": "holds",
+   "7": "holds"
+  },
+  "sentinel 3 excuses deletions that exceeded the time limit 2 times": {
+   "1": "does not hold",
+   "2": "holds",
+   "3": "holds",
+   "4": "holds",
+   "5": "holds",
+   "6": "holds",
+   "7": "holds"
+  }
+ },
+ "sentinels_detail": {
+  "1": "base-1 = base-2: False; base-1 = control: False",
+  "2": {
+   "collect_errors": [],
+   "deselected_equal_expected_failures": true,
+   "not_collected_in_suite_run": [],
+   "tests_neither_passing_nor_skipped": []
+  },
+  "3": {
+   "deletions_whose_check_fires": [],
+   "deletions_without_a_record": [],
+   "deletions_without_a_record_that_did_not_exceed_the_time_limit_2_times": []
+  },
+  "4": {
+   "no_record_without_two_time_outs": []
+  },
+  "5": {
+   "cases_of_the_study_whose_deciding_check_is_not_among_the_fired": [],
+   "recorded_cases_whose_deciding_check_is_not_among_the_fired": []
+  },
+  "6": {
+   "control_ok": true,
+   "deletion_copies_without_whole_suite_run": []
+  },
+  "7": {
+   "deleted_not_expected": [],
+   "expected_not_deleted": []
+  }
+ },
+ "subject": "ecdsa",
+ "version": "0.19.2"
+}

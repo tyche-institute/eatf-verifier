@@ -1,0 +1,160 @@
+{
+ "check": "jose.rfc7517.base_key.Key.check_key_op#1",
+ "checks_json_sha256": "3208594ee8627cfe505c022cf74a491b367668769e232cfca30d933fffb4c7d0",
+ "clone": "../target-reach/work/src/authlib",
+ "copy": "work/reach/authlib/copy",
+ "file": "authlib/jose/rfc7517/base_key.py",
+ "inputs": [
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T15:52:47Z",
+   "entry_point": "authlib.jose.rfc7515.jws.JsonWebSignature.deserialize_compact",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "Key.__init__": 1,
+    "Key.check_key_op": 1,
+    "Key.check_required_fields": 1,
+    "Key.tokens": 2
+   },
+   "input": "compact JWS, protected header {\"alg\":\"HS256\"}, valid HS256 signature under the secret of the key",
+   "line_events_in_file": 55,
+   "module_of_file_imported": [
+    "authlib.jose.rfc7517.base_key"
+   ],
+   "name": "a",
+   "outcome": {
+    "class": "authlib.jose.errors.InvalidUseError",
+    "description": "Key 'use' is not valid for your usage",
+    "error": "invalid_use",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7517/base_key.py",
+     "function": "Key.check_key_op",
+     "line": 85
+    },
+    "str": "invalid_use: Key 'use' is not valid for your usage"
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "85": "raise InvalidUseError()",
+    "88": "raise InvalidUseError()"
+   },
+   "raise_lines_executed": {
+    "85": 1
+   },
+   "reached": true,
+   "returncode": 0,
+   "settings": "JsonWebSignature() (the defaults); key: the JWK {\"kty\":\"oct\",\"k\":<32-byte secret>,\"use\":\"enc\"} (a dict)",
+   "start": "2026-11-17T15:52:47Z",
+   "stderr": "no-fire/reach/authlib/14.py:157: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebSignature",
+   "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb3ctMTQiLCJpYXQiOjE3MDAwMDAwMDB9.R1yw3WVG1u38z2pGh3dJwdhri2jcMbd6r4tGXzVBnhs",
+   "within_4_4": true
+  },
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T15:52:47Z",
+   "entry_point": "authlib.jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "Key.__init__": 1,
+    "Key.check_key_op": 1,
+    "Key.check_required_fields": 1,
+    "Key.tokens": 2
+   },
+   "input": "compact JWE, protected header {\"alg\":\"dir\",\"enc\":\"A128GCM\"}, payload encrypted with AES-128-GCM under the key",
+   "line_events_in_file": 56,
+   "module_of_file_imported": [
+    "authlib.jose.rfc7517.base_key"
+   ],
+   "name": "b",
+   "outcome": {
+    "class": "authlib.jose.errors.InvalidUseError",
+    "description": "Key 'use' is not valid for your usage",
+    "error": "invalid_use",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7517/base_key.py",
+     "function": "Key.check_key_op",
+     "line": 88
+    },
+    "str": "invalid_use: Key 'use' is not valid for your usage"
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "85": "raise InvalidUseError()",
+    "88": "raise InvalidUseError()"
+   },
+   "raise_lines_executed": {
+    "88": 1
+   },
+   "reached": true,
+   "returncode": 0,
+   "settings": "JsonWebEncryption() (the defaults); key: the JWK {\"kty\":\"oct\",\"k\":<16-byte key>,\"use\":\"sig\"} (a dict)",
+   "start": "2026-11-17T15:52:47Z",
+   "stderr": "no-fire/reach/authlib/14.py:171: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebEncryption",
+   "token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4R0NNIn0..cm93LTE0LWl2LTEy.Sldrixcj93farrJnXsNaEX3JBhkfkaNmabGQnyG3JPbN.KrvOg1apriK2x4zrKYos1Q",
+   "within_4_4": true
+  },
+  {
+   "authlib_file": "work/reach/authlib/copy/authlib/__init__.py",
+   "copy_subject_files_checked": 215,
+   "cryptography": "50.0.2",
+   "end": "2026-11-17T15:52:47Z",
+   "entry_point": "authlib.jose.rfc7516.jwe.JsonWebEncryption.deserialize_compact",
+   "executable": "../target-reach/work/venvs/authlib/bin/python",
+   "functions_entered_in_file": {
+    "Key.__init__": 2,
+    "Key.check_key_op": 1,
+    "Key.check_required_fields": 2,
+    "Key.tokens": 2
+   },
+   "input": "compact JWE, protected header {\"alg\":\"ECDH-ES\",\"enc\":\"A128GCM\",\"epk\":<ephemeral public P-256 JWK with \"use\":\"sig\">}, encrypted for the recipient key by ECDH-ES (direct key agreement)",
+   "line_events_in_file": 69,
+   "module_of_file_imported": [
+    "authlib.jose.rfc7517.base_key"
+   ],
+   "name": "c",
+   "outcome": {
+    "class": "authlib.jose.errors.InvalidUseError",
+    "description": "Key 'use' is not valid for your usage",
+    "error": "invalid_use",
+    "kind": "raised",
+    "raise_site": {
+     "file": "authlib/jose/rfc7517/base_key.py",
+     "function": "Key.check_key_op",
+     "line": 88
+    },
+    "str": "invalid_use: Key 'use' is not valid for your usage"
+   },
+   "python": "3.12.3",
+   "raise_lines": {
+    "85": "raise InvalidUseError()",
+    "88": "raise InvalidUseError()"
+   },
+   "raise_lines_executed": {
+    "88": 1
+   },
+   "reached": true,
+   "returncode": 0,
+   "settings": "JsonWebEncryption() (the defaults); key: the recipient's private P-256 JWK {\"kty\":\"EC\",\"crv\":\"P-256\",\"x\",\"y\",\"d\"} (a dict, no \"use\")",
+   "start": "2026-11-17T15:52:47Z",
+   "stderr": "no-fire/reach/authlib/14.py:187: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\nIt will be compatible before version 2.0.0.\n  from authlib.jose import JsonWebEncryption",
+   "token": "eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTEyOEdDTSIsImVwayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6IlZlM29rTW1kcWxvaGVxck1QbXMwdll5cjQwb3lvbXFqWVY3TVlhWjFXU0UiLCJ5IjoiSEJfNHNUbFVWWUl3blF1THVONU93TFNwcXh3LTB6bFlrWjd1bGQwYnQzWSIsInVzZSI6InNpZyJ9fQ..cm93LTE0LWl2LTEy.FxUzO7PO3xlQx-NrJhpgh9rAqpulLLziEkSspBVVz1lG.Ng3DDZKaC63P_9y4i4dm-Q",
+   "within_4_4": true
+  }
+ ],
+ "interpreter": "../target-reach/work/venvs/authlib/bin/python",
+ "python": "3.12.3",
+ "raise_lines": [
+  85,
+  88
+ ],
+ "reached": true,
+ "row": 14,
+ "script": "no-fire/reach/authlib/14.py",
+ "script_sha256": "4e9d68b0f1dbb221f0ef54b60de29d965de6ad4fb2c045834db13c27d6e22838"
+}

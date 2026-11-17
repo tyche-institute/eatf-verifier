@@ -1,0 +1,3 @@
+Steps run by hand after stream 1, with the commands of README.md (How to run):
+report.py --held-out python-jose supabase-auth service-identity --generated screened/generated: screened/generated/REPORT.md written at 2026-11-17T15:32:26Z (time of the file)
+screened/versions.py --support requires-python --only-binary --libraries python-jose supabase-auth service-identity --work <outside>/screened-versions: started 2026-11-17T15:32:34Z, ended 2026-11-17T15:33:30Z, exit status 0; its output is 17-sweep.log

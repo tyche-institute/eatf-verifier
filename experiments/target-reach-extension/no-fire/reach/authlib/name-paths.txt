@@ -1,0 +1,85 @@
+python 3.12.3
+read ../target-reach/reach/checks.py sha256 174c90a10df577f1f8f7bec1c0798ba00c7d3155e31fe63d14f740dc8b51bf26
+read ../target-reach/subjects/authlib/subject.json sha256 4e2f930de9e1eb94358c32ea60e5f992ad36d1f44b8ed6a0bb491985c1c35af8
+read ../target-reach/subjects/authlib/checks.json sha256 3208594ee8627cfe505c022cf74a491b367668769e232cfca30d933fffb4c7d0
+read no-fire/sample.csv sha256 5637e6bc9241273992552eb79331b9e5095ee5c8e8b291afc718f2efeea3a8fa
+clone ../target-reach/work/src/authlib
+1301 functions, 510 reachable by name; entry points ['decode', 'deserialize', 'deserialize_compact', 'deserialize_json', 'validate']
+functions with the name of an entry point:
+  authlib/jose/rfc7515/jws.py:239 JsonWebSignature.deserialize
+  authlib/jose/rfc7515/jws.py:81 JsonWebSignature.deserialize_compact
+  authlib/jose/rfc7515/jws.py:168 JsonWebSignature.deserialize_json
+  authlib/jose/rfc7516/jwe.py:662 JsonWebEncryption.deserialize
+  authlib/jose/rfc7516/jwe.py:447 JsonWebEncryption.deserialize_compact
+  authlib/jose/rfc7516/jwe.py:513 JsonWebEncryption.deserialize_json
+  authlib/jose/rfc7519/claims.py:91 JWTClaims.validate
+  authlib/jose/rfc7519/jwt.py:80 JsonWebToken.decode
+  authlib/oauth2/claims.py:60 BaseClaims.validate
+  authlib/oauth2/claims.py:70 JWTClaims.validate
+  authlib/oauth2/rfc7591/claims.py:31 ClientMetadataClaims.validate
+  authlib/oauth2/rfc8414/models.py:359 AuthorizationServerMetadata.validate
+  authlib/oauth2/rfc9068/claims.py:31 JWTAccessTokenClaims.validate
+  authlib/oauth2/rfc9101/registration.py:35 ClientMetadataClaims.validate
+  authlib/oidc/core/claims.py:170 HybridIDToken.validate
+  authlib/oidc/core/claims.py:43 IDToken.validate
+  authlib/oidc/registration/claims.py:29 ClientMetadataClaims.validate
+  authlib/oidc/rpinitiated/registration.py:33 ClientMetadataClaims.validate
+
+row 11: jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#1
+  raise lines [303] in authlib/jose/rfc7515/jws.py; reachable in checks.json: True; reachable here: True
+  authlib/jose/rfc7515/jws.py:81 JsonWebSignature.deserialize_compact  (entry point name)
+    -> name `_validate_crit_headers` referenced at authlib/jose/rfc7515/jws.py:103
+  authlib/jose/rfc7515/jws.py:296 JsonWebSignature._validate_crit_headers
+  every function that refers to the name `_validate_crit_headers`:
+    authlib/jose/rfc7515/jws.py:334 JsonWebSignature._validate_json_jws
+    authlib/jose/rfc7515/jws.py:103 JsonWebSignature.deserialize_compact
+    authlib/jose/rfc7515/jws.py:70 JsonWebSignature.serialize_compact
+    authlib/jose/rfc7515/jws.py:145 JsonWebSignature.serialize_json
+    authlib/jose/rfc7515/jws.py:145 JsonWebSignature.serialize_json._sign
+
+row 12: jose.drafts._jwe_algorithms.ECDH1PUAlgorithm.generate_keys_and_prepare_headers#1
+  raise lines [127] in authlib/jose/drafts/_jwe_algorithms.py; reachable in checks.json: True; reachable here: True
+  authlib/jose/rfc7515/jws.py:239 JsonWebSignature.deserialize  (entry point name)
+    -> name `to_bytes` referenced at authlib/jose/rfc7515/jws.py:255
+  authlib/common/encoding.py:6 to_bytes
+    -> name `encode` referenced at authlib/common/encoding.py:12,14
+  authlib/jose/rfc7519/jwt.py:53 JsonWebToken.encode
+    -> name `serialize_compact` referenced at authlib/jose/rfc7519/jwt.py:76,78
+  authlib/jose/rfc7516/jwe.py:66 JsonWebEncryption.serialize_compact
+    -> name `generate_keys_and_prepare_headers` referenced at authlib/jose/rfc7516/jwe.py:116
+  authlib/jose/drafts/_jwe_algorithms.py:125 ECDH1PUAlgorithm.generate_keys_and_prepare_headers
+  every function that refers to the name `generate_keys_and_prepare_headers`:
+    authlib/jose/rfc7516/jwe.py:116 JsonWebEncryption.serialize_compact
+    authlib/jose/rfc7516/jwe.py:335 JsonWebEncryption.serialize_json
+
+row 13: jose.rfc7515.jws.JsonWebSignature._validate_json_jws#3
+  raise lines [326] in authlib/jose/rfc7515/jws.py; reachable in checks.json: True; reachable here: True
+  authlib/jose/rfc7515/jws.py:168 JsonWebSignature.deserialize_json  (entry point name)
+    -> name `_validate_json_jws` referenced at authlib/jose/rfc7515/jws.py:192,209
+  authlib/jose/rfc7515/jws.py:313 JsonWebSignature._validate_json_jws
+  every function that refers to the name `_validate_json_jws`:
+    authlib/jose/rfc7515/jws.py:192,209 JsonWebSignature.deserialize_json
+
+row 14: jose.rfc7517.base_key.Key.check_key_op#1
+  raise lines [85, 88] in authlib/jose/rfc7517/base_key.py; reachable in checks.json: True; reachable here: True
+  authlib/jose/rfc7515/jws.py:81 JsonWebSignature.deserialize_compact  (entry point name)
+    -> name `verify` referenced at authlib/jose/rfc7515/jws.py:113
+  authlib/jose/rfc7518/jws_algs.py:138 ECAlgorithm.verify
+    -> name `get_op_key` referenced at authlib/jose/rfc7518/jws_algs.py:150
+  authlib/jose/rfc7517/asymmetric_key.py:35 AsymmetricKey.get_op_key
+    -> name `check_key_op` referenced at authlib/jose/rfc7517/asymmetric_key.py:42
+  authlib/jose/rfc7517/base_key.py:68 Key.check_key_op
+  every function that refers to the name `check_key_op`:
+    authlib/jose/rfc7517/asymmetric_key.py:42 AsymmetricKey.get_op_key
+    authlib/jose/rfc7518/oct_key.py:59 OctKey.get_op_key
+
+row 15: jose.rfc7516.jwe.JsonWebEncryption.get_header_zip#1
+  raise lines [728, 730] in authlib/jose/rfc7516/jwe.py; reachable in checks.json: True; reachable here: True
+  authlib/jose/rfc7516/jwe.py:447 JsonWebEncryption.deserialize_compact  (entry point name)
+    -> name `get_header_zip` referenced at authlib/jose/rfc7516/jwe.py:473
+  authlib/jose/rfc7516/jwe.py:724 JsonWebEncryption.get_header_zip
+  every function that refers to the name `get_header_zip`:
+    authlib/jose/rfc7516/jwe.py:473 JsonWebEncryption.deserialize_compact
+    authlib/jose/rfc7516/jwe.py:561 JsonWebEncryption.deserialize_json
+    authlib/jose/rfc7516/jwe.py:92 JsonWebEncryption.serialize_compact
+    authlib/jose/rfc7516/jwe.py:297 JsonWebEncryption.serialize_json

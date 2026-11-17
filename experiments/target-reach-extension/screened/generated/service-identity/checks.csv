@@ -1,0 +1,9 @@
+check,file,role,function,class,template,in_handler,reachable,decides,cases_decided,blocks_targeting,cases_fired
+cryptography.extract_patterns#1,service_identity/cryptography.py,subject,extract_patterns,CertificateError,{*},yes,yes,no,0,0,0
+hazmat.verify_service_identity#1,service_identity/hazmat.py,subject,verify_service_identity,CertificateError,{*},no,yes,yes,4,3,4
+hazmat.verify_service_identity#2,service_identity/hazmat.py,subject,verify_service_identity,VerificationError,,no,yes,yes,11,9,11
+hazmat.DNSPattern.from_bytes#1,service_identity/hazmat.py,subject,DNSPattern.from_bytes,CertificateError,{*},no,yes,no,0,0,0
+hazmat.IPAddressPattern.from_bytes#1,service_identity/hazmat.py,subject,IPAddressPattern.from_bytes,CertificateError,{*},yes,yes,no,0,0,0
+hazmat.URIPattern.from_bytes#1,service_identity/hazmat.py,subject,URIPattern.from_bytes,CertificateError,{*},no,yes,no,0,0,0
+hazmat.SRVPattern.from_bytes#1,service_identity/hazmat.py,subject,SRVPattern.from_bytes,CertificateError,{*},no,yes,no,0,0,0
+hazmat._validate_pattern#1,service_identity/hazmat.py,subject,_validate_pattern,CertificateError,{*},no,yes,no,0,0,0

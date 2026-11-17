@@ -1,0 +1,33 @@
+subject: experiments/target-reach/subjects/joserfc/subject.json, commit f345ff71cd6c36452a4e11e47b805ad450a95dd8
+entry points: decode, decrypt_compact, decrypt_json, deserialize_compact, deserialize_json, validate, validate_compact
+functions in the table: 402; reachable by the rule: 285
+`functions` of checks.json: 402, 285 reachable; the same sets as here: True
+
+row 16: _rfc7516.message.decrypt_recipient#1 (joserfc/_rfc7516/message.py:249, InvalidEncryptedKeyError)
+  joserfc/jwe.py:96 decrypt_compact (entry point name)
+  -> name 'perform_decrypt' at joserfc/jwe.py:136 -> joserfc/_rfc7516/message.py:99 perform_decrypt
+  -> name '_perform_decrypt' at joserfc/_rfc7516/message.py:101 -> joserfc/_rfc7516/message.py:106 _perform_decrypt
+  -> name 'decrypt_recipient' at joserfc/_rfc7516/message.py:124 -> joserfc/_rfc7516/message.py:242 decrypt_recipient
+
+row 17: _keys.JWKRegistry.import_key#1 (joserfc/_keys.py:70, MissingKeyTypeError)
+  joserfc/jwe.py:96 decrypt_compact (entry point name)
+  -> name 'perform_decrypt' at joserfc/jwe.py:136 -> joserfc/_rfc7516/message.py:99 perform_decrypt
+  -> name '_perform_decrypt' at joserfc/_rfc7516/message.py:101 -> joserfc/_rfc7516/message.py:106 _perform_decrypt
+  -> name 'decrypt_recipient' at joserfc/_rfc7516/message.py:124 -> joserfc/_rfc7516/message.py:242 decrypt_recipient
+  -> name 'decrypt_agreed_upon_key' at joserfc/_rfc7516/message.py:253,264 -> joserfc/_rfc7518/jwe_algs.py:217 ECDHESAlgKeyAgreement.decrypt_agreed_upon_key (other definitions with this name: 2)
+  -> name 'import_key' at joserfc/_rfc7518/jwe_algs.py:225 -> joserfc/_keys.py:56 JWKRegistry.import_key (other definitions with this name: 11)
+
+row 18: _rfc7516.registry.JWERegistry.validate_ciphertext_size#1 (joserfc/_rfc7516/registry.py:140, ExceededSizeError)
+  joserfc/jwe.py:96 decrypt_compact (entry point name)
+  -> name 'extract_compact' at joserfc/jwe.py:128 -> joserfc/_rfc7516/compact.py:36 extract_compact
+  -> name 'validate_ciphertext_size' at joserfc/_rfc7516/compact.py:47 -> joserfc/_rfc7516/registry.py:138 JWERegistry.validate_ciphertext_size
+
+row 19: _rfc7516.registry.JWERegistry._check_algorithm#1 (joserfc/_rfc7516/registry.py:186, UnsupportedAlgorithmError)
+  joserfc/jws.py:125 validate_compact (entry point name)
+  -> name 'get_alg' at joserfc/jws.py:144 -> joserfc/_rfc7516/registry.py:154 JWERegistry.get_alg (other definitions with this name: 1)
+  -> name '_check_algorithm' at joserfc/_rfc7516/registry.py:160 -> joserfc/_rfc7516/registry.py:184 JWERegistry._check_algorithm
+
+row 20: _rfc7516.registry.JWERegistry._check_algorithm#2 (joserfc/_rfc7516/registry.py:190, UnsupportedAlgorithmError)
+  joserfc/jws.py:125 validate_compact (entry point name)
+  -> name 'get_alg' at joserfc/jws.py:144 -> joserfc/_rfc7516/registry.py:154 JWERegistry.get_alg (other definitions with this name: 1)
+  -> name '_check_algorithm' at joserfc/_rfc7516/registry.py:160 -> joserfc/_rfc7516/registry.py:184 JWERegistry._check_algorithm

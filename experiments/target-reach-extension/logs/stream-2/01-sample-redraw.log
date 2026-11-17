@@ -1,0 +1,15 @@
+python CPython 3.12.3; seed 20261117; 5 per library
+google-auth: experiments/target-reach/generated/google-auth/checks.csv sha256 9fd04884bc9cd9422feae99b553aee9f5ae58c11f507dcf170fa2a10678dd01d; 100 rows, 39 with reachable yes and cases_fired 0
+oauthlib: experiments/target-reach/generated/oauthlib/checks.csv sha256 b8458d4abc7d2d0b86e7b20e186a3343e32eb2e45890a279446b61f9184f1651; 88 rows, 13 with reachable yes and cases_fired 0
+authlib: experiments/target-reach/generated/authlib/checks.csv sha256 e1a915928623e0a1352ff08210a4f8712c14d0112b1ee275bd51eb2af00b645b; 39 rows, 12 with reachable yes and cases_fired 0
+joserfc: experiments/target-reach/generated/joserfc/checks.csv sha256 1a53dec5f1ce298148f55bb4fd6358097f7d43fefa961303a7adcdbed29ee49d; 97 rows, 39 with reachable yes and cases_fired 0
+total: 103
+google-auth: drawn ['auth.aws.RequestSigner.get_request_options#1', 'auth._agent_identity_utils.parse_certificate#1', 'auth.crypt._python_rsa.RSASigner.from_string#1', 'auth.credentials.AnonymousCredentials.apply#1', 'auth.credentials.AnonymousCredentials.refresh#1']
+google-auth: experiments/target-reach/subjects/google-auth/checks.json sha256 b7803bae8ce11d88d17eddc17971db28935bd538dd0f3005d94cb659c46c09e7
+oauthlib: drawn ['oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9', 'oauth2.rfc6749.endpoints.base.BaseEndpoint._raise_on_bad_method#1', 'oauth2.rfc6749.grant_types.base.GrantTypeBase.validate_grant_type#1', 'oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1', 'oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_device_code#3']
+oauthlib: experiments/target-reach/subjects/oauthlib/checks.json sha256 d85a995c9d8eb040d5a2b93a1692b8206fdb7442385b9403a26da32d18319863
+authlib: drawn ['jose.rfc7515.jws.JsonWebSignature._validate_crit_headers#1', 'jose.drafts._jwe_algorithms.ECDH1PUAlgorithm.generate_keys_and_prepare_headers#1', 'jose.rfc7515.jws.JsonWebSignature._validate_json_jws#3', 'jose.rfc7517.base_key.Key.check_key_op#1', 'jose.rfc7516.jwe.JsonWebEncryption.get_header_zip#1']
+authlib: experiments/target-reach/subjects/authlib/checks.json sha256 3208594ee8627cfe505c022cf74a491b367668769e232cfca30d933fffb4c7d0
+joserfc: drawn ['_rfc7516.message.decrypt_recipient#1', '_keys.JWKRegistry.import_key#1', '_rfc7516.registry.JWERegistry.validate_ciphertext_size#1', '_rfc7516.registry.JWERegistry._check_algorithm#1', '_rfc7516.registry.JWERegistry._check_algorithm#2']
+joserfc: experiments/target-reach/subjects/joserfc/checks.json sha256 49eaea742bda9a5f6743061d8d8161e939d9639f46f8aec11f77611a99428e49
+wrote <outside>/sample-redraw.csv: 20 rows, sha256 5637e6bc9241273992552eb79331b9e5095ee5c8e8b291afc718f2efeea3a8fa

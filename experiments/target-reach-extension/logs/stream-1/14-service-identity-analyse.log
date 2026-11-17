@@ -1,0 +1,1 @@
+analyse: 15 cases, 15 of 15 reach their target, 0 flags, 2 deletions, not detected {"O_V": 0, "O_Vfc": 0, "O_C": 0, "O_T": 0, "O_S": 0, "suite": 0, "whole suite": 0}; pinning the own test passes in 0 of 15 cases; sentinels that do not hold: none

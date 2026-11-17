@@ -1,0 +1,174 @@
+{
+ "check": "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+ "check_definition": {
+  "class": "oauthlib.oauth2.rfc6749.errors.InvalidRequestError",
+  "class_name": "InvalidRequestError",
+  "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+  "file_sha256_in_copy": "e75d01898546168125cff9cdde9cb870ba59d781d53ae40530eb6c0e570cebf4",
+  "function": "DeviceCodeGrant.validate_token_request",
+  "raise_source": {
+   "125": "raise rfc6749_errors.InvalidRequestError(",
+   "126": "\"Request is missing grant type.\", request=request",
+   "127": ")"
+  },
+  "raise_statements": [
+   [
+    125,
+    127
+   ]
+  ],
+  "template": "Request is missing grant type."
+ },
+ "clone": {
+  "copied_paths_clean": true,
+  "head": "6e3aa05af92978755939a18cb4dd655ced156c1e",
+  "path": "experiments/target-reach/work/src/oauthlib"
+ },
+ "copy": {
+  "package_imported_from": "experiments/target-reach-extension/work/reach/oauthlib/copy/9/oauthlib/__init__.py",
+  "path": "experiments/target-reach-extension/work/reach/oauthlib/copy/9",
+  "paths": [
+   "oauthlib",
+   "tests"
+  ],
+  "subject_files_checked": 75
+ },
+ "decides": true,
+ "entry_point": {
+  "called_on": "oauthlib.oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant",
+  "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+  "line": 116,
+  "name": "validate_token_request",
+  "qualname": "DeviceCodeGrant.validate_token_request"
+ },
+ "exception": {
+  "class": "oauthlib.oauth2.rfc6749.errors.InvalidRequestError",
+  "description": "Request is missing grant type.",
+  "error": "invalid_request",
+  "message": "(invalid_request) Request is missing grant type. <oauthlib.Request SANITIZED>",
+  "raise_site": {
+   "check": "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+   "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+   "function": "DeviceCodeGrant.validate_token_request",
+   "line": 125
+  },
+  "status_code": 400,
+  "traceback": [
+   {
+    "file": "trace_input.py (outside the package)",
+    "function": "main",
+    "line": 277
+   },
+   {
+    "file": "9.py (outside the package)",
+    "function": "build.<locals>.<lambda>",
+    "line": 51
+   },
+   {
+    "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+    "function": "DeviceCodeGrant.validate_token_request",
+    "line": 125
+   }
+  ]
+ },
+ "facts": {},
+ "fired": true,
+ "input": "POST https://server.example.com/token, body device_code=GmRhmhcxhwAzkoEqiMEg_DnyEysNkuNhszIySk9eS&client_id=1406020730, no grant_type",
+ "interpreter": {
+  "dont_write_bytecode": true,
+  "environment_variables": [
+   "HOME",
+   "LANG",
+   "LC_ALL",
+   "PATH"
+  ],
+  "executable": "experiments/target-reach/work/venvs/oauthlib/bin/python",
+  "hash_randomization": true,
+  "implementation": "CPython",
+  "isolated": true,
+  "locale": {
+   "LANG": "C.UTF-8",
+   "LC_ALL": "C.UTF-8"
+  },
+  "prefix": "experiments/target-reach/work/venvs/oauthlib",
+  "version": "3.12.3"
+ },
+ "library": "oauthlib",
+ "lines_executed": {
+  "oauthlib/__init__.py": {
+   "get_debug": [
+    34
+   ]
+  },
+  "oauthlib/common.py": {
+   "Request.__getattr__": [
+    400,
+    401
+   ],
+   "Request.__repr__": [
+    406,
+    407
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/errors.py": {
+   "OAuth2Error.__init__": [
+    44,
+    45,
+    47,
+    48,
+    49,
+    50,
+    52,
+    53,
+    55,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+   ]
+  },
+  "oauthlib/oauth2/rfc8628/grant_types/device_code.py": {
+   "DeviceCodeGrant.validate_token_request": [
+    121,
+    124,
+    125,
+    126
+   ]
+  }
+ },
+ "outcome": "raised",
+ "raise_events": [
+  {
+   "check_at_line": "oauth2.rfc8628.grant_types.device_code.DeviceCodeGrant.validate_token_request#1",
+   "exception": "oauthlib.oauth2.rfc6749.errors.InvalidRequestError",
+   "file": "oauthlib/oauth2/rfc8628/grant_types/device_code.py",
+   "firing_of_the_check": true,
+   "function": "DeviceCodeGrant.validate_token_request",
+   "instruction": "RAISE_VARARGS",
+   "line": 125
+  }
+ ],
+ "raise_lines_executed": [
+  125,
+  126
+ ],
+ "result": "reached",
+ "returned": null,
+ "row": 9,
+ "settings": [
+  "DeviceCodeGrant(request_validator) with no other argument: no custom validators",
+  "request validator: the library's oauthlib.oauth2.rfc8628.request_validator.RequestValidator, unchanged (the grant's default would be the RequestValidator of rfc6749); the call reaches none of its methods"
+ ],
+ "times": {
+  "call_ended": "2026-11-17T15:48:31Z",
+  "call_started": "2026-11-17T15:48:31Z",
+  "ended": "2026-11-17T15:48:31Z",
+  "started": "2026-11-17T15:48:31Z"
+ },
+ "validator_calls": null
+}

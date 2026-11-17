@@ -1,0 +1,1556 @@
+{
+ "check": "auth.credentials.AnonymousCredentials.apply#1",
+ "check_class": "InvalidValue",
+ "check_file": "google/auth/credentials.py",
+ "check_function": "AnonymousCredentials.apply",
+ "check_function_entered_by_an_input": false,
+ "check_template": "Anonymous credentials don't support tokens.",
+ "checks_json_sha256": "b7803bae8ce11d88d17eddc17971db28935bd538dd0f3005d94cb659c46c09e7",
+ "child_ended": "2026-11-17T16:08:03Z",
+ "child_executable": "T/work/venvs/google-auth/bin/python",
+ "child_python": "3.12.3",
+ "child_returncode": 0,
+ "child_started": "2026-11-17T16:08:03Z",
+ "clone": "experiments/target-reach/work/src/google-auth/packages/google-auth",
+ "clone_head": "50b1eb269f110a4b7ab09ffe5ae59c0151cd63c2",
+ "command": [
+  "T/work/venvs/google-auth/bin/python",
+  "-I",
+  "-B",
+  "4.py",
+  "--child",
+  "work/reach/google-auth/copy",
+  "work/reach/google-auth/4.child.json"
+ ],
+ "control": {
+  "check_function_entered": true,
+  "entered": [
+   "google/auth/credentials.py:AnonymousCredentials.apply (line 597)",
+   "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)"
+  ],
+  "exception": {
+   "class": "google.auth.exceptions.InvalidValue",
+   "is_ValueError": true,
+   "message": "Anonymous credentials don't support tokens.",
+   "mro": [
+    "google.auth.exceptions.InvalidValue",
+    "google.auth.exceptions.DefaultCredentialsError",
+    "google.auth.exceptions.GoogleAuthError",
+    "builtins.ValueError",
+    "builtins.Exception",
+    "builtins.BaseException",
+    "builtins.object"
+   ],
+   "site": {
+    "check": "auth.credentials.AnonymousCredentials.apply#1",
+    "file": "google/auth/credentials.py",
+    "function": "AnonymousCredentials.apply",
+    "kind": "check",
+    "line": 606
+   },
+   "traceback_tail": [
+    "../../../../no-fire/reach/google-auth/reach_common.py:517",
+    "google/auth/credentials.py:606"
+   ]
+  },
+  "fired": [
+   "auth.credentials.AnonymousCredentials.apply#1"
+  ],
+  "fired_the_check": true,
+  "label": "AnonymousCredentials().apply({}, token='token')",
+  "raise_line_executed": true,
+  "raise_line_hits": {
+   "606": 1
+  },
+  "raises_in_package": [
+   {
+    "check": "auth.credentials.AnonymousCredentials.apply#1",
+    "class": "InvalidValue",
+    "file": "google/auth/credentials.py",
+    "line": 606
+   }
+  ],
+  "returned": null
+ },
+ "copy": "work/reach/google-auth/copy",
+ "functions_entered_by_the_inputs": [
+  "google/auth/_helpers.py:datetime_to_secs (line 147)",
+  "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+  "google/auth/_helpers.py:to_bytes (line 159)",
+  "google/auth/_helpers.py:utcnow (line 111)",
+  "google/auth/_jwt_async.py:decode (line 71)",
+  "google/auth/crypt/__init__.py:verify_signature (line 56)",
+  "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+  "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+  "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+  "google/auth/crypt/es.py:EsVerifier.__init__ (line 80)",
+  "google/auth/crypt/es.py:EsVerifier.from_string (line 101)",
+  "google/auth/crypt/es.py:EsVerifier.verify (line 84)",
+  "google/auth/crypt/es.py:_ESAttributes.from_curve (line 58)",
+  "google/auth/crypt/es.py:_ESAttributes.from_key (line 52)",
+  "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+  "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+  "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+  "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+  "google/auth/jwt.py:_unverified_decode (line 133)",
+  "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+  "google/auth/jwt.py:decode (line 234)"
+ ],
+ "google_auth_file": "google/auth/__init__.py",
+ "google_modules_loaded_after_the_inputs": [
+  "google",
+  "google.auth",
+  "google.auth._cache",
+  "google.auth._credentials_async",
+  "google.auth._credentials_base",
+  "google.auth._default",
+  "google.auth._helpers",
+  "google.auth._jwt_async",
+  "google.auth._refresh_worker",
+  "google.auth._regional_access_boundary_utils",
+  "google.auth._service_account_info",
+  "google.auth.credentials",
+  "google.auth.crypt",
+  "google.auth.crypt._cryptography_rsa",
+  "google.auth.crypt.base",
+  "google.auth.crypt.es",
+  "google.auth.crypt.es256",
+  "google.auth.crypt.rsa",
+  "google.auth.environment_vars",
+  "google.auth.exceptions",
+  "google.auth.jwt",
+  "google.auth.metrics",
+  "google.auth.version"
+ ],
+ "inputs": [
+  {
+   "artifact": "RS256 token signed with tests/data/privatekey.pem",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": null,
+   "fired": [],
+   "label": "C01 valid RS256, certificate",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "certs: tests/data/public_cert.pem (str)",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token with kid 1, as bytes",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": null,
+   "fired": [],
+   "label": "C02 valid RS256 as bytes, kid in a mapping",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "certs: {'1': public_cert.pem (bytes)}",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token without kid",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": null,
+   "fired": [],
+   "label": "C03 valid RS256 without kid, 2 certificates",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "certs: {'a': other_cert.pem, 'b': public_cert.pem}",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": null,
+   "fired": [],
+   "label": "C04 valid RS256, RSA public key",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "certs: tests/data/privatekey.pub (BEGIN RSA PUBLIC KEY)",
+   "targeted": false
+  },
+  {
+   "artifact": "ES256 token signed with es256_privatekey.pem",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/es.py:EsVerifier.__init__ (line 80)",
+    "google/auth/crypt/es.py:EsVerifier.from_string (line 101)",
+    "google/auth/crypt/es.py:EsVerifier.verify (line 84)",
+    "google/auth/crypt/es.py:_ESAttributes.from_curve (line 58)",
+    "google/auth/crypt/es.py:_ESAttributes.from_key (line 52)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": null,
+   "fired": [],
+   "label": "C05 valid ES256, certificate",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "certs: es256_public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "ES384 token signed with es384_privatekey.pem",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/es.py:EsVerifier.__init__ (line 80)",
+    "google/auth/crypt/es.py:EsVerifier.from_string (line 101)",
+    "google/auth/crypt/es.py:EsVerifier.verify (line 84)",
+    "google/auth/crypt/es.py:_ESAttributes.from_curve (line 58)",
+    "google/auth/crypt/es.py:_ESAttributes.from_key (line 52)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": null,
+   "fired": [],
+   "label": "C06 valid ES384, public key",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "certs: es384_publickey.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token with a wrong signature",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": null,
+   "fired": [],
+   "label": "C07 verify=False",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "verify=False",
+   "targeted": false
+  },
+  {
+   "artifact": "header.payload without signature",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.MalformedError",
+    "is_ValueError": true,
+    "message": "Wrong number of segments in token: b'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpc3N1ZXJAZXhhbXBsZS5jb20iLCJhdWQiOiJhdWRpZW5jZSIsImlhdCI6MTc5NDkzMTY4Myw...",
+    "mro": [
+     "google.auth.exceptions.MalformedError",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt._unverified_decode#1",
+     "file": "google/auth/jwt.py",
+     "function": "_unverified_decode",
+     "kind": "check",
+     "line": 149
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:260",
+     "google/auth/jwt.py:149"
+    ]
+   },
+   "fired": [
+    "auth.jwt._unverified_decode#1"
+   ],
+   "label": "C08 2 segments",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt._unverified_decode#1",
+     "class": "MalformedError",
+     "file": "google/auth/jwt.py",
+     "line": 149
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "header segment 'A'",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "binascii.Error",
+    "is_ValueError": true,
+    "message": "Invalid base64-encoded string: number of data characters (1) cannot be 1 more than a multiple of 4",
+    "mro": [
+     "binascii.Error",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": null,
+     "file": "google/auth/_helpers.py",
+     "function": "padded_urlsafe_b64decode",
+     "kind": "outside checks",
+     "line": 291
+    },
+    "traceback_tail": [
+     "google/auth/jwt.py:123",
+     "google/auth/_helpers.py:291",
+     "../../../../../../../../../../usr/lib/python3.12/base64.py:134",
+     "../../../../../../../../../../usr/lib/python3.12/base64.py:88"
+    ]
+   },
+   "fired": [],
+   "label": "C09 header not base64url",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "header segment of bytes ff fe",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.MalformedError",
+    "is_ValueError": true,
+    "message": "Can't parse segment: b'\\xff\\xfe'",
+    "mro": [
+     "google.auth.exceptions.MalformedError",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt._decode_jwt_segment#1",
+     "file": "google/auth/jwt.py",
+     "function": "_decode_jwt_segment",
+     "kind": "check",
+     "line": 130
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:260",
+     "google/auth/jwt.py:158",
+     "google/auth/jwt.py:130"
+    ]
+   },
+   "fired": [
+    "auth.jwt._decode_jwt_segment#1"
+   ],
+   "label": "C10 header not UTF-8",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt._decode_jwt_segment#1",
+     "class": "MalformedError",
+     "file": "google/auth/jwt.py",
+     "line": 130
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "header []",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.MalformedError",
+    "is_ValueError": true,
+    "message": "Header segment should be a JSON object: b'W10'",
+    "mro": [
+     "google.auth.exceptions.MalformedError",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt._unverified_decode#2",
+     "file": "google/auth/jwt.py",
+     "function": "_unverified_decode",
+     "kind": "check",
+     "line": 162
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:260",
+     "google/auth/jwt.py:162"
+    ]
+   },
+   "fired": [
+    "auth.jwt._unverified_decode#2"
+   ],
+   "label": "C11 header a JSON array",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt._unverified_decode#2",
+     "class": "MalformedError",
+     "file": "google/auth/jwt.py",
+     "line": 162
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "payload \"x\"",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.MalformedError",
+    "is_ValueError": true,
+    "message": "Payload segment should be a JSON object: b'Ingi'",
+    "mro": [
+     "google.auth.exceptions.MalformedError",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt._unverified_decode#3",
+     "file": "google/auth/jwt.py",
+     "function": "_unverified_decode",
+     "kind": "check",
+     "line": 167
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:260",
+     "google/auth/jwt.py:167"
+    ]
+   },
+   "fired": [
+    "auth.jwt._unverified_decode#3"
+   ],
+   "label": "C12 payload a JSON string",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt._unverified_decode#3",
+     "class": "MalformedError",
+     "file": "google/auth/jwt.py",
+     "line": 167
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "header alg HS256",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.InvalidValue",
+    "is_ValueError": true,
+    "message": "Unsupported signature algorithm HS256",
+    "mro": [
+     "google.auth.exceptions.InvalidValue",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt.decode#2",
+     "file": "google/auth/jwt.py",
+     "function": "decode",
+     "kind": "check",
+     "line": 280
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:280"
+    ]
+   },
+   "fired": [
+    "auth.jwt.decode#2"
+   ],
+   "label": "C13 alg HS256",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt.decode#2",
+     "class": "InvalidValue",
+     "file": "google/auth/jwt.py",
+     "line": 280
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "header alg [\"RS256\"]",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.InvalidValue",
+    "is_ValueError": true,
+    "message": "Unsupported signature algorithm ['RS256']",
+    "mro": [
+     "google.auth.exceptions.InvalidValue",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt.decode#2",
+     "file": "google/auth/jwt.py",
+     "function": "decode",
+     "kind": "check",
+     "line": 280
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:280"
+    ]
+   },
+   "fired": [
+    "auth.jwt.decode#2"
+   ],
+   "label": "C14 alg a JSON array",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt.decode#2",
+     "class": "InvalidValue",
+     "file": "google/auth/jwt.py",
+     "line": 280
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token with kid 2",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.MalformedError",
+    "is_ValueError": true,
+    "message": "Certificate for key id 2 not found.",
+    "mro": [
+     "google.auth.exceptions.MalformedError",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt.decode#3",
+     "file": "google/auth/jwt.py",
+     "function": "decode",
+     "kind": "check",
+     "line": 290
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:290"
+    ]
+   },
+   "fired": [
+    "auth.jwt.decode#3"
+   ],
+   "label": "C15 kid not in the mapping",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt.decode#3",
+     "class": "MalformedError",
+     "file": "google/auth/jwt.py",
+     "line": 290
+    }
+   ],
+   "returned": null,
+   "settings": "certs: {'1': public_cert.pem}",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "builtins.TypeError",
+    "is_ValueError": false,
+    "message": "'NoneType' object is not iterable",
+    "mro": [
+     "builtins.TypeError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": null,
+     "file": "google/auth/crypt/__init__.py",
+     "function": "verify_signature",
+     "kind": "outside checks",
+     "line": 77
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:301",
+     "google/auth/crypt/__init__.py:77"
+    ]
+   },
+   "fired": [],
+   "label": "C16 no certs",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": null,
+   "settings": "none (certs=None)",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.InvalidValue",
+    "is_ValueError": true,
+    "message": "Certificate key type does not match signature algorithm RS256.",
+    "mro": [
+     "google.auth.exceptions.InvalidValue",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt.decode#4",
+     "file": "google/auth/jwt.py",
+     "function": "decode",
+     "kind": "check",
+     "line": 307
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:307"
+    ]
+   },
+   "fired": [
+    "auth.jwt.decode#4"
+   ],
+   "label": "C17 RS256 token, EC public key",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt.decode#4",
+     "class": "InvalidValue",
+     "file": "google/auth/jwt.py",
+     "line": 307
+    }
+   ],
+   "returned": null,
+   "settings": "certs: es256_publickey.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "ES256 token",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/es.py:EsVerifier.from_string (line 101)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.InvalidValue",
+    "is_ValueError": true,
+    "message": "Certificate key type does not match signature algorithm ES256.",
+    "mro": [
+     "google.auth.exceptions.InvalidValue",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt.decode#4",
+     "file": "google/auth/jwt.py",
+     "function": "decode",
+     "kind": "check",
+     "line": 307
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:307"
+    ]
+   },
+   "fired": [
+    "auth.jwt.decode#4"
+   ],
+   "label": "C18 ES256 token, RSA certificate",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": null,
+     "class": "TypeError",
+     "file": "google/auth/crypt/es.py",
+     "line": 128
+    },
+    {
+     "check": "auth.jwt.decode#4",
+     "class": "InvalidValue",
+     "file": "google/auth/jwt.py",
+     "line": 307
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token with a signature of 256 bytes 0x30",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.MalformedError",
+    "is_ValueError": true,
+    "message": "Could not verify token signature.",
+    "mro": [
+     "google.auth.exceptions.MalformedError",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt.decode#5",
+     "file": "google/auth/jwt.py",
+     "function": "decode",
+     "kind": "check",
+     "line": 313
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:313"
+    ]
+   },
+   "fired": [
+    "auth.jwt.decode#5"
+   ],
+   "label": "C19 RS256, wrong signature",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt.decode#5",
+     "class": "MalformedError",
+     "file": "google/auth/jwt.py",
+     "line": 313
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "ES256 token with a signature of 10 bytes",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/es.py:EsVerifier.__init__ (line 80)",
+    "google/auth/crypt/es.py:EsVerifier.from_string (line 101)",
+    "google/auth/crypt/es.py:EsVerifier.verify (line 84)",
+    "google/auth/crypt/es.py:_ESAttributes.from_curve (line 58)",
+    "google/auth/crypt/es.py:_ESAttributes.from_key (line 52)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.MalformedError",
+    "is_ValueError": true,
+    "message": "Could not verify token signature.",
+    "mro": [
+     "google.auth.exceptions.MalformedError",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt.decode#5",
+     "file": "google/auth/jwt.py",
+     "function": "decode",
+     "kind": "check",
+     "line": 313
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:313"
+    ]
+   },
+   "fired": [
+    "auth.jwt.decode#5"
+   ],
+   "label": "C20 ES256, signature of wrong length",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt.decode#5",
+     "class": "MalformedError",
+     "file": "google/auth/jwt.py",
+     "line": 313
+    }
+   ],
+   "returned": null,
+   "settings": "certs: es256_publickey.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "builtins.ValueError",
+    "is_ValueError": true,
+    "message": "Unable to load PEM file. See https://cryptography.io/en/latest/faq/#why-can-t-i-import-my-pem-file for more details. MalformedFraming",
+    "mro": [
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": null,
+     "file": "google/auth/crypt/_cryptography_rsa.py",
+     "function": "RSAVerifier.from_string",
+     "kind": "outside checks",
+     "line": 82
+    },
+    "traceback_tail": [
+     "google/auth/jwt.py:301",
+     "google/auth/crypt/__init__.py:78",
+     "google/auth/crypt/rsa.py:73",
+     "google/auth/crypt/_cryptography_rsa.py:82"
+    ]
+   },
+   "fired": [],
+   "label": "C21 certs not PEM",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": null,
+   "settings": "certs: 'not a key'",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token without iat",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.MalformedError",
+    "is_ValueError": true,
+    "message": "Token does not contain required claim iat",
+    "mro": [
+     "google.auth.exceptions.MalformedError",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt._verify_iat_and_exp#1",
+     "file": "google/auth/jwt.py",
+     "function": "_verify_iat_and_exp",
+     "kind": "check",
+     "line": 209
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:316",
+     "google/auth/jwt.py:209"
+    ]
+   },
+   "fired": [
+    "auth.jwt._verify_iat_and_exp#1"
+   ],
+   "label": "C22 no iat",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt._verify_iat_and_exp#1",
+     "class": "MalformedError",
+     "file": "google/auth/jwt.py",
+     "line": 209
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token issued 3600 s ahead",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.InvalidValue",
+    "is_ValueError": true,
+    "message": "Token used too early, 1794931683 < 1794935283. Check that your computer's clock is set correctly.",
+    "mro": [
+     "google.auth.exceptions.InvalidValue",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt._verify_iat_and_exp#2",
+     "file": "google/auth/jwt.py",
+     "function": "_verify_iat_and_exp",
+     "kind": "check",
+     "line": 219
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:316",
+     "google/auth/jwt.py:219"
+    ]
+   },
+   "fired": [
+    "auth.jwt._verify_iat_and_exp#2"
+   ],
+   "label": "C23 iat in the future",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt._verify_iat_and_exp#2",
+     "class": "InvalidValue",
+     "file": "google/auth/jwt.py",
+     "line": 219
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token expired 3600 s ago",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.InvalidValue",
+    "is_ValueError": true,
+    "message": "Token expired, 1794928083 < 1794931683",
+    "mro": [
+     "google.auth.exceptions.InvalidValue",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt._verify_iat_and_exp#3",
+     "file": "google/auth/jwt.py",
+     "function": "_verify_iat_and_exp",
+     "kind": "check",
+     "line": 231
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:316",
+     "google/auth/jwt.py:231"
+    ]
+   },
+   "fired": [
+    "auth.jwt._verify_iat_and_exp#3"
+   ],
+   "label": "C24 expired",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt._verify_iat_and_exp#3",
+     "class": "InvalidValue",
+     "file": "google/auth/jwt.py",
+     "line": 231
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token expired 100 s ago",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": null,
+   "fired": [],
+   "label": "C25 expired within the clock skew",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "certs: public_cert.pem; clock_skew_in_seconds=600",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token with aud 'audience'",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": {
+    "class": "google.auth.exceptions.InvalidValue",
+    "is_ValueError": true,
+    "message": "Token has wrong audience audience, expected one of ['other']",
+    "mro": [
+     "google.auth.exceptions.InvalidValue",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt.decode#6",
+     "file": "google/auth/jwt.py",
+     "function": "decode",
+     "kind": "check",
+     "line": 324
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/jwt.py:324"
+    ]
+   },
+   "fired": [
+    "auth.jwt.decode#6"
+   ],
+   "label": "C26 wrong audience",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt.decode#6",
+     "class": "InvalidValue",
+     "file": "google/auth/jwt.py",
+     "line": 324
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem; audience='other'",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token with aud 'audience'",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth.jwt.decode",
+   "entry_point_source": "google/auth/jwt.py:234",
+   "exception": null,
+   "fired": [],
+   "label": "C27 audience in a list",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "certs: public_cert.pem; audience=['x', 'audience']",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/_jwt_async.py:decode (line 71)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth._jwt_async.decode",
+   "entry_point_source": "google/auth/_jwt_async.py:71",
+   "exception": null,
+   "fired": [],
+   "label": "C28 async entry point, valid",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [],
+   "returned": "dict",
+   "settings": "certs: public_cert.pem",
+   "targeted": false
+  },
+  {
+   "artifact": "RS256 token",
+   "check_function_entered": false,
+   "entered": [
+    "google/auth/_helpers.py:datetime_to_secs (line 147)",
+    "google/auth/_helpers.py:padded_urlsafe_b64decode (line 278)",
+    "google/auth/_helpers.py:to_bytes (line 159)",
+    "google/auth/_helpers.py:utcnow (line 111)",
+    "google/auth/_jwt_async.py:decode (line 71)",
+    "google/auth/crypt/__init__.py:verify_signature (line 56)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.__init__ (line 46)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.from_string (line 58)",
+    "google/auth/crypt/_cryptography_rsa.py:RSAVerifier.verify (line 49)",
+    "google/auth/crypt/rsa.py:RSAVerifier.from_string (line 57)",
+    "google/auth/crypt/rsa.py:RSAVerifier.verify (line 53)",
+    "google/auth/exceptions.py:GoogleAuthError.__init__ (line 21)",
+    "google/auth/jwt.py:_decode_jwt_segment (line 121)",
+    "google/auth/jwt.py:_unverified_decode (line 133)",
+    "google/auth/jwt.py:_verify_iat_and_exp (line 191)",
+    "google/auth/jwt.py:decode (line 234)"
+   ],
+   "entry_point": "google.auth._jwt_async.decode",
+   "entry_point_source": "google/auth/_jwt_async.py:71",
+   "exception": {
+    "class": "google.auth.exceptions.InvalidValue",
+    "is_ValueError": true,
+    "message": "Token has wrong audience audience, expected one of ['other']",
+    "mro": [
+     "google.auth.exceptions.InvalidValue",
+     "google.auth.exceptions.DefaultCredentialsError",
+     "google.auth.exceptions.GoogleAuthError",
+     "builtins.ValueError",
+     "builtins.Exception",
+     "builtins.BaseException",
+     "builtins.object"
+    ],
+    "site": {
+     "check": "auth.jwt.decode#6",
+     "file": "google/auth/jwt.py",
+     "function": "decode",
+     "kind": "check",
+     "line": 324
+    },
+    "traceback_tail": [
+     "../../../../no-fire/reach/google-auth/reach_common.py:517",
+     "google/auth/_jwt_async.py:94",
+     "google/auth/jwt.py:324"
+    ]
+   },
+   "fired": [
+    "auth.jwt.decode#6"
+   ],
+   "label": "C29 async entry point, wrong audience",
+   "raise_line_executed": false,
+   "raise_line_hits": {},
+   "raises_in_package": [
+    {
+     "check": "auth.jwt.decode#6",
+     "class": "InvalidValue",
+     "file": "google/auth/jwt.py",
+     "line": 324
+    }
+   ],
+   "returned": null,
+   "settings": "certs: public_cert.pem; audience='other'",
+   "targeted": false
+  }
+ ],
+ "inputs_that_reach_the_check": [],
+ "library": "google-auth",
+ "parent_python": "3.12.3",
+ "raise_lines": [
+  [
+   606,
+   606
+  ]
+ ],
+ "row": 4,
+ "started": "2026-11-17T16:08:03Z",
+ "subject_files_checked_after": 78,
+ "subject_files_checked_before": 78
+}

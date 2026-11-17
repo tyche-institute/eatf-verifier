@@ -1,0 +1,279 @@
+{
+ "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+ "check_definition": {
+  "class": "MissingRedirectURIError",
+  "class_name": "MissingRedirectURIError",
+  "file": "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py",
+  "file_sha256_in_copy": "0ec8f0acda8399c04fa054c70020d5f59e303f68f94d21eb7959dd769e0c3212",
+  "function": "AuthorizationCodeGrant.validate_token_request",
+  "raise_source": {
+   "510": "raise errors.MissingRedirectURIError(request=request)"
+  },
+  "raise_statements": [
+   [
+    510,
+    510
+   ]
+  ],
+  "template": ""
+ },
+ "clone": {
+  "copied_paths_clean": true,
+  "head": "6e3aa05af92978755939a18cb4dd655ced156c1e",
+  "path": "experiments/target-reach/work/src/oauthlib"
+ },
+ "copy": {
+  "package_imported_from": "experiments/target-reach-extension/work/reach/oauthlib/copy/6/oauthlib/__init__.py",
+  "path": "experiments/target-reach-extension/work/reach/oauthlib/copy/6",
+  "paths": [
+   "oauthlib",
+   "tests"
+  ],
+  "subject_files_checked": 75
+ },
+ "decides": true,
+ "entry_point": {
+  "called_on": "oauthlib.oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant",
+  "file": "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py",
+  "line": 436,
+  "name": "validate_token_request",
+  "qualname": "AuthorizationCodeGrant.validate_token_request"
+ },
+ "exception": {
+  "class": "oauthlib.oauth2.rfc6749.errors.MissingRedirectURIError",
+  "description": "Missing redirect URI.",
+  "error": "invalid_request",
+  "message": "(invalid_request) Missing redirect URI. <oauthlib.Request SANITIZED>",
+  "raise_site": {
+   "check": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+   "file": "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py",
+   "function": "AuthorizationCodeGrant.validate_token_request",
+   "line": 510
+  },
+  "status_code": 400,
+  "traceback": [
+   {
+    "file": "trace_input.py (outside the package)",
+    "function": "main",
+    "line": 277
+   },
+   {
+    "file": "6.py (outside the package)",
+    "function": "build.<locals>.<lambda>",
+    "line": 105
+   },
+   {
+    "file": "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py",
+    "function": "AuthorizationCodeGrant.validate_token_request",
+    "line": 510
+   }
+  ]
+ },
+ "facts": {},
+ "fired": true,
+ "input": "POST https://server.example.com/token, Authorization: Basic (client s6BhdRkqt3 and its secret), body grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA, no redirect_uri",
+ "interpreter": {
+  "dont_write_bytecode": true,
+  "environment_variables": [
+   "HOME",
+   "LANG",
+   "LC_ALL",
+   "PATH"
+  ],
+  "executable": "experiments/target-reach/work/venvs/oauthlib/bin/python",
+  "hash_randomization": true,
+  "implementation": "CPython",
+  "isolated": true,
+  "locale": {
+   "LANG": "C.UTF-8",
+   "LC_ALL": "C.UTF-8"
+  },
+  "prefix": "experiments/target-reach/work/venvs/oauthlib",
+  "version": "3.12.3"
+ },
+ "library": "oauthlib",
+ "lines_executed": {
+  "oauthlib/__init__.py": {
+   "get_debug": [
+    34
+   ]
+  },
+  "oauthlib/common.py": {
+   "CaseInsensitiveDict.__contains__": [
+    307
+   ],
+   "CaseInsensitiveDict.__getitem__": [
+    315,
+    316
+   ],
+   "CaseInsensitiveDict.get": [
+    319
+   ],
+   "Request.__getattr__": [
+    400,
+    401
+   ],
+   "Request.__repr__": [
+    406,
+    407
+   ],
+   "Request.duplicate_params": [
+    430,
+    431,
+    432,
+    433,
+    434,
+    435
+   ],
+   "Request.duplicate_params.<locals>.<genexpr>": [
+    431,
+    432
+   ],
+   "Request.uri_query": [
+    419
+   ],
+   "Request.uri_query_params": [
+    423,
+    424
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/errors.py": {
+   "OAuth2Error.__init__": [
+    44,
+    47,
+    48,
+    49,
+    50,
+    52,
+    53,
+    55,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py": {
+   "AuthorizationCodeGrant.validate_token_request": [
+    442,
+    445,
+    448,
+    452,
+    453,
+    457,
+    460,
+    464,
+    465,
+    471,
+    473,
+    492,
+    497,
+    498,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/grant_types/base.py": {
+   "GrantTypeBase.validate_client_authentication": [
+    223,
+    224
+   ],
+   "GrantTypeBase.validate_client_confidential": [
+    184,
+    185,
+    189,
+    190,
+    195,
+    196
+   ],
+   "GrantTypeBase.validate_grant_type": [
+    157,
+    158,
+    159
+   ]
+  },
+  "oauthlib/oauth2/rfc6749/request_validator.py": {
+   "RequestValidator.client_authentication_required": [
+    39
+   ],
+   "RequestValidator.get_code_challenge": [
+    645
+   ],
+   "RequestValidator.is_pkce_required": [
+    616
+   ]
+  }
+ },
+ "outcome": "raised",
+ "raise_events": [
+  {
+   "check_at_line": "oauth2.rfc6749.grant_types.authorization_code.AuthorizationCodeGrant.validate_token_request#9",
+   "exception": "oauthlib.oauth2.rfc6749.errors.MissingRedirectURIError",
+   "file": "oauthlib/oauth2/rfc6749/grant_types/authorization_code.py",
+   "firing_of_the_check": true,
+   "function": "AuthorizationCodeGrant.validate_token_request",
+   "instruction": "RAISE_VARARGS",
+   "line": 510
+  }
+ ],
+ "raise_lines_executed": [
+  510
+ ],
+ "result": "reached",
+ "returned": null,
+ "row": 6,
+ "settings": [
+  "AuthorizationCodeGrant(request_validator) with no other argument: no custom validators, the library's code challenge methods",
+  "request validator, a subclass of oauthlib.oauth2.RequestValidator: client_authentication_required, get_code_challenge and is_pkce_required keep the library's defaults (True, None, False)",
+  "authenticate_client: accepts the HTTP Basic credentials of the registered client and sets request.client (the library has no default)",
+  "validate_grant_type: True, the client is allowed the authorization code grant (no default)",
+  "validate_code: True, the code was issued to the client; sets request.user and request.scopes (no default)",
+  "get_default_redirect_uri: None, the client is registered without a default redirect URI (no default)"
+ ],
+ "times": {
+  "call_ended": "2026-11-17T15:48:31Z",
+  "call_started": "2026-11-17T15:48:31Z",
+  "ended": "2026-11-17T15:48:31Z",
+  "started": "2026-11-17T15:48:31Z"
+ },
+ "validator_calls": [
+  [
+   "client_authentication_required (library default)",
+   "True"
+  ],
+  [
+   "authenticate_client",
+   "True"
+  ],
+  [
+   "validate_grant_type",
+   "True"
+  ],
+  [
+   "validate_code",
+   "True"
+  ],
+  [
+   "get_code_challenge (library default)",
+   "None"
+  ],
+  [
+   "is_pkce_required (library default)",
+   "False"
+  ],
+  [
+   "get_default_redirect_uri",
+   "None"
+  ]
+ ]
+}
