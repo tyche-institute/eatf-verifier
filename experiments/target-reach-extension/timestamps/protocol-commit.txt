@@ -1,0 +1,1 @@
+eatf-verifier research/mutation-adequacy commit 0796d80a8b34fe2915f48fd92c1485735b2a6fec (experiments/target-reach-extension/PROTOCOL.md, the definitions of the 7 screened libraries, the sample of 20 checks and the tools, fixed before any test of a subject ran under the recorder or in a whole suite, any check was deleted or any header was decoded)
