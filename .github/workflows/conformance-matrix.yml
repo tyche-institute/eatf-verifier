@@ -1,0 +1,26 @@
+name: conformance-matrix
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  jcs-canonicalization:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m venv .venv
+      - run: .venv/bin/pip install ./lib-python
+      - uses: probityai/agent-evidence-vectors@v0.36.3
+        id: vectors
+        # The corpus verdict is judged by the next step, which reads the declared exclusions.
+        continue-on-error: true
+        env:
+          A2A_JCS_TARGET: rfc8785
+          EATF_LIB_PYTHON: ${{ github.workspace }}/lib-python
+        with:
+          corpus: vectors-a2a-jcs-v01
+          verifier: .venv/bin/python tools/eatf_jcs_cli.py
+      - run: python tools/check_conformance_exclusions.py agent-evidence-vectors-report.json
