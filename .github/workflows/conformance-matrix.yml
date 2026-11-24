@@ -13,7 +13,7 @@ jobs:
           python-version: "3.12"
       - run: python -m venv .venv
       - run: .venv/bin/pip install ./lib-python
-      - uses: probityai/agent-evidence-vectors@v0.36.3
+      - uses: probityai/agent-evidence-vectors@v0.37.1
         id: vectors
         # The corpus verdict is judged by the next step, which reads the declared exclusions.
         continue-on-error: true
